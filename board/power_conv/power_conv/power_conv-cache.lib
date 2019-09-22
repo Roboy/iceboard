@@ -1,0 +1,21 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# custom_Wago_SMD_2
+#
+DEF custom_Wago_SMD_2 J 0 40 Y N 1 F N
+F0 "J" 0 300 60 H V C CNN
+F1 "custom_Wago_SMD_2" 0 -300 60 H V C CNN
+F2 "" -100 50 60 H I C CNN
+F3 "" -100 50 60 H I C CNN
+DRAW
+C -200 -100 100 0 1 0 N
+C -200 100 100 0 1 0 N
+S -300 200 300 -200 0 1 0 N
+S -100 200 -100 -200 0 1 0 N
+X P1 1 450 100 150 L 50 50 1 1 w
+X P2 2 450 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

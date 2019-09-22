@@ -1,0 +1,42 @@
+# ##############################################################################
+
+# iCEcube PCF
+
+# Version:            2017.01.27914
+
+# File Generated:     Jun 24 2017 13:04:57
+
+# Family & Device:    iCE40LP8K
+
+# Package:            CM81
+
+# ##############################################################################
+
+###IOSet List 24
+set_io CLK B2
+set_io LED B3
+set_io USBPU A3
+set_io PIN_1 A2
+set_io PIN_2 A1
+set_io PIN_3 B1
+set_io PIN_4 C2
+set_io PIN_5 C1
+set_io PIN_7 D1
+set_io PIN_8 E2
+set_io PIN_9 E1
+set_io PIN_10 G2
+set_io PIN_11 H1
+set_io PIN_12 J1
+set_io PIN_13 H2
+set_io PIN_14 H9
+set_io PIN_15 D9
+set_io PIN_16 D8
+set_io PIN_17 C9
+set_io PIN_18 A9
+set_io PIN_19 B8
+set_io PIN_20 A8
+set_io PIN_21 B7
+set_io PIN_22 A7
+set_io PIN_23 B6
+set_io PIN_24 A6
+set_io PIN_6 D2
