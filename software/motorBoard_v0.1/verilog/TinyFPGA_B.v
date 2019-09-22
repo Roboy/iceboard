@@ -45,7 +45,7 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b101001),
     .PULLUP(1'b1)
   ) tx_output(
-    .PACKAGE_PIN(PIN_10),
+    .PACKAGE_PIN(PIN_12),
     .D_OUT_0(tx_o),
     .OUTPUT_ENABLE(tx_enable)
   );
@@ -54,7 +54,7 @@ module TinyFPGA_B (
      .PIN_TYPE(6'b 0000_01),
      .PULLUP(1'b 1)
   ) rx_input(
-     .PACKAGE_PIN(PIN_11),
+     .PACKAGE_PIN(PIN_13),
      .D_IN_0(rx_i)
   );
 
@@ -90,7 +90,7 @@ module TinyFPGA_B (
 	  .reset(1'b0),
   	.tx_o(tx_o),
 	  .tx_enable(tx_enable),
-  	.rx_i(rx_i),
+  	.rx_i(~rx_i),
     .pwm(pwm),
   	.encoder0_position(encoder0_position),
   	.encoder1_position(encoder1_position),
@@ -112,7 +112,7 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall1_input(
-    .PACKAGE_PIN(PIN_4),
+    .PACKAGE_PIN(PIN_16),
     .D_IN_0(hall1)
   );
 
@@ -120,7 +120,7 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall2_input(
-    .PACKAGE_PIN(PIN_5),
+    .PACKAGE_PIN(PIN_15),
     .D_IN_0(hall2)
   );
 
@@ -128,16 +128,16 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall3_input(
-    .PACKAGE_PIN(PIN_6),
+    .PACKAGE_PIN(PIN_14),
     .D_IN_0(hall3)
   );
 
-  assign PIN_1 = PHASES[0];
-  assign PIN_2 = PHASES[1];
-  assign PIN_3 = PHASES[2];
-  assign PIN_24 = PHASES[3];
-  assign PIN_23 = PHASES[4];
-  assign PIN_22 = PHASES[5];
+  assign PIN_6 = PHASES[0];
+  assign PIN_5 = PHASES[1];
+  assign PIN_4 = PHASES[2];
+  assign PIN_3 = PHASES[3];
+  assign PIN_2 = PHASES[4];
+  assign PIN_1 = PHASES[5];
   wire [5:0] PHASES;
   wire signed [23:0] pwm;
   wire signed [31:0] motor_state;
@@ -174,16 +174,16 @@ module TinyFPGA_B (
   // optical encoder
   quad #(100) quad_counter0 (
     .clk(clk32MHz),
-    .quadA(PIN_7),
-    .quadB(PIN_8),
+    .quadA(PIN_8),
+    .quadB(PIN_9),
     .count(encoder0_position)
   );
 
   // magnetic encoder
   quad #(100) quad_counter1 (
     .clk(clk32MHz),
-    .quadA(PIN_12),
-    .quadB(PIN_13),
+    .quadA(PIN_24),
+    .quadB(PIN_23),
     .count(encoder1_position)
   );
 

@@ -1,5 +1,5 @@
 #-- Lattice, Inc.
-#-- Project file /home/letrend/workspace/bldc_motorboard/software/motorBoard_v0.1/template_lse.prj
+#-- Project file /home/letrend/workspace/iceboard/software/motorBoard_v0.1/template_lse.prj
 
 #device
 -a SBTiCE40
@@ -40,7 +40,7 @@
 -ver "verilog/pll32MHz.v"
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd" 
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd" 
--p "/home/letrend/workspace/bldc_motorboard/software/motorBoard_v0.1"
+-p "/home/letrend/workspace/iceboard/software/motorBoard_v0.1"
 
 #set result format/file last
 -output_edif template_Implmnt/template.edf
