@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:board-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -68,26 +68,22 @@ F 3 "" H 5000 3250 50  0001 C CNN
 	1    5000 3250
 	0    1    1    0   
 $EndComp
-Text Label 5900 4575 2    50   ~ 0
+Text Label 5900 3975 2    50   ~ 0
 HALL1
-Text Label 5900 4475 2    50   ~ 0
+Text Label 5900 3875 2    50   ~ 0
 HALL2
-Text Label 5900 4375 2    50   ~ 0
+Text Label 5900 3775 2    50   ~ 0
 HALL3
-Text Label 5000 4050 2    50   ~ 0
+Text Label 5900 3675 2    50   ~ 0
 Encoder0_A
-Text Label 5000 4150 2    50   ~ 0
+Text Label 5900 3575 2    50   ~ 0
 Encoder0_B
-Text GLabel 5900 4075 0    50   Input ~ 0
-CS_MISO
-Text GLabel 5900 4175 0    50   Input ~ 0
-CS_CLK
 Text GLabel 5900 4275 0    50   Input ~ 0
-CS_A
-Text GLabel 5900 3975 0    50   Input ~ 0
-CS_B
-Text GLabel 5900 3875 0    50   Input ~ 0
-CS_C
+CS_MISO
+Text GLabel 5900 4375 0    50   Input ~ 0
+CS_CLK
+Text GLabel 5900 4475 0    50   Input ~ 0
+CS
 $Comp
 L power:+3.3V #PWR0116
 U 1 1 5D4C3BEF
@@ -114,15 +110,15 @@ F 3 "" H 5900 3375 50  0001 C CNN
 	1    5900 3375
 	0    1    1    0   
 $EndComp
-Text GLabel 5000 3350 0    50   Input ~ 0
-INLC
-Text GLabel 5000 3450 0    50   Input ~ 0
-INHC
-Text GLabel 5000 3650 0    50   Input ~ 0
-INHB
-Text GLabel 5000 3750 0    50   Input ~ 0
-INLA
 Text GLabel 5000 3850 0    50   Input ~ 0
+INLC
+Text GLabel 5000 3950 0    50   Input ~ 0
+INHC
+Text GLabel 5000 4150 0    50   Input ~ 0
+INHB
+Text GLabel 5000 4250 0    50   Input ~ 0
+INLA
+Text GLabel 5000 4350 0    50   Input ~ 0
 INHA
 $Comp
 L power:+5V #PWR0119
@@ -280,8 +276,6 @@ F 3 "" H 2875 3525 50  0001 C CNN
 	1    2875 3525
 	0    1    1    0   
 $EndComp
-Text Label 2875 3425 2    50   ~ 0
-+5V
 $Comp
 L board-rescue:LTC2852HDDPBF-LTC2852HDDPBF U3
 U 1 1 5D67574C
@@ -405,43 +399,32 @@ h_RX
 Text GLabel 5025 5425 0    50   Input ~ 0
 SHIELD
 $Comp
-L LED:NeoPixel_THT D3
-U 1 1 5D91925A
-P 8925 2175
-F 0 "D3" H 9269 2221 50  0000 L CNN
-F 1 "NeoPixel_THT" H 9269 2130 50  0000 L CNN
-F 2 "custom_lib:LED_WS2812B-PLCC4_3.5x3.5" H 8975 1875 50  0001 L TNN
-F 3 "https://www.adafruit.com/product/1938" H 9025 1800 50  0001 L TNN
-	1    8925 2175
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0114
 U 1 1 5D92E781
-P 8925 2475
+P 9050 2300
 AR Path="/5D92E781" Ref="#PWR0114"  Part="1" 
 AR Path="/5D056FB0/5D92E781" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0114" H 8925 2225 50  0001 C CNN
-F 1 "GND" V 8930 2347 50  0000 R CNN
-F 2 "" H 8925 2475 50  0001 C CNN
-F 3 "" H 8925 2475 50  0001 C CNN
-	1    8925 2475
+F 0 "#PWR0114" H 9050 2050 50  0001 C CNN
+F 1 "GND" V 9055 2172 50  0000 R CNN
+F 2 "" H 9050 2300 50  0001 C CNN
+F 3 "" H 9050 2300 50  0001 C CNN
+	1    9050 2300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0125
 U 1 1 5D92E787
-P 8925 1875
-F 0 "#PWR0125" H 8925 1725 50  0001 C CNN
-F 1 "+5V" V 8940 2003 50  0000 L CNN
-F 2 "" H 8925 1875 50  0001 C CNN
-F 3 "" H 8925 1875 50  0001 C CNN
-	1    8925 1875
+P 9050 1700
+F 0 "#PWR0125" H 9050 1550 50  0001 C CNN
+F 1 "+5V" V 9065 1828 50  0000 L CNN
+F 2 "" H 9050 1700 50  0001 C CNN
+F 3 "" H 9050 1700 50  0001 C CNN
+	1    9050 1700
 	1    0    0    -1  
 $EndComp
-Text Label 5900 3775 2    50   ~ 0
+Text Label 5900 4575 2    50   ~ 0
 NEOPXL
-Text GLabel 5000 3550 0    50   Input ~ 0
+Text GLabel 5000 4050 0    50   Input ~ 0
 INLB
 Text Label 2875 3725 2    50   ~ 0
 -A
@@ -522,8 +505,8 @@ F 3 "" H 7150 5200 50  0001 C CNN
 	1    7150 5200
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9225 2175
-Text Label 8625 2175 2    50   ~ 0
+NoConn ~ 9350 2000
+Text Label 8750 2000 2    50   ~ 0
 NEOPXL
 $Comp
 L power:GND #PWR0154
@@ -538,21 +521,15 @@ F 3 "" H 8150 3875 50  0001 C CNN
 	1    8150 3875
 	1    0    0    -1  
 $EndComp
-Text Label 5000 3950 2    50   ~ 0
+Text Label 5000 3350 2    50   ~ 0
 ID_0
-Text Label 5000 4250 2    50   ~ 0
+Text Label 5000 3450 2    50   ~ 0
 ID_1
-Text Label 5000 4350 2    50   ~ 0
+Text Label 5000 3550 2    50   ~ 0
 ID_2
-Text Label 7550 3425 2    50   ~ 0
-ID_0
-Text Label 7550 3525 2    50   ~ 0
-ID_1
-Text Label 7550 3625 2    50   ~ 0
-ID_2
-Text Label 5900 3575 2    50   ~ 0
+Text Label 5900 4075 2    50   ~ 0
 Encoder1_A
-Text Label 5900 3675 2    50   ~ 0
+Text Label 5900 4175 2    50   ~ 0
 Encoder1_B
 $Comp
 L Connector:Conn_01x04_Female J4
@@ -614,4 +591,151 @@ Wire Wire Line
 	8150 3625 8150 3525
 Connection ~ 8150 3625
 Connection ~ 8150 3525
+$Comp
+L Device:C C26
+U 1 1 5D6EE22D
+P 9850 3500
+AR Path="/5D6EE22D" Ref="C26"  Part="1" 
+AR Path="/5D0530DE/5D6EE22D" Ref="C?"  Part="1" 
+F 0 "C26" H 9965 3546 50  0000 L CNN
+F 1 "0.1uF" H 9965 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9888 3350 50  0001 C CNN
+F 3 "~" H 9850 3500 50  0001 C CNN
+	1    9850 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0160
+U 1 1 5D6EE233
+P 9850 3650
+AR Path="/5D6EE233" Ref="#PWR0160"  Part="1" 
+AR Path="/5D0530DE/5D6EE233" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0160" H 9850 3400 50  0001 C CNN
+F 1 "GND" V 9850 3450 50  0000 C CNN
+F 2 "" H 9850 3650 50  0001 C CNN
+F 3 "" H 9850 3650 50  0001 C CNN
+	1    9850 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D6EE239
+P 9850 3350
+AR Path="/5D0530DE/5D6EE239" Ref="#PWR?"  Part="1" 
+AR Path="/5D6EE239" Ref="#PWR0161"  Part="1" 
+F 0 "#PWR0161" H 9850 3200 50  0001 C CNN
+F 1 "+3.3V" V 9865 3478 50  0000 L CNN
+F 2 "" H 9850 3350 50  0001 C CNN
+F 3 "" H 9850 3350 50  0001 C CNN
+	1    9850 3350
+	1    0    0    -1  
+$EndComp
+Text Label 7550 3625 2    50   ~ 0
+ID_2
+Text Label 7550 3525 2    50   ~ 0
+ID_1
+Text Label 7550 3425 2    50   ~ 0
+ID_0
+$Comp
+L Device:C C29
+U 1 1 5D723058
+P 9325 3450
+AR Path="/5D723058" Ref="C29"  Part="1" 
+AR Path="/5D0530DE/5D723058" Ref="C?"  Part="1" 
+F 0 "C29" H 9440 3496 50  0000 L CNN
+F 1 "0.1uF" H 9440 3405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9363 3300 50  0001 C CNN
+F 3 "~" H 9325 3450 50  0001 C CNN
+	1    9325 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0167
+U 1 1 5D72305E
+P 9325 3600
+AR Path="/5D72305E" Ref="#PWR0167"  Part="1" 
+AR Path="/5D0530DE/5D72305E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0167" H 9325 3350 50  0001 C CNN
+F 1 "GND" V 9325 3400 50  0000 C CNN
+F 2 "" H 9325 3600 50  0001 C CNN
+F 3 "" H 9325 3600 50  0001 C CNN
+	1    9325 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0168
+U 1 1 5D72EED4
+P 9325 3300
+F 0 "#PWR0168" H 9325 3150 50  0001 C CNN
+F 1 "+5V" V 9340 3428 50  0000 L CNN
+F 2 "" H 9325 3300 50  0001 C CNN
+F 3 "" H 9325 3300 50  0001 C CNN
+	1    9325 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0159
+U 1 1 5D6B5C45
+P 2875 3425
+AR Path="/5D6B5C45" Ref="#PWR0159"  Part="1" 
+AR Path="/5D056FB0/5D6B5C45" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0159" H 2875 3275 50  0001 C CNN
+F 1 "+3.3V" V 2890 3553 50  0000 L CNN
+F 2 "" H 2875 3425 50  0001 C CNN
+F 3 "" H 2875 3425 50  0001 C CNN
+	1    2875 3425
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:SK6812MINI D3
+U 1 1 5D89538D
+P 9050 2000
+F 0 "D3" H 9394 2046 50  0000 L CNN
+F 1 "SK6812MINI" H 9394 1955 50  0000 L CNN
+F 2 "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" H 9100 1700 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 9150 1625 50  0001 L TNN
+	1    9050 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J9
+U 1 1 5DAB717B
+P 3875 3650
+F 0 "J9" H 3767 3225 50  0000 C CNN
+F 1 "i2c" H 3767 3316 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 3875 3650 50  0001 C CNN
+F 3 "~" H 3875 3650 50  0001 C CNN
+	1    3875 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 3650 4075 3650
+Wire Wire Line
+	5000 3750 4075 3750
+$Comp
+L power:+3.3V #PWR0139
+U 1 1 5DABC83A
+P 4075 3550
+AR Path="/5DABC83A" Ref="#PWR0139"  Part="1" 
+AR Path="/5D056FB0/5DABC83A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0139" H 4075 3400 50  0001 C CNN
+F 1 "+3.3V" V 4090 3678 50  0000 L CNN
+F 2 "" H 4075 3550 50  0001 C CNN
+F 3 "" H 4075 3550 50  0001 C CNN
+	1    4075 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0142
+U 1 1 5DABDFDD
+P 4075 3450
+AR Path="/5DABDFDD" Ref="#PWR0142"  Part="1" 
+AR Path="/5D056FB0/5DABDFDD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0142" H 4075 3200 50  0001 C CNN
+F 1 "GND" V 4080 3322 50  0000 R CNN
+F 2 "" H 4075 3450 50  0001 C CNN
+F 3 "" H 4075 3450 50  0001 C CNN
+	1    4075 3450
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
