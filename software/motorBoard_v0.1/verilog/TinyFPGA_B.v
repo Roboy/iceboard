@@ -103,7 +103,7 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall1_input(
-    .PACKAGE_PIN(PIN_20),
+    .PACKAGE_PIN(PIN_22),
     .D_IN_0(hall1)
   );
 
@@ -119,7 +119,7 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall3_input(
-    .PACKAGE_PIN(PIN_22),
+    .PACKAGE_PIN(PIN_20),
     .D_IN_0(hall3)
   );
 

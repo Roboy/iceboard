@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Diamond Version 0.0.0
-// Netlist written on Tue Oct  1 16:37:54 2019
+// Netlist written on Tue Oct  1 17:28:46 2019
 //
 // Verilog Description of module TinyFPGA_B
 //
@@ -419,7 +419,7 @@ module TinyFPGA_B (CLK, LED, USBPU, PIN_1, PIN_2, PIN_3, PIN_4,
             .n23813(n23813), .count_enable(count_enable), .n24422(n24422), 
             .reg_B({reg_B}), .PIN_23_c_1(PIN_23_c_1), .PIN_24_c_0(PIN_24_c_0), 
             .n23815(n23815), .n44474(n44474)) /* synthesis lattice_noprune=1, syn_preserve=0, syn_module_defined=1, syn_noprune=0 */ ;   // verilog/TinyFPGA_B.v(166[15] 171[4])
-    SB_IO hall1_input (.PACKAGE_PIN(PIN_20), .LATCH_INPUT_VALUE(GND_net), 
+    SB_IO hall1_input (.PACKAGE_PIN(PIN_22), .LATCH_INPUT_VALUE(GND_net), 
           .INPUT_CLK(GND_net), .OUTPUT_CLK(GND_net), .OUTPUT_ENABLE(GND_net), 
           .D_OUT_1(GND_net), .D_OUT_0(GND_net), .D_IN_0(hall1)) /* synthesis lattice_noprune=1, syn_instantiated=1 */ ;   // /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam hall1_input.PIN_TYPE = 6'b000001;
@@ -433,7 +433,7 @@ module TinyFPGA_B (CLK, LED, USBPU, PIN_1, PIN_2, PIN_3, PIN_4,
     defparam hall2_input.PULLUP = 1'b1;
     defparam hall2_input.NEG_TRIGGER = 1'b0;
     defparam hall2_input.IO_STANDARD = "SB_LVCMOS";
-    SB_IO hall3_input (.PACKAGE_PIN(PIN_22), .LATCH_INPUT_VALUE(GND_net), 
+    SB_IO hall3_input (.PACKAGE_PIN(PIN_20), .LATCH_INPUT_VALUE(GND_net), 
           .INPUT_CLK(GND_net), .OUTPUT_CLK(GND_net), .OUTPUT_ENABLE(GND_net), 
           .D_OUT_1(GND_net), .D_OUT_0(GND_net), .D_IN_0(hall3)) /* synthesis lattice_noprune=1, syn_instantiated=1 */ ;   // /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam hall3_input.PIN_TYPE = 6'b000001;
