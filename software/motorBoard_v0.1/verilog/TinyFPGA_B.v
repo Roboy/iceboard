@@ -40,7 +40,7 @@ module TinyFPGA_B (
   //assign PIN_9 = clk32MHz;
 
   wire tx_o, tx_enable, rx_i;
-  // PULLUP for UART transmitters
+  // tristated PULLUP for UART transmitters
   SB_IO #(
     .PIN_TYPE(6'b101001),
     .PULLUP(1'b1)
@@ -50,27 +50,18 @@ module TinyFPGA_B (
     .OUTPUT_ENABLE(tx_enable)
   );
   // PULLUP for UART receiver
-  SB_IO #(
-     .PIN_TYPE(6'b 0000_01),
-     .PULLUP(1'b 1)
-  ) rx_input(
-     .PACKAGE_PIN(PIN_13),
-     .D_IN_0(rx_i)
-  );
+  // SB_IO #(
+  //    .PIN_TYPE(6'b 0000_01),
+  //    .PULLUP(1'b 1)
+  // ) rx_input(
+  //    .PACKAGE_PIN(PIN_13),
+  //    .D_IN_0(rx_i)
+  // );
 
-  // // keep track of time and location in blink_pattern
-  // reg [25:0] blink_counter;
-  //
-  // // pattern that will be flashed over the LED over time
-  // wire [31:0] blink_pattern = 32'b101010001110111011100010101;
-  //
-  // // increment the blink_counter every clock
-  // always @(posedge clk32MHz) begin
-  //     blink_counter <= blink_counter + 1;
-  // end
+  assign rx_i = PIN_13;
 
   // light up the LED according to the pattern
-  assign LED = ~rx_i;//blink_pattern[blink_counter[25:21]];
+  assign LED = ~rx_i;
 
   wire signed [23:0] encoder0_position;
   wire signed [23:0] encoder1_position;
@@ -112,7 +103,7 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall1_input(
-    .PACKAGE_PIN(PIN_16),
+    .PACKAGE_PIN(PIN_20),
     .D_IN_0(hall1)
   );
 
@@ -120,7 +111,7 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall2_input(
-    .PACKAGE_PIN(PIN_15),
+    .PACKAGE_PIN(PIN_21),
     .D_IN_0(hall2)
   );
 
@@ -128,16 +119,16 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall3_input(
-    .PACKAGE_PIN(PIN_14),
+    .PACKAGE_PIN(PIN_22),
     .D_IN_0(hall3)
   );
 
-  assign PIN_6 = PHASES[0];
-  assign PIN_5 = PHASES[1];
-  assign PIN_4 = PHASES[2];
-  assign PIN_3 = PHASES[3];
-  assign PIN_2 = PHASES[4];
-  assign PIN_1 = PHASES[5];
+  assign PIN_11 = PHASES[0];
+  assign PIN_10 = PHASES[1];
+  assign PIN_9 = PHASES[2];
+  assign PIN_8 = PHASES[3];
+  assign PIN_7 = PHASES[4];
+  assign PIN_6 = PHASES[5];
   wire [5:0] PHASES;
   wire signed [23:0] pwm;
   wire signed [31:0] motor_state;
@@ -171,19 +162,19 @@ module TinyFPGA_B (
     displacement <= (encoder0_position/gearBoxRatio) - (encoder1_position>>>3);
   end
 
-  // optical encoder
+  // encoder0
   quad #(100) quad_counter0 (
     .clk(clk32MHz),
-    .quadA(PIN_8),
-    .quadB(PIN_9),
+    .quadA(PIN_23),
+    .quadB(PIN_24),
     .count(encoder0_position)
   );
 
-  // magnetic encoder
+  // encoder1
   quad #(100) quad_counter1 (
     .clk(clk32MHz),
-    .quadA(PIN_24),
-    .quadB(PIN_23),
+    .quadA(PIN_18),
+    .quadB(PIN_19),
     .count(encoder1_position)
   );
 
