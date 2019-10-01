@@ -60,7 +60,7 @@ module motorControl #(parameter MAX_LIMIT = 128, parameter MIN_LIMIT = -128)(
         PHASES <= 6'b100100;
       end
       if(hall1 && ~hall2 && ~hall3)begin
-        PHASES <= 6'b100001;
+        PHASES <= 6'b010010;
       end
       if(hall1 && hall2 && ~hall3) begin
         PHASES <= 6'b001001;
@@ -79,7 +79,7 @@ module motorControl #(parameter MAX_LIMIT = 128, parameter MIN_LIMIT = -128)(
         PHASES <= 6'b011000;
       end
       if(hall1 && ~hall2 && ~hall3)begin
-        PHASES <= 6'b010010;
+        PHASES <= 6'b100001;
       end
       if(hall1 && hall2 && ~hall3) begin
         PHASES <= 6'b000110;

@@ -103,7 +103,7 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall1_input(
-    .PACKAGE_PIN(PIN_22),
+    .PACKAGE_PIN(PIN_20),
     .D_IN_0(hall1)
   );
 
@@ -119,16 +119,16 @@ module TinyFPGA_B (
     .PIN_TYPE(6'b 0000_01),
     .PULLUP(1'b 1)
   ) hall3_input(
-    .PACKAGE_PIN(PIN_20),
+    .PACKAGE_PIN(PIN_22),
     .D_IN_0(hall3)
   );
 
-  assign PIN_11 = PHASES[0];
-  assign PIN_10 = PHASES[1];
-  assign PIN_9 = PHASES[2];
-  assign PIN_8 = PHASES[3];
-  assign PIN_7 = PHASES[4];
-  assign PIN_6 = PHASES[5];
+  assign PIN_11 = PHASES[5];
+  assign PIN_10 = PHASES[4];
+  assign PIN_9 = PHASES[3];
+  assign PIN_8 = PHASES[2];
+  assign PIN_7 = PHASES[1];
+  assign PIN_6 = PHASES[0];
   wire [5:0] PHASES;
   wire signed [23:0] pwm;
   wire signed [31:0] motor_state;
