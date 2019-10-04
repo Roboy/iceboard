@@ -49,19 +49,8 @@ module TinyFPGA_B (
     .D_OUT_0(tx_o),
     .OUTPUT_ENABLE(tx_enable)
   );
-  // PULLUP for UART receiver
-  // SB_IO #(
-  //    .PIN_TYPE(6'b 0000_01),
-  //    .PULLUP(1'b 1)
-  // ) rx_input(
-  //    .PACKAGE_PIN(PIN_13),
-  //    .D_IN_0(rx_i)
-  // );
 
   assign rx_i = PIN_13;
-
-  // light up the LED according to the pattern
-  assign LED = ~rx_i;
 
   wire signed [23:0] encoder0_position;
   wire signed [23:0] encoder1_position;
@@ -94,7 +83,8 @@ module TinyFPGA_B (
     .Kd(Kd),
     .PWMLimit(PWMLimit),
     .IntegralLimit(IntegralLimit),
-    .deadband(deadband)
+    .deadband(deadband),
+    .LED(LED)
   );
 
   wire hall1, hall2, hall3;
@@ -123,13 +113,23 @@ module TinyFPGA_B (
     .D_IN_0(hall3)
   );
 
-  assign PIN_11 = PHASES[5];
-  assign PIN_10 = PHASES[4];
-  assign PIN_9 = PHASES[3];
-  assign PIN_8 = PHASES[2];
-  assign PIN_7 = PHASES[1];
-  assign PIN_6 = PHASES[0];
-  wire [5:0] PHASES;
+  wire HA, LA, HB, LB, HC, LC;
+
+  assign PIN_11 = HA;
+  assign PIN_10 = LA;
+  assign PIN_9 = HB;
+  assign PIN_8 = LB;
+  assign PIN_7 = HC;
+  assign PIN_6 = LC;
+
+  wire [5:0] GATES;
+  assign HA = GATES[5];
+  assign LA = GATES[4];
+  assign HB = GATES[3];
+  assign LB = GATES[2];
+  assign HC = GATES[1];
+  assign LC = GATES[0];
+
   wire signed [23:0] pwm;
   wire signed [31:0] motor_state;
 
@@ -146,7 +146,7 @@ module TinyFPGA_B (
     .hall1(hall1),
     .hall2(hall2),
     .hall3(hall3),
-    .PHASES(PHASES),
+    .GATES(GATES),
     .pwm(pwm),
     .setpoint(setpoint),
     .state(motor_state),

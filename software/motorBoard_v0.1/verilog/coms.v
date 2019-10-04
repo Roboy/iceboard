@@ -17,7 +17,8 @@ module coms(
 	output reg [23:0] PWMLimit,
 	output reg [23:0] IntegralLimit,
 	output reg [23:0] deadband,
-	output reg [23:0] gearBoxRatio
+	output reg [23:0] gearBoxRatio,
+	output reg LED
 );
 
 localparam  MAGIC_NUMBER_LENGTH = 4;
@@ -133,16 +134,20 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 			end
 			if({data_in[0],data_in[1],data_in[2],data_in[3]}==STATUS_REQUEST_FRAME_MAGICNUMBER)begin
 			 	state <= RECEIVE_STATUS_REQUEST;
+				LED <= 1;
 			end
 			if({data_in[0],data_in[1],data_in[2],data_in[3]}==SETPOINT_FRAME_MAGICNUMBER)begin
 			 	state <= RECEIVE_SETPOINT;
+				LED <= 1;
 			end
 			if({data_in[0],data_in[1],data_in[2],data_in[3]}==CONTROL_MODE_FRAME_MAGICNUMBER)begin
 			 	state <= RECEIVE_CONTROL_MODE;
+				LED <= 1;
 			end
 			case(state)
 				IDLE: begin
 					i <= 0;
+					LED <= 0;
 				end
 				RECEIVE_STATUS_REQUEST: begin
 					if(rx_data_ready==1 && rx_data_ready_prev==0)begin
