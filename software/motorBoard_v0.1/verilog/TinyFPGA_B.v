@@ -37,7 +37,25 @@ module TinyFPGA_B (
                                      .RESET(1'b1) // active low
                                      );
 
-  //assign PIN_9 = clk32MHz;
+  wire one_wire;
+  assign PIN_14 = one_wire;
+  reg [23:0] color;
+  always @ ( posedge clk32MHz ) begin
+    if(pwm<0)begin
+      color <= -pwm;
+      color <= color>>3;
+    end else begin
+      color <= pwm>>3;
+    end
+  end
+
+  neopixel nx(
+    .clock(clk32MHz),
+    .reset(1'b0),
+    .color(color),
+    .send_to_neopixels(1'b1),
+    .one_wire(one_wire)
+  );
 
   wire tx_o, tx_enable, rx_i;
   // tristated PULLUP for UART transmitters

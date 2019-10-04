@@ -18,6 +18,7 @@ add_file -verilog -lib work "quad.v"
 add_file -verilog -lib work "verilog/pll32MHz.v" 
 add_file -vhdl -lib work "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd" 
 add_file -vhdl -lib work "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd" 
+add_file -verilog -lib work "verilog/neopixel.v" 
 add_file -constraint -lib work "constraints/clk.sdc"
 #implementation: "template_Implmnt"
 impl -add template_Implmnt -type fpga

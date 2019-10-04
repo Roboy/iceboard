@@ -40,6 +40,7 @@
 -ver "verilog/pll32MHz.v"
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd" 
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd" 
+-ver "verilog/neopixel.v"
 -p "/home/letrend/workspace/iceboard/software/motorBoard_v0.1"
 
 #set result format/file last
