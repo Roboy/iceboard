@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:board-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1167,7 +1167,7 @@ U 1 1 5DAD69A6
 P 5625 1550
 F 0 "TP1" H 5683 1668 50  0000 L CNN
 F 1 "TestPoint" H 5683 1577 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5825 1550 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 5825 1550 50  0001 C CNN
 F 3 "~" H 5825 1550 50  0001 C CNN
 	1    5625 1550
 	1    0    0    -1  
@@ -1181,7 +1181,7 @@ U 1 1 5DAD6E9C
 P 7575 1550
 F 0 "TP3" H 7633 1668 50  0000 L CNN
 F 1 "TestPoint" H 7633 1577 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7775 1550 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7775 1550 50  0001 C CNN
 F 3 "~" H 7775 1550 50  0001 C CNN
 	1    7575 1550
 	1    0    0    -1  
@@ -1195,7 +1195,7 @@ U 1 1 5DAD73D3
 P 9375 1550
 F 0 "TP5" H 9433 1668 50  0000 L CNN
 F 1 "TestPoint" H 9433 1577 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 9575 1550 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9575 1550 50  0001 C CNN
 F 3 "~" H 9575 1550 50  0001 C CNN
 	1    9375 1550
 	1    0    0    -1  
@@ -1209,7 +1209,7 @@ U 1 1 5DAD7884
 P 9400 3100
 F 0 "TP6" H 9458 3218 50  0000 L CNN
 F 1 "TestPoint" H 9458 3127 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 9600 3100 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 9600 3100 50  0001 C CNN
 F 3 "~" H 9600 3100 50  0001 C CNN
 	1    9400 3100
 	1    0    0    -1  
@@ -1223,7 +1223,7 @@ U 1 1 5DAD7F26
 P 7600 3100
 F 0 "TP4" H 7658 3218 50  0000 L CNN
 F 1 "TestPoint" H 7658 3127 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 7800 3100 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7800 3100 50  0001 C CNN
 F 3 "~" H 7800 3100 50  0001 C CNN
 	1    7600 3100
 	1    0    0    -1  
@@ -1237,7 +1237,7 @@ U 1 1 5DAD83FA
 P 5625 3100
 F 0 "TP2" H 5683 3218 50  0000 L CNN
 F 1 "TestPoint" H 5683 3127 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5825 3100 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 5825 3100 50  0001 C CNN
 F 3 "~" H 5825 3100 50  0001 C CNN
 	1    5625 3100
 	1    0    0    -1  
