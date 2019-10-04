@@ -11,9 +11,9 @@ module motorControl #(parameter MAX_LIMIT = 128, parameter MIN_LIMIT = -128)(
     input signed [23:0] Kp,
     input signed [23:0] Ki,
     input signed [23:0] Kd,
-    input signed [9:0] PWMLimit,
+    input signed [23:0] PWMLimit,
     input signed [23:0] IntegralLimit,
-    input signed [9:0] deadband
+    input signed [23:0] deadband
   );
 
   localparam  HA = 5;
