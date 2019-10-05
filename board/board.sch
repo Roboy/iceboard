@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:board-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title "BLDC_MotorBoard"
 Date "2019-08-02"
 Rev "0.2"
@@ -277,22 +277,6 @@ F 3 "" H 2875 3525 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L board-rescue:LTC2852HDDPBF-LTC2852HDDPBF U3
-U 1 1 5D67574C
-P 8000 5200
-F 0 "U3" H 9100 5565 50  0000 C CNN
-F 1 "LTC2852HDDPBF" H 9100 5474 50  0000 C CNN
-F 2 "custom_lib:LTC8252_DD_DFN-10_DD" H 8000 5200 50  0001 L BNN
-F 3 "Linear Technology/Analog" H 8000 5200 50  0001 L BNN
-F 4 "MS-Interface 3.3V Full-Duplex 20Mbps RS485 Transceiver w/ Enables" H 8000 5200 50  0001 L BNN "Field4"
-F 5 "LTC2852HDD#PBF" H 8000 5200 50  0001 L BNN "Field5"
-F 6 "None" H 8000 5200 50  0001 L BNN "Field6"
-F 7 "DFN-10 Linear Technology" H 8000 5200 50  0001 L BNN "Field7"
-F 8 "Unavailable" H 8000 5200 50  0001 L BNN "Field8"
-	1    8000 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x10_Female J1
 U 1 1 5D6A8C66
 P 3075 3725
@@ -307,86 +291,17 @@ NoConn ~ 2875 4225
 NoConn ~ 2875 3625
 NoConn ~ 2875 4125
 NoConn ~ 2875 3325
-$Comp
-L power:GND #PWR0112
-U 1 1 5D70DD02
-P 8000 5600
-AR Path="/5D70DD02" Ref="#PWR0112"  Part="1" 
-AR Path="/5D056FB0/5D70DD02" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0112" H 8000 5350 50  0001 C CNN
-F 1 "GND" V 8005 5472 50  0000 R CNN
-F 2 "" H 8000 5600 50  0001 C CNN
-F 3 "" H 8000 5600 50  0001 C CNN
-	1    8000 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0128
-U 1 1 5D72DED3
-P 10200 5300
-AR Path="/5D72DED3" Ref="#PWR0128"  Part="1" 
-AR Path="/5D056FB0/5D72DED3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0128" H 10200 5150 50  0001 C CNN
-F 1 "+3.3V" V 10215 5428 50  0000 L CNN
-F 2 "" H 10200 5300 50  0001 C CNN
-F 3 "" H 10200 5300 50  0001 C CNN
-	1    10200 5300
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0129
-U 1 1 5D74313F
-P 10200 5200
-AR Path="/5D74313F" Ref="#PWR0129"  Part="1" 
-AR Path="/5D056FB0/5D74313F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0129" H 10200 4950 50  0001 C CNN
-F 1 "GND" V 10205 5072 50  0000 R CNN
-F 2 "" H 10200 5200 50  0001 C CNN
-F 3 "" H 10200 5200 50  0001 C CNN
-	1    10200 5200
-	0    -1   -1   0   
-$EndComp
-Text Label 10200 5400 0    50   ~ 0
+Text Label 9775 5075 0    50   ~ 0
 h_RX
-Text Label 10200 5500 0    50   ~ 0
+Text Label 9775 5175 0    50   ~ 0
 l_RX
-Text Label 10200 5600 0    50   ~ 0
+Text Label 9775 5250 0    50   ~ 0
 h_TX
-Text Label 10200 5700 0    50   ~ 0
+Text Label 9775 5325 0    50   ~ 0
 l_TX
-$Comp
-L power:GND #PWR0130
-U 1 1 5D7618B9
-P 7925 5300
-AR Path="/5D7618B9" Ref="#PWR0130"  Part="1" 
-AR Path="/5D056FB0/5D7618B9" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0130" H 7925 5050 50  0001 C CNN
-F 1 "GND" V 7930 5172 50  0000 R CNN
-F 2 "" H 7925 5300 50  0001 C CNN
-F 3 "" H 7925 5300 50  0001 C CNN
-	1    7925 5300
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0131
-U 1 1 5D76C0AE
-P 7925 5400
-AR Path="/5D76C0AE" Ref="#PWR0131"  Part="1" 
-AR Path="/5D056FB0/5D76C0AE" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0131" H 7925 5250 50  0001 C CNN
-F 1 "+3.3V" V 7940 5528 50  0000 L CNN
-F 2 "" H 7925 5400 50  0001 C CNN
-F 3 "" H 7925 5400 50  0001 C CNN
-	1    7925 5400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7925 5300 8000 5300
-Wire Wire Line
-	8000 5400 7925 5400
-Text GLabel 8000 5500 0    50   Input ~ 0
+Text GLabel 8600 4925 0    50   Input ~ 0
 TX
-Text GLabel 8000 5200 0    50   Input ~ 0
+Text GLabel 8600 4825 0    50   Input ~ 0
 RX
 Text Label 5025 5225 2    50   ~ 0
 l_RX
@@ -505,7 +420,7 @@ F 3 "" H 7150 5200 50  0001 C CNN
 	1    7150 5200
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9350 2000
+NoConn ~ 10550 2000
 Text Label 8750 2000 2    50   ~ 0
 NEOPXL
 $Comp
@@ -532,65 +447,35 @@ Encoder1_A
 Text Label 5900 4175 2    50   ~ 0
 Encoder1_B
 $Comp
-L Connector:Conn_01x04_Female J4
-U 1 1 5D6B1D02
-P 6675 2925
-F 0 "J4" H 6703 2901 50  0000 L CNN
-F 1 "Encoder1" H 6703 2810 50  0000 L CNN
-F 2 "custom_lib:TE-Connectivity_Micro-Match_connector_02x02_Pitch_1.27mm" H 6675 2925 50  0001 C CNN
-F 3 "~" H 6675 2925 50  0001 C CNN
-	1    6675 2925
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR0157
 U 1 1 5D6B1DA4
-P 6475 2825
+P 6575 2300
 AR Path="/5D6B1DA4" Ref="#PWR0157"  Part="1" 
 AR Path="/5D056FB0/5D6B1DA4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0157" H 6475 2675 50  0001 C CNN
-F 1 "+3.3V" V 6490 2953 50  0000 L CNN
-F 2 "" H 6475 2825 50  0001 C CNN
-F 3 "" H 6475 2825 50  0001 C CNN
-	1    6475 2825
+F 0 "#PWR0157" H 6575 2150 50  0001 C CNN
+F 1 "+3.3V" V 6590 2428 50  0000 L CNN
+F 2 "" H 6575 2300 50  0001 C CNN
+F 3 "" H 6575 2300 50  0001 C CNN
+	1    6575 2300
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0158
 U 1 1 5D6B1DC7
-P 6475 2925
+P 6575 2400
 AR Path="/5D6B1DC7" Ref="#PWR0158"  Part="1" 
 AR Path="/5D056FB0/5D6B1DC7" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0158" H 6475 2675 50  0001 C CNN
-F 1 "GND" V 6480 2797 50  0000 R CNN
-F 2 "" H 6475 2925 50  0001 C CNN
-F 3 "" H 6475 2925 50  0001 C CNN
-	1    6475 2925
+F 0 "#PWR0158" H 6575 2150 50  0001 C CNN
+F 1 "GND" V 6580 2272 50  0000 R CNN
+F 2 "" H 6575 2400 50  0001 C CNN
+F 3 "" H 6575 2400 50  0001 C CNN
+	1    6575 2400
 	0    1    1    0   
 $EndComp
-Text Label 6475 3025 2    50   ~ 0
+Text Label 6575 2600 2    50   ~ 0
 Encoder1_A
-Text Label 6475 3125 2    50   ~ 0
+Text Label 6575 2700 2    50   ~ 0
 Encoder1_B
-Wire Wire Line
-	8150 3425 8150 3525
-$Comp
-L Switch:SW_DIP_x03 SW1
-U 1 1 5D6B31C9
-P 7850 3625
-F 0 "SW1" H 7850 4092 50  0000 C CNN
-F 1 "SW_DIP_x03" H 7850 4001 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_DIP_SPSTx03_Slide_KingTek_DSHP03TS_W7.62mm_P1.27mm" H 7850 3625 50  0001 C CNN
-F 3 "" H 7850 3625 50  0001 C CNN
-	1    7850 3625
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8150 3625 8150 3875
-Wire Wire Line
-	8150 3625 8150 3525
-Connection ~ 8150 3625
-Connection ~ 8150 3525
 $Comp
 L Device:C C26
 U 1 1 5D6EE22D
@@ -690,8 +575,8 @@ $Comp
 L LED:SK6812MINI D3
 U 1 1 5D89538D
 P 9050 2000
-F 0 "D3" H 9394 2046 50  0000 L CNN
-F 1 "SK6812MINI" H 9394 1955 50  0000 L CNN
+F 0 "D3" H 9125 2250 50  0000 L CNN
+F 1 "SK6812MINI" H 9100 1725 50  0000 L CNN
 F 2 "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" H 9100 1700 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 9150 1625 50  0001 L TNN
 	1    9050 2000
@@ -738,4 +623,90 @@ F 3 "" H 4075 3450 50  0001 C CNN
 	1    4075 3450
 	0    -1   -1   0   
 $EndComp
+$Sheet
+S 8600 4600 1175 850 
+U 5DB32DB1
+F0 "transceiver" 50
+F1 "transceiver.sch" 50
+F2 "RX_iso" I L 8600 4825 50 
+F3 "TX_iso" I L 8600 4925 50 
+F4 "term_te" I R 9775 4975 50 
+F5 "h_Rx" I R 9775 5075 50 
+F6 "l_Rx" I R 9775 5175 50 
+F7 "h_Tx" I R 9775 5250 50 
+F8 "l_Tx" I R 9775 5325 50 
+$EndSheet
+$Comp
+L Switch:SW_DIP_x04 SW1
+U 1 1 5DB6CAF3
+P 7850 3625
+F 0 "SW1" H 7850 4092 50  0000 C CNN
+F 1 "SW_DIP_x04" H 7850 4001 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_DIP_SPSTx04_Slide_Omron_A6H-4101_W6.15mm_P1.27mm" H 7850 3625 50  0001 C CNN
+F 3 "~" H 7850 3625 50  0001 C CNN
+	1    7850 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3425 8150 3525
+Wire Wire Line
+	8150 3725 8150 3875
+Wire Wire Line
+	8150 3525 8150 3625
+Connection ~ 8150 3525
+Connection ~ 8150 3725
+Connection ~ 8150 3625
+Wire Wire Line
+	8150 3625 8150 3725
+Text Label 9775 4975 0    50   ~ 0
+term_te
+Text Label 7550 3725 2    50   ~ 0
+term_te
+$Comp
+L LED:SK6812MINI D4
+U 1 1 5DBF4A96
+P 9650 2000
+F 0 "D4" H 9725 2250 50  0000 L CNN
+F 1 "SK6812MINI" H 9700 1725 50  0000 L CNN
+F 2 "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" H 9700 1700 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 9750 1625 50  0001 L TNN
+	1    9650 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D5
+U 1 1 5DBF5018
+P 10250 2000
+F 0 "D5" H 10325 2250 50  0000 L CNN
+F 1 "SK6812MINI" H 10300 1725 50  0000 L CNN
+F 2 "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" H 10300 1700 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 10350 1625 50  0001 L TNN
+	1    10250 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 1700 9650 1700
+Connection ~ 9050 1700
+Wire Wire Line
+	9650 1700 10250 1700
+Connection ~ 9650 1700
+Wire Wire Line
+	10250 2300 9650 2300
+Wire Wire Line
+	9650 2300 9050 2300
+Connection ~ 9650 2300
+Connection ~ 9050 2300
+$Comp
+L Connector:Conn_01x05_Female J4
+U 1 1 5DC08A2F
+P 6775 2500
+F 0 "J4" H 6803 2526 50  0000 L CNN
+F 1 "ENCODER1" H 6803 2435 50  0000 L CNN
+F 2 "Connector_JST:JST_SH_SM05B-SRSS-TB_1x05-1MP_P1.00mm_Horizontal" H 6775 2500 50  0001 C CNN
+F 3 "~" H 6775 2500 50  0001 C CNN
+	1    6775 2500
+	1    0    0    -1  
+$EndComp
+Text Label 6575 2500 2    50   ~ 0
+Encoder1_I
 $EndSCHEMATC

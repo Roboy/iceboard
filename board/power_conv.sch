@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:board-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 2 5
 Title ""
 Date ""
 Rev ""
@@ -112,51 +112,7 @@ F 3 "~" H 7900 2550 50  0001 C CNN
 	1    7900 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5650 3850 5650 4050
-Wire Wire Line
-	5650 4050 7600 4050
-Wire Wire Line
-	7600 4050 7600 3100
-Wire Wire Line
-	7600 3100 7900 3100
-$Comp
-L Device:R R18
-U 1 1 5D89D472
-P 7900 2850
-F 0 "R18" H 7970 2896 50  0000 L CNN
-F 1 "243k" H 7970 2805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7830 2850 50  0001 C CNN
-F 3 "~" H 7900 2850 50  0001 C CNN
-	1    7900 2850
-	1    0    0    -1  
-$EndComp
 Connection ~ 7900 2700
-$Comp
-L Device:R R19
-U 1 1 5D89D8EC
-P 7900 3250
-F 0 "R19" H 7970 3296 50  0000 L CNN
-F 1 "52.3k" H 7970 3205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7830 3250 50  0001 C CNN
-F 3 "~" H 7900 3250 50  0001 C CNN
-	1    7900 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0163
-U 1 1 5D89DB61
-P 7900 3400
-F 0 "#PWR0163" H 7900 3150 50  0001 C CNN
-F 1 "GND" H 7905 3227 50  0000 C CNN
-F 2 "" H 7900 3400 50  0001 C CNN
-F 3 "" H 7900 3400 50  0001 C CNN
-	1    7900 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7900 3000 7900 3100
-Connection ~ 7900 3100
 Wire Wire Line
 	6500 3300 7150 3300
 Wire Wire Line
@@ -292,4 +248,11 @@ Wire Wire Line
 Connection ~ 5900 2150
 Wire Wire Line
 	5900 2150 5900 2250
+Wire Wire Line
+	8400 3800 8400 4050
+Wire Wire Line
+	8400 4050 5650 4050
+Wire Wire Line
+	5650 4050 5650 3850
+Connection ~ 8400 3800
 $EndSCHEMATC

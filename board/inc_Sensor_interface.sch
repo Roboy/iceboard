@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:board-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -22,7 +22,7 @@ AR Path="/5D8D4FBE" Ref="U?"  Part="1"
 AR Path="/5D88AAB3/5D8D4FBE" Ref="U2"  Part="1" 
 F 0 "U2" H 5925 3667 50  0000 C CNN
 F 1 "LM2903" H 5925 3576 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5925 3300 50  0001 C CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 5925 3300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 5925 3300 50  0001 C CNN
 	1    5925 3300
 	1    0    0    -1  
@@ -35,7 +35,7 @@ AR Path="/5D8D4FC4" Ref="U?"  Part="2"
 AR Path="/5D88AAB3/5D8D4FC4" Ref="U2"  Part="2" 
 F 0 "U2" H 5925 4567 50  0000 C CNN
 F 1 "LM2903" H 5925 4476 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5925 4200 50  0001 C CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 5925 4200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 5925 4200 50  0001 C CNN
 	2    5925 4200
 	1    0    0    -1  
@@ -48,7 +48,7 @@ AR Path="/5D8D4FCA" Ref="U?"  Part="3"
 AR Path="/5D88AAB3/5D8D4FCA" Ref="U2"  Part="3" 
 F 0 "U2" H 5883 3346 50  0000 L CNN
 F 1 "LM2903" H 5883 3255 50  0000 L CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5925 3300 50  0001 C CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 5925 3300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 5925 3300 50  0001 C CNN
 	3    5925 3300
 	1    0    0    -1  
