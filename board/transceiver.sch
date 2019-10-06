@@ -21,7 +21,7 @@ TX_iso
 Text HLabel 4875 3425 0    50   Input ~ 0
 RX_iso
 $Comp
-L myo_shield_pcb-rescue:LTC2855CDEPBF-LTC2855CDEPBF U?
+L board-rescue:LTC2855CDEPBF-LTC2855CDEPBF-myo_shield_pcb-rescue U?
 U 1 1 5D6E2053
 P 4875 3425
 AR Path="/5D6E2053" Ref="U?"  Part="1" 

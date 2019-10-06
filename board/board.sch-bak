@@ -14,11 +14,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 2825 4775 2    50   ~ 0
+Text Label 2825 4975 2    50   ~ 0
 HALL1
 Text Label 2825 4875 2    50   ~ 0
 HALL2
-Text Label 2825 4975 2    50   ~ 0
+Text Label 2825 4775 2    50   ~ 0
 HALL3
 $Comp
 L Connector:Conn_01x05_Female J?
@@ -68,21 +68,21 @@ F 3 "" H 5000 3250 50  0001 C CNN
 	1    5000 3250
 	0    1    1    0   
 $EndComp
-Text Label 5900 3975 2    50   ~ 0
+Text Label 5000 3750 2    50   ~ 0
 HALL1
-Text Label 5900 3875 2    50   ~ 0
+Text Label 5000 3650 2    50   ~ 0
 HALL2
-Text Label 5900 3775 2    50   ~ 0
+Text Label 5000 3550 2    50   ~ 0
 HALL3
-Text Label 5900 3675 2    50   ~ 0
+Text Label 5000 3450 2    50   ~ 0
 Encoder0_A
-Text Label 5900 3575 2    50   ~ 0
+Text Label 5000 3350 2    50   ~ 0
 Encoder0_B
-Text GLabel 5900 4275 0    50   Input ~ 0
-CS_MISO
 Text GLabel 5900 4375 0    50   Input ~ 0
-CS_CLK
+CS_MISO
 Text GLabel 5900 4475 0    50   Input ~ 0
+CS_CLK
+Text GLabel 5900 4575 0    50   Input ~ 0
 CS
 $Comp
 L power:+3.3V #PWR0116
@@ -110,15 +110,15 @@ F 3 "" H 5900 3375 50  0001 C CNN
 	1    5900 3375
 	0    1    1    0   
 $EndComp
-Text GLabel 5000 3850 0    50   Input ~ 0
+Text GLabel 5900 3575 0    50   Input ~ 0
 INLC
-Text GLabel 5000 3950 0    50   Input ~ 0
+Text GLabel 5900 3675 0    50   Input ~ 0
 INHC
-Text GLabel 5000 4150 0    50   Input ~ 0
+Text GLabel 5900 3875 0    50   Input ~ 0
 INHB
-Text GLabel 5000 4250 0    50   Input ~ 0
+Text GLabel 5900 3975 0    50   Input ~ 0
 INLA
-Text GLabel 5000 4350 0    50   Input ~ 0
+Text GLabel 5900 4075 0    50   Input ~ 0
 INHA
 $Comp
 L power:+5V #PWR0119
@@ -337,9 +337,9 @@ F 3 "" H 9050 1700 50  0001 C CNN
 	1    9050 1700
 	1    0    0    -1  
 $EndComp
-Text Label 5900 4575 2    50   ~ 0
+Text Label 5000 4050 2    50   ~ 0
 NEOPXL
-Text GLabel 5000 4050 0    50   Input ~ 0
+Text GLabel 5900 3775 0    50   Input ~ 0
 INLB
 Text Label 2875 3725 2    50   ~ 0
 -A
@@ -381,45 +381,6 @@ F5 "-B" I L 1300 1325 50
 F6 "ENC_A" O R 2450 1150 50 
 F7 "ENC_B" O R 2450 1225 50 
 $EndSheet
-$Comp
-L Device:C C24
-U 1 1 5DB16C38
-P 7150 5350
-AR Path="/5DB16C38" Ref="C24"  Part="1" 
-AR Path="/5D0530DE/5DB16C38" Ref="C?"  Part="1" 
-F 0 "C24" H 7265 5396 50  0000 L CNN
-F 1 "0.1uF" H 7265 5305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 7188 5200 50  0001 C CNN
-F 3 "~" H 7150 5350 50  0001 C CNN
-	1    7150 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0152
-U 1 1 5DB19757
-P 7150 5500
-AR Path="/5DB19757" Ref="#PWR0152"  Part="1" 
-AR Path="/5D056FB0/5DB19757" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0152" H 7150 5250 50  0001 C CNN
-F 1 "GND" V 7155 5372 50  0000 R CNN
-F 2 "" H 7150 5500 50  0001 C CNN
-F 3 "" H 7150 5500 50  0001 C CNN
-	1    7150 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0153
-U 1 1 5DB1975D
-P 7150 5200
-AR Path="/5DB1975D" Ref="#PWR0153"  Part="1" 
-AR Path="/5D056FB0/5DB1975D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0153" H 7150 5050 50  0001 C CNN
-F 1 "+3.3V" V 7165 5328 50  0000 L CNN
-F 2 "" H 7150 5200 50  0001 C CNN
-F 3 "" H 7150 5200 50  0001 C CNN
-	1    7150 5200
-	1    0    0    -1  
-$EndComp
 NoConn ~ 10550 2000
 Text Label 8750 2000 2    50   ~ 0
 NEOPXL
@@ -436,15 +397,15 @@ F 3 "" H 8150 3875 50  0001 C CNN
 	1    8150 3875
 	1    0    0    -1  
 $EndComp
-Text Label 5000 3350 2    50   ~ 0
+Text Label 5000 4150 2    50   ~ 0
 ID_0
-Text Label 5000 3450 2    50   ~ 0
+Text Label 5000 4250 2    50   ~ 0
 ID_1
-Text Label 5000 3550 2    50   ~ 0
+Text Label 5000 4350 2    50   ~ 0
 ID_2
-Text Label 5900 4075 2    50   ~ 0
+Text Label 5000 3950 2    50   ~ 0
 Encoder1_A
-Text Label 5900 4175 2    50   ~ 0
+Text Label 5000 3850 2    50   ~ 0
 Encoder1_B
 $Comp
 L power:+3.3V #PWR0157
@@ -476,88 +437,12 @@ Text Label 6575 2600 2    50   ~ 0
 Encoder1_A
 Text Label 6575 2700 2    50   ~ 0
 Encoder1_B
-$Comp
-L Device:C C26
-U 1 1 5D6EE22D
-P 9850 3500
-AR Path="/5D6EE22D" Ref="C26"  Part="1" 
-AR Path="/5D0530DE/5D6EE22D" Ref="C?"  Part="1" 
-F 0 "C26" H 9965 3546 50  0000 L CNN
-F 1 "0.1uF" H 9965 3455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 9888 3350 50  0001 C CNN
-F 3 "~" H 9850 3500 50  0001 C CNN
-	1    9850 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0160
-U 1 1 5D6EE233
-P 9850 3650
-AR Path="/5D6EE233" Ref="#PWR0160"  Part="1" 
-AR Path="/5D0530DE/5D6EE233" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0160" H 9850 3400 50  0001 C CNN
-F 1 "GND" V 9850 3450 50  0000 C CNN
-F 2 "" H 9850 3650 50  0001 C CNN
-F 3 "" H 9850 3650 50  0001 C CNN
-	1    9850 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5D6EE239
-P 9850 3350
-AR Path="/5D0530DE/5D6EE239" Ref="#PWR?"  Part="1" 
-AR Path="/5D6EE239" Ref="#PWR0161"  Part="1" 
-F 0 "#PWR0161" H 9850 3200 50  0001 C CNN
-F 1 "+3.3V" V 9865 3478 50  0000 L CNN
-F 2 "" H 9850 3350 50  0001 C CNN
-F 3 "" H 9850 3350 50  0001 C CNN
-	1    9850 3350
-	1    0    0    -1  
-$EndComp
 Text Label 7550 3625 2    50   ~ 0
 ID_2
 Text Label 7550 3525 2    50   ~ 0
 ID_1
 Text Label 7550 3425 2    50   ~ 0
 ID_0
-$Comp
-L Device:C C29
-U 1 1 5D723058
-P 9325 3450
-AR Path="/5D723058" Ref="C29"  Part="1" 
-AR Path="/5D0530DE/5D723058" Ref="C?"  Part="1" 
-F 0 "C29" H 9440 3496 50  0000 L CNN
-F 1 "0.1uF" H 9440 3405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 9363 3300 50  0001 C CNN
-F 3 "~" H 9325 3450 50  0001 C CNN
-	1    9325 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0167
-U 1 1 5D72305E
-P 9325 3600
-AR Path="/5D72305E" Ref="#PWR0167"  Part="1" 
-AR Path="/5D0530DE/5D72305E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0167" H 9325 3350 50  0001 C CNN
-F 1 "GND" V 9325 3400 50  0000 C CNN
-F 2 "" H 9325 3600 50  0001 C CNN
-F 3 "" H 9325 3600 50  0001 C CNN
-	1    9325 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0168
-U 1 1 5D72EED4
-P 9325 3300
-F 0 "#PWR0168" H 9325 3150 50  0001 C CNN
-F 1 "+5V" V 9340 3428 50  0000 L CNN
-F 2 "" H 9325 3300 50  0001 C CNN
-F 3 "" H 9325 3300 50  0001 C CNN
-	1    9325 3300
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3.3V #PWR0159
 U 1 1 5D6B5C45
@@ -585,42 +470,38 @@ $EndComp
 $Comp
 L Connector:Conn_01x04_Female J9
 U 1 1 5DAB717B
-P 3875 3650
-F 0 "J9" H 3767 3225 50  0000 C CNN
-F 1 "i2c" H 3767 3316 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 3875 3650 50  0001 C CNN
-F 3 "~" H 3875 3650 50  0001 C CNN
-	1    3875 3650
+P 6050 5300
+F 0 "J9" H 5942 4875 50  0000 C CNN
+F 1 "i2c" H 5942 4966 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 6050 5300 50  0001 C CNN
+F 3 "~" H 6050 5300 50  0001 C CNN
+	1    6050 5300
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5000 3650 4075 3650
-Wire Wire Line
-	5000 3750 4075 3750
 $Comp
 L power:+3.3V #PWR0139
 U 1 1 5DABC83A
-P 4075 3550
+P 6250 5200
 AR Path="/5DABC83A" Ref="#PWR0139"  Part="1" 
 AR Path="/5D056FB0/5DABC83A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0139" H 4075 3400 50  0001 C CNN
-F 1 "+3.3V" V 4090 3678 50  0000 L CNN
-F 2 "" H 4075 3550 50  0001 C CNN
-F 3 "" H 4075 3550 50  0001 C CNN
-	1    4075 3550
+F 0 "#PWR0139" H 6250 5050 50  0001 C CNN
+F 1 "+3.3V" V 6265 5328 50  0000 L CNN
+F 2 "" H 6250 5200 50  0001 C CNN
+F 3 "" H 6250 5200 50  0001 C CNN
+	1    6250 5200
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR0142
 U 1 1 5DABDFDD
-P 4075 3450
+P 6250 5100
 AR Path="/5DABDFDD" Ref="#PWR0142"  Part="1" 
 AR Path="/5D056FB0/5DABDFDD" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0142" H 4075 3200 50  0001 C CNN
-F 1 "GND" V 4080 3322 50  0000 R CNN
-F 2 "" H 4075 3450 50  0001 C CNN
-F 3 "" H 4075 3450 50  0001 C CNN
-	1    4075 3450
+F 0 "#PWR0142" H 6250 4850 50  0001 C CNN
+F 1 "GND" V 6255 4972 50  0000 R CNN
+F 2 "" H 6250 5100 50  0001 C CNN
+F 3 "" H 6250 5100 50  0001 C CNN
+	1    6250 5100
 	0    -1   -1   0   
 $EndComp
 $Sheet
@@ -697,16 +578,24 @@ Wire Wire Line
 Connection ~ 9650 2300
 Connection ~ 9050 2300
 $Comp
-L Connector:Conn_01x05_Female J?
+L Connector:Conn_01x05_Female J4
 U 1 1 5DC08A2F
 P 6775 2500
-F 0 "J?" H 6803 2526 50  0000 L CNN
+F 0 "J4" H 6803 2526 50  0000 L CNN
 F 1 "ENCODER1" H 6803 2435 50  0000 L CNN
-F 2 "" H 6775 2500 50  0001 C CNN
+F 2 "Connector_JST:JST_SH_SM05B-SRSS-TB_1x05-1MP_P1.00mm_Horizontal" H 6775 2500 50  0001 C CNN
 F 3 "~" H 6775 2500 50  0001 C CNN
 	1    6775 2500
 	1    0    0    -1  
 $EndComp
 Text Label 6575 2500 2    50   ~ 0
 Encoder1_I
+Text Label 6250 5300 0    50   ~ 0
+SDA
+Text Label 6250 5400 0    50   ~ 0
+SCL
+Text Label 5900 4275 2    50   ~ 0
+SCL
+Text Label 5900 4175 2    50   ~ 0
+SDA
 $EndSCHEMATC
