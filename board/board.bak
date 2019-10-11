@@ -681,34 +681,34 @@ F 3 "~" H 9025 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H3
 U 1 1 5DC4677A
 P 10200 3625
-F 0 "H?" H 10300 3671 50  0000 L CNN
+F 0 "H3" H 10300 3671 50  0000 L CNN
 F 1 "LABEL" H 10300 3580 50  0000 L CNN
-F 2 "" H 10200 3625 50  0001 C CNN
+F 2 "custom_lib:R1_ear_silk_5.5mm" H 10200 3625 50  0001 C CNN
 F 3 "~" H 10200 3625 50  0001 C CNN
 	1    10200 3625
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H4
 U 1 1 5DC46F1F
 P 10200 3800
-F 0 "H?" H 10300 3846 50  0000 L CNN
+F 0 "H4" H 10300 3846 50  0000 L CNN
 F 1 "LABEL" H 10300 3755 50  0000 L CNN
-F 2 "" H 10200 3800 50  0001 C CNN
+F 2 "custom_lib:R1_eyes_mask_5.5mm" H 10200 3800 50  0001 C CNN
 F 3 "~" H 10200 3800 50  0001 C CNN
 	1    10200 3800
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H5
 U 1 1 5DC4730D
 P 10200 3975
-F 0 "H?" H 10300 4021 50  0000 L CNN
+F 0 "H5" H 10300 4021 50  0000 L CNN
 F 1 "LABEL" H 10300 3930 50  0000 L CNN
-F 2 "" H 10200 3975 50  0001 C CNN
+F 2 "custom_lib:R1_face_mask_5.5mm" H 10200 3975 50  0001 C CNN
 F 3 "~" H 10200 3975 50  0001 C CNN
 	1    10200 3975
 	1    0    0    -1  

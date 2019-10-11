@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/letrend/workspace/iceboard/board/board.sch)
-    (date "Fr 11 Okt 2019 18:19:45 CEST")
+    (date "Fr 11 Okt 2019 20:22:28 CEST")
     (tool "Eeschema 5.0.2-bee76a0~70~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -214,7 +214,7 @@
       (tstamp 5D8988E8))
     (comp (ref L1)
       (value 10uH)
-      (footprint Inductor_SMD:L_0402_1005Metric)
+      (footprint custom_lib:XAL5050-103MEC)
       (datasheet ~)
       (libsource (lib Device) (part L) (description Inductor))
       (sheetpath (names "/power_conv(36Vto5V)/") (tstamps /5D65053E/))
