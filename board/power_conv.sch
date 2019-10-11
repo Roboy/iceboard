@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:board-cache
-EELAYER 30 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,9 +15,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L custom:MAX17632 MAX176321
+L board-rescue:MAX17632-custom MAX176321
 U 1 1 5D889306
 P 5750 2950
+AR Path="/5D889306" Ref="MAX176321"  Part="1" 
+AR Path="/5D65053E/5D889306" Ref="MAX176321"  Part="1" 
 F 0 "MAX176321" H 6250 3600 50  0000 L CNN
 F 1 "MAX17632" H 6250 2050 50  0000 L CNN
 F 2 "custom_lib:QFN-16-1EP_3x3mm_Pitch0.5mm" H 5650 2850 50  0001 C CNN

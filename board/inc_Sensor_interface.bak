@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -22,7 +22,7 @@ AR Path="/5D8D4FBE" Ref="U?"  Part="1"
 AR Path="/5D88AAB3/5D8D4FBE" Ref="U2"  Part="1" 
 F 0 "U2" H 5925 3667 50  0000 C CNN
 F 1 "LM2903" H 5925 3576 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5925 3300 50  0001 C CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 5925 3300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 5925 3300 50  0001 C CNN
 	1    5925 3300
 	1    0    0    -1  
@@ -35,7 +35,7 @@ AR Path="/5D8D4FC4" Ref="U?"  Part="2"
 AR Path="/5D88AAB3/5D8D4FC4" Ref="U2"  Part="2" 
 F 0 "U2" H 5925 4567 50  0000 C CNN
 F 1 "LM2903" H 5925 4476 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5925 4200 50  0001 C CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 5925 4200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 5925 4200 50  0001 C CNN
 	2    5925 4200
 	1    0    0    -1  
@@ -48,7 +48,7 @@ AR Path="/5D8D4FCA" Ref="U?"  Part="3"
 AR Path="/5D88AAB3/5D8D4FCA" Ref="U2"  Part="3" 
 F 0 "U2" H 5883 3346 50  0000 L CNN
 F 1 "LM2903" H 5883 3255 50  0000 L CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 5925 3300 50  0001 C CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 5925 3300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 5925 3300 50  0001 C CNN
 	3    5925 3300
 	1    0    0    -1  
@@ -131,7 +131,7 @@ AR Path="/5D8D4FF5" Ref="R?"  Part="1"
 AR Path="/5D0530DE/5D8D4FF5" Ref="R?"  Part="1" 
 AR Path="/5D88AAB3/5D8D4FF5" Ref="R17"  Part="1" 
 F 0 "R17" H 6545 4046 50  0000 L CNN
-F 1 "100k" H 6545 3955 50  0000 L CNN
+F 1 "10k" H 6545 3955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6405 4000 50  0001 C CNN
 F 3 "~" H 6475 4000 50  0001 C CNN
 	1    6475 4000
@@ -214,8 +214,8 @@ P 4775 3900
 AR Path="/5D8D501A" Ref="C?"  Part="1" 
 AR Path="/5D0530DE/5D8D501A" Ref="C?"  Part="1" 
 AR Path="/5D88AAB3/5D8D501A" Ref="C15"  Part="1" 
-F 0 "C15" H 4890 3946 50  0000 L CNN
-F 1 "0.1uF" H 4890 3855 50  0000 L CNN
+F 0 "C15" H 4900 4050 50  0000 L CNN
+F 1 "0.1uF" H 4900 3975 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4813 3750 50  0001 C CNN
 F 3 "~" H 4775 3900 50  0001 C CNN
 	1    4775 3900
@@ -390,7 +390,7 @@ AR Path="/5D8D5073" Ref="R?"  Part="1"
 AR Path="/5D0530DE/5D8D5073" Ref="R?"  Part="1" 
 AR Path="/5D88AAB3/5D8D5073" Ref="R8"  Part="1" 
 F 0 "R8" H 5070 4096 50  0000 L CNN
-F 1 "10k" H 5070 4005 50  0000 L CNN
+F 1 "1k" H 5070 4005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4930 4050 50  0001 C CNN
 F 3 "~" H 5000 4050 50  0001 C CNN
 	1    5000 4050
@@ -404,7 +404,7 @@ AR Path="/5D8D5079" Ref="R?"  Part="1"
 AR Path="/5D0530DE/5D8D5079" Ref="R?"  Part="1" 
 AR Path="/5D88AAB3/5D8D5079" Ref="R9"  Part="1" 
 F 0 "R9" H 5070 4396 50  0000 L CNN
-F 1 "10k" H 5070 4305 50  0000 L CNN
+F 1 "1k" H 5070 4305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4930 4350 50  0001 C CNN
 F 3 "~" H 5000 4350 50  0001 C CNN
 	1    5000 4350
@@ -483,7 +483,7 @@ AR Path="/5D8D4FEF" Ref="R?"  Part="1"
 AR Path="/5D0530DE/5D8D4FEF" Ref="R?"  Part="1" 
 AR Path="/5D88AAB3/5D8D4FEF" Ref="R16"  Part="1" 
 F 0 "R16" H 6545 3496 50  0000 L CNN
-F 1 "100k" H 6545 3405 50  0000 L CNN
+F 1 "10k" H 6545 3405 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6405 3450 50  0001 C CNN
 F 3 "~" H 6475 3450 50  0001 C CNN
 	1    6475 3450

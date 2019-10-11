@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:board-cache
-EELAYER 30 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -120,17 +120,6 @@ Text GLabel 5900 3975 0    50   Input ~ 0
 INLA
 Text GLabel 5900 4075 0    50   Input ~ 0
 INHA
-$Comp
-L power:+5V #PWR0119
-U 1 1 5D600918
-P 5900 3275
-F 0 "#PWR0119" H 5900 3125 50  0001 C CNN
-F 1 "+5V" V 5915 3403 50  0000 L CNN
-F 2 "" H 5900 3275 50  0001 C CNN
-F 3 "" H 5900 3275 50  0001 C CNN
-	1    5900 3275
-	0    -1   -1   0   
-$EndComp
 Text GLabel 5000 4450 0    50   Input ~ 0
 TX
 Text GLabel 5000 4550 0    50   Input ~ 0
@@ -152,56 +141,6 @@ U 5D65053E
 F0 "power_conv(36Vto5V)" 50
 F1 "power_conv.sch" 50
 $EndSheet
-$Comp
-L Device:LED D1
-U 1 1 5D69CAF8
-P 7600 2100
-F 0 "D1" V 7639 1983 50  0000 R CNN
-F 1 "LED" V 7548 1983 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7600 2100 50  0001 C CNN
-F 3 "~" H 7600 2100 50  0001 C CNN
-	1    7600 2100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R Rled1
-U 1 1 5D6A6EBD
-P 7600 2400
-AR Path="/5D6A6EBD" Ref="Rled1"  Part="1" 
-AR Path="/5D0530DE/5D6A6EBD" Ref="R?"  Part="1" 
-F 0 "Rled1" H 7670 2446 50  0000 L CNN
-F 1 "10k" H 7670 2355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7530 2400 50  0001 C CNN
-F 3 "~" H 7600 2400 50  0001 C CNN
-	1    7600 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0122
-U 1 1 5D6A9216
-P 7600 2550
-AR Path="/5D6A9216" Ref="#PWR0122"  Part="1" 
-AR Path="/5D056FB0/5D6A9216" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0122" H 7600 2300 50  0001 C CNN
-F 1 "GND" V 7605 2422 50  0000 R CNN
-F 2 "" H 7600 2550 50  0001 C CNN
-F 3 "" H 7600 2550 50  0001 C CNN
-	1    7600 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+36V #PWR0123
-U 1 1 5D6B2C55
-P 7600 1950
-AR Path="/5D6B2C55" Ref="#PWR0123"  Part="1" 
-AR Path="/5D0530DE/5D6B2C55" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0123" H 7600 1800 50  0001 C CNN
-F 1 "+36V" V 7615 2078 50  0000 L CNN
-F 2 "" H 7600 1950 50  0001 C CNN
-F 3 "" H 7600 1950 50  0001 C CNN
-	1    7600 1950
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3.3V #PWR0105
 U 1 1 5D6E00E0
@@ -598,4 +537,180 @@ Text Label 5900 4275 2    50   ~ 0
 SCL
 Text Label 5900 4175 2    50   ~ 0
 SDA
+$Comp
+L Device:C C24
+U 1 1 5DA86FE8
+P 9050 1075
+F 0 "C24" H 9165 1121 50  0000 L CNN
+F 1 "0.1u" H 9165 1030 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9088 925 50  0001 C CNN
+F 3 "~" H 9050 1075 50  0001 C CNN
+	1    9050 1075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C26
+U 1 1 5DA87106
+P 9525 1075
+F 0 "C26" H 9640 1121 50  0000 L CNN
+F 1 "0.1u" H 9640 1030 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9563 925 50  0001 C CNN
+F 3 "~" H 9525 1075 50  0001 C CNN
+	1    9525 1075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C28
+U 1 1 5DA8715C
+P 10025 1075
+F 0 "C28" H 10140 1121 50  0000 L CNN
+F 1 "0.1u" H 10140 1030 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10063 925 50  0001 C CNN
+F 3 "~" H 10025 1075 50  0001 C CNN
+	1    10025 1075
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0122
+U 1 1 5DA871AE
+P 8900 925
+F 0 "#PWR0122" H 8900 775 50  0001 C CNN
+F 1 "+5V" V 8915 1053 50  0000 L CNN
+F 2 "" H 8900 925 50  0001 C CNN
+F 3 "" H 8900 925 50  0001 C CNN
+	1    8900 925 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8900 925  9050 925 
+Connection ~ 9050 925 
+Wire Wire Line
+	9050 925  9525 925 
+Connection ~ 9525 925 
+Wire Wire Line
+	9525 925  10025 925 
+$Comp
+L power:GND #PWR0123
+U 1 1 5DA87711
+P 8875 1225
+AR Path="/5DA87711" Ref="#PWR0123"  Part="1" 
+AR Path="/5D056FB0/5DA87711" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0123" H 8875 975 50  0001 C CNN
+F 1 "GND" V 8880 1097 50  0000 R CNN
+F 2 "" H 8875 1225 50  0001 C CNN
+F 3 "" H 8875 1225 50  0001 C CNN
+	1    8875 1225
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8875 1225 9050 1225
+Connection ~ 9050 1225
+Wire Wire Line
+	9050 1225 9525 1225
+Connection ~ 9525 1225
+Wire Wire Line
+	9525 1225 10025 1225
+$Comp
+L Device:C C29
+U 1 1 5DA88D51
+P 6550 1975
+F 0 "C29" H 6665 2021 50  0000 L CNN
+F 1 "0.1u" H 6665 1930 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6588 1825 50  0001 C CNN
+F 3 "~" H 6550 1975 50  0001 C CNN
+	1    6550 1975
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0152
+U 1 1 5DA895F4
+P 6550 2125
+AR Path="/5DA895F4" Ref="#PWR0152"  Part="1" 
+AR Path="/5D056FB0/5DA895F4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0152" H 6550 1975 50  0001 C CNN
+F 1 "+3.3V" V 6565 2253 50  0000 L CNN
+F 2 "" H 6550 2125 50  0001 C CNN
+F 3 "" H 6550 2125 50  0001 C CNN
+	1    6550 2125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0153
+U 1 1 5DA8961D
+P 6550 1825
+AR Path="/5DA8961D" Ref="#PWR0153"  Part="1" 
+AR Path="/5D056FB0/5DA8961D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0153" H 6550 1575 50  0001 C CNN
+F 1 "GND" V 6555 1697 50  0000 R CNN
+F 2 "" H 6550 1825 50  0001 C CNN
+F 3 "" H 6550 1825 50  0001 C CNN
+	1    6550 1825
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0119
+U 1 1 5D600918
+P 5900 3275
+F 0 "#PWR0119" H 5900 3125 50  0001 C CNN
+F 1 "+5V" V 5915 3403 50  0000 L CNN
+F 2 "" H 5900 3275 50  0001 C CNN
+F 3 "" H 5900 3275 50  0001 C CNN
+	1    5900 3275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5DC45429
+P 9025 3250
+F 0 "H1" H 9125 3296 50  0000 L CNN
+F 1 "MountingHole" H 9125 3205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9025 3250 50  0001 C CNN
+F 3 "~" H 9025 3250 50  0001 C CNN
+	1    9025 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5DC45537
+P 9025 3500
+F 0 "H2" H 9125 3546 50  0000 L CNN
+F 1 "MountingHole" H 9125 3455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9025 3500 50  0001 C CNN
+F 3 "~" H 9025 3500 50  0001 C CNN
+	1    9025 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5DC4677A
+P 10200 3625
+F 0 "H3" H 10300 3671 50  0000 L CNN
+F 1 "LABEL" H 10300 3580 50  0000 L CNN
+F 2 "custom_lib:R1_ear_silk_5.5mm" H 10200 3625 50  0001 C CNN
+F 3 "~" H 10200 3625 50  0001 C CNN
+	1    10200 3625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5DC46F1F
+P 10200 3800
+F 0 "H4" H 10300 3846 50  0000 L CNN
+F 1 "LABEL" H 10300 3755 50  0000 L CNN
+F 2 "custom_lib:R1_eyes_mask_5.5mm" H 10200 3800 50  0001 C CNN
+F 3 "~" H 10200 3800 50  0001 C CNN
+	1    10200 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 5DC4730D
+P 10200 3975
+F 0 "H5" H 10300 4021 50  0000 L CNN
+F 1 "LABEL" H 10300 3930 50  0000 L CNN
+F 2 "custom_lib:R1_face_mask_5.5mm" H 10200 3975 50  0001 C CNN
+F 3 "~" H 10200 3975 50  0001 C CNN
+	1    10200 3975
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
