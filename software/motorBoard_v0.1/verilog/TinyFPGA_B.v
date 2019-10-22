@@ -44,7 +44,7 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
    .PULLUP(1'b 1)
  ) hall1_input(
    .PACKAGE_PIN(PIN_3),
-   .D_IN_0(hall3)
+   .D_IN_0(hall1)
  );
 
  SB_IO #(
@@ -60,8 +60,47 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
    .PULLUP(1'b 1)
  ) hall3_input(
    .PACKAGE_PIN(PIN_5),
-   .D_IN_0(hall1)
+   .D_IN_0(hall3)
  );
+
+ // wire INHA, INLA, INHB, INLB, INHC, INLC;
+ // assign PIN_19 = INHA;
+ // assign PIN_20 = INLA;
+ // assign PIN_21 = INHB;
+ // assign PIN_22 = INLB;
+ // assign PIN_23 = INHC;
+ // assign PIN_24 = INLC;
+ //
+ // reg pwm_out;
+ // reg dir;
+ // reg h1, h2, h3;
+ // assign INLA = h1;
+ // assign INHB = h2;
+ // assign INLB = h3;
+ //
+ // assign INHA = pwm_out;
+ // assign INHC = dir;
+ // assign INLC = (pwm!=0);
+ //
+ // reg signed [8:0] pwm;
+ // reg signed [8:0] pwm_count;
+ //
+ // always @(posedge CLK) begin: BLDC_COMMUTATION
+ //   pwm <= 50;
+ //   h1 <= hall3;
+ //   h2 <= hall2;
+ //   h3 <= hall1;
+ //   if( pwm>=0 && pwm_count<pwm)begin
+ //    pwm_out <= 1;
+ //    dir <= 1;
+ //   end else if ( pwm<0 && pwm_count<(-pwm)) begin
+ //    pwm_out <= 1;
+ //    dir <= 0;
+ //   end else begin
+ //    pwm_out <= 0;
+ //   end
+ //   pwm_count <= pwm_count+1;
+ // end
 
  reg [5:0] GATES;
  assign PIN_19 = GATES[5];
@@ -72,11 +111,11 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
  assign PIN_24 = GATES[0];
  localparam HA=5,LA=4,HB=3,LB=2,HC=1,LC=0;
 
- reg [8:0] pwm;
- reg [8:0] pwm_count;
+ reg signed [8:0] pwm;
+ reg signed [8:0] pwm_count;
 
  always @(posedge CLK) begin: BLDC_COMMUTATION
-    pwm <= 100;
+   pwm <= 20;
    if( pwm>=0 && pwm_count<pwm)begin
      GATES <= 0;
      if(hall1 && ~hall2 && hall3) begin // A -> B

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Mon Oct 21 21:26:06 2019
+Tue Oct 22 23:55:42 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -27,39 +27,39 @@ Passed:  The following path meets requirements by 46.924ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFF     C              pwm_count_97__i0  (from CLK +)
-   Destination:    SB_DFF     D              pwm_count_97__i8  (to CLK +)
+   Source:         SB_DFF     C              pwm_count_166__i0  (from CLK +)
+   Destination:    SB_DFF     D              pwm_count_166__i8  (to CLK +)
 
    Delay:                  15.443ns  (26.2% logic, 73.8% route), 10 logic levels.
 
  Constraint Details:
 
-     15.443ns data_path pwm_count_97__i0 to pwm_count_97__i8 meets
+     15.443ns data_path pwm_count_166__i0 to pwm_count_166__i8 meets
      62.500ns delay constraint less
       0.133ns L_S requirement (totaling 62.367ns) by 46.924ns
 
- Path Details: pwm_count_97__i0 to pwm_count_97__i8
+ Path Details: pwm_count_166__i0 to pwm_count_166__i8
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              pwm_count_97__i0 (from CLK)
-Route         2   e 1.258                                  n9
-LUT4        ---     0.408             I1 to CO             pwm_count_97_add_4_2
-Route         2   e 1.158                                  n398
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_3
-Route         2   e 1.158                                  n399
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_4
-Route         2   e 1.158                                  n400
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_5
-Route         2   e 1.158                                  n401
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_6
-Route         2   e 1.158                                  n402
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_7
-Route         2   e 1.158                                  n403
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_8
-Route         2   e 1.158                                  n404
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_9
-Route         1   e 1.020                                  n405
-LUT4        ---     0.408             I3 to O              pwm_count_97_add_4_10_lut
+L_CO        ---     0.367              C to Q              pwm_count_166__i0 (from CLK)
+Route         2   e 1.258                                  pwm_count[0]
+LUT4        ---     0.408             I1 to CO             pwm_count_166_add_4_2
+Route         2   e 1.158                                  n519
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_3
+Route         2   e 1.158                                  n520
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_4
+Route         2   e 1.158                                  n521
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_5
+Route         2   e 1.158                                  n522
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_6
+Route         2   e 1.158                                  n523
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_7
+Route         2   e 1.158                                  n524
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_8
+Route         2   e 1.158                                  n525
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_9
+Route         1   e 1.020                                  n526
+LUT4        ---     0.408             I3 to O              pwm_count_166_add_4_10_lut
 Route         1   e 1.020                                  n42
                   --------
                    15.443  (26.2% logic, 73.8% route), 10 logic levels.
@@ -69,37 +69,37 @@ Passed:  The following path meets requirements by 48.352ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFF     C              pwm_count_97__i0  (from CLK +)
-   Destination:    SB_DFF     D              pwm_count_97__i7  (to CLK +)
+   Source:         SB_DFF     C              pwm_count_166__i0  (from CLK +)
+   Destination:    SB_DFF     D              pwm_count_166__i7  (to CLK +)
 
    Delay:                  14.015ns  (25.9% logic, 74.1% route), 9 logic levels.
 
  Constraint Details:
 
-     14.015ns data_path pwm_count_97__i0 to pwm_count_97__i7 meets
+     14.015ns data_path pwm_count_166__i0 to pwm_count_166__i7 meets
      62.500ns delay constraint less
       0.133ns L_S requirement (totaling 62.367ns) by 48.352ns
 
- Path Details: pwm_count_97__i0 to pwm_count_97__i7
+ Path Details: pwm_count_166__i0 to pwm_count_166__i7
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              pwm_count_97__i0 (from CLK)
-Route         2   e 1.258                                  n9
-LUT4        ---     0.408             I1 to CO             pwm_count_97_add_4_2
-Route         2   e 1.158                                  n398
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_3
-Route         2   e 1.158                                  n399
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_4
-Route         2   e 1.158                                  n400
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_5
-Route         2   e 1.158                                  n401
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_6
-Route         2   e 1.158                                  n402
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_7
-Route         2   e 1.158                                  n403
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_8
-Route         2   e 1.158                                  n404
-LUT4        ---     0.408             I3 to O              pwm_count_97_add_4_9_lut
+L_CO        ---     0.367              C to Q              pwm_count_166__i0 (from CLK)
+Route         2   e 1.258                                  pwm_count[0]
+LUT4        ---     0.408             I1 to CO             pwm_count_166_add_4_2
+Route         2   e 1.158                                  n519
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_3
+Route         2   e 1.158                                  n520
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_4
+Route         2   e 1.158                                  n521
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_5
+Route         2   e 1.158                                  n522
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_6
+Route         2   e 1.158                                  n523
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_7
+Route         2   e 1.158                                  n524
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_8
+Route         2   e 1.158                                  n525
+LUT4        ---     0.408             I3 to O              pwm_count_166_add_4_9_lut
 Route         1   e 1.020                                  n43
                   --------
                    14.015  (25.9% logic, 74.1% route), 9 logic levels.
@@ -109,37 +109,37 @@ Passed:  The following path meets requirements by 48.490ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFF     C              pwm_count_97__i1  (from CLK +)
-   Destination:    SB_DFF     D              pwm_count_97__i8  (to CLK +)
+   Source:         SB_DFF     C              pwm_count_166__i1  (from CLK +)
+   Destination:    SB_DFF     D              pwm_count_166__i8  (to CLK +)
 
    Delay:                  13.877ns  (26.2% logic, 73.8% route), 9 logic levels.
 
  Constraint Details:
 
-     13.877ns data_path pwm_count_97__i1 to pwm_count_97__i8 meets
+     13.877ns data_path pwm_count_166__i1 to pwm_count_166__i8 meets
      62.500ns delay constraint less
       0.133ns L_S requirement (totaling 62.367ns) by 48.490ns
 
- Path Details: pwm_count_97__i1 to pwm_count_97__i8
+ Path Details: pwm_count_166__i1 to pwm_count_166__i8
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              pwm_count_97__i1 (from CLK)
-Route         2   e 1.258                                  n8
-LUT4        ---     0.408             I1 to CO             pwm_count_97_add_4_3
-Route         2   e 1.158                                  n399
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_4
-Route         2   e 1.158                                  n400
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_5
-Route         2   e 1.158                                  n401
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_6
-Route         2   e 1.158                                  n402
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_7
-Route         2   e 1.158                                  n403
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_8
-Route         2   e 1.158                                  n404
-LUT4        ---     0.408             CI to CO             pwm_count_97_add_4_9
-Route         1   e 1.020                                  n405
-LUT4        ---     0.408             I3 to O              pwm_count_97_add_4_10_lut
+L_CO        ---     0.367              C to Q              pwm_count_166__i1 (from CLK)
+Route         2   e 1.258                                  pwm_count[1]
+LUT4        ---     0.408             I1 to CO             pwm_count_166_add_4_3
+Route         2   e 1.158                                  n520
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_4
+Route         2   e 1.158                                  n521
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_5
+Route         2   e 1.158                                  n522
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_6
+Route         2   e 1.158                                  n523
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_7
+Route         2   e 1.158                                  n524
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_8
+Route         2   e 1.158                                  n525
+LUT4        ---     0.408             CI to CO             pwm_count_166_add_4_9
+Route         1   e 1.020                                  n526
+LUT4        ---     0.408             I3 to O              pwm_count_166_add_4_10_lut
 Route         1   e 1.020                                  n42
                   --------
                    13.877  (26.2% logic, 73.8% route), 9 logic levels.
@@ -169,8 +169,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  87 paths, 33 nets, and 74 connections (68.5% coverage)
+Constraints cover  87 paths, 34 nets, and 75 connections (68.8% coverage)
 
 
-Peak memory: 207974400 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 207884288 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
