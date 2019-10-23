@@ -39,14 +39,16 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
 
 wire one_wire;
 assign PIN_8 = one_wire;
+integer communication_counter;
 reg [23:0] color;
 reg [7:0] blue;
 reg send_to_neopixels;
 
 always @ ( posedge LED ) begin
-  send_to_neopixels <= 1;
-  if(send_to_neopixels)begin
-    send_to_neopixels <= 0;
+  communication_counter <= communication_counter+1;
+  send_to_neopixels <= 0;
+  if((communication_counter%100)==0)begin
+    send_to_neopixels <= 1;
     color[23:16] <= blue;
     blue <= blue+1;
   end
@@ -209,8 +211,8 @@ neopixel nx(
   // encoder0
   quad #(100) quad_counter0 (
     .clk(clk32MHz),
-    .quadA(PIN_2),
-    .quadB(PIN_1),
+    .quadA(PIN_1),
+    .quadB(PIN_2),
     .count(encoder0_position)
   );
 
