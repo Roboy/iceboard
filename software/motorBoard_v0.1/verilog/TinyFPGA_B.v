@@ -63,106 +63,106 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
    .D_IN_0(hall3)
  );
 
- // wire INHA, INLA, INHB, INLB, INHC, INLC;
- // assign PIN_19 = INHA;
- // assign PIN_20 = INLA;
- // assign PIN_21 = INHB;
- // assign PIN_22 = INLB;
- // assign PIN_23 = INHC;
- // assign PIN_24 = INLC;
- //
- // reg pwm_out;
- // reg dir;
- // reg h1, h2, h3;
- // assign INLA = h1;
- // assign INHB = h2;
- // assign INLB = h3;
- //
- // assign INHA = pwm_out;
- // assign INHC = dir;
- // assign INLC = (pwm!=0);
- //
- // reg signed [8:0] pwm;
- // reg signed [8:0] pwm_count;
- //
- // always @(posedge CLK) begin: BLDC_COMMUTATION
- //   pwm <= 50;
- //   h1 <= hall3;
- //   h2 <= hall2;
- //   h3 <= hall1;
- //   if( pwm>=0 && pwm_count<pwm)begin
- //    pwm_out <= 1;
- //    dir <= 1;
- //   end else if ( pwm<0 && pwm_count<(-pwm)) begin
- //    pwm_out <= 1;
- //    dir <= 0;
- //   end else begin
- //    pwm_out <= 0;
- //   end
- //   pwm_count <= pwm_count+1;
- // end
+ wire INHA, INLA, INHB, INLB, INHC, INLC;
+ assign PIN_19 = INHA;
+ assign PIN_20 = INLA;
+ assign PIN_21 = INHB;
+ assign PIN_22 = INLB;
+ assign PIN_23 = INHC;
+ assign PIN_24 = INLC;
 
- reg [5:0] GATES;
- assign PIN_19 = GATES[5];
- assign PIN_20 = GATES[4];
- assign PIN_21 = GATES[3];
- assign PIN_22 = GATES[2];
- assign PIN_23 = GATES[1];
- assign PIN_24 = GATES[0];
- localparam HA=5,LA=4,HB=3,LB=2,HC=1,LC=0;
+ reg pwm_out;
+ reg dir;
+ reg h1, h2, h3;
+ assign INLA = h1;
+ assign INHB = h2;
+ assign INLB = h3;
+
+ assign INHA = pwm_out;
+ assign INHC = dir;
+ assign INLC = (pwm!=0);
 
  reg signed [8:0] pwm;
  reg signed [8:0] pwm_count;
 
  always @(posedge CLK) begin: BLDC_COMMUTATION
-   pwm <= 20;
+   pwm <= 50;
+   h1 <= hall1;
+   h2 <= hall2;
+   h3 <= hall3;
    if( pwm>=0 && pwm_count<pwm)begin
-     GATES <= 0;
-     if(hall1 && ~hall2 && hall3) begin // A -> B
-       GATES[HA] <= 1;
-       GATES[LB] <= 1;
-     end else if(hall1 && ~hall2 && ~hall3)begin // A -> C
-       GATES[HA] <= 1;
-       GATES[LC] <= 1;
-     end else if(hall1 && hall2 && ~hall3) begin // B -> C
-       GATES[HB] <= 1;
-       GATES[LC] <= 1;
-     end else if(~hall1 && hall2 && ~hall3)begin // B -> A
-       GATES[HB] <= 1;
-       GATES[LA] <= 1;
-     end else if(~hall1 && hall2 && hall3) begin // C -> A
-       GATES[HC] <= 1;
-       GATES[LA] <= 1;
-     end else if(~hall1 && ~hall2 && hall3)begin // C -> B
-       GATES[HC] <= 1;
-       GATES[LB] <= 1;
-     end
+    pwm_out <= 1;
+    dir <= 1;
    end else if ( pwm<0 && pwm_count<(-pwm)) begin
-     GATES <= 0;
-     if(hall1 && ~hall2 && hall3) begin // A <- B
-       GATES[LA] <= 1;
-       GATES[HB] <= 1;
-     end else if(hall1 && ~hall2 && ~hall3)begin // A <- C
-       GATES[LA] <= 1;
-       GATES[HC] <= 1;
-     end else if(hall1 && hall2 && ~hall3) begin // B <- C
-       GATES[LB] <= 1;
-       GATES[HC] <= 1;
-     end else if(~hall1 && hall2 && ~hall3)begin // B <- A
-       GATES[LB] <= 1;
-       GATES[HA] <= 1;
-     end else if(~hall1 && hall2 && hall3) begin // C <- A
-       GATES[LC] <= 1;
-       GATES[HA] <= 1;
-     end else if(~hall1 && ~hall2 && hall3)begin // C <- B
-       GATES[LC] <= 1;
-       GATES[HB] <= 1;
-     end
+    pwm_out <= 1;
+    dir <= 0;
    end else begin
-     GATES <= 0;
+    pwm_out <= 0;
    end
    pwm_count <= pwm_count+1;
  end
+
+ // reg [5:0] GATES;
+ // assign PIN_19 = GATES[5];
+ // assign PIN_20 = GATES[4];
+ // assign PIN_21 = GATES[3];
+ // assign PIN_22 = GATES[2];
+ // assign PIN_23 = GATES[1];
+ // assign PIN_24 = GATES[0];
+ // localparam HA=5,LA=4,HB=3,LB=2,HC=1,LC=0;
+ //
+ // reg signed [8:0] pwm;
+ // reg signed [8:0] pwm_count;
+ //
+ // always @(posedge CLK) begin: BLDC_COMMUTATION
+ //   pwm <= 20;
+ //   if( pwm>=0 && pwm_count<pwm)begin
+ //     GATES <= 0;
+ //     if(hall1 && ~hall2 && hall3) begin // A -> B
+ //       GATES[HA] <= 1;
+ //       GATES[LB] <= 1;
+ //     end else if(hall1 && ~hall2 && ~hall3)begin // A -> C
+ //       GATES[HA] <= 1;
+ //       GATES[LC] <= 1;
+ //     end else if(hall1 && hall2 && ~hall3) begin // B -> C
+ //       GATES[HB] <= 1;
+ //       GATES[LC] <= 1;
+ //     end else if(~hall1 && hall2 && ~hall3)begin // B -> A
+ //       GATES[HB] <= 1;
+ //       GATES[LA] <= 1;
+ //     end else if(~hall1 && hall2 && hall3) begin // C -> A
+ //       GATES[HC] <= 1;
+ //       GATES[LA] <= 1;
+ //     end else if(~hall1 && ~hall2 && hall3)begin // C -> B
+ //       GATES[HC] <= 1;
+ //       GATES[LB] <= 1;
+ //     end
+ //   end else if ( pwm<0 && pwm_count<(-pwm)) begin
+ //     GATES <= 0;
+ //     if(hall1 && ~hall2 && hall3) begin // A <- B
+ //       GATES[LA] <= 1;
+ //       GATES[HB] <= 1;
+ //     end else if(hall1 && ~hall2 && ~hall3)begin // A <- C
+ //       GATES[LA] <= 1;
+ //       GATES[HC] <= 1;
+ //     end else if(hall1 && hall2 && ~hall3) begin // B <- C
+ //       GATES[LB] <= 1;
+ //       GATES[HC] <= 1;
+ //     end else if(~hall1 && hall2 && ~hall3)begin // B <- A
+ //       GATES[LB] <= 1;
+ //       GATES[HA] <= 1;
+ //     end else if(~hall1 && hall2 && hall3) begin // C <- A
+ //       GATES[LC] <= 1;
+ //       GATES[HA] <= 1;
+ //     end else if(~hall1 && ~hall2 && hall3)begin // C <- B
+ //       GATES[LC] <= 1;
+ //       GATES[HB] <= 1;
+ //     end
+ //   end else begin
+ //     GATES <= 0;
+ //   end
+ //   pwm_count <= pwm_count+1;
+ // end
 
   // wire one_wire;
   // assign PIN_8 = one_wire;
