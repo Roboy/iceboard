@@ -33,9 +33,32 @@ assign USBPU = 0;
 
 wire clk32MHz;
 pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
-                                     .PLLOUTGLOBAL(clk32MHz),
-                                     .RESET(1'b1) // active low
-                                     );
+.PLLOUTGLOBAL(clk32MHz),
+.RESET(1'b1) // active low
+);
+
+wire one_wire;
+assign PIN_8 = one_wire;
+reg [23:0] color;
+reg [7:0] blue;
+reg send_to_neopixels;
+
+always @ ( posedge LED ) begin
+  send_to_neopixels <= 1;
+  if(send_to_neopixels)begin
+    send_to_neopixels <= 0;
+    color[23:16] <= blue;
+    blue <= blue+1;
+  end
+end
+
+neopixel nx(
+ .clock(clk32MHz),
+ .reset(1'b0),
+ .color(color),
+ .send_to_neopixels(1'b1),
+ .one_wire(one_wire)
+);
 
  wire hall1, hall2, hall3;
  // PULLUP for hall sensors
@@ -71,8 +94,8 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
  assign PIN_23 = INHC;
  assign PIN_24 = INLC;
 
- reg pwm_out;
- reg dir;
+ wire pwm_out;
+ reg dir, enable, reset_n;
  reg h1, h2, h3;
  assign INLA = h1;
  assign INHB = h2;
@@ -80,247 +103,123 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
 
  assign INHA = pwm_out;
  assign INHC = dir;
- assign INLC = (pwm!=0);
+ assign INLC = 1'b1;
 
- reg signed [8:0] pwm;
- reg signed [8:0] pwm_count;
+ reg [22:0] pwm_setpoint;
+ wire signed [23:0] duty;
+ pwm #(32_000_000,20_000,32_000_000,23,1) PWM(
+   .clk(CLK),
+   .reset_n(reset_n),
+   .ena(enable),
+   .duty(pwm_setpoint),
+   .pwm_out(pwm_out)
+ );
 
- always @(posedge CLK) begin: BLDC_COMMUTATION
-   pwm <= 50;
-   h1 <= hall1;
-   h2 <= hall2;
-   h3 <= hall3;
-   if( pwm>=0 && pwm_count<pwm)begin
-    pwm_out <= 1;
-    dir <= 1;
-   end else if ( pwm<0 && pwm_count<(-pwm)) begin
-    pwm_out <= 1;
-    dir <= 0;
-   end else begin
-    pwm_out <= 0;
-   end
-   pwm_count <= pwm_count+1;
- end
+  always @(posedge clk32MHz) begin: HALL_SENSORS
+    h1 <= hall1;
+    h2 <= hall2;
+    h3 <= hall3;
+    enable <= 1;
+    reset_n <= 1;
+    if(duty>=0)begin
+      pwm_setpoint <= duty;
+      dir <= 0;
+    end else begin
+      pwm_setpoint <= -duty;
+      dir <= 1;
+    end
+  end
 
- // reg [5:0] GATES;
- // assign PIN_19 = GATES[5];
- // assign PIN_20 = GATES[4];
- // assign PIN_21 = GATES[3];
- // assign PIN_22 = GATES[2];
- // assign PIN_23 = GATES[1];
- // assign PIN_24 = GATES[0];
- // localparam HA=5,LA=4,HB=3,LB=2,HC=1,LC=0;
- //
- // reg signed [8:0] pwm;
- // reg signed [8:0] pwm_count;
- //
- // always @(posedge CLK) begin: BLDC_COMMUTATION
- //   pwm <= 20;
- //   if( pwm>=0 && pwm_count<pwm)begin
- //     GATES <= 0;
- //     if(hall1 && ~hall2 && hall3) begin // A -> B
- //       GATES[HA] <= 1;
- //       GATES[LB] <= 1;
- //     end else if(hall1 && ~hall2 && ~hall3)begin // A -> C
- //       GATES[HA] <= 1;
- //       GATES[LC] <= 1;
- //     end else if(hall1 && hall2 && ~hall3) begin // B -> C
- //       GATES[HB] <= 1;
- //       GATES[LC] <= 1;
- //     end else if(~hall1 && hall2 && ~hall3)begin // B -> A
- //       GATES[HB] <= 1;
- //       GATES[LA] <= 1;
- //     end else if(~hall1 && hall2 && hall3) begin // C -> A
- //       GATES[HC] <= 1;
- //       GATES[LA] <= 1;
- //     end else if(~hall1 && ~hall2 && hall3)begin // C -> B
- //       GATES[HC] <= 1;
- //       GATES[LB] <= 1;
- //     end
- //   end else if ( pwm<0 && pwm_count<(-pwm)) begin
- //     GATES <= 0;
- //     if(hall1 && ~hall2 && hall3) begin // A <- B
- //       GATES[LA] <= 1;
- //       GATES[HB] <= 1;
- //     end else if(hall1 && ~hall2 && ~hall3)begin // A <- C
- //       GATES[LA] <= 1;
- //       GATES[HC] <= 1;
- //     end else if(hall1 && hall2 && ~hall3) begin // B <- C
- //       GATES[LB] <= 1;
- //       GATES[HC] <= 1;
- //     end else if(~hall1 && hall2 && ~hall3)begin // B <- A
- //       GATES[LB] <= 1;
- //       GATES[HA] <= 1;
- //     end else if(~hall1 && hall2 && hall3) begin // C <- A
- //       GATES[LC] <= 1;
- //       GATES[HA] <= 1;
- //     end else if(~hall1 && ~hall2 && hall3)begin // C <- B
- //       GATES[LC] <= 1;
- //       GATES[HB] <= 1;
- //     end
- //   end else begin
- //     GATES <= 0;
- //   end
- //   pwm_count <= pwm_count+1;
- // end
+  wire tx_o, tx_enable, rx_i;
+  // tristated PULLUP for UART transmitters
+  SB_IO #(
+    .PIN_TYPE(6'b101001),
+    .PULLUP(1'b1)
+  ) tx_output(
+    .PACKAGE_PIN(PIN_12),
+    .D_OUT_0(tx_o),
+    .OUTPUT_ENABLE(tx_enable)
+  );
 
-  // wire one_wire;
-  // assign PIN_8 = one_wire;
-  // reg [23:0] color;
-  // always @ ( posedge clk32MHz ) begin
-  //   if(pwm<0)begin
-  //     color <= -pwm;
-  //     color <= color>>3;
-  //   end else begin
-  //     color <= pwm>>3;
-  //   end
-  // end
-  //
-  // neopixel nx(
-  //   .clock(clk32MHz),
-  //   .reset(1'b0),
-  //   .color(color),
-  //   .send_to_neopixels(1'b1),
-  //   .one_wire(one_wire)
-  // );
-  //
-  // wire tx_o, tx_enable, rx_i;
-  // // tristated PULLUP for UART transmitters
-  // SB_IO #(
-  //   .PIN_TYPE(6'b101001),
-  //   .PULLUP(1'b1)
-  // ) tx_output(
-  //   .PACKAGE_PIN(PIN_12),
-  //   .D_OUT_0(tx_o),
-  //   .OUTPUT_ENABLE(tx_enable)
-  // );
-  //
-  // assign rx_i = PIN_13;
-  //
-  // wire signed [23:0] encoder0_position;
-  // wire signed [23:0] encoder1_position;
-  // reg signed [23:0] displacement;
-  // wire signed [23:0] setpoint;
-  // wire signed [23:0] Kp;
-  // wire signed [23:0] Ki;
-  // wire signed [23:0] Kd;
-  // wire [7:0] control_mode;
-  // wire signed [23:0] PWMLimit;
-  // wire signed [23:0] IntegralLimit;
-  // wire signed [23:0] deadband;
-  // wire signed [23:0] gearBoxRatio;
-  //
-  // coms c0(
-  // 	.CLK(clk32MHz),
-	//   .reset(1'b0),
-  // 	.tx_o(tx_o),
-	//   .tx_enable(tx_enable),
-  // 	.rx_i(~rx_i),
-  //   .pwm(pwm),
-  // 	.encoder0_position(encoder0_position),
-  // 	.encoder1_position(encoder1_position),
-  //   .displacement(displacement),
-  //   .gearBoxRatio(gearBoxRatio),
-  // 	.setpoint(setpoint),
-  // 	.control_mode(control_mode),
-  //   .Kp(Kp),
-  //   .Ki(Ki),
-  //   .Kd(Kd),
-  //   .PWMLimit(PWMLimit),
-  //   .IntegralLimit(IntegralLimit),
-  //   .deadband(deadband),
-  //   .LED(LED)
-  // );
-  //
-  // wire hall1, hall2, hall3;
-  // // PULLUP for hall sensors
-  // SB_IO #(
-  //   .PIN_TYPE(6'b 0000_01),
-  //   .PULLUP(1'b 1)
-  // ) hall1_input(
-  //   .PACKAGE_PIN(PIN_3),
-  //   .D_IN_0(hall1)
-  // );
-  //
-  // SB_IO #(
-  //   .PIN_TYPE(6'b 0000_01),
-  //   .PULLUP(1'b 1)
-  // ) hall2_input(
-  //   .PACKAGE_PIN(PIN_4),
-  //   .D_IN_0(hall2)
-  // );
-  //
-  // SB_IO #(
-  //   .PIN_TYPE(6'b 0000_01),
-  //   .PULLUP(1'b 1)
-  // ) hall3_input(
-  //   .PACKAGE_PIN(PIN_5),
-  //   .D_IN_0(hall3)
-  // );
-  //
-  // wire HA, LA, HB, LB, HC, LC;
-  //
-  // assign PIN_19 = HA;
-  // assign PIN_20 = LA;
-  // assign PIN_21 = HB;
-  // assign PIN_22 = LB;
-  // assign PIN_23 = HC;
-  // assign PIN_24 = LC;
-  //
-  // wire [5:0] GATES;
-  // assign HA = GATES[5];
-  // assign LA = GATES[4];
-  // assign HB = GATES[3];
-  // assign LB = GATES[2];
-  // assign HC = GATES[1];
-  // assign LC = GATES[0];
-  //
-  // wire signed [23:0] pwm;
-  // wire signed [31:0] motor_state;
-  //
-  // assign motor_state =
-  //   (control_mode==0)?encoder0_position:
-  //   (control_mode==1)?encoder1_position:
-  //   (control_mode==2)?displacement:
-  //   (control_mode==3)?0:
-  //   32'd0;
-  //
-  // motorControl control(
-  //   .CLK(clk32MHz),
-  //   .reset(1'b0),
-  //   .hall1(hall1),
-  //   .hall2(hall2),
-  //   .hall3(hall3),
-  //   .GATES(GATES),
-  //   .pwm(pwm),
-  //   .setpoint(setpoint),
-  //   .state(motor_state),
-  //   .Kp(Kp),
-  //   .Ki(Ki),
-  //   .Kd(Kd),
-  //   .PWMLimit(PWMLimit),
-  //   .IntegralLimit(IntegralLimit),
-  //   .deadband(deadband)
-  // );
-  //
-  // always @ ( posedge clk32MHz ) begin
-  //   displacement <= (encoder0_position/gearBoxRatio) - (encoder1_position>>>3);
-  // end
-  //
-  // // encoder0
-  // quad #(100) quad_counter0 (
-  //   .clk(clk32MHz),
-  //   .quadA(PIN_2),
-  //   .quadB(PIN_1),
-  //   .count(encoder0_position)
-  // );
-  //
-  // // encoder1
-  // quad #(100) quad_counter1 (
-  //   .clk(clk32MHz),
-  //   .quadA(PIN_7),
-  //   .quadB(PIN_6),
-  //   .count(encoder1_position)
-  // );
+  assign rx_i = PIN_13;
+
+  wire signed [23:0] encoder0_position;
+  wire signed [23:0] encoder1_position;
+  reg signed [23:0] displacement;
+  wire signed [23:0] setpoint;
+  wire signed [23:0] Kp;
+  wire signed [23:0] Ki;
+  wire signed [23:0] Kd;
+  wire [7:0] control_mode;
+  wire signed [23:0] PWMLimit;
+  wire signed [23:0] IntegralLimit;
+  wire signed [23:0] deadband;
+  wire signed [23:0] gearBoxRatio;
+
+  coms c0(
+  	.CLK(clk32MHz),
+	  .reset(1'b0),
+  	.tx_o(tx_o),
+	  .tx_enable(tx_enable),
+  	.rx_i(~rx_i),
+    .duty(duty),
+  	.encoder0_position(encoder0_position),
+  	.encoder1_position(encoder1_position),
+    .displacement(displacement),
+    .gearBoxRatio(gearBoxRatio),
+  	.setpoint(setpoint),
+  	.control_mode(control_mode),
+    .Kp(Kp),
+    .Ki(Ki),
+    .Kd(Kd),
+    .PWMLimit(PWMLimit),
+    .IntegralLimit(IntegralLimit),
+    .deadband(deadband),
+    .LED(LED)
+  );
+
+  wire signed [23:0] motor_state;
+
+  assign motor_state =
+    (control_mode==0)?encoder0_position:
+    (control_mode==1)?encoder1_position:
+    (control_mode==2)?displacement:
+    (control_mode==3)?0:
+    32'd0;
+
+  motorControl control(
+    .CLK(clk32MHz),
+    .reset(1'b0),
+    .duty(duty),
+    .setpoint(setpoint),
+    .state(motor_state),
+    .Kp(Kp),
+    .Ki(Ki),
+    .Kd(Kd),
+    .PWMLimit(PWMLimit),
+    .IntegralLimit(IntegralLimit),
+    .deadband(deadband),
+    .pwm_out(pwm_out)
+  );
+
+  always @ ( posedge clk32MHz ) begin
+    displacement <= (encoder0_position/gearBoxRatio) - (encoder1_position>>>3);
+  end
+
+  // encoder0
+  quad #(100) quad_counter0 (
+    .clk(clk32MHz),
+    .quadA(PIN_2),
+    .quadB(PIN_1),
+    .count(encoder0_position)
+  );
+
+  // encoder1
+  quad #(100) quad_counter1 (
+    .clk(clk32MHz),
+    .quadA(PIN_7),
+    .quadB(PIN_6),
+    .count(encoder1_position)
+  );
 
 endmodule

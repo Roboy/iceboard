@@ -5,7 +5,7 @@ module coms(
 	output tx_enable,
 	input rx_i,
 	input [7:0] ID,
-	input signed [23:0] pwm,
+	input signed [23:0] duty,
 	input signed [23:0] encoder0_position,
 	input signed [23:0] encoder1_position,
 	input signed [23:0] displacement,
@@ -181,9 +181,9 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 						data_out_frame[12] <= setpoint[23:16];
 						data_out_frame[13] <= setpoint[15:8];
 						data_out_frame[14] <= setpoint[7:0];
-						data_out_frame[15] <= pwm[23:16];
-						data_out_frame[16] <= pwm[15:8];
-						data_out_frame[17] <= pwm[7:0];
+						data_out_frame[15] <= duty[23:16];
+						data_out_frame[16] <= duty[15:8];
+						data_out_frame[17] <= duty[7:0];
 						data_out_frame[18] <= displacement[23:16];
 						data_out_frame[19] <= displacement[15:8];
 						data_out_frame[20] <= displacement[7:0];

@@ -4,7 +4,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=template
 Vendor=SiliconBlue
 Synthesis=lse
-ProjectVFiles=verilog/TinyFPGA_B.v=work,verilog/uart_rx.v=work,verilog/uart_tx.v=work,verilog/coms.v=work,verilog/motorControl.v=work,quad.v=work,verilog/pll32MHz.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd=work,verilog/neopixel.v=work
+ProjectVFiles=verilog/TinyFPGA_B.v=work,verilog/uart_rx.v=work,verilog/uart_tx.v=work,verilog/coms.v=work,verilog/motorControl.v=work,quad.v=work,verilog/pll32MHz.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd=work,verilog/neopixel.v=work,vhdl/pwm.vhd
 ProjectCFiles=constraints/clk.sdc
 CurImplementation=template_Implmnt
 Implementations=template_Implmnt
@@ -47,7 +47,7 @@ NetlistFile=template_Implmnt/template.edf
 AdditionalEDIFFile=
 IPEDIFFile=
 DesignLib=template_Implmnt/sbt/netlist/oadb-TinyFPGA_B
-DesignView=_rt
+DesignView=_ep
 DesignCell=TinyFPGA_B
 SynthesisSDCFile=template_Implmnt/template.scf
 UserPinConstraintFile=
