@@ -42,6 +42,7 @@ assign PIN_8 = one_wire;
 integer communication_counter;
 reg [23:0] color;
 reg [7:0] blue;
+reg blink;
 reg send_to_neopixels;
 
 always @ ( posedge LED ) begin
@@ -49,7 +50,13 @@ always @ ( posedge LED ) begin
   send_to_neopixels <= 0;
   if((communication_counter%100)==0)begin
     send_to_neopixels <= 1;
-    color[23:16] <= blue;
+    if(blink)begin
+      color[23:16] <= 8'd50;
+      blink <= 0;
+    end else begin
+      color <= 0;
+      blink <= 1;
+    end
     blue <= blue+1;
   end
 end
@@ -145,6 +152,33 @@ neopixel nx(
 
   assign rx_i = PIN_13;
 
+  wire ID0, ID1, ID2;
+  SB_IO #(
+    .PIN_TYPE(6'b 0000_01),
+    .PULLUP(1'b 1)
+  ) ID0_input(
+    .PACKAGE_PIN(PIN_9),
+    .D_IN_0(ID0)
+  );
+  SB_IO #(
+    .PIN_TYPE(6'b 0000_01),
+    .PULLUP(1'b 1)
+  ) ID1_input(
+    .PACKAGE_PIN(PIN_10),
+    .D_IN_0(ID1)
+  );
+  SB_IO #(
+    .PIN_TYPE(6'b 0000_01),
+    .PULLUP(1'b 1)
+  ) ID2_input(
+    .PACKAGE_PIN(PIN_11),
+    .D_IN_0(ID2)
+  );
+  wire [7:0] ID;
+  assign ID[0] = ID0;
+  assign ID[1] = ID1;
+  assign ID[2] = ID2;
+
   wire signed [23:0] encoder0_position;
   wire signed [23:0] encoder1_position;
   reg signed [23:0] displacement;
@@ -164,6 +198,7 @@ neopixel nx(
   	.tx_o(tx_o),
 	  .tx_enable(tx_enable),
   	.rx_i(~rx_i),
+    .ID(ID),
     .duty(duty),
   	.encoder0_position(encoder0_position),
   	.encoder1_position(encoder1_position),

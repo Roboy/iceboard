@@ -33,12 +33,13 @@ module motorControl(
       err <= 0;
       err_prev <= 0;
       result <= 0;
+      integral <= 0;
     end else begin
       err <= (state-setpoint);
-      // if((integral<IntegralLimit) && (integral>-IntegralLimit)) begin
-      //   integral <= integral+err;
-      // end
-      result <= Kp*err;// + Kd * (err_prev-err) + Ki*integral;
+      if((integral<IntegralLimit) && (integral>-IntegralLimit)) begin
+        integral <= integral+err;
+      end
+      result <= Kp*err + Ki*integral;//;// + Kd * (err_prev-err)
       // if((result>deadband) || (result < -deadband))begin
       if(result>PWMLimit)begin
         result <= PWMLimit;

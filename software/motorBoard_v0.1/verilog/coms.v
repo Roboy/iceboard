@@ -115,13 +115,13 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 		if(reset) begin
 			state <= IDLE;
 			i <= 0;
-			PWMLimit <= 128;
+			PWMLimit <= 8388607;
 			setpoint <= 0;
-			Kp <= 1;
+			Kp <= 10;
 			Ki <= 0;
 			Kd <= 0;
 			deadband <= 0;
-			IntegralLimit <= 50;
+			IntegralLimit <= 50_000_000;
 			gearBoxRatio <= 53;
 		end else begin
 			tx_transmit <= 0;
