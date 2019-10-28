@@ -21,7 +21,7 @@ module uart_tx
    output      o_Tx_Enable,
    output      o_Tx_Done
    );
-  localparam CLKS_PER_BIT   = 16; // 139 at 16MHz this is 115200 baudrate, 64 at 16MHz is 250000 
+  localparam CLKS_PER_BIT   = 64; // 139 at 16MHz this is 115200 baudrate, 64 at 16MHz is 250000 
   localparam s_IDLE         = 3'b000;
   localparam s_TX_START_BIT = 3'b001;
   localparam s_TX_DATA_BITS = 3'b010;

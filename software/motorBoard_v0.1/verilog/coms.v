@@ -134,15 +134,12 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 			end
 			if({data_in[0],data_in[1],data_in[2],data_in[3]}==STATUS_REQUEST_FRAME_MAGICNUMBER)begin
 			 	state <= RECEIVE_STATUS_REQUEST;
-				LED <= 1;
 			end
 			if({data_in[0],data_in[1],data_in[2],data_in[3]}==SETPOINT_FRAME_MAGICNUMBER)begin
 			 	state <= RECEIVE_SETPOINT;
-				LED <= 1;
 			end
 			if({data_in[0],data_in[1],data_in[2],data_in[3]}==CONTROL_MODE_FRAME_MAGICNUMBER)begin
 			 	state <= RECEIVE_CONTROL_MODE;
-				LED <= 1;
 			end
 			case(state)
 				IDLE: begin
@@ -188,6 +185,7 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 						data_out_frame[19] <= displacement[15:8];
 						data_out_frame[20] <= displacement[7:0];
 						state <= GENERATE_STATUS_CRC;
+						LED <= 1;
 					end else begin
 						state <= IDLE;
 					end
@@ -229,10 +227,11 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 					end
 					if(rx_crc[15:8]==data_in_frame[SETPOINT_FRAME_LENGTH-MAGIC_NUMBER_LENGTH-2]
 						  && rx_crc[7:0]==data_in_frame[SETPOINT_FRAME_LENGTH-MAGIC_NUMBER_LENGTH-1]
-						  && ((data_in_frame[0]==ID) || (data_in_frame[0]==8'hFF))) begin // MATCH! and for me!
-						data_out_frame[0] <= ID;
-						byte_transmit_counter <= 0;
-						tx_transmit <= 1;
+						  && data_in_frame[0]==ID) begin // MATCH! and for me!
+						// data_out_frame[0] <= ID;
+						// byte_transmit_counter <= 0;
+						// tx_transmit <= 1;
+						LED <= 1;
 						state <= IDLE;
 						setpoint[23:16] <= data_in_frame[1];
 						setpoint[15:8] <= data_in_frame[2];
@@ -257,10 +256,11 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 					end
 					if(rx_crc[15:8]==data_in_frame[CONTROL_MODE_FRAME_LENGTH-MAGIC_NUMBER_LENGTH-2]
 						  && rx_crc[7:0]==data_in_frame[CONTROL_MODE_FRAME_LENGTH-MAGIC_NUMBER_LENGTH-1]
-						  && ((data_in_frame[0]==ID) || (data_in_frame[0]==8'hFF))) begin // MATCH! and for me!
-							data_out_frame[0] <= ID;
-							byte_transmit_counter <= 0;
-							tx_transmit <= 1;
+						  && data_in_frame[0]==ID) begin // MATCH! and for me!
+							// data_out_frame[0] <= ID;
+							// byte_transmit_counter <= 0;
+							// tx_transmit <= 1;
+							LED <= 1;
 							control_mode <= data_in_frame[1];
 							Kp[7:0] <= data_in_frame[2];
 							Ki[7:0] <= data_in_frame[3];

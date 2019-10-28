@@ -1,19 +1,19 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_B.TECH
-Register bits:  964 of 7680 (12.552%)
+Register bits:  968 of 7680 (12.604%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY      2080          100.0
-                             SB_DFF       821          100.0
-                            SB_DFFE        60          100.0
-                          SB_DFFESR        12          100.0
+                           SB_CARRY      2075          100.0
+                             SB_DFF       827          100.0
+                            SB_DFFE        58          100.0
+                          SB_DFFESR        13          100.0
                           SB_DFFESS         1          100.0
                            SB_DFFSR         8          100.0
-                           SB_DFFSS        62          100.0
+                           SB_DFFSS        61          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        21          100.0
-                            SB_LUT4      6493          100.0
+                            SB_LUT4      6486          100.0
                       SB_PLL40_CORE         1          100.0
 SUB MODULES
                                coms         1
@@ -27,19 +27,56 @@ SUB MODULES
         quad(DEBOUNCE_TICKS=100)_U1         1
                             uart_rx         1
                             uart_tx         1
-                              TOTAL      9571
+                              TOTAL      9563
 ----------------------------------------------------------------------
 Report for cell neopixel.v1
 Instance Path : nx
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY       461           22.2
-                             SB_DFF        93           11.3
-                            SB_DFFE         6           10.0
-                          SB_DFFESR         1            8.3
+                             SB_DFF        95           11.5
+                            SB_DFFE         4            6.9
+                          SB_DFFESR         1            7.7
                           SB_DFFESS         1          100.0
-                            SB_LUT4       764           11.8
-                              TOTAL      1326
+                            SB_LUT4       776           12.0
+                              TOTAL      1338
+----------------------------------------------------------------------
+Report for cell coms.v1
+Instance Path : setpoint_23__I_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        53            2.6
+                             SB_DFF       507           61.3
+                            SB_DFFE        29           50.0
+                          SB_DFFESR         1            7.7
+                           SB_DFFSR         2           25.0
+                           SB_DFFSS        61          100.0
+                            SB_LUT4      1067           16.5
+SUB MODULES
+                            uart_rx         1
+                            uart_tx         1
+                              TOTAL      1722
+----------------------------------------------------------------------
+Report for cell uart_tx.v1
+Instance Path : setpoint_23__I_0.tx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         8            0.4
+                             SB_DFF        16            1.9
+                            SB_DFFE         9           15.5
+                            SB_LUT4        37            0.6
+                              TOTAL        70
+----------------------------------------------------------------------
+Report for cell uart_rx.v1
+Instance Path : setpoint_23__I_0.rx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         7            0.3
+                             SB_DFF        21            2.5
+                            SB_DFFE         3            5.2
+                           SB_DFFSR         1           12.5
+                            SB_LUT4        32            0.5
+                              TOTAL        64
 ----------------------------------------------------------------------
 Report for cell pll32MHz.v1
 Instance Path : pll32MHz_inst
@@ -47,42 +84,6 @@ Instance Path : pll32MHz_inst
                                cell     count   Res Usage(%)
                       SB_PLL40_CORE         1          100.0
                               TOTAL         1
-----------------------------------------------------------------------
-Report for cell coms.v1
-Instance Path : setpoint_23__I_0
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY        53            2.5
-                             SB_DFF       512           62.4
-                            SB_DFFE        29           48.3
-                           SB_DFFSR         2           25.0
-                           SB_DFFSS        62          100.0
-                            SB_LUT4      1293           19.9
-SUB MODULES
-                            uart_rx         1
-                            uart_tx         1
-                              TOTAL      1953
-----------------------------------------------------------------------
-Report for cell uart_tx.v1
-Instance Path : setpoint_23__I_0.tx
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY         8            0.4
-                             SB_DFF        17            2.1
-                            SB_DFFE         8           13.3
-                            SB_LUT4        36            0.6
-                              TOTAL        69
-----------------------------------------------------------------------
-Report for cell uart_rx.v1
-Instance Path : setpoint_23__I_0.rx
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY         7            0.3
-                             SB_DFF        22            2.7
-                            SB_DFFE         2            3.3
-                           SB_DFFSR         1           12.5
-                            SB_LUT4        37            0.6
-                              TOTAL        69
 ----------------------------------------------------------------------
 Report for cell quad(DEBOUNCE_TICKS=100)_U1.v1
 Instance Path : quad_counter0
@@ -126,16 +127,6 @@ Instance Path : quad_counter1.debounce
                             SB_LUT4         6            0.1
                               TOTAL        15
 ----------------------------------------------------------------------
-Report for cell motorControl.v1
-Instance Path : control
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY       601           28.9
-                             SB_DFF        48            5.8
-                            SB_DFFE        24           40.0
-                            SB_LUT4      1307           20.1
-                              TOTAL      1980
-----------------------------------------------------------------------
 Report for cell pwm(32000000,20000,32000000,23,1).v1
 Instance Path : PWM
                                   Cell usage:
@@ -143,6 +134,16 @@ Instance Path : PWM
                            SB_CARRY        65            3.1
                              SB_DFF        17            2.1
                             SB_DFFE         1            1.7
-                          SB_DFFESR        11           91.7
+                          SB_DFFESR        11           84.6
                             SB_LUT4        77            1.2
                               TOTAL       171
+----------------------------------------------------------------------
+Report for cell motorControl.v1
+Instance Path : control
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY       601           29.0
+                             SB_DFF        48            5.8
+                            SB_DFFE        24           41.4
+                            SB_LUT4      1305           20.1
+                              TOTAL      1978
