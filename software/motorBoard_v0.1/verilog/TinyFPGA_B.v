@@ -60,9 +60,7 @@ SB_IO #(
   .D_IN_0(ID2)
 );
 wire [7:0] ID;
-assign ID[0] = ID0;
-assign ID[1] = ID1;
-assign ID[2] = ID2;
+assign ID = 0;
 
 wire one_wire;
 assign PIN_8 = one_wire;
