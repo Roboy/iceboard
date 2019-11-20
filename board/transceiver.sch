@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:board-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 5
+Sheet 5 7
 Title ""
 Date ""
 Rev ""
@@ -147,17 +147,6 @@ F 3 "" H 3900 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0145
-U 1 1 5D8BE216
-P 4875 3625
-F 0 "#PWR0145" H 4875 3475 50  0001 C CNN
-F 1 "+3.3V" V 4890 3753 50  0000 L CNN
-F 2 "" H 4875 3625 50  0001 C CNN
-F 3 "" H 4875 3625 50  0001 C CNN
-	1    4875 3625
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:+3.3V #PWR0146
 U 1 1 5D8BE722
 P 7075 3525
@@ -220,4 +209,6 @@ F 3 "~" H 6000 4950 50  0001 C CNN
 $EndComp
 Text GLabel 6000 5450 3    50   Input ~ 0
 SHIELD
+Text HLabel 4875 3625 0    50   Input ~ 0
+DE
 $EndSCHEMATC
