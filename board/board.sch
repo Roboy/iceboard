@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:board-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -326,9 +325,9 @@ F 3 "" H 7900 5900 50  0001 C CNN
 	1    7900 5900
 	1    0    0    -1  
 $EndComp
-Text Label 5075 4400 2    50   ~ 0
+Text Label 5075 4700 2    50   ~ 0
 Encoder1_A
-Text Label 5075 4300 2    50   ~ 0
+Text Label 5075 4600 2    50   ~ 0
 Encoder1_B
 $Comp
 L power:+3.3V #PWR0159
@@ -525,43 +524,6 @@ Connection ~ 9525 1225
 Wire Wire Line
 	9525 1225 10025 1225
 $Comp
-L Device:C C29
-U 1 1 5DA88D51
-P 6925 2500
-F 0 "C29" H 7040 2546 50  0000 L CNN
-F 1 "0.1u" H 7040 2455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6963 2350 50  0001 C CNN
-F 3 "~" H 6925 2500 50  0001 C CNN
-	1    6925 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0152
-U 1 1 5DA895F4
-P 6925 2650
-AR Path="/5DA895F4" Ref="#PWR0152"  Part="1" 
-AR Path="/5D056FB0/5DA895F4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0152" H 6925 2500 50  0001 C CNN
-F 1 "+3.3V" V 6940 2778 50  0000 L CNN
-F 2 "" H 6925 2650 50  0001 C CNN
-F 3 "" H 6925 2650 50  0001 C CNN
-	1    6925 2650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0153
-U 1 1 5DA8961D
-P 6925 2350
-AR Path="/5DA8961D" Ref="#PWR0153"  Part="1" 
-AR Path="/5D056FB0/5DA8961D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0153" H 6925 2100 50  0001 C CNN
-F 1 "GND" V 6930 2222 50  0000 R CNN
-F 2 "" H 6925 2350 50  0001 C CNN
-F 3 "" H 6925 2350 50  0001 C CNN
-	1    6925 2350
-	0    1    1    0   
-$EndComp
-$Comp
 L power:+5V #PWR0119
 U 1 1 5D600918
 P 5975 3725
@@ -754,9 +716,9 @@ F 3 "" H 2000 6725 50  0001 C CNN
 	1    2000 6725
 	0    -1   -1   0   
 $EndComp
-Text Label 5075 4600 2    50   ~ 0
+Text Label 5075 4300 2    50   ~ 0
 Encoder0_I
-Text Label 5075 4700 2    50   ~ 0
+Text Label 5075 4400 2    50   ~ 0
 Encoder1_I
 $Comp
 L Memory_EEPROM:AT24CS01-STUM U4
