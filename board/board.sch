@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:board-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -810,4 +811,26 @@ Wire Wire Line
 Connection ~ 7200 5650
 Wire Wire Line
 	7200 5650 7150 5650
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 5DD6F259
+P 10200 2950
+F 0 "H6" H 10300 2996 50  0000 L CNN
+F 1 "FID1" H 10300 2905 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Dia_1mm_Outer" H 10200 2950 50  0001 C CNN
+F 3 "~" H 10200 2950 50  0001 C CNN
+	1    10200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H7
+U 1 1 5DD6F2FB
+P 10200 3175
+F 0 "H7" H 10300 3221 50  0000 L CNN
+F 1 "FID2" H 10300 3130 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Dia_1mm_Outer" H 10200 3175 50  0001 C CNN
+F 3 "~" H 10200 3175 50  0001 C CNN
+	1    10200 3175
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

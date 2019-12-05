@@ -37,30 +37,8 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
 .RESET(1'b1) // active low
 );
 
-wire ID0, ID1, ID2;
-SB_IO #(
-  .PIN_TYPE(6'b 0000_01),
-  .PULLUP(1'b 1)
-) ID0_input(
-  .PACKAGE_PIN(PIN_9),
-  .D_IN_0(ID0)
-);
-SB_IO #(
-  .PIN_TYPE(6'b 0000_01),
-  .PULLUP(1'b 1)
-) ID1_input(
-  .PACKAGE_PIN(PIN_10),
-  .D_IN_0(ID1)
-);
-SB_IO #(
-  .PIN_TYPE(6'b 0000_01),
-  .PULLUP(1'b 1)
-) ID2_input(
-  .PACKAGE_PIN(PIN_11),
-  .D_IN_0(ID2)
-);
 wire [7:0] ID;
-assign ID = 0;
+assign ID = 7;
 
 wire one_wire;
 assign PIN_8 = one_wire;
@@ -198,12 +176,16 @@ neopixel nx(
   wire signed [23:0] IntegralLimit;
   wire signed [23:0] deadband;
   wire signed [23:0] gearBoxRatio;
+  wire driver_enable;
+
+  assign PIN_11 = driver_enable;
 
   coms c0(
   	.CLK(clk32MHz),
 	  .reset(1'b0),
   	.tx_o(tx_o),
 	  .tx_enable(tx_enable),
+    .driver_enable(driver_enable),
   	.rx_i(~rx_i),
     .ID(ID),
     .duty(duty),

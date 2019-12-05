@@ -3,6 +3,7 @@ module coms(
 	input reset,
 	output tx_o,
 	output tx_enable,
+	output reg driver_enable,
 	input rx_i,
 	input [7:0] ID,
 	input signed [23:0] duty,
@@ -145,8 +146,10 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 				IDLE: begin
 					i <= 0;
 					LED <= 0;
+					driver_enable <= 0;
 				end
 				RECEIVE_STATUS_REQUEST: begin
+					driver_enable <= 1;
 					if(rx_data_ready==1 && rx_data_ready_prev==0)begin
 						data_in_frame[i] = rx_data;
 						i <= i+1;
