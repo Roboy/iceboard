@@ -243,8 +243,8 @@ neopixel nx(
   // encoder1
   quad #(100) quad_counter1 (
     .clk(clk32MHz),
-    .quadA(PIN_6),
-    .quadB(PIN_7),
+    .quadA(PIN_9),
+    .quadB(PIN_10),
     .count(encoder1_position)
   );
 

@@ -105,16 +105,6 @@ Instance Path : quad_counter1.debounce
                             SB_LUT4         6            0.1
                               TOTAL        15
 ----------------------------------------------------------------------
-Report for cell motorControl.v1
-Instance Path : control
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY       601           29.0
-                             SB_DFF        48            5.6
-                            SB_DFFE        24           43.6
-                            SB_LUT4      1505           22.4
-                              TOTAL      2178
-----------------------------------------------------------------------
 Report for cell quad(DEBOUNCE_TICKS=100)_U1.v1
 Instance Path : quad_counter0
                                   Cell usage:
@@ -135,6 +125,16 @@ Instance Path : quad_counter0.debounce
                            SB_DFFSR         3           37.5
                             SB_LUT4         6            0.1
                               TOTAL        15
+----------------------------------------------------------------------
+Report for cell motorControl.v1
+Instance Path : control
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY       601           29.0
+                             SB_DFF        48            5.6
+                            SB_DFFE        24           43.6
+                            SB_LUT4      1505           22.4
+                              TOTAL      2178
 ----------------------------------------------------------------------
 Report for cell pwm(32000000,20000,32000000,23,1).v1
 Instance Path : PWM

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Thu Dec  5 20:29:33 2019
+Mon Dec  9 15:37:19 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -106,14 +106,14 @@ Route         2   e 1.158                                  n29890
 LUT4        ---     0.408             CI to CO             rem_4_unary_minus_2_add_3_31
 Route         2   e 1.158                                  n29891
 LUT4        ---     0.408             I3 to O              rem_4_unary_minus_2_add_3_32_lut
-Route         1   e 1.020                                  n3_adj_4806
+Route         1   e 1.020                                  n3_adj_4805
 LUT4        ---     0.408             I1 to O              rem_4_mux_3_i31_3_lut
 Route         3   e 1.239                                  n852
-LUT4        ---     0.408             I0 to O              i1_2_lut_3_lut_adj_1956
+LUT4        ---     0.408             I0 to O              i1_2_lut_3_lut_adj_1955
 Route         5   e 1.341                                  n884
 LUT4        ---     0.408             I2 to O              rem_4_i586_3_lut
 Route         4   e 1.297                                  n956
-LUT4        ---     0.408             I2 to O              i1_3_lut_4_lut_adj_1957
+LUT4        ---     0.408             I2 to O              i1_3_lut_4_lut_adj_1956
 Route         1   e 1.020                                  n35948
 LUT4        ---     0.408             I2 to O              i20253_4_lut
 Route         6   e 1.378                                  n986
@@ -131,7 +131,7 @@ LUT4        ---     0.408             I3 to O              rem_4_add_715_7_lut
 Route         1   e 1.020                                  n1120
 LUT4        ---     0.408             I1 to O              rem_4_i718_3_lut
 Route         4   e 1.297                                  n1152
-LUT4        ---     0.408             I1 to O              i3_4_lut_adj_1784
+LUT4        ---     0.408             I1 to O              i3_4_lut_adj_1783
 Route         8   e 1.435                                  n1184
 LUT4        ---     0.408             I2 to O              rem_4_i791_3_lut
 Route         4   e 1.297                                  n1257
@@ -152,7 +152,7 @@ Route         1   e 1.020                                  n1318
 LUT4        ---     0.408             I1 to O              rem_4_i852_3_lut
 Route         4   e 1.297                                  n1350
 LUT4        ---     0.408             I0 to O              i1_2_lut_adj_1758
-Route         1   e 1.020                                  n7_adj_5271
+Route         1   e 1.020                                  n7_adj_5272
 LUT4        ---     0.408             I1 to O              i5_4_lut
 Route        10   e 1.480                                  n1382
 LUT4        ---     0.408             I2 to O              rem_4_i927_3_lut
@@ -177,9 +177,9 @@ LUT4        ---     0.408             I3 to O              rem_4_add_983_11_lut
 Route         1   e 1.020                                  n1516
 LUT4        ---     0.408             I1 to O              rem_4_i986_3_lut
 Route         4   e 1.297                                  n1548
-LUT4        ---     0.408             I0 to O              i5_4_lut_adj_1766
-Route         1   e 1.020                                  n13_adj_5250
-LUT4        ---     0.408             I0 to O              i7_4_lut_adj_1767
+LUT4        ---     0.408             I0 to O              i5_4_lut_adj_1765
+Route         1   e 1.020                                  n13_adj_5251
+LUT4        ---     0.408             I0 to O              i7_4_lut_adj_1766
 Route        12   e 1.516                                  n1580
 LUT4        ---     0.408             I2 to O              rem_4_i1063_3_lut
 Route         4   e 1.297                                  n1657
@@ -207,12 +207,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1117_14_lut
 Route         1   e 1.020                                  n1714
 LUT4        ---     0.408             I1 to O              rem_4_i1120_3_lut
 Route         4   e 1.297                                  n1746
-LUT4        ---     0.408             I0 to O              i6_4_lut_adj_1772
-Route         1   e 1.020                                  n16_adj_5358
+LUT4        ---     0.408             I0 to O              i6_4_lut_adj_1771
+Route         1   e 1.020                                  n16_adj_5229
 LUT4        ---     0.408             I1 to O              i8_3_lut
-Route         1   e 1.020                                  n18_adj_5274
-LUT4        ---     0.408             I1 to O              i9_4_lut_adj_1775
-Route        14   e 1.547                                  n1778_adj_4812
+Route         1   e 1.020                                  n18_adj_5044
+LUT4        ---     0.408             I1 to O              i9_4_lut_adj_1774
+Route        14   e 1.547                                  n1778_adj_4811
 LUT4        ---     0.408             I2 to O              rem_4_i1199_3_lut
 Route         4   e 1.297                                  n1857
 LUT4        ---     0.408             I0 to CO             rem_4_add_1251_4
@@ -248,7 +248,7 @@ Route         1   e 1.020                                  n19_adj_5315
 LUT4        ---     0.408             I0 to O              i10_4_lut
 Route         1   e 1.020                                  n22_adj_5314
 LUT4        ---     0.408             I1 to O              i11_4_lut
-Route        16   e 1.574                                  n1976_adj_4779
+Route        16   e 1.574                                  n1976_adj_4778
 LUT4        ---     0.408             I2 to O              rem_4_i1335_3_lut
 Route         4   e 1.297                                  n2057
 LUT4        ---     0.408             I0 to CO             rem_4_add_1385_4
@@ -283,10 +283,10 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1385_18_lut
 Route         1   e 1.020                                  n2110
 LUT4        ---     0.408             I1 to O              rem_4_i1388_3_lut
 Route         4   e 1.297                                  n2142
-LUT4        ---     0.408             I0 to O              i8_4_lut_adj_1787
+LUT4        ---     0.408             I0 to O              i8_4_lut_adj_1788
 Route         1   e 1.020                                  n22_adj_5335
 LUT4        ---     0.408             I2 to O              i13_4_lut
-Route        18   e 1.598                                  n2174_adj_4984
+Route        18   e 1.598                                  n2174_adj_4982
 LUT4        ---     0.408             I2 to O              rem_4_i1471_3_lut
 Route         4   e 1.297                                  n2257
 LUT4        ---     0.408             I0 to CO             rem_4_add_1519_4
@@ -325,12 +325,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1519_20_lut
 Route         1   e 1.020                                  n2308
 LUT4        ---     0.408             I1 to O              rem_4_i1522_3_lut
 Route         4   e 1.297                                  n2340
-LUT4        ---     0.408             I0 to O              i9_4_lut_adj_1855
-Route         1   e 1.020                                  n25_adj_4667
-LUT4        ---     0.408             I0 to O              i15_4_lut_adj_1856
-Route        20   e 1.619                                  n2372_adj_4939
+LUT4        ---     0.408             I0 to O              i9_4_lut_adj_1854
+Route         1   e 1.020                                  n25_adj_4666
+LUT4        ---     0.408             I0 to O              i15_4_lut_adj_1855
+Route        20   e 1.619                                  n2372_adj_4937
 LUT4        ---     0.408             I2 to O              rem_4_i1607_rep_52_3_lut
-Route         4   e 1.297                                  n2457_adj_4876
+Route         4   e 1.297                                  n2457_adj_4875
 LUT4        ---     0.408             I0 to CO             rem_4_add_1653_4
 Route         2   e 1.158                                  n28894
 LUT4        ---     0.408             CI to CO             rem_4_add_1653_5
@@ -370,12 +370,12 @@ Route         2   e 1.158                                  n28911
 LUT4        ---     0.408             I3 to O              rem_4_add_1653_22_lut
 Route         1   e 1.020                                  n2506
 LUT4        ---     0.408             I1 to O              rem_4_i1656_3_lut
-Route         4   e 1.297                                  n2538_adj_4872
-LUT4        ---     0.408             I0 to O              i10_4_lut_adj_1878
+Route         4   e 1.297                                  n2538_adj_4871
+LUT4        ---     0.408             I0 to O              i10_4_lut_adj_1875
 Route         1   e 1.020                                  n28_adj_5322
 LUT4        ---     0.408             I1 to O              i14_3_lut
 Route         1   e 1.020                                  n32_adj_5318
-LUT4        ---     0.408             I3 to O              i17_4_lut_adj_1887
+LUT4        ---     0.408             I3 to O              i17_4_lut_adj_1881
 Route        22   e 1.638                                  n2570
 LUT4        ---     0.408             I2 to O              rem_4_i1743_3_lut
 Route         4   e 1.297                                  n2657
@@ -420,12 +420,12 @@ Route         2   e 1.158                                  n28867
 LUT4        ---     0.408             CI to CO             rem_4_add_1787_23
 Route         2   e 1.158                                  n28868
 LUT4        ---     0.408             I3 to O              rem_4_add_1787_24_lut
-Route         1   e 1.020                                  n2704_adj_4841
+Route         1   e 1.020                                  n2704_adj_4840
 LUT4        ---     0.408             I1 to O              rem_4_i1790_3_lut
 Route         4   e 1.297                                  n2736
-LUT4        ---     0.408             I0 to O              i11_4_lut_adj_1903
-Route         1   e 1.020                                  n31_adj_5240
-LUT4        ---     0.408             I2 to O              i19_4_lut_adj_1909
+LUT4        ---     0.408             I0 to O              i11_4_lut_adj_1899
+Route         1   e 1.020                                  n31_adj_5241
+LUT4        ---     0.408             I2 to O              i19_4_lut_adj_1902
 Route        24   e 1.655                                  n2768
 LUT4        ---     0.408             I2 to O              rem_4_i1879_3_lut
 Route         4   e 1.297                                  n2857
@@ -477,12 +477,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1921_26_lut
 Route         1   e 1.020                                  n2902
 LUT4        ---     0.408             I1 to O              rem_4_i1924_3_lut
 Route         4   e 1.297                                  n2934
-LUT4        ---     0.408             I0 to O              i12_4_lut_adj_1832
+LUT4        ---     0.408             I0 to O              i12_4_lut_adj_1831
 Route         1   e 1.020                                  n34_adj_5355
 LUT4        ---     0.408             I1 to O              i17_3_lut
 Route         1   e 1.020                                  n39_adj_5343
-LUT4        ---     0.408             I1 to O              i21_4_lut_adj_1835
-Route        28   e 1.686                                  n2966_adj_4763
+LUT4        ---     0.408             I1 to O              i21_4_lut_adj_1834
+Route        28   e 1.686                                  n2966_adj_4762
 LUT4        ---     0.408             I2 to O              rem_4_i2015_3_lut
 Route         4   e 1.297                                  n3057
 LUT4        ---     0.408             I0 to CO             rem_4_add_2055_4
@@ -537,7 +537,7 @@ LUT4        ---     0.408             I3 to O              rem_4_add_2055_28_lut
 Route         1   e 1.020                                  n3100
 LUT4        ---     0.408             I1 to O              rem_4_i2058_3_lut
 Route         4   e 1.297                                  n3132
-LUT4        ---     0.408             I0 to O              i19_4_lut_adj_1848
+LUT4        ---     0.408             I0 to O              i19_4_lut_adj_1847
 Route         1   e 1.020                                  n43_adj_5346
 LUT4        ---     0.408             I1 to O              i23_4_lut
 Route        28   e 1.686                                  n3164
@@ -599,7 +599,7 @@ LUT4        ---     0.408             CI to CO             rem_4_add_2189_30
 Route         1   e 1.020                                  n28670
 LUT4        ---     0.408             I3 to O              rem_4_add_2189_31_lut
 Route         1   e 1.020                                  n38464
-LUT4        ---     0.408             I0 to O              i1_4_lut_adj_1939
+LUT4        ---     0.408             I0 to O              i1_4_lut_adj_1933
 Route         7   e 1.409                                  n3362
 LUT4        ---     0.408             I2 to O              rem_4_i2287_rep_5_3_lut
 Route         3   e 1.239                                  n38575
@@ -613,9 +613,9 @@ LUT4        ---     0.408             CI to CO             rem_4_add_2298_7
 Route         2   e 1.158                                  n28640
 LUT4        ---     0.408             I3 to O              rem_4_add_2298_8_lut
 Route         1   e 1.020                                  color_23__N_164[6]
-LUT4        ---     0.408             I1 to O              i1_4_lut_adj_1901
+LUT4        ---     0.408             I1 to O              i1_4_lut_adj_1934
 Route         2   e 1.158                                  n13_adj_5341
-LUT4        ---     0.408             I1 to O              i1_4_lut_adj_1902
+LUT4        ---     0.408             I1 to O              i1_4_lut_adj_1935
 Route         5   e 1.341                                  n25734
 LUT4        ---     0.408             I1 to O              i36042_2_lut
 Route         1   e 1.020                                  blink_N_255
@@ -704,16 +704,16 @@ Route         2   e 1.158                                  n29889
 LUT4        ---     0.408             CI to CO             rem_4_unary_minus_2_add_3_30
 Route         2   e 1.158                                  n29890
 LUT4        ---     0.408             I3 to O              rem_4_unary_minus_2_add_3_31_lut
-Route         1   e 1.020                                  n4_adj_4805
+Route         1   e 1.020                                  n4_adj_4804
 LUT4        ---     0.408             I1 to O              rem_4_mux_3_i30_3_lut
 Route         2   e 1.158                                  n748
 LUT4        ---     0.408             I2 to O              i23008_2_lut_3_lut
-Route         3   e 1.239                                  n6_adj_4668
-LUT4        ---     0.408             I1 to O              i1_2_lut_3_lut_adj_1956
+Route         3   e 1.239                                  n6_adj_4667
+LUT4        ---     0.408             I1 to O              i1_2_lut_3_lut_adj_1955
 Route         5   e 1.341                                  n884
 LUT4        ---     0.408             I2 to O              rem_4_i586_3_lut
 Route         4   e 1.297                                  n956
-LUT4        ---     0.408             I2 to O              i1_3_lut_4_lut_adj_1957
+LUT4        ---     0.408             I2 to O              i1_3_lut_4_lut_adj_1956
 Route         1   e 1.020                                  n35948
 LUT4        ---     0.408             I2 to O              i20253_4_lut
 Route         6   e 1.378                                  n986
@@ -731,7 +731,7 @@ LUT4        ---     0.408             I3 to O              rem_4_add_715_7_lut
 Route         1   e 1.020                                  n1120
 LUT4        ---     0.408             I1 to O              rem_4_i718_3_lut
 Route         4   e 1.297                                  n1152
-LUT4        ---     0.408             I1 to O              i3_4_lut_adj_1784
+LUT4        ---     0.408             I1 to O              i3_4_lut_adj_1783
 Route         8   e 1.435                                  n1184
 LUT4        ---     0.408             I2 to O              rem_4_i791_3_lut
 Route         4   e 1.297                                  n1257
@@ -752,7 +752,7 @@ Route         1   e 1.020                                  n1318
 LUT4        ---     0.408             I1 to O              rem_4_i852_3_lut
 Route         4   e 1.297                                  n1350
 LUT4        ---     0.408             I0 to O              i1_2_lut_adj_1758
-Route         1   e 1.020                                  n7_adj_5271
+Route         1   e 1.020                                  n7_adj_5272
 LUT4        ---     0.408             I1 to O              i5_4_lut
 Route        10   e 1.480                                  n1382
 LUT4        ---     0.408             I2 to O              rem_4_i927_3_lut
@@ -777,9 +777,9 @@ LUT4        ---     0.408             I3 to O              rem_4_add_983_11_lut
 Route         1   e 1.020                                  n1516
 LUT4        ---     0.408             I1 to O              rem_4_i986_3_lut
 Route         4   e 1.297                                  n1548
-LUT4        ---     0.408             I0 to O              i5_4_lut_adj_1766
-Route         1   e 1.020                                  n13_adj_5250
-LUT4        ---     0.408             I0 to O              i7_4_lut_adj_1767
+LUT4        ---     0.408             I0 to O              i5_4_lut_adj_1765
+Route         1   e 1.020                                  n13_adj_5251
+LUT4        ---     0.408             I0 to O              i7_4_lut_adj_1766
 Route        12   e 1.516                                  n1580
 LUT4        ---     0.408             I2 to O              rem_4_i1063_3_lut
 Route         4   e 1.297                                  n1657
@@ -807,12 +807,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1117_14_lut
 Route         1   e 1.020                                  n1714
 LUT4        ---     0.408             I1 to O              rem_4_i1120_3_lut
 Route         4   e 1.297                                  n1746
-LUT4        ---     0.408             I0 to O              i6_4_lut_adj_1772
-Route         1   e 1.020                                  n16_adj_5358
+LUT4        ---     0.408             I0 to O              i6_4_lut_adj_1771
+Route         1   e 1.020                                  n16_adj_5229
 LUT4        ---     0.408             I1 to O              i8_3_lut
-Route         1   e 1.020                                  n18_adj_5274
-LUT4        ---     0.408             I1 to O              i9_4_lut_adj_1775
-Route        14   e 1.547                                  n1778_adj_4812
+Route         1   e 1.020                                  n18_adj_5044
+LUT4        ---     0.408             I1 to O              i9_4_lut_adj_1774
+Route        14   e 1.547                                  n1778_adj_4811
 LUT4        ---     0.408             I2 to O              rem_4_i1199_3_lut
 Route         4   e 1.297                                  n1857
 LUT4        ---     0.408             I0 to CO             rem_4_add_1251_4
@@ -848,7 +848,7 @@ Route         1   e 1.020                                  n19_adj_5315
 LUT4        ---     0.408             I0 to O              i10_4_lut
 Route         1   e 1.020                                  n22_adj_5314
 LUT4        ---     0.408             I1 to O              i11_4_lut
-Route        16   e 1.574                                  n1976_adj_4779
+Route        16   e 1.574                                  n1976_adj_4778
 LUT4        ---     0.408             I2 to O              rem_4_i1335_3_lut
 Route         4   e 1.297                                  n2057
 LUT4        ---     0.408             I0 to CO             rem_4_add_1385_4
@@ -883,10 +883,10 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1385_18_lut
 Route         1   e 1.020                                  n2110
 LUT4        ---     0.408             I1 to O              rem_4_i1388_3_lut
 Route         4   e 1.297                                  n2142
-LUT4        ---     0.408             I0 to O              i8_4_lut_adj_1787
+LUT4        ---     0.408             I0 to O              i8_4_lut_adj_1788
 Route         1   e 1.020                                  n22_adj_5335
 LUT4        ---     0.408             I2 to O              i13_4_lut
-Route        18   e 1.598                                  n2174_adj_4984
+Route        18   e 1.598                                  n2174_adj_4982
 LUT4        ---     0.408             I2 to O              rem_4_i1471_3_lut
 Route         4   e 1.297                                  n2257
 LUT4        ---     0.408             I0 to CO             rem_4_add_1519_4
@@ -925,12 +925,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1519_20_lut
 Route         1   e 1.020                                  n2308
 LUT4        ---     0.408             I1 to O              rem_4_i1522_3_lut
 Route         4   e 1.297                                  n2340
-LUT4        ---     0.408             I0 to O              i9_4_lut_adj_1855
-Route         1   e 1.020                                  n25_adj_4667
-LUT4        ---     0.408             I0 to O              i15_4_lut_adj_1856
-Route        20   e 1.619                                  n2372_adj_4939
+LUT4        ---     0.408             I0 to O              i9_4_lut_adj_1854
+Route         1   e 1.020                                  n25_adj_4666
+LUT4        ---     0.408             I0 to O              i15_4_lut_adj_1855
+Route        20   e 1.619                                  n2372_adj_4937
 LUT4        ---     0.408             I2 to O              rem_4_i1607_rep_52_3_lut
-Route         4   e 1.297                                  n2457_adj_4876
+Route         4   e 1.297                                  n2457_adj_4875
 LUT4        ---     0.408             I0 to CO             rem_4_add_1653_4
 Route         2   e 1.158                                  n28894
 LUT4        ---     0.408             CI to CO             rem_4_add_1653_5
@@ -970,12 +970,12 @@ Route         2   e 1.158                                  n28911
 LUT4        ---     0.408             I3 to O              rem_4_add_1653_22_lut
 Route         1   e 1.020                                  n2506
 LUT4        ---     0.408             I1 to O              rem_4_i1656_3_lut
-Route         4   e 1.297                                  n2538_adj_4872
-LUT4        ---     0.408             I0 to O              i10_4_lut_adj_1878
+Route         4   e 1.297                                  n2538_adj_4871
+LUT4        ---     0.408             I0 to O              i10_4_lut_adj_1875
 Route         1   e 1.020                                  n28_adj_5322
 LUT4        ---     0.408             I1 to O              i14_3_lut
 Route         1   e 1.020                                  n32_adj_5318
-LUT4        ---     0.408             I3 to O              i17_4_lut_adj_1887
+LUT4        ---     0.408             I3 to O              i17_4_lut_adj_1881
 Route        22   e 1.638                                  n2570
 LUT4        ---     0.408             I2 to O              rem_4_i1743_3_lut
 Route         4   e 1.297                                  n2657
@@ -1020,12 +1020,12 @@ Route         2   e 1.158                                  n28867
 LUT4        ---     0.408             CI to CO             rem_4_add_1787_23
 Route         2   e 1.158                                  n28868
 LUT4        ---     0.408             I3 to O              rem_4_add_1787_24_lut
-Route         1   e 1.020                                  n2704_adj_4841
+Route         1   e 1.020                                  n2704_adj_4840
 LUT4        ---     0.408             I1 to O              rem_4_i1790_3_lut
 Route         4   e 1.297                                  n2736
-LUT4        ---     0.408             I0 to O              i11_4_lut_adj_1903
-Route         1   e 1.020                                  n31_adj_5240
-LUT4        ---     0.408             I2 to O              i19_4_lut_adj_1909
+LUT4        ---     0.408             I0 to O              i11_4_lut_adj_1899
+Route         1   e 1.020                                  n31_adj_5241
+LUT4        ---     0.408             I2 to O              i19_4_lut_adj_1902
 Route        24   e 1.655                                  n2768
 LUT4        ---     0.408             I2 to O              rem_4_i1879_3_lut
 Route         4   e 1.297                                  n2857
@@ -1077,12 +1077,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1921_26_lut
 Route         1   e 1.020                                  n2902
 LUT4        ---     0.408             I1 to O              rem_4_i1924_3_lut
 Route         4   e 1.297                                  n2934
-LUT4        ---     0.408             I0 to O              i12_4_lut_adj_1832
+LUT4        ---     0.408             I0 to O              i12_4_lut_adj_1831
 Route         1   e 1.020                                  n34_adj_5355
 LUT4        ---     0.408             I1 to O              i17_3_lut
 Route         1   e 1.020                                  n39_adj_5343
-LUT4        ---     0.408             I1 to O              i21_4_lut_adj_1835
-Route        28   e 1.686                                  n2966_adj_4763
+LUT4        ---     0.408             I1 to O              i21_4_lut_adj_1834
+Route        28   e 1.686                                  n2966_adj_4762
 LUT4        ---     0.408             I2 to O              rem_4_i2015_3_lut
 Route         4   e 1.297                                  n3057
 LUT4        ---     0.408             I0 to CO             rem_4_add_2055_4
@@ -1137,7 +1137,7 @@ LUT4        ---     0.408             I3 to O              rem_4_add_2055_28_lut
 Route         1   e 1.020                                  n3100
 LUT4        ---     0.408             I1 to O              rem_4_i2058_3_lut
 Route         4   e 1.297                                  n3132
-LUT4        ---     0.408             I0 to O              i19_4_lut_adj_1848
+LUT4        ---     0.408             I0 to O              i19_4_lut_adj_1847
 Route         1   e 1.020                                  n43_adj_5346
 LUT4        ---     0.408             I1 to O              i23_4_lut
 Route        28   e 1.686                                  n3164
@@ -1199,7 +1199,7 @@ LUT4        ---     0.408             I3 to O              rem_4_add_2189_30_lut
 Route         1   e 1.020                                  n3298
 LUT4        ---     0.408             I1 to O              rem_4_i2192_3_lut
 Route         1   e 1.020                                  n3330
-LUT4        ---     0.408             I3 to O              i1_4_lut_adj_1939
+LUT4        ---     0.408             I3 to O              i1_4_lut_adj_1933
 Route         7   e 1.409                                  n3362
 LUT4        ---     0.408             I2 to O              rem_4_i2287_rep_5_3_lut
 Route         3   e 1.239                                  n38575
@@ -1215,7 +1215,7 @@ LUT4        ---     0.408             CI to CO             rem_4_add_2298_8
 Route         1   e 1.020                                  n28641
 LUT4        ---     0.408             I3 to O              rem_4_add_2298_9_lut
 Route         2   e 1.158                                  color_23__N_164[7]
-LUT4        ---     0.408             I0 to O              i1_4_lut_adj_1902
+LUT4        ---     0.408             I0 to O              i1_4_lut_adj_1935
 Route         5   e 1.341                                  n25734
 LUT4        ---     0.408             I1 to O              i36042_2_lut
 Route         1   e 1.020                                  blink_N_255
@@ -1304,16 +1304,16 @@ Route         2   e 1.158                                  n29889
 LUT4        ---     0.408             CI to CO             rem_4_unary_minus_2_add_3_30
 Route         2   e 1.158                                  n29890
 LUT4        ---     0.408             I3 to O              rem_4_unary_minus_2_add_3_31_lut
-Route         1   e 1.020                                  n4_adj_4805
+Route         1   e 1.020                                  n4_adj_4804
 LUT4        ---     0.408             I1 to O              rem_4_mux_3_i30_3_lut
 Route         2   e 1.158                                  n748
 LUT4        ---     0.408             I2 to O              i23008_2_lut_3_lut
-Route         3   e 1.239                                  n6_adj_4668
-LUT4        ---     0.408             I1 to O              i1_2_lut_3_lut_adj_1956
+Route         3   e 1.239                                  n6_adj_4667
+LUT4        ---     0.408             I1 to O              i1_2_lut_3_lut_adj_1955
 Route         5   e 1.341                                  n884
 LUT4        ---     0.408             I2 to O              rem_4_i586_3_lut
 Route         4   e 1.297                                  n956
-LUT4        ---     0.408             I2 to O              i1_3_lut_4_lut_adj_1957
+LUT4        ---     0.408             I2 to O              i1_3_lut_4_lut_adj_1956
 Route         1   e 1.020                                  n35948
 LUT4        ---     0.408             I2 to O              i20253_4_lut
 Route         6   e 1.378                                  n986
@@ -1331,7 +1331,7 @@ LUT4        ---     0.408             I3 to O              rem_4_add_715_7_lut
 Route         1   e 1.020                                  n1120
 LUT4        ---     0.408             I1 to O              rem_4_i718_3_lut
 Route         4   e 1.297                                  n1152
-LUT4        ---     0.408             I1 to O              i3_4_lut_adj_1784
+LUT4        ---     0.408             I1 to O              i3_4_lut_adj_1783
 Route         8   e 1.435                                  n1184
 LUT4        ---     0.408             I2 to O              rem_4_i791_3_lut
 Route         4   e 1.297                                  n1257
@@ -1352,7 +1352,7 @@ Route         1   e 1.020                                  n1318
 LUT4        ---     0.408             I1 to O              rem_4_i852_3_lut
 Route         4   e 1.297                                  n1350
 LUT4        ---     0.408             I0 to O              i1_2_lut_adj_1758
-Route         1   e 1.020                                  n7_adj_5271
+Route         1   e 1.020                                  n7_adj_5272
 LUT4        ---     0.408             I1 to O              i5_4_lut
 Route        10   e 1.480                                  n1382
 LUT4        ---     0.408             I2 to O              rem_4_i927_3_lut
@@ -1377,9 +1377,9 @@ LUT4        ---     0.408             I3 to O              rem_4_add_983_11_lut
 Route         1   e 1.020                                  n1516
 LUT4        ---     0.408             I1 to O              rem_4_i986_3_lut
 Route         4   e 1.297                                  n1548
-LUT4        ---     0.408             I0 to O              i5_4_lut_adj_1766
-Route         1   e 1.020                                  n13_adj_5250
-LUT4        ---     0.408             I0 to O              i7_4_lut_adj_1767
+LUT4        ---     0.408             I0 to O              i5_4_lut_adj_1765
+Route         1   e 1.020                                  n13_adj_5251
+LUT4        ---     0.408             I0 to O              i7_4_lut_adj_1766
 Route        12   e 1.516                                  n1580
 LUT4        ---     0.408             I2 to O              rem_4_i1063_3_lut
 Route         4   e 1.297                                  n1657
@@ -1407,12 +1407,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1117_14_lut
 Route         1   e 1.020                                  n1714
 LUT4        ---     0.408             I1 to O              rem_4_i1120_3_lut
 Route         4   e 1.297                                  n1746
-LUT4        ---     0.408             I0 to O              i6_4_lut_adj_1772
-Route         1   e 1.020                                  n16_adj_5358
+LUT4        ---     0.408             I0 to O              i6_4_lut_adj_1771
+Route         1   e 1.020                                  n16_adj_5229
 LUT4        ---     0.408             I1 to O              i8_3_lut
-Route         1   e 1.020                                  n18_adj_5274
-LUT4        ---     0.408             I1 to O              i9_4_lut_adj_1775
-Route        14   e 1.547                                  n1778_adj_4812
+Route         1   e 1.020                                  n18_adj_5044
+LUT4        ---     0.408             I1 to O              i9_4_lut_adj_1774
+Route        14   e 1.547                                  n1778_adj_4811
 LUT4        ---     0.408             I2 to O              rem_4_i1199_3_lut
 Route         4   e 1.297                                  n1857
 LUT4        ---     0.408             I0 to CO             rem_4_add_1251_4
@@ -1448,7 +1448,7 @@ Route         1   e 1.020                                  n19_adj_5315
 LUT4        ---     0.408             I0 to O              i10_4_lut
 Route         1   e 1.020                                  n22_adj_5314
 LUT4        ---     0.408             I1 to O              i11_4_lut
-Route        16   e 1.574                                  n1976_adj_4779
+Route        16   e 1.574                                  n1976_adj_4778
 LUT4        ---     0.408             I2 to O              rem_4_i1335_3_lut
 Route         4   e 1.297                                  n2057
 LUT4        ---     0.408             I0 to CO             rem_4_add_1385_4
@@ -1483,10 +1483,10 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1385_18_lut
 Route         1   e 1.020                                  n2110
 LUT4        ---     0.408             I1 to O              rem_4_i1388_3_lut
 Route         4   e 1.297                                  n2142
-LUT4        ---     0.408             I0 to O              i8_4_lut_adj_1787
+LUT4        ---     0.408             I0 to O              i8_4_lut_adj_1788
 Route         1   e 1.020                                  n22_adj_5335
 LUT4        ---     0.408             I2 to O              i13_4_lut
-Route        18   e 1.598                                  n2174_adj_4984
+Route        18   e 1.598                                  n2174_adj_4982
 LUT4        ---     0.408             I2 to O              rem_4_i1471_3_lut
 Route         4   e 1.297                                  n2257
 LUT4        ---     0.408             I0 to CO             rem_4_add_1519_4
@@ -1525,12 +1525,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1519_20_lut
 Route         1   e 1.020                                  n2308
 LUT4        ---     0.408             I1 to O              rem_4_i1522_3_lut
 Route         4   e 1.297                                  n2340
-LUT4        ---     0.408             I0 to O              i9_4_lut_adj_1855
-Route         1   e 1.020                                  n25_adj_4667
-LUT4        ---     0.408             I0 to O              i15_4_lut_adj_1856
-Route        20   e 1.619                                  n2372_adj_4939
+LUT4        ---     0.408             I0 to O              i9_4_lut_adj_1854
+Route         1   e 1.020                                  n25_adj_4666
+LUT4        ---     0.408             I0 to O              i15_4_lut_adj_1855
+Route        20   e 1.619                                  n2372_adj_4937
 LUT4        ---     0.408             I2 to O              rem_4_i1607_rep_52_3_lut
-Route         4   e 1.297                                  n2457_adj_4876
+Route         4   e 1.297                                  n2457_adj_4875
 LUT4        ---     0.408             I0 to CO             rem_4_add_1653_4
 Route         2   e 1.158                                  n28894
 LUT4        ---     0.408             CI to CO             rem_4_add_1653_5
@@ -1570,12 +1570,12 @@ Route         2   e 1.158                                  n28911
 LUT4        ---     0.408             I3 to O              rem_4_add_1653_22_lut
 Route         1   e 1.020                                  n2506
 LUT4        ---     0.408             I1 to O              rem_4_i1656_3_lut
-Route         4   e 1.297                                  n2538_adj_4872
-LUT4        ---     0.408             I0 to O              i10_4_lut_adj_1878
+Route         4   e 1.297                                  n2538_adj_4871
+LUT4        ---     0.408             I0 to O              i10_4_lut_adj_1875
 Route         1   e 1.020                                  n28_adj_5322
 LUT4        ---     0.408             I1 to O              i14_3_lut
 Route         1   e 1.020                                  n32_adj_5318
-LUT4        ---     0.408             I3 to O              i17_4_lut_adj_1887
+LUT4        ---     0.408             I3 to O              i17_4_lut_adj_1881
 Route        22   e 1.638                                  n2570
 LUT4        ---     0.408             I2 to O              rem_4_i1743_3_lut
 Route         4   e 1.297                                  n2657
@@ -1620,12 +1620,12 @@ Route         2   e 1.158                                  n28867
 LUT4        ---     0.408             CI to CO             rem_4_add_1787_23
 Route         2   e 1.158                                  n28868
 LUT4        ---     0.408             I3 to O              rem_4_add_1787_24_lut
-Route         1   e 1.020                                  n2704_adj_4841
+Route         1   e 1.020                                  n2704_adj_4840
 LUT4        ---     0.408             I1 to O              rem_4_i1790_3_lut
 Route         4   e 1.297                                  n2736
-LUT4        ---     0.408             I0 to O              i11_4_lut_adj_1903
-Route         1   e 1.020                                  n31_adj_5240
-LUT4        ---     0.408             I2 to O              i19_4_lut_adj_1909
+LUT4        ---     0.408             I0 to O              i11_4_lut_adj_1899
+Route         1   e 1.020                                  n31_adj_5241
+LUT4        ---     0.408             I2 to O              i19_4_lut_adj_1902
 Route        24   e 1.655                                  n2768
 LUT4        ---     0.408             I2 to O              rem_4_i1879_3_lut
 Route         4   e 1.297                                  n2857
@@ -1677,12 +1677,12 @@ LUT4        ---     0.408             I3 to O              rem_4_add_1921_26_lut
 Route         1   e 1.020                                  n2902
 LUT4        ---     0.408             I1 to O              rem_4_i1924_3_lut
 Route         4   e 1.297                                  n2934
-LUT4        ---     0.408             I0 to O              i12_4_lut_adj_1832
+LUT4        ---     0.408             I0 to O              i12_4_lut_adj_1831
 Route         1   e 1.020                                  n34_adj_5355
 LUT4        ---     0.408             I1 to O              i17_3_lut
 Route         1   e 1.020                                  n39_adj_5343
-LUT4        ---     0.408             I1 to O              i21_4_lut_adj_1835
-Route        28   e 1.686                                  n2966_adj_4763
+LUT4        ---     0.408             I1 to O              i21_4_lut_adj_1834
+Route        28   e 1.686                                  n2966_adj_4762
 LUT4        ---     0.408             I2 to O              rem_4_i2015_3_lut
 Route         4   e 1.297                                  n3057
 LUT4        ---     0.408             I0 to CO             rem_4_add_2055_4
@@ -1737,7 +1737,7 @@ LUT4        ---     0.408             I3 to O              rem_4_add_2055_28_lut
 Route         1   e 1.020                                  n3100
 LUT4        ---     0.408             I1 to O              rem_4_i2058_3_lut
 Route         4   e 1.297                                  n3132
-LUT4        ---     0.408             I0 to O              i19_4_lut_adj_1848
+LUT4        ---     0.408             I0 to O              i19_4_lut_adj_1847
 Route         1   e 1.020                                  n43_adj_5346
 LUT4        ---     0.408             I1 to O              i23_4_lut
 Route        28   e 1.686                                  n3164
@@ -1799,7 +1799,7 @@ LUT4        ---     0.408             CI to CO             rem_4_add_2189_30
 Route         1   e 1.020                                  n28670
 LUT4        ---     0.408             I3 to O              rem_4_add_2189_31_lut
 Route         1   e 1.020                                  n38464
-LUT4        ---     0.408             I0 to O              i1_4_lut_adj_1939
+LUT4        ---     0.408             I0 to O              i1_4_lut_adj_1933
 Route         7   e 1.409                                  n3362
 LUT4        ---     0.408             I2 to O              rem_4_i2287_rep_5_3_lut
 Route         3   e 1.239                                  n38575
@@ -1813,9 +1813,9 @@ LUT4        ---     0.408             CI to CO             rem_4_add_2298_7
 Route         2   e 1.158                                  n28640
 LUT4        ---     0.408             I3 to O              rem_4_add_2298_8_lut
 Route         1   e 1.020                                  color_23__N_164[6]
-LUT4        ---     0.408             I1 to O              i1_4_lut_adj_1901
+LUT4        ---     0.408             I1 to O              i1_4_lut_adj_1934
 Route         2   e 1.158                                  n13_adj_5341
-LUT4        ---     0.408             I1 to O              i1_4_lut_adj_1902
+LUT4        ---     0.408             I1 to O              i1_4_lut_adj_1935
 Route         5   e 1.341                                  n25734
 LUT4        ---     0.408             I1 to O              i36042_2_lut
 Route         1   e 1.020                                  blink_N_255
@@ -2037,13 +2037,13 @@ Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
 communication_counter[0]                |       5|    4096|     99.00%
                                         |        |        |
-n7_adj_5271                             |       1|    4096|     99.00%
+n7_adj_5272                             |       1|    4096|     99.00%
                                         |        |        |
-n13_adj_5250                            |       1|    4096|     99.00%
+n13_adj_5251                            |       1|    4096|     99.00%
                                         |        |        |
-n16_adj_5358                            |       1|    4096|     99.00%
+n16_adj_5229                            |       1|    4096|     99.00%
                                         |        |        |
-n18_adj_5274                            |       1|    4096|     99.00%
+n18_adj_5044                            |       1|    4096|     99.00%
                                         |        |        |
 n19_adj_5315                            |       1|    4096|     99.00%
                                         |        |        |
@@ -2051,11 +2051,11 @@ n22_adj_5314                            |       1|    4096|     99.00%
                                         |        |        |
 n22_adj_5335                            |       1|    4096|     99.00%
                                         |        |        |
-n25_adj_4667                            |       1|    4096|     99.00%
+n25_adj_4666                            |       1|    4096|     99.00%
                                         |        |        |
 n28_adj_5322                            |       1|    4096|     99.00%
                                         |        |        |
-n31_adj_5240                            |       1|    4096|     99.00%
+n31_adj_5241                            |       1|    4096|     99.00%
                                         |        |        |
 n32_adj_5318                            |       1|    4096|     99.00%
                                         |        |        |
@@ -2081,21 +2081,21 @@ n1580                                   |      12|    4096|     99.00%
                                         |        |        |
 n1657                                   |       4|    4096|     99.00%
                                         |        |        |
-n1778_adj_4812                          |      14|    4096|     99.00%
+n1778_adj_4811                          |      14|    4096|     99.00%
                                         |        |        |
 n1857                                   |       4|    4096|     99.00%
                                         |        |        |
-n1976_adj_4779                          |      16|    4096|     99.00%
+n1976_adj_4778                          |      16|    4096|     99.00%
                                         |        |        |
 n2057                                   |       4|    4096|     99.00%
                                         |        |        |
-n2174_adj_4984                          |      18|    4096|     99.00%
+n2174_adj_4982                          |      18|    4096|     99.00%
                                         |        |        |
 n2257                                   |       4|    4096|     99.00%
                                         |        |        |
-n2372_adj_4939                          |      20|    4096|     99.00%
+n2372_adj_4937                          |      20|    4096|     99.00%
                                         |        |        |
-n2457_adj_4876                          |       4|    4096|     99.00%
+n2457_adj_4875                          |       4|    4096|     99.00%
                                         |        |        |
 n2570                                   |      22|    4096|     99.00%
                                         |        |        |
@@ -2105,7 +2105,7 @@ n2768                                   |      24|    4096|     99.00%
                                         |        |        |
 n2857                                   |       4|    4096|     99.00%
                                         |        |        |
-n2966_adj_4763                          |      28|    4096|     99.00%
+n2966_adj_4762                          |      28|    4096|     99.00%
                                         |        |        |
 n3057                                   |       4|    4096|     99.00%
                                         |        |        |
@@ -2557,7 +2557,7 @@ n2902                                   |       1|    3558|     86.87%
                                         |        |        |
 n2934                                   |       4|    3558|     86.87%
                                         |        |        |
-n2704_adj_4841                          |       1|    3556|     86.82%
+n2704_adj_4840                          |       1|    3556|     86.82%
                                         |        |        |
 n2736                                   |       4|    3556|     86.82%
                                         |        |        |
@@ -2587,7 +2587,7 @@ n2340                                   |       4|    3549|     86.65%
                                         |        |        |
 n2506                                   |       1|    3549|     86.65%
                                         |        |        |
-n2538_adj_4872                          |       4|    3549|     86.65%
+n2538_adj_4871                          |       4|    3549|     86.65%
                                         |        |        |
 n1120                                   |       1|    3180|     77.64%
                                         |        |        |
@@ -2615,13 +2615,13 @@ color_23__N_164[6]                      |       1|    1997|     48.75%
                                         |        |        |
 n13_adj_5341                            |       2|    1997|     48.75%
                                         |        |        |
-n3_adj_4806                             |       1|    1939|     47.34%
+n3_adj_4805                             |       1|    1939|     47.34%
                                         |        |        |
 n852                                    |       3|    1939|     47.34%
                                         |        |        |
-n4_adj_4805                             |       1|    1865|     45.53%
+n4_adj_4804                             |       1|    1865|     45.53%
                                         |        |        |
-n6_adj_4668                             |       3|    1865|     45.53%
+n6_adj_4667                             |       3|    1865|     45.53%
                                         |        |        |
 n748                                    |       2|    1865|     45.53%
                                         |        |        |
@@ -2647,7 +2647,7 @@ n2141                                   |       2|     547|     13.35%
                                         |        |        |
 n2339                                   |       2|     547|     13.35%
                                         |        |        |
-n2537_adj_4873                          |       2|     547|     13.35%
+n2537_adj_4872                          |       2|     547|     13.35%
                                         |        |        |
 n28142                                  |       1|     547|     13.35%
                                         |        |        |
@@ -2696,5 +2696,5 @@ Timing errors: 4096  Score: 1617718404
 Constraints cover >4294967295 paths, 1776 nets, and 4284 connections (16.3% coverage)
 
 
-Peak memory: 377741312 bytes, TRCE: 85229568 bytes, DLYMAN: 0 bytes
-CPU_TIME_REPORT: 9 secs 
+Peak memory: 377741312 bytes, TRCE: 85090304 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 8 secs 
