@@ -193,14 +193,10 @@ Text GLabel 10700 8500 0    60   Input ~ 0
 USB_P
 Text GLabel 10450 8000 0    60   Input ~ 0
 USB_N
-Text GLabel 10450 8400 0    60   Input ~ 0
-LED
 Wire Wire Line
 	10800 7900 10700 7900
 Wire Wire Line
 	10450 8000 10800 8000
-Wire Wire Line
-	10450 8400 10800 8400
 Wire Wire Line
 	13150 4300 13350 4300
 $Comp
@@ -1092,11 +1088,11 @@ Text HLabel 10800 8900 0    50   Output ~ 0
 INHA
 Text HLabel 10800 5800 0    50   BiDi ~ 0
 SDA
-Text HLabel 10800 7000 0    50   Output ~ 0
+Text HLabel 10800 6000 0    50   Output ~ 0
 SCL
 Text HLabel 10800 6300 0    50   Input ~ 0
 CS_MISO
-Text HLabel 10800 6000 0    50   Output ~ 0
+Text HLabel 10800 6900 0    50   Output ~ 0
 CS_CLK
 Text HLabel 10800 6400 0    50   Output ~ 0
 CS
@@ -1140,9 +1136,7 @@ NoConn ~ 10800 9100
 NoConn ~ 10800 9000
 NoConn ~ 10800 9200
 NoConn ~ 10800 7200
-NoConn ~ 10800 6900
 NoConn ~ 10800 6600
-NoConn ~ 10800 6500
 NoConn ~ 10800 6100
 NoConn ~ 13450 5000
 NoConn ~ 13450 4900
@@ -1159,4 +1153,38 @@ NoConn ~ 13300 6350
 NoConn ~ 13300 6450
 Wire Wire Line
 	4850 3050 4850 3250
+$Comp
+L board-rescue:LED_Small-TinyFPGA-BX-rescue D5
+U 1 1 5DEFD796
+P 5350 2600
+F 0 "D5" H 5300 2725 50  0000 L CNN
+F 1 "LED_Small" H 5175 2500 50  0000 L CNN
+F 2 "LED_SMD:LED_0603_1608Metric" V 5350 2600 50  0001 C CNN
+F 3 "" V 5350 2600 50  0001 C CNN
+	1    5350 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L board-rescue:R_Small-TinyFPGA-BX-rescue R44
+U 1 1 5DEFD79C
+P 5350 2950
+F 0 "R44" H 5380 2970 50  0000 L CNN
+F 1 "270" H 5380 2910 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 5350 2950 50  0001 C CNN
+F 3 "" H 5350 2950 50  0001 C CNN
+	1    5350 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2850 5350 2700
+Wire Wire Line
+	5350 3050 5350 3250
+Wire Wire Line
+	5350 3250 4850 3250
+Connection ~ 4850 3250
+Text Label 10800 8400 2    50   ~ 0
+LED
+Text Label 5350 2500 1    50   ~ 0
+LED
+NoConn ~ 10800 7000
 $EndSCHEMATC

@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name custom)(type Legacy)(uri ${KIPRJMOD}/kicad_db/lib/custom.lib)(options "")(descr ""))
   (lib (name board-rescue)(type Legacy)(uri ${KIPRJMOD}/board-rescue.lib)(options "")(descr ""))
+  (lib (name TXB0104PWR)(type Legacy)(uri ${KIPRJMOD}/kicad_db/lib/TXB0104PWR.lib)(options "")(descr ""))
 )

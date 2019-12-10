@@ -14,11 +14,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 3200 4350 2    50   ~ 0
+Text Label 3125 6200 2    50   ~ 0
 HALL1
-Text Label 3200 4250 2    50   ~ 0
+Text Label 3125 6100 2    50   ~ 0
 HALL2
-Text Label 3200 4150 2    50   ~ 0
+Text Label 3125 6000 2    50   ~ 0
 HALL3
 $Comp
 L Connector:Conn_01x05_Female J?
@@ -36,12 +36,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x08_Male J2
 U 1 1 5D6DCD64
-P 3550 4550
-F 0 "J2" H 3658 5031 50  0000 C CNN
-F 1 "PHASES" H 3658 4940 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3550 4550 50  0001 C CNN
-F 3 "~" H 3550 4550 50  0001 C CNN
-	1    3550 4550
+P 3475 6400
+F 0 "J2" H 3583 6881 50  0000 C CNN
+F 1 "PHASES" H 3583 6790 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3475 6400 50  0001 C CNN
+F 3 "~" H 3475 6400 50  0001 C CNN
+	1    3475 6400
 	-1   0    0    1   
 $EndComp
 $Sheet
@@ -53,49 +53,49 @@ $EndSheet
 $Comp
 L power:+3.3V #PWR0105
 U 1 1 5D6E00E0
-P 3350 4550
+P 3275 6400
 AR Path="/5D6E00E0" Ref="#PWR0105"  Part="1" 
 AR Path="/5D056FB0/5D6E00E0" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0105" H 3350 4400 50  0001 C CNN
-F 1 "+3.3V" V 3365 4678 50  0000 L CNN
-F 2 "" H 3350 4550 50  0001 C CNN
-F 3 "" H 3350 4550 50  0001 C CNN
-	1    3350 4550
+F 0 "#PWR0105" H 3275 6250 50  0001 C CNN
+F 1 "+3.3V" V 3290 6528 50  0000 L CNN
+F 2 "" H 3275 6400 50  0001 C CNN
+F 3 "" H 3275 6400 50  0001 C CNN
+	1    3275 6400
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 5D6E15D7
-P 3300 4450
+P 3225 6300
 AR Path="/5D6E15D7" Ref="#PWR0106"  Part="1" 
 AR Path="/5D056FB0/5D6E15D7" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0106" H 3300 4200 50  0001 C CNN
-F 1 "GND" V 3305 4322 50  0000 R CNN
-F 2 "" H 3300 4450 50  0001 C CNN
-F 3 "" H 3300 4450 50  0001 C CNN
-	1    3300 4450
+F 0 "#PWR0106" H 3225 6050 50  0001 C CNN
+F 1 "GND" V 3230 6172 50  0000 R CNN
+F 2 "" H 3225 6300 50  0001 C CNN
+F 3 "" H 3225 6300 50  0001 C CNN
+	1    3225 6300
 	0    1    1    0   
 $EndComp
-Text Label 3150 4650 2    50   ~ 0
+Text Label 3075 6500 2    50   ~ 0
 PH1
-Text Label 3150 4750 2    50   ~ 0
+Text Label 3075 6600 2    50   ~ 0
 PH2
-Text Label 3150 4850 2    50   ~ 0
+Text Label 3075 6700 2    50   ~ 0
 PH3
 Wire Wire Line
-	3150 4650 3350 4650
+	3075 6500 3275 6500
 Wire Wire Line
-	3150 4750 3350 4750
+	3075 6600 3275 6600
 Wire Wire Line
-	3350 4850 3150 4850
+	3275 6700 3075 6700
 Wire Wire Line
-	3300 4450 3350 4450
+	3225 6300 3275 6300
 Wire Wire Line
-	3350 4350 3200 4350
+	3275 6200 3125 6200
 Wire Wire Line
-	3200 4250 3350 4250
+	3125 6100 3275 6100
 Wire Wire Line
-	3350 4150 3200 4150
+	3275 6000 3125 6000
 Text Label 3075 1325 2    50   ~ 0
 PH1
 Text Label 3075 1425 2    50   ~ 0
@@ -229,19 +229,6 @@ F 2 "" H 7900 5750 50  0001 C CNN
 F 3 "" H 7900 5750 50  0001 C CNN
 	1    7900 5750
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0159
-U 1 1 5D6B5C45
-P 2025 4275
-AR Path="/5D6B5C45" Ref="#PWR0159"  Part="1" 
-AR Path="/5D056FB0/5D6B5C45" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0159" H 2025 4125 50  0001 C CNN
-F 1 "+3.3V" V 2040 4403 50  0000 L CNN
-F 2 "" H 2025 4275 50  0001 C CNN
-F 3 "" H 2025 4275 50  0001 C CNN
-	1    2025 4275
-	0    -1   -1   0   
 $EndComp
 $Comp
 L LED:SK6812MINI D3
@@ -600,13 +587,13 @@ HALL2
 Text Label 4825 3575 2    50   ~ 0
 HALL1
 Text Label 4825 3725 2    50   ~ 0
-Encoder1_B
+Encoder1_B_3.3V
 Text Label 4825 3800 2    50   ~ 0
-Encoder1_A
+Encoder1_A_3.3V
 Text Label 4825 3275 2    50   ~ 0
-Encoder0_B
+Encoder0_B_3.3V
 Text Label 4825 3350 2    50   ~ 0
-Encoder0_A
+Encoder0_A_3.3V
 Text Label 7075 3700 0    50   ~ 0
 SDA
 Text Label 7075 3775 0    50   ~ 0
@@ -927,4 +914,103 @@ F 3 "" H 7600 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 7900 5750
+$Comp
+L Logic_LevelTranslator:TXB0104PW U11
+U 1 1 5DF1B68D
+P 3375 4525
+F 0 "U11" H 3375 3647 50  0000 C CNN
+F 1 "TXB0104PW" H 3375 3738 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 3375 3775 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 3485 4620 50  0001 C CNN
+	1    3375 4525
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0159
+U 1 1 5DF1D2E4
+P 3375 3825
+AR Path="/5DF1D2E4" Ref="#PWR0159"  Part="1" 
+AR Path="/5D056FB0/5DF1D2E4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0159" H 3375 3575 50  0001 C CNN
+F 1 "GND" V 3380 3697 50  0000 R CNN
+F 2 "" H 3375 3825 50  0001 C CNN
+F 3 "" H 3375 3825 50  0001 C CNN
+	1    3375 3825
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0163
+U 1 1 5DF1E1F4
+P 2025 4275
+F 0 "#PWR0163" H 2025 4125 50  0001 C CNN
+F 1 "+5V" V 2040 4403 50  0000 L CNN
+F 2 "" H 2025 4275 50  0001 C CNN
+F 3 "" H 2025 4275 50  0001 C CNN
+	1    2025 4275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0164
+U 1 1 5DF20AB2
+P 3275 5225
+F 0 "#PWR0164" H 3275 5075 50  0001 C CNN
+F 1 "+5V" H 3290 5398 50  0000 C CNN
+F 2 "" H 3275 5225 50  0001 C CNN
+F 3 "" H 3275 5225 50  0001 C CNN
+	1    3275 5225
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0165
+U 1 1 5DF20BBE
+P 3475 5225
+AR Path="/5DF20BBE" Ref="#PWR0165"  Part="1" 
+AR Path="/5D056FB0/5DF20BBE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0165" H 3475 5075 50  0001 C CNN
+F 1 "+3.3V" V 3490 5353 50  0000 L CNN
+F 2 "" H 3475 5225 50  0001 C CNN
+F 3 "" H 3475 5225 50  0001 C CNN
+	1    3475 5225
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R49
+U 1 1 5DF21897
+P 3775 5175
+F 0 "R49" H 3845 5221 50  0000 L CNN
+F 1 "10k" H 3845 5130 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3705 5175 50  0001 C CNN
+F 3 "~" H 3775 5175 50  0001 C CNN
+	1    3775 5175
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0166
+U 1 1 5DF21D73
+P 3775 5325
+AR Path="/5DF21D73" Ref="#PWR0166"  Part="1" 
+AR Path="/5D056FB0/5DF21D73" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0166" H 3775 5075 50  0001 C CNN
+F 1 "GND" V 3780 5197 50  0000 R CNN
+F 2 "" H 3775 5325 50  0001 C CNN
+F 3 "" H 3775 5325 50  0001 C CNN
+	1    3775 5325
+	1    0    0    -1  
+$EndComp
+Text Label 2975 4825 2    50   ~ 0
+Encoder0_A
+Text Label 2975 4625 2    50   ~ 0
+Encoder0_B
+Text Label 2975 4425 2    50   ~ 0
+Encoder1_A
+Text Label 2975 4225 2    50   ~ 0
+Encoder1_B
+Text Label 3775 4825 0    50   ~ 0
+Encoder0_A_3.3V
+Text Label 3775 4625 0    50   ~ 0
+Encoder0_B_3.3V
+Text Label 3775 4425 0    50   ~ 0
+Encoder1_A_3.3V
+Text Label 3775 4225 0    50   ~ 0
+Encoder1_B_3.3V
 $EndSCHEMATC
