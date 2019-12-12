@@ -297,9 +297,9 @@ Text Label 9775 4975 0    50   ~ 0
 term_te
 Text Label 7300 5750 2    50   ~ 0
 term_te
-Text Label 6100 5675 0    50   ~ 0
-SDA
 Text Label 6100 5775 0    50   ~ 0
+SDA
+Text Label 6100 5675 0    50   ~ 0
 SCL
 $Comp
 L Device:C C24

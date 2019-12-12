@@ -1111,7 +1111,7 @@ Text Label 7525 5275 2    50   ~ 0
 SDO
 Text Label 10800 4900 2    50   ~ 0
 SDO
-Text Label 7525 5375 2    50   ~ 0
+Text Label 7525 5475 2    50   ~ 0
 SDI
 Text Label 10800 5100 2    50   ~ 0
 SDI
@@ -1119,7 +1119,7 @@ Text Label 8175 7450 0    50   ~ 0
 SDO
 Text Label 8175 7550 0    50   ~ 0
 SDI
-Text Label 7525 5475 2    50   ~ 0
+Text Label 7525 5375 2    50   ~ 0
 SS
 Text Label 8175 7650 0    50   ~ 0
 SS
