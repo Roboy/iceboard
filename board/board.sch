@@ -103,7 +103,7 @@ PH2
 Text Label 3075 1525 2    50   ~ 0
 PH3
 $Sheet
-S 3075 1175 1150 1000
+S 3075 1175 1150 1175
 U 5D0530DE
 F0 "mosfet_bridges" 50
 F1 "mosfet_bridges.sch" 50
@@ -116,6 +116,7 @@ F7 "INHB" I L 3075 1825 50
 F8 "INLB" I L 3075 1925 50 
 F9 "INHC" I L 3075 2025 50 
 F10 "INLC" I L 3075 2125 50 
+F11 "nFault" O L 3075 2225 50 
 $EndSheet
 $Comp
 L power:GND #PWR0113
@@ -899,6 +900,7 @@ F20 "SCL" O R 7075 3775 50
 F21 "CS_MISO" I R 7075 3850 50 
 F22 "CS_CLK" O R 7075 3925 50 
 F23 "CS" O R 7075 4000 50 
+F24 "nFault" I L 4825 4100 50 
 $EndSheet
 Wire Wire Line
 	7900 5650 7900 5750
@@ -1013,4 +1015,8 @@ Text Label 3775 4425 0    50   ~ 0
 Encoder1_A_3.3V
 Text Label 3775 4225 0    50   ~ 0
 Encoder1_B_3.3V
+Text Label 3075 2225 2    50   ~ 0
+nFault
+Text Label 4825 4100 2    50   ~ 0
+nFault
 $EndSCHEMATC

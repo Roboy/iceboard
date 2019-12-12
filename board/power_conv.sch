@@ -434,7 +434,7 @@ Wire Wire Line
 Wire Wire Line
 	8700 2025 8800 2025
 Wire Wire Line
-	10100 2125 10100 2225
+	10100 2125 10100 2150
 Wire Wire Line
 	6800 2025 6800 2125
 Wire Wire Line
@@ -477,4 +477,42 @@ Wire Wire Line
 	8200 2125 8200 2275
 NoConn ~ 8100 2025
 NoConn ~ 10000 2025
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5DF22875
+P 5450 1700
+F 0 "TP8" H 5508 1820 50  0000 L CNN
+F 1 "TestPoint" H 5500 1950 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 5650 1700 50  0001 C CNN
+F 3 "~" H 5650 1700 50  0001 C CNN
+	1    5450 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5DF22949
+P 8200 2025
+F 0 "TP9" H 8258 2145 50  0000 L CNN
+F 1 "TestPoint" H 8275 1950 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8400 2025 50  0001 C CNN
+F 3 "~" H 8400 2025 50  0001 C CNN
+	1    8200 2025
+	1    0    0    -1  
+$EndComp
+Connection ~ 8200 2025
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5DF22BCD
+P 10500 2125
+F 0 "TP10" H 10558 2245 50  0000 L CNN
+F 1 "TestPoint" H 10575 2050 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10700 2125 50  0001 C CNN
+F 3 "~" H 10700 2125 50  0001 C CNN
+	1    10500 2125
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10500 2125 10100 2125
+Wire Wire Line
+	10100 2150 10100 2225
 $EndSCHEMATC

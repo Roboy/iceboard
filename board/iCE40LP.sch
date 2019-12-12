@@ -846,7 +846,7 @@ U 1 1 5A3A94CB
 P 4850 2600
 F 0 "D4" H 4800 2725 50  0000 L CNN
 F 1 "LED_Small" H 4675 2500 50  0000 L CNN
-F 2 "LED_SMD:LED_0603_1608Metric" V 4850 2600 50  0001 C CNN
+F 2 "LED_SMD:LED_0402_1005Metric" V 4850 2600 50  0001 C CNN
 F 3 "" V 4850 2600 50  0001 C CNN
 	1    4850 2600
 	0    -1   -1   0   
@@ -1052,9 +1052,9 @@ Wire Wire Line
 Wire Wire Line
 	7525 5675 7425 5675
 Connection ~ 7425 5675
-Text HLabel 10800 7700 0    50   Input ~ 0
+Text HLabel 13300 6250 0    50   Input ~ 0
 Encoder0_B
-Text HLabel 10800 7800 0    50   Input ~ 0
+Text HLabel 10800 7700 0    50   Input ~ 0
 Encoder0_A
 Text HLabel 13300 6050 0    50   Input ~ 0
 HALL3
@@ -1064,7 +1064,7 @@ Text HLabel 13300 5750 0    50   Input ~ 0
 HALL1
 Text HLabel 13300 6650 0    50   Output ~ 0
 NEOPXL
-Text HLabel 13300 7250 0    50   Input ~ 0
+Text HLabel 13300 7150 0    50   Input ~ 0
 Encoder1_B
 Text HLabel 13300 6550 0    50   Input ~ 0
 Encoder1_A
@@ -1074,17 +1074,17 @@ Text HLabel 13450 4700 0    50   Output ~ 0
 TX
 Text HLabel 13300 7450 0    50   Input ~ 0
 RX
-Text HLabel 10800 8100 0    50   Output ~ 0
-INLC
-Text HLabel 10800 8700 0    50   Output ~ 0
-INHC
-Text HLabel 10800 8200 0    50   Output ~ 0
-INLB
-Text HLabel 10800 8800 0    50   Output ~ 0
-INHB
-Text HLabel 10800 8300 0    50   Output ~ 0
-INLA
 Text HLabel 10800 8900 0    50   Output ~ 0
+INLC
+Text HLabel 10800 8300 0    50   Output ~ 0
+INHC
+Text HLabel 10800 8800 0    50   Output ~ 0
+INLB
+Text HLabel 10800 8200 0    50   Output ~ 0
+INHB
+Text HLabel 10800 8700 0    50   Output ~ 0
+INLA
+Text HLabel 10800 8100 0    50   Output ~ 0
 INHA
 Text HLabel 10800 5800 0    50   BiDi ~ 0
 SDA
@@ -1130,7 +1130,6 @@ SCK
 Text Label 13150 4300 2    50   ~ 0
 SS
 NoConn ~ 13300 7050
-NoConn ~ 13300 7150
 NoConn ~ 13300 7350
 NoConn ~ 10800 9100
 NoConn ~ 10800 9000
@@ -1148,7 +1147,6 @@ SDO
 NoConn ~ 10800 6200
 NoConn ~ 13450 4400
 NoConn ~ 13300 6150
-NoConn ~ 13300 6250
 NoConn ~ 13300 6350
 NoConn ~ 13300 6450
 Wire Wire Line
@@ -1159,7 +1157,7 @@ U 1 1 5DEFD796
 P 5350 2600
 F 0 "D5" H 5300 2725 50  0000 L CNN
 F 1 "LED_Small" H 5175 2500 50  0000 L CNN
-F 2 "LED_SMD:LED_0603_1608Metric" V 5350 2600 50  0001 C CNN
+F 2 "LED_SMD:LED_0402_1005Metric" V 5350 2600 50  0001 C CNN
 F 3 "" V 5350 2600 50  0001 C CNN
 	1    5350 2600
 	0    -1   -1   0   
@@ -1187,4 +1185,7 @@ LED
 Text Label 5350 2500 1    50   ~ 0
 LED
 NoConn ~ 10800 7000
+Text HLabel 10800 7800 0    50   Input ~ 0
+nFault
+NoConn ~ 13300 7250
 $EndSCHEMATC
