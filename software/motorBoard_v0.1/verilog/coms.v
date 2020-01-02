@@ -18,7 +18,7 @@ module coms(
 	output reg [23:0] PWMLimit,
 	output reg [23:0] IntegralLimit,
 	output reg [23:0] deadband,
-	output reg [23:0] gearBoxRatio,
+	input signed [12:0] current,
 	output reg LED
 );
 
@@ -26,11 +26,11 @@ localparam  MAGIC_NUMBER_LENGTH = 4;
 localparam  STATUS_REQUEST_FRAME_MAGICNUMBER = 32'h1CE1CEBB;
 localparam	STATUS_REQUEST_FRAME_LENGTH = 7;
 localparam 	STATUS_FRAME_MAGICNUMBER = 32'h1CEB00DA;
-localparam  STATUS_FRAME_LENGTH = 23;
+localparam  STATUS_FRAME_LENGTH = 25;
 localparam 	SETPOINT_FRAME_MAGICNUMBER = 32'hD0D0D0D0;
 localparam  SETPOINT_FRAME_LENGTH = 10;
 localparam 	CONTROL_MODE_FRAME_MAGICNUMBER = 32'hBAADA555;
-localparam  CONTROL_MODE_FRAME_LENGTH = 29;
+localparam  CONTROL_MODE_FRAME_LENGTH = 26;
 localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 
 	////////////////////////////////////////////////////////////////////////////////
@@ -123,7 +123,6 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 			Kd <= 0;
 			deadband <= 0;
 			IntegralLimit <= 50_000_000;
-			gearBoxRatio <= 53;
 		end else begin
 			tx_transmit <= 0;
 			rx_data_ready_prev <= rx_data_ready;
@@ -187,6 +186,8 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 						data_out_frame[18] <= displacement[23:16];
 						data_out_frame[19] <= displacement[15:8];
 						data_out_frame[20] <= displacement[7:0];
+						data_out_frame[21] <= current[12:8];
+						data_out_frame[22] <= current[7:0];
 						state <= GENERATE_STATUS_CRC;
 						LED <= 1;
 					end else begin
@@ -283,9 +284,6 @@ localparam  MAX_FRAME_LENGTH = CONTROL_MODE_FRAME_LENGTH;
 							setpoint[23:16] <= data_in_frame[17];
 							setpoint[15:8] <= data_in_frame[18];
 							setpoint[7:0] <= data_in_frame[19];
-							gearBoxRatio[23:16] <= data_in_frame[20];
-							gearBoxRatio[15:8] <= data_in_frame[21];
-							gearBoxRatio[7:0] <= data_in_frame[22];
 						  state <= IDLE;
 					end else begin
 						  state <= IDLE;

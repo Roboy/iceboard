@@ -175,7 +175,7 @@ neopixel nx(
   wire signed [23:0] PWMLimit;
   wire signed [23:0] IntegralLimit;
   wire signed [23:0] deadband;
-  wire signed [23:0] gearBoxRatio;
+  reg signed [12:0] current;
   wire driver_enable;
 
   assign PIN_11 = driver_enable;
@@ -192,7 +192,6 @@ neopixel nx(
   	.encoder0_position(encoder0_position),
   	.encoder1_position(encoder1_position),
     .displacement(displacement),
-    .gearBoxRatio(gearBoxRatio),
   	.setpoint(setpoint),
   	.control_mode(control_mode),
     .Kp(Kp),
@@ -200,6 +199,7 @@ neopixel nx(
     .Kd(Kd),
     .PWMLimit(PWMLimit),
     .IntegralLimit(IntegralLimit),
+    .current(current),
     .deadband(deadband),
     .LED(LED)
   );
@@ -210,7 +210,7 @@ neopixel nx(
     (control_mode==0)?encoder0_position:
     (control_mode==1)?encoder1_position:
     (control_mode==2)?displacement:
-    (control_mode==3)?0:
+    (control_mode==3)?current:
     32'd0;
 
   motorControl control(
@@ -228,10 +228,6 @@ neopixel nx(
     .pwm_out(pwm_out)
   );
 
-  always @ ( posedge clk32MHz ) begin
-    displacement <= (encoder0_position/gearBoxRatio) - (encoder1_position>>>3);
-  end
-
   // encoder0
   quad #(100) quad_counter0 (
     .clk(clk32MHz),
@@ -246,6 +242,48 @@ neopixel nx(
     .quadA(PIN_9),
     .quadB(PIN_10),
     .count(encoder1_position)
+  );
+
+  always @(posedge clk32MHz) begin: DISPLACEMENT_CALCULATION
+    displacement <= (encoder1_position-encoder0_position);
+  end
+
+  wire di_req, wr_ack, do_valid, ss_n;
+  reg wren;
+  wire [15:0] Word;
+  wire [15:0] data_out;
+  integer delay_counter;
+
+  always @(posedge clk32MHz) begin: TLI4970_READOUT_LOGIC
+		wren <= 0;
+		if(delay_counter==0)begin
+			if(ss_n)begin
+				if(data_out[15]==0)begin
+					current <= data_out[12:0];
+				end
+				delay_counter <= 32_000_000/500;
+				wren <= 1;
+			end
+		end else begin
+			delay_counter <= delay_counter-1;
+		end
+  end
+
+  // SPI specs: 1MHz, 16bit MSB, pol 0 phase 0
+  spi_master #(32, 1'b0, 1'b1, 2, 25) spi(
+  	.sclk_i(clk32MHz),
+  	.pclk_i(clk32MHz),
+  	.rst_i(1'b0),
+  	.spi_miso_i(miso),
+  	.di_i(Word),
+  	.wren_i(wren),
+  	.spi_ssel_o(ss_n),
+  	.spi_sck_o(sck),
+  	.spi_mosi_o(mosi),
+  	.di_req_o(di_req),
+  	.wr_ack_o(wr_ack),
+  	.do_valid_o(do_valid),
+  	.do_o(data_out)
   );
 
 endmodule
