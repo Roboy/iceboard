@@ -1,4 +1,4 @@
-### Module positions - created on Mo 16 Dez 2019 16:02:51 CET ###
+### Module positions - created on So 05 Jan 2020 16:02:05 CET ###
 ### Printed by Pcbnew version kicad 5.0.2-bee76a0~70~ubuntu18.04.1
 ## Unit = mm, Angle = deg.
 ## Side : top
@@ -27,9 +27,8 @@ C21        22uF/50V               C_0805_2012Metric                             
 C22        0.1uF                  C_0402_1005Metric                                         104.1000  -112.7000    0.0000  top
 C23        0.1uF                  C_0402_1005Metric                                          95.3000  -109.0000  270.0000  top
 C24        0.1uF                  C_0402_1005Metric                                         107.5700  -123.4000    0.0000  top
-C25        220uF                  CP_Elec_6.3x4.5                                           119.9000  -134.0000  270.0000  top
+C25        220uF                  CP_Elec_8x10                                              120.7600  -133.5400  270.0000  top
 C26        1uF                    C_0402_1005Metric                                         129.0000  -101.2200   90.0000  top
-C27        22uF/50V               C_0805_2012Metric                                         124.5000  -131.1000  270.0000  top
 C28        1uF                    C_0402_1005Metric                                         133.7500  -104.2500   90.0000  top
 C29        0.1uF                  C_0402_1005Metric                                         132.7864  -110.9054    0.0000  top
 C30        22uF/50V               C_0805_2012Metric                                         135.9000  -131.1000  270.0000  top
@@ -56,9 +55,15 @@ D3         SK6812MINI             LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm        
 D4         LED_Small              LED_0402_1005Metric                                       148.4000  -101.2000   90.0000  top
 D5         LED_Small              LED_0402_1005Metric                                       149.6000  -101.2000   90.0000  top
 DRV8323H1  DRV8323HRTA            QFN-40-1EP_6x6mm_Pitch0.5mm                               131.3000  -122.3000   90.0000  top
+H4         LABEL                  R1_eyes_mask_5.5mm                                        133.1600  -136.0000    0.0000  top
+H5         LABEL                  R1_face_mask_5.5mm                                        133.1528  -136.0079    0.0000  top
 H6         FID1                   Fiducial_0.5mm_Dia_1mm_Outer                              115.2100  -107.0400    0.0000  top
 H7         FID2                   Fiducial_0.5mm_Dia_1mm_Outer                              112.0000  -135.6000    0.0000  top
+J1         ENCODER0               micro_match_female_10pos_SMT                              154.0000  -108.8300  270.0000  top
+J3         POWER_IN               Wago_2060_2_SMD                                           100.6500  -134.7000   90.0000  top
+J4         ENCODER1               micro_match_female_8pos_SMT                                97.0000  -120.7000   90.0000  top
 J6         USB_OTG                USB_Micro-B_Molex_47346-0001                              120.0000  -102.7500  180.0000  top
+L1         10uH                   XAL5050-103MEC                                            145.1450  -102.6000  180.0000  top
 L2         Bead                   L_0603_1608Metric                                         122.5000  -107.2500   90.0000  top
 MAX176321  MAX17632               QFN-16-1EP_3x3mm_Pitch0.5mm                               139.1750  -103.8750  270.0000  top
 Q1         BSZ100N06NS-DS         VSON-8_3.3x3.3mm_P0.65mm_NexFET                           140.8500  -125.0550  180.0000  top
@@ -107,8 +112,10 @@ SW1        SW_DIP_x02             SW_DIP_SPSTx02_Slide_Copal_CHS-02A_W5.08mm_P1.
 SW2        SW_Push                PTS_810_SMT_Switch                                        126.7500  -103.0000   90.0000  top
 U1         LTC2855CDEPBF          ltc2855                                                    98.5000  -109.9700   90.0000  top
 U2         LM2903                 TSSOP-8_4.4x3mm_P0.65mm                                   142.7200  -111.5900  270.0000  top
+U3         TLI4970                TLI4970                                                   113.0000  -130.0000  180.0000  top
 U4         EEPROM                 SOT-23-5                                                  110.8000  -108.3800   90.0000  top
 U5         LM2903                 TSSOP-8_4.4x3mm_P0.65mm                                   112.0000  -120.0000  180.0000  top
+U6         MIC5504-3.3YM5-TR      SC70-5                                                    131.5000  -101.2500   90.0000  top
 U7         MIC5365-1.2YC5-TR      SC-70-C5                                                  131.2500  -103.7500  270.0000  top
 U8         iCE40-LP8K-CM81        iCE40-PL9K-CM81                                           129.3464  -111.4654  180.0000  top
 U9         AT25SF081-SSHD-B       SOIC-8_3.9x4.9mm_P1.27mm                                  117.4000  -112.8000   90.0000  top
