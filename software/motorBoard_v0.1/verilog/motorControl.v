@@ -9,16 +9,8 @@ module motorControl(
     input signed [23:0] Kd,
     input signed [23:0] PWMLimit,
     input signed [23:0] IntegralLimit,
-    input signed [23:0] deadband,
-    output pwm_out
+    input signed [23:0] deadband
   );
-
-  localparam  HA = 5;
-  localparam  LA = 4;
-  localparam  HB = 3;
-  localparam  LB = 2;
-  localparam  HC = 1;
-  localparam  LC = 0;
 
   // if we use the err_prev every clock tick, Kd is effectively useless
   reg [6:0] Kd_delay_counter;
