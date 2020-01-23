@@ -1,0 +1,84 @@
+ble_pack PWM.count_0__50__i0_LC_2 {PWM.count_0__50__i0, PWM.count_0__50_add_4_2, PWM.count_0__50_add_4_2_lut}
+ble_pack PWM.count_0__50__i1_LC_3 {PWM.count_0__50__i1, PWM.count_0__50_add_4_3, PWM.count_0__50_add_4_3_lut}
+ble_pack PWM.count_0__50__i2_LC_4 {PWM.count_0__50__i2, PWM.count_0__50_add_4_4, PWM.count_0__50_add_4_4_lut}
+ble_pack PWM.count_0__50__i3_LC_5 {PWM.count_0__50__i3, PWM.count_0__50_add_4_5, PWM.count_0__50_add_4_5_lut}
+ble_pack PWM.count_0__50__i4_LC_6 {PWM.count_0__50__i4, PWM.count_0__50_add_4_6, PWM.count_0__50_add_4_6_lut}
+ble_pack PWM.count_0__50__i5_LC_7 {PWM.count_0__50__i5, PWM.count_0__50_add_4_7, PWM.count_0__50_add_4_7_lut}
+ble_pack PWM.count_0__50__i6_LC_8 {PWM.count_0__50__i6, PWM.count_0__50_add_4_8, PWM.count_0__50_add_4_8_lut}
+ble_pack PWM.count_0__50__i7_LC_9 {PWM.count_0__50__i7, PWM.count_0__50_add_4_9, PWM.count_0__50_add_4_9_lut}
+clb_pack PLB_0 {PWM.count_0__50__i0_LC_2, PWM.count_0__50__i1_LC_3, PWM.count_0__50__i2_LC_4, PWM.count_0__50__i3_LC_5, PWM.count_0__50__i4_LC_6, PWM.count_0__50__i5_LC_7, PWM.count_0__50__i6_LC_8, PWM.count_0__50__i7_LC_9}
+ble_pack PWM.count_0__50__i8_LC_0 {PWM.count_0__50__i8, PWM.count_0__50_add_4_10, PWM.count_0__50_add_4_10_lut}
+ble_pack PWM.count_0__50__i9_LC_1 {PWM.count_0__50__i9, PWM.count_0__50_add_4_11_lut}
+clb_pack PLB_1 {PWM.count_0__50__i8_LC_0, PWM.count_0__50__i9_LC_1}
+ble_pack blink_counter_49__i0_LC_56 {blink_counter_49__i0, blink_counter_49_add_4_2, blink_counter_49_add_4_2_lut}
+ble_pack blink_counter_49__i1_LC_57 {blink_counter_49__i1, blink_counter_49_add_4_3, blink_counter_49_add_4_3_lut}
+ble_pack blink_counter_49__i2_LC_58 {blink_counter_49__i2, blink_counter_49_add_4_4, blink_counter_49_add_4_4_lut}
+ble_pack blink_counter_49__i3_LC_59 {blink_counter_49__i3, blink_counter_49_add_4_5, blink_counter_49_add_4_5_lut}
+ble_pack blink_counter_49__i4_LC_60 {blink_counter_49__i4, blink_counter_49_add_4_6, blink_counter_49_add_4_6_lut}
+ble_pack blink_counter_49__i5_LC_61 {blink_counter_49__i5, blink_counter_49_add_4_7, blink_counter_49_add_4_7_lut}
+ble_pack blink_counter_49__i6_LC_62 {blink_counter_49__i6, blink_counter_49_add_4_8, blink_counter_49_add_4_8_lut}
+ble_pack blink_counter_49__i7_LC_63 {blink_counter_49__i7, blink_counter_49_add_4_9, blink_counter_49_add_4_9_lut}
+clb_pack PLB_2 {blink_counter_49__i0_LC_56, blink_counter_49__i1_LC_57, blink_counter_49__i2_LC_58, blink_counter_49__i3_LC_59, blink_counter_49__i4_LC_60, blink_counter_49__i5_LC_61, blink_counter_49__i6_LC_62, blink_counter_49__i7_LC_63}
+ble_pack blink_counter_49__i8_LC_38 {blink_counter_49__i8, blink_counter_49_add_4_10, blink_counter_49_add_4_10_lut}
+ble_pack blink_counter_49__i9_LC_39 {blink_counter_49__i9, blink_counter_49_add_4_11, blink_counter_49_add_4_11_lut}
+ble_pack blink_counter_49__i10_LC_40 {blink_counter_49__i10, blink_counter_49_add_4_12, blink_counter_49_add_4_12_lut}
+ble_pack blink_counter_49__i11_LC_41 {blink_counter_49__i11, blink_counter_49_add_4_13, blink_counter_49_add_4_13_lut}
+ble_pack blink_counter_49__i12_LC_42 {blink_counter_49__i12, blink_counter_49_add_4_14, blink_counter_49_add_4_14_lut}
+ble_pack blink_counter_49__i13_LC_43 {blink_counter_49__i13, blink_counter_49_add_4_15, blink_counter_49_add_4_15_lut}
+ble_pack blink_counter_49__i14_LC_44 {blink_counter_49__i14, blink_counter_49_add_4_16, blink_counter_49_add_4_16_lut}
+ble_pack blink_counter_49__i15_LC_45 {blink_counter_49__i15, blink_counter_49_add_4_17, blink_counter_49_add_4_17_lut}
+clb_pack PLB_3 {blink_counter_49__i8_LC_38, blink_counter_49__i9_LC_39, blink_counter_49__i10_LC_40, blink_counter_49__i11_LC_41, blink_counter_49__i12_LC_42, blink_counter_49__i13_LC_43, blink_counter_49__i14_LC_44, blink_counter_49__i15_LC_45}
+ble_pack blink_counter_49__i16_LC_46 {blink_counter_49__i16, blink_counter_49_add_4_18, blink_counter_49_add_4_18_lut}
+ble_pack blink_counter_49__i17_LC_47 {blink_counter_49__i17, blink_counter_49_add_4_19, blink_counter_49_add_4_19_lut}
+ble_pack blink_counter_49__i18_LC_48 {blink_counter_49__i18, blink_counter_49_add_4_20, blink_counter_49_add_4_20_lut}
+ble_pack blink_counter_49__i19_LC_49 {blink_counter_49__i19, blink_counter_49_add_4_21, blink_counter_49_add_4_21_lut}
+ble_pack blink_counter_49__i20_LC_50 {blink_counter_49__i20, blink_counter_49_add_4_22, blink_counter_49_add_4_22_lut}
+ble_pack blink_counter_49__i21_LC_51 {blink_counter_49__i21, blink_counter_49_add_4_23, blink_counter_49_add_4_23_lut}
+ble_pack blink_counter_49__i22_LC_52 {blink_counter_49__i22, blink_counter_49_add_4_24, blink_counter_49_add_4_24_lut}
+ble_pack blink_counter_49__i23_LC_53 {blink_counter_49__i23, blink_counter_49_add_4_25, blink_counter_49_add_4_25_lut}
+clb_pack PLB_4 {blink_counter_49__i16_LC_46, blink_counter_49__i17_LC_47, blink_counter_49__i18_LC_48, blink_counter_49__i19_LC_49, blink_counter_49__i20_LC_50, blink_counter_49__i21_LC_51, blink_counter_49__i22_LC_52, blink_counter_49__i23_LC_53}
+ble_pack blink_counter_49__i24_LC_54 {blink_counter_49__i24, blink_counter_49_add_4_26, blink_counter_49_add_4_26_lut}
+ble_pack blink_counter_49__i25_LC_55 {blink_counter_49__i25, blink_counter_49_add_4_27_lut}
+clb_pack PLB_5 {blink_counter_49__i24_LC_54, blink_counter_49__i25_LC_55}
+ble_pack PWM.i1_4_lut_LC_14 {PWM.i1_4_lut}
+ble_pack PWM.i8_3_lut_LC_30 {PWM.i8_3_lut}
+ble_pack PWM.i1_4_lut_adj_8_LC_16 {PWM.i1_4_lut_adj_8}
+ble_pack PWM.i529_2_lut_LC_22 {PWM.i529_2_lut}
+ble_pack PWM.i8_4_lut_LC_31 {PWM.i8_4_lut}
+ble_pack PWM.i7_4_lut_LC_29 {PWM.i7_4_lut}
+clb_pack PLB_6 {PWM.i1_4_lut_LC_14, PWM.i8_3_lut_LC_30, PWM.i1_4_lut_adj_8_LC_16, PWM.i529_2_lut_LC_22, PWM.i8_4_lut_LC_31, PWM.i7_4_lut_LC_29}
+ble_pack PWM.i1_4_lut_adj_12_LC_15 {PWM.i1_4_lut_adj_12}
+ble_pack PWM.i902_4_lut_LC_32 {PWM.i902_4_lut}
+ble_pack PWM.half_duty_0___i3_LC_67 {PWM.half_duty_0___i3, i566_2_lut}
+ble_pack PWM.half_duty_0__8__I_0_46_i3_2_lut_LC_10 {PWM.half_duty_0__8__I_0_46_i3_2_lut}
+ble_pack PWM.i732_4_lut_LC_27 {PWM.i732_4_lut}
+ble_pack PWM.half_duty_0___i4_LC_66 {PWM.half_duty_0___i4, i565_2_lut}
+ble_pack PWM.i5_4_lut_adj_13_LC_25 {PWM.i5_4_lut_adj_13}
+ble_pack PWM.i1_2_lut_LC_11 {PWM.i1_2_lut}
+clb_pack PLB_7 {PWM.i1_4_lut_adj_12_LC_15, PWM.i902_4_lut_LC_32, PWM.half_duty_0___i3_LC_67, PWM.half_duty_0__8__I_0_46_i3_2_lut_LC_10, PWM.i732_4_lut_LC_27, PWM.half_duty_0___i4_LC_66, PWM.i5_4_lut_adj_13_LC_25, PWM.i1_2_lut_LC_11}
+ble_pack PWM.i229_2_lut_3_lut_4_lut_LC_17 {PWM.i229_2_lut_3_lut_4_lut}
+ble_pack PWM.i928_2_lut_3_lut_LC_36 {PWM.i928_2_lut_3_lut}
+ble_pack PWM.pause_counter_0__i2_LC_28 {PWM.pause_counter_0__i2, PWM.i74_3_lut}
+ble_pack PWM.pause_counter_0__i1_LC_26 {PWM.pause_counter_0__i1, PWM.i67_2_lut}
+ble_pack PWM.i1_2_lut_adj_10_LC_12 {PWM.i1_2_lut_adj_10}
+ble_pack PWM.i906_4_lut_LC_34 {PWM.i906_4_lut}
+ble_pack PWM.i1_2_lut_adj_11_LC_13 {PWM.i1_2_lut_adj_11}
+ble_pack PWM.i530_1_lut_2_lut_LC_23 {PWM.i530_1_lut_2_lut}
+clb_pack PLB_8 {PWM.i229_2_lut_3_lut_4_lut_LC_17, PWM.i928_2_lut_3_lut_LC_36, PWM.pause_counter_0__i2_LC_28, PWM.pause_counter_0__i1_LC_26, PWM.i1_2_lut_adj_10_LC_12, PWM.i906_4_lut_LC_34, PWM.i1_2_lut_adj_11_LC_13, PWM.i530_1_lut_2_lut_LC_23}
+ble_pack PWM.i2_4_lut_LC_18 {PWM.i2_4_lut}
+ble_pack PWM.i904_4_lut_LC_33 {PWM.i904_4_lut}
+ble_pack PWM.half_duty_0___i2_LC_68 {PWM.half_duty_0___i2, i569_2_lut}
+ble_pack PWM.i3_4_lut_LC_20 {PWM.i3_4_lut}
+ble_pack PWM.i931_3_lut_4_lut_LC_37 {PWM.i931_3_lut_4_lut}
+ble_pack PWM.i5_4_lut_LC_24 {PWM.i5_4_lut}
+ble_pack PWM.half_duty_0___i6_LC_64 {PWM.half_duty_0___i6, i533_2_lut}
+ble_pack PWM.half_duty_0___i1_LC_65 {PWM.half_duty_0___i1, i564_2_lut}
+clb_pack PLB_9 {PWM.i2_4_lut_LC_18, PWM.i904_4_lut_LC_33, PWM.half_duty_0___i2_LC_68, PWM.i3_4_lut_LC_20, PWM.i931_3_lut_4_lut_LC_37, PWM.i5_4_lut_LC_24, PWM.half_duty_0___i6_LC_64, PWM.half_duty_0___i1_LC_65}
+ble_pack PWM.i2_4_lut_adj_9_LC_19 {PWM.i2_4_lut_adj_9}
+ble_pack PWM.i908_4_lut_LC_35 {PWM.i908_4_lut}
+ble_pack i912_4_lut_LC_69 {i912_4_lut}
+ble_pack i913_4_lut_LC_70 {i913_4_lut}
+ble_pack i914_3_lut_LC_71 {i914_3_lut}
+ble_pack PWM.pause_counter_0__i0_LC_21 {PWM.pause_counter_0__i0, PWM.i528_3_lut_3_lut}
+ble_pack LC_72 {CONSTANT_ONE_LUT4}
+clb_pack PLB_10 {PWM.i2_4_lut_adj_9_LC_19, PWM.i908_4_lut_LC_35, i912_4_lut_LC_69, i913_4_lut_LC_70, i914_3_lut_LC_71, PWM.pause_counter_0__i0_LC_21, LC_72}

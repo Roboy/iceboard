@@ -1,0 +1,46 @@
+( pcb2gcode 2.0.0 )
+( Software-independent Gcode )
+( This file uses a mill head of 0.07874inch to drill the 2 hole sizes. )
+( Hole sizes: [0.0591 inch] [0.126 inch] )
+
+G94       (Inches per minute feed rate.)
+G20       (Units == INCHES.)
+G91.1     (Incremental arc distance mode.)
+G90       (Absolute coordinates.)
+S1000    (RPM spindle speed.)
+G01 F1.96850 (Feedrate)
+M3        (Spindle on clockwise.)
+G04 P1.00000
+G00 Z0.07874
+
+G0 X0.18900 Y-0.14170
+G1 Z-0.11811 F0.98425
+G0 Z0.07874
+
+G0 X0.71560 Y-0.14170
+G1 Z-0.11811 F0.98425
+G0 Z0.07874
+
+G0 X1.00793 Y-0.51180
+G1 Z0.11811 F0.98425
+F1.96850
+G2 X1.00793 Y-0.51180 Z-0.00000 I-0.02363 J0.00000
+G2 X1.00793 Y-0.51180 Z-0.11811 I-0.02363 J0.00000
+G2 X1.00793 Y-0.51180 I-0.02363 J0.00000
+G0 Z0.07874
+
+G0 X1.00793 Y-0.15750
+G1 Z0.11811 F0.98425
+F1.96850
+G2 X1.00793 Y-0.15750 Z-0.00000 I-0.02363 J0.00000
+G2 X1.00793 Y-0.15750 Z-0.11811 I-0.02363 J0.00000
+G2 X1.00793 Y-0.15750 I-0.02363 J0.00000
+G0 Z0.07874
+
+G00 Z0.394 ( All done -- retract )
+
+M5      (Spindle off.)
+G04 P1.000000
+M9      (Coolant off.)
+M2      (Program end.)
+

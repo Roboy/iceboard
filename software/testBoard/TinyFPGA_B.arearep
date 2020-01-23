@@ -1,0 +1,29 @@
+----------------------------------------------------------------------
+Report for cell TinyFPGA_B.TECH
+Register bits:  45 of 7680 (0.586%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        34          100.0
+                             SB_DFF        31          100.0
+                            SB_DFFE         1          100.0
+                          SB_DFFESR        12          100.0
+                          SB_DFFESS         1          100.0
+                           SB_GB_IO         1          100.0
+                              SB_IO        14          100.0
+                            SB_LUT4        72          100.0
+SUB MODULES
+   pwm(16000000,20000,4000000,23,1)         1
+                              TOTAL       167
+----------------------------------------------------------------------
+Report for cell pwm(16000000,20000,4000000,23,1).v1
+Instance Path : PWM
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         9           26.5
+                             SB_DFF         5           16.1
+                            SB_DFFE         1          100.0
+                          SB_DFFESR        12          100.0
+                          SB_DFFESS         1          100.0
+                            SB_LUT4        38           52.8
+                              TOTAL        66

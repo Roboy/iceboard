@@ -1,0 +1,108 @@
+#include <windows.h>
+#include "Resource.h"
+
+/* Win32 application icon */
+IDI_APPICON ICON                       "Application.ico"
+
+/* Our main menu */
+IDR_MAINMENU MENU
+BEGIN
+  POPUP "&File"
+  BEGIN
+    MENUITEM "E&xit",                  ID_FILE_EXIT
+  END
+  POPUP "&Help"
+  BEGIN
+    MENUITEM "&About",                 ID_HELP_ABOUT
+  END
+END
+
+/* Application manifest */
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Application.manifest"
+
+/* Executable version information */
+VS_VERSION_INFO    VERSIONINFO
+FILEVERSION        1,0,0,0
+PRODUCTVERSION     1,0,0,0
+FILEFLAGSMASK      VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS        VS_FF_DEBUG | VS_FF_PRERELEASE
+#else
+  FILEFLAGS        0
+#endif
+FILEOS             VOS_NT_WINDOWS32
+FILETYPE           VFT_APP
+FILESUBTYPE        VFT2_UNKNOWN
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "080904b0"
+    BEGIN
+      VALUE "CompanyName", "Excamera Labs"
+      VALUE "FileDescription", "SPIDriver control"
+      VALUE "FileVersion", "1.0.0.0"
+      VALUE "InternalName", "Win32App"
+      VALUE "LegalCopyright", "©2018 Excamera Labs"
+      VALUE "OriginalFilename", "Win32App.exe"
+      VALUE "ProductName", "SPIDriver control"
+      VALUE "ProductVersion", "1.0.0.0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x809, 1200
+  END
+END
+
+/* Our "about" dialog */
+IDD_ABOUTDIALOG DIALOGEX 0, 0, 147, 67
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+  ICON             IDI_APPICON,IDC_STATIC,7,7,20,20
+  LTEXT            "SPIDriver utility",IDC_STATIC,34,7,89,8
+  LTEXT            "©2018 Excamera Labs",IDC_STATIC,34,17,86,8
+  DEFPUSHBUTTON    "OK",IDOK,90,46,50,14,WS_GROUP
+END
+
+FONT_LARGE FONT  "IBMPlexMono-SemiBold.otf"
+
+/* Main window */
+IDD_DIALOG1 DIALOGEX 0, 0, 170, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SPIDriver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+  COMBOBOX                  COMBO_DEV,10,  10,  70, 39, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+
+  LTEXT         "Serial",   999,      35,  30,  50,  10, SS_LEFT
+  RTEXT         "-",        INF_S,    85,  30,  50,  10, SS_RIGHT
+  LTEXT         "Voltage",  999,      35,  40,  50,  10, SS_LEFT
+  RTEXT         "-",        INF_V,    85,  40,  50,  10, SS_RIGHT
+  LTEXT         "Current",  999,      35,  50,  50,  10, SS_LEFT
+  RTEXT         "-",        INF_C,    85,  50,  50,  10, SS_RIGHT
+  LTEXT         "Temp.",    999,      35,  60,  50,  10, SS_LEFT
+  RTEXT         "-",        INF_T,    85,  60,  50,  10, SS_RIGHT
+  LTEXT         "Running",  999,      35,  70,  50,  10, SS_LEFT
+  RTEXT         "-",        INF_U,    85,  70,  50,  10, SS_RIGHT
+
+  LTEXT         "MISO",     999,      10,  90,  30,  10, SS_LEFT
+  EDITTEXT                  MISO_LOG, 35,  90, 125,  10, WS_TABSTOP | ES_READONLY | ES_RIGHT | ES_AUTOHSCROLL
+  LTEXT         "MOSI",     999,      10, 100,  30,  10, SS_LEFT
+  EDITTEXT                  MOSI_LOG, 35, 100, 125,  10, WS_TABSTOP | ES_READONLY | ES_RIGHT | ES_AUTOHSCROLL
+
+  CHECKBOX        "CS",     BTN_CS,   35, 120,  40,  10, BS_AUTOCHECKBOX
+  CHECKBOX        "A",      BTN_A,    75, 120,  40,  10, BS_AUTOCHECKBOX
+  CHECKBOX        "B",      BTN_B,    115, 120,  40,  10, BS_AUTOCHECKBOX
+
+  EDITTEXT                  EDIT_TX,  35, 135,  50,  20, WS_TABSTOP | ES_UPPERCASE
+  DEFPUSHBUTTON "Transfer", BTN_TX,   95, 135,  50,  20
+
+END
+
+/* Our accelerators */
+IDR_ACCELERATOR ACCELERATORS
+BEGIN
+  "A",             ID_HELP_ABOUT,      VIRTKEY, ALT, NOINVERT
+END

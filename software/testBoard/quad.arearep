@@ -1,0 +1,13 @@
+----------------------------------------------------------------------
+Report for cell quad.TECH
+Register bits:  34 of 7680 (0.443%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        32          100.0
+                             SB_DFF         2          100.0
+                            SB_DFFE        32          100.0
+                           SB_GB_IO         1          100.0
+                              SB_IO        34          100.0
+                            SB_LUT4        35          100.0
+                              TOTAL       136

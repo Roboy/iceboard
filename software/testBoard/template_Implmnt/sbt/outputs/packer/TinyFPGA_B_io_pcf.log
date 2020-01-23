@@ -1,0 +1,15 @@
+OUTPUT USBPU 	 location (6, 33, 0) 	 A3 	 SB_LVCMOS
+OUTPUT TX 	 location (3, 0, 1) 	 J1 	 SB_LVCMOS
+OUTPUT SCL 	 location (33, 21, 1) 	 C9 	 SB_LVCMOS
+OUTPUT NEOPXL 	 location (0, 17, 1) 	 E2 	 SB_LVCMOS
+OUTPUT LED 	 location (5, 33, 1) 	 B3 	 SB_LVCMOS
+OUTPUT INLC 	 location (30, 33, 1) 	 B8 	 SB_LVCMOS
+OUTPUT INLB 	 location (25, 33, 1) 	 B7 	 SB_LVCMOS
+OUTPUT INLA 	 location (24, 33, 0) 	 B6 	 SB_LVCMOS
+OUTPUT INHC 	 location (28, 33, 1) 	 A8 	 SB_LVCMOS
+OUTPUT INHB 	 location (27, 33, 0) 	 A7 	 SB_LVCMOS
+OUTPUT INHA 	 location (23, 33, 0) 	 A6 	 SB_LVCMOS
+OUTPUT DE 	 location (3, 0, 0) 	 H1 	 SB_LVCMOS
+OUTPUT CS_CLK 	 location (33, 2, 1) 	 G9 	 SB_LVCMOS
+OUTPUT CS 	 location (33, 17, 0) 	 D8 	 SB_LVCMOS
+INPUT  CLK 	 location (0, 30, 0) 	 B2 	 SB_LVCMOS

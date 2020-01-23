@@ -1,0 +1,93 @@
+( pcb2gcode 2.0.0 )
+( Software-independent Gcode )
+
+G94 ( Inches per minute feed rate. )
+G20 ( Units == INCHES. )
+
+G90 ( Absolute coordinates. )
+G00 S1000 ( RPM spindle speed. )
+G64 P0.00040 ( set maximum deviation from commanded toolpath )
+G01 F1.96850 ( Feedrate. )
+
+
+G00 Z0.39370 (Retract to tool change height)
+T0
+M5      (Spindle stop.)
+G04 P1.00000 (Wait for spindle to stop)
+(MSG, Change tool bit to cutter diameter 0.07874in)
+M6      (Tool change.)
+M0      (Temporary machine stop.)
+M3 ( Spindle on clockwise. )
+G04 P1.00000 (Wait for spindle to get up to speed)
+G04 P0 ( dwell for no time -- G64 should not smooth over this point )
+G00 Z0.07874 ( retract )
+
+G00 X-0.03937 Y-1.81102 ( rapid move to begin. )
+G01 Z-0.10630 F0.98425 ( plunge. )
+G04 P0 ( dwell for no time -- G64 should not smooth over this point )
+G01 F1.96850
+G01 X-0.03937 Y-0.94882
+G00 Z0.07874
+G01 X-0.03937 Y-0.86220
+G01 Z-0.10630 F0.98425
+G01 F1.96850
+G01 X-0.03937 Y0.00000
+G01 X-0.03861 Y0.00768
+G01 X-0.03637 Y0.01507
+G01 X-0.03274 Y0.02187
+G01 X-0.02784 Y0.02784
+G01 X-0.02187 Y0.03274
+G01 X-0.01507 Y0.03637
+G01 X-0.00768 Y0.03861
+G01 X0.00000 Y0.03937
+G01 X0.78346 Y0.03937
+G00 Z0.07874
+G01 X0.87008 Y0.03937
+G01 Z-0.10630 F0.98425
+G01 F1.96850
+G01 X1.65354 Y0.03937
+G01 X1.66122 Y0.03861
+G01 X1.66861 Y0.03637
+G01 X1.67542 Y0.03274
+G01 X1.68138 Y0.02784
+G01 X1.68628 Y0.02187
+G01 X1.68992 Y0.01507
+G01 X1.69216 Y0.00768
+G01 X1.69291 Y0.00000
+G01 X1.69291 Y-0.86220
+G00 Z0.07874
+G01 X1.69291 Y-0.94882
+G01 Z-0.10630 F0.98425
+G01 F1.96850
+G01 X1.69291 Y-1.81102
+G01 X1.69216 Y-1.81870
+G01 X1.68992 Y-1.82609
+G01 X1.68628 Y-1.83290
+G01 X1.68138 Y-1.83886
+G01 X1.67542 Y-1.84376
+G01 X1.66861 Y-1.84740
+G01 X1.66122 Y-1.84964
+G01 X1.65354 Y-1.85039
+G01 X0.87008 Y-1.85039
+G00 Z0.07874
+G01 X0.78346 Y-1.85039
+G01 Z-0.10630 F0.98425
+G01 F1.96850
+G01 X0.00000 Y-1.85039
+G01 X-0.00768 Y-1.84964
+G01 X-0.01507 Y-1.84740
+G01 X-0.02187 Y-1.84376
+G01 X-0.02784 Y-1.83886
+G01 X-0.03274 Y-1.83290
+G01 X-0.03637 Y-1.82609
+G01 X-0.03861 Y-1.81870
+G01 X-0.03937 Y-1.81102
+
+G04 P0 ( dwell for no time -- G64 should not smooth over this point )
+G00 Z0.394 ( retract )
+
+M5 ( Spindle off. )
+G04 P1.000000
+M9 ( Coolant off. )
+M2 ( Program end. )
+

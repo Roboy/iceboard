@@ -1,0 +1,67 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  320 of 7680 (4.167%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        67          100.0
+                             SB_DFF       305          100.0
+                            SB_DFFE         8          100.0
+                          SB_DFFESR         6          100.0
+                           SB_DFFSR         1          100.0
+                           SB_GB_IO         1          100.0
+                              SB_IO         5          100.0
+                            SB_LUT4       650          100.0
+SUB MODULES
+                               coms         1
+                            uart_rx         1
+                            uart_tx         1
+                         uart_tx_U0         1
+                              TOTAL      1047
+----------------------------------------------------------------------
+Report for cell coms.v1
+Instance Path : c0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        42           62.7
+                             SB_DFF       279           91.5
+                            SB_DFFE         8          100.0
+                          SB_DFFESR         6          100.0
+                           SB_DFFSR         1          100.0
+                            SB_LUT4       458           70.5
+SUB MODULES
+                            uart_rx         1
+                            uart_tx         1
+                         uart_tx_U0         1
+                              TOTAL       797
+----------------------------------------------------------------------
+Report for cell uart_tx.v1
+Instance Path : c0.tx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         8           11.9
+                             SB_DFF        25            8.2
+                            SB_DFFE         1           12.5
+                            SB_LUT4        39            6.0
+                              TOTAL        73
+----------------------------------------------------------------------
+Report for cell uart_tx_U0.v1
+Instance Path : c0.tx2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         8           11.9
+                             SB_DFF        23            7.5
+                            SB_DFFE         3           37.5
+                            SB_LUT4        48            7.4
+                              TOTAL        82
+----------------------------------------------------------------------
+Report for cell uart_rx.v1
+Instance Path : c0.rx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         7           10.4
+                             SB_DFF        20            6.6
+                            SB_DFFE         4           50.0
+                           SB_DFFSR         1          100.0
+                            SB_LUT4        48            7.4
+                              TOTAL        80

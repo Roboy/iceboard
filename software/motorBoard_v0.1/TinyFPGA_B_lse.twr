@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Mon Jan  6 14:15:37 2020
+Thu Jan 23 17:00:06 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -25,167 +25,8 @@ Constraint: create_clock -period 62.500000 -name clk500 [get_nets clk32MHz]
 
 ================================================================================
 Constraint: create_clock -period 62.500000 -waveform { 0.000000 31.250000 } -name CLK [ get_ports { CLK } ]
-            453 items scored, 0 timing errors detected.
+            0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
-
-
-Passed:  The following path meets requirements by 37.861ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         SB_DFF     C              \PWM/half_duty[0]__i1  (from CLK +)
-   Destination:    SB_DFFE    E              \PWM/pwm_out[0]_39  (to CLK +)
-
-   Delay:                  24.506ns  (26.5% logic, 73.5% route), 16 logic levels.
-
- Constraint Details:
-
-     24.506ns data_path \PWM/half_duty[0]__i1 to \PWM/pwm_out[0]_39 meets
-     62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 37.861ns
-
- Path Details: \PWM/half_duty[0]__i1 to \PWM/pwm_out[0]_39
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \PWM/half_duty[0]__i1 (from CLK)
-Route         3   e 1.339                                  half_duty[0][0]
-LUT4        ---     0.408             I0 to O              \PWM/half_duty_0__9__I_0_i1_1_lut
-Route         2   e 1.158                                  \PWM/pwm_out_0__N_597[0]
-LUT4        ---     0.408             I1 to CO             \PWM/pwm_out_0__I_20_2
-Route         2   e 1.158                                  \PWM/n23507
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_3
-Route         2   e 1.158                                  \PWM/n23508
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_4
-Route         2   e 1.158                                  \PWM/n23509
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_5
-Route         2   e 1.158                                  \PWM/n23510
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_6
-Route         2   e 1.158                                  \PWM/n23511
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_7
-Route         2   e 1.158                                  \PWM/n23512
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_8
-Route         2   e 1.158                                  \PWM/n23513
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_9
-Route         2   e 1.158                                  \PWM/n23514
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_10
-Route         2   e 1.158                                  \PWM/n23515
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_11
-Route         1   e 1.020                                  \PWM/n23516
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_12
-Route         1   e 1.020                                  \PWM/n23517
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_13
-Route         1   e 1.020                                  \PWM/pwm_out_0__N_596
-LUT4        ---     0.408             I1 to O              \PWM/i10_4_lut
-Route         1   e 1.020                                  \PWM/n23
-LUT4        ---     0.408             I0 to O              \PWM/i26015_4_lut
-Route         1   e 1.020                                  \PWM/n28555
-                  --------
-                   24.506  (26.5% logic, 73.5% route), 16 logic levels.
-
-
-Passed:  The following path meets requirements by 39.427ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         SB_DFF     C              \PWM/half_duty[0]__i2  (from CLK +)
-   Destination:    SB_DFFE    E              \PWM/pwm_out[0]_39  (to CLK +)
-
-   Delay:                  22.940ns  (26.5% logic, 73.5% route), 15 logic levels.
-
- Constraint Details:
-
-     22.940ns data_path \PWM/half_duty[0]__i2 to \PWM/pwm_out[0]_39 meets
-     62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 39.427ns
-
- Path Details: \PWM/half_duty[0]__i2 to \PWM/pwm_out[0]_39
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \PWM/half_duty[0]__i2 (from CLK)
-Route         3   e 1.339                                  half_duty[0][1]
-LUT4        ---     0.408             I0 to O              \PWM/half_duty_0__9__I_0_i2_1_lut
-Route         2   e 1.158                                  \PWM/pwm_out_0__N_597[1]
-LUT4        ---     0.408             I1 to CO             \PWM/pwm_out_0__I_20_3
-Route         2   e 1.158                                  \PWM/n23508
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_4
-Route         2   e 1.158                                  \PWM/n23509
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_5
-Route         2   e 1.158                                  \PWM/n23510
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_6
-Route         2   e 1.158                                  \PWM/n23511
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_7
-Route         2   e 1.158                                  \PWM/n23512
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_8
-Route         2   e 1.158                                  \PWM/n23513
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_9
-Route         2   e 1.158                                  \PWM/n23514
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_10
-Route         2   e 1.158                                  \PWM/n23515
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_11
-Route         1   e 1.020                                  \PWM/n23516
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_12
-Route         1   e 1.020                                  \PWM/n23517
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_13
-Route         1   e 1.020                                  \PWM/pwm_out_0__N_596
-LUT4        ---     0.408             I1 to O              \PWM/i10_4_lut
-Route         1   e 1.020                                  \PWM/n23
-LUT4        ---     0.408             I0 to O              \PWM/i26015_4_lut
-Route         1   e 1.020                                  \PWM/n28555
-                  --------
-                   22.940  (26.5% logic, 73.5% route), 15 logic levels.
-
-
-Passed:  The following path meets requirements by 40.717ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         SB_DFF     C              \PWM/half_duty[0]__i1  (from CLK +)
-   Destination:    SB_DFFE    E              \PWM/pwm_out[0]_39  (to CLK +)
-
-   Delay:                  21.650ns  (26.2% logic, 73.8% route), 14 logic levels.
-
- Constraint Details:
-
-     21.650ns data_path \PWM/half_duty[0]__i1 to \PWM/pwm_out[0]_39 meets
-     62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 40.717ns
-
- Path Details: \PWM/half_duty[0]__i1 to \PWM/pwm_out[0]_39
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \PWM/half_duty[0]__i1 (from CLK)
-Route         3   e 1.339                                  half_duty[0][0]
-LUT4        ---     0.408             I0 to O              \PWM/half_duty_0__9__I_0_i1_1_lut
-Route         2   e 1.158                                  \PWM/pwm_out_0__N_597[0]
-LUT4        ---     0.408             I1 to CO             \PWM/pwm_out_0__I_20_2
-Route         2   e 1.158                                  \PWM/n23507
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_3
-Route         2   e 1.158                                  \PWM/n23508
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_4
-Route         2   e 1.158                                  \PWM/n23509
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_5
-Route         2   e 1.158                                  \PWM/n23510
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_6
-Route         2   e 1.158                                  \PWM/n23511
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_7
-Route         2   e 1.158                                  \PWM/n23512
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_8
-Route         2   e 1.158                                  \PWM/n23513
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_9
-Route         2   e 1.158                                  \PWM/n23514
-LUT4        ---     0.408             CI to CO             \PWM/pwm_out_0__I_20_10
-Route         2   e 1.158                                  \PWM/n23515
-LUT4        ---     0.408             I3 to O              \PWM/pwm_out_0__I_20_11_lut
-Route         1   e 1.020                                  \PWM/n10
-LUT4        ---     0.408             I3 to O              \PWM/i9_4_lut
-Route         1   e 1.020                                  \PWM/n22
-LUT4        ---     0.408             I3 to O              \PWM/i26015_4_lut
-Route         1   e 1.020                                  \PWM/n28555
-                  --------
-                   21.650  (26.2% logic, 73.8% route), 14 logic levels.
-
-Report: 24.639 ns is the maximum delay for this constraint.
-
 
 Timing Report Summary
 --------------
@@ -198,7 +39,7 @@ clk500 [get_nets clk32MHz]              |            -|            -|     0
                                         |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |    62.500 ns|    24.639 ns|    16  
+CLK [ get_ports { CLK } ]               |            -|            -|     0  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -212,8 +53,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  453 paths, 106 nets, and 252 connections (1.4% coverage)
+Constraints cover  0 paths, 0 nets, and 0 connections (0.0% coverage)
 
 
-Peak memory: 267829248 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 268414976 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

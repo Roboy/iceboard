@@ -1,0 +1,13 @@
+#--  Synopsys, Inc.
+#--  Version L-2016.09L+ice40
+#--  Project file /home/letrend/workspace/bldc_motorboard/software/icecube2_template/template_syn.prd
+#--  Written on Sun Aug 25 19:31:20 2019
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

@@ -1,0 +1,2407 @@
+(edif root
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timeStamp 2020 1 23 15 50 55 127)
+      (author "Lattice Semiconductor Corp.")
+      (program "EDIF Writer"(version "lse"))
+    )
+  )
+  (library PrimitivesExt
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell VCC
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port Y (direction OUTPUT))
+        )
+      )
+    )
+    (cell SB_DFFESR
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port Q (direction OUTPUT))
+          (port C (direction INPUT))
+          (port E (direction INPUT))
+          (port D (direction INPUT))
+          (port R (direction INPUT))
+        )
+      )
+    )
+    (cell SB_LUT4
+      (cellType generic)
+      (view v1
+        (viewType netlist)
+        (interface
+          (port I0 (direction INPUT))
+          (port I1 (direction INPUT))
+          (port I2 (direction INPUT))
+          (port I3 (direction INPUT))
+          (port O (direction OUTPUT))
+        )
+        (property LUT_INIT (string "16'h0000"))
+      )
+    )
+    (cell SB_CARRY
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port CI (direction INPUT))
+          (port I0 (direction INPUT))
+          (port I1 (direction INPUT))
+          (port CO (direction OUTPUT))
+        )
+      )
+    )
+    (cell SB_DFFE
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port Q (direction OUTPUT))
+          (port C (direction INPUT))
+          (port E (direction INPUT))
+          (port D (direction INPUT))
+        )
+      )
+    )
+    (cell SB_DFFESS
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port Q (direction OUTPUT))
+          (port C (direction INPUT))
+          (port E (direction INPUT))
+          (port D (direction INPUT))
+          (port S (direction INPUT))
+        )
+      )
+    )
+    (cell SB_DFF
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port Q (direction OUTPUT))
+          (port C (direction INPUT))
+          (port D (direction INPUT))
+        )
+      )
+    )
+    (cell SB_IO
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port PACKAGE_PIN (direction INOUT))
+          (port LATCH_INPUT_VALUE (direction INPUT))
+          (port CLOCK_ENABLE (direction INPUT))
+          (port INPUT_CLK (direction INPUT))
+          (port OUTPUT_CLK (direction INPUT))
+          (port OUTPUT_ENABLE (direction INPUT))
+          (port D_OUT_1 (direction INPUT))
+          (port D_OUT_0 (direction INPUT))
+          (port D_IN_1 (direction OUTPUT))
+          (port D_IN_0 (direction OUTPUT))
+        )
+        (property PIN_TYPE (string "6'b000000"))
+        (property PULLUP (string "1'b0"))
+        (property NEG_TRIGGER (string "1'b0"))
+        (property IO_STANDARD (string "SB_LVCMOS"))
+      )
+    )
+    (cell GND
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port Y (direction OUTPUT))
+        )
+      )
+    )
+    (cell SB_GB_IO
+      (cellType generic)
+      (view (rename INTERFACE_c "INTERFACE")
+        (viewType netlist)
+        (interface
+          (port PACKAGE_PIN (direction INOUT))
+          (port LATCH_INPUT_VALUE (direction INPUT))
+          (port CLOCK_ENABLE (direction INPUT))
+          (port INPUT_CLK (direction INPUT))
+          (port OUTPUT_CLK (direction INPUT))
+          (port OUTPUT_ENABLE (direction INPUT))
+          (port D_OUT_1 (direction INPUT))
+          (port D_OUT_0 (direction INPUT))
+          (port D_IN_1 (direction OUTPUT))
+          (port D_IN_0 (direction OUTPUT))
+          (port GLOBAL_BUFFER_OUTPUT (direction OUTPUT))
+        )
+        (property PIN_TYPE (string "6'b000000"))
+        (property PULLUP (string "1'b0"))
+        (property NEG_TRIGGER (string "1'b0"))
+        (property IO_STANDARD (string "SB_LVCMOS"))
+      )
+    )
+  )
+  (library work
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell (rename pwm_16000000_20000_4000000_23_1_ "pwm(16000000,20000,4000000,23,1)")
+      (cellType generic)
+      (view v1
+        (viewType netlist)
+        (interface
+          (port CLK_c (direction INPUT))
+          (port (rename half_duty_0__5_ "half_duty[0][5]") (direction OUTPUT))
+          (port GND_net (direction INPUT))
+          (port (rename half_duty_0__3_ "half_duty[0][3]") (direction OUTPUT))
+          (port (rename half_duty_0__2_ "half_duty[0][2]") (direction OUTPUT))
+          (port (rename half_duty_0__1_ "half_duty[0][1]") (direction OUTPUT))
+          (port (rename half_duty_0__0_ "half_duty[0][0]") (direction OUTPUT))
+          (port n684 (direction OUTPUT))
+          (port VCC_net (direction INPUT))
+          (port INHA_c_0 (direction OUTPUT))
+          (port n700 (direction INPUT))
+          (port n699 (direction INPUT))
+          (port n698 (direction INPUT))
+          (port n697 (direction INPUT))
+          (port n696 (direction INPUT))
+        )
+        (contents
+          (instance pause_counter_0__i2
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i1_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8114"))
+          )
+          (instance count_0__50_add_4_5_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i732_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fffe"))
+          )
+          (instance count_0__50__i3
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i902_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "7bde"))
+          )
+          (instance count_0__50_add_4_5
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i904_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "defc"))
+          )
+          (instance count_0__50_add_4_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance count_0__50_add_4_4
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i8_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4040"))
+          )
+          (instance i906_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "ebbe"))
+          )
+          (instance count_0__50__i4
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50_add_4_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance count_0__50__i5
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50__i0
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50__i6
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50_add_4_3
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i1_4_lut_adj_8
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "3373"))
+          )
+          (instance count_0__50_add_4_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i2_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "a596"))
+          )
+          (instance i2_4_lut_adj_9
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4830"))
+          )
+          (instance pwm_out_0__40
+            (viewRef INTERFACE_c (cellRef SB_DFFE (libraryref PrimitivesExt)))
+          )
+          (instance pause_counter_0__i0
+            (viewRef INTERFACE_c (cellRef SB_DFFESS (libraryref PrimitivesExt)))
+          )
+          (instance i528_3_lut_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4545"))
+          )
+          (instance i529_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "bbbb"))
+          )
+          (instance count_0__50_add_4_2
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i1_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance i1_2_lut_adj_10
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "7777"))
+          )
+          (instance i908_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "8000"))
+          )
+          (instance i5_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fdff"))
+          )
+          (instance count_0__50__i2
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i530_1_lut_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "4444"))
+          )
+          (instance i928_2_lut_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "0101"))
+          )
+          (instance i229_2_lut_3_lut_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "0111"))
+          )
+          (instance i1_2_lut_adj_11
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "7777"))
+          )
+          (instance count_0__50__i7
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance i7_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fdfe"))
+          )
+          (instance i8_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fffe"))
+          )
+          (instance count_0__50_add_4_6_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance count_0__50_add_4_7
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50_add_4_7_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i1_4_lut_adj_12
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "3336"))
+          )
+          (instance half_duty_0___i2
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance i74_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "6a6a"))
+          )
+          (instance half_duty_0___i3
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance half_duty_0___i4
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance half_duty_0___i6
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance half_duty_0___i1
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50__i8
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance pause_counter_0__i1
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50__i9
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50__i1
+            (viewRef INTERFACE_c (cellRef SB_DFFESR (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50_add_4_8
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50_add_4_8_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance count_0__50_add_4_9
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50_add_4_9_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance count_0__50_add_4_10
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance count_0__50_add_4_10_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance count_0__50_add_4_11_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i3_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "7bde"))
+          )
+          (instance i5_4_lut_adj_13
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "ffde"))
+          )
+          (instance half_duty_0__8__I_0_46_i3_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "6666"))
+          )
+          (instance i931_3_lut_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "0800"))
+          )
+          (instance count_0__50_add_4_6
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i67_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "6666"))
+          )
+          (net n119
+            (joined
+              (portRef O (instanceRef i74_3_lut))
+              (portRef D (instanceRef pause_counter_0__i2))
+            )
+          )
+          (net n653
+            (joined
+              (portRef O (instanceRef i1_2_lut_adj_11))
+              (portRef E (instanceRef pause_counter_0__i1))
+              (portRef E (instanceRef pause_counter_0__i0))
+              (portRef E (instanceRef pause_counter_0__i2))
+            )
+          )
+          (net pause_counter_0_2
+            (joined
+              (portRef Q (instanceRef pause_counter_0__i2))
+              (portRef I0 (instanceRef i74_3_lut))
+              (portRef I2 (instanceRef i928_2_lut_3_lut))
+              (portRef I2 (instanceRef i528_3_lut_3_lut))
+            )
+          )
+          (net CLK_c
+            (joined
+              (portRef CLK_c)
+              (portRef C (instanceRef half_duty_0___i6))
+              (portRef C (instanceRef count_0__50__i0))
+              (portRef C (instanceRef half_duty_0___i1))
+              (portRef C (instanceRef pause_counter_0__i1))
+              (portRef C (instanceRef pause_counter_0__i0))
+              (portRef C (instanceRef count_0__50__i9))
+              (portRef C (instanceRef pause_counter_0__i2))
+              (portRef C (instanceRef half_duty_0___i2))
+              (portRef C (instanceRef pwm_out_0__40))
+              (portRef C (instanceRef half_duty_0___i3))
+              (portRef C (instanceRef half_duty_0___i4))
+              (portRef C (instanceRef count_0__50__i1))
+              (portRef C (instanceRef count_0__50__i2))
+              (portRef C (instanceRef count_0__50__i3))
+              (portRef C (instanceRef count_0__50__i4))
+              (portRef C (instanceRef count_0__50__i5))
+              (portRef C (instanceRef count_0__50__i6))
+              (portRef C (instanceRef count_0__50__i7))
+              (portRef C (instanceRef count_0__50__i8))
+            )
+            (property SET_AS_NETWORK (string "CLK_c"))
+            (property is_clock (string "1"))
+          )
+          (net n694
+            (joined
+              (portRef O (instanceRef i229_2_lut_3_lut_4_lut))
+              (portRef R (instanceRef pause_counter_0__i1))
+              (portRef R (instanceRef pause_counter_0__i2))
+            )
+          )
+          (net count_0_6
+            (joined
+              (portRef I2 (instanceRef count_0__50_add_4_8_lut))
+              (portRef Q (instanceRef count_0__50__i6))
+              (portRef I1 (instanceRef count_0__50_add_4_8))
+              (portRef I1 (instanceRef i1_2_lut))
+              (portRef I0 (instanceRef i1_4_lut))
+            )
+          )
+          (net count_0_5
+            (joined
+              (portRef Q (instanceRef count_0__50__i5))
+              (portRef I1 (instanceRef count_0__50_add_4_7))
+              (portRef I3 (instanceRef i3_4_lut))
+              (portRef I2 (instanceRef count_0__50_add_4_7_lut))
+              (portRef I2 (instanceRef i5_4_lut))
+              (portRef I1 (instanceRef i1_4_lut))
+            )
+          )
+          (net pwm_out_0_N_43_4
+            (joined
+              (portRef O (instanceRef i732_4_lut))
+              (portRef I3 (instanceRef i2_4_lut_adj_9))
+              (portRef I2 (instanceRef i1_4_lut))
+              (portRef I3 (instanceRef i904_4_lut))
+            )
+          )
+          (net half_duty_0_5
+            (joined
+              (portRef half_duty_0__5_)
+              (portRef Q (instanceRef half_duty_0___i6))
+              (portRef I0 (instanceRef i2_4_lut_adj_9))
+              (portRef I3 (instanceRef i1_4_lut))
+              (portRef I0 (instanceRef i904_4_lut))
+              (portRef I1 (instanceRef i3_4_lut))
+            )
+          )
+          (net n11
+            (joined
+              (portRef O (instanceRef i1_4_lut))
+              (portRef I1 (instanceRef i8_3_lut))
+            )
+          )
+          (net n52
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_5_lut))
+              (portRef D (instanceRef count_0__50__i3))
+            )
+          )
+          (net GND_net
+            (joined
+              (portRef GND_net)
+              (portRef I2 (instanceRef i530_1_lut_2_lut))
+              (portRef I3 (instanceRef i1_2_lut_adj_10))
+              (portRef I0 (instanceRef count_0__50_add_4_10_lut))
+              (portRef I2 (instanceRef half_duty_0__8__I_0_46_i3_2_lut))
+              (portRef I2 (instanceRef i1_2_lut_adj_11))
+              (portRef I2 (instanceRef i67_2_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_5))
+              (portRef I0 (instanceRef count_0__50_add_4_6))
+              (portRef I0 (instanceRef count_0__50_add_4_7))
+              (portRef I0 (instanceRef count_0__50_add_4_8))
+              (portRef I0 (instanceRef count_0__50_add_4_9))
+              (portRef I0 (instanceRef count_0__50_add_4_10))
+              (portRef I1 (instanceRef count_0__50_add_4_11_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_4))
+              (portRef I0 (instanceRef count_0__50_add_4_3))
+              (portRef I0 (instanceRef count_0__50_add_4_2))
+              (portRef I3 (instanceRef i67_2_lut))
+              (portRef I3 (instanceRef i530_1_lut_2_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_9_lut))
+              (portRef I3 (instanceRef i1_2_lut_adj_11))
+              (portRef I3 (instanceRef i928_2_lut_3_lut))
+              (portRef I2 (instanceRef i1_2_lut_adj_10))
+              (portRef I3 (instanceRef i1_2_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_4_lut))
+              (portRef I3 (instanceRef i74_3_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_7_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_6_lut))
+              (portRef I2 (instanceRef i1_2_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_2_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_3_lut))
+              (portRef I3 (instanceRef i8_3_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_5_lut))
+              (portRef I3 (instanceRef i529_2_lut))
+              (portRef I2 (instanceRef i529_2_lut))
+              (portRef I3 (instanceRef i528_3_lut_3_lut))
+              (portRef I3 (instanceRef half_duty_0__8__I_0_46_i3_2_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_11_lut))
+              (portRef I0 (instanceRef count_0__50_add_4_8_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_10_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_9_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_8_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_7_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_6_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_5_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_4_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_3_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_2_lut))
+            )
+          )
+          (net count_0_3
+            (joined
+              (portRef I2 (instanceRef i5_4_lut_adj_13))
+              (portRef Q (instanceRef count_0__50__i3))
+              (portRef I0 (instanceRef i908_4_lut))
+              (portRef I1 (instanceRef i902_4_lut))
+              (portRef I2 (instanceRef count_0__50_add_4_5_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_5))
+            )
+          )
+          (net n1284
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_4))
+              (portRef CI (instanceRef count_0__50_add_4_5))
+              (portRef I3 (instanceRef count_0__50_add_4_5_lut))
+            )
+          )
+          (net half_duty_0_3
+            (joined
+              (portRef half_duty_0__3_)
+              (portRef Q (instanceRef half_duty_0___i4))
+              (portRef I0 (instanceRef i5_4_lut_adj_13))
+              (portRef I0 (instanceRef i732_4_lut))
+              (portRef I1 (instanceRef i1_4_lut_adj_12))
+            )
+          )
+          (net half_duty_0_2
+            (joined
+              (portRef half_duty_0__2_)
+              (portRef Q (instanceRef half_duty_0___i3))
+              (portRef I0 (instanceRef i1_4_lut_adj_12))
+              (portRef I0 (instanceRef half_duty_0__8__I_0_46_i3_2_lut))
+              (portRef I1 (instanceRef i732_4_lut))
+              (portRef I2 (instanceRef i2_4_lut))
+            )
+          )
+          (net half_duty_0_1
+            (joined
+              (portRef half_duty_0__1_)
+              (portRef Q (instanceRef half_duty_0___i2))
+              (portRef I3 (instanceRef i906_4_lut))
+              (portRef I0 (instanceRef i3_4_lut))
+              (portRef I2 (instanceRef i732_4_lut))
+              (portRef I1 (instanceRef i2_4_lut))
+              (portRef I2 (instanceRef i1_4_lut_adj_12))
+            )
+          )
+          (net half_duty_0_0
+            (joined
+              (portRef half_duty_0__0_)
+              (portRef Q (instanceRef half_duty_0___i1))
+              (portRef I2 (instanceRef i906_4_lut))
+              (portRef I0 (instanceRef i902_4_lut))
+              (portRef I3 (instanceRef i1_4_lut_adj_12))
+              (portRef I3 (instanceRef i2_4_lut))
+              (portRef I3 (instanceRef i732_4_lut))
+              (portRef I0 (instanceRef i7_4_lut))
+            )
+          )
+          (net pwm_out_0__N_55
+            (joined
+              (portRef I1 (instanceRef i1_2_lut_adj_11))
+              (portRef E (instanceRef count_0__50__i3))
+              (portRef I3 (instanceRef i229_2_lut_3_lut_4_lut))
+              (portRef E (instanceRef count_0__50__i6))
+              (portRef E (instanceRef count_0__50__i1))
+              (portRef E (instanceRef count_0__50__i9))
+              (portRef E (instanceRef count_0__50__i8))
+              (portRef E (instanceRef count_0__50__i2))
+              (portRef I1 (instanceRef i529_2_lut))
+              (portRef E (instanceRef count_0__50__i0))
+              (portRef I0 (instanceRef i1_2_lut_adj_10))
+              (portRef E (instanceRef count_0__50__i5))
+              (portRef O (instanceRef i928_2_lut_3_lut))
+              (portRef E (instanceRef count_0__50__i4))
+              (portRef I1 (instanceRef i530_1_lut_2_lut))
+              (portRef E (instanceRef count_0__50__i7))
+              (portRef I0 (instanceRef i931_3_lut_4_lut))
+            )
+          )
+          (net n684
+            (joined
+              (portRef n684)
+              (portRef O (instanceRef i931_3_lut_4_lut))
+              (portRef R (instanceRef count_0__50__i4))
+              (portRef R (instanceRef count_0__50__i2))
+              (portRef R (instanceRef count_0__50__i9))
+              (portRef R (instanceRef count_0__50__i7))
+              (portRef R (instanceRef count_0__50__i3))
+              (portRef R (instanceRef count_0__50__i8))
+              (portRef R (instanceRef count_0__50__i5))
+              (portRef R (instanceRef count_0__50__i1))
+              (portRef R (instanceRef count_0__50__i0))
+              (portRef R (instanceRef count_0__50__i6))
+            )
+          )
+          (net count_0_0
+            (joined
+              (portRef I1 (instanceRef count_0__50_add_4_2))
+              (portRef Q (instanceRef count_0__50__i0))
+              (portRef I3 (instanceRef i7_4_lut))
+              (portRef I2 (instanceRef i902_4_lut))
+              (portRef I2 (instanceRef count_0__50_add_4_2_lut))
+              (portRef I2 (instanceRef i908_4_lut))
+            )
+          )
+          (net n4
+            (joined
+              (portRef O (instanceRef i1_4_lut_adj_12))
+              (portRef I3 (instanceRef i902_4_lut))
+            )
+          )
+          (net n1400
+            (joined
+              (portRef O (instanceRef i902_4_lut))
+              (portRef I0 (instanceRef i8_3_lut))
+            )
+          )
+          (net n1285
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_5))
+              (portRef CI (instanceRef count_0__50_add_4_6))
+              (portRef I3 (instanceRef count_0__50_add_4_6_lut))
+            )
+          )
+          (net n1370
+            (joined
+              (portRef O (instanceRef i2_4_lut))
+              (portRef I1 (instanceRef i904_4_lut))
+            )
+          )
+          (net count_0_7
+            (joined
+              (portRef Q (instanceRef count_0__50__i7))
+              (portRef I2 (instanceRef i904_4_lut))
+              (portRef I0 (instanceRef i1_2_lut))
+              (portRef I2 (instanceRef count_0__50_add_4_9_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_9))
+            )
+          )
+          (net n1402
+            (joined
+              (portRef O (instanceRef i904_4_lut))
+              (portRef I3 (instanceRef i1_4_lut_adj_8))
+            )
+          )
+          (net n53
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_4_lut))
+              (portRef D (instanceRef count_0__50__i2))
+            )
+          )
+          (net count_0_2
+            (joined
+              (portRef Q (instanceRef count_0__50__i2))
+              (portRef I1 (instanceRef i908_4_lut))
+              (portRef I1 (instanceRef half_duty_0__8__I_0_46_i3_2_lut))
+              (portRef I0 (instanceRef i2_4_lut))
+              (portRef I2 (instanceRef count_0__50_add_4_4_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_4))
+            )
+          )
+          (net n1283
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_3))
+              (portRef CI (instanceRef count_0__50_add_4_4))
+              (portRef I3 (instanceRef count_0__50_add_4_4_lut))
+            )
+          )
+          (net n12
+            (joined
+              (portRef O (instanceRef i2_4_lut_adj_9))
+              (portRef I2 (instanceRef i8_3_lut))
+            )
+          )
+          (net n18
+            (joined
+              (portRef O (instanceRef i8_3_lut))
+              (portRef I2 (instanceRef i1_4_lut_adj_8))
+            )
+          )
+          (net n647
+            (joined
+              (portRef O (instanceRef i1_2_lut_adj_10))
+              (portRef I0 (instanceRef i906_4_lut))
+            )
+          )
+          (net count_0_1
+            (joined
+              (portRef I1 (instanceRef i906_4_lut))
+              (portRef I2 (instanceRef count_0__50_add_4_3_lut))
+              (portRef Q (instanceRef count_0__50__i1))
+              (portRef I3 (instanceRef i5_4_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_3))
+              (portRef I2 (instanceRef i3_4_lut))
+            )
+          )
+          (net n1404
+            (joined
+              (portRef O (instanceRef i906_4_lut))
+              (portRef I0 (instanceRef i1_4_lut_adj_8))
+            )
+          )
+          (net n51
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_6_lut))
+              (portRef D (instanceRef count_0__50__i4))
+            )
+          )
+          (net count_0_4
+            (joined
+              (portRef I2 (instanceRef count_0__50_add_4_6_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_6))
+              (portRef Q (instanceRef count_0__50__i4))
+              (portRef I1 (instanceRef i2_4_lut_adj_9))
+              (portRef I0 (instanceRef i5_4_lut))
+              (portRef I1 (instanceRef i5_4_lut_adj_13))
+            )
+          )
+          (net n54
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_3_lut))
+              (portRef D (instanceRef count_0__50__i1))
+            )
+          )
+          (net n1282
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_2))
+              (portRef CI (instanceRef count_0__50_add_4_3))
+              (portRef I3 (instanceRef count_0__50_add_4_3_lut))
+            )
+          )
+          (net n50
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_7_lut))
+              (portRef D (instanceRef count_0__50__i5))
+            )
+          )
+          (net n55
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_2_lut))
+              (portRef D (instanceRef count_0__50__i0))
+            )
+          )
+          (net n49
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_8_lut))
+              (portRef D (instanceRef count_0__50__i6))
+            )
+          )
+          (net n993
+            (joined
+              (portRef O (instanceRef i529_2_lut))
+              (portRef D (instanceRef pwm_out_0__40))
+              (portRef I1 (instanceRef i1_4_lut_adj_8))
+            )
+          )
+          (net n657
+            (joined
+              (portRef O (instanceRef i1_4_lut_adj_8))
+              (portRef E (instanceRef pwm_out_0__40))
+            )
+          )
+          (net VCC_net
+            (joined
+              (portRef VCC_net)
+              (portRef I3 (instanceRef count_0__50_add_4_2_lut))
+              (portRef CI (instanceRef count_0__50_add_4_2))
+            )
+          )
+          (net count_0_8
+            (joined
+              (portRef I2 (instanceRef count_0__50_add_4_10_lut))
+              (portRef I1 (instanceRef count_0__50_add_4_10))
+              (portRef Q (instanceRef count_0__50__i8))
+              (portRef I2 (instanceRef i2_4_lut_adj_9))
+              (portRef I3 (instanceRef i908_4_lut))
+              (portRef I3 (instanceRef i8_4_lut))
+            )
+          )
+          (net INHA_c_0
+            (joined
+              (portRef INHA_c_0)
+              (portRef Q (instanceRef pwm_out_0__40))
+            )
+          )
+          (net pause_counter_0_2_N_102_0
+            (joined
+              (portRef O (instanceRef i528_3_lut_3_lut))
+              (portRef D (instanceRef pause_counter_0__i0))
+            )
+          )
+          (net pause_counter_0_0
+            (joined
+              (portRef Q (instanceRef pause_counter_0__i0))
+              (portRef I2 (instanceRef i74_3_lut))
+              (portRef I0 (instanceRef i229_2_lut_3_lut_4_lut))
+              (portRef I0 (instanceRef i928_2_lut_3_lut))
+              (portRef I0 (instanceRef i528_3_lut_3_lut))
+              (portRef I1 (instanceRef i67_2_lut))
+            )
+          )
+          (net n193
+            (joined
+              (portRef O (instanceRef i530_1_lut_2_lut))
+              (portRef S (instanceRef pause_counter_0__i0))
+            )
+          )
+          (net pause_counter_0_1
+            (joined
+              (portRef Q (instanceRef pause_counter_0__i1))
+              (portRef I1 (instanceRef i74_3_lut))
+              (portRef I1 (instanceRef i528_3_lut_3_lut))
+              (portRef I0 (instanceRef i67_2_lut))
+              (portRef I1 (instanceRef i928_2_lut_3_lut))
+              (portRef I1 (instanceRef i229_2_lut_3_lut_4_lut))
+            )
+          )
+          (net n19
+            (joined
+              (portRef O (instanceRef i8_4_lut))
+              (portRef I2 (instanceRef i229_2_lut_3_lut_4_lut))
+              (portRef I0 (instanceRef i529_2_lut))
+              (portRef I0 (instanceRef i530_1_lut_2_lut))
+              (portRef I0 (instanceRef i1_2_lut_adj_11))
+            )
+          )
+          (net n640
+            (joined
+              (portRef O (instanceRef i1_2_lut))
+              (portRef I1 (instanceRef i5_4_lut))
+              (portRef I3 (instanceRef i5_4_lut_adj_13))
+            )
+          )
+          (net count_0_9
+            (joined
+              (portRef Q (instanceRef count_0__50__i9))
+              (portRef I1 (instanceRef i931_3_lut_4_lut))
+              (portRef I1 (instanceRef i1_2_lut_adj_10))
+              (portRef I2 (instanceRef count_0__50_add_4_11_lut))
+              (portRef I0 (instanceRef i8_4_lut))
+            )
+          )
+          (net n1406
+            (joined
+              (portRef O (instanceRef i908_4_lut))
+              (portRef I3 (instanceRef i931_3_lut_4_lut))
+            )
+          )
+          (net n13
+            (joined
+              (portRef O (instanceRef i5_4_lut))
+              (portRef I2 (instanceRef i931_3_lut_4_lut))
+            )
+          )
+          (net n48
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_9_lut))
+              (portRef D (instanceRef count_0__50__i7))
+            )
+          )
+          (net n14
+            (joined
+              (portRef O (instanceRef i5_4_lut_adj_13))
+              (portRef I1 (instanceRef i7_4_lut))
+            )
+          )
+          (net n3
+            (joined
+              (portRef O (instanceRef half_duty_0__8__I_0_46_i3_2_lut))
+              (portRef I2 (instanceRef i7_4_lut))
+            )
+          )
+          (net n16
+            (joined
+              (portRef O (instanceRef i7_4_lut))
+              (portRef I1 (instanceRef i8_4_lut))
+            )
+          )
+          (net n12_adj_126
+            (joined
+              (portRef O (instanceRef i3_4_lut))
+              (portRef I2 (instanceRef i8_4_lut))
+            )
+          )
+          (net n1286
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_6))
+              (portRef CI (instanceRef count_0__50_add_4_7))
+              (portRef I3 (instanceRef count_0__50_add_4_7_lut))
+            )
+          )
+          (net n1287
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_7))
+              (portRef CI (instanceRef count_0__50_add_4_8))
+              (portRef I3 (instanceRef count_0__50_add_4_8_lut))
+            )
+          )
+          (net n700
+            (joined
+              (portRef n700)
+              (portRef D (instanceRef half_duty_0___i2))
+            )
+          )
+          (net n699
+            (joined
+              (portRef n699)
+              (portRef D (instanceRef half_duty_0___i3))
+            )
+          )
+          (net n698
+            (joined
+              (portRef n698)
+              (portRef D (instanceRef half_duty_0___i4))
+            )
+          )
+          (net n697
+            (joined
+              (portRef n697)
+              (portRef D (instanceRef half_duty_0___i6))
+            )
+          )
+          (net n696
+            (joined
+              (portRef n696)
+              (portRef D (instanceRef half_duty_0___i1))
+            )
+          )
+          (net n47
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_10_lut))
+              (portRef D (instanceRef count_0__50__i8))
+            )
+          )
+          (net n120
+            (joined
+              (portRef O (instanceRef i67_2_lut))
+              (portRef D (instanceRef pause_counter_0__i1))
+            )
+          )
+          (net n46
+            (joined
+              (portRef O (instanceRef count_0__50_add_4_11_lut))
+              (portRef D (instanceRef count_0__50__i9))
+            )
+          )
+          (net n1288
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_8))
+              (portRef CI (instanceRef count_0__50_add_4_9))
+              (portRef I3 (instanceRef count_0__50_add_4_9_lut))
+            )
+          )
+          (net n1289
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_9))
+              (portRef CI (instanceRef count_0__50_add_4_10))
+              (portRef I3 (instanceRef count_0__50_add_4_10_lut))
+            )
+          )
+          (net n1290
+            (joined
+              (portRef CO (instanceRef count_0__50_add_4_10))
+              (portRef I3 (instanceRef count_0__50_add_4_11_lut))
+            )
+          )
+        )
+      )
+    )
+    (cell TinyFPGA_B
+      (cellType generic)
+      (view TECH
+        (viewType netlist)
+        (interface
+          (port CLK (direction INPUT))
+          (port LED (direction OUTPUT))
+          (port USBPU (direction OUTPUT))
+          (port ENCODER0_A (direction INPUT))
+          (port ENCODER0_B (direction INPUT))
+          (port ENCODER1_A (direction INPUT))
+          (port ENCODER1_B (direction INPUT))
+          (port HALL1 (direction INPUT))
+          (port HALL2 (direction INPUT))
+          (port HALL3 (direction INPUT))
+          (port FAULT_N (direction INPUT))
+          (port NEOPXL (direction OUTPUT))
+          (port DE (direction OUTPUT))
+          (port TX (direction OUTPUT))
+          (port RX (direction INPUT))
+          (port CS_CLK (direction OUTPUT))
+          (port CS (direction OUTPUT))
+          (port CS_MISO (direction INPUT))
+          (port SCL (direction OUTPUT))
+          (port SDA (direction INPUT))
+          (port INLC (direction OUTPUT))
+          (port INHC (direction OUTPUT))
+          (port INLB (direction OUTPUT))
+          (port INHB (direction OUTPUT))
+          (port INLA (direction OUTPUT))
+          (port INHA (direction OUTPUT))
+        )
+        (contents
+          (instance i2
+            (viewRef INTERFACE_c (cellRef VCC (libraryref PrimitivesExt)))
+          )
+          (instance PWM
+            (viewRef v1 (cellRef pwm_16000000_20000_4000000_23_1_))
+          )
+          (instance LED_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance blink_counter_49__i0
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i912_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "cf08"))
+          )
+          (instance NEOPXL_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance i1
+            (viewRef INTERFACE_c (cellRef GND (libraryref PrimitivesExt)))
+          )
+          (instance i914_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "3535"))
+          )
+          (instance blink_counter_49_add_4_27_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i913_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "fec4"))
+          )
+          (instance blink_counter_49_add_4_26_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_26
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i25
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_25_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_7_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_25
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_24_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance DE_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance blink_counter_49_add_4_24
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_23_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_23
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_2
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_22_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_22
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_21_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_21
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_8
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_20_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_20
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_19_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_19
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_18_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_18
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_17_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_17
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i24
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i23
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i22
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i21
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i20
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i19
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i18
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i17
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i16
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i15
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i14
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i13
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i12
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i11
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i10
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i9
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i8
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i7
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i6
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i5
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i4
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i3
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i2
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49__i1
+            (viewRef INTERFACE_c (cellRef SB_DFF (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_16_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_16
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance TX_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance CS_CLK_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance CS_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance SCL_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance INLC_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance INHC_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance INLB_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance INHB_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance INLA_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance INHA_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+            (property IO_FF_OUT (string "TRUE"))
+          )
+          (instance CLK_pad
+            (viewRef INTERFACE_c (cellRef SB_GB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "000001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance USBPU_pad
+            (viewRef INTERFACE_c (cellRef SB_IO (libraryref PrimitivesExt)))
+            (property PIN_TYPE (string "011001"))
+            (property PULLUP (string "0"))
+            (property NEG_TRIGGER (string "0"))
+            (property IO_STANDARD (string "SB_LVCMOS"))
+          )
+          (instance blink_counter_49_add_4_3
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_3_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_6_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_4
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_4_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_5
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_5_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_6
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance i569_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance i566_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance i565_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance i533_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance blink_counter_49_add_4_15_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_15
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_14_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_14
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_13_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance i564_2_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "eeee"))
+          )
+          (instance blink_counter_49_add_4_13
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_12_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_12
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_11_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_11
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_10_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_10
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_9_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (instance blink_counter_49_add_4_9
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_7
+            (viewRef INTERFACE_c (cellRef SB_CARRY (libraryref PrimitivesExt)))
+          )
+          (instance blink_counter_49_add_4_8_lut
+            (viewRef v1 (cellRef SB_LUT4 (libraryref PrimitivesExt)))
+            (property LUT_INIT (string "C33C"))
+          )
+          (net GND_net
+            (joined
+              (portRef Y (instanceRef i1))
+              (portRef I1 (instanceRef blink_counter_49_add_4_5_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_6))
+              (portRef I0 (instanceRef blink_counter_49_add_4_18))
+              (portRef I0 (instanceRef blink_counter_49_add_4_17))
+              (portRef I0 (instanceRef blink_counter_49_add_4_16))
+              (portRef I1 (instanceRef blink_counter_49_add_4_19_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_18_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_17_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_16_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_19))
+              (portRef I0 (instanceRef blink_counter_49_add_4_26_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_4_lut))
+              (portRef I2 (instanceRef i569_2_lut))
+              (portRef I2 (instanceRef i566_2_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_25_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_24_lut))
+              (portRef I2 (instanceRef i565_2_lut))
+              (portRef I2 (instanceRef i533_2_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_7))
+              (portRef I0 (instanceRef blink_counter_49_add_4_27_lut))
+              (portRef I3 (instanceRef i565_2_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_20_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_21_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_22_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_23_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_24_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_25_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_26_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_8_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_10_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_12_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_14_lut))
+              (portRef I2 (instanceRef i564_2_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_5))
+              (portRef I1 (instanceRef blink_counter_49_add_4_4_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_4))
+              (portRef I1 (instanceRef blink_counter_49_add_4_3_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_2))
+              (portRef I0 (instanceRef blink_counter_49_add_4_13))
+              (portRef I3 (instanceRef i564_2_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_13_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_3))
+              (portRef I1 (instanceRef blink_counter_49_add_4_7_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_6_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_15))
+              (portRef I0 (instanceRef blink_counter_49_add_4_14))
+              (portRef I0 (instanceRef blink_counter_49_add_4_11_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_9_lut))
+              (portRef I3 (instanceRef i533_2_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_2_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_15_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_14_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_15_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_23_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_7_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_3_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_16_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_17_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_18_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_19_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_20_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_21_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_22_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_12))
+              (portRef I1 (instanceRef blink_counter_49_add_4_11_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_11))
+              (portRef I1 (instanceRef blink_counter_49_add_4_10_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_10))
+              (portRef I1 (instanceRef blink_counter_49_add_4_9_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_9))
+              (portRef I0 (instanceRef blink_counter_49_add_4_2_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_8_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_8))
+              (portRef I1 (instanceRef blink_counter_49_add_4_12_lut))
+              (portRef I3 (instanceRef i914_3_lut))
+              (portRef I3 (instanceRef i566_2_lut))
+              (portRef I3 (instanceRef i569_2_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_5_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_6_lut))
+              (portRef GND_net (instanceRef PWM))
+              (portRef I1 (instanceRef blink_counter_49_add_4_27_lut))
+              (portRef I0 (instanceRef blink_counter_49_add_4_26))
+              (portRef I0 (instanceRef blink_counter_49_add_4_25))
+              (portRef I0 (instanceRef blink_counter_49_add_4_24))
+              (portRef I0 (instanceRef blink_counter_49_add_4_23))
+              (portRef I0 (instanceRef blink_counter_49_add_4_22))
+              (portRef I0 (instanceRef blink_counter_49_add_4_21))
+              (portRef I0 (instanceRef blink_counter_49_add_4_20))
+              (portRef D_OUT_0 (instanceRef USBPU_pad))
+              (portRef D_OUT_0 (instanceRef NEOPXL_pad))
+              (portRef D_OUT_0 (instanceRef DE_pad))
+              (portRef D_OUT_0 (instanceRef TX_pad))
+              (portRef D_OUT_0 (instanceRef CS_CLK_pad))
+              (portRef D_OUT_0 (instanceRef CS_pad))
+              (portRef D_OUT_0 (instanceRef SCL_pad))
+              (portRef D_OUT_0 (instanceRef INLC_pad))
+              (portRef D_OUT_0 (instanceRef INHC_pad))
+              (portRef D_OUT_0 (instanceRef INLB_pad))
+              (portRef D_OUT_0 (instanceRef INHB_pad))
+              (portRef I1 (instanceRef blink_counter_49_add_4_13_lut))
+            )
+          )
+          (net VCC_net
+            (joined
+              (portRef Y (instanceRef i2))
+              (portRef I3 (instanceRef blink_counter_49_add_4_2_lut))
+              (portRef CI (instanceRef blink_counter_49_add_4_2))
+              (portRef VCC_net (instanceRef PWM))
+              (portRef D_OUT_0 (instanceRef INLA_pad))
+              (portRef OUTPUT_ENABLE (instanceRef USBPU_pad))
+              (portRef OUTPUT_ENABLE (instanceRef LED_pad))
+              (portRef OUTPUT_ENABLE (instanceRef NEOPXL_pad))
+              (portRef OUTPUT_ENABLE (instanceRef DE_pad))
+              (portRef OUTPUT_ENABLE (instanceRef TX_pad))
+              (portRef OUTPUT_ENABLE (instanceRef CS_CLK_pad))
+              (portRef OUTPUT_ENABLE (instanceRef CS_pad))
+              (portRef OUTPUT_ENABLE (instanceRef SCL_pad))
+              (portRef OUTPUT_ENABLE (instanceRef INLC_pad))
+              (portRef OUTPUT_ENABLE (instanceRef INHC_pad))
+              (portRef OUTPUT_ENABLE (instanceRef INLB_pad))
+              (portRef OUTPUT_ENABLE (instanceRef INHB_pad))
+              (portRef OUTPUT_ENABLE (instanceRef INLA_pad))
+              (portRef OUTPUT_ENABLE (instanceRef INHA_pad))
+              (portRef OUTPUT_ENABLE (instanceRef CLK_pad))
+            )
+          )
+          (net CLK_c
+            (joined
+              (portRef C (instanceRef blink_counter_49__i0))
+              (portRef GLOBAL_BUFFER_OUTPUT (instanceRef CLK_pad))
+              (portRef C (instanceRef blink_counter_49__i1))
+              (portRef C (instanceRef blink_counter_49__i2))
+              (portRef C (instanceRef blink_counter_49__i3))
+              (portRef C (instanceRef blink_counter_49__i4))
+              (portRef C (instanceRef blink_counter_49__i5))
+              (portRef C (instanceRef blink_counter_49__i6))
+              (portRef C (instanceRef blink_counter_49__i7))
+              (portRef C (instanceRef blink_counter_49__i8))
+              (portRef C (instanceRef blink_counter_49__i9))
+              (portRef C (instanceRef blink_counter_49__i10))
+              (portRef C (instanceRef blink_counter_49__i11))
+              (portRef C (instanceRef blink_counter_49__i12))
+              (portRef C (instanceRef blink_counter_49__i13))
+              (portRef C (instanceRef blink_counter_49__i14))
+              (portRef C (instanceRef blink_counter_49__i15))
+              (portRef C (instanceRef blink_counter_49__i16))
+              (portRef C (instanceRef blink_counter_49__i17))
+              (portRef C (instanceRef blink_counter_49__i18))
+              (portRef C (instanceRef blink_counter_49__i19))
+              (portRef C (instanceRef blink_counter_49__i20))
+              (portRef C (instanceRef blink_counter_49__i21))
+              (portRef C (instanceRef blink_counter_49__i22))
+              (portRef C (instanceRef blink_counter_49__i23))
+              (portRef C (instanceRef blink_counter_49__i24))
+              (portRef C (instanceRef blink_counter_49__i25))
+              (portRef CLK_c (instanceRef PWM))
+            )
+            (property SET_AS_NETWORK (string "CLK_c"))
+            (property is_clock (string "1"))
+          )
+          (net LED_c
+            (joined
+              (portRef O (instanceRef i914_3_lut))
+              (portRef D_OUT_0 (instanceRef LED_pad))
+            )
+          )
+          (net ENCODER0_A
+            (joined
+              (portRef ENCODER0_A)
+            )
+          )
+          (net ENCODER0_B
+            (joined
+              (portRef ENCODER0_B)
+            )
+          )
+          (net ENCODER1_A
+            (joined
+              (portRef ENCODER1_A)
+            )
+          )
+          (net ENCODER1_B
+            (joined
+              (portRef ENCODER1_B)
+            )
+          )
+          (net HALL1
+            (joined
+              (portRef HALL1)
+            )
+          )
+          (net HALL2
+            (joined
+              (portRef HALL2)
+            )
+          )
+          (net HALL3
+            (joined
+              (portRef HALL3)
+            )
+          )
+          (net FAULT_N
+            (joined
+              (portRef FAULT_N)
+            )
+          )
+          (net RX
+            (joined
+              (portRef RX)
+            )
+          )
+          (net CS_MISO
+            (joined
+              (portRef CS_MISO)
+            )
+          )
+          (net SDA
+            (joined
+              (portRef SDA)
+            )
+          )
+          (net INHA_c_0
+            (joined
+              (portRef D_OUT_0 (instanceRef INHA_pad))
+              (portRef INHA_c_0 (instanceRef PWM))
+            )
+          )
+          (net blink_counter_25
+            (joined
+              (portRef I2 (instanceRef blink_counter_49_add_4_27_lut))
+              (portRef I2 (instanceRef i914_3_lut))
+              (portRef Q (instanceRef blink_counter_49__i25))
+            )
+          )
+          (net blink_counter_24
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i24))
+              (portRef I2 (instanceRef blink_counter_49_add_4_26_lut))
+              (portRef I2 (instanceRef i912_4_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_26))
+              (portRef I2 (instanceRef i913_4_lut))
+            )
+          )
+          (net blink_counter_23
+            (joined
+              (portRef I2 (instanceRef blink_counter_49_add_4_25_lut))
+              (portRef Q (instanceRef blink_counter_49__i23))
+              (portRef I0 (instanceRef i912_4_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_25))
+              (portRef I1 (instanceRef i913_4_lut))
+            )
+          )
+          (net blink_counter_22
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i22))
+              (portRef I0 (instanceRef i913_4_lut))
+              (portRef I2 (instanceRef blink_counter_49_add_4_24_lut))
+              (portRef I1 (instanceRef i912_4_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_24))
+            )
+          )
+          (net blink_counter_21
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i21))
+              (portRef I3 (instanceRef i913_4_lut))
+              (portRef I3 (instanceRef i912_4_lut))
+              (portRef I2 (instanceRef blink_counter_49_add_4_23_lut))
+              (portRef I1 (instanceRef blink_counter_49_add_4_23))
+            )
+          )
+          (net n1278
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_23))
+              (portRef CI (instanceRef blink_counter_49_add_4_24))
+              (portRef I3 (instanceRef blink_counter_49_add_4_24_lut))
+            )
+          )
+          (net n1277
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_22))
+              (portRef CI (instanceRef blink_counter_49_add_4_23))
+              (portRef I3 (instanceRef blink_counter_49_add_4_23_lut))
+            )
+          )
+          (net half_duty_0_5
+            (joined
+              (portRef half_duty_0__5_ (instanceRef PWM))
+              (portRef I0 (instanceRef i533_2_lut))
+            )
+          )
+          (net half_duty_0_3
+            (joined
+              (portRef I0 (instanceRef i565_2_lut))
+              (portRef half_duty_0__3_ (instanceRef PWM))
+            )
+          )
+          (net half_duty_0_2
+            (joined
+              (portRef I0 (instanceRef i566_2_lut))
+              (portRef half_duty_0__2_ (instanceRef PWM))
+            )
+          )
+          (net half_duty_0_1
+            (joined
+              (portRef I0 (instanceRef i569_2_lut))
+              (portRef half_duty_0__1_ (instanceRef PWM))
+            )
+          )
+          (net half_duty_0_0
+            (joined
+              (portRef half_duty_0__0_ (instanceRef PWM))
+              (portRef I0 (instanceRef i564_2_lut))
+            )
+          )
+          (net n1259
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_4))
+              (portRef CI (instanceRef blink_counter_49_add_4_5))
+              (portRef I3 (instanceRef blink_counter_49_add_4_5_lut))
+            )
+          )
+          (net n1276
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_21))
+              (portRef CI (instanceRef blink_counter_49_add_4_22))
+              (portRef I3 (instanceRef blink_counter_49_add_4_22_lut))
+            )
+          )
+          (net n684
+            (joined
+              (portRef n684 (instanceRef PWM))
+              (portRef I1 (instanceRef i569_2_lut))
+              (portRef I1 (instanceRef i566_2_lut))
+              (portRef I1 (instanceRef i565_2_lut))
+              (portRef I1 (instanceRef i533_2_lut))
+              (portRef I1 (instanceRef i564_2_lut))
+            )
+          )
+          (net n6
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i20))
+              (portRef I1 (instanceRef blink_counter_49_add_4_22))
+              (portRef I2 (instanceRef blink_counter_49_add_4_22_lut))
+            )
+          )
+          (net n1265
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_10))
+              (portRef CI (instanceRef blink_counter_49_add_4_11))
+              (portRef I3 (instanceRef blink_counter_49_add_4_11_lut))
+            )
+          )
+          (net n7
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i19))
+              (portRef I1 (instanceRef blink_counter_49_add_4_21))
+              (portRef I2 (instanceRef blink_counter_49_add_4_21_lut))
+            )
+          )
+          (net n8
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i18))
+              (portRef I1 (instanceRef blink_counter_49_add_4_20))
+              (portRef I2 (instanceRef blink_counter_49_add_4_20_lut))
+            )
+          )
+          (net n9
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i17))
+              (portRef I1 (instanceRef blink_counter_49_add_4_19))
+              (portRef I2 (instanceRef blink_counter_49_add_4_19_lut))
+            )
+          )
+          (net n10
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i16))
+              (portRef I1 (instanceRef blink_counter_49_add_4_18))
+              (portRef I2 (instanceRef blink_counter_49_add_4_18_lut))
+            )
+          )
+          (net n11
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i15))
+              (portRef I1 (instanceRef blink_counter_49_add_4_17))
+              (portRef I2 (instanceRef blink_counter_49_add_4_17_lut))
+            )
+          )
+          (net n12
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i14))
+              (portRef I1 (instanceRef blink_counter_49_add_4_16))
+              (portRef I2 (instanceRef blink_counter_49_add_4_16_lut))
+            )
+          )
+          (net n13
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i13))
+              (portRef I1 (instanceRef blink_counter_49_add_4_15))
+              (portRef I2 (instanceRef blink_counter_49_add_4_15_lut))
+            )
+          )
+          (net n14
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i12))
+              (portRef I1 (instanceRef blink_counter_49_add_4_14))
+              (portRef I2 (instanceRef blink_counter_49_add_4_14_lut))
+            )
+          )
+          (net n1269
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_14))
+              (portRef CI (instanceRef blink_counter_49_add_4_15))
+              (portRef I3 (instanceRef blink_counter_49_add_4_15_lut))
+            )
+          )
+          (net n15
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i11))
+              (portRef I1 (instanceRef blink_counter_49_add_4_13))
+              (portRef I2 (instanceRef blink_counter_49_add_4_13_lut))
+            )
+          )
+          (net n16
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i10))
+              (portRef I1 (instanceRef blink_counter_49_add_4_12))
+              (portRef I2 (instanceRef blink_counter_49_add_4_12_lut))
+            )
+          )
+          (net n17
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i9))
+              (portRef I1 (instanceRef blink_counter_49_add_4_11))
+              (portRef I2 (instanceRef blink_counter_49_add_4_11_lut))
+            )
+          )
+          (net n18
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i8))
+              (portRef I1 (instanceRef blink_counter_49_add_4_10))
+              (portRef I2 (instanceRef blink_counter_49_add_4_10_lut))
+            )
+          )
+          (net n19
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i7))
+              (portRef I1 (instanceRef blink_counter_49_add_4_9))
+              (portRef I2 (instanceRef blink_counter_49_add_4_9_lut))
+            )
+          )
+          (net n20
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i6))
+              (portRef I1 (instanceRef blink_counter_49_add_4_8))
+              (portRef I2 (instanceRef blink_counter_49_add_4_8_lut))
+            )
+          )
+          (net n21
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i5))
+              (portRef I1 (instanceRef blink_counter_49_add_4_7))
+              (portRef I2 (instanceRef blink_counter_49_add_4_7_lut))
+            )
+          )
+          (net n22
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i4))
+              (portRef I1 (instanceRef blink_counter_49_add_4_6))
+              (portRef I2 (instanceRef blink_counter_49_add_4_6_lut))
+            )
+          )
+          (net n23
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i3))
+              (portRef I1 (instanceRef blink_counter_49_add_4_5))
+              (portRef I2 (instanceRef blink_counter_49_add_4_5_lut))
+            )
+          )
+          (net n24
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i2))
+              (portRef I1 (instanceRef blink_counter_49_add_4_4))
+              (portRef I2 (instanceRef blink_counter_49_add_4_4_lut))
+            )
+          )
+          (net n25
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i1))
+              (portRef I1 (instanceRef blink_counter_49_add_4_3))
+              (portRef I2 (instanceRef blink_counter_49_add_4_3_lut))
+            )
+          )
+          (net n26
+            (joined
+              (portRef Q (instanceRef blink_counter_49__i0))
+              (portRef I1 (instanceRef blink_counter_49_add_4_2))
+              (portRef I2 (instanceRef blink_counter_49_add_4_2_lut))
+            )
+          )
+          (net n1272
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_17))
+              (portRef CI (instanceRef blink_counter_49_add_4_18))
+              (portRef I3 (instanceRef blink_counter_49_add_4_18_lut))
+            )
+          )
+          (net n1411
+            (joined
+              (portRef O (instanceRef i913_4_lut))
+              (portRef I1 (instanceRef i914_3_lut))
+            )
+          )
+          (net n1258
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_3))
+              (portRef CI (instanceRef blink_counter_49_add_4_4))
+              (portRef I3 (instanceRef blink_counter_49_add_4_4_lut))
+            )
+          )
+          (net n1410
+            (joined
+              (portRef O (instanceRef i912_4_lut))
+              (portRef I0 (instanceRef i914_3_lut))
+            )
+          )
+          (net n1260
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_5))
+              (portRef CI (instanceRef blink_counter_49_add_4_6))
+              (portRef I3 (instanceRef blink_counter_49_add_4_6_lut))
+            )
+          )
+          (net USBPU
+            (joined
+              (portRef USBPU)
+              (portRef PACKAGE_PIN (instanceRef USBPU_pad))
+            )
+          )
+          (net n110
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_27_lut))
+              (portRef D (instanceRef blink_counter_49__i25))
+            )
+          )
+          (net n111
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_26_lut))
+              (portRef D (instanceRef blink_counter_49__i24))
+            )
+          )
+          (net n112
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_25_lut))
+              (portRef D (instanceRef blink_counter_49__i23))
+            )
+          )
+          (net n113
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_24_lut))
+              (portRef D (instanceRef blink_counter_49__i22))
+            )
+          )
+          (net n114
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_23_lut))
+              (portRef D (instanceRef blink_counter_49__i21))
+            )
+          )
+          (net n115
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_22_lut))
+              (portRef D (instanceRef blink_counter_49__i20))
+            )
+          )
+          (net n116
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_21_lut))
+              (portRef D (instanceRef blink_counter_49__i19))
+            )
+          )
+          (net n117
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_20_lut))
+              (portRef D (instanceRef blink_counter_49__i18))
+            )
+          )
+          (net n118
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_19_lut))
+              (portRef D (instanceRef blink_counter_49__i17))
+            )
+          )
+          (net n119
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_18_lut))
+              (portRef D (instanceRef blink_counter_49__i16))
+            )
+          )
+          (net n120
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_17_lut))
+              (portRef D (instanceRef blink_counter_49__i15))
+            )
+          )
+          (net n121
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_16_lut))
+              (portRef D (instanceRef blink_counter_49__i14))
+            )
+          )
+          (net n122
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_15_lut))
+              (portRef D (instanceRef blink_counter_49__i13))
+            )
+          )
+          (net n123
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_14_lut))
+              (portRef D (instanceRef blink_counter_49__i12))
+            )
+          )
+          (net n124
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_13_lut))
+              (portRef D (instanceRef blink_counter_49__i11))
+            )
+          )
+          (net n125
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_12_lut))
+              (portRef D (instanceRef blink_counter_49__i10))
+            )
+          )
+          (net n126
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_11_lut))
+              (portRef D (instanceRef blink_counter_49__i9))
+            )
+          )
+          (net n127
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_10_lut))
+              (portRef D (instanceRef blink_counter_49__i8))
+            )
+          )
+          (net n128
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_9_lut))
+              (portRef D (instanceRef blink_counter_49__i7))
+            )
+          )
+          (net n129
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_8_lut))
+              (portRef D (instanceRef blink_counter_49__i6))
+            )
+          )
+          (net n130
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_7_lut))
+              (portRef D (instanceRef blink_counter_49__i5))
+            )
+          )
+          (net n131
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_6_lut))
+              (portRef D (instanceRef blink_counter_49__i4))
+            )
+          )
+          (net n132
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_5_lut))
+              (portRef D (instanceRef blink_counter_49__i3))
+            )
+          )
+          (net n133
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_4_lut))
+              (portRef D (instanceRef blink_counter_49__i2))
+            )
+          )
+          (net n134
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_3_lut))
+              (portRef D (instanceRef blink_counter_49__i1))
+            )
+          )
+          (net n135
+            (joined
+              (portRef O (instanceRef blink_counter_49_add_4_2_lut))
+              (portRef D (instanceRef blink_counter_49__i0))
+            )
+          )
+          (net n1270
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_15))
+              (portRef CI (instanceRef blink_counter_49_add_4_16))
+              (portRef I3 (instanceRef blink_counter_49_add_4_16_lut))
+            )
+          )
+          (net n1266
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_11))
+              (portRef CI (instanceRef blink_counter_49_add_4_12))
+              (portRef I3 (instanceRef blink_counter_49_add_4_12_lut))
+            )
+          )
+          (net n1275
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_20))
+              (portRef CI (instanceRef blink_counter_49_add_4_21))
+              (portRef I3 (instanceRef blink_counter_49_add_4_21_lut))
+            )
+          )
+          (net n1268
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_13))
+              (portRef CI (instanceRef blink_counter_49_add_4_14))
+              (portRef I3 (instanceRef blink_counter_49_add_4_14_lut))
+            )
+          )
+          (net n1257
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_2))
+              (portRef CI (instanceRef blink_counter_49_add_4_3))
+              (portRef I3 (instanceRef blink_counter_49_add_4_3_lut))
+            )
+          )
+          (net n1267
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_12))
+              (portRef CI (instanceRef blink_counter_49_add_4_13))
+              (portRef I3 (instanceRef blink_counter_49_add_4_13_lut))
+            )
+          )
+          (net n1264
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_9))
+              (portRef CI (instanceRef blink_counter_49_add_4_10))
+              (portRef I3 (instanceRef blink_counter_49_add_4_10_lut))
+            )
+          )
+          (net n1274
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_19))
+              (portRef CI (instanceRef blink_counter_49_add_4_20))
+              (portRef I3 (instanceRef blink_counter_49_add_4_20_lut))
+            )
+          )
+          (net n1273
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_18))
+              (portRef CI (instanceRef blink_counter_49_add_4_19))
+              (portRef I3 (instanceRef blink_counter_49_add_4_19_lut))
+            )
+          )
+          (net n1271
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_16))
+              (portRef CI (instanceRef blink_counter_49_add_4_17))
+              (portRef I3 (instanceRef blink_counter_49_add_4_17_lut))
+            )
+          )
+          (net n1261
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_6))
+              (portRef CI (instanceRef blink_counter_49_add_4_7))
+              (portRef I3 (instanceRef blink_counter_49_add_4_7_lut))
+            )
+          )
+          (net n1262
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_7))
+              (portRef CI (instanceRef blink_counter_49_add_4_8))
+              (portRef I3 (instanceRef blink_counter_49_add_4_8_lut))
+            )
+          )
+          (net LED
+            (joined
+              (portRef LED)
+              (portRef PACKAGE_PIN (instanceRef LED_pad))
+            )
+          )
+          (net n700
+            (joined
+              (portRef O (instanceRef i569_2_lut))
+              (portRef n700 (instanceRef PWM))
+            )
+          )
+          (net n699
+            (joined
+              (portRef O (instanceRef i566_2_lut))
+              (portRef n699 (instanceRef PWM))
+            )
+          )
+          (net n698
+            (joined
+              (portRef O (instanceRef i565_2_lut))
+              (portRef n698 (instanceRef PWM))
+            )
+          )
+          (net n697
+            (joined
+              (portRef O (instanceRef i533_2_lut))
+              (portRef n697 (instanceRef PWM))
+            )
+          )
+          (net n696
+            (joined
+              (portRef O (instanceRef i564_2_lut))
+              (portRef n696 (instanceRef PWM))
+            )
+          )
+          (net n1281
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_26))
+              (portRef I3 (instanceRef blink_counter_49_add_4_27_lut))
+            )
+          )
+          (net n1280
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_25))
+              (portRef CI (instanceRef blink_counter_49_add_4_26))
+              (portRef I3 (instanceRef blink_counter_49_add_4_26_lut))
+            )
+          )
+          (net NEOPXL
+            (joined
+              (portRef NEOPXL)
+              (portRef PACKAGE_PIN (instanceRef NEOPXL_pad))
+            )
+          )
+          (net DE
+            (joined
+              (portRef DE)
+              (portRef PACKAGE_PIN (instanceRef DE_pad))
+            )
+          )
+          (net TX
+            (joined
+              (portRef TX)
+              (portRef PACKAGE_PIN (instanceRef TX_pad))
+            )
+          )
+          (net CS_CLK
+            (joined
+              (portRef CS_CLK)
+              (portRef PACKAGE_PIN (instanceRef CS_CLK_pad))
+            )
+          )
+          (net CS
+            (joined
+              (portRef CS)
+              (portRef PACKAGE_PIN (instanceRef CS_pad))
+            )
+          )
+          (net SCL
+            (joined
+              (portRef SCL)
+              (portRef PACKAGE_PIN (instanceRef SCL_pad))
+            )
+          )
+          (net INLC
+            (joined
+              (portRef INLC)
+              (portRef PACKAGE_PIN (instanceRef INLC_pad))
+            )
+          )
+          (net INHC
+            (joined
+              (portRef INHC)
+              (portRef PACKAGE_PIN (instanceRef INHC_pad))
+            )
+          )
+          (net INLB
+            (joined
+              (portRef INLB)
+              (portRef PACKAGE_PIN (instanceRef INLB_pad))
+            )
+          )
+          (net INHB
+            (joined
+              (portRef INHB)
+              (portRef PACKAGE_PIN (instanceRef INHB_pad))
+            )
+          )
+          (net INLA
+            (joined
+              (portRef INLA)
+              (portRef PACKAGE_PIN (instanceRef INLA_pad))
+            )
+          )
+          (net INHA
+            (joined
+              (portRef INHA)
+              (portRef PACKAGE_PIN (instanceRef INHA_pad))
+            )
+          )
+          (net CLK
+            (joined
+              (portRef CLK)
+              (portRef PACKAGE_PIN (instanceRef CLK_pad))
+            )
+          )
+          (net n1263
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_8))
+              (portRef CI (instanceRef blink_counter_49_add_4_9))
+              (portRef I3 (instanceRef blink_counter_49_add_4_9_lut))
+            )
+          )
+          (net n1279
+            (joined
+              (portRef CO (instanceRef blink_counter_49_add_4_24))
+              (portRef CI (instanceRef blink_counter_49_add_4_25))
+              (portRef I3 (instanceRef blink_counter_49_add_4_25_lut))
+            )
+          )
+        )
+      )
+    )
+  )
+  (design TECH
+    (cellRef TinyFPGA_B (libraryref work))
+  )
+)

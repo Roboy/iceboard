@@ -1,0 +1,68 @@
+( pcb2gcode 2.0.0 )
+( Software-independent Gcode )
+
+( This file uses only one drill bit. Forced by 'onedrill' option )
+
+G94       (Inches per minute feed rate.)
+G20       (Units == INCHES.)
+G91.1     (Incremental arc distance mode.)
+G90       (Absolute coordinates.)
+G00 S10000     (RPM spindle speed.)
+
+G00 Z0.39370 (Retract)
+T1
+M5      (Spindle stop.)
+G04 P1.00000
+(MSG, Change tool bit to drill size 0.0394 inch)
+M6      (Tool change.)
+M0      (Temporary machine stop.)
+M3      (Spindle on clockwise.)
+G0 Z0.07874
+G04 P1.00000
+
+G81 R0.07874 Z-0.03937 F7.87402 X0.66930 Y-0.22760
+X0.66930 Y-0.32760
+X0.66930 Y-0.42760
+X0.66930 Y-0.52760
+X0.66930 Y-0.62760
+X0.66930 Y-0.72760
+X0.66930 Y-1.09210
+X0.66930 Y-1.19210
+X0.66930 Y-1.29210
+X0.66930 Y-1.39210
+X0.66930 Y-1.49210
+X0.66930 Y-1.59210
+X1.06300 Y-1.59450
+X1.06300 Y-1.49450
+X1.06300 Y-1.39450
+X1.06300 Y-1.29450
+X1.06300 Y-1.19450
+X1.06300 Y-1.09450
+X1.06300 Y-0.72760
+X1.06300 Y-0.62760
+X1.06300 Y-0.52760
+X1.06300 Y-0.42760
+X1.06300 Y-0.32760
+X1.06300 Y-0.22760
+X1.49610 Y-0.18740
+X1.49610 Y-0.28740
+X1.49610 Y-0.38740
+X1.49610 Y-0.48740
+X1.49610 Y-0.58740
+X1.49610 Y-0.68740
+X1.49610 Y-0.78740
+X1.49610 Y-1.05350
+X1.49610 Y-1.15350
+X1.49610 Y-1.25350
+X1.49610 Y-1.35350
+X1.49610 Y-1.45350
+X1.49610 Y-1.55350
+X1.49610 Y-1.65350
+
+G00 Z0.394 ( All done -- retract )
+
+M5      (Spindle off.)
+G04 P1.000000
+M9      (Coolant off.)
+M2      (Program end.)
+

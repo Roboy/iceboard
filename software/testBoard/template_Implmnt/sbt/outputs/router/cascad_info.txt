@@ -1,0 +1,13 @@
+[VIC]
+PWM.n12_cascade_=ltout:in2
+PWM.n1370_cascade_=ltout:in1
+PWM.n13_cascade_=ltout:in2
+PWM.n16_cascade_=ltout:in1
+PWM.n19_cascade_=ltout:in0
+PWM.n3_cascade_=ltout:in2
+PWM.n4_cascade_=ltout:in3
+PWM.n640_cascade_=ltout:in3
+PWM.n993_cascade_=ltout:in1
+PWM.pwm_out_0_N_43_4_cascade_=ltout:in2
+PWM.pwm_out_0__N_55_cascade_=ltout:in0
+n1411_cascade_=ltout:in1

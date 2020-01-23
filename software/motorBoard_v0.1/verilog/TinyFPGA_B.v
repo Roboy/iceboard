@@ -87,8 +87,8 @@ neopixel nx(
 
  reg [22:0] pwm_setpoint;
  wire signed [23:0] duty;
- pwm #(32_000_000,20_000,32_000_000,23,1) PWM(
-   .clk(CLK),
+ pwm #(32_000_000,20_000,8_000_000,23,1) PWM(
+   .clk(clk32MHz),
    .reset_n(reset_n),
    .ena(enable),
    .duty(pwm_setpoint),

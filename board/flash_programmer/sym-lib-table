@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name custom)(type Legacy)(uri /home/letrend/workspace/iceboard/board/kicad_db/lib/custom.lib)(options "")(descr ""))
+)
