@@ -58,9 +58,9 @@ if __name__ == '__main__':
         wait_ready()
 
     ids = struct.unpack("BBB", idcode())
-    #if ids != (0x20, 0xba, 0x16):
-    #    print ("Unexpected JEDEC ID: %02x %02x %02x" % ids)
-    #    sys.exit(1)
+    if ids != (0x20, 0xba, 0x16):
+        print ("Unexpected JEDEC ID: %02x %02x %02x" % ids)
+        sys.exit(1)
 
     bin = open(sys.argv[1], "rb").read()
     t0 = time.time()

@@ -1,3 +1,6 @@
 [submodule "board/kicad_db"]
 	path = board/kicad_db
 	url = https://github.com/Roboy/kicad_db
+[submodule "software/TinyFPGA-Bootloader"]
+	path = software/TinyFPGA-Bootloader
+	url = https://github.com/Roboy/TinyFPGA-Bootloader
