@@ -37,7 +37,7 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
 );
 
 wire [7:0] ID;
-assign ID = 135;
+assign ID = 132;
 
 wire [23:0] neopxl_color;
 

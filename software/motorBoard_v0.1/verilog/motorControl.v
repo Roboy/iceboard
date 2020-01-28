@@ -22,21 +22,21 @@ module motorControl(
     reg signed [23:0] err_prev;
     reg signed [23:0] integral;
     if(reset)begin
-      err <= 0;
+      err = 0;
       err_prev <= 0;
-      result <= 0;
-      integral <= 0;
+      result = 0;
+      integral = 0;
     end else begin
-      err <= (setpoint-state);
+      err = (setpoint-state);
       if((integral<IntegralLimit) && (integral>-IntegralLimit)) begin
-        integral <= integral+err;
+        integral = integral+err;
       end
-      result <= Kp*err + Ki*integral;//;// + Kd * (err_prev-err)
+      result = Kp*err + Ki*integral;//;// + Kd * (err_prev-err)
       // if((result>deadband) || (result < -deadband))begin
       if(result>PWMLimit)begin
-        result <= PWMLimit;
+        result = PWMLimit;
       end else if(result<-PWMLimit)begin
-        result <= -PWMLimit;
+        result = -PWMLimit;
       end
       // end else begin
       //   result <= 0;
