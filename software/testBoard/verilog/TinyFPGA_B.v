@@ -44,7 +44,7 @@ assign USBPU = 0;
     always @(posedge CLK) begin
         blink_counter <= blink_counter + 1;
     end
-    
+
     // light up the LED according to the pattern
     assign LED = blink_pattern[blink_counter[25:21]];
     //assign INHA = blink_counter[8];
@@ -53,17 +53,39 @@ assign USBPU = 0;
     //assign INLB = blink_counter[11];
     //assign INHC = blink_counter[12];
     //assign INLC = blink_counter[13];
-    
-    wire pwm_out;
-    assign INHA = pwm_out;
-    assign INLA = 1;
-    
-    pwm #(16_000_000,20_000,4_000_000,23,1) PWM(
-       .clk(CLK),
-       .reset_n(1'b1),
-       .ena(1'b1),
-       .duty(23'd1000000),
-       .pwm_out(pwm_out)
-     );
+
+    //wire pwm_out;
+    //assign SDA = pwm_out;
+    //assign INLA = 1;
+
+    //integer sweep_counter;
+   // reg [23:0] duty;
+
+   // always @(posedge CLK) begin: SWEEP
+     //   sweep_counter <= sweep_counter + 1;
+       // if((sweep_counter%16_000)==0)begin
+       //  duty <= duty + 1;
+       // end
+       // if(duty>1000)begin
+       //     duty <= 0;
+       // end
+//    end
+
+  //  pwm PWM(
+    //   .clk(CLK),
+      // .reset(1'b0),
+      // .duty(duty),
+      // .pwm_out(pwm_out)
+    // );
+
+    wire [14:0] current;
+
+    TLI4970 tli(
+        .clk(CLK),
+        .spi_miso(CS_MISO),
+        .spi_cs(CS),
+        .spi_clk(CS_CLK),
+        .current(current)
+      )/* synthesis syn_noprune = 1 */;
 
 endmodule

@@ -37,7 +37,7 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
 );
 
 wire [7:0] ID;
-assign ID = 9;
+assign ID = 135;
 
 wire [23:0] neopxl_color;
 
@@ -76,7 +76,7 @@ neopixel nx(
  );
 
  wire pwm_out;
- reg dir, enable, reset_n;
+ reg dir, enable, reset;
  reg h1, h2, h3;
  assign INLA = h1;
  assign INHB = h2;
@@ -87,10 +87,9 @@ neopixel nx(
 
  reg [22:0] pwm_setpoint;
  wire signed [23:0] duty;
- pwm #(32_000_000,20_000,8_000_000,23,1) PWM(
+ pwm PWM(
    .clk(clk32MHz),
-   .reset_n(reset_n),
-   .ena(enable),
+   .reset(reset),
    .duty(pwm_setpoint),
    .pwm_out(pwm_out)
  );
@@ -100,7 +99,7 @@ neopixel nx(
     h2 <= hall2;
     h3 <= hall3;
     enable <= 1;
-    reset_n <= 1;
+    reset <= 0;
     if(duty>=0)begin
       pwm_setpoint <= duty;
       dir <= 0;
@@ -166,7 +165,6 @@ neopixel nx(
     (control_mode==0)?encoder0_position:
     (control_mode==1)?encoder1_position:
     (control_mode==2)?displacement:
-    (control_mode==3)?current:
     32'd0;
 
   motorControl control(
@@ -203,42 +201,42 @@ neopixel nx(
     displacement <= (encoder1_position-encoder0_position);
   end
 
-  wire di_req, wr_ack, do_valid;
-  reg wren;
-  // wire [15:0] Word, cs_mosi;
-  wire [15:0] data_out;
-  integer delay_counter;
-
-  always @(posedge clk32MHz) begin: TLI4970_READOUT_LOGIC
-		wren <= 0;
-		if(delay_counter==0)begin
-			if(CS)begin
-				if(data_out[15]==0)begin
-					current <= data_out[12:0];
-				end
-				delay_counter <= 32_000_000/500;
-				wren <= 1;
-			end
-		end else begin
-			delay_counter <= delay_counter-1;
-		end
-  end
-
-  // SPI specs: 16bit, pol 0 phase 0, 1MHz
-  spi_master #(16, 1'b0, 1'b1, 2, 16) spi(
-  	.sclk_i(clk32MHz),
-  	.pclk_i(clk32MHz),
-  	.rst_i(1'b0),
-  	.spi_miso_i(CS_MISO),
-  	// .di_i(Word),
-  	.wren_i(wren),
-  	.spi_ssel_o(CS),
-  	.spi_sck_o(CS_CLK),
-  	// .spi_mosi_o(cs_mosi),
-  	.di_req_o(di_req),
-  	.wr_ack_o(wr_ack),
-  	.do_valid_o(do_valid),
-  	.do_o(data_out)
-  );
+  // wire di_req, wr_ack, do_valid;
+  // reg wren;
+  // // wire [15:0] Word, cs_mosi;
+  // wire [15:0] data_out;
+  // integer delay_counter;
+  //
+  // always @(posedge clk32MHz) begin: TLI4970_READOUT_LOGIC
+	// 	wren <= 0;
+	// 	if(delay_counter>64_000)begin
+	// 		// if(CS)begin
+	// 		// 	if(data_out[15]==0)begin
+	// 		// 		current <= data_out[12:0];
+	// 		// 	end
+	// 			delay_counter <= 0;
+	// 			wren <= 1;
+	// 		// end
+	// 	end else begin
+	// 		delay_counter <= delay_counter+1;
+	// 	end
+  // end
+  //
+  // // SPI specs: 16bit, pol 0 phase 0, 1MHz
+  // spi_master #(16, 1'b0, 1'b1, 2, 16) spi(
+  // 	.sclk_i(clk32MHz),
+  // 	.pclk_i(clk32MHz),
+  // 	.rst_i(reset),
+  // 	.spi_miso_i(CS_MISO),
+  // 	// .di_i(Word),
+  // 	.wren_i(wren),
+  // 	.spi_ssel_o(CS),
+  // 	.spi_sck_o(CS_CLK),
+  // 	// .spi_mosi_o(cs_mosi),
+  // 	.di_req_o(di_req),
+  // 	.wr_ack_o(wr_ack),
+  // 	.do_valid_o(do_valid),
+  // 	.do_o(data_out)
+  // );
 
 endmodule

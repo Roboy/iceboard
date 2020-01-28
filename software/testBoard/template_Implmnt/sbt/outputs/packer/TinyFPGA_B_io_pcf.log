@@ -10,6 +10,7 @@ OUTPUT INHC 	 location (28, 33, 1) 	 A8 	 SB_LVCMOS
 OUTPUT INHB 	 location (27, 33, 0) 	 A7 	 SB_LVCMOS
 OUTPUT INHA 	 location (23, 33, 0) 	 A6 	 SB_LVCMOS
 OUTPUT DE 	 location (3, 0, 0) 	 H1 	 SB_LVCMOS
+INPUT  CS_MISO 	 location (33, 6, 0) 	 D9 	 SB_LVCMOS
 OUTPUT CS_CLK 	 location (33, 2, 1) 	 G9 	 SB_LVCMOS
 OUTPUT CS 	 location (33, 17, 0) 	 D8 	 SB_LVCMOS
 INPUT  CLK 	 location (0, 30, 0) 	 B2 	 SB_LVCMOS

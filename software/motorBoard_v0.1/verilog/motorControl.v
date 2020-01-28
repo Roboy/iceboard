@@ -27,7 +27,7 @@ module motorControl(
       result <= 0;
       integral <= 0;
     end else begin
-      err <= (state-setpoint);
+      err <= (setpoint-state);
       if((integral<IntegralLimit) && (integral>-IntegralLimit)) begin
         integral <= integral+err;
       end

@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:02:28
 
-* File Generated:     Jan 23 2020 15:51:30
+* File Generated:     Jan 28 2020 14:30:42
 
 * Purpose:            Detailed IO and package pin info
 
@@ -24,7 +24,7 @@ A2, PIO, not used, , , , , , topBank
 A3, PIO, USBPU, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A4, PIO, not used, , , , , , topBank
 A5, VCCIO_0, not used, , , , , , topBank
-A6, PIO, INHA, Output, , SB_LVCMOS, No Pull Up, Output Registered, topBank
+A6, PIO, INHA, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A7, PIO, INHB, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A8, PIO, INHC, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A9, PIO, not used, , , , , , rightBank
@@ -54,7 +54,7 @@ D5, PIO, not used, , , , , , topBank
 D6, PIO, not used, , , , , , rightBank
 D7, PIO, not used, , , , , , rightBank
 D8, PIO_GBIN, CS, Output, , SB_LVCMOS, No Pull Up, Simple Output, rightBank
-D9, PIO, not used, , , , , , rightBank
+D9, PIO, CS_MISO,  , , SB_LVCMOS, No Pull Up, , rightBank
 E1, PIO, not used, , , , , , leftBank
 E2, PIO, NEOPXL, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
 E3, PIO_GBIN, not used, , , , , , leftBank
@@ -100,4 +100,4 @@ J6, AGND_BOT, not used, , , , , , UnknownBank
 J7, AVDD_BOT, not used, , , , , , UnknownBank
 J8, PIO, not used, , , , , , rightBank
 J9, PIO, not used, , , , , , rightBank
-Total Number of Used Pins, 15
+Total Number of Used Pins, 16

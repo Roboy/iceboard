@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2020 1 23 15 5 44 124)
+      (timeStamp 2020 1 28 14 11 23 123)
       (author "Lattice Semiconductor Corp.")
       (program "EDIF Writer"(version "lse"))
     )
@@ -613,9 +613,13 @@
               (portRef D_OUT_0 (instanceRef NEOPXL_pad))
               (portRef D_OUT_0 (instanceRef DE_pad))
               (portRef D_OUT_0 (instanceRef TX_pad))
-              (portRef D_OUT_0 (instanceRef CS_CLK_pad))
-              (portRef D_OUT_0 (instanceRef CS_pad))
               (portRef D_OUT_0 (instanceRef SCL_pad))
+              (portRef D_OUT_0 (instanceRef INLC_pad))
+              (portRef D_OUT_0 (instanceRef INHC_pad))
+              (portRef D_OUT_0 (instanceRef INLB_pad))
+              (portRef D_OUT_0 (instanceRef INHB_pad))
+              (portRef D_OUT_0 (instanceRef INLA_pad))
+              (portRef D_OUT_0 (instanceRef INHA_pad))
               (portRef I0 (instanceRef blink_counter_11_add_4_7_lut))
             )
           )
@@ -725,6 +729,22 @@
               (portRef RX)
             )
           )
+          (net CS_CLK_c_11
+            (joined
+              (portRef I1 (instanceRef blink_counter_11_add_4_13))
+              (portRef Q (instanceRef blink_counter_11__i11))
+              (portRef D_OUT_0 (instanceRef CS_CLK_pad))
+              (portRef I2 (instanceRef blink_counter_11_add_4_13_lut))
+            )
+          )
+          (net CS_c_13
+            (joined
+              (portRef I1 (instanceRef blink_counter_11_add_4_15))
+              (portRef Q (instanceRef blink_counter_11__i13))
+              (portRef D_OUT_0 (instanceRef CS_pad))
+              (portRef I2 (instanceRef blink_counter_11_add_4_15_lut))
+            )
+          )
           (net CS_MISO
             (joined
               (portRef CS_MISO)
@@ -733,54 +753,6 @@
           (net SDA
             (joined
               (portRef SDA)
-            )
-          )
-          (net INLC_c_13
-            (joined
-              (portRef I1 (instanceRef blink_counter_11_add_4_15))
-              (portRef Q (instanceRef blink_counter_11__i13))
-              (portRef D_OUT_0 (instanceRef INLC_pad))
-              (portRef I2 (instanceRef blink_counter_11_add_4_15_lut))
-            )
-          )
-          (net INHC_c_12
-            (joined
-              (portRef I1 (instanceRef blink_counter_11_add_4_14))
-              (portRef Q (instanceRef blink_counter_11__i12))
-              (portRef D_OUT_0 (instanceRef INHC_pad))
-              (portRef I2 (instanceRef blink_counter_11_add_4_14_lut))
-            )
-          )
-          (net INLB_c_11
-            (joined
-              (portRef I1 (instanceRef blink_counter_11_add_4_13))
-              (portRef Q (instanceRef blink_counter_11__i11))
-              (portRef D_OUT_0 (instanceRef INLB_pad))
-              (portRef I2 (instanceRef blink_counter_11_add_4_13_lut))
-            )
-          )
-          (net INHB_c_10
-            (joined
-              (portRef I1 (instanceRef blink_counter_11_add_4_12))
-              (portRef Q (instanceRef blink_counter_11__i10))
-              (portRef D_OUT_0 (instanceRef INHB_pad))
-              (portRef I2 (instanceRef blink_counter_11_add_4_12_lut))
-            )
-          )
-          (net INLA_c_9
-            (joined
-              (portRef I1 (instanceRef blink_counter_11_add_4_11))
-              (portRef Q (instanceRef blink_counter_11__i9))
-              (portRef D_OUT_0 (instanceRef INLA_pad))
-              (portRef I2 (instanceRef blink_counter_11_add_4_11_lut))
-            )
-          )
-          (net INHA_c_8
-            (joined
-              (portRef I1 (instanceRef blink_counter_11_add_4_10))
-              (portRef Q (instanceRef blink_counter_11__i8))
-              (portRef D_OUT_0 (instanceRef INHA_pad))
-              (portRef I2 (instanceRef blink_counter_11_add_4_10_lut))
             )
           )
           (net blink_counter_25
@@ -880,6 +852,34 @@
               (portRef Q (instanceRef blink_counter_11__i7))
               (portRef I1 (instanceRef blink_counter_11_add_4_9))
               (portRef I2 (instanceRef blink_counter_11_add_4_9_lut))
+            )
+          )
+          (net n18
+            (joined
+              (portRef Q (instanceRef blink_counter_11__i8))
+              (portRef I1 (instanceRef blink_counter_11_add_4_10))
+              (portRef I2 (instanceRef blink_counter_11_add_4_10_lut))
+            )
+          )
+          (net n17
+            (joined
+              (portRef Q (instanceRef blink_counter_11__i9))
+              (portRef I1 (instanceRef blink_counter_11_add_4_11))
+              (portRef I2 (instanceRef blink_counter_11_add_4_11_lut))
+            )
+          )
+          (net n16
+            (joined
+              (portRef Q (instanceRef blink_counter_11__i10))
+              (portRef I1 (instanceRef blink_counter_11_add_4_12))
+              (portRef I2 (instanceRef blink_counter_11_add_4_12_lut))
+            )
+          )
+          (net n14
+            (joined
+              (portRef Q (instanceRef blink_counter_11__i12))
+              (portRef I1 (instanceRef blink_counter_11_add_4_14))
+              (portRef I2 (instanceRef blink_counter_11_add_4_14_lut))
             )
           )
           (net n12
@@ -1093,186 +1093,186 @@
               (portRef D (instanceRef blink_counter_11__i0))
             )
           )
-          (net n187
+          (net n191
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_16))
               (portRef CI (instanceRef blink_counter_11_add_4_17))
               (portRef I3 (instanceRef blink_counter_11_add_4_17_lut))
             )
           )
-          (net n188
+          (net n192
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_17))
               (portRef CI (instanceRef blink_counter_11_add_4_18))
               (portRef I3 (instanceRef blink_counter_11_add_4_18_lut))
             )
           )
-          (net n189
+          (net n193
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_18))
               (portRef CI (instanceRef blink_counter_11_add_4_19))
               (portRef I3 (instanceRef blink_counter_11_add_4_19_lut))
             )
           )
-          (net n190
+          (net n194
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_19))
               (portRef CI (instanceRef blink_counter_11_add_4_20))
               (portRef I3 (instanceRef blink_counter_11_add_4_20_lut))
             )
           )
-          (net n191
+          (net n195
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_20))
               (portRef CI (instanceRef blink_counter_11_add_4_21))
               (portRef I3 (instanceRef blink_counter_11_add_4_21_lut))
             )
           )
-          (net n192
+          (net n196
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_21))
               (portRef CI (instanceRef blink_counter_11_add_4_22))
               (portRef I3 (instanceRef blink_counter_11_add_4_22_lut))
             )
           )
-          (net n193
+          (net n197
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_22))
               (portRef CI (instanceRef blink_counter_11_add_4_23))
               (portRef I3 (instanceRef blink_counter_11_add_4_23_lut))
             )
           )
-          (net n194
+          (net n198
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_23))
               (portRef CI (instanceRef blink_counter_11_add_4_24))
               (portRef I3 (instanceRef blink_counter_11_add_4_24_lut))
             )
           )
-          (net n195
+          (net n199
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_24))
               (portRef CI (instanceRef blink_counter_11_add_4_25))
               (portRef I3 (instanceRef blink_counter_11_add_4_25_lut))
             )
           )
-          (net n196
+          (net n200
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_25))
               (portRef CI (instanceRef blink_counter_11_add_4_26))
               (portRef I3 (instanceRef blink_counter_11_add_4_26_lut))
             )
           )
-          (net n197
+          (net n201
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_26))
               (portRef I3 (instanceRef blink_counter_11_add_4_27_lut))
             )
           )
-          (net n198
+          (net n202
             (joined
               (portRef O (instanceRef i63_4_lut))
               (portRef I0 (instanceRef i65_3_lut))
             )
           )
-          (net n199
+          (net n203
             (joined
               (portRef O (instanceRef i64_4_lut))
               (portRef I1 (instanceRef i65_3_lut))
             )
           )
-          (net n184
+          (net n188
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_13))
               (portRef CI (instanceRef blink_counter_11_add_4_14))
               (portRef I3 (instanceRef blink_counter_11_add_4_14_lut))
             )
           )
-          (net n183
+          (net n187
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_12))
               (portRef CI (instanceRef blink_counter_11_add_4_13))
               (portRef I3 (instanceRef blink_counter_11_add_4_13_lut))
             )
           )
-          (net n174
+          (net n178
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_3))
               (portRef CI (instanceRef blink_counter_11_add_4_4))
               (portRef I3 (instanceRef blink_counter_11_add_4_4_lut))
             )
           )
-          (net n182
+          (net n186
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_11))
               (portRef CI (instanceRef blink_counter_11_add_4_12))
               (portRef I3 (instanceRef blink_counter_11_add_4_12_lut))
             )
           )
-          (net n181
+          (net n185
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_10))
               (portRef CI (instanceRef blink_counter_11_add_4_11))
               (portRef I3 (instanceRef blink_counter_11_add_4_11_lut))
             )
           )
-          (net n180
+          (net n184
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_9))
               (portRef CI (instanceRef blink_counter_11_add_4_10))
               (portRef I3 (instanceRef blink_counter_11_add_4_10_lut))
             )
           )
-          (net n185
+          (net n189
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_14))
               (portRef CI (instanceRef blink_counter_11_add_4_15))
               (portRef I3 (instanceRef blink_counter_11_add_4_15_lut))
             )
           )
-          (net n179
+          (net n183
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_8))
               (portRef CI (instanceRef blink_counter_11_add_4_9))
               (portRef I3 (instanceRef blink_counter_11_add_4_9_lut))
             )
           )
-          (net n178
+          (net n182
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_7))
               (portRef CI (instanceRef blink_counter_11_add_4_8))
               (portRef I3 (instanceRef blink_counter_11_add_4_8_lut))
             )
           )
-          (net n186
+          (net n190
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_15))
               (portRef CI (instanceRef blink_counter_11_add_4_16))
               (portRef I3 (instanceRef blink_counter_11_add_4_16_lut))
             )
           )
-          (net n177
+          (net n181
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_6))
               (portRef CI (instanceRef blink_counter_11_add_4_7))
               (portRef I3 (instanceRef blink_counter_11_add_4_7_lut))
             )
           )
-          (net n176
+          (net n180
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_5))
               (portRef CI (instanceRef blink_counter_11_add_4_6))
               (portRef I3 (instanceRef blink_counter_11_add_4_6_lut))
             )
           )
-          (net n175
+          (net n179
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_4))
               (portRef CI (instanceRef blink_counter_11_add_4_5))
               (portRef I3 (instanceRef blink_counter_11_add_4_5_lut))
             )
           )
-          (net n173
+          (net n177
             (joined
               (portRef CO (instanceRef blink_counter_11_add_4_2))
               (portRef CI (instanceRef blink_counter_11_add_4_3))

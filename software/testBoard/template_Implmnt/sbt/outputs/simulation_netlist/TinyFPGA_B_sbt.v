@@ -6,7 +6,7 @@
 
 // Build Date:         Sep 12 2017 08:25:46
 
-// File Generated:     Jan 23 2020 15:51:44
+// File Generated:     Jan 28 2020 14:30:54
 
 // Purpose:            Post-Route Verilog/VHDL netlist for timing simulation
 
@@ -71,577 +71,693 @@ module TinyFPGA_B (
     output CS;
     input CLK;
 
-    wire N__2418;
-    wire N__2417;
-    wire N__2416;
-    wire N__2409;
+    wire N__2890;
+    wire N__2889;
+    wire N__2888;
+    wire N__2881;
+    wire N__2880;
+    wire N__2879;
+    wire N__2872;
+    wire N__2871;
+    wire N__2870;
+    wire N__2863;
+    wire N__2862;
+    wire N__2861;
+    wire N__2854;
+    wire N__2853;
+    wire N__2852;
+    wire N__2845;
+    wire N__2844;
+    wire N__2843;
+    wire N__2836;
+    wire N__2835;
+    wire N__2834;
+    wire N__2827;
+    wire N__2826;
+    wire N__2825;
+    wire N__2818;
+    wire N__2817;
+    wire N__2816;
+    wire N__2809;
+    wire N__2808;
+    wire N__2807;
+    wire N__2800;
+    wire N__2799;
+    wire N__2798;
+    wire N__2791;
+    wire N__2790;
+    wire N__2789;
+    wire N__2782;
+    wire N__2781;
+    wire N__2780;
+    wire N__2773;
+    wire N__2772;
+    wire N__2771;
+    wire N__2764;
+    wire N__2763;
+    wire N__2762;
+    wire N__2755;
+    wire N__2754;
+    wire N__2753;
+    wire N__2736;
+    wire N__2735;
+    wire N__2732;
+    wire N__2729;
+    wire N__2724;
+    wire N__2721;
+    wire N__2718;
+    wire N__2717;
+    wire N__2714;
+    wire N__2711;
+    wire N__2708;
+    wire N__2703;
+    wire N__2700;
+    wire N__2699;
+    wire N__2696;
+    wire N__2693;
+    wire N__2688;
+    wire N__2685;
+    wire N__2682;
+    wire N__2679;
+    wire N__2678;
+    wire N__2675;
+    wire N__2672;
+    wire N__2669;
+    wire N__2664;
+    wire N__2663;
+    wire N__2660;
+    wire N__2657;
+    wire N__2656;
+    wire N__2651;
+    wire N__2650;
+    wire N__2647;
+    wire N__2644;
+    wire N__2641;
+    wire N__2634;
+    wire N__2631;
+    wire N__2630;
+    wire N__2627;
+    wire N__2626;
+    wire N__2623;
+    wire N__2622;
+    wire N__2621;
+    wire N__2620;
+    wire N__2619;
+    wire N__2618;
+    wire N__2617;
+    wire N__2616;
+    wire N__2613;
+    wire N__2610;
+    wire N__2607;
+    wire N__2604;
+    wire N__2601;
+    wire N__2600;
+    wire N__2599;
+    wire N__2596;
+    wire N__2593;
+    wire N__2592;
+    wire N__2591;
+    wire N__2590;
+    wire N__2589;
+    wire N__2586;
+    wire N__2583;
+    wire N__2580;
+    wire N__2579;
+    wire N__2576;
+    wire N__2569;
+    wire N__2564;
+    wire N__2553;
+    wire N__2540;
+    wire N__2529;
+    wire N__2526;
+    wire N__2523;
+    wire N__2520;
+    wire N__2517;
+    wire N__2516;
+    wire N__2515;
+    wire N__2512;
+    wire N__2509;
+    wire N__2506;
+    wire N__2499;
+    wire N__2496;
+    wire N__2493;
+    wire N__2492;
+    wire N__2491;
+    wire N__2490;
+    wire N__2489;
+    wire N__2488;
+    wire N__2487;
+    wire N__2486;
+    wire N__2485;
+    wire N__2484;
+    wire N__2483;
+    wire N__2482;
+    wire N__2481;
+    wire N__2454;
+    wire N__2451;
+    wire N__2448;
+    wire N__2445;
+    wire N__2444;
+    wire N__2443;
+    wire N__2442;
+    wire N__2439;
+    wire N__2432;
+    wire N__2429;
+    wire N__2426;
+    wire N__2423;
+    wire N__2420;
+    wire N__2415;
+    wire N__2414;
+    wire N__2411;
     wire N__2408;
-    wire N__2407;
+    wire N__2403;
     wire N__2400;
     wire N__2399;
-    wire N__2398;
-    wire N__2391;
-    wire N__2390;
-    wire N__2389;
-    wire N__2382;
+    wire N__2396;
+    wire N__2393;
+    wire N__2388;
+    wire N__2385;
+    wire N__2384;
     wire N__2381;
-    wire N__2380;
+    wire N__2378;
     wire N__2373;
-    wire N__2372;
-    wire N__2371;
-    wire N__2364;
+    wire N__2370;
+    wire N__2369;
+    wire N__2366;
     wire N__2363;
-    wire N__2362;
+    wire N__2358;
     wire N__2355;
     wire N__2354;
-    wire N__2353;
-    wire N__2346;
-    wire N__2345;
-    wire N__2344;
-    wire N__2337;
+    wire N__2351;
+    wire N__2348;
+    wire N__2343;
+    wire N__2340;
+    wire N__2339;
     wire N__2336;
-    wire N__2335;
+    wire N__2333;
     wire N__2328;
-    wire N__2327;
-    wire N__2326;
-    wire N__2319;
+    wire N__2325;
+    wire N__2324;
+    wire N__2321;
     wire N__2318;
-    wire N__2317;
+    wire N__2315;
     wire N__2310;
-    wire N__2309;
-    wire N__2308;
-    wire N__2301;
+    wire N__2307;
+    wire N__2306;
+    wire N__2303;
     wire N__2300;
-    wire N__2299;
+    wire N__2297;
     wire N__2292;
-    wire N__2291;
-    wire N__2290;
-    wire N__2273;
-    wire N__2272;
+    wire N__2289;
+    wire N__2288;
+    wire N__2285;
+    wire N__2282;
+    wire N__2279;
+    wire N__2274;
     wire N__2271;
     wire N__2270;
-    wire N__2269;
+    wire N__2267;
     wire N__2264;
-    wire N__2261;
+    wire N__2259;
     wire N__2256;
+    wire N__2255;
+    wire N__2252;
     wire N__2249;
-    wire N__2246;
-    wire N__2245;
     wire N__2244;
-    wire N__2243;
+    wire N__2241;
     wire N__2240;
     wire N__2237;
     wire N__2234;
-    wire N__2231;
-    wire N__2228;
+    wire N__2229;
+    wire N__2226;
     wire N__2223;
+    wire N__2222;
+    wire N__2219;
     wire N__2216;
-    wire N__2213;
-    wire N__2212;
-    wire N__2209;
-    wire N__2206;
-    wire N__2205;
-    wire N__2200;
-    wire N__2197;
+    wire N__2211;
+    wire N__2208;
+    wire N__2207;
+    wire N__2204;
+    wire N__2201;
+    wire N__2196;
+    wire N__2193;
     wire N__2192;
     wire N__2189;
     wire N__2186;
     wire N__2183;
-    wire N__2180;
-    wire N__2177;
-    wire N__2176;
-    wire N__2173;
-    wire N__2170;
-    wire N__2167;
-    wire N__2164;
+    wire N__2178;
+    wire N__2175;
+    wire N__2174;
+    wire N__2171;
+    wire N__2168;
     wire N__2163;
-    wire N__2162;
-    wire N__2161;
     wire N__2160;
     wire N__2159;
     wire N__2156;
     wire N__2153;
-    wire N__2150;
+    wire N__2148;
     wire N__2145;
-    wire N__2140;
+    wire N__2144;
+    wire N__2141;
+    wire N__2138;
+    wire N__2133;
+    wire N__2130;
     wire N__2129;
-    wire N__2128;
-    wire N__2127;
     wire N__2126;
-    wire N__2125;
-    wire N__2124;
-    wire N__2119;
-    wire N__2112;
-    wire N__2109;
-    wire N__2102;
-    wire N__2101;
+    wire N__2123;
+    wire N__2118;
+    wire N__2115;
+    wire N__2114;
+    wire N__2111;
+    wire N__2108;
+    wire N__2103;
     wire N__2100;
     wire N__2099;
-    wire N__2098;
-    wire N__2097;
     wire N__2096;
     wire N__2093;
-    wire N__2090;
-    wire N__2087;
+    wire N__2088;
+    wire N__2085;
     wire N__2084;
     wire N__2081;
-    wire N__2076;
-    wire N__2071;
+    wire N__2078;
+    wire N__2075;
+    wire N__2070;
+    wire N__2067;
+    wire N__2066;
+    wire N__2063;
     wire N__2060;
-    wire N__2059;
-    wire N__2058;
-    wire N__2051;
+    wire N__2057;
+    wire N__2052;
+    wire N__2049;
     wire N__2048;
-    wire N__2047;
-    wire N__2046;
-    wire N__2043;
-    wire N__2038;
-    wire N__2033;
-    wire N__2032;
+    wire N__2045;
+    wire N__2042;
+    wire N__2037;
+    wire N__2034;
     wire N__2031;
     wire N__2028;
-    wire N__2027;
-    wire N__2026;
-    wire N__2023;
-    wire N__2020;
+    wire N__2025;
+    wire N__2022;
+    wire N__2019;
+    wire N__2016;
     wire N__2013;
-    wire N__2006;
-    wire N__2003;
-    wire N__2002;
-    wire N__1999;
+    wire N__2010;
+    wire N__2007;
+    wire N__2004;
+    wire N__2001;
     wire N__1998;
-    wire N__1997;
-    wire N__1996;
-    wire N__1993;
-    wire N__1990;
-    wire N__1983;
+    wire N__1995;
+    wire N__1992;
+    wire N__1991;
+    wire N__1988;
+    wire N__1985;
+    wire N__1980;
+    wire N__1977;
     wire N__1976;
-    wire N__1975;
-    wire N__1974;
     wire N__1973;
-    wire N__1972;
-    wire N__1971;
     wire N__1970;
-    wire N__1969;
-    wire N__1968;
-    wire N__1967;
-    wire N__1966;
     wire N__1965;
-    wire N__1940;
-    wire N__1937;
-    wire N__1934;
-    wire N__1933;
-    wire N__1930;
-    wire N__1927;
-    wire N__1922;
-    wire N__1919;
+    wire N__1962;
+    wire N__1961;
+    wire N__1958;
+    wire N__1955;
+    wire N__1950;
+    wire N__1947;
+    wire N__1944;
+    wire N__1941;
+    wire N__1938;
+    wire N__1935;
+    wire N__1932;
+    wire N__1929;
+    wire N__1926;
+    wire N__1923;
+    wire N__1920;
+    wire N__1917;
     wire N__1916;
-    wire N__1913;
-    wire N__1910;
-    wire N__1907;
-    wire N__1904;
-    wire N__1901;
-    wire N__1900;
-    wire N__1897;
+    wire N__1911;
+    wire N__1908;
+    wire N__1905;
+    wire N__1902;
+    wire N__1899;
     wire N__1896;
-    wire N__1895;
-    wire N__1892;
-    wire N__1889;
-    wire N__1886;
-    wire N__1883;
-    wire N__1880;
-    wire N__1877;
-    wire N__1874;
-    wire N__1865;
-    wire N__1862;
-    wire N__1861;
+    wire N__1893;
+    wire N__1890;
+    wire N__1887;
+    wire N__1884;
+    wire N__1881;
+    wire N__1878;
+    wire N__1875;
+    wire N__1872;
+    wire N__1869;
+    wire N__1866;
+    wire N__1863;
     wire N__1860;
     wire N__1857;
-    wire N__1856;
-    wire N__1853;
-    wire N__1850;
+    wire N__1854;
+    wire N__1851;
+    wire N__1848;
     wire N__1847;
-    wire N__1844;
-    wire N__1835;
-    wire N__1832;
-    wire N__1829;
-    wire N__1826;
+    wire N__1842;
+    wire N__1839;
+    wire N__1836;
+    wire N__1833;
+    wire N__1830;
+    wire N__1827;
+    wire N__1824;
     wire N__1823;
-    wire N__1820;
+    wire N__1822;
     wire N__1817;
     wire N__1814;
-    wire N__1811;
+    wire N__1809;
     wire N__1808;
     wire N__1805;
-    wire N__1802;
+    wire N__1800;
     wire N__1799;
     wire N__1796;
     wire N__1793;
-    wire N__1790;
-    wire N__1787;
+    wire N__1788;
+    wire N__1785;
     wire N__1784;
-    wire N__1781;
-    wire N__1778;
-    wire N__1775;
-    wire N__1774;
+    wire N__1783;
+    wire N__1776;
+    wire N__1773;
+    wire N__1772;
     wire N__1771;
-    wire N__1770;
-    wire N__1769;
     wire N__1766;
     wire N__1763;
     wire N__1758;
-    wire N__1751;
-    wire N__1748;
-    wire N__1745;
-    wire N__1742;
-    wire N__1739;
-    wire N__1738;
+    wire N__1755;
+    wire N__1752;
+    wire N__1749;
+    wire N__1746;
+    wire N__1743;
+    wire N__1740;
     wire N__1737;
-    wire N__1736;
-    wire N__1735;
+    wire N__1734;
+    wire N__1731;
     wire N__1728;
     wire N__1725;
     wire N__1722;
-    wire N__1715;
-    wire N__1714;
+    wire N__1719;
+    wire N__1716;
     wire N__1713;
-    wire N__1712;
-    wire N__1709;
-    wire N__1708;
-    wire N__1705;
+    wire N__1710;
+    wire N__1707;
     wire N__1704;
     wire N__1701;
     wire N__1698;
-    wire N__1697;
-    wire N__1690;
+    wire N__1695;
+    wire N__1692;
+    wire N__1689;
+    wire N__1686;
     wire N__1683;
     wire N__1680;
-    wire N__1673;
-    wire N__1672;
+    wire N__1677;
+    wire N__1674;
     wire N__1671;
-    wire N__1670;
-    wire N__1667;
-    wire N__1664;
-    wire N__1661;
-    wire N__1658;
-    wire N__1649;
-    wire N__1648;
-    wire N__1645;
-    wire N__1642;
-    wire N__1637;
-    wire N__1636;
+    wire N__1668;
+    wire N__1665;
+    wire N__1662;
+    wire N__1659;
+    wire N__1656;
+    wire N__1653;
+    wire N__1650;
+    wire N__1647;
+    wire N__1644;
+    wire N__1641;
+    wire N__1638;
     wire N__1635;
     wire N__1632;
     wire N__1629;
     wire N__1626;
-    wire N__1619;
-    wire N__1616;
-    wire N__1613;
-    wire N__1612;
+    wire N__1623;
+    wire N__1620;
+    wire N__1617;
+    wire N__1614;
     wire N__1611;
-    wire N__1610;
-    wire N__1607;
-    wire N__1600;
+    wire N__1608;
+    wire N__1605;
+    wire N__1602;
+    wire N__1599;
+    wire N__1596;
     wire N__1595;
-    wire N__1592;
-    wire N__1591;
-    wire N__1590;
-    wire N__1589;
-    wire N__1586;
+    wire N__1594;
+    wire N__1587;
+    wire N__1584;
     wire N__1583;
-    wire N__1578;
-    wire N__1571;
+    wire N__1582;
+    wire N__1581;
+    wire N__1572;
+    wire N__1569;
     wire N__1568;
     wire N__1565;
-    wire N__1562;
-    wire N__1559;
-    wire N__1558;
+    wire N__1560;
     wire N__1557;
     wire N__1556;
+    wire N__1555;
+    wire N__1554;
     wire N__1553;
-    wire N__1550;
-    wire N__1547;
-    wire N__1544;
-    wire N__1541;
-    wire N__1532;
-    wire N__1531;
-    wire N__1528;
+    wire N__1542;
+    wire N__1539;
+    wire N__1536;
+    wire N__1533;
+    wire N__1530;
     wire N__1527;
-    wire N__1526;
-    wire N__1523;
-    wire N__1520;
-    wire N__1517;
-    wire N__1514;
+    wire N__1524;
+    wire N__1521;
+    wire N__1518;
+    wire N__1515;
+    wire N__1512;
     wire N__1509;
-    wire N__1502;
-    wire N__1499;
-    wire N__1496;
-    wire N__1493;
-    wire N__1490;
-    wire N__1487;
+    wire N__1506;
+    wire N__1503;
+    wire N__1500;
+    wire N__1497;
+    wire N__1494;
+    wire N__1491;
+    wire N__1488;
+    wire N__1485;
     wire N__1484;
-    wire N__1481;
-    wire N__1478;
-    wire N__1475;
-    wire N__1472;
+    wire N__1479;
+    wire N__1476;
+    wire N__1473;
+    wire N__1470;
     wire N__1469;
     wire N__1466;
     wire N__1463;
-    wire N__1460;
-    wire N__1457;
-    wire N__1454;
-    wire N__1451;
-    wire N__1448;
-    wire N__1445;
-    wire N__1442;
-    wire N__1439;
-    wire N__1438;
-    wire N__1437;
-    wire N__1432;
-    wire N__1429;
-    wire N__1424;
-    wire N__1421;
-    wire N__1420;
-    wire N__1419;
-    wire N__1414;
-    wire N__1411;
-    wire N__1406;
-    wire N__1403;
-    wire N__1402;
-    wire N__1399;
-    wire N__1396;
-    wire N__1395;
-    wire N__1390;
-    wire N__1387;
-    wire N__1382;
-    wire N__1379;
-    wire N__1378;
-    wire N__1377;
-    wire N__1372;
-    wire N__1369;
-    wire N__1364;
-    wire N__1361;
-    wire N__1358;
-    wire N__1357;
-    wire N__1354;
-    wire N__1351;
-    wire N__1346;
-    wire N__1343;
-    wire N__1340;
-    wire N__1337;
-    wire N__1334;
-    wire N__1331;
-    wire N__1328;
-    wire N__1325;
-    wire N__1322;
-    wire N__1319;
-    wire N__1316;
-    wire N__1313;
-    wire N__1310;
-    wire N__1307;
-    wire N__1304;
-    wire N__1301;
-    wire N__1298;
-    wire N__1295;
-    wire N__1292;
-    wire N__1289;
-    wire N__1286;
-    wire N__1283;
-    wire N__1280;
-    wire N__1277;
-    wire N__1274;
-    wire N__1271;
-    wire N__1268;
-    wire N__1265;
-    wire N__1262;
-    wire N__1259;
-    wire N__1256;
-    wire N__1253;
-    wire N__1250;
-    wire N__1247;
-    wire N__1244;
-    wire N__1241;
-    wire N__1238;
-    wire N__1235;
-    wire N__1232;
-    wire N__1229;
-    wire N__1226;
-    wire N__1223;
-    wire N__1220;
-    wire N__1217;
-    wire N__1214;
-    wire N__1211;
-    wire N__1208;
-    wire N__1205;
-    wire N__1202;
-    wire N__1199;
-    wire N__1196;
-    wire N__1193;
-    wire N__1190;
-    wire N__1187;
-    wire N__1184;
-    wire N__1181;
-    wire N__1178;
-    wire N__1175;
-    wire N__1172;
-    wire N__1169;
-    wire N__1166;
-    wire N__1163;
-    wire N__1160;
-    wire N__1157;
-    wire N__1154;
-    wire N__1151;
-    wire N__1148;
-    wire N__1145;
-    wire N__1142;
-    wire N__1139;
-    wire N__1136;
-    wire N__1133;
-    wire N__1130;
-    wire N__1127;
-    wire N__1124;
-    wire N__1121;
+    wire N__1458;
+    wire N__1455;
+    wire N__1452;
+    wire N__1449;
+    wire N__1446;
+    wire N__1443;
     wire CLK_pad_gb_input;
     wire VCCG0;
     wire GNDG0;
-    wire n1411_cascade_;
-    wire LED_c;
-    wire n1410;
+    wire n370;
+    wire n368;
+    wire spi_2x_ce;
+    wire \tli.spi.spi_2x_ce_gen_proc_clk_cnt_2 ;
+    wire \tli.spi.spi_2x_ce_gen_proc_clk_cnt_1 ;
+    wire \tli.spi.spi_2x_ce_gen_proc_clk_cnt_3 ;
+    wire \tli.spi.spi_2x_ce_gen_proc_clk_cnt_0 ;
     wire n26;
-    wire bfn_13_27_0_;
+    wire bfn_5_21_0_;
     wire n25;
-    wire n1257;
+    wire n992;
     wire n24;
-    wire n1258;
+    wire n993;
     wire n23;
-    wire n1259;
+    wire n994;
     wire n22;
-    wire n1260;
+    wire n995;
     wire n21;
-    wire n1261;
+    wire n996;
     wire n20;
-    wire n1262;
+    wire n997;
     wire n19;
-    wire n1263;
-    wire n1264;
+    wire n998;
+    wire n999;
     wire n18;
-    wire bfn_13_28_0_;
+    wire bfn_5_22_0_;
     wire n17;
-    wire n1265;
+    wire n1000;
     wire n16;
-    wire n1266;
+    wire n1001;
     wire n15;
-    wire n1267;
+    wire n1002;
     wire n14;
-    wire n1268;
+    wire n1003;
     wire n13;
-    wire n1269;
+    wire n1004;
     wire n12;
-    wire n1270;
+    wire n1005;
     wire n11;
-    wire n1271;
-    wire n1272;
+    wire n1006;
+    wire n1007;
     wire n10;
-    wire bfn_13_29_0_;
+    wire bfn_5_23_0_;
     wire n9;
-    wire n1273;
+    wire n1008;
     wire n8;
-    wire n1274;
+    wire n1009;
     wire n7;
-    wire n1275;
+    wire n1010;
     wire n6;
-    wire n1276;
-    wire blink_counter_21;
-    wire n1277;
-    wire blink_counter_22;
-    wire n1278;
-    wire blink_counter_23;
-    wire n1279;
-    wire n1280;
-    wire blink_counter_24;
-    wire bfn_13_30_0_;
-    wire n1281;
+    wire n1011;
+    wire n1012;
+    wire n1013;
+    wire n1014;
+    wire n1015;
+    wire bfn_5_24_0_;
+    wire n1016;
     wire blink_counter_25;
-    wire bfn_13_31_0_;
-    wire \PWM.n1282 ;
-    wire \PWM.n1283 ;
-    wire \PWM.n1284 ;
-    wire \PWM.n1285 ;
-    wire \PWM.n1286 ;
-    wire \PWM.n1287 ;
-    wire \PWM.n1288 ;
-    wire \PWM.n1289 ;
-    wire bfn_13_32_0_;
-    wire \PWM.n1290 ;
-    wire \PWM.n1370_cascade_ ;
-    wire \PWM.n4_cascade_ ;
-    wire \PWM.n1400 ;
-    wire \PWM.n12_cascade_ ;
-    wire \PWM.n13_cascade_ ;
-    wire \PWM.count_0_7 ;
-    wire \PWM.n640 ;
-    wire \PWM.count_0_4 ;
-    wire \PWM.n640_cascade_ ;
-    wire \PWM.count_0_3 ;
-    wire \PWM.n1406 ;
-    wire \PWM.pwm_out_0__N_55_cascade_ ;
-    wire \PWM.count_0_2 ;
-    wire \PWM.count_0_0 ;
-    wire \PWM.n3_cascade_ ;
-    wire \PWM.n14 ;
-    wire \PWM.count_0_8 ;
-    wire \PWM.count_0_9 ;
-    wire \PWM.n16_cascade_ ;
-    wire \PWM.n12_adj_126 ;
-    wire \PWM.n19_cascade_ ;
-    wire \PWM.n993 ;
-    wire \PWM.n18 ;
-    wire \PWM.n993_cascade_ ;
-    wire \PWM.n1402 ;
-    wire \PWM.n657 ;
-    wire \PWM.count_0_1 ;
-    wire \PWM.n647 ;
-    wire \PWM.n1404 ;
-    wire half_duty_0_2;
-    wire half_duty_0_0;
-    wire half_duty_0_3;
-    wire \PWM.pwm_out_0_N_43_4 ;
-    wire half_duty_0_5;
-    wire \PWM.count_0_5 ;
-    wire \PWM.pwm_out_0_N_43_4_cascade_ ;
-    wire \PWM.count_0_6 ;
-    wire \PWM.n11 ;
-    wire \PWM.n694 ;
-    wire n684;
-    wire half_duty_0_1;
-    wire \PWM.pwm_out_0__N_55 ;
-    wire \PWM.n19 ;
-    wire \PWM.pause_counter_0_2 ;
-    wire \PWM.pause_counter_0_1 ;
-    wire \PWM.pause_counter_0_0 ;
-    wire CLK_c;
-    wire \PWM.n653 ;
-    wire \PWM.n193 ;
+    wire LED_c;
+    wire n1083;
+    wire blink_counter_23;
+    wire blink_counter_22;
+    wire blink_counter_24;
+    wire blink_counter_21;
+    wire n1084;
+    wire n168;
+    wire n148;
+    wire n160;
+    wire n156;
+    wire n152;
+    wire \tli.n10_cascade_ ;
+    wire n154;
+    wire n158;
+    wire \tli.n15 ;
+    wire \tli.n16 ;
+    wire \tli.n22_cascade_ ;
+    wire \tli.n10_adj_301 ;
+    wire \tli.n17_cascade_ ;
+    wire \tli.n29_cascade_ ;
+    wire \tli.current_14__N_89_cascade_ ;
+    wire \tli.current_14__N_89 ;
+    wire n146;
+    wire n164;
+    wire n166;
+    wire n150;
+    wire n144;
+    wire \tli.n28 ;
+    wire \tli.n26 ;
+    wire n162;
+    wire \tli.n27 ;
+    wire \tli.delay_counter_0_N ;
+    wire bfn_7_22_0_;
+    wire \tli.delay_counter_1_N ;
+    wire \tli.n1017 ;
+    wire \tli.delay_counter_2_N ;
+    wire \tli.n1018 ;
+    wire \tli.delay_counter_3_N ;
+    wire \tli.n1019 ;
+    wire \tli.delay_counter_4_N ;
+    wire \tli.n1020 ;
+    wire \tli.delay_counter_5_N ;
+    wire \tli.n1021 ;
+    wire \tli.delay_counter_6_N ;
+    wire \tli.n1022 ;
+    wire \tli.delay_counter_7_N ;
+    wire \tli.n1023 ;
+    wire \tli.n1024 ;
+    wire \tli.delay_counter_8_N ;
+    wire bfn_7_23_0_;
+    wire \tli.delay_counter_9_N ;
+    wire \tli.n1025 ;
+    wire \tli.delay_counter_10_N ;
+    wire \tli.n1026 ;
+    wire \tli.delay_counter_11_N ;
+    wire \tli.n1027 ;
+    wire \tli.delay_counter_12_N ;
+    wire \tli.n1028 ;
+    wire \tli.delay_counter_13_N ;
+    wire \tli.n1029 ;
+    wire \tli.delay_counter_14_N ;
+    wire \tli.n1030 ;
+    wire \tli.n1031 ;
+    wire \tli.n1032 ;
+    wire \tli.delay_counter_16 ;
+    wire bfn_7_24_0_;
+    wire \tli.delay_counter_17 ;
+    wire \tli.n1033 ;
+    wire \tli.delay_counter_18 ;
+    wire \tli.n1034 ;
+    wire \tli.delay_counter_19 ;
+    wire \tli.n1035 ;
+    wire \tli.delay_counter_20 ;
+    wire \tli.n1036 ;
+    wire \tli.delay_counter_21 ;
+    wire \tli.n1037 ;
+    wire \tli.delay_counter_22 ;
+    wire \tli.n1038 ;
+    wire \tli.delay_counter_23 ;
+    wire \tli.n1039 ;
+    wire \tli.n1040 ;
+    wire \tli.delay_counter_24 ;
+    wire bfn_7_25_0_;
+    wire \tli.delay_counter_25 ;
+    wire \tli.n1041 ;
+    wire \tli.delay_counter_26 ;
+    wire \tli.n1042 ;
+    wire \tli.delay_counter_27 ;
+    wire \tli.n1043 ;
+    wire \tli.delay_counter_28 ;
+    wire \tli.n1044 ;
+    wire \tli.delay_counter_29 ;
+    wire \tli.n1045 ;
+    wire \tli.delay_counter_30 ;
+    wire \tli.n1046 ;
+    wire \tli.n1047 ;
+    wire \tli.delay_counter_31 ;
+    wire \tli.n804 ;
+    wire \tli.n841 ;
+    wire wren_N_keep;
+    wire delay_counter_15_N_keep;
+    wire di_reg_15;
+    wire CLK_N;
     wire CONSTANT_ONE_NET;
     wire _gnd_net_;
 
     defparam CS_CLK_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam CS_CLK_pad_iopad.PULLUP=1'b0;
     IO_PAD CS_CLK_pad_iopad (
-            .OE(N__2418),
-            .DIN(N__2417),
-            .DOUT(N__2416),
+            .OE(N__2890),
+            .DIN(N__2889),
+            .DOUT(N__2888),
             .PACKAGEPIN(CS_CLK));
     defparam CS_CLK_pad_preio.PIN_TYPE=6'b011001;
     defparam CS_CLK_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO CS_CLK_pad_preio (
-            .PADOEN(N__2418),
-            .PADOUT(N__2417),
-            .PADIN(N__2416),
+            .PADOEN(N__2890),
+            .PADOUT(N__2889),
+            .PADIN(N__2888),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
             .DOUT0(GNDG0),
+            .DOUT1(),
+            .INPUTCLK(),
+            .LATCHINPUTVALUE(),
+            .OUTPUTCLK(),
+            .OUTPUTENABLE());
+    defparam CS_MISO_pad_iopad.IO_STANDARD="SB_LVCMOS";
+    defparam CS_MISO_pad_iopad.PULLUP=1'b0;
+    IO_PAD CS_MISO_pad_iopad (
+            .OE(N__2881),
+            .DIN(N__2880),
+            .DOUT(N__2879),
+            .PACKAGEPIN(CS_MISO));
+    defparam CS_MISO_pad_preio.PIN_TYPE=6'b000001;
+    defparam CS_MISO_pad_preio.NEG_TRIGGER=1'b0;
+    PRE_IO CS_MISO_pad_preio (
+            .PADOEN(N__2881),
+            .PADOUT(N__2880),
+            .PADIN(N__2879),
+            .CLOCKENABLE(),
+            .DIN0(),
+            .DIN1(),
+            .DOUT0(),
             .DOUT1(),
             .INPUTCLK(),
             .LATCHINPUTVALUE(),
@@ -650,20 +766,20 @@ module TinyFPGA_B (
     defparam CS_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam CS_pad_iopad.PULLUP=1'b0;
     IO_PAD CS_pad_iopad (
-            .OE(N__2409),
-            .DIN(N__2408),
-            .DOUT(N__2407),
+            .OE(N__2872),
+            .DIN(N__2871),
+            .DOUT(N__2870),
             .PACKAGEPIN(CS));
     defparam CS_pad_preio.PIN_TYPE=6'b011001;
     defparam CS_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO CS_pad_preio (
-            .PADOEN(N__2409),
-            .PADOUT(N__2408),
-            .PADIN(N__2407),
+            .PADOEN(N__2872),
+            .PADOUT(N__2871),
+            .PADIN(N__2870),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
-            .DOUT0(GNDG0),
+            .DOUT0(N__2448),
             .DOUT1(),
             .INPUTCLK(),
             .LATCHINPUTVALUE(),
@@ -672,16 +788,16 @@ module TinyFPGA_B (
     defparam DE_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam DE_pad_iopad.PULLUP=1'b0;
     IO_PAD DE_pad_iopad (
-            .OE(N__2400),
-            .DIN(N__2399),
-            .DOUT(N__2398),
+            .OE(N__2863),
+            .DIN(N__2862),
+            .DOUT(N__2861),
             .PACKAGEPIN(DE));
     defparam DE_pad_preio.PIN_TYPE=6'b011001;
     defparam DE_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO DE_pad_preio (
-            .PADOEN(N__2400),
-            .PADOUT(N__2399),
-            .PADIN(N__2398),
+            .PADOEN(N__2863),
+            .PADOUT(N__2862),
+            .PADIN(N__2861),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -694,38 +810,38 @@ module TinyFPGA_B (
     defparam INHA_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam INHA_pad_iopad.PULLUP=1'b0;
     IO_PAD INHA_pad_iopad (
-            .OE(N__2391),
-            .DIN(N__2390),
-            .DOUT(N__2389),
+            .OE(N__2854),
+            .DIN(N__2853),
+            .DOUT(N__2852),
             .PACKAGEPIN(INHA));
-    defparam INHA_pad_preio.PIN_TYPE=6'b010101;
+    defparam INHA_pad_preio.PIN_TYPE=6'b011001;
     defparam INHA_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO INHA_pad_preio (
-            .PADOEN(N__2391),
-            .PADOUT(N__2390),
-            .PADIN(N__2389),
-            .CLOCKENABLE(N__1793),
+            .PADOEN(N__2854),
+            .PADOUT(N__2853),
+            .PADIN(N__2852),
+            .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
-            .DOUT0(N__1823),
+            .DOUT0(GNDG0),
             .DOUT1(),
             .INPUTCLK(),
             .LATCHINPUTVALUE(),
-            .OUTPUTCLK(N__1976),
+            .OUTPUTCLK(),
             .OUTPUTENABLE());
     defparam INHB_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam INHB_pad_iopad.PULLUP=1'b0;
     IO_PAD INHB_pad_iopad (
-            .OE(N__2382),
-            .DIN(N__2381),
-            .DOUT(N__2380),
+            .OE(N__2845),
+            .DIN(N__2844),
+            .DOUT(N__2843),
             .PACKAGEPIN(INHB));
     defparam INHB_pad_preio.PIN_TYPE=6'b011001;
     defparam INHB_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO INHB_pad_preio (
-            .PADOEN(N__2382),
-            .PADOUT(N__2381),
-            .PADIN(N__2380),
+            .PADOEN(N__2845),
+            .PADOUT(N__2844),
+            .PADIN(N__2843),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -738,16 +854,16 @@ module TinyFPGA_B (
     defparam INHC_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam INHC_pad_iopad.PULLUP=1'b0;
     IO_PAD INHC_pad_iopad (
-            .OE(N__2373),
-            .DIN(N__2372),
-            .DOUT(N__2371),
+            .OE(N__2836),
+            .DIN(N__2835),
+            .DOUT(N__2834),
             .PACKAGEPIN(INHC));
     defparam INHC_pad_preio.PIN_TYPE=6'b011001;
     defparam INHC_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO INHC_pad_preio (
-            .PADOEN(N__2373),
-            .PADOUT(N__2372),
-            .PADIN(N__2371),
+            .PADOEN(N__2836),
+            .PADOUT(N__2835),
+            .PADIN(N__2834),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -760,20 +876,20 @@ module TinyFPGA_B (
     defparam INLA_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam INLA_pad_iopad.PULLUP=1'b0;
     IO_PAD INLA_pad_iopad (
-            .OE(N__2364),
-            .DIN(N__2363),
-            .DOUT(N__2362),
+            .OE(N__2827),
+            .DIN(N__2826),
+            .DOUT(N__2825),
             .PACKAGEPIN(INLA));
     defparam INLA_pad_preio.PIN_TYPE=6'b011001;
     defparam INLA_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO INLA_pad_preio (
-            .PADOEN(N__2364),
-            .PADOUT(N__2363),
-            .PADIN(N__2362),
+            .PADOEN(N__2827),
+            .PADOUT(N__2826),
+            .PADIN(N__2825),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
-            .DOUT0(N__1907),
+            .DOUT0(GNDG0),
             .DOUT1(),
             .INPUTCLK(),
             .LATCHINPUTVALUE(),
@@ -782,16 +898,16 @@ module TinyFPGA_B (
     defparam INLB_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam INLB_pad_iopad.PULLUP=1'b0;
     IO_PAD INLB_pad_iopad (
-            .OE(N__2355),
-            .DIN(N__2354),
-            .DOUT(N__2353),
+            .OE(N__2818),
+            .DIN(N__2817),
+            .DOUT(N__2816),
             .PACKAGEPIN(INLB));
     defparam INLB_pad_preio.PIN_TYPE=6'b011001;
     defparam INLB_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO INLB_pad_preio (
-            .PADOEN(N__2355),
-            .PADOUT(N__2354),
-            .PADIN(N__2353),
+            .PADOEN(N__2818),
+            .PADOUT(N__2817),
+            .PADIN(N__2816),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -804,16 +920,16 @@ module TinyFPGA_B (
     defparam INLC_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam INLC_pad_iopad.PULLUP=1'b0;
     IO_PAD INLC_pad_iopad (
-            .OE(N__2346),
-            .DIN(N__2345),
-            .DOUT(N__2344),
+            .OE(N__2809),
+            .DIN(N__2808),
+            .DOUT(N__2807),
             .PACKAGEPIN(INLC));
     defparam INLC_pad_preio.PIN_TYPE=6'b011001;
     defparam INLC_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO INLC_pad_preio (
-            .PADOEN(N__2346),
-            .PADOUT(N__2345),
-            .PADIN(N__2344),
+            .PADOEN(N__2809),
+            .PADOUT(N__2808),
+            .PADIN(N__2807),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -826,20 +942,20 @@ module TinyFPGA_B (
     defparam LED_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam LED_pad_iopad.PULLUP=1'b0;
     IO_PAD LED_pad_iopad (
-            .OE(N__2337),
-            .DIN(N__2336),
-            .DOUT(N__2335),
+            .OE(N__2800),
+            .DIN(N__2799),
+            .DOUT(N__2798),
             .PACKAGEPIN(LED));
     defparam LED_pad_preio.PIN_TYPE=6'b011001;
     defparam LED_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO LED_pad_preio (
-            .PADOEN(N__2337),
-            .PADOUT(N__2336),
-            .PADIN(N__2335),
+            .PADOEN(N__2800),
+            .PADOUT(N__2799),
+            .PADIN(N__2798),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
-            .DOUT0(N__1184),
+            .DOUT0(N__1839),
             .DOUT1(),
             .INPUTCLK(),
             .LATCHINPUTVALUE(),
@@ -848,16 +964,16 @@ module TinyFPGA_B (
     defparam NEOPXL_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam NEOPXL_pad_iopad.PULLUP=1'b0;
     IO_PAD NEOPXL_pad_iopad (
-            .OE(N__2328),
-            .DIN(N__2327),
-            .DOUT(N__2326),
+            .OE(N__2791),
+            .DIN(N__2790),
+            .DOUT(N__2789),
             .PACKAGEPIN(NEOPXL));
     defparam NEOPXL_pad_preio.PIN_TYPE=6'b011001;
     defparam NEOPXL_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO NEOPXL_pad_preio (
-            .PADOEN(N__2328),
-            .PADOUT(N__2327),
-            .PADIN(N__2326),
+            .PADOEN(N__2791),
+            .PADOUT(N__2790),
+            .PADIN(N__2789),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -870,16 +986,16 @@ module TinyFPGA_B (
     defparam SCL_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam SCL_pad_iopad.PULLUP=1'b0;
     IO_PAD SCL_pad_iopad (
-            .OE(N__2319),
-            .DIN(N__2318),
-            .DOUT(N__2317),
+            .OE(N__2782),
+            .DIN(N__2781),
+            .DOUT(N__2780),
             .PACKAGEPIN(SCL));
     defparam SCL_pad_preio.PIN_TYPE=6'b011001;
     defparam SCL_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO SCL_pad_preio (
-            .PADOEN(N__2319),
-            .PADOUT(N__2318),
-            .PADIN(N__2317),
+            .PADOEN(N__2782),
+            .PADOUT(N__2781),
+            .PADIN(N__2780),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -892,16 +1008,16 @@ module TinyFPGA_B (
     defparam TX_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam TX_pad_iopad.PULLUP=1'b0;
     IO_PAD TX_pad_iopad (
-            .OE(N__2310),
-            .DIN(N__2309),
-            .DOUT(N__2308),
+            .OE(N__2773),
+            .DIN(N__2772),
+            .DOUT(N__2771),
             .PACKAGEPIN(TX));
     defparam TX_pad_preio.PIN_TYPE=6'b011001;
     defparam TX_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO TX_pad_preio (
-            .PADOEN(N__2310),
-            .PADOUT(N__2309),
-            .PADIN(N__2308),
+            .PADOEN(N__2773),
+            .PADOUT(N__2772),
+            .PADIN(N__2771),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -914,16 +1030,16 @@ module TinyFPGA_B (
     defparam USBPU_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam USBPU_pad_iopad.PULLUP=1'b0;
     IO_PAD USBPU_pad_iopad (
-            .OE(N__2301),
-            .DIN(N__2300),
-            .DOUT(N__2299),
+            .OE(N__2764),
+            .DIN(N__2763),
+            .DOUT(N__2762),
             .PACKAGEPIN(USBPU));
     defparam USBPU_pad_preio.PIN_TYPE=6'b011001;
     defparam USBPU_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO USBPU_pad_preio (
-            .PADOEN(N__2301),
-            .PADOUT(N__2300),
-            .PADIN(N__2299),
+            .PADOEN(N__2764),
+            .PADOUT(N__2763),
+            .PADIN(N__2762),
             .CLOCKENABLE(),
             .DIN0(),
             .DIN1(),
@@ -936,16 +1052,16 @@ module TinyFPGA_B (
     defparam CLK_pad_iopad.IO_STANDARD="SB_LVCMOS";
     defparam CLK_pad_iopad.PULLUP=1'b0;
     IO_PAD CLK_pad_iopad (
-            .OE(N__2292),
-            .DIN(N__2291),
-            .DOUT(N__2290),
+            .OE(N__2755),
+            .DIN(N__2754),
+            .DOUT(N__2753),
             .PACKAGEPIN(CLK));
     defparam CLK_pad_preio.PIN_TYPE=6'b000001;
     defparam CLK_pad_preio.NEG_TRIGGER=1'b0;
     PRE_IO CLK_pad_preio (
-            .PADOEN(N__2292),
-            .PADOUT(N__2291),
-            .PADIN(N__2290),
+            .PADOEN(N__2755),
+            .PADOUT(N__2754),
+            .PADIN(N__2753),
             .CLOCKENABLE(),
             .DIN0(CLK_pad_gb_input),
             .DIN1(),
@@ -955,1217 +1071,1846 @@ module TinyFPGA_B (
             .LATCHINPUTVALUE(),
             .OUTPUTCLK(),
             .OUTPUTENABLE());
+    InMux I__556 (
+            .O(N__2736),
+            .I(N__2732));
+    InMux I__555 (
+            .O(N__2735),
+            .I(N__2729));
+    LocalMux I__554 (
+            .O(N__2732),
+            .I(\tli.delay_counter_28 ));
+    LocalMux I__553 (
+            .O(N__2729),
+            .I(\tli.delay_counter_28 ));
+    InMux I__552 (
+            .O(N__2724),
+            .I(\tli.n1044 ));
+    InMux I__551 (
+            .O(N__2721),
+            .I(N__2718));
+    LocalMux I__550 (
+            .O(N__2718),
+            .I(N__2714));
+    InMux I__549 (
+            .O(N__2717),
+            .I(N__2711));
+    Span4Mux_h I__548 (
+            .O(N__2714),
+            .I(N__2708));
+    LocalMux I__547 (
+            .O(N__2711),
+            .I(\tli.delay_counter_29 ));
+    Odrv4 I__546 (
+            .O(N__2708),
+            .I(\tli.delay_counter_29 ));
+    InMux I__545 (
+            .O(N__2703),
+            .I(\tli.n1045 ));
+    InMux I__544 (
+            .O(N__2700),
+            .I(N__2696));
+    InMux I__543 (
+            .O(N__2699),
+            .I(N__2693));
+    LocalMux I__542 (
+            .O(N__2696),
+            .I(\tli.delay_counter_30 ));
+    LocalMux I__541 (
+            .O(N__2693),
+            .I(\tli.delay_counter_30 ));
+    InMux I__540 (
+            .O(N__2688),
+            .I(\tli.n1046 ));
+    InMux I__539 (
+            .O(N__2685),
+            .I(\tli.n1047 ));
+    InMux I__538 (
+            .O(N__2682),
+            .I(N__2679));
+    LocalMux I__537 (
+            .O(N__2679),
+            .I(N__2675));
+    InMux I__536 (
+            .O(N__2678),
+            .I(N__2672));
+    Span4Mux_h I__535 (
+            .O(N__2675),
+            .I(N__2669));
+    LocalMux I__534 (
+            .O(N__2672),
+            .I(\tli.delay_counter_31 ));
+    Odrv4 I__533 (
+            .O(N__2669),
+            .I(\tli.delay_counter_31 ));
+    CEMux I__532 (
+            .O(N__2664),
+            .I(N__2660));
+    CEMux I__531 (
+            .O(N__2663),
+            .I(N__2657));
+    LocalMux I__530 (
+            .O(N__2660),
+            .I(N__2651));
+    LocalMux I__529 (
+            .O(N__2657),
+            .I(N__2651));
+    CEMux I__528 (
+            .O(N__2656),
+            .I(N__2647));
+    Span4Mux_v I__527 (
+            .O(N__2651),
+            .I(N__2644));
+    CEMux I__526 (
+            .O(N__2650),
+            .I(N__2641));
+    LocalMux I__525 (
+            .O(N__2647),
+            .I(N__2634));
+    Span4Mux_v I__524 (
+            .O(N__2644),
+            .I(N__2634));
+    LocalMux I__523 (
+            .O(N__2641),
+            .I(N__2634));
+    Odrv4 I__522 (
+            .O(N__2634),
+            .I(\tli.n804 ));
+    SRMux I__521 (
+            .O(N__2631),
+            .I(N__2627));
+    SRMux I__520 (
+            .O(N__2630),
+            .I(N__2623));
+    LocalMux I__519 (
+            .O(N__2627),
+            .I(N__2613));
+    SRMux I__518 (
+            .O(N__2626),
+            .I(N__2610));
+    LocalMux I__517 (
+            .O(N__2623),
+            .I(N__2607));
+    SRMux I__516 (
+            .O(N__2622),
+            .I(N__2604));
+    CascadeMux I__515 (
+            .O(N__2621),
+            .I(N__2601));
+    CascadeMux I__514 (
+            .O(N__2620),
+            .I(N__2596));
+    CascadeMux I__513 (
+            .O(N__2619),
+            .I(N__2593));
+    CascadeMux I__512 (
+            .O(N__2618),
+            .I(N__2586));
+    CascadeMux I__511 (
+            .O(N__2617),
+            .I(N__2583));
+    CascadeMux I__510 (
+            .O(N__2616),
+            .I(N__2580));
+    Span4Mux_h I__509 (
+            .O(N__2613),
+            .I(N__2576));
+    LocalMux I__508 (
+            .O(N__2610),
+            .I(N__2569));
+    Span4Mux_v I__507 (
+            .O(N__2607),
+            .I(N__2569));
+    LocalMux I__506 (
+            .O(N__2604),
+            .I(N__2569));
+    InMux I__505 (
+            .O(N__2601),
+            .I(N__2564));
+    InMux I__504 (
+            .O(N__2600),
+            .I(N__2564));
+    InMux I__503 (
+            .O(N__2599),
+            .I(N__2553));
+    InMux I__502 (
+            .O(N__2596),
+            .I(N__2553));
+    InMux I__501 (
+            .O(N__2593),
+            .I(N__2553));
+    InMux I__500 (
+            .O(N__2592),
+            .I(N__2553));
+    InMux I__499 (
+            .O(N__2591),
+            .I(N__2553));
+    InMux I__498 (
+            .O(N__2590),
+            .I(N__2540));
+    InMux I__497 (
+            .O(N__2589),
+            .I(N__2540));
+    InMux I__496 (
+            .O(N__2586),
+            .I(N__2540));
+    InMux I__495 (
+            .O(N__2583),
+            .I(N__2540));
+    InMux I__494 (
+            .O(N__2580),
+            .I(N__2540));
+    InMux I__493 (
+            .O(N__2579),
+            .I(N__2540));
+    Odrv4 I__492 (
+            .O(N__2576),
+            .I(\tli.n841 ));
+    Odrv4 I__491 (
+            .O(N__2569),
+            .I(\tli.n841 ));
+    LocalMux I__490 (
+            .O(N__2564),
+            .I(\tli.n841 ));
+    LocalMux I__489 (
+            .O(N__2553),
+            .I(\tli.n841 ));
+    LocalMux I__488 (
+            .O(N__2540),
+            .I(\tli.n841 ));
+    InMux I__487 (
+            .O(N__2529),
+            .I(N__2526));
+    LocalMux I__486 (
+            .O(N__2526),
+            .I(N__2523));
+    Odrv12 I__485 (
+            .O(N__2523),
+            .I(wren_N_keep));
+    InMux I__484 (
+            .O(N__2520),
+            .I(N__2517));
+    LocalMux I__483 (
+            .O(N__2517),
+            .I(N__2512));
     InMux I__482 (
-            .O(N__2273),
-            .I(N__2264));
+            .O(N__2516),
+            .I(N__2509));
     InMux I__481 (
-            .O(N__2272),
-            .I(N__2264));
-    InMux I__480 (
-            .O(N__2271),
-            .I(N__2261));
-    InMux I__479 (
-            .O(N__2270),
-            .I(N__2256));
-    InMux I__478 (
-            .O(N__2269),
-            .I(N__2256));
-    LocalMux I__477 (
-            .O(N__2264),
-            .I(half_duty_0_5));
+            .O(N__2515),
+            .I(N__2506));
+    Odrv4 I__480 (
+            .O(N__2512),
+            .I(delay_counter_15_N_keep));
+    LocalMux I__479 (
+            .O(N__2509),
+            .I(delay_counter_15_N_keep));
+    LocalMux I__478 (
+            .O(N__2506),
+            .I(delay_counter_15_N_keep));
+    InMux I__477 (
+            .O(N__2499),
+            .I(N__2496));
     LocalMux I__476 (
-            .O(N__2261),
-            .I(half_duty_0_5));
-    LocalMux I__475 (
-            .O(N__2256),
-            .I(half_duty_0_5));
-    InMux I__474 (
-            .O(N__2249),
-            .I(N__2246));
-    LocalMux I__473 (
-            .O(N__2246),
-            .I(N__2240));
-    CascadeMux I__472 (
-            .O(N__2245),
-            .I(N__2237));
-    CascadeMux I__471 (
-            .O(N__2244),
-            .I(N__2234));
-    InMux I__470 (
-            .O(N__2243),
-            .I(N__2231));
-    Span4Mux_h I__469 (
-            .O(N__2240),
-            .I(N__2228));
-    InMux I__468 (
-            .O(N__2237),
-            .I(N__2223));
-    InMux I__467 (
-            .O(N__2234),
-            .I(N__2223));
-    LocalMux I__466 (
-            .O(N__2231),
-            .I(\PWM.count_0_5 ));
-    Odrv4 I__465 (
-            .O(N__2228),
-            .I(\PWM.count_0_5 ));
-    LocalMux I__464 (
-            .O(N__2223),
-            .I(\PWM.count_0_5 ));
-    CascadeMux I__463 (
-            .O(N__2216),
-            .I(\PWM.pwm_out_0_N_43_4_cascade_ ));
-    InMux I__462 (
-            .O(N__2213),
-            .I(N__2209));
-    InMux I__461 (
-            .O(N__2212),
-            .I(N__2206));
-    LocalMux I__460 (
-            .O(N__2209),
-            .I(N__2200));
+            .O(N__2496),
+            .I(di_reg_15));
+    ClkMux I__475 (
+            .O(N__2493),
+            .I(N__2454));
+    ClkMux I__474 (
+            .O(N__2492),
+            .I(N__2454));
+    ClkMux I__473 (
+            .O(N__2491),
+            .I(N__2454));
+    ClkMux I__472 (
+            .O(N__2490),
+            .I(N__2454));
+    ClkMux I__471 (
+            .O(N__2489),
+            .I(N__2454));
+    ClkMux I__470 (
+            .O(N__2488),
+            .I(N__2454));
+    ClkMux I__469 (
+            .O(N__2487),
+            .I(N__2454));
+    ClkMux I__468 (
+            .O(N__2486),
+            .I(N__2454));
+    ClkMux I__467 (
+            .O(N__2485),
+            .I(N__2454));
+    ClkMux I__466 (
+            .O(N__2484),
+            .I(N__2454));
+    ClkMux I__465 (
+            .O(N__2483),
+            .I(N__2454));
+    ClkMux I__464 (
+            .O(N__2482),
+            .I(N__2454));
+    ClkMux I__463 (
+            .O(N__2481),
+            .I(N__2454));
+    GlobalMux I__462 (
+            .O(N__2454),
+            .I(N__2451));
+    gio2CtrlBuf I__461 (
+            .O(N__2451),
+            .I(CLK_N));
+    IoInMux I__460 (
+            .O(N__2448),
+            .I(N__2445));
     LocalMux I__459 (
-            .O(N__2206),
-            .I(N__2200));
+            .O(N__2445),
+            .I(N__2439));
     InMux I__458 (
-            .O(N__2205),
-            .I(N__2197));
-    Odrv4 I__457 (
-            .O(N__2200),
-            .I(\PWM.count_0_6 ));
-    LocalMux I__456 (
-            .O(N__2197),
-            .I(\PWM.count_0_6 ));
-    InMux I__455 (
-            .O(N__2192),
-            .I(N__2189));
+            .O(N__2444),
+            .I(N__2432));
+    InMux I__457 (
+            .O(N__2443),
+            .I(N__2432));
+    InMux I__456 (
+            .O(N__2442),
+            .I(N__2432));
+    Sp12to4 I__455 (
+            .O(N__2439),
+            .I(N__2429));
     LocalMux I__454 (
-            .O(N__2189),
-            .I(\PWM.n11 ));
-    SRMux I__453 (
-            .O(N__2186),
-            .I(N__2183));
-    LocalMux I__452 (
-            .O(N__2183),
-            .I(\PWM.n694 ));
-    SRMux I__451 (
-            .O(N__2180),
-            .I(N__2177));
-    LocalMux I__450 (
-            .O(N__2177),
-            .I(N__2173));
-    SRMux I__449 (
-            .O(N__2176),
-            .I(N__2170));
-    Span4Mux_h I__448 (
-            .O(N__2173),
-            .I(N__2167));
-    LocalMux I__447 (
-            .O(N__2170),
-            .I(N__2164));
-    Span4Mux_s0_v I__446 (
-            .O(N__2167),
-            .I(N__2156));
-    Span4Mux_h I__445 (
-            .O(N__2164),
-            .I(N__2153));
-    InMux I__444 (
-            .O(N__2163),
-            .I(N__2150));
-    InMux I__443 (
-            .O(N__2162),
-            .I(N__2145));
-    InMux I__442 (
-            .O(N__2161),
-            .I(N__2145));
-    InMux I__441 (
-            .O(N__2160),
-            .I(N__2140));
-    InMux I__440 (
-            .O(N__2159),
-            .I(N__2140));
-    Odrv4 I__439 (
-            .O(N__2156),
-            .I(n684));
-    Odrv4 I__438 (
-            .O(N__2153),
-            .I(n684));
-    LocalMux I__437 (
-            .O(N__2150),
-            .I(n684));
-    LocalMux I__436 (
-            .O(N__2145),
-            .I(n684));
-    LocalMux I__435 (
-            .O(N__2140),
-            .I(n684));
-    InMux I__434 (
-            .O(N__2129),
-            .I(N__2119));
-    InMux I__433 (
-            .O(N__2128),
-            .I(N__2119));
-    InMux I__432 (
-            .O(N__2127),
-            .I(N__2112));
-    InMux I__431 (
-            .O(N__2126),
-            .I(N__2112));
-    InMux I__430 (
-            .O(N__2125),
-            .I(N__2112));
-    InMux I__429 (
-            .O(N__2124),
-            .I(N__2109));
-    LocalMux I__428 (
-            .O(N__2119),
-            .I(half_duty_0_1));
-    LocalMux I__427 (
-            .O(N__2112),
-            .I(half_duty_0_1));
-    LocalMux I__426 (
-            .O(N__2109),
-            .I(half_duty_0_1));
-    InMux I__425 (
-            .O(N__2102),
-            .I(N__2093));
-    InMux I__424 (
-            .O(N__2101),
-            .I(N__2090));
-    CEMux I__423 (
-            .O(N__2100),
-            .I(N__2087));
-    CEMux I__422 (
-            .O(N__2099),
-            .I(N__2084));
-    InMux I__421 (
-            .O(N__2098),
-            .I(N__2081));
-    InMux I__420 (
-            .O(N__2097),
-            .I(N__2076));
-    InMux I__419 (
-            .O(N__2096),
-            .I(N__2076));
-    LocalMux I__418 (
-            .O(N__2093),
-            .I(N__2071));
-    LocalMux I__417 (
-            .O(N__2090),
-            .I(N__2071));
-    LocalMux I__416 (
-            .O(N__2087),
-            .I(\PWM.pwm_out_0__N_55 ));
-    LocalMux I__415 (
-            .O(N__2084),
-            .I(\PWM.pwm_out_0__N_55 ));
-    LocalMux I__414 (
-            .O(N__2081),
-            .I(\PWM.pwm_out_0__N_55 ));
-    LocalMux I__413 (
-            .O(N__2076),
-            .I(\PWM.pwm_out_0__N_55 ));
-    Odrv4 I__412 (
-            .O(N__2071),
-            .I(\PWM.pwm_out_0__N_55 ));
-    InMux I__411 (
-            .O(N__2060),
-            .I(N__2051));
-    InMux I__410 (
-            .O(N__2059),
-            .I(N__2051));
-    InMux I__409 (
-            .O(N__2058),
-            .I(N__2051));
-    LocalMux I__408 (
-            .O(N__2051),
-            .I(\PWM.n19 ));
-    InMux I__407 (
-            .O(N__2048),
-            .I(N__2043));
-    InMux I__406 (
-            .O(N__2047),
-            .I(N__2038));
-    InMux I__405 (
-            .O(N__2046),
-            .I(N__2038));
-    LocalMux I__404 (
-            .O(N__2043),
-            .I(\PWM.pause_counter_0_2 ));
-    LocalMux I__403 (
-            .O(N__2038),
-            .I(\PWM.pause_counter_0_2 ));
-    CascadeMux I__402 (
-            .O(N__2033),
-            .I(N__2028));
-    InMux I__401 (
-            .O(N__2032),
-            .I(N__2023));
-    InMux I__400 (
-            .O(N__2031),
-            .I(N__2020));
-    InMux I__399 (
-            .O(N__2028),
-            .I(N__2013));
-    InMux I__398 (
-            .O(N__2027),
-            .I(N__2013));
-    InMux I__397 (
-            .O(N__2026),
-            .I(N__2013));
-    LocalMux I__396 (
-            .O(N__2023),
-            .I(\PWM.pause_counter_0_1 ));
-    LocalMux I__395 (
-            .O(N__2020),
-            .I(\PWM.pause_counter_0_1 ));
-    LocalMux I__394 (
-            .O(N__2013),
-            .I(\PWM.pause_counter_0_1 ));
-    CascadeMux I__393 (
-            .O(N__2006),
-            .I(N__2003));
-    InMux I__392 (
-            .O(N__2003),
-            .I(N__1999));
-    InMux I__391 (
-            .O(N__2002),
-            .I(N__1993));
-    LocalMux I__390 (
-            .O(N__1999),
-            .I(N__1990));
-    InMux I__389 (
-            .O(N__1998),
-            .I(N__1983));
-    InMux I__388 (
-            .O(N__1997),
-            .I(N__1983));
-    InMux I__387 (
-            .O(N__1996),
-            .I(N__1983));
-    LocalMux I__386 (
-            .O(N__1993),
-            .I(\PWM.pause_counter_0_0 ));
-    Odrv4 I__385 (
-            .O(N__1990),
-            .I(\PWM.pause_counter_0_0 ));
-    LocalMux I__384 (
-            .O(N__1983),
-            .I(\PWM.pause_counter_0_0 ));
-    ClkMux I__383 (
-            .O(N__1976),
-            .I(N__1940));
-    ClkMux I__382 (
-            .O(N__1975),
-            .I(N__1940));
-    ClkMux I__381 (
-            .O(N__1974),
-            .I(N__1940));
-    ClkMux I__380 (
-            .O(N__1973),
-            .I(N__1940));
-    ClkMux I__379 (
-            .O(N__1972),
-            .I(N__1940));
-    ClkMux I__378 (
-            .O(N__1971),
-            .I(N__1940));
-    ClkMux I__377 (
-            .O(N__1970),
-            .I(N__1940));
-    ClkMux I__376 (
-            .O(N__1969),
-            .I(N__1940));
-    ClkMux I__375 (
-            .O(N__1968),
-            .I(N__1940));
-    ClkMux I__374 (
-            .O(N__1967),
-            .I(N__1940));
-    ClkMux I__373 (
-            .O(N__1966),
-            .I(N__1940));
-    ClkMux I__372 (
-            .O(N__1965),
-            .I(N__1940));
-    GlobalMux I__371 (
-            .O(N__1940),
-            .I(N__1937));
-    gio2CtrlBuf I__370 (
-            .O(N__1937),
-            .I(CLK_c));
-    CEMux I__369 (
-            .O(N__1934),
-            .I(N__1930));
-    CEMux I__368 (
-            .O(N__1933),
-            .I(N__1927));
-    LocalMux I__367 (
-            .O(N__1930),
-            .I(N__1922));
-    LocalMux I__366 (
-            .O(N__1927),
-            .I(N__1922));
-    Span4Mux_s1_v I__365 (
-            .O(N__1922),
-            .I(N__1919));
-    Odrv4 I__364 (
-            .O(N__1919),
-            .I(\PWM.n653 ));
-    SRMux I__363 (
-            .O(N__1916),
-            .I(N__1913));
-    LocalMux I__362 (
-            .O(N__1913),
-            .I(N__1910));
-    Odrv12 I__361 (
-            .O(N__1910),
-            .I(\PWM.n193 ));
-    IoInMux I__360 (
-            .O(N__1907),
-            .I(N__1904));
-    LocalMux I__359 (
-            .O(N__1904),
+            .O(N__2432),
+            .I(N__2426));
+    Span12Mux_h I__453 (
+            .O(N__2429),
+            .I(N__2423));
+    Span12Mux_s9_h I__452 (
+            .O(N__2426),
+            .I(N__2420));
+    Odrv12 I__451 (
+            .O(N__2423),
             .I(CONSTANT_ONE_NET));
+    Odrv12 I__450 (
+            .O(N__2420),
+            .I(CONSTANT_ONE_NET));
+    InMux I__449 (
+            .O(N__2415),
+            .I(N__2411));
+    InMux I__448 (
+            .O(N__2414),
+            .I(N__2408));
+    LocalMux I__447 (
+            .O(N__2411),
+            .I(\tli.delay_counter_20 ));
+    LocalMux I__446 (
+            .O(N__2408),
+            .I(\tli.delay_counter_20 ));
+    InMux I__445 (
+            .O(N__2403),
+            .I(\tli.n1036 ));
+    InMux I__444 (
+            .O(N__2400),
+            .I(N__2396));
+    InMux I__443 (
+            .O(N__2399),
+            .I(N__2393));
+    LocalMux I__442 (
+            .O(N__2396),
+            .I(\tli.delay_counter_21 ));
+    LocalMux I__441 (
+            .O(N__2393),
+            .I(\tli.delay_counter_21 ));
+    InMux I__440 (
+            .O(N__2388),
+            .I(\tli.n1037 ));
+    InMux I__439 (
+            .O(N__2385),
+            .I(N__2381));
+    InMux I__438 (
+            .O(N__2384),
+            .I(N__2378));
+    LocalMux I__437 (
+            .O(N__2381),
+            .I(\tli.delay_counter_22 ));
+    LocalMux I__436 (
+            .O(N__2378),
+            .I(\tli.delay_counter_22 ));
+    InMux I__435 (
+            .O(N__2373),
+            .I(\tli.n1038 ));
+    InMux I__434 (
+            .O(N__2370),
+            .I(N__2366));
+    InMux I__433 (
+            .O(N__2369),
+            .I(N__2363));
+    LocalMux I__432 (
+            .O(N__2366),
+            .I(\tli.delay_counter_23 ));
+    LocalMux I__431 (
+            .O(N__2363),
+            .I(\tli.delay_counter_23 ));
+    InMux I__430 (
+            .O(N__2358),
+            .I(\tli.n1039 ));
+    InMux I__429 (
+            .O(N__2355),
+            .I(N__2351));
+    InMux I__428 (
+            .O(N__2354),
+            .I(N__2348));
+    LocalMux I__427 (
+            .O(N__2351),
+            .I(\tli.delay_counter_24 ));
+    LocalMux I__426 (
+            .O(N__2348),
+            .I(\tli.delay_counter_24 ));
+    InMux I__425 (
+            .O(N__2343),
+            .I(bfn_7_25_0_));
+    InMux I__424 (
+            .O(N__2340),
+            .I(N__2336));
+    InMux I__423 (
+            .O(N__2339),
+            .I(N__2333));
+    LocalMux I__422 (
+            .O(N__2336),
+            .I(\tli.delay_counter_25 ));
+    LocalMux I__421 (
+            .O(N__2333),
+            .I(\tli.delay_counter_25 ));
+    InMux I__420 (
+            .O(N__2328),
+            .I(\tli.n1041 ));
+    CascadeMux I__419 (
+            .O(N__2325),
+            .I(N__2321));
+    InMux I__418 (
+            .O(N__2324),
+            .I(N__2318));
+    InMux I__417 (
+            .O(N__2321),
+            .I(N__2315));
+    LocalMux I__416 (
+            .O(N__2318),
+            .I(\tli.delay_counter_26 ));
+    LocalMux I__415 (
+            .O(N__2315),
+            .I(\tli.delay_counter_26 ));
+    InMux I__414 (
+            .O(N__2310),
+            .I(\tli.n1042 ));
+    CascadeMux I__413 (
+            .O(N__2307),
+            .I(N__2303));
+    InMux I__412 (
+            .O(N__2306),
+            .I(N__2300));
+    InMux I__411 (
+            .O(N__2303),
+            .I(N__2297));
+    LocalMux I__410 (
+            .O(N__2300),
+            .I(\tli.delay_counter_27 ));
+    LocalMux I__409 (
+            .O(N__2297),
+            .I(\tli.delay_counter_27 ));
+    InMux I__408 (
+            .O(N__2292),
+            .I(\tli.n1043 ));
+    CascadeMux I__407 (
+            .O(N__2289),
+            .I(N__2285));
+    InMux I__406 (
+            .O(N__2288),
+            .I(N__2282));
+    InMux I__405 (
+            .O(N__2285),
+            .I(N__2279));
+    LocalMux I__404 (
+            .O(N__2282),
+            .I(\tli.delay_counter_11_N ));
+    LocalMux I__403 (
+            .O(N__2279),
+            .I(\tli.delay_counter_11_N ));
+    InMux I__402 (
+            .O(N__2274),
+            .I(\tli.n1027 ));
+    InMux I__401 (
+            .O(N__2271),
+            .I(N__2267));
+    InMux I__400 (
+            .O(N__2270),
+            .I(N__2264));
+    LocalMux I__399 (
+            .O(N__2267),
+            .I(\tli.delay_counter_12_N ));
+    LocalMux I__398 (
+            .O(N__2264),
+            .I(\tli.delay_counter_12_N ));
+    InMux I__397 (
+            .O(N__2259),
+            .I(\tli.n1028 ));
+    InMux I__396 (
+            .O(N__2256),
+            .I(N__2252));
+    InMux I__395 (
+            .O(N__2255),
+            .I(N__2249));
+    LocalMux I__394 (
+            .O(N__2252),
+            .I(\tli.delay_counter_13_N ));
+    LocalMux I__393 (
+            .O(N__2249),
+            .I(\tli.delay_counter_13_N ));
+    InMux I__392 (
+            .O(N__2244),
+            .I(\tli.n1029 ));
+    InMux I__391 (
+            .O(N__2241),
+            .I(N__2237));
+    InMux I__390 (
+            .O(N__2240),
+            .I(N__2234));
+    LocalMux I__389 (
+            .O(N__2237),
+            .I(\tli.delay_counter_14_N ));
+    LocalMux I__388 (
+            .O(N__2234),
+            .I(\tli.delay_counter_14_N ));
+    InMux I__387 (
+            .O(N__2229),
+            .I(\tli.n1030 ));
+    InMux I__386 (
+            .O(N__2226),
+            .I(\tli.n1031 ));
+    InMux I__385 (
+            .O(N__2223),
+            .I(N__2219));
+    InMux I__384 (
+            .O(N__2222),
+            .I(N__2216));
+    LocalMux I__383 (
+            .O(N__2219),
+            .I(\tli.delay_counter_16 ));
+    LocalMux I__382 (
+            .O(N__2216),
+            .I(\tli.delay_counter_16 ));
+    InMux I__381 (
+            .O(N__2211),
+            .I(bfn_7_24_0_));
+    InMux I__380 (
+            .O(N__2208),
+            .I(N__2204));
+    InMux I__379 (
+            .O(N__2207),
+            .I(N__2201));
+    LocalMux I__378 (
+            .O(N__2204),
+            .I(\tli.delay_counter_17 ));
+    LocalMux I__377 (
+            .O(N__2201),
+            .I(\tli.delay_counter_17 ));
+    InMux I__376 (
+            .O(N__2196),
+            .I(\tli.n1033 ));
+    CascadeMux I__375 (
+            .O(N__2193),
+            .I(N__2189));
+    InMux I__374 (
+            .O(N__2192),
+            .I(N__2186));
+    InMux I__373 (
+            .O(N__2189),
+            .I(N__2183));
+    LocalMux I__372 (
+            .O(N__2186),
+            .I(\tli.delay_counter_18 ));
+    LocalMux I__371 (
+            .O(N__2183),
+            .I(\tli.delay_counter_18 ));
+    InMux I__370 (
+            .O(N__2178),
+            .I(\tli.n1034 ));
+    InMux I__369 (
+            .O(N__2175),
+            .I(N__2171));
+    InMux I__368 (
+            .O(N__2174),
+            .I(N__2168));
+    LocalMux I__367 (
+            .O(N__2171),
+            .I(\tli.delay_counter_19 ));
+    LocalMux I__366 (
+            .O(N__2168),
+            .I(\tli.delay_counter_19 ));
+    InMux I__365 (
+            .O(N__2163),
+            .I(\tli.n1035 ));
+    InMux I__364 (
+            .O(N__2160),
+            .I(N__2156));
+    InMux I__363 (
+            .O(N__2159),
+            .I(N__2153));
+    LocalMux I__362 (
+            .O(N__2156),
+            .I(\tli.delay_counter_3_N ));
+    LocalMux I__361 (
+            .O(N__2153),
+            .I(\tli.delay_counter_3_N ));
+    InMux I__360 (
+            .O(N__2148),
+            .I(\tli.n1019 ));
+    InMux I__359 (
+            .O(N__2145),
+            .I(N__2141));
     InMux I__358 (
-            .O(N__1901),
-            .I(N__1897));
-    CascadeMux I__357 (
-            .O(N__1900),
-            .I(N__1892));
+            .O(N__2144),
+            .I(N__2138));
+    LocalMux I__357 (
+            .O(N__2141),
+            .I(\tli.delay_counter_4_N ));
     LocalMux I__356 (
-            .O(N__1897),
-            .I(N__1889));
-    CascadeMux I__355 (
-            .O(N__1896),
-            .I(N__1886));
+            .O(N__2138),
+            .I(\tli.delay_counter_4_N ));
+    InMux I__355 (
+            .O(N__2133),
+            .I(\tli.n1020 ));
     InMux I__354 (
-            .O(N__1895),
-            .I(N__1883));
+            .O(N__2130),
+            .I(N__2126));
     InMux I__353 (
-            .O(N__1892),
-            .I(N__1880));
-    Span4Mux_h I__352 (
-            .O(N__1889),
-            .I(N__1877));
-    InMux I__351 (
-            .O(N__1886),
-            .I(N__1874));
-    LocalMux I__350 (
-            .O(N__1883),
-            .I(\PWM.count_0_8 ));
-    LocalMux I__349 (
-            .O(N__1880),
-            .I(\PWM.count_0_8 ));
-    Odrv4 I__348 (
-            .O(N__1877),
-            .I(\PWM.count_0_8 ));
+            .O(N__2129),
+            .I(N__2123));
+    LocalMux I__352 (
+            .O(N__2126),
+            .I(\tli.delay_counter_5_N ));
+    LocalMux I__351 (
+            .O(N__2123),
+            .I(\tli.delay_counter_5_N ));
+    InMux I__350 (
+            .O(N__2118),
+            .I(\tli.n1021 ));
+    InMux I__349 (
+            .O(N__2115),
+            .I(N__2111));
+    InMux I__348 (
+            .O(N__2114),
+            .I(N__2108));
     LocalMux I__347 (
-            .O(N__1874),
-            .I(\PWM.count_0_8 ));
-    InMux I__346 (
-            .O(N__1865),
-            .I(N__1862));
-    LocalMux I__345 (
-            .O(N__1862),
-            .I(N__1857));
+            .O(N__2111),
+            .I(\tli.delay_counter_6_N ));
+    LocalMux I__346 (
+            .O(N__2108),
+            .I(\tli.delay_counter_6_N ));
+    InMux I__345 (
+            .O(N__2103),
+            .I(\tli.n1022 ));
     InMux I__344 (
-            .O(N__1861),
-            .I(N__1853));
+            .O(N__2100),
+            .I(N__2096));
     InMux I__343 (
-            .O(N__1860),
-            .I(N__1850));
-    Span4Mux_h I__342 (
-            .O(N__1857),
-            .I(N__1847));
-    InMux I__341 (
-            .O(N__1856),
-            .I(N__1844));
-    LocalMux I__340 (
-            .O(N__1853),
-            .I(\PWM.count_0_9 ));
-    LocalMux I__339 (
-            .O(N__1850),
-            .I(\PWM.count_0_9 ));
-    Odrv4 I__338 (
-            .O(N__1847),
-            .I(\PWM.count_0_9 ));
-    LocalMux I__337 (
-            .O(N__1844),
-            .I(\PWM.count_0_9 ));
-    CascadeMux I__336 (
-            .O(N__1835),
-            .I(\PWM.n16_cascade_ ));
-    InMux I__335 (
-            .O(N__1832),
-            .I(N__1829));
-    LocalMux I__334 (
-            .O(N__1829),
-            .I(\PWM.n12_adj_126 ));
+            .O(N__2099),
+            .I(N__2093));
+    LocalMux I__342 (
+            .O(N__2096),
+            .I(\tli.delay_counter_7_N ));
+    LocalMux I__341 (
+            .O(N__2093),
+            .I(\tli.delay_counter_7_N ));
+    InMux I__340 (
+            .O(N__2088),
+            .I(\tli.n1023 ));
+    CascadeMux I__339 (
+            .O(N__2085),
+            .I(N__2081));
+    InMux I__338 (
+            .O(N__2084),
+            .I(N__2078));
+    InMux I__337 (
+            .O(N__2081),
+            .I(N__2075));
+    LocalMux I__336 (
+            .O(N__2078),
+            .I(\tli.delay_counter_8_N ));
+    LocalMux I__335 (
+            .O(N__2075),
+            .I(\tli.delay_counter_8_N ));
+    InMux I__334 (
+            .O(N__2070),
+            .I(bfn_7_23_0_));
     CascadeMux I__333 (
-            .O(N__1826),
-            .I(\PWM.n19_cascade_ ));
-    IoInMux I__332 (
-            .O(N__1823),
-            .I(N__1820));
-    LocalMux I__331 (
-            .O(N__1820),
-            .I(N__1817));
-    Span4Mux_s2_v I__330 (
-            .O(N__1817),
-            .I(N__1814));
-    Span4Mux_h I__329 (
-            .O(N__1814),
-            .I(N__1811));
-    Odrv4 I__328 (
-            .O(N__1811),
-            .I(\PWM.n993 ));
+            .O(N__2067),
+            .I(N__2063));
+    InMux I__332 (
+            .O(N__2066),
+            .I(N__2060));
+    InMux I__331 (
+            .O(N__2063),
+            .I(N__2057));
+    LocalMux I__330 (
+            .O(N__2060),
+            .I(\tli.delay_counter_9_N ));
+    LocalMux I__329 (
+            .O(N__2057),
+            .I(\tli.delay_counter_9_N ));
+    InMux I__328 (
+            .O(N__2052),
+            .I(\tli.n1025 ));
     InMux I__327 (
-            .O(N__1808),
-            .I(N__1805));
-    LocalMux I__326 (
-            .O(N__1805),
-            .I(\PWM.n18 ));
-    CascadeMux I__325 (
-            .O(N__1802),
-            .I(\PWM.n993_cascade_ ));
-    InMux I__324 (
-            .O(N__1799),
-            .I(N__1796));
-    LocalMux I__323 (
-            .O(N__1796),
-            .I(\PWM.n1402 ));
-    CEMux I__322 (
-            .O(N__1793),
-            .I(N__1790));
+            .O(N__2049),
+            .I(N__2045));
+    InMux I__326 (
+            .O(N__2048),
+            .I(N__2042));
+    LocalMux I__325 (
+            .O(N__2045),
+            .I(\tli.delay_counter_10_N ));
+    LocalMux I__324 (
+            .O(N__2042),
+            .I(\tli.delay_counter_10_N ));
+    InMux I__323 (
+            .O(N__2037),
+            .I(\tli.n1026 ));
+    InMux I__322 (
+            .O(N__2034),
+            .I(N__2031));
     LocalMux I__321 (
-            .O(N__1790),
-            .I(N__1787));
-    Span4Mux_s2_v I__320 (
-            .O(N__1787),
-            .I(N__1784));
-    Span4Mux_h I__319 (
-            .O(N__1784),
-            .I(N__1781));
-    Odrv4 I__318 (
-            .O(N__1781),
-            .I(\PWM.n657 ));
-    InMux I__317 (
-            .O(N__1778),
-            .I(N__1775));
-    LocalMux I__316 (
-            .O(N__1775),
-            .I(N__1771));
+            .O(N__2031),
+            .I(n150));
+    InMux I__320 (
+            .O(N__2028),
+            .I(N__2025));
+    LocalMux I__319 (
+            .O(N__2025),
+            .I(n144));
+    InMux I__318 (
+            .O(N__2022),
+            .I(N__2019));
+    LocalMux I__317 (
+            .O(N__2019),
+            .I(N__2016));
+    Odrv4 I__316 (
+            .O(N__2016),
+            .I(\tli.n28 ));
     InMux I__315 (
-            .O(N__1774),
+            .O(N__2013),
+            .I(N__2010));
+    LocalMux I__314 (
+            .O(N__2010),
+            .I(\tli.n26 ));
+    InMux I__313 (
+            .O(N__2007),
+            .I(N__2004));
+    LocalMux I__312 (
+            .O(N__2004),
+            .I(n162));
+    InMux I__311 (
+            .O(N__2001),
+            .I(N__1998));
+    LocalMux I__310 (
+            .O(N__1998),
+            .I(N__1995));
+    Odrv4 I__309 (
+            .O(N__1995),
+            .I(\tli.n27 ));
+    InMux I__308 (
+            .O(N__1992),
+            .I(N__1988));
+    InMux I__307 (
+            .O(N__1991),
+            .I(N__1985));
+    LocalMux I__306 (
+            .O(N__1988),
+            .I(\tli.delay_counter_0_N ));
+    LocalMux I__305 (
+            .O(N__1985),
+            .I(\tli.delay_counter_0_N ));
+    InMux I__304 (
+            .O(N__1980),
+            .I(bfn_7_22_0_));
+    InMux I__303 (
+            .O(N__1977),
+            .I(N__1973));
+    InMux I__302 (
+            .O(N__1976),
+            .I(N__1970));
+    LocalMux I__301 (
+            .O(N__1973),
+            .I(\tli.delay_counter_1_N ));
+    LocalMux I__300 (
+            .O(N__1970),
+            .I(\tli.delay_counter_1_N ));
+    InMux I__299 (
+            .O(N__1965),
+            .I(\tli.n1017 ));
+    InMux I__298 (
+            .O(N__1962),
+            .I(N__1958));
+    InMux I__297 (
+            .O(N__1961),
+            .I(N__1955));
+    LocalMux I__296 (
+            .O(N__1958),
+            .I(\tli.delay_counter_2_N ));
+    LocalMux I__295 (
+            .O(N__1955),
+            .I(\tli.delay_counter_2_N ));
+    InMux I__294 (
+            .O(N__1950),
+            .I(\tli.n1018 ));
+    InMux I__293 (
+            .O(N__1947),
+            .I(N__1944));
+    LocalMux I__292 (
+            .O(N__1944),
+            .I(\tli.n15 ));
+    InMux I__291 (
+            .O(N__1941),
+            .I(N__1938));
+    LocalMux I__290 (
+            .O(N__1938),
+            .I(\tli.n16 ));
+    CascadeMux I__289 (
+            .O(N__1935),
+            .I(\tli.n22_cascade_ ));
+    InMux I__288 (
+            .O(N__1932),
+            .I(N__1929));
+    LocalMux I__287 (
+            .O(N__1929),
+            .I(\tli.n10_adj_301 ));
+    CascadeMux I__286 (
+            .O(N__1926),
+            .I(\tli.n17_cascade_ ));
+    CascadeMux I__285 (
+            .O(N__1923),
+            .I(\tli.n29_cascade_ ));
+    CascadeMux I__284 (
+            .O(N__1920),
+            .I(\tli.current_14__N_89_cascade_ ));
+    InMux I__283 (
+            .O(N__1917),
+            .I(N__1911));
+    InMux I__282 (
+            .O(N__1916),
+            .I(N__1911));
+    LocalMux I__281 (
+            .O(N__1911),
+            .I(\tli.current_14__N_89 ));
+    InMux I__280 (
+            .O(N__1908),
+            .I(N__1905));
+    LocalMux I__279 (
+            .O(N__1905),
+            .I(n146));
+    InMux I__278 (
+            .O(N__1902),
+            .I(N__1899));
+    LocalMux I__277 (
+            .O(N__1899),
+            .I(n164));
+    InMux I__276 (
+            .O(N__1896),
+            .I(N__1893));
+    LocalMux I__275 (
+            .O(N__1893),
+            .I(n166));
+    InMux I__274 (
+            .O(N__1890),
+            .I(N__1887));
+    LocalMux I__273 (
+            .O(N__1887),
+            .I(n160));
+    InMux I__272 (
+            .O(N__1884),
+            .I(N__1881));
+    LocalMux I__271 (
+            .O(N__1881),
+            .I(n156));
+    InMux I__270 (
+            .O(N__1878),
+            .I(N__1875));
+    LocalMux I__269 (
+            .O(N__1875),
+            .I(n152));
+    CascadeMux I__268 (
+            .O(N__1872),
+            .I(\tli.n10_cascade_ ));
+    InMux I__267 (
+            .O(N__1869),
+            .I(N__1866));
+    LocalMux I__266 (
+            .O(N__1866),
+            .I(n154));
+    InMux I__265 (
+            .O(N__1863),
+            .I(N__1860));
+    LocalMux I__264 (
+            .O(N__1860),
+            .I(n158));
+    InMux I__263 (
+            .O(N__1857),
+            .I(n1014));
+    InMux I__262 (
+            .O(N__1854),
+            .I(bfn_5_24_0_));
+    InMux I__261 (
+            .O(N__1851),
+            .I(n1016));
+    InMux I__260 (
+            .O(N__1848),
+            .I(N__1842));
+    InMux I__259 (
+            .O(N__1847),
+            .I(N__1842));
+    LocalMux I__258 (
+            .O(N__1842),
+            .I(blink_counter_25));
+    IoInMux I__257 (
+            .O(N__1839),
+            .I(N__1836));
+    LocalMux I__256 (
+            .O(N__1836),
+            .I(N__1833));
+    Odrv12 I__255 (
+            .O(N__1833),
+            .I(LED_c));
+    InMux I__254 (
+            .O(N__1830),
+            .I(N__1827));
+    LocalMux I__253 (
+            .O(N__1827),
+            .I(n1083));
+    InMux I__252 (
+            .O(N__1824),
+            .I(N__1817));
+    InMux I__251 (
+            .O(N__1823),
+            .I(N__1817));
+    InMux I__250 (
+            .O(N__1822),
+            .I(N__1814));
+    LocalMux I__249 (
+            .O(N__1817),
+            .I(blink_counter_23));
+    LocalMux I__248 (
+            .O(N__1814),
+            .I(blink_counter_23));
+    CascadeMux I__247 (
+            .O(N__1809),
+            .I(N__1805));
+    InMux I__246 (
+            .O(N__1808),
+            .I(N__1800));
+    InMux I__245 (
+            .O(N__1805),
+            .I(N__1800));
+    LocalMux I__244 (
+            .O(N__1800),
+            .I(N__1796));
+    InMux I__243 (
+            .O(N__1799),
+            .I(N__1793));
+    Odrv4 I__242 (
+            .O(N__1796),
+            .I(blink_counter_22));
+    LocalMux I__241 (
+            .O(N__1793),
+            .I(blink_counter_22));
+    CascadeMux I__240 (
+            .O(N__1788),
+            .I(N__1785));
+    InMux I__239 (
+            .O(N__1785),
+            .I(N__1776));
+    InMux I__238 (
+            .O(N__1784),
+            .I(N__1776));
+    InMux I__237 (
+            .O(N__1783),
+            .I(N__1776));
+    LocalMux I__236 (
+            .O(N__1776),
+            .I(blink_counter_24));
+    InMux I__235 (
+            .O(N__1773),
             .I(N__1766));
-    Span4Mux_h I__314 (
+    InMux I__234 (
+            .O(N__1772),
+            .I(N__1766));
+    InMux I__233 (
             .O(N__1771),
             .I(N__1763));
-    InMux I__313 (
-            .O(N__1770),
-            .I(N__1758));
-    InMux I__312 (
-            .O(N__1769),
-            .I(N__1758));
-    LocalMux I__311 (
+    LocalMux I__232 (
             .O(N__1766),
-            .I(\PWM.count_0_1 ));
-    Odrv4 I__310 (
+            .I(blink_counter_21));
+    LocalMux I__231 (
             .O(N__1763),
-            .I(\PWM.count_0_1 ));
-    LocalMux I__309 (
+            .I(blink_counter_21));
+    InMux I__230 (
             .O(N__1758),
-            .I(\PWM.count_0_1 ));
-    InMux I__308 (
-            .O(N__1751),
-            .I(N__1748));
-    LocalMux I__307 (
-            .O(N__1748),
-            .I(\PWM.n647 ));
-    InMux I__306 (
-            .O(N__1745),
-            .I(N__1742));
-    LocalMux I__305 (
-            .O(N__1742),
-            .I(\PWM.n1404 ));
-    InMux I__304 (
-            .O(N__1739),
-            .I(N__1728));
-    InMux I__303 (
-            .O(N__1738),
-            .I(N__1728));
-    InMux I__302 (
-            .O(N__1737),
-            .I(N__1728));
-    InMux I__301 (
-            .O(N__1736),
-            .I(N__1725));
-    InMux I__300 (
-            .O(N__1735),
-            .I(N__1722));
-    LocalMux I__299 (
-            .O(N__1728),
-            .I(half_duty_0_2));
-    LocalMux I__298 (
-            .O(N__1725),
-            .I(half_duty_0_2));
-    LocalMux I__297 (
-            .O(N__1722),
-            .I(half_duty_0_2));
-    CascadeMux I__296 (
-            .O(N__1715),
-            .I(N__1709));
-    CascadeMux I__295 (
-            .O(N__1714),
-            .I(N__1705));
-    CascadeMux I__294 (
-            .O(N__1713),
-            .I(N__1701));
-    CascadeMux I__293 (
-            .O(N__1712),
-            .I(N__1698));
-    InMux I__292 (
-            .O(N__1709),
-            .I(N__1690));
-    InMux I__291 (
-            .O(N__1708),
-            .I(N__1690));
-    InMux I__290 (
-            .O(N__1705),
-            .I(N__1690));
-    InMux I__289 (
-            .O(N__1704),
-            .I(N__1683));
-    InMux I__288 (
-            .O(N__1701),
-            .I(N__1683));
-    InMux I__287 (
-            .O(N__1698),
-            .I(N__1683));
-    InMux I__286 (
-            .O(N__1697),
-            .I(N__1680));
-    LocalMux I__285 (
-            .O(N__1690),
-            .I(half_duty_0_0));
-    LocalMux I__284 (
-            .O(N__1683),
-            .I(half_duty_0_0));
-    LocalMux I__283 (
-            .O(N__1680),
-            .I(half_duty_0_0));
-    InMux I__282 (
-            .O(N__1673),
-            .I(N__1667));
-    InMux I__281 (
-            .O(N__1672),
-            .I(N__1664));
-    InMux I__280 (
-            .O(N__1671),
-            .I(N__1661));
-    InMux I__279 (
-            .O(N__1670),
-            .I(N__1658));
-    LocalMux I__278 (
-            .O(N__1667),
-            .I(half_duty_0_3));
-    LocalMux I__277 (
-            .O(N__1664),
-            .I(half_duty_0_3));
-    LocalMux I__276 (
-            .O(N__1661),
-            .I(half_duty_0_3));
-    LocalMux I__275 (
-            .O(N__1658),
-            .I(half_duty_0_3));
-    InMux I__274 (
-            .O(N__1649),
-            .I(N__1645));
-    InMux I__273 (
-            .O(N__1648),
-            .I(N__1642));
-    LocalMux I__272 (
-            .O(N__1645),
-            .I(\PWM.pwm_out_0_N_43_4 ));
-    LocalMux I__271 (
-            .O(N__1642),
-            .I(\PWM.pwm_out_0_N_43_4 ));
-    InMux I__270 (
-            .O(N__1637),
-            .I(N__1632));
-    InMux I__269 (
-            .O(N__1636),
-            .I(N__1629));
-    InMux I__268 (
-            .O(N__1635),
-            .I(N__1626));
-    LocalMux I__267 (
-            .O(N__1632),
-            .I(\PWM.count_0_7 ));
-    LocalMux I__266 (
-            .O(N__1629),
-            .I(\PWM.count_0_7 ));
-    LocalMux I__265 (
-            .O(N__1626),
-            .I(\PWM.count_0_7 ));
-    InMux I__264 (
-            .O(N__1619),
-            .I(N__1616));
-    LocalMux I__263 (
-            .O(N__1616),
-            .I(\PWM.n640 ));
-    InMux I__262 (
-            .O(N__1613),
-            .I(N__1607));
-    InMux I__261 (
-            .O(N__1612),
-            .I(N__1600));
-    InMux I__260 (
-            .O(N__1611),
-            .I(N__1600));
-    InMux I__259 (
-            .O(N__1610),
-            .I(N__1600));
-    LocalMux I__258 (
-            .O(N__1607),
-            .I(\PWM.count_0_4 ));
-    LocalMux I__257 (
-            .O(N__1600),
-            .I(\PWM.count_0_4 ));
-    CascadeMux I__256 (
-            .O(N__1595),
-            .I(\PWM.n640_cascade_ ));
-    InMux I__255 (
-            .O(N__1592),
-            .I(N__1586));
-    InMux I__254 (
-            .O(N__1591),
-            .I(N__1583));
-    InMux I__253 (
-            .O(N__1590),
-            .I(N__1578));
-    InMux I__252 (
-            .O(N__1589),
-            .I(N__1578));
-    LocalMux I__251 (
-            .O(N__1586),
-            .I(\PWM.count_0_3 ));
-    LocalMux I__250 (
-            .O(N__1583),
-            .I(\PWM.count_0_3 ));
-    LocalMux I__249 (
-            .O(N__1578),
-            .I(\PWM.count_0_3 ));
-    InMux I__248 (
-            .O(N__1571),
-            .I(N__1568));
-    LocalMux I__247 (
-            .O(N__1568),
-            .I(\PWM.n1406 ));
-    CascadeMux I__246 (
-            .O(N__1565),
-            .I(\PWM.pwm_out_0__N_55_cascade_ ));
-    InMux I__245 (
-            .O(N__1562),
-            .I(N__1559));
-    LocalMux I__244 (
-            .O(N__1559),
-            .I(N__1553));
-    InMux I__243 (
-            .O(N__1558),
-            .I(N__1550));
-    InMux I__242 (
-            .O(N__1557),
-            .I(N__1547));
-    InMux I__241 (
-            .O(N__1556),
-            .I(N__1544));
-    Span4Mux_h I__240 (
-            .O(N__1553),
-            .I(N__1541));
-    LocalMux I__239 (
-            .O(N__1550),
-            .I(\PWM.count_0_2 ));
-    LocalMux I__238 (
-            .O(N__1547),
-            .I(\PWM.count_0_2 ));
-    LocalMux I__237 (
-            .O(N__1544),
-            .I(\PWM.count_0_2 ));
-    Odrv4 I__236 (
-            .O(N__1541),
-            .I(\PWM.count_0_2 ));
-    InMux I__235 (
-            .O(N__1532),
-            .I(N__1528));
-    InMux I__234 (
-            .O(N__1531),
-            .I(N__1523));
-    LocalMux I__233 (
-            .O(N__1528),
-            .I(N__1520));
-    InMux I__232 (
-            .O(N__1527),
-            .I(N__1517));
-    InMux I__231 (
-            .O(N__1526),
-            .I(N__1514));
-    LocalMux I__230 (
-            .O(N__1523),
-            .I(N__1509));
-    Span4Mux_v I__229 (
-            .O(N__1520),
-            .I(N__1509));
-    LocalMux I__228 (
-            .O(N__1517),
-            .I(\PWM.count_0_0 ));
+            .I(N__1755));
+    LocalMux I__229 (
+            .O(N__1755),
+            .I(n1084));
+    InMux I__228 (
+            .O(N__1752),
+            .I(N__1749));
     LocalMux I__227 (
-            .O(N__1514),
-            .I(\PWM.count_0_0 ));
-    Odrv4 I__226 (
-            .O(N__1509),
-            .I(\PWM.count_0_0 ));
-    CascadeMux I__225 (
-            .O(N__1502),
-            .I(\PWM.n3_cascade_ ));
+            .O(N__1749),
+            .I(n168));
+    InMux I__226 (
+            .O(N__1746),
+            .I(N__1743));
+    LocalMux I__225 (
+            .O(N__1743),
+            .I(n148));
     InMux I__224 (
-            .O(N__1499),
-            .I(N__1496));
+            .O(N__1740),
+            .I(N__1737));
     LocalMux I__223 (
-            .O(N__1496),
-            .I(\PWM.n14 ));
-    CascadeMux I__222 (
-            .O(N__1493),
-            .I(\PWM.n1370_cascade_ ));
-    CascadeMux I__221 (
-            .O(N__1490),
-            .I(\PWM.n4_cascade_ ));
-    InMux I__220 (
-            .O(N__1487),
-            .I(N__1484));
-    LocalMux I__219 (
-            .O(N__1484),
-            .I(N__1481));
-    Odrv4 I__218 (
-            .O(N__1481),
-            .I(\PWM.n1400 ));
-    CascadeMux I__217 (
-            .O(N__1478),
-            .I(\PWM.n12_cascade_ ));
-    CascadeMux I__216 (
-            .O(N__1475),
-            .I(\PWM.n13_cascade_ ));
-    InMux I__215 (
-            .O(N__1472),
-            .I(\PWM.n1283 ));
-    InMux I__214 (
-            .O(N__1469),
-            .I(\PWM.n1284 ));
-    InMux I__213 (
-            .O(N__1466),
-            .I(\PWM.n1285 ));
-    InMux I__212 (
-            .O(N__1463),
-            .I(\PWM.n1286 ));
-    InMux I__211 (
-            .O(N__1460),
-            .I(\PWM.n1287 ));
-    InMux I__210 (
-            .O(N__1457),
-            .I(\PWM.n1288 ));
-    InMux I__209 (
-            .O(N__1454),
-            .I(bfn_13_32_0_));
-    InMux I__208 (
-            .O(N__1451),
-            .I(\PWM.n1290 ));
-    InMux I__207 (
-            .O(N__1448),
-            .I(N__1445));
-    LocalMux I__206 (
-            .O(N__1445),
-            .I(n6));
-    InMux I__205 (
-            .O(N__1442),
-            .I(n1276));
-    InMux I__204 (
-            .O(N__1439),
-            .I(N__1432));
-    InMux I__203 (
-            .O(N__1438),
-            .I(N__1432));
-    InMux I__202 (
-            .O(N__1437),
-            .I(N__1429));
-    LocalMux I__201 (
-            .O(N__1432),
-            .I(blink_counter_21));
-    LocalMux I__200 (
-            .O(N__1429),
-            .I(blink_counter_21));
-    InMux I__199 (
-            .O(N__1424),
-            .I(n1277));
-    InMux I__198 (
-            .O(N__1421),
-            .I(N__1414));
-    InMux I__197 (
-            .O(N__1420),
-            .I(N__1414));
-    InMux I__196 (
-            .O(N__1419),
-            .I(N__1411));
-    LocalMux I__195 (
-            .O(N__1414),
-            .I(blink_counter_22));
-    LocalMux I__194 (
-            .O(N__1411),
-            .I(blink_counter_22));
-    InMux I__193 (
-            .O(N__1406),
-            .I(n1278));
-    CascadeMux I__192 (
-            .O(N__1403),
-            .I(N__1399));
-    CascadeMux I__191 (
-            .O(N__1402),
-            .I(N__1396));
-    InMux I__190 (
-            .O(N__1399),
-            .I(N__1390));
-    InMux I__189 (
-            .O(N__1396),
-            .I(N__1390));
-    InMux I__188 (
-            .O(N__1395),
-            .I(N__1387));
-    LocalMux I__187 (
-            .O(N__1390),
-            .I(blink_counter_23));
-    LocalMux I__186 (
-            .O(N__1387),
-            .I(blink_counter_23));
-    InMux I__185 (
-            .O(N__1382),
-            .I(n1279));
-    InMux I__184 (
-            .O(N__1379),
-            .I(N__1372));
-    InMux I__183 (
-            .O(N__1378),
-            .I(N__1372));
-    InMux I__182 (
-            .O(N__1377),
-            .I(N__1369));
-    LocalMux I__181 (
-            .O(N__1372),
-            .I(blink_counter_24));
-    LocalMux I__180 (
-            .O(N__1369),
-            .I(blink_counter_24));
-    InMux I__179 (
-            .O(N__1364),
-            .I(bfn_13_30_0_));
-    InMux I__178 (
-            .O(N__1361),
-            .I(n1281));
-    InMux I__177 (
-            .O(N__1358),
-            .I(N__1354));
-    InMux I__176 (
-            .O(N__1357),
-            .I(N__1351));
-    LocalMux I__175 (
-            .O(N__1354),
-            .I(blink_counter_25));
-    LocalMux I__174 (
-            .O(N__1351),
-            .I(blink_counter_25));
-    InMux I__173 (
-            .O(N__1346),
-            .I(bfn_13_31_0_));
-    InMux I__172 (
-            .O(N__1343),
-            .I(\PWM.n1282 ));
-    InMux I__171 (
-            .O(N__1340),
-            .I(N__1337));
-    LocalMux I__170 (
-            .O(N__1337),
-            .I(n15));
-    InMux I__169 (
-            .O(N__1334),
-            .I(n1267));
-    InMux I__168 (
-            .O(N__1331),
-            .I(N__1328));
-    LocalMux I__167 (
-            .O(N__1328),
-            .I(n14));
-    InMux I__166 (
-            .O(N__1325),
-            .I(n1268));
-    InMux I__165 (
-            .O(N__1322),
-            .I(N__1319));
-    LocalMux I__164 (
-            .O(N__1319),
-            .I(n13));
-    InMux I__163 (
-            .O(N__1316),
-            .I(n1269));
-    InMux I__162 (
-            .O(N__1313),
-            .I(N__1310));
-    LocalMux I__161 (
-            .O(N__1310),
+            .O(N__1737),
             .I(n12));
-    InMux I__160 (
-            .O(N__1307),
-            .I(n1270));
-    InMux I__159 (
-            .O(N__1304),
-            .I(N__1301));
-    LocalMux I__158 (
-            .O(N__1301),
+    InMux I__222 (
+            .O(N__1734),
+            .I(n1005));
+    InMux I__221 (
+            .O(N__1731),
+            .I(N__1728));
+    LocalMux I__220 (
+            .O(N__1728),
             .I(n11));
-    InMux I__157 (
-            .O(N__1298),
-            .I(n1271));
-    InMux I__156 (
-            .O(N__1295),
-            .I(N__1292));
-    LocalMux I__155 (
-            .O(N__1292),
+    InMux I__219 (
+            .O(N__1725),
+            .I(n1006));
+    InMux I__218 (
+            .O(N__1722),
+            .I(N__1719));
+    LocalMux I__217 (
+            .O(N__1719),
             .I(n10));
-    InMux I__154 (
-            .O(N__1289),
-            .I(bfn_13_29_0_));
-    InMux I__153 (
-            .O(N__1286),
-            .I(N__1283));
-    LocalMux I__152 (
-            .O(N__1283),
+    InMux I__216 (
+            .O(N__1716),
+            .I(bfn_5_23_0_));
+    InMux I__215 (
+            .O(N__1713),
+            .I(N__1710));
+    LocalMux I__214 (
+            .O(N__1710),
             .I(n9));
-    InMux I__151 (
-            .O(N__1280),
-            .I(n1273));
-    InMux I__150 (
-            .O(N__1277),
-            .I(N__1274));
-    LocalMux I__149 (
-            .O(N__1274),
+    InMux I__213 (
+            .O(N__1707),
+            .I(n1008));
+    InMux I__212 (
+            .O(N__1704),
+            .I(N__1701));
+    LocalMux I__211 (
+            .O(N__1701),
             .I(n8));
-    InMux I__148 (
-            .O(N__1271),
-            .I(n1274));
-    InMux I__147 (
-            .O(N__1268),
-            .I(N__1265));
-    LocalMux I__146 (
-            .O(N__1265),
+    InMux I__210 (
+            .O(N__1698),
+            .I(n1009));
+    InMux I__209 (
+            .O(N__1695),
+            .I(N__1692));
+    LocalMux I__208 (
+            .O(N__1692),
             .I(n7));
-    InMux I__145 (
-            .O(N__1262),
-            .I(n1275));
-    InMux I__144 (
-            .O(N__1259),
-            .I(N__1256));
-    LocalMux I__143 (
-            .O(N__1256),
-            .I(n23));
-    InMux I__142 (
-            .O(N__1253),
-            .I(n1259));
-    InMux I__141 (
-            .O(N__1250),
-            .I(N__1247));
-    LocalMux I__140 (
-            .O(N__1247),
-            .I(n22));
-    InMux I__139 (
-            .O(N__1244),
-            .I(n1260));
-    InMux I__138 (
-            .O(N__1241),
-            .I(N__1238));
-    LocalMux I__137 (
-            .O(N__1238),
-            .I(n21));
-    InMux I__136 (
-            .O(N__1235),
-            .I(n1261));
-    InMux I__135 (
-            .O(N__1232),
-            .I(N__1229));
-    LocalMux I__134 (
-            .O(N__1229),
+    InMux I__207 (
+            .O(N__1689),
+            .I(n1010));
+    InMux I__206 (
+            .O(N__1686),
+            .I(N__1683));
+    LocalMux I__205 (
+            .O(N__1683),
+            .I(n6));
+    InMux I__204 (
+            .O(N__1680),
+            .I(n1011));
+    InMux I__203 (
+            .O(N__1677),
+            .I(n1012));
+    InMux I__202 (
+            .O(N__1674),
+            .I(n1013));
+    InMux I__201 (
+            .O(N__1671),
+            .I(N__1668));
+    LocalMux I__200 (
+            .O(N__1668),
             .I(n20));
-    InMux I__133 (
-            .O(N__1226),
-            .I(n1262));
-    InMux I__132 (
-            .O(N__1223),
-            .I(N__1220));
-    LocalMux I__131 (
-            .O(N__1220),
+    InMux I__199 (
+            .O(N__1665),
+            .I(n997));
+    InMux I__198 (
+            .O(N__1662),
+            .I(N__1659));
+    LocalMux I__197 (
+            .O(N__1659),
             .I(n19));
-    InMux I__130 (
-            .O(N__1217),
-            .I(n1263));
-    InMux I__129 (
-            .O(N__1214),
-            .I(N__1211));
-    LocalMux I__128 (
-            .O(N__1211),
+    InMux I__196 (
+            .O(N__1656),
+            .I(n998));
+    InMux I__195 (
+            .O(N__1653),
+            .I(N__1650));
+    LocalMux I__194 (
+            .O(N__1650),
             .I(n18));
-    InMux I__127 (
-            .O(N__1208),
-            .I(bfn_13_28_0_));
-    InMux I__126 (
-            .O(N__1205),
-            .I(N__1202));
-    LocalMux I__125 (
-            .O(N__1202),
+    InMux I__193 (
+            .O(N__1647),
+            .I(bfn_5_22_0_));
+    InMux I__192 (
+            .O(N__1644),
+            .I(N__1641));
+    LocalMux I__191 (
+            .O(N__1641),
             .I(n17));
-    InMux I__124 (
-            .O(N__1199),
-            .I(n1265));
-    InMux I__123 (
-            .O(N__1196),
-            .I(N__1193));
-    LocalMux I__122 (
-            .O(N__1193),
+    InMux I__190 (
+            .O(N__1638),
+            .I(n1000));
+    InMux I__189 (
+            .O(N__1635),
+            .I(N__1632));
+    LocalMux I__188 (
+            .O(N__1632),
             .I(n16));
-    InMux I__121 (
-            .O(N__1190),
-            .I(n1266));
-    CascadeMux I__120 (
-            .O(N__1187),
-            .I(n1411_cascade_));
-    IoInMux I__119 (
-            .O(N__1184),
-            .I(N__1181));
-    LocalMux I__118 (
-            .O(N__1181),
-            .I(N__1178));
-    Span4Mux_s3_v I__117 (
-            .O(N__1178),
-            .I(N__1175));
-    Span4Mux_h I__116 (
-            .O(N__1175),
-            .I(N__1172));
-    Odrv4 I__115 (
-            .O(N__1172),
-            .I(LED_c));
-    InMux I__114 (
-            .O(N__1169),
-            .I(N__1166));
-    LocalMux I__113 (
-            .O(N__1166),
-            .I(n1410));
-    InMux I__112 (
-            .O(N__1163),
-            .I(N__1160));
-    LocalMux I__111 (
-            .O(N__1160),
+    InMux I__187 (
+            .O(N__1629),
+            .I(n1001));
+    InMux I__186 (
+            .O(N__1626),
+            .I(N__1623));
+    LocalMux I__185 (
+            .O(N__1623),
+            .I(n15));
+    InMux I__184 (
+            .O(N__1620),
+            .I(n1002));
+    InMux I__183 (
+            .O(N__1617),
+            .I(N__1614));
+    LocalMux I__182 (
+            .O(N__1614),
+            .I(n14));
+    InMux I__181 (
+            .O(N__1611),
+            .I(n1003));
+    InMux I__180 (
+            .O(N__1608),
+            .I(N__1605));
+    LocalMux I__179 (
+            .O(N__1605),
+            .I(n13));
+    InMux I__178 (
+            .O(N__1602),
+            .I(n1004));
+    CascadeMux I__177 (
+            .O(N__1599),
+            .I(N__1596));
+    InMux I__176 (
+            .O(N__1596),
+            .I(N__1587));
+    InMux I__175 (
+            .O(N__1595),
+            .I(N__1587));
+    InMux I__174 (
+            .O(N__1594),
+            .I(N__1587));
+    LocalMux I__173 (
+            .O(N__1587),
+            .I(\tli.spi.spi_2x_ce_gen_proc_clk_cnt_2 ));
+    InMux I__172 (
+            .O(N__1584),
+            .I(N__1572));
+    InMux I__171 (
+            .O(N__1583),
+            .I(N__1572));
+    InMux I__170 (
+            .O(N__1582),
+            .I(N__1572));
+    InMux I__169 (
+            .O(N__1581),
+            .I(N__1572));
+    LocalMux I__168 (
+            .O(N__1572),
+            .I(\tli.spi.spi_2x_ce_gen_proc_clk_cnt_1 ));
+    CascadeMux I__167 (
+            .O(N__1569),
+            .I(N__1565));
+    InMux I__166 (
+            .O(N__1568),
+            .I(N__1560));
+    InMux I__165 (
+            .O(N__1565),
+            .I(N__1560));
+    LocalMux I__164 (
+            .O(N__1560),
+            .I(\tli.spi.spi_2x_ce_gen_proc_clk_cnt_3 ));
+    InMux I__163 (
+            .O(N__1557),
+            .I(N__1542));
+    InMux I__162 (
+            .O(N__1556),
+            .I(N__1542));
+    InMux I__161 (
+            .O(N__1555),
+            .I(N__1542));
+    InMux I__160 (
+            .O(N__1554),
+            .I(N__1542));
+    InMux I__159 (
+            .O(N__1553),
+            .I(N__1542));
+    LocalMux I__158 (
+            .O(N__1542),
+            .I(\tli.spi.spi_2x_ce_gen_proc_clk_cnt_0 ));
+    InMux I__157 (
+            .O(N__1539),
+            .I(N__1536));
+    LocalMux I__156 (
+            .O(N__1536),
             .I(n26));
-    InMux I__110 (
-            .O(N__1157),
-            .I(bfn_13_27_0_));
-    InMux I__109 (
-            .O(N__1154),
-            .I(N__1151));
-    LocalMux I__108 (
-            .O(N__1151),
+    InMux I__155 (
+            .O(N__1533),
+            .I(bfn_5_21_0_));
+    InMux I__154 (
+            .O(N__1530),
+            .I(N__1527));
+    LocalMux I__153 (
+            .O(N__1527),
             .I(n25));
-    InMux I__107 (
-            .O(N__1148),
-            .I(n1257));
-    InMux I__106 (
-            .O(N__1145),
-            .I(N__1142));
-    LocalMux I__105 (
-            .O(N__1142),
+    InMux I__152 (
+            .O(N__1524),
+            .I(n992));
+    InMux I__151 (
+            .O(N__1521),
+            .I(N__1518));
+    LocalMux I__150 (
+            .O(N__1518),
             .I(n24));
-    InMux I__104 (
-            .O(N__1139),
-            .I(n1258));
-    IoInMux I__103 (
-            .O(N__1136),
-            .I(N__1133));
-    LocalMux I__102 (
-            .O(N__1133),
-            .I(N__1130));
-    IoSpan4Mux I__101 (
-            .O(N__1130),
-            .I(N__1127));
-    IoSpan4Mux I__100 (
-            .O(N__1127),
-            .I(N__1124));
-    IoSpan4Mux I__99 (
-            .O(N__1124),
-            .I(N__1121));
-    Odrv4 I__98 (
-            .O(N__1121),
+    InMux I__149 (
+            .O(N__1515),
+            .I(n993));
+    InMux I__148 (
+            .O(N__1512),
+            .I(N__1509));
+    LocalMux I__147 (
+            .O(N__1509),
+            .I(n23));
+    InMux I__146 (
+            .O(N__1506),
+            .I(n994));
+    InMux I__145 (
+            .O(N__1503),
+            .I(N__1500));
+    LocalMux I__144 (
+            .O(N__1500),
+            .I(n22));
+    InMux I__143 (
+            .O(N__1497),
+            .I(n995));
+    InMux I__142 (
+            .O(N__1494),
+            .I(N__1491));
+    LocalMux I__141 (
+            .O(N__1491),
+            .I(n21));
+    InMux I__140 (
+            .O(N__1488),
+            .I(n996));
+    InMux I__139 (
+            .O(N__1485),
+            .I(N__1479));
+    InMux I__138 (
+            .O(N__1484),
+            .I(N__1479));
+    LocalMux I__137 (
+            .O(N__1479),
+            .I(n370));
+    InMux I__136 (
+            .O(N__1476),
+            .I(N__1473));
+    LocalMux I__135 (
+            .O(N__1473),
+            .I(n368));
+    InMux I__134 (
+            .O(N__1470),
+            .I(N__1466));
+    InMux I__133 (
+            .O(N__1469),
+            .I(N__1463));
+    LocalMux I__132 (
+            .O(N__1466),
+            .I(spi_2x_ce));
+    LocalMux I__131 (
+            .O(N__1463),
+            .I(spi_2x_ce));
+    IoInMux I__130 (
+            .O(N__1458),
+            .I(N__1455));
+    LocalMux I__129 (
+            .O(N__1455),
+            .I(N__1452));
+    IoSpan4Mux I__128 (
+            .O(N__1452),
+            .I(N__1449));
+    IoSpan4Mux I__127 (
+            .O(N__1449),
+            .I(N__1446));
+    IoSpan4Mux I__126 (
+            .O(N__1446),
+            .I(N__1443));
+    Odrv4 I__125 (
+            .O(N__1443),
             .I(CLK_pad_gb_input));
-    defparam IN_MUX_bfv_13_27_0_.C_INIT=2'b01;
-    ICE_CARRY_IN_MUX IN_MUX_bfv_13_27_0_ (
+    defparam IN_MUX_bfv_7_22_0_.C_INIT=2'b01;
+    ICE_CARRY_IN_MUX IN_MUX_bfv_7_22_0_ (
             .carryinitin(),
-            .carryinitout(bfn_13_27_0_));
-    defparam IN_MUX_bfv_13_28_0_.C_INIT=2'b10;
-    ICE_CARRY_IN_MUX IN_MUX_bfv_13_28_0_ (
-            .carryinitin(n1264),
-            .carryinitout(bfn_13_28_0_));
-    defparam IN_MUX_bfv_13_29_0_.C_INIT=2'b10;
-    ICE_CARRY_IN_MUX IN_MUX_bfv_13_29_0_ (
-            .carryinitin(n1272),
-            .carryinitout(bfn_13_29_0_));
-    defparam IN_MUX_bfv_13_30_0_.C_INIT=2'b10;
-    ICE_CARRY_IN_MUX IN_MUX_bfv_13_30_0_ (
-            .carryinitin(n1280),
-            .carryinitout(bfn_13_30_0_));
-    defparam IN_MUX_bfv_13_31_0_.C_INIT=2'b01;
-    ICE_CARRY_IN_MUX IN_MUX_bfv_13_31_0_ (
+            .carryinitout(bfn_7_22_0_));
+    defparam IN_MUX_bfv_7_23_0_.C_INIT=2'b10;
+    ICE_CARRY_IN_MUX IN_MUX_bfv_7_23_0_ (
+            .carryinitin(\tli.n1024 ),
+            .carryinitout(bfn_7_23_0_));
+    defparam IN_MUX_bfv_7_24_0_.C_INIT=2'b10;
+    ICE_CARRY_IN_MUX IN_MUX_bfv_7_24_0_ (
+            .carryinitin(\tli.n1032 ),
+            .carryinitout(bfn_7_24_0_));
+    defparam IN_MUX_bfv_7_25_0_.C_INIT=2'b10;
+    ICE_CARRY_IN_MUX IN_MUX_bfv_7_25_0_ (
+            .carryinitin(\tli.n1040 ),
+            .carryinitout(bfn_7_25_0_));
+    defparam IN_MUX_bfv_5_21_0_.C_INIT=2'b01;
+    ICE_CARRY_IN_MUX IN_MUX_bfv_5_21_0_ (
             .carryinitin(),
-            .carryinitout(bfn_13_31_0_));
-    defparam IN_MUX_bfv_13_32_0_.C_INIT=2'b10;
-    ICE_CARRY_IN_MUX IN_MUX_bfv_13_32_0_ (
-            .carryinitin(\PWM.n1289 ),
-            .carryinitout(bfn_13_32_0_));
+            .carryinitout(bfn_5_21_0_));
+    defparam IN_MUX_bfv_5_22_0_.C_INIT=2'b10;
+    ICE_CARRY_IN_MUX IN_MUX_bfv_5_22_0_ (
+            .carryinitin(n999),
+            .carryinitout(bfn_5_22_0_));
+    defparam IN_MUX_bfv_5_23_0_.C_INIT=2'b10;
+    ICE_CARRY_IN_MUX IN_MUX_bfv_5_23_0_ (
+            .carryinitin(n1007),
+            .carryinitout(bfn_5_23_0_));
+    defparam IN_MUX_bfv_5_24_0_.C_INIT=2'b10;
+    ICE_CARRY_IN_MUX IN_MUX_bfv_5_24_0_ (
+            .carryinitin(n1015),
+            .carryinitout(bfn_5_24_0_));
     ICE_GB CLK_pad_gb (
-            .USERSIGNALTOGLOBALBUFFER(N__1136),
-            .GLOBALBUFFEROUTPUT(CLK_c));
+            .USERSIGNALTOGLOBALBUFFER(N__1458),
+            .GLOBALBUFFEROUTPUT(CLK_N));
     VCC VCC (
             .Y(VCCG0));
     GND GND (
             .Y(GNDG0));
     GND GND_Inst (
             .Y(_gnd_net_));
-    defparam i913_4_lut_LC_12_29_3.C_ON=1'b0;
-    defparam i913_4_lut_LC_12_29_3.SEQ_MODE=4'b0000;
-    defparam i913_4_lut_LC_12_29_3.LUT_INIT=16'b1111111010110000;
-    LogicCell40 i913_4_lut_LC_12_29_3 (
-            .in0(N__1379),
-            .in1(N__1421),
-            .in2(N__1403),
-            .in3(N__1439),
-            .lcout(),
-            .ltout(n1411_cascade_),
+    defparam \tli.spi.core_n_clk_101_LC_4_21_0 .C_ON=1'b0;
+    defparam \tli.spi.core_n_clk_101_LC_4_21_0 .SEQ_MODE=4'b1000;
+    defparam \tli.spi.core_n_clk_101_LC_4_21_0 .LUT_INIT=16'b0011001111001100;
+    LogicCell40 \tli.spi.core_n_clk_101_LC_4_21_0  (
+            .in0(_gnd_net_),
+            .in1(N__1469),
+            .in2(_gnd_net_),
+            .in3(N__1484),
+            .lcout(n370),
+            .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
-            .clk(_gnd_net_),
+            .clk(N__2481),
             .ce(),
             .sr(_gnd_net_));
-    defparam i914_3_lut_LC_12_29_4.C_ON=1'b0;
-    defparam i914_3_lut_LC_12_29_4.SEQ_MODE=4'b0000;
-    defparam i914_3_lut_LC_12_29_4.LUT_INIT=16'b0000111101010101;
-    LogicCell40 i914_3_lut_LC_12_29_4 (
-            .in0(N__1169),
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i1_LC_4_21_2 .C_ON=1'b0;
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i1_LC_4_21_2 .SEQ_MODE=4'b1000;
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i1_LC_4_21_2 .LUT_INIT=16'b0101010110101010;
+    LogicCell40 \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i1_LC_4_21_2  (
+            .in0(N__1555),
             .in1(_gnd_net_),
-            .in2(N__1187),
-            .in3(N__1358),
+            .in2(_gnd_net_),
+            .in3(N__1581),
+            .lcout(\tli.spi.spi_2x_ce_gen_proc_clk_cnt_1 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2481),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i2_LC_4_21_3 .C_ON=1'b0;
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i2_LC_4_21_3 .SEQ_MODE=4'b1000;
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i2_LC_4_21_3 .LUT_INIT=16'b0110011011001100;
+    LogicCell40 \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i2_LC_4_21_3  (
+            .in0(N__1582),
+            .in1(N__1595),
+            .in2(_gnd_net_),
+            .in3(N__1556),
+            .lcout(\tli.spi.spi_2x_ce_gen_proc_clk_cnt_2 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2481),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.spi.core_clk_100_LC_4_21_4 .C_ON=1'b0;
+    defparam \tli.spi.core_clk_100_LC_4_21_4 .SEQ_MODE=4'b1000;
+    defparam \tli.spi.core_clk_100_LC_4_21_4 .LUT_INIT=16'b1110111001000100;
+    LogicCell40 \tli.spi.core_clk_100_LC_4_21_4  (
+            .in0(N__1470),
+            .in1(N__1476),
+            .in2(_gnd_net_),
+            .in3(N__1485),
+            .lcout(n368),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2481),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.spi.spi_2x_ce_98_LC_4_21_5 .C_ON=1'b0;
+    defparam \tli.spi.spi_2x_ce_98_LC_4_21_5 .SEQ_MODE=4'b1000;
+    defparam \tli.spi.spi_2x_ce_98_LC_4_21_5 .LUT_INIT=16'b1000000000000000;
+    LogicCell40 \tli.spi.spi_2x_ce_98_LC_4_21_5  (
+            .in0(N__1584),
+            .in1(N__1594),
+            .in2(N__1569),
+            .in3(N__1553),
+            .lcout(spi_2x_ce),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2481),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i3_LC_4_21_6 .C_ON=1'b0;
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i3_LC_4_21_6 .SEQ_MODE=4'b1000;
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i3_LC_4_21_6 .LUT_INIT=16'b0110110011001100;
+    LogicCell40 \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i3_LC_4_21_6  (
+            .in0(N__1557),
+            .in1(N__1568),
+            .in2(N__1599),
+            .in3(N__1583),
+            .lcout(\tli.spi.spi_2x_ce_gen_proc_clk_cnt_3 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2481),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i0_LC_4_21_7 .C_ON=1'b0;
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i0_LC_4_21_7 .SEQ_MODE=4'b1000;
+    defparam \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i0_LC_4_21_7 .LUT_INIT=16'b0000000011111111;
+    LogicCell40 \tli.spi.spi_2x_ce_gen_proc_clk_cnt_184__i0_LC_4_21_7  (
+            .in0(_gnd_net_),
+            .in1(_gnd_net_),
+            .in2(_gnd_net_),
+            .in3(N__1554),
+            .lcout(\tli.spi.spi_2x_ce_gen_proc_clk_cnt_0 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2481),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i0_LC_5_21_0.C_ON=1'b1;
+    defparam blink_counter_182__i0_LC_5_21_0.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i0_LC_5_21_0.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i0_LC_5_21_0 (
+            .in0(_gnd_net_),
+            .in1(N__1539),
+            .in2(_gnd_net_),
+            .in3(N__1533),
+            .lcout(n26),
+            .ltout(),
+            .carryin(bfn_5_21_0_),
+            .carryout(n992),
+            .clk(N__2482),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i1_LC_5_21_1.C_ON=1'b1;
+    defparam blink_counter_182__i1_LC_5_21_1.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i1_LC_5_21_1.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i1_LC_5_21_1 (
+            .in0(_gnd_net_),
+            .in1(N__1530),
+            .in2(_gnd_net_),
+            .in3(N__1524),
+            .lcout(n25),
+            .ltout(),
+            .carryin(n992),
+            .carryout(n993),
+            .clk(N__2482),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i2_LC_5_21_2.C_ON=1'b1;
+    defparam blink_counter_182__i2_LC_5_21_2.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i2_LC_5_21_2.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i2_LC_5_21_2 (
+            .in0(_gnd_net_),
+            .in1(N__1521),
+            .in2(_gnd_net_),
+            .in3(N__1515),
+            .lcout(n24),
+            .ltout(),
+            .carryin(n993),
+            .carryout(n994),
+            .clk(N__2482),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i3_LC_5_21_3.C_ON=1'b1;
+    defparam blink_counter_182__i3_LC_5_21_3.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i3_LC_5_21_3.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i3_LC_5_21_3 (
+            .in0(_gnd_net_),
+            .in1(N__1512),
+            .in2(_gnd_net_),
+            .in3(N__1506),
+            .lcout(n23),
+            .ltout(),
+            .carryin(n994),
+            .carryout(n995),
+            .clk(N__2482),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i4_LC_5_21_4.C_ON=1'b1;
+    defparam blink_counter_182__i4_LC_5_21_4.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i4_LC_5_21_4.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i4_LC_5_21_4 (
+            .in0(_gnd_net_),
+            .in1(N__1503),
+            .in2(_gnd_net_),
+            .in3(N__1497),
+            .lcout(n22),
+            .ltout(),
+            .carryin(n995),
+            .carryout(n996),
+            .clk(N__2482),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i5_LC_5_21_5.C_ON=1'b1;
+    defparam blink_counter_182__i5_LC_5_21_5.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i5_LC_5_21_5.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i5_LC_5_21_5 (
+            .in0(_gnd_net_),
+            .in1(N__1494),
+            .in2(_gnd_net_),
+            .in3(N__1488),
+            .lcout(n21),
+            .ltout(),
+            .carryin(n996),
+            .carryout(n997),
+            .clk(N__2482),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i6_LC_5_21_6.C_ON=1'b1;
+    defparam blink_counter_182__i6_LC_5_21_6.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i6_LC_5_21_6.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i6_LC_5_21_6 (
+            .in0(_gnd_net_),
+            .in1(N__1671),
+            .in2(_gnd_net_),
+            .in3(N__1665),
+            .lcout(n20),
+            .ltout(),
+            .carryin(n997),
+            .carryout(n998),
+            .clk(N__2482),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i7_LC_5_21_7.C_ON=1'b1;
+    defparam blink_counter_182__i7_LC_5_21_7.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i7_LC_5_21_7.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i7_LC_5_21_7 (
+            .in0(_gnd_net_),
+            .in1(N__1662),
+            .in2(_gnd_net_),
+            .in3(N__1656),
+            .lcout(n19),
+            .ltout(),
+            .carryin(n998),
+            .carryout(n999),
+            .clk(N__2482),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i8_LC_5_22_0.C_ON=1'b1;
+    defparam blink_counter_182__i8_LC_5_22_0.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i8_LC_5_22_0.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i8_LC_5_22_0 (
+            .in0(_gnd_net_),
+            .in1(N__1653),
+            .in2(_gnd_net_),
+            .in3(N__1647),
+            .lcout(n18),
+            .ltout(),
+            .carryin(bfn_5_22_0_),
+            .carryout(n1000),
+            .clk(N__2483),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i9_LC_5_22_1.C_ON=1'b1;
+    defparam blink_counter_182__i9_LC_5_22_1.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i9_LC_5_22_1.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i9_LC_5_22_1 (
+            .in0(_gnd_net_),
+            .in1(N__1644),
+            .in2(_gnd_net_),
+            .in3(N__1638),
+            .lcout(n17),
+            .ltout(),
+            .carryin(n1000),
+            .carryout(n1001),
+            .clk(N__2483),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i10_LC_5_22_2.C_ON=1'b1;
+    defparam blink_counter_182__i10_LC_5_22_2.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i10_LC_5_22_2.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i10_LC_5_22_2 (
+            .in0(_gnd_net_),
+            .in1(N__1635),
+            .in2(_gnd_net_),
+            .in3(N__1629),
+            .lcout(n16),
+            .ltout(),
+            .carryin(n1001),
+            .carryout(n1002),
+            .clk(N__2483),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i11_LC_5_22_3.C_ON=1'b1;
+    defparam blink_counter_182__i11_LC_5_22_3.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i11_LC_5_22_3.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i11_LC_5_22_3 (
+            .in0(_gnd_net_),
+            .in1(N__1626),
+            .in2(_gnd_net_),
+            .in3(N__1620),
+            .lcout(n15),
+            .ltout(),
+            .carryin(n1002),
+            .carryout(n1003),
+            .clk(N__2483),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i12_LC_5_22_4.C_ON=1'b1;
+    defparam blink_counter_182__i12_LC_5_22_4.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i12_LC_5_22_4.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i12_LC_5_22_4 (
+            .in0(_gnd_net_),
+            .in1(N__1617),
+            .in2(_gnd_net_),
+            .in3(N__1611),
+            .lcout(n14),
+            .ltout(),
+            .carryin(n1003),
+            .carryout(n1004),
+            .clk(N__2483),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i13_LC_5_22_5.C_ON=1'b1;
+    defparam blink_counter_182__i13_LC_5_22_5.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i13_LC_5_22_5.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i13_LC_5_22_5 (
+            .in0(_gnd_net_),
+            .in1(N__1608),
+            .in2(_gnd_net_),
+            .in3(N__1602),
+            .lcout(n13),
+            .ltout(),
+            .carryin(n1004),
+            .carryout(n1005),
+            .clk(N__2483),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i14_LC_5_22_6.C_ON=1'b1;
+    defparam blink_counter_182__i14_LC_5_22_6.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i14_LC_5_22_6.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i14_LC_5_22_6 (
+            .in0(_gnd_net_),
+            .in1(N__1740),
+            .in2(_gnd_net_),
+            .in3(N__1734),
+            .lcout(n12),
+            .ltout(),
+            .carryin(n1005),
+            .carryout(n1006),
+            .clk(N__2483),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i15_LC_5_22_7.C_ON=1'b1;
+    defparam blink_counter_182__i15_LC_5_22_7.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i15_LC_5_22_7.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i15_LC_5_22_7 (
+            .in0(_gnd_net_),
+            .in1(N__1731),
+            .in2(_gnd_net_),
+            .in3(N__1725),
+            .lcout(n11),
+            .ltout(),
+            .carryin(n1006),
+            .carryout(n1007),
+            .clk(N__2483),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i16_LC_5_23_0.C_ON=1'b1;
+    defparam blink_counter_182__i16_LC_5_23_0.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i16_LC_5_23_0.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i16_LC_5_23_0 (
+            .in0(_gnd_net_),
+            .in1(N__1722),
+            .in2(_gnd_net_),
+            .in3(N__1716),
+            .lcout(n10),
+            .ltout(),
+            .carryin(bfn_5_23_0_),
+            .carryout(n1008),
+            .clk(N__2484),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i17_LC_5_23_1.C_ON=1'b1;
+    defparam blink_counter_182__i17_LC_5_23_1.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i17_LC_5_23_1.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i17_LC_5_23_1 (
+            .in0(_gnd_net_),
+            .in1(N__1713),
+            .in2(_gnd_net_),
+            .in3(N__1707),
+            .lcout(n9),
+            .ltout(),
+            .carryin(n1008),
+            .carryout(n1009),
+            .clk(N__2484),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i18_LC_5_23_2.C_ON=1'b1;
+    defparam blink_counter_182__i18_LC_5_23_2.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i18_LC_5_23_2.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i18_LC_5_23_2 (
+            .in0(_gnd_net_),
+            .in1(N__1704),
+            .in2(_gnd_net_),
+            .in3(N__1698),
+            .lcout(n8),
+            .ltout(),
+            .carryin(n1009),
+            .carryout(n1010),
+            .clk(N__2484),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i19_LC_5_23_3.C_ON=1'b1;
+    defparam blink_counter_182__i19_LC_5_23_3.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i19_LC_5_23_3.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i19_LC_5_23_3 (
+            .in0(_gnd_net_),
+            .in1(N__1695),
+            .in2(_gnd_net_),
+            .in3(N__1689),
+            .lcout(n7),
+            .ltout(),
+            .carryin(n1010),
+            .carryout(n1011),
+            .clk(N__2484),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i20_LC_5_23_4.C_ON=1'b1;
+    defparam blink_counter_182__i20_LC_5_23_4.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i20_LC_5_23_4.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i20_LC_5_23_4 (
+            .in0(_gnd_net_),
+            .in1(N__1686),
+            .in2(_gnd_net_),
+            .in3(N__1680),
+            .lcout(n6),
+            .ltout(),
+            .carryin(n1011),
+            .carryout(n1012),
+            .clk(N__2484),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i21_LC_5_23_5.C_ON=1'b1;
+    defparam blink_counter_182__i21_LC_5_23_5.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i21_LC_5_23_5.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i21_LC_5_23_5 (
+            .in0(_gnd_net_),
+            .in1(N__1771),
+            .in2(_gnd_net_),
+            .in3(N__1677),
+            .lcout(blink_counter_21),
+            .ltout(),
+            .carryin(n1012),
+            .carryout(n1013),
+            .clk(N__2484),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i22_LC_5_23_6.C_ON=1'b1;
+    defparam blink_counter_182__i22_LC_5_23_6.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i22_LC_5_23_6.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i22_LC_5_23_6 (
+            .in0(_gnd_net_),
+            .in1(N__1799),
+            .in2(_gnd_net_),
+            .in3(N__1674),
+            .lcout(blink_counter_22),
+            .ltout(),
+            .carryin(n1013),
+            .carryout(n1014),
+            .clk(N__2484),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i23_LC_5_23_7.C_ON=1'b1;
+    defparam blink_counter_182__i23_LC_5_23_7.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i23_LC_5_23_7.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i23_LC_5_23_7 (
+            .in0(_gnd_net_),
+            .in1(N__1822),
+            .in2(_gnd_net_),
+            .in3(N__1857),
+            .lcout(blink_counter_23),
+            .ltout(),
+            .carryin(n1014),
+            .carryout(n1015),
+            .clk(N__2484),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i24_LC_5_24_0.C_ON=1'b1;
+    defparam blink_counter_182__i24_LC_5_24_0.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i24_LC_5_24_0.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i24_LC_5_24_0 (
+            .in0(_gnd_net_),
+            .in1(N__1783),
+            .in2(_gnd_net_),
+            .in3(N__1854),
+            .lcout(blink_counter_24),
+            .ltout(),
+            .carryin(bfn_5_24_0_),
+            .carryout(n1016),
+            .clk(N__2486),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam blink_counter_182__i25_LC_5_24_1.C_ON=1'b0;
+    defparam blink_counter_182__i25_LC_5_24_1.SEQ_MODE=4'b1000;
+    defparam blink_counter_182__i25_LC_5_24_1.LUT_INIT=16'b1100001100111100;
+    LogicCell40 blink_counter_182__i25_LC_5_24_1 (
+            .in0(_gnd_net_),
+            .in1(N__1847),
+            .in2(_gnd_net_),
+            .in3(N__1851),
+            .lcout(blink_counter_25),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2486),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam i715_3_lut_LC_5_24_2.C_ON=1'b0;
+    defparam i715_3_lut_LC_5_24_2.SEQ_MODE=4'b0000;
+    defparam i715_3_lut_LC_5_24_2.LUT_INIT=16'b0001000110111011;
+    LogicCell40 i715_3_lut_LC_5_24_2 (
+            .in0(N__1848),
+            .in1(N__1830),
+            .in2(_gnd_net_),
+            .in3(N__1758),
             .lcout(LED_c),
             .ltout(),
             .carryin(_gnd_net_),
@@ -2173,1060 +2918,940 @@ module TinyFPGA_B (
             .clk(_gnd_net_),
             .ce(),
             .sr(_gnd_net_));
-    defparam i912_4_lut_LC_12_29_7.C_ON=1'b0;
-    defparam i912_4_lut_LC_12_29_7.SEQ_MODE=4'b0000;
-    defparam i912_4_lut_LC_12_29_7.LUT_INIT=16'b1101110101000000;
-    LogicCell40 i912_4_lut_LC_12_29_7 (
-            .in0(N__1378),
-            .in1(N__1420),
-            .in2(N__1402),
-            .in3(N__1438),
-            .lcout(n1410),
+    defparam i713_4_lut_LC_5_24_4.C_ON=1'b0;
+    defparam i713_4_lut_LC_5_24_4.SEQ_MODE=4'b0000;
+    defparam i713_4_lut_LC_5_24_4.LUT_INIT=16'b1011001010100010;
+    LogicCell40 i713_4_lut_LC_5_24_4 (
+            .in0(N__1772),
+            .in1(N__1784),
+            .in2(N__1809),
+            .in3(N__1823),
+            .lcout(n1083),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
             .clk(_gnd_net_),
             .ce(),
             .sr(_gnd_net_));
-    defparam blink_counter_49__i0_LC_13_27_0.C_ON=1'b1;
-    defparam blink_counter_49__i0_LC_13_27_0.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i0_LC_13_27_0.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i0_LC_13_27_0 (
-            .in0(_gnd_net_),
-            .in1(N__1163),
-            .in2(_gnd_net_),
-            .in3(N__1157),
-            .lcout(n26),
-            .ltout(),
-            .carryin(bfn_13_27_0_),
-            .carryout(n1257),
-            .clk(N__1965),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i1_LC_13_27_1.C_ON=1'b1;
-    defparam blink_counter_49__i1_LC_13_27_1.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i1_LC_13_27_1.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i1_LC_13_27_1 (
-            .in0(_gnd_net_),
-            .in1(N__1154),
-            .in2(_gnd_net_),
-            .in3(N__1148),
-            .lcout(n25),
-            .ltout(),
-            .carryin(n1257),
-            .carryout(n1258),
-            .clk(N__1965),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i2_LC_13_27_2.C_ON=1'b1;
-    defparam blink_counter_49__i2_LC_13_27_2.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i2_LC_13_27_2.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i2_LC_13_27_2 (
-            .in0(_gnd_net_),
-            .in1(N__1145),
-            .in2(_gnd_net_),
-            .in3(N__1139),
-            .lcout(n24),
-            .ltout(),
-            .carryin(n1258),
-            .carryout(n1259),
-            .clk(N__1965),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i3_LC_13_27_3.C_ON=1'b1;
-    defparam blink_counter_49__i3_LC_13_27_3.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i3_LC_13_27_3.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i3_LC_13_27_3 (
-            .in0(_gnd_net_),
-            .in1(N__1259),
-            .in2(_gnd_net_),
-            .in3(N__1253),
-            .lcout(n23),
-            .ltout(),
-            .carryin(n1259),
-            .carryout(n1260),
-            .clk(N__1965),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i4_LC_13_27_4.C_ON=1'b1;
-    defparam blink_counter_49__i4_LC_13_27_4.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i4_LC_13_27_4.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i4_LC_13_27_4 (
-            .in0(_gnd_net_),
-            .in1(N__1250),
-            .in2(_gnd_net_),
-            .in3(N__1244),
-            .lcout(n22),
-            .ltout(),
-            .carryin(n1260),
-            .carryout(n1261),
-            .clk(N__1965),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i5_LC_13_27_5.C_ON=1'b1;
-    defparam blink_counter_49__i5_LC_13_27_5.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i5_LC_13_27_5.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i5_LC_13_27_5 (
-            .in0(_gnd_net_),
-            .in1(N__1241),
-            .in2(_gnd_net_),
-            .in3(N__1235),
-            .lcout(n21),
-            .ltout(),
-            .carryin(n1261),
-            .carryout(n1262),
-            .clk(N__1965),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i6_LC_13_27_6.C_ON=1'b1;
-    defparam blink_counter_49__i6_LC_13_27_6.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i6_LC_13_27_6.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i6_LC_13_27_6 (
-            .in0(_gnd_net_),
-            .in1(N__1232),
-            .in2(_gnd_net_),
-            .in3(N__1226),
-            .lcout(n20),
-            .ltout(),
-            .carryin(n1262),
-            .carryout(n1263),
-            .clk(N__1965),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i7_LC_13_27_7.C_ON=1'b1;
-    defparam blink_counter_49__i7_LC_13_27_7.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i7_LC_13_27_7.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i7_LC_13_27_7 (
-            .in0(_gnd_net_),
-            .in1(N__1223),
-            .in2(_gnd_net_),
-            .in3(N__1217),
-            .lcout(n19),
-            .ltout(),
-            .carryin(n1263),
-            .carryout(n1264),
-            .clk(N__1965),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i8_LC_13_28_0.C_ON=1'b1;
-    defparam blink_counter_49__i8_LC_13_28_0.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i8_LC_13_28_0.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i8_LC_13_28_0 (
-            .in0(_gnd_net_),
-            .in1(N__1214),
-            .in2(_gnd_net_),
-            .in3(N__1208),
-            .lcout(n18),
-            .ltout(),
-            .carryin(bfn_13_28_0_),
-            .carryout(n1265),
-            .clk(N__1966),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i9_LC_13_28_1.C_ON=1'b1;
-    defparam blink_counter_49__i9_LC_13_28_1.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i9_LC_13_28_1.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i9_LC_13_28_1 (
-            .in0(_gnd_net_),
-            .in1(N__1205),
-            .in2(_gnd_net_),
-            .in3(N__1199),
-            .lcout(n17),
-            .ltout(),
-            .carryin(n1265),
-            .carryout(n1266),
-            .clk(N__1966),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i10_LC_13_28_2.C_ON=1'b1;
-    defparam blink_counter_49__i10_LC_13_28_2.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i10_LC_13_28_2.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i10_LC_13_28_2 (
-            .in0(_gnd_net_),
-            .in1(N__1196),
-            .in2(_gnd_net_),
-            .in3(N__1190),
-            .lcout(n16),
-            .ltout(),
-            .carryin(n1266),
-            .carryout(n1267),
-            .clk(N__1966),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i11_LC_13_28_3.C_ON=1'b1;
-    defparam blink_counter_49__i11_LC_13_28_3.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i11_LC_13_28_3.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i11_LC_13_28_3 (
-            .in0(_gnd_net_),
-            .in1(N__1340),
-            .in2(_gnd_net_),
-            .in3(N__1334),
-            .lcout(n15),
-            .ltout(),
-            .carryin(n1267),
-            .carryout(n1268),
-            .clk(N__1966),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i12_LC_13_28_4.C_ON=1'b1;
-    defparam blink_counter_49__i12_LC_13_28_4.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i12_LC_13_28_4.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i12_LC_13_28_4 (
-            .in0(_gnd_net_),
-            .in1(N__1331),
-            .in2(_gnd_net_),
-            .in3(N__1325),
-            .lcout(n14),
-            .ltout(),
-            .carryin(n1268),
-            .carryout(n1269),
-            .clk(N__1966),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i13_LC_13_28_5.C_ON=1'b1;
-    defparam blink_counter_49__i13_LC_13_28_5.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i13_LC_13_28_5.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i13_LC_13_28_5 (
-            .in0(_gnd_net_),
-            .in1(N__1322),
-            .in2(_gnd_net_),
-            .in3(N__1316),
-            .lcout(n13),
-            .ltout(),
-            .carryin(n1269),
-            .carryout(n1270),
-            .clk(N__1966),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i14_LC_13_28_6.C_ON=1'b1;
-    defparam blink_counter_49__i14_LC_13_28_6.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i14_LC_13_28_6.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i14_LC_13_28_6 (
-            .in0(_gnd_net_),
-            .in1(N__1313),
-            .in2(_gnd_net_),
-            .in3(N__1307),
-            .lcout(n12),
-            .ltout(),
-            .carryin(n1270),
-            .carryout(n1271),
-            .clk(N__1966),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i15_LC_13_28_7.C_ON=1'b1;
-    defparam blink_counter_49__i15_LC_13_28_7.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i15_LC_13_28_7.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i15_LC_13_28_7 (
-            .in0(_gnd_net_),
-            .in1(N__1304),
-            .in2(_gnd_net_),
-            .in3(N__1298),
-            .lcout(n11),
-            .ltout(),
-            .carryin(n1271),
-            .carryout(n1272),
-            .clk(N__1966),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i16_LC_13_29_0.C_ON=1'b1;
-    defparam blink_counter_49__i16_LC_13_29_0.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i16_LC_13_29_0.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i16_LC_13_29_0 (
-            .in0(_gnd_net_),
-            .in1(N__1295),
-            .in2(_gnd_net_),
-            .in3(N__1289),
-            .lcout(n10),
-            .ltout(),
-            .carryin(bfn_13_29_0_),
-            .carryout(n1273),
-            .clk(N__1967),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i17_LC_13_29_1.C_ON=1'b1;
-    defparam blink_counter_49__i17_LC_13_29_1.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i17_LC_13_29_1.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i17_LC_13_29_1 (
-            .in0(_gnd_net_),
-            .in1(N__1286),
-            .in2(_gnd_net_),
-            .in3(N__1280),
-            .lcout(n9),
-            .ltout(),
-            .carryin(n1273),
-            .carryout(n1274),
-            .clk(N__1967),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i18_LC_13_29_2.C_ON=1'b1;
-    defparam blink_counter_49__i18_LC_13_29_2.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i18_LC_13_29_2.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i18_LC_13_29_2 (
-            .in0(_gnd_net_),
-            .in1(N__1277),
-            .in2(_gnd_net_),
-            .in3(N__1271),
-            .lcout(n8),
-            .ltout(),
-            .carryin(n1274),
-            .carryout(n1275),
-            .clk(N__1967),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i19_LC_13_29_3.C_ON=1'b1;
-    defparam blink_counter_49__i19_LC_13_29_3.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i19_LC_13_29_3.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i19_LC_13_29_3 (
-            .in0(_gnd_net_),
-            .in1(N__1268),
-            .in2(_gnd_net_),
-            .in3(N__1262),
-            .lcout(n7),
-            .ltout(),
-            .carryin(n1275),
-            .carryout(n1276),
-            .clk(N__1967),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i20_LC_13_29_4.C_ON=1'b1;
-    defparam blink_counter_49__i20_LC_13_29_4.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i20_LC_13_29_4.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i20_LC_13_29_4 (
-            .in0(_gnd_net_),
-            .in1(N__1448),
-            .in2(_gnd_net_),
-            .in3(N__1442),
-            .lcout(n6),
-            .ltout(),
-            .carryin(n1276),
-            .carryout(n1277),
-            .clk(N__1967),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i21_LC_13_29_5.C_ON=1'b1;
-    defparam blink_counter_49__i21_LC_13_29_5.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i21_LC_13_29_5.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i21_LC_13_29_5 (
-            .in0(_gnd_net_),
-            .in1(N__1437),
-            .in2(_gnd_net_),
-            .in3(N__1424),
-            .lcout(blink_counter_21),
-            .ltout(),
-            .carryin(n1277),
-            .carryout(n1278),
-            .clk(N__1967),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i22_LC_13_29_6.C_ON=1'b1;
-    defparam blink_counter_49__i22_LC_13_29_6.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i22_LC_13_29_6.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i22_LC_13_29_6 (
-            .in0(_gnd_net_),
-            .in1(N__1419),
-            .in2(_gnd_net_),
-            .in3(N__1406),
-            .lcout(blink_counter_22),
-            .ltout(),
-            .carryin(n1278),
-            .carryout(n1279),
-            .clk(N__1967),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i23_LC_13_29_7.C_ON=1'b1;
-    defparam blink_counter_49__i23_LC_13_29_7.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i23_LC_13_29_7.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i23_LC_13_29_7 (
-            .in0(_gnd_net_),
-            .in1(N__1395),
-            .in2(_gnd_net_),
-            .in3(N__1382),
-            .lcout(blink_counter_23),
-            .ltout(),
-            .carryin(n1279),
-            .carryout(n1280),
-            .clk(N__1967),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i24_LC_13_30_0.C_ON=1'b1;
-    defparam blink_counter_49__i24_LC_13_30_0.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i24_LC_13_30_0.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i24_LC_13_30_0 (
-            .in0(_gnd_net_),
-            .in1(N__1377),
-            .in2(_gnd_net_),
-            .in3(N__1364),
-            .lcout(blink_counter_24),
-            .ltout(),
-            .carryin(bfn_13_30_0_),
-            .carryout(n1281),
-            .clk(N__1968),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam blink_counter_49__i25_LC_13_30_1.C_ON=1'b0;
-    defparam blink_counter_49__i25_LC_13_30_1.SEQ_MODE=4'b1000;
-    defparam blink_counter_49__i25_LC_13_30_1.LUT_INIT=16'b1100001100111100;
-    LogicCell40 blink_counter_49__i25_LC_13_30_1 (
-            .in0(_gnd_net_),
-            .in1(N__1357),
-            .in2(_gnd_net_),
-            .in3(N__1361),
-            .lcout(blink_counter_25),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(N__1968),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.count_0__50__i0_LC_13_31_0 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i0_LC_13_31_0 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i0_LC_13_31_0 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i0_LC_13_31_0  (
-            .in0(_gnd_net_),
-            .in1(N__1527),
-            .in2(_gnd_net_),
-            .in3(N__1346),
-            .lcout(\PWM.count_0_0 ),
-            .ltout(),
-            .carryin(bfn_13_31_0_),
-            .carryout(\PWM.n1282 ),
-            .clk(N__1969),
-            .ce(N__2100),
-            .sr(N__2176));
-    defparam \PWM.count_0__50__i1_LC_13_31_1 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i1_LC_13_31_1 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i1_LC_13_31_1 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i1_LC_13_31_1  (
-            .in0(_gnd_net_),
-            .in1(N__1774),
-            .in2(_gnd_net_),
-            .in3(N__1343),
-            .lcout(\PWM.count_0_1 ),
-            .ltout(),
-            .carryin(\PWM.n1282 ),
-            .carryout(\PWM.n1283 ),
-            .clk(N__1969),
-            .ce(N__2100),
-            .sr(N__2176));
-    defparam \PWM.count_0__50__i2_LC_13_31_2 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i2_LC_13_31_2 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i2_LC_13_31_2 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i2_LC_13_31_2  (
-            .in0(_gnd_net_),
-            .in1(N__1558),
-            .in2(_gnd_net_),
-            .in3(N__1472),
-            .lcout(\PWM.count_0_2 ),
-            .ltout(),
-            .carryin(\PWM.n1283 ),
-            .carryout(\PWM.n1284 ),
-            .clk(N__1969),
-            .ce(N__2100),
-            .sr(N__2176));
-    defparam \PWM.count_0__50__i3_LC_13_31_3 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i3_LC_13_31_3 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i3_LC_13_31_3 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i3_LC_13_31_3  (
-            .in0(_gnd_net_),
-            .in1(N__1592),
-            .in2(_gnd_net_),
-            .in3(N__1469),
-            .lcout(\PWM.count_0_3 ),
-            .ltout(),
-            .carryin(\PWM.n1284 ),
-            .carryout(\PWM.n1285 ),
-            .clk(N__1969),
-            .ce(N__2100),
-            .sr(N__2176));
-    defparam \PWM.count_0__50__i4_LC_13_31_4 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i4_LC_13_31_4 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i4_LC_13_31_4 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i4_LC_13_31_4  (
-            .in0(_gnd_net_),
-            .in1(N__1613),
-            .in2(_gnd_net_),
-            .in3(N__1466),
-            .lcout(\PWM.count_0_4 ),
-            .ltout(),
-            .carryin(\PWM.n1285 ),
-            .carryout(\PWM.n1286 ),
-            .clk(N__1969),
-            .ce(N__2100),
-            .sr(N__2176));
-    defparam \PWM.count_0__50__i5_LC_13_31_5 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i5_LC_13_31_5 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i5_LC_13_31_5 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i5_LC_13_31_5  (
-            .in0(_gnd_net_),
-            .in1(N__2243),
-            .in2(_gnd_net_),
-            .in3(N__1463),
-            .lcout(\PWM.count_0_5 ),
-            .ltout(),
-            .carryin(\PWM.n1286 ),
-            .carryout(\PWM.n1287 ),
-            .clk(N__1969),
-            .ce(N__2100),
-            .sr(N__2176));
-    defparam \PWM.count_0__50__i6_LC_13_31_6 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i6_LC_13_31_6 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i6_LC_13_31_6 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i6_LC_13_31_6  (
-            .in0(_gnd_net_),
-            .in1(N__2213),
-            .in2(_gnd_net_),
-            .in3(N__1460),
-            .lcout(\PWM.count_0_6 ),
-            .ltout(),
-            .carryin(\PWM.n1287 ),
-            .carryout(\PWM.n1288 ),
-            .clk(N__1969),
-            .ce(N__2100),
-            .sr(N__2176));
-    defparam \PWM.count_0__50__i7_LC_13_31_7 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i7_LC_13_31_7 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i7_LC_13_31_7 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i7_LC_13_31_7  (
-            .in0(_gnd_net_),
-            .in1(N__1637),
-            .in2(_gnd_net_),
-            .in3(N__1457),
-            .lcout(\PWM.count_0_7 ),
-            .ltout(),
-            .carryin(\PWM.n1288 ),
-            .carryout(\PWM.n1289 ),
-            .clk(N__1969),
-            .ce(N__2100),
-            .sr(N__2176));
-    defparam \PWM.count_0__50__i8_LC_13_32_0 .C_ON=1'b1;
-    defparam \PWM.count_0__50__i8_LC_13_32_0 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i8_LC_13_32_0 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i8_LC_13_32_0  (
-            .in0(_gnd_net_),
-            .in1(N__1895),
-            .in2(_gnd_net_),
-            .in3(N__1454),
-            .lcout(\PWM.count_0_8 ),
-            .ltout(),
-            .carryin(bfn_13_32_0_),
-            .carryout(\PWM.n1290 ),
-            .clk(N__1971),
-            .ce(N__2099),
-            .sr(N__2180));
-    defparam \PWM.count_0__50__i9_LC_13_32_1 .C_ON=1'b0;
-    defparam \PWM.count_0__50__i9_LC_13_32_1 .SEQ_MODE=4'b1000;
-    defparam \PWM.count_0__50__i9_LC_13_32_1 .LUT_INIT=16'b1100001100111100;
-    LogicCell40 \PWM.count_0__50__i9_LC_13_32_1  (
-            .in0(_gnd_net_),
-            .in1(N__1861),
-            .in2(_gnd_net_),
-            .in3(N__1451),
-            .lcout(\PWM.count_0_9 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(N__1971),
-            .ce(N__2099),
-            .sr(N__2180));
-    defparam \PWM.half_duty_0___i3_LC_14_30_0 .C_ON=1'b0;
-    defparam \PWM.half_duty_0___i3_LC_14_30_0 .SEQ_MODE=4'b1000;
-    defparam \PWM.half_duty_0___i3_LC_14_30_0 .LUT_INIT=16'b1111111110101010;
-    LogicCell40 \PWM.half_duty_0___i3_LC_14_30_0  (
-            .in0(N__1739),
-            .in1(_gnd_net_),
-            .in2(_gnd_net_),
-            .in3(N__2161),
-            .lcout(half_duty_0_2),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(N__1970),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.half_duty_0___i6_LC_14_30_2 .C_ON=1'b0;
-    defparam \PWM.half_duty_0___i6_LC_14_30_2 .SEQ_MODE=4'b1000;
-    defparam \PWM.half_duty_0___i6_LC_14_30_2 .LUT_INIT=16'b1111111111001100;
-    LogicCell40 \PWM.half_duty_0___i6_LC_14_30_2  (
-            .in0(_gnd_net_),
-            .in1(N__2162),
-            .in2(_gnd_net_),
-            .in3(N__2273),
-            .lcout(half_duty_0_5),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(N__1970),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i2_4_lut_LC_14_30_3 .C_ON=1'b0;
-    defparam \PWM.i2_4_lut_LC_14_30_3 .SEQ_MODE=4'b0000;
-    defparam \PWM.i2_4_lut_LC_14_30_3 .LUT_INIT=16'b1100100100110110;
-    LogicCell40 \PWM.i2_4_lut_LC_14_30_3  (
-            .in0(N__2129),
-            .in1(N__1738),
-            .in2(N__1715),
-            .in3(N__1556),
-            .lcout(),
-            .ltout(\PWM.n1370_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i904_4_lut_LC_14_30_4 .C_ON=1'b0;
-    defparam \PWM.i904_4_lut_LC_14_30_4 .SEQ_MODE=4'b0000;
-    defparam \PWM.i904_4_lut_LC_14_30_4 .LUT_INIT=16'b1111011111111000;
-    LogicCell40 \PWM.i904_4_lut_LC_14_30_4  (
-            .in0(N__1649),
-            .in1(N__2272),
-            .in2(N__1493),
-            .in3(N__1636),
-            .lcout(\PWM.n1402 ),
+    defparam i714_4_lut_LC_5_24_5.C_ON=1'b0;
+    defparam i714_4_lut_LC_5_24_5.SEQ_MODE=4'b0000;
+    defparam i714_4_lut_LC_5_24_5.LUT_INIT=16'b1111111010100010;
+    LogicCell40 i714_4_lut_LC_5_24_5 (
+            .in0(N__1824),
+            .in1(N__1808),
+            .in2(N__1788),
+            .in3(N__1773),
+            .lcout(n1084),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
             .clk(_gnd_net_),
             .ce(),
             .sr(_gnd_net_));
-    defparam \PWM.i1_4_lut_adj_12_LC_14_30_5 .C_ON=1'b0;
-    defparam \PWM.i1_4_lut_adj_12_LC_14_30_5 .SEQ_MODE=4'b0000;
-    defparam \PWM.i1_4_lut_adj_12_LC_14_30_5 .LUT_INIT=16'b0000000111111110;
-    LogicCell40 \PWM.i1_4_lut_adj_12_LC_14_30_5  (
-            .in0(N__2128),
-            .in1(N__1737),
-            .in2(N__1714),
-            .in3(N__1672),
-            .lcout(),
-            .ltout(\PWM.n4_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i902_4_lut_LC_14_30_6 .C_ON=1'b0;
-    defparam \PWM.i902_4_lut_LC_14_30_6 .SEQ_MODE=4'b0000;
-    defparam \PWM.i902_4_lut_LC_14_30_6 .LUT_INIT=16'b0110111111110110;
-    LogicCell40 \PWM.i902_4_lut_LC_14_30_6  (
-            .in0(N__1526),
-            .in1(N__1708),
-            .in2(N__1490),
-            .in3(N__1591),
-            .lcout(\PWM.n1400 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i2_4_lut_adj_9_LC_14_31_0 .C_ON=1'b0;
-    defparam \PWM.i2_4_lut_adj_9_LC_14_31_0 .SEQ_MODE=4'b0000;
-    defparam \PWM.i2_4_lut_adj_9_LC_14_31_0 .LUT_INIT=16'b0010100001010000;
-    LogicCell40 \PWM.i2_4_lut_adj_9_LC_14_31_0  (
-            .in0(N__1648),
-            .in1(N__2270),
-            .in2(N__1896),
-            .in3(N__1611),
-            .lcout(),
-            .ltout(\PWM.n12_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i8_3_lut_LC_14_31_1 .C_ON=1'b0;
-    defparam \PWM.i8_3_lut_LC_14_31_1 .SEQ_MODE=4'b0000;
-    defparam \PWM.i8_3_lut_LC_14_31_1 .LUT_INIT=16'b0011000000000000;
-    LogicCell40 \PWM.i8_3_lut_LC_14_31_1  (
-            .in0(_gnd_net_),
-            .in1(N__1487),
-            .in2(N__1478),
-            .in3(N__2192),
-            .lcout(\PWM.n18 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i5_4_lut_LC_14_31_2 .C_ON=1'b0;
-    defparam \PWM.i5_4_lut_LC_14_31_2 .SEQ_MODE=4'b0000;
-    defparam \PWM.i5_4_lut_LC_14_31_2 .LUT_INIT=16'b1111110111111111;
-    LogicCell40 \PWM.i5_4_lut_LC_14_31_2  (
-            .in0(N__1770),
-            .in1(N__1619),
-            .in2(N__2245),
-            .in3(N__1612),
-            .lcout(),
-            .ltout(\PWM.n13_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i931_3_lut_4_lut_LC_14_31_3 .C_ON=1'b0;
-    defparam \PWM.i931_3_lut_4_lut_LC_14_31_3 .SEQ_MODE=4'b0000;
-    defparam \PWM.i931_3_lut_4_lut_LC_14_31_3 .LUT_INIT=16'b0000100000000000;
-    LogicCell40 \PWM.i931_3_lut_4_lut_LC_14_31_3  (
-            .in0(N__1860),
-            .in1(N__1571),
-            .in2(N__1475),
-            .in3(N__2102),
-            .lcout(n684),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i3_4_lut_LC_14_31_4 .C_ON=1'b0;
-    defparam \PWM.i3_4_lut_LC_14_31_4 .SEQ_MODE=4'b0000;
-    defparam \PWM.i3_4_lut_LC_14_31_4 .LUT_INIT=16'b0111110110111110;
-    LogicCell40 \PWM.i3_4_lut_LC_14_31_4  (
-            .in0(N__1769),
-            .in1(N__2269),
-            .in2(N__2244),
-            .in3(N__2124),
-            .lcout(\PWM.n12_adj_126 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i1_2_lut_LC_14_31_5 .C_ON=1'b0;
-    defparam \PWM.i1_2_lut_LC_14_31_5 .SEQ_MODE=4'b0000;
-    defparam \PWM.i1_2_lut_LC_14_31_5 .LUT_INIT=16'b1111111111001100;
-    LogicCell40 \PWM.i1_2_lut_LC_14_31_5  (
-            .in0(_gnd_net_),
-            .in1(N__1635),
-            .in2(_gnd_net_),
-            .in3(N__2205),
-            .lcout(\PWM.n640 ),
-            .ltout(\PWM.n640_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i5_4_lut_adj_13_LC_14_31_6 .C_ON=1'b0;
-    defparam \PWM.i5_4_lut_adj_13_LC_14_31_6 .SEQ_MODE=4'b0000;
-    defparam \PWM.i5_4_lut_adj_13_LC_14_31_6 .LUT_INIT=16'b1111110111111110;
-    LogicCell40 \PWM.i5_4_lut_adj_13_LC_14_31_6  (
-            .in0(N__1589),
-            .in1(N__1610),
-            .in2(N__1595),
-            .in3(N__1670),
-            .lcout(\PWM.n14 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i908_4_lut_LC_14_31_7 .C_ON=1'b0;
-    defparam \PWM.i908_4_lut_LC_14_31_7 .SEQ_MODE=4'b0000;
-    defparam \PWM.i908_4_lut_LC_14_31_7 .LUT_INIT=16'b1000000000000000;
-    LogicCell40 \PWM.i908_4_lut_LC_14_31_7  (
-            .in0(N__1531),
-            .in1(N__1557),
-            .in2(N__1900),
-            .in3(N__1590),
-            .lcout(\PWM.n1406 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.pause_counter_0__i1_LC_14_32_1 .C_ON=1'b0;
-    defparam \PWM.pause_counter_0__i1_LC_14_32_1 .SEQ_MODE=4'b1000;
-    defparam \PWM.pause_counter_0__i1_LC_14_32_1 .LUT_INIT=16'b0011001111001100;
-    LogicCell40 \PWM.pause_counter_0__i1_LC_14_32_1  (
-            .in0(_gnd_net_),
-            .in1(N__2027),
-            .in2(_gnd_net_),
-            .in3(N__1998),
-            .lcout(\PWM.pause_counter_0_1 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(N__1973),
-            .ce(N__1934),
-            .sr(N__2186));
-    defparam \PWM.pause_counter_0__i2_LC_14_32_2 .C_ON=1'b0;
-    defparam \PWM.pause_counter_0__i2_LC_14_32_2 .SEQ_MODE=4'b1000;
-    defparam \PWM.pause_counter_0__i2_LC_14_32_2 .LUT_INIT=16'b0101111110100000;
-    LogicCell40 \PWM.pause_counter_0__i2_LC_14_32_2  (
-            .in0(N__1997),
-            .in1(_gnd_net_),
-            .in2(N__2033),
-            .in3(N__2047),
-            .lcout(\PWM.pause_counter_0_2 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(N__1973),
-            .ce(N__1934),
-            .sr(N__2186));
-    defparam \PWM.i928_2_lut_3_lut_LC_14_32_3 .C_ON=1'b0;
-    defparam \PWM.i928_2_lut_3_lut_LC_14_32_3 .SEQ_MODE=4'b0000;
-    defparam \PWM.i928_2_lut_3_lut_LC_14_32_3 .LUT_INIT=16'b0000000000010001;
-    LogicCell40 \PWM.i928_2_lut_3_lut_LC_14_32_3  (
-            .in0(N__2046),
-            .in1(N__2026),
-            .in2(_gnd_net_),
-            .in3(N__1996),
-            .lcout(\PWM.pwm_out_0__N_55 ),
-            .ltout(\PWM.pwm_out_0__N_55_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i1_2_lut_adj_10_LC_14_32_4 .C_ON=1'b0;
-    defparam \PWM.i1_2_lut_adj_10_LC_14_32_4 .SEQ_MODE=4'b0000;
-    defparam \PWM.i1_2_lut_adj_10_LC_14_32_4 .LUT_INIT=16'b0011111100111111;
-    LogicCell40 \PWM.i1_2_lut_adj_10_LC_14_32_4  (
-            .in0(_gnd_net_),
-            .in1(N__1856),
-            .in2(N__1565),
-            .in3(_gnd_net_),
-            .lcout(\PWM.n647 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.half_duty_0__8__I_0_46_i3_2_lut_LC_15_30_0 .C_ON=1'b0;
-    defparam \PWM.half_duty_0__8__I_0_46_i3_2_lut_LC_15_30_0 .SEQ_MODE=4'b0000;
-    defparam \PWM.half_duty_0__8__I_0_46_i3_2_lut_LC_15_30_0 .LUT_INIT=16'b0011001111001100;
-    LogicCell40 \PWM.half_duty_0__8__I_0_46_i3_2_lut_LC_15_30_0  (
-            .in0(_gnd_net_),
-            .in1(N__1562),
-            .in2(_gnd_net_),
-            .in3(N__1735),
-            .lcout(),
-            .ltout(\PWM.n3_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i7_4_lut_LC_15_30_1 .C_ON=1'b0;
-    defparam \PWM.i7_4_lut_LC_15_30_1 .SEQ_MODE=4'b0000;
-    defparam \PWM.i7_4_lut_LC_15_30_1 .LUT_INIT=16'b1111111111110110;
-    LogicCell40 \PWM.i7_4_lut_LC_15_30_1  (
-            .in0(N__1532),
-            .in1(N__1697),
-            .in2(N__1502),
-            .in3(N__1499),
-            .lcout(),
-            .ltout(\PWM.n16_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i8_4_lut_LC_15_30_2 .C_ON=1'b0;
-    defparam \PWM.i8_4_lut_LC_15_30_2 .SEQ_MODE=4'b0000;
-    defparam \PWM.i8_4_lut_LC_15_30_2 .LUT_INIT=16'b1111111111111110;
-    LogicCell40 \PWM.i8_4_lut_LC_15_30_2  (
-            .in0(N__1901),
-            .in1(N__1865),
-            .in2(N__1835),
-            .in3(N__1832),
-            .lcout(\PWM.n19 ),
-            .ltout(\PWM.n19_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i529_2_lut_LC_15_30_3 .C_ON=1'b0;
-    defparam \PWM.i529_2_lut_LC_15_30_3 .SEQ_MODE=4'b0000;
-    defparam \PWM.i529_2_lut_LC_15_30_3 .LUT_INIT=16'b1111000011111111;
-    LogicCell40 \PWM.i529_2_lut_LC_15_30_3  (
+    defparam \tli.current__i1_LC_5_24_6 .C_ON=1'b0;
+    defparam \tli.current__i1_LC_5_24_6 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i1_LC_5_24_6 .LUT_INIT=16'b1110111101000000;
+    LogicCell40 \tli.current__i1_LC_5_24_6  (
             .in0(_gnd_net_),
             .in1(_gnd_net_),
-            .in2(N__1826),
-            .in3(N__2101),
-            .lcout(\PWM.n993 ),
-            .ltout(\PWM.n993_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i1_4_lut_adj_8_LC_15_30_4 .C_ON=1'b0;
-    defparam \PWM.i1_4_lut_adj_8_LC_15_30_4 .SEQ_MODE=4'b0000;
-    defparam \PWM.i1_4_lut_adj_8_LC_15_30_4 .LUT_INIT=16'b0000111100101111;
-    LogicCell40 \PWM.i1_4_lut_adj_8_LC_15_30_4  (
-            .in0(N__1808),
-            .in1(N__1745),
-            .in2(N__1802),
-            .in3(N__1799),
-            .lcout(\PWM.n657 ),
+            .in2(N__2621),
+            .in3(N__1752),
+            .lcout(n168),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
-            .clk(_gnd_net_),
+            .clk(N__2486),
             .ce(),
             .sr(_gnd_net_));
-    defparam \PWM.half_duty_0___i4_LC_15_30_6 .C_ON=1'b0;
-    defparam \PWM.half_duty_0___i4_LC_15_30_6 .SEQ_MODE=4'b1000;
-    defparam \PWM.half_duty_0___i4_LC_15_30_6 .LUT_INIT=16'b1111111111001100;
-    LogicCell40 \PWM.half_duty_0___i4_LC_15_30_6  (
+    defparam \tli.current__i11_LC_5_24_7 .C_ON=1'b0;
+    defparam \tli.current__i11_LC_5_24_7 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i11_LC_5_24_7 .LUT_INIT=16'b1101100011001100;
+    LogicCell40 \tli.current__i11_LC_5_24_7  (
             .in0(_gnd_net_),
-            .in1(N__2163),
+            .in1(N__1746),
             .in2(_gnd_net_),
-            .in3(N__1673),
-            .lcout(half_duty_0_3),
+            .in3(N__2600),
+            .lcout(n148),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
-            .clk(N__1972),
+            .clk(N__2486),
             .ce(),
             .sr(_gnd_net_));
-    defparam \PWM.i1_2_lut_adj_11_LC_15_31_0 .C_ON=1'b0;
-    defparam \PWM.i1_2_lut_adj_11_LC_15_31_0 .SEQ_MODE=4'b0000;
-    defparam \PWM.i1_2_lut_adj_11_LC_15_31_0 .LUT_INIT=16'b0101010111111111;
-    LogicCell40 \PWM.i1_2_lut_adj_11_LC_15_31_0  (
-            .in0(N__2060),
+    defparam \tli.i6_4_lut_LC_6_22_0 .C_ON=1'b0;
+    defparam \tli.i6_4_lut_LC_6_22_0 .SEQ_MODE=4'b0000;
+    defparam \tli.i6_4_lut_LC_6_22_0 .LUT_INIT=16'b1111111111111110;
+    LogicCell40 \tli.i6_4_lut_LC_6_22_0  (
+            .in0(N__2114),
+            .in1(N__1961),
+            .in2(N__2085),
+            .in3(N__1976),
+            .lcout(\tli.n15 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i5_LC_6_22_1 .C_ON=1'b0;
+    defparam \tli.current__i5_LC_6_22_1 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i5_LC_6_22_1 .LUT_INIT=16'b1101100011001100;
+    LogicCell40 \tli.current__i5_LC_6_22_1  (
+            .in0(_gnd_net_),
+            .in1(N__1890),
+            .in2(_gnd_net_),
+            .in3(N__2591),
+            .lcout(n160),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2485),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i7_LC_6_22_2 .C_ON=1'b0;
+    defparam \tli.current__i7_LC_6_22_2 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i7_LC_6_22_2 .LUT_INIT=16'b1110111101000000;
+    LogicCell40 \tli.current__i7_LC_6_22_2  (
+            .in0(_gnd_net_),
             .in1(_gnd_net_),
-            .in2(_gnd_net_),
-            .in3(N__2098),
-            .lcout(\PWM.n653 ),
+            .in2(N__2619),
+            .in3(N__1884),
+            .lcout(n156),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
-            .clk(_gnd_net_),
+            .clk(N__2485),
             .ce(),
             .sr(_gnd_net_));
-    defparam \PWM.i906_4_lut_LC_15_31_1 .C_ON=1'b0;
-    defparam \PWM.i906_4_lut_LC_15_31_1 .SEQ_MODE=4'b0000;
-    defparam \PWM.i906_4_lut_LC_15_31_1 .LUT_INIT=16'b1111111110010110;
-    LogicCell40 \PWM.i906_4_lut_LC_15_31_1  (
-            .in0(N__2126),
-            .in1(N__1778),
-            .in2(N__1713),
-            .in3(N__1751),
-            .lcout(\PWM.n1404 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.half_duty_0___i1_LC_15_31_2 .C_ON=1'b0;
-    defparam \PWM.half_duty_0___i1_LC_15_31_2 .SEQ_MODE=4'b1000;
-    defparam \PWM.half_duty_0___i1_LC_15_31_2 .LUT_INIT=16'b1111111111001100;
-    LogicCell40 \PWM.half_duty_0___i1_LC_15_31_2  (
+    defparam \tli.current__i9_LC_6_22_3 .C_ON=1'b0;
+    defparam \tli.current__i9_LC_6_22_3 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i9_LC_6_22_3 .LUT_INIT=16'b1101100011001100;
+    LogicCell40 \tli.current__i9_LC_6_22_3  (
             .in0(_gnd_net_),
+            .in1(N__1878),
+            .in2(_gnd_net_),
+            .in3(N__2599),
+            .lcout(n152),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2485),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i1_2_lut_LC_6_22_4 .C_ON=1'b0;
+    defparam \tli.i1_2_lut_LC_6_22_4 .SEQ_MODE=4'b0000;
+    defparam \tli.i1_2_lut_LC_6_22_4 .LUT_INIT=16'b1111111111001100;
+    LogicCell40 \tli.i1_2_lut_LC_6_22_4  (
+            .in0(_gnd_net_),
+            .in1(N__2129),
+            .in2(_gnd_net_),
+            .in3(N__2144),
+            .lcout(),
+            .ltout(\tli.n10_cascade_ ),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i7_4_lut_LC_6_22_5 .C_ON=1'b0;
+    defparam \tli.i7_4_lut_LC_6_22_5 .SEQ_MODE=4'b0000;
+    defparam \tli.i7_4_lut_LC_6_22_5 .LUT_INIT=16'b1111111111111110;
+    LogicCell40 \tli.i7_4_lut_LC_6_22_5  (
+            .in0(N__1991),
             .in1(N__2159),
+            .in2(N__1872),
+            .in3(N__2099),
+            .lcout(\tli.n16 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i8_LC_6_22_6 .C_ON=1'b0;
+    defparam \tli.current__i8_LC_6_22_6 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i8_LC_6_22_6 .LUT_INIT=16'b1110111101000000;
+    LogicCell40 \tli.current__i8_LC_6_22_6  (
+            .in0(_gnd_net_),
+            .in1(_gnd_net_),
+            .in2(N__2620),
+            .in3(N__1869),
+            .lcout(n154),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2485),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i6_LC_6_22_7 .C_ON=1'b0;
+    defparam \tli.current__i6_LC_6_22_7 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i6_LC_6_22_7 .LUT_INIT=16'b1101100011001100;
+    LogicCell40 \tli.current__i6_LC_6_22_7  (
+            .in0(_gnd_net_),
+            .in1(N__1863),
             .in2(_gnd_net_),
-            .in3(N__1704),
-            .lcout(half_duty_0_0),
+            .in3(N__2592),
+            .lcout(n158),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
-            .clk(N__1974),
+            .clk(N__2485),
             .ce(),
             .sr(_gnd_net_));
-    defparam \PWM.i732_4_lut_LC_15_31_3 .C_ON=1'b0;
-    defparam \PWM.i732_4_lut_LC_15_31_3 .SEQ_MODE=4'b0000;
-    defparam \PWM.i732_4_lut_LC_15_31_3 .LUT_INIT=16'b1111111111111110;
-    LogicCell40 \PWM.i732_4_lut_LC_15_31_3  (
-            .in0(N__2125),
-            .in1(N__1736),
-            .in2(N__1712),
-            .in3(N__1671),
-            .lcout(\PWM.pwm_out_0_N_43_4 ),
-            .ltout(\PWM.pwm_out_0_N_43_4_cascade_ ),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(_gnd_net_),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i1_4_lut_LC_15_31_4 .C_ON=1'b0;
-    defparam \PWM.i1_4_lut_LC_15_31_4 .SEQ_MODE=4'b0000;
-    defparam \PWM.i1_4_lut_LC_15_31_4 .LUT_INIT=16'b1000000000010110;
-    LogicCell40 \PWM.i1_4_lut_LC_15_31_4  (
-            .in0(N__2271),
-            .in1(N__2249),
-            .in2(N__2216),
-            .in3(N__2212),
-            .lcout(\PWM.n11 ),
+    defparam \tli.i4_4_lut_LC_6_23_0 .C_ON=1'b0;
+    defparam \tli.i4_4_lut_LC_6_23_0 .SEQ_MODE=4'b0000;
+    defparam \tli.i4_4_lut_LC_6_23_0 .LUT_INIT=16'b1000000000000000;
+    LogicCell40 \tli.i4_4_lut_LC_6_23_0  (
+            .in0(N__2270),
+            .in1(N__2255),
+            .in2(N__2289),
+            .in3(N__2515),
+            .lcout(\tli.n10_adj_301 ),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
             .clk(_gnd_net_),
             .ce(),
             .sr(_gnd_net_));
-    defparam \PWM.i229_2_lut_3_lut_4_lut_LC_15_31_5 .C_ON=1'b0;
-    defparam \PWM.i229_2_lut_3_lut_4_lut_LC_15_31_5 .SEQ_MODE=4'b0000;
-    defparam \PWM.i229_2_lut_3_lut_4_lut_LC_15_31_5 .LUT_INIT=16'b0000000100000101;
-    LogicCell40 \PWM.i229_2_lut_3_lut_4_lut_LC_15_31_5  (
-            .in0(N__2031),
-            .in1(N__2097),
-            .in2(N__2006),
-            .in3(N__2059),
-            .lcout(\PWM.n694 ),
+    defparam \tli.i1_2_lut_adj_6_LC_6_23_1 .C_ON=1'b0;
+    defparam \tli.i1_2_lut_adj_6_LC_6_23_1 .SEQ_MODE=4'b0000;
+    defparam \tli.i1_2_lut_adj_6_LC_6_23_1 .LUT_INIT=16'b1100110011111111;
+    LogicCell40 \tli.i1_2_lut_adj_6_LC_6_23_1  (
+            .in0(_gnd_net_),
+            .in1(N__2443),
+            .in2(_gnd_net_),
+            .in3(N__1916),
+            .lcout(\tli.n804 ),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
             .clk(_gnd_net_),
             .ce(),
             .sr(_gnd_net_));
-    defparam \PWM.half_duty_0___i2_LC_15_31_6 .C_ON=1'b0;
-    defparam \PWM.half_duty_0___i2_LC_15_31_6 .SEQ_MODE=4'b1000;
-    defparam \PWM.half_duty_0___i2_LC_15_31_6 .LUT_INIT=16'b1111111111001100;
-    LogicCell40 \PWM.half_duty_0___i2_LC_15_31_6  (
+    defparam \tli.i421_4_lut_LC_6_23_2 .C_ON=1'b0;
+    defparam \tli.i421_4_lut_LC_6_23_2 .SEQ_MODE=4'b0000;
+    defparam \tli.i421_4_lut_LC_6_23_2 .LUT_INIT=16'b1111101011101010;
+    LogicCell40 \tli.i421_4_lut_LC_6_23_2  (
+            .in0(N__2048),
+            .in1(N__1947),
+            .in2(N__2067),
+            .in3(N__1941),
+            .lcout(),
+            .ltout(\tli.n22_cascade_ ),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i1_4_lut_LC_6_23_3 .C_ON=1'b0;
+    defparam \tli.i1_4_lut_LC_6_23_3 .SEQ_MODE=4'b0000;
+    defparam \tli.i1_4_lut_LC_6_23_3 .LUT_INIT=16'b1110101010101010;
+    LogicCell40 \tli.i1_4_lut_LC_6_23_3  (
+            .in0(N__2222),
+            .in1(N__2240),
+            .in2(N__1935),
+            .in3(N__1932),
+            .lcout(),
+            .ltout(\tli.n17_cascade_ ),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i13_4_lut_LC_6_23_4 .C_ON=1'b0;
+    defparam \tli.i13_4_lut_LC_6_23_4 .SEQ_MODE=4'b0000;
+    defparam \tli.i13_4_lut_LC_6_23_4 .LUT_INIT=16'b1111111111111110;
+    LogicCell40 \tli.i13_4_lut_LC_6_23_4  (
+            .in0(N__2721),
+            .in1(N__2384),
+            .in2(N__1926),
+            .in3(N__2013),
+            .lcout(),
+            .ltout(\tli.n29_cascade_ ),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i620_4_lut_LC_6_23_5 .C_ON=1'b0;
+    defparam \tli.i620_4_lut_LC_6_23_5 .SEQ_MODE=4'b0000;
+    defparam \tli.i620_4_lut_LC_6_23_5 .LUT_INIT=16'b0101010101010100;
+    LogicCell40 \tli.i620_4_lut_LC_6_23_5  (
+            .in0(N__2682),
+            .in1(N__2022),
+            .in2(N__1923),
+            .in3(N__2001),
+            .lcout(\tli.current_14__N_89 ),
+            .ltout(\tli.current_14__N_89_cascade_ ),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i1_2_lut_adj_5_LC_6_23_6 .C_ON=1'b0;
+    defparam \tli.i1_2_lut_adj_5_LC_6_23_6 .SEQ_MODE=4'b0000;
+    defparam \tli.i1_2_lut_adj_5_LC_6_23_6 .LUT_INIT=16'b1010000010100000;
+    LogicCell40 \tli.i1_2_lut_adj_5_LC_6_23_6  (
+            .in0(N__2442),
+            .in1(_gnd_net_),
+            .in2(N__1920),
+            .in3(_gnd_net_),
+            .lcout(\tli.n841 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.wren_18_LC_6_23_7 .C_ON=1'b0;
+    defparam \tli.wren_18_LC_6_23_7 .SEQ_MODE=4'b1000;
+    defparam \tli.wren_18_LC_6_23_7 .LUT_INIT=16'b1100110000000000;
+    LogicCell40 \tli.wren_18_LC_6_23_7  (
+            .in0(_gnd_net_),
+            .in1(N__2444),
+            .in2(_gnd_net_),
+            .in3(N__1917),
+            .lcout(wren_N_keep),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2487),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i12_LC_6_24_0 .C_ON=1'b0;
+    defparam \tli.current__i12_LC_6_24_0 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i12_LC_6_24_0 .LUT_INIT=16'b1110111101000000;
+    LogicCell40 \tli.current__i12_LC_6_24_0  (
+            .in0(_gnd_net_),
+            .in1(_gnd_net_),
+            .in2(N__2616),
+            .in3(N__1908),
+            .lcout(n146),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2489),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i3_LC_6_24_1 .C_ON=1'b0;
+    defparam \tli.current__i3_LC_6_24_1 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i3_LC_6_24_1 .LUT_INIT=16'b1101100011001100;
+    LogicCell40 \tli.current__i3_LC_6_24_1  (
+            .in0(_gnd_net_),
+            .in1(N__1902),
+            .in2(_gnd_net_),
+            .in3(N__2589),
+            .lcout(n164),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2489),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i2_LC_6_24_2 .C_ON=1'b0;
+    defparam \tli.current__i2_LC_6_24_2 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i2_LC_6_24_2 .LUT_INIT=16'b1110111101000000;
+    LogicCell40 \tli.current__i2_LC_6_24_2  (
+            .in0(_gnd_net_),
+            .in1(_gnd_net_),
+            .in2(N__2618),
+            .in3(N__1896),
+            .lcout(n166),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2489),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i10_LC_6_24_3 .C_ON=1'b0;
+    defparam \tli.current__i10_LC_6_24_3 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i10_LC_6_24_3 .LUT_INIT=16'b1101100011001100;
+    LogicCell40 \tli.current__i10_LC_6_24_3  (
+            .in0(_gnd_net_),
+            .in1(N__2034),
+            .in2(_gnd_net_),
+            .in3(N__2579),
+            .lcout(n150),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2489),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i13_LC_6_24_4 .C_ON=1'b0;
+    defparam \tli.current__i13_LC_6_24_4 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i13_LC_6_24_4 .LUT_INIT=16'b1110111101000000;
+    LogicCell40 \tli.current__i13_LC_6_24_4  (
+            .in0(_gnd_net_),
+            .in1(_gnd_net_),
+            .in2(N__2617),
+            .in3(N__2028),
+            .lcout(n144),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2489),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i12_4_lut_LC_6_24_5 .C_ON=1'b0;
+    defparam \tli.i12_4_lut_LC_6_24_5 .SEQ_MODE=4'b0000;
+    defparam \tli.i12_4_lut_LC_6_24_5 .LUT_INIT=16'b1111111111111110;
+    LogicCell40 \tli.i12_4_lut_LC_6_24_5  (
+            .in0(N__2414),
+            .in1(N__2354),
+            .in2(N__2193),
+            .in3(N__2399),
+            .lcout(\tli.n28 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i10_4_lut_LC_6_24_6 .C_ON=1'b0;
+    defparam \tli.i10_4_lut_LC_6_24_6 .SEQ_MODE=4'b0000;
+    defparam \tli.i10_4_lut_LC_6_24_6 .LUT_INIT=16'b1111111111111110;
+    LogicCell40 \tli.i10_4_lut_LC_6_24_6  (
+            .in0(N__2369),
+            .in1(N__2207),
+            .in2(N__2325),
+            .in3(N__2174),
+            .lcout(\tli.n26 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.current__i4_LC_6_24_7 .C_ON=1'b0;
+    defparam \tli.current__i4_LC_6_24_7 .SEQ_MODE=4'b1000;
+    defparam \tli.current__i4_LC_6_24_7 .LUT_INIT=16'b1101100011001100;
+    LogicCell40 \tli.current__i4_LC_6_24_7  (
+            .in0(_gnd_net_),
+            .in1(N__2007),
+            .in2(_gnd_net_),
+            .in3(N__2590),
+            .lcout(n162),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2489),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.i11_4_lut_LC_6_25_0 .C_ON=1'b0;
+    defparam \tli.i11_4_lut_LC_6_25_0 .SEQ_MODE=4'b0000;
+    defparam \tli.i11_4_lut_LC_6_25_0 .LUT_INIT=16'b1111111111111110;
+    LogicCell40 \tli.i11_4_lut_LC_6_25_0  (
+            .in0(N__2339),
+            .in1(N__2699),
+            .in2(N__2307),
+            .in3(N__2735),
+            .lcout(\tli.n27 ),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(_gnd_net_),
+            .ce(),
+            .sr(_gnd_net_));
+    defparam \tli.delay_counter_183__i0_LC_7_22_0 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i0_LC_7_22_0 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i0_LC_7_22_0 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i0_LC_7_22_0  (
+            .in0(_gnd_net_),
+            .in1(N__1992),
+            .in2(_gnd_net_),
+            .in3(N__1980),
+            .lcout(\tli.delay_counter_0_N ),
+            .ltout(),
+            .carryin(bfn_7_22_0_),
+            .carryout(\tli.n1017 ),
+            .clk(N__2488),
+            .ce(N__2663),
+            .sr(N__2630));
+    defparam \tli.delay_counter_183__i1_LC_7_22_1 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i1_LC_7_22_1 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i1_LC_7_22_1 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i1_LC_7_22_1  (
+            .in0(_gnd_net_),
+            .in1(N__1977),
+            .in2(_gnd_net_),
+            .in3(N__1965),
+            .lcout(\tli.delay_counter_1_N ),
+            .ltout(),
+            .carryin(\tli.n1017 ),
+            .carryout(\tli.n1018 ),
+            .clk(N__2488),
+            .ce(N__2663),
+            .sr(N__2630));
+    defparam \tli.delay_counter_183__i2_LC_7_22_2 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i2_LC_7_22_2 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i2_LC_7_22_2 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i2_LC_7_22_2  (
+            .in0(_gnd_net_),
+            .in1(N__1962),
+            .in2(_gnd_net_),
+            .in3(N__1950),
+            .lcout(\tli.delay_counter_2_N ),
+            .ltout(),
+            .carryin(\tli.n1018 ),
+            .carryout(\tli.n1019 ),
+            .clk(N__2488),
+            .ce(N__2663),
+            .sr(N__2630));
+    defparam \tli.delay_counter_183__i3_LC_7_22_3 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i3_LC_7_22_3 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i3_LC_7_22_3 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i3_LC_7_22_3  (
             .in0(_gnd_net_),
             .in1(N__2160),
             .in2(_gnd_net_),
-            .in3(N__2127),
-            .lcout(half_duty_0_1),
+            .in3(N__2148),
+            .lcout(\tli.delay_counter_3_N ),
             .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(N__1974),
-            .ce(),
-            .sr(_gnd_net_));
-    defparam \PWM.i530_1_lut_2_lut_LC_15_31_7 .C_ON=1'b0;
-    defparam \PWM.i530_1_lut_2_lut_LC_15_31_7 .SEQ_MODE=4'b0000;
-    defparam \PWM.i530_1_lut_2_lut_LC_15_31_7 .LUT_INIT=16'b0000000011001100;
-    LogicCell40 \PWM.i530_1_lut_2_lut_LC_15_31_7  (
+            .carryin(\tli.n1019 ),
+            .carryout(\tli.n1020 ),
+            .clk(N__2488),
+            .ce(N__2663),
+            .sr(N__2630));
+    defparam \tli.delay_counter_183__i4_LC_7_22_4 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i4_LC_7_22_4 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i4_LC_7_22_4 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i4_LC_7_22_4  (
             .in0(_gnd_net_),
-            .in1(N__2096),
+            .in1(N__2145),
             .in2(_gnd_net_),
-            .in3(N__2058),
-            .lcout(\PWM.n193 ),
+            .in3(N__2133),
+            .lcout(\tli.delay_counter_4_N ),
+            .ltout(),
+            .carryin(\tli.n1020 ),
+            .carryout(\tli.n1021 ),
+            .clk(N__2488),
+            .ce(N__2663),
+            .sr(N__2630));
+    defparam \tli.delay_counter_183__i5_LC_7_22_5 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i5_LC_7_22_5 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i5_LC_7_22_5 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i5_LC_7_22_5  (
+            .in0(_gnd_net_),
+            .in1(N__2130),
+            .in2(_gnd_net_),
+            .in3(N__2118),
+            .lcout(\tli.delay_counter_5_N ),
+            .ltout(),
+            .carryin(\tli.n1021 ),
+            .carryout(\tli.n1022 ),
+            .clk(N__2488),
+            .ce(N__2663),
+            .sr(N__2630));
+    defparam \tli.delay_counter_183__i6_LC_7_22_6 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i6_LC_7_22_6 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i6_LC_7_22_6 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i6_LC_7_22_6  (
+            .in0(_gnd_net_),
+            .in1(N__2115),
+            .in2(_gnd_net_),
+            .in3(N__2103),
+            .lcout(\tli.delay_counter_6_N ),
+            .ltout(),
+            .carryin(\tli.n1022 ),
+            .carryout(\tli.n1023 ),
+            .clk(N__2488),
+            .ce(N__2663),
+            .sr(N__2630));
+    defparam \tli.delay_counter_183__i7_LC_7_22_7 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i7_LC_7_22_7 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i7_LC_7_22_7 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i7_LC_7_22_7  (
+            .in0(_gnd_net_),
+            .in1(N__2100),
+            .in2(_gnd_net_),
+            .in3(N__2088),
+            .lcout(\tli.delay_counter_7_N ),
+            .ltout(),
+            .carryin(\tli.n1023 ),
+            .carryout(\tli.n1024 ),
+            .clk(N__2488),
+            .ce(N__2663),
+            .sr(N__2630));
+    defparam \tli.delay_counter_183__i8_LC_7_23_0 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i8_LC_7_23_0 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i8_LC_7_23_0 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i8_LC_7_23_0  (
+            .in0(_gnd_net_),
+            .in1(N__2084),
+            .in2(_gnd_net_),
+            .in3(N__2070),
+            .lcout(\tli.delay_counter_8_N ),
+            .ltout(),
+            .carryin(bfn_7_23_0_),
+            .carryout(\tli.n1025 ),
+            .clk(N__2490),
+            .ce(N__2650),
+            .sr(N__2622));
+    defparam \tli.delay_counter_183__i9_LC_7_23_1 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i9_LC_7_23_1 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i9_LC_7_23_1 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i9_LC_7_23_1  (
+            .in0(_gnd_net_),
+            .in1(N__2066),
+            .in2(_gnd_net_),
+            .in3(N__2052),
+            .lcout(\tli.delay_counter_9_N ),
+            .ltout(),
+            .carryin(\tli.n1025 ),
+            .carryout(\tli.n1026 ),
+            .clk(N__2490),
+            .ce(N__2650),
+            .sr(N__2622));
+    defparam \tli.delay_counter_183__i10_LC_7_23_2 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i10_LC_7_23_2 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i10_LC_7_23_2 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i10_LC_7_23_2  (
+            .in0(_gnd_net_),
+            .in1(N__2049),
+            .in2(_gnd_net_),
+            .in3(N__2037),
+            .lcout(\tli.delay_counter_10_N ),
+            .ltout(),
+            .carryin(\tli.n1026 ),
+            .carryout(\tli.n1027 ),
+            .clk(N__2490),
+            .ce(N__2650),
+            .sr(N__2622));
+    defparam \tli.delay_counter_183__i11_LC_7_23_3 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i11_LC_7_23_3 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i11_LC_7_23_3 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i11_LC_7_23_3  (
+            .in0(_gnd_net_),
+            .in1(N__2288),
+            .in2(_gnd_net_),
+            .in3(N__2274),
+            .lcout(\tli.delay_counter_11_N ),
+            .ltout(),
+            .carryin(\tli.n1027 ),
+            .carryout(\tli.n1028 ),
+            .clk(N__2490),
+            .ce(N__2650),
+            .sr(N__2622));
+    defparam \tli.delay_counter_183__i12_LC_7_23_4 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i12_LC_7_23_4 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i12_LC_7_23_4 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i12_LC_7_23_4  (
+            .in0(_gnd_net_),
+            .in1(N__2271),
+            .in2(_gnd_net_),
+            .in3(N__2259),
+            .lcout(\tli.delay_counter_12_N ),
+            .ltout(),
+            .carryin(\tli.n1028 ),
+            .carryout(\tli.n1029 ),
+            .clk(N__2490),
+            .ce(N__2650),
+            .sr(N__2622));
+    defparam \tli.delay_counter_183__i13_LC_7_23_5 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i13_LC_7_23_5 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i13_LC_7_23_5 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i13_LC_7_23_5  (
+            .in0(_gnd_net_),
+            .in1(N__2256),
+            .in2(_gnd_net_),
+            .in3(N__2244),
+            .lcout(\tli.delay_counter_13_N ),
+            .ltout(),
+            .carryin(\tli.n1029 ),
+            .carryout(\tli.n1030 ),
+            .clk(N__2490),
+            .ce(N__2650),
+            .sr(N__2622));
+    defparam \tli.delay_counter_183__i14_LC_7_23_6 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i14_LC_7_23_6 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i14_LC_7_23_6 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i14_LC_7_23_6  (
+            .in0(_gnd_net_),
+            .in1(N__2241),
+            .in2(_gnd_net_),
+            .in3(N__2229),
+            .lcout(\tli.delay_counter_14_N ),
+            .ltout(),
+            .carryin(\tli.n1030 ),
+            .carryout(\tli.n1031 ),
+            .clk(N__2490),
+            .ce(N__2650),
+            .sr(N__2622));
+    defparam \tli.delay_counter_183__i15_LC_7_23_7 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i15_LC_7_23_7 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i15_LC_7_23_7 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i15_LC_7_23_7  (
+            .in0(_gnd_net_),
+            .in1(N__2516),
+            .in2(_gnd_net_),
+            .in3(N__2226),
+            .lcout(delay_counter_15_N_keep),
+            .ltout(),
+            .carryin(\tli.n1031 ),
+            .carryout(\tli.n1032 ),
+            .clk(N__2490),
+            .ce(N__2650),
+            .sr(N__2622));
+    defparam \tli.delay_counter_183__i16_LC_7_24_0 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i16_LC_7_24_0 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i16_LC_7_24_0 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i16_LC_7_24_0  (
+            .in0(_gnd_net_),
+            .in1(N__2223),
+            .in2(_gnd_net_),
+            .in3(N__2211),
+            .lcout(\tli.delay_counter_16 ),
+            .ltout(),
+            .carryin(bfn_7_24_0_),
+            .carryout(\tli.n1033 ),
+            .clk(N__2491),
+            .ce(N__2664),
+            .sr(N__2631));
+    defparam \tli.delay_counter_183__i17_LC_7_24_1 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i17_LC_7_24_1 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i17_LC_7_24_1 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i17_LC_7_24_1  (
+            .in0(_gnd_net_),
+            .in1(N__2208),
+            .in2(_gnd_net_),
+            .in3(N__2196),
+            .lcout(\tli.delay_counter_17 ),
+            .ltout(),
+            .carryin(\tli.n1033 ),
+            .carryout(\tli.n1034 ),
+            .clk(N__2491),
+            .ce(N__2664),
+            .sr(N__2631));
+    defparam \tli.delay_counter_183__i18_LC_7_24_2 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i18_LC_7_24_2 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i18_LC_7_24_2 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i18_LC_7_24_2  (
+            .in0(_gnd_net_),
+            .in1(N__2192),
+            .in2(_gnd_net_),
+            .in3(N__2178),
+            .lcout(\tli.delay_counter_18 ),
+            .ltout(),
+            .carryin(\tli.n1034 ),
+            .carryout(\tli.n1035 ),
+            .clk(N__2491),
+            .ce(N__2664),
+            .sr(N__2631));
+    defparam \tli.delay_counter_183__i19_LC_7_24_3 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i19_LC_7_24_3 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i19_LC_7_24_3 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i19_LC_7_24_3  (
+            .in0(_gnd_net_),
+            .in1(N__2175),
+            .in2(_gnd_net_),
+            .in3(N__2163),
+            .lcout(\tli.delay_counter_19 ),
+            .ltout(),
+            .carryin(\tli.n1035 ),
+            .carryout(\tli.n1036 ),
+            .clk(N__2491),
+            .ce(N__2664),
+            .sr(N__2631));
+    defparam \tli.delay_counter_183__i20_LC_7_24_4 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i20_LC_7_24_4 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i20_LC_7_24_4 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i20_LC_7_24_4  (
+            .in0(_gnd_net_),
+            .in1(N__2415),
+            .in2(_gnd_net_),
+            .in3(N__2403),
+            .lcout(\tli.delay_counter_20 ),
+            .ltout(),
+            .carryin(\tli.n1036 ),
+            .carryout(\tli.n1037 ),
+            .clk(N__2491),
+            .ce(N__2664),
+            .sr(N__2631));
+    defparam \tli.delay_counter_183__i21_LC_7_24_5 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i21_LC_7_24_5 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i21_LC_7_24_5 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i21_LC_7_24_5  (
+            .in0(_gnd_net_),
+            .in1(N__2400),
+            .in2(_gnd_net_),
+            .in3(N__2388),
+            .lcout(\tli.delay_counter_21 ),
+            .ltout(),
+            .carryin(\tli.n1037 ),
+            .carryout(\tli.n1038 ),
+            .clk(N__2491),
+            .ce(N__2664),
+            .sr(N__2631));
+    defparam \tli.delay_counter_183__i22_LC_7_24_6 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i22_LC_7_24_6 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i22_LC_7_24_6 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i22_LC_7_24_6  (
+            .in0(_gnd_net_),
+            .in1(N__2385),
+            .in2(_gnd_net_),
+            .in3(N__2373),
+            .lcout(\tli.delay_counter_22 ),
+            .ltout(),
+            .carryin(\tli.n1038 ),
+            .carryout(\tli.n1039 ),
+            .clk(N__2491),
+            .ce(N__2664),
+            .sr(N__2631));
+    defparam \tli.delay_counter_183__i23_LC_7_24_7 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i23_LC_7_24_7 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i23_LC_7_24_7 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i23_LC_7_24_7  (
+            .in0(_gnd_net_),
+            .in1(N__2370),
+            .in2(_gnd_net_),
+            .in3(N__2358),
+            .lcout(\tli.delay_counter_23 ),
+            .ltout(),
+            .carryin(\tli.n1039 ),
+            .carryout(\tli.n1040 ),
+            .clk(N__2491),
+            .ce(N__2664),
+            .sr(N__2631));
+    defparam \tli.delay_counter_183__i24_LC_7_25_0 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i24_LC_7_25_0 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i24_LC_7_25_0 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i24_LC_7_25_0  (
+            .in0(_gnd_net_),
+            .in1(N__2355),
+            .in2(_gnd_net_),
+            .in3(N__2343),
+            .lcout(\tli.delay_counter_24 ),
+            .ltout(),
+            .carryin(bfn_7_25_0_),
+            .carryout(\tli.n1041 ),
+            .clk(N__2492),
+            .ce(N__2656),
+            .sr(N__2626));
+    defparam \tli.delay_counter_183__i25_LC_7_25_1 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i25_LC_7_25_1 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i25_LC_7_25_1 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i25_LC_7_25_1  (
+            .in0(_gnd_net_),
+            .in1(N__2340),
+            .in2(_gnd_net_),
+            .in3(N__2328),
+            .lcout(\tli.delay_counter_25 ),
+            .ltout(),
+            .carryin(\tli.n1041 ),
+            .carryout(\tli.n1042 ),
+            .clk(N__2492),
+            .ce(N__2656),
+            .sr(N__2626));
+    defparam \tli.delay_counter_183__i26_LC_7_25_2 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i26_LC_7_25_2 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i26_LC_7_25_2 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i26_LC_7_25_2  (
+            .in0(_gnd_net_),
+            .in1(N__2324),
+            .in2(_gnd_net_),
+            .in3(N__2310),
+            .lcout(\tli.delay_counter_26 ),
+            .ltout(),
+            .carryin(\tli.n1042 ),
+            .carryout(\tli.n1043 ),
+            .clk(N__2492),
+            .ce(N__2656),
+            .sr(N__2626));
+    defparam \tli.delay_counter_183__i27_LC_7_25_3 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i27_LC_7_25_3 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i27_LC_7_25_3 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i27_LC_7_25_3  (
+            .in0(_gnd_net_),
+            .in1(N__2306),
+            .in2(_gnd_net_),
+            .in3(N__2292),
+            .lcout(\tli.delay_counter_27 ),
+            .ltout(),
+            .carryin(\tli.n1043 ),
+            .carryout(\tli.n1044 ),
+            .clk(N__2492),
+            .ce(N__2656),
+            .sr(N__2626));
+    defparam \tli.delay_counter_183__i28_LC_7_25_4 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i28_LC_7_25_4 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i28_LC_7_25_4 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i28_LC_7_25_4  (
+            .in0(_gnd_net_),
+            .in1(N__2736),
+            .in2(_gnd_net_),
+            .in3(N__2724),
+            .lcout(\tli.delay_counter_28 ),
+            .ltout(),
+            .carryin(\tli.n1044 ),
+            .carryout(\tli.n1045 ),
+            .clk(N__2492),
+            .ce(N__2656),
+            .sr(N__2626));
+    defparam \tli.delay_counter_183__i29_LC_7_25_5 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i29_LC_7_25_5 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i29_LC_7_25_5 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i29_LC_7_25_5  (
+            .in0(_gnd_net_),
+            .in1(N__2717),
+            .in2(_gnd_net_),
+            .in3(N__2703),
+            .lcout(\tli.delay_counter_29 ),
+            .ltout(),
+            .carryin(\tli.n1045 ),
+            .carryout(\tli.n1046 ),
+            .clk(N__2492),
+            .ce(N__2656),
+            .sr(N__2626));
+    defparam \tli.delay_counter_183__i30_LC_7_25_6 .C_ON=1'b1;
+    defparam \tli.delay_counter_183__i30_LC_7_25_6 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i30_LC_7_25_6 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i30_LC_7_25_6  (
+            .in0(_gnd_net_),
+            .in1(N__2700),
+            .in2(_gnd_net_),
+            .in3(N__2688),
+            .lcout(\tli.delay_counter_30 ),
+            .ltout(),
+            .carryin(\tli.n1046 ),
+            .carryout(\tli.n1047 ),
+            .clk(N__2492),
+            .ce(N__2656),
+            .sr(N__2626));
+    defparam \tli.delay_counter_183__i31_LC_7_25_7 .C_ON=1'b0;
+    defparam \tli.delay_counter_183__i31_LC_7_25_7 .SEQ_MODE=4'b1000;
+    defparam \tli.delay_counter_183__i31_LC_7_25_7 .LUT_INIT=16'b1100001100111100;
+    LogicCell40 \tli.delay_counter_183__i31_LC_7_25_7  (
+            .in0(_gnd_net_),
+            .in1(N__2678),
+            .in2(_gnd_net_),
+            .in3(N__2685),
+            .lcout(\tli.delay_counter_31 ),
             .ltout(),
             .carryin(_gnd_net_),
             .carryout(),
-            .clk(_gnd_net_),
+            .clk(N__2492),
+            .ce(N__2656),
+            .sr(N__2626));
+    defparam \tli.spi.i275_LC_9_23_3 .C_ON=1'b0;
+    defparam \tli.spi.i275_LC_9_23_3 .SEQ_MODE=4'b1000;
+    defparam \tli.spi.i275_LC_9_23_3 .LUT_INIT=16'b1110111001000100;
+    LogicCell40 \tli.spi.i275_LC_9_23_3  (
+            .in0(N__2529),
+            .in1(N__2499),
+            .in2(_gnd_net_),
+            .in3(N__2520),
+            .lcout(di_reg_15),
+            .ltout(),
+            .carryin(_gnd_net_),
+            .carryout(),
+            .clk(N__2493),
             .ce(),
             .sr(_gnd_net_));
-    defparam \PWM.pause_counter_0__i0_LC_15_32_5 .C_ON=1'b0;
-    defparam \PWM.pause_counter_0__i0_LC_15_32_5 .SEQ_MODE=4'b1001;
-    defparam \PWM.pause_counter_0__i0_LC_15_32_5 .LUT_INIT=16'b0000000011011101;
-    LogicCell40 \PWM.pause_counter_0__i0_LC_15_32_5  (
-            .in0(N__2048),
-            .in1(N__2032),
-            .in2(_gnd_net_),
-            .in3(N__2002),
-            .lcout(\PWM.pause_counter_0_0 ),
-            .ltout(),
-            .carryin(_gnd_net_),
-            .carryout(),
-            .clk(N__1975),
-            .ce(N__1933),
-            .sr(N__1916));
-    defparam CONSTANT_ONE_LUT4_LC_24_32_7.C_ON=1'b0;
-    defparam CONSTANT_ONE_LUT4_LC_24_32_7.SEQ_MODE=4'b0000;
-    defparam CONSTANT_ONE_LUT4_LC_24_32_7.LUT_INIT=16'b1111111111111111;
-    LogicCell40 CONSTANT_ONE_LUT4_LC_24_32_7 (
+    defparam CONSTANT_ONE_LUT4_LC_10_17_6.C_ON=1'b0;
+    defparam CONSTANT_ONE_LUT4_LC_10_17_6.SEQ_MODE=4'b0000;
+    defparam CONSTANT_ONE_LUT4_LC_10_17_6.LUT_INIT=16'b1111111111111111;
+    LogicCell40 CONSTANT_ONE_LUT4_LC_10_17_6 (
             .in0(_gnd_net_),
             .in1(_gnd_net_),
             .in2(_gnd_net_),

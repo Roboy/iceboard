@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Thu Jan 23 15:50:55 2020
+Tue Jan 28 14:29:29 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -19,234 +19,270 @@ Report level:    verbose report, limited to 3 items per constraint
 
 ================================================================================
 Constraint: create_clock -period 62.500000 -waveform { 0.000000 31.250000 } -name CLK [ get_ports { CLK } ]
-            830 items scored, 0 timing errors detected.
+            1907 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 20.302ns
+Passed:  The following path meets requirements by 10.825ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFF     C              blink_counter_49__i0  (from CLK +)
-   Destination:    SB_DFF     D              blink_counter_49__i25  (to CLK +)
+   Source:         SB_DFFESR  C              \tli/delay_counter_183__i0  (from CLK +)
+   Destination:    SB_DFFESR  D              \tli/delay_counter_183__i31  (to CLK +)
 
-   Delay:                  42.065ns  (26.1% logic, 73.9% route), 27 logic levels.
+   Delay:                  51.542ns  (26.0% logic, 74.0% route), 33 logic levels.
 
  Constraint Details:
 
-     42.065ns data_path blink_counter_49__i0 to blink_counter_49__i25 meets
+     51.542ns data_path \tli/delay_counter_183__i0 to \tli/delay_counter_183__i31 meets
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 20.302ns
+      0.133ns L_S requirement (totaling 62.367ns) by 10.825ns
 
- Path Details: blink_counter_49__i0 to blink_counter_49__i25
+ Path Details: \tli/delay_counter_183__i0 to \tli/delay_counter_183__i31
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              blink_counter_49__i0 (from CLK)
-Route         2   e 1.258                                  n26
-LUT4        ---     0.408             I1 to CO             blink_counter_49_add_4_2
-Route         2   e 1.158                                  n1257
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_3
-Route         2   e 1.158                                  n1258
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_4
-Route         2   e 1.158                                  n1259
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_5
-Route         2   e 1.158                                  n1260
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_6
-Route         2   e 1.158                                  n1261
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_7
-Route         2   e 1.158                                  n1262
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_8
-Route         2   e 1.158                                  n1263
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_9
-Route         2   e 1.158                                  n1264
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_10
-Route         2   e 1.158                                  n1265
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_11
-Route         2   e 1.158                                  n1266
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_12
-Route         2   e 1.158                                  n1267
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_13
-Route         2   e 1.158                                  n1268
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_14
-Route         2   e 1.158                                  n1269
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_15
-Route         2   e 1.158                                  n1270
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_16
-Route         2   e 1.158                                  n1271
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_17
-Route         2   e 1.158                                  n1272
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_18
-Route         2   e 1.158                                  n1273
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_19
-Route         2   e 1.158                                  n1274
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_20
-Route         2   e 1.158                                  n1275
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_21
-Route         2   e 1.158                                  n1276
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_22
-Route         2   e 1.158                                  n1277
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_23
-Route         2   e 1.158                                  n1278
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_24
-Route         2   e 1.158                                  n1279
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_25
-Route         2   e 1.158                                  n1280
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_26
-Route         1   e 1.020                                  n1281
-LUT4        ---     0.408             I3 to O              blink_counter_49_add_4_27_lut
-Route         1   e 1.020                                  n110
+L_CO        ---     0.367              C to Q              \tli/delay_counter_183__i0 (from CLK)
+Route         3   e 1.339                                  \tli/delay_counter[0]_N
+LUT4        ---     0.408             I1 to CO             \tli/delay_counter_183_add_4_2
+Route         2   e 1.158                                  \tli/n1017
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_3
+Route         2   e 1.158                                  \tli/n1018
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_4
+Route         2   e 1.158                                  \tli/n1019
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_5
+Route         2   e 1.158                                  \tli/n1020
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_6
+Route         2   e 1.158                                  \tli/n1021
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_7
+Route         2   e 1.158                                  \tli/n1022
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_8
+Route         2   e 1.158                                  \tli/n1023
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_9
+Route         2   e 1.158                                  \tli/n1024
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_10
+Route         2   e 1.158                                  \tli/n1025
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_11
+Route         2   e 1.158                                  \tli/n1026
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_12
+Route         2   e 1.158                                  \tli/n1027
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_13
+Route         2   e 1.158                                  \tli/n1028
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_14
+Route         2   e 1.158                                  \tli/n1029
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_15
+Route         2   e 1.158                                  \tli/n1030
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_16
+Route         2   e 1.158                                  \tli/n1031
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_17
+Route         2   e 1.158                                  \tli/n1032
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_18
+Route         2   e 1.158                                  \tli/n1033
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_19
+Route         2   e 1.158                                  \tli/n1034
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_20
+Route         2   e 1.158                                  \tli/n1035
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_21
+Route         2   e 1.158                                  \tli/n1036
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_22
+Route         2   e 1.158                                  \tli/n1037
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_23
+Route         2   e 1.158                                  \tli/n1038
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_24
+Route         2   e 1.158                                  \tli/n1039
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_25
+Route         2   e 1.158                                  \tli/n1040
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_26
+Route         2   e 1.158                                  \tli/n1041
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_27
+Route         2   e 1.158                                  \tli/n1042
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_28
+Route         2   e 1.158                                  \tli/n1043
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_29
+Route         2   e 1.158                                  \tli/n1044
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_30
+Route         2   e 1.158                                  \tli/n1045
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_31
+Route         2   e 1.158                                  \tli/n1046
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_32
+Route         1   e 1.020                                  \tli/n1047
+LUT4        ---     0.408             I3 to O              \tli/delay_counter_183_add_4_33_lut
+Route         1   e 1.020                                  \tli/n134
                   --------
-                   42.065  (26.1% logic, 73.9% route), 27 logic levels.
+                   51.542  (26.0% logic, 74.0% route), 33 logic levels.
 
 
-Passed:  The following path meets requirements by 21.730ns
+Passed:  The following path meets requirements by 12.253ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFF     C              blink_counter_49__i0  (from CLK +)
-   Destination:    SB_DFF     D              blink_counter_49__i24  (to CLK +)
+   Source:         SB_DFFESR  C              \tli/delay_counter_183__i0  (from CLK +)
+   Destination:    SB_DFFESR  D              \tli/delay_counter_183__i30  (to CLK +)
 
-   Delay:                  40.637ns  (26.0% logic, 74.0% route), 26 logic levels.
+   Delay:                  50.114ns  (26.0% logic, 74.0% route), 32 logic levels.
 
  Constraint Details:
 
-     40.637ns data_path blink_counter_49__i0 to blink_counter_49__i24 meets
+     50.114ns data_path \tli/delay_counter_183__i0 to \tli/delay_counter_183__i30 meets
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 21.730ns
+      0.133ns L_S requirement (totaling 62.367ns) by 12.253ns
 
- Path Details: blink_counter_49__i0 to blink_counter_49__i24
+ Path Details: \tli/delay_counter_183__i0 to \tli/delay_counter_183__i30
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              blink_counter_49__i0 (from CLK)
-Route         2   e 1.258                                  n26
-LUT4        ---     0.408             I1 to CO             blink_counter_49_add_4_2
-Route         2   e 1.158                                  n1257
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_3
-Route         2   e 1.158                                  n1258
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_4
-Route         2   e 1.158                                  n1259
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_5
-Route         2   e 1.158                                  n1260
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_6
-Route         2   e 1.158                                  n1261
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_7
-Route         2   e 1.158                                  n1262
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_8
-Route         2   e 1.158                                  n1263
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_9
-Route         2   e 1.158                                  n1264
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_10
-Route         2   e 1.158                                  n1265
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_11
-Route         2   e 1.158                                  n1266
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_12
-Route         2   e 1.158                                  n1267
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_13
-Route         2   e 1.158                                  n1268
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_14
-Route         2   e 1.158                                  n1269
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_15
-Route         2   e 1.158                                  n1270
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_16
-Route         2   e 1.158                                  n1271
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_17
-Route         2   e 1.158                                  n1272
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_18
-Route         2   e 1.158                                  n1273
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_19
-Route         2   e 1.158                                  n1274
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_20
-Route         2   e 1.158                                  n1275
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_21
-Route         2   e 1.158                                  n1276
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_22
-Route         2   e 1.158                                  n1277
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_23
-Route         2   e 1.158                                  n1278
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_24
-Route         2   e 1.158                                  n1279
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_25
-Route         2   e 1.158                                  n1280
-LUT4        ---     0.408             I3 to O              blink_counter_49_add_4_26_lut
-Route         1   e 1.020                                  n111
+L_CO        ---     0.367              C to Q              \tli/delay_counter_183__i0 (from CLK)
+Route         3   e 1.339                                  \tli/delay_counter[0]_N
+LUT4        ---     0.408             I1 to CO             \tli/delay_counter_183_add_4_2
+Route         2   e 1.158                                  \tli/n1017
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_3
+Route         2   e 1.158                                  \tli/n1018
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_4
+Route         2   e 1.158                                  \tli/n1019
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_5
+Route         2   e 1.158                                  \tli/n1020
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_6
+Route         2   e 1.158                                  \tli/n1021
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_7
+Route         2   e 1.158                                  \tli/n1022
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_8
+Route         2   e 1.158                                  \tli/n1023
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_9
+Route         2   e 1.158                                  \tli/n1024
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_10
+Route         2   e 1.158                                  \tli/n1025
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_11
+Route         2   e 1.158                                  \tli/n1026
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_12
+Route         2   e 1.158                                  \tli/n1027
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_13
+Route         2   e 1.158                                  \tli/n1028
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_14
+Route         2   e 1.158                                  \tli/n1029
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_15
+Route         2   e 1.158                                  \tli/n1030
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_16
+Route         2   e 1.158                                  \tli/n1031
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_17
+Route         2   e 1.158                                  \tli/n1032
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_18
+Route         2   e 1.158                                  \tli/n1033
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_19
+Route         2   e 1.158                                  \tli/n1034
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_20
+Route         2   e 1.158                                  \tli/n1035
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_21
+Route         2   e 1.158                                  \tli/n1036
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_22
+Route         2   e 1.158                                  \tli/n1037
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_23
+Route         2   e 1.158                                  \tli/n1038
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_24
+Route         2   e 1.158                                  \tli/n1039
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_25
+Route         2   e 1.158                                  \tli/n1040
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_26
+Route         2   e 1.158                                  \tli/n1041
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_27
+Route         2   e 1.158                                  \tli/n1042
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_28
+Route         2   e 1.158                                  \tli/n1043
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_29
+Route         2   e 1.158                                  \tli/n1044
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_30
+Route         2   e 1.158                                  \tli/n1045
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_31
+Route         2   e 1.158                                  \tli/n1046
+LUT4        ---     0.408             I3 to O              \tli/delay_counter_183_add_4_32_lut
+Route         1   e 1.020                                  \tli/n135
                   --------
-                   40.637  (26.0% logic, 74.0% route), 26 logic levels.
+                   50.114  (26.0% logic, 74.0% route), 32 logic levels.
 
 
-Passed:  The following path meets requirements by 21.868ns
+Passed:  The following path meets requirements by 12.391ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFF     C              blink_counter_49__i1  (from CLK +)
-   Destination:    SB_DFF     D              blink_counter_49__i25  (to CLK +)
+   Source:         SB_DFFESR  C              \tli/delay_counter_183__i1  (from CLK +)
+   Destination:    SB_DFFESR  D              \tli/delay_counter_183__i31  (to CLK +)
 
-   Delay:                  40.499ns  (26.1% logic, 73.9% route), 26 logic levels.
+   Delay:                  49.976ns  (26.0% logic, 74.0% route), 32 logic levels.
 
  Constraint Details:
 
-     40.499ns data_path blink_counter_49__i1 to blink_counter_49__i25 meets
+     49.976ns data_path \tli/delay_counter_183__i1 to \tli/delay_counter_183__i31 meets
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 21.868ns
+      0.133ns L_S requirement (totaling 62.367ns) by 12.391ns
 
- Path Details: blink_counter_49__i1 to blink_counter_49__i25
+ Path Details: \tli/delay_counter_183__i1 to \tli/delay_counter_183__i31
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              blink_counter_49__i1 (from CLK)
-Route         2   e 1.258                                  n25
-LUT4        ---     0.408             I1 to CO             blink_counter_49_add_4_3
-Route         2   e 1.158                                  n1258
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_4
-Route         2   e 1.158                                  n1259
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_5
-Route         2   e 1.158                                  n1260
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_6
-Route         2   e 1.158                                  n1261
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_7
-Route         2   e 1.158                                  n1262
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_8
-Route         2   e 1.158                                  n1263
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_9
-Route         2   e 1.158                                  n1264
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_10
-Route         2   e 1.158                                  n1265
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_11
-Route         2   e 1.158                                  n1266
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_12
-Route         2   e 1.158                                  n1267
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_13
-Route         2   e 1.158                                  n1268
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_14
-Route         2   e 1.158                                  n1269
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_15
-Route         2   e 1.158                                  n1270
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_16
-Route         2   e 1.158                                  n1271
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_17
-Route         2   e 1.158                                  n1272
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_18
-Route         2   e 1.158                                  n1273
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_19
-Route         2   e 1.158                                  n1274
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_20
-Route         2   e 1.158                                  n1275
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_21
-Route         2   e 1.158                                  n1276
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_22
-Route         2   e 1.158                                  n1277
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_23
-Route         2   e 1.158                                  n1278
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_24
-Route         2   e 1.158                                  n1279
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_25
-Route         2   e 1.158                                  n1280
-LUT4        ---     0.408             CI to CO             blink_counter_49_add_4_26
-Route         1   e 1.020                                  n1281
-LUT4        ---     0.408             I3 to O              blink_counter_49_add_4_27_lut
-Route         1   e 1.020                                  n110
+L_CO        ---     0.367              C to Q              \tli/delay_counter_183__i1 (from CLK)
+Route         3   e 1.339                                  \tli/delay_counter[1]_N
+LUT4        ---     0.408             I1 to CO             \tli/delay_counter_183_add_4_3
+Route         2   e 1.158                                  \tli/n1018
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_4
+Route         2   e 1.158                                  \tli/n1019
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_5
+Route         2   e 1.158                                  \tli/n1020
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_6
+Route         2   e 1.158                                  \tli/n1021
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_7
+Route         2   e 1.158                                  \tli/n1022
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_8
+Route         2   e 1.158                                  \tli/n1023
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_9
+Route         2   e 1.158                                  \tli/n1024
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_10
+Route         2   e 1.158                                  \tli/n1025
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_11
+Route         2   e 1.158                                  \tli/n1026
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_12
+Route         2   e 1.158                                  \tli/n1027
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_13
+Route         2   e 1.158                                  \tli/n1028
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_14
+Route         2   e 1.158                                  \tli/n1029
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_15
+Route         2   e 1.158                                  \tli/n1030
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_16
+Route         2   e 1.158                                  \tli/n1031
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_17
+Route         2   e 1.158                                  \tli/n1032
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_18
+Route         2   e 1.158                                  \tli/n1033
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_19
+Route         2   e 1.158                                  \tli/n1034
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_20
+Route         2   e 1.158                                  \tli/n1035
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_21
+Route         2   e 1.158                                  \tli/n1036
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_22
+Route         2   e 1.158                                  \tli/n1037
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_23
+Route         2   e 1.158                                  \tli/n1038
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_24
+Route         2   e 1.158                                  \tli/n1039
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_25
+Route         2   e 1.158                                  \tli/n1040
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_26
+Route         2   e 1.158                                  \tli/n1041
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_27
+Route         2   e 1.158                                  \tli/n1042
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_28
+Route         2   e 1.158                                  \tli/n1043
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_29
+Route         2   e 1.158                                  \tli/n1044
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_30
+Route         2   e 1.158                                  \tli/n1045
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_31
+Route         2   e 1.158                                  \tli/n1046
+LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_32
+Route         1   e 1.020                                  \tli/n1047
+LUT4        ---     0.408             I3 to O              \tli/delay_counter_183_add_4_33_lut
+Route         1   e 1.020                                  \tli/n134
                   --------
-                   40.499  (26.1% logic, 73.9% route), 26 logic levels.
+                   49.976  (26.0% logic, 74.0% route), 32 logic levels.
 
-Report: 42.198 ns is the maximum delay for this constraint.
+Report: 51.675 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -257,7 +293,7 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |    62.500 ns|    42.198 ns|    27  
+CLK [ get_ports { CLK } ]               |    62.500 ns|    51.675 ns|    33  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -271,8 +307,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  830 paths, 148 nets, and 357 connections (96.5% coverage)
+Constraints cover  3414 paths, 232 nets, and 549 connections (97.9% coverage)
 
 
-Peak memory: 211931136 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 209469440 bytes, TRCE: 679936 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
