@@ -1,4 +1,4 @@
 create_clock -period 62.500000 -waveform { 0.000000 31.250000 } -name CLK [ get_ports { CLK } ]
- create_clock -period 62.500 -waveform {0.000 31.250} -name {TinyFPGA_B|scl_enable} [ get_nets scl_enable ]
- set_false_path -from [ get_clocks {CLK} ] -to [ get_clocks {TinyFPGA_B|scl_enable} ]
- set_false_path -from [ get_clocks {TinyFPGA_B|scl_enable} ] -to [ get_clocks {CLK} ]
+ create_clock -period 62.500 -waveform {0.000 31.250} -name {TinyFPGA_B|\eeprom/i2c/i2c_clk} [ get_nets \eeprom/i2c/i2c_clk ]
+ set_false_path -from [ get_clocks {CLK} ] -to [ get_clocks {TinyFPGA_B|\eeprom/i2c/i2c_clk} ]
+ set_false_path -from [ get_clocks {TinyFPGA_B|\eeprom/i2c/i2c_clk} ] -to [ get_clocks {CLK} ]

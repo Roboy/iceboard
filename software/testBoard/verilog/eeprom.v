@@ -9,43 +9,38 @@ module EEPROM(
     output scl_enable
   )/* synthesis syn_noprune = 1 */;
 
-assign sda_enable = ena;
-reg ena;
-wire busy;
-wire fifo_write_ack;
-wire ack_error;
-wire [7:0] byte_counter;
-reg [7:0] number_of_bytes;
-wire [31:0] data_rd;
-reg reset_n;
-integer delay_counter;
+reg enable;
+wire ready;
+reg reset;
+reg rw;
+integer eeprom_counter;
+
+assign data_ready = ready;
 
 always @ ( posedge clk ) begin
-  ena <= 0;
-  reset_n <= 1;
-  delay_counter <= delay_counter + 1;
-  if((delay_counter%16_000)==0)begin
-    ena <= 1;
-    number_of_bytes<=3;
+  reset <= 0;
+  enable <= 0;
+  eeprom_counter <= eeprom_counter + 1;
+  if((eeprom_counter%16_000_000)==0) begin
+    enable <= 1;
+    rw <= 0;
   end
 end
 
-i2c_master #(16_000_000,400_000)i2c(
+i2c_controller i2c(
   .clk(clk),
-  .reset_n(reset_n),
-  .ena(ena),
+  .rst(reset),
   .addr({4'b1010,addr[10:8]}),
-  .rw(1),//'0' is write, '1' is read
-  .data_wr({addr[7:0],24'hffffff}),
-  .busy(busy),
-  .data_rd(data_rd),
-  .fifo_write_ack(fifo_write_ack),
-  .ack_error(ack_error),
-  .sda(sda),
-  .scl(scl),
-  .byte_counter(byte_counter),
-  .read_only(0),
-  .number_of_bytes(number_of_bytes)
+  .data_in(addr[7:0]),
+  .rw(rw),//'0' is write, '1' is read
+  .read(1'b1),
+  .enable(enable),
+  .data_out(data),
+  .ready(ready),
+  .i2c_sda(sda),
+  .i2c_scl(scl),
+  .sda_enable(sda_enable),
+  .scl_enable(scl_enable)
   );
 
 endmodule

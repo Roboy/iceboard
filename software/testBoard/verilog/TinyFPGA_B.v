@@ -26,7 +26,7 @@ module TinyFPGA_B (
   output INHB,
   output INLA,
   output INHA
-);
+)/* synthesis syn_noprune = 1 */;
   // drive USB pull-up resistor to '0' to disable USB
 assign USBPU = 0;
 
@@ -90,9 +90,9 @@ assign USBPU = 0;
 
     // assign SDA=blink_counter[10];
 
-    // reg [10:0] addr;
-    // wire [7:0] data;
-    // wire data_ready;
+    reg [10:0] addr;
+    wire [31:0] data;
+    wire data_ready;
 
     wire sda, sda_enable, scl, scl_enable;
     // tristated PULLUP for i2c
@@ -113,6 +113,10 @@ assign USBPU = 0;
       .D_OUT_0(scl),
       .OUTPUT_ENABLE(scl_enable)
     );
+
+    always @ ( posedge CLK ) begin
+      addr <= 0;
+    end
 
     EEPROM eeprom(
       .clk(CLK),
