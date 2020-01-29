@@ -16,14 +16,13 @@ reg rw;
 integer eeprom_counter;
 
 assign data_ready = ready;
-
 always @ ( posedge clk ) begin
   reset <= 0;
   enable <= 0;
   eeprom_counter <= eeprom_counter + 1;
-  if((eeprom_counter%16_000_000)==0) begin
+  if((eeprom_counter%16_000)==0) begin
     enable <= 1;
-    rw <= 0;
+    rw <= !rw;
   end
 end
 

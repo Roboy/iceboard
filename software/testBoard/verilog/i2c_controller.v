@@ -25,9 +25,10 @@ module i2c_controller(
 	localparam READ_DATA = 6;
 	localparam READ_ACK2 = 7;
 	localparam STOP = 8;
-  localparam RESTART = 9;
+  localparam DELAY = 9;
+  localparam DELAY2 = 10;
 
-	localparam DIVIDE_BY = 16;
+	localparam DIVIDE_BY = 64;
 
 	reg [7:0] state;
 	reg [7:0] saved_addr;
@@ -72,7 +73,7 @@ module i2c_controller(
 		if(rst == 1) begin
 			i2c_scl_enable <= 0;
 		end else begin
-			if ((state == IDLE) || (state == START) || (state == STOP)|| (state == RESTART)) begin
+			if ((state == IDLE) || (state == START) || (state == STOP)) begin
 				i2c_scl_enable <= 0;
 			end else begin
 				i2c_scl_enable <= 1;
@@ -81,7 +82,7 @@ module i2c_controller(
 
 	end
 
-
+  reg [3:0]delay_counter;
 	always @(posedge i2c_clk, posedge rst) begin
 		if(rst == 1) begin
 			state <= IDLE;
@@ -97,11 +98,14 @@ module i2c_controller(
 					end
 					else state <= IDLE;
 				end
-
-        RESTART: begin
-          saved_addr <=  {addr, 1'b1};
-          state<= START;
-        end
+        //
+        // RESTART: begin
+        //   // delay_counter <= delay_counter + 1;
+        //   // if(delay_counter==3)begin
+        //   saved_addr <=  {addr, 1'b1};
+        //   state<= START;
+        //   // end
+        // end
 
 				START: begin
 					counter <= 7;
@@ -124,16 +128,19 @@ module i2c_controller(
 
 				WRITE_DATA: begin
 					if(counter == 0) begin
-						state <= READ_ACK2;
+						state <= DELAY;
+            delay_counter <= 0;
 					end else counter <= counter - 1;
 				end
 
+        DELAY: begin
+          state <= READ_ACK2;
+        end
+
 				READ_ACK2: begin
-					if (i2c_sda == 0) begin
-            if(read)begin
-              state <= RESTART;
-            end
-					end else state <= STOP;
+          if ((i2c_sda == 0) && (enable == 1)) begin
+            state <= IDLE;
+          end else state <= STOP;
 				end
 
 				READ_DATA: begin
@@ -143,8 +150,12 @@ module i2c_controller(
 				end
 
 				WRITE_ACK: begin
-					state <= STOP;
+					state <= DELAY2;
 				end
+
+        DELAY2: begin
+          state <= STOP;
+        end
 
 				STOP: begin
 					state <= IDLE;
@@ -162,11 +173,6 @@ module i2c_controller(
 
 				START: begin
 					write_enable <= 1;
-					sda_out <= 0;
-				end
-
-        RESTART: begin
-					write_enable <= 0;
 					sda_out <= 0;
 				end
 

@@ -1,56 +1,56 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_B.TECH
-Register bits:  89 of 7680 (1.159%)
+Register bits:  91 of 7680 (1.185%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY       266          100.0
-                             SB_DFF        71          100.0
-                            SB_DFFE         3          100.0
+                           SB_CARRY       380          100.0
+                             SB_DFF        70          100.0
+                            SB_DFFE         4          100.0
                           SB_DFFESR         5          100.0
                           SB_DFFESS         4          100.0
                             SB_DFFN         1          100.0
                            SB_DFFNE         1          100.0
-                         SB_DFFNESR         1          100.0
-                           SB_DFFSR         3          100.0
+                         SB_DFFNESS         1          100.0
+                           SB_DFFSR         5          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        15          100.0
-                            SB_LUT4       616          100.0
+                            SB_LUT4       911          100.0
 SUB MODULES
                              EEPROM         1
                      i2c_controller         1
-                              TOTAL       989
+                              TOTAL      1400
 ----------------------------------------------------------------------
 Report for cell EEPROM.v1
 Instance Path : eeprom
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY       241           90.6
-                             SB_DFF        45           63.4
-                            SB_DFFE         3          100.0
+                           SB_CARRY       355           93.4
+                             SB_DFF        44           62.9
+                            SB_DFFE         4          100.0
                           SB_DFFESR         5          100.0
                           SB_DFFESS         4          100.0
                             SB_DFFN         1          100.0
                            SB_DFFNE         1          100.0
-                         SB_DFFNESR         1          100.0
-                           SB_DFFSR         3          100.0
-                            SB_LUT4       563           91.4
+                         SB_DFFNESS         1          100.0
+                           SB_DFFSR         5          100.0
+                            SB_LUT4       865           95.0
 SUB MODULES
                      i2c_controller         1
-                              TOTAL       868
+                              TOTAL      1286
 ----------------------------------------------------------------------
 Report for cell i2c_controller.v1
 Instance Path : eeprom.i2c
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY         9            3.4
-                             SB_DFF        12           16.9
-                            SB_DFFE         3          100.0
+                           SB_CARRY        11            2.9
+                             SB_DFF        10           14.3
+                            SB_DFFE         4          100.0
                           SB_DFFESR         5          100.0
                           SB_DFFESS         4          100.0
                             SB_DFFN         1          100.0
                            SB_DFFNE         1          100.0
-                         SB_DFFNESR         1          100.0
-                           SB_DFFSR         3          100.0
-                            SB_LUT4        47            7.6
-                              TOTAL        86
+                         SB_DFFNESS         1          100.0
+                           SB_DFFSR         5          100.0
+                            SB_LUT4        61            6.7
+                              TOTAL       103
