@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:02:28
 
-* File Generated:     Jan 28 2020 14:30:42
+* File Generated:     Jan 29 2020 12:27:42
 
 * Purpose:            Detailed IO and package pin info
 
@@ -27,7 +27,7 @@ A5, VCCIO_0, not used, , , , , , topBank
 A6, PIO, INHA, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A7, PIO, INHB, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A8, PIO, INHC, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
-A9, PIO, not used, , , , , , rightBank
+A9, PIO, SDA, Output, , SB_LVCMOS, Pull Up, Output Tristatable by Enable, rightBank
 B1, PIO, not used, , , , , , leftBank
 B2, PIO, CLK, Input, , SB_LVCMOS, No Pull Up, Simple Input, leftBank
 B3, PIO, LED, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
@@ -45,7 +45,7 @@ C5, PIO_GBIN, not used, , , , , , topBank
 C6, VCCIO_1, not used, , , , , , rightBank
 C7, VPP_DIRECT, not used, , , , , , UnknownBank
 C8, VPP_PUMP, not used, , , , , , UnknownBank
-C9, PIO, SCL, Output, , SB_LVCMOS, No Pull Up, Simple Output, rightBank
+C9, PIO, SCL, Output, , SB_LVCMOS, Pull Up, Output Tristatable by Enable, rightBank
 D1, PIO, not used, , , , , , leftBank
 D2, PIO, not used, , , , , , leftBank
 D3, PIO_GBIN, not used, , , , , , leftBank
@@ -54,7 +54,7 @@ D5, PIO, not used, , , , , , topBank
 D6, PIO, not used, , , , , , rightBank
 D7, PIO, not used, , , , , , rightBank
 D8, PIO_GBIN, CS, Output, , SB_LVCMOS, No Pull Up, Simple Output, rightBank
-D9, PIO, CS_MISO,  , , SB_LVCMOS, No Pull Up, , rightBank
+D9, PIO, not used, , , , , , rightBank
 E1, PIO, not used, , , , , , leftBank
 E2, PIO, NEOPXL, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
 E3, PIO_GBIN, not used, , , , , , leftBank

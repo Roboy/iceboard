@@ -1,18 +1,18 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_B.TECH
-Register bits:  949 of 7680 (12.357%)
+Register bits:  971 of 7680 (12.643%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY      1251          100.0
-                             SB_DFF       669          100.0
-                            SB_DFFE       100          100.0
-                          SB_DFFESR        65          100.0
+                           SB_CARRY      1563          100.0
+                             SB_DFF       689          100.0
+                            SB_DFFE       101          100.0
+                          SB_DFFESR        64          100.0
                           SB_DFFESS         1          100.0
-                           SB_DFFSR        52          100.0
+                           SB_DFFSR        54          100.0
                            SB_DFFSS        62          100.0
                               SB_IO        23          100.0
-                            SB_LUT4      4159          100.0
+                            SB_LUT4      4975          100.0
                       SB_PLL40_CORE         1          100.0
 SUB MODULES
                                coms         1
@@ -26,17 +26,17 @@ SUB MODULES
         quad(DEBOUNCE_TICKS=100)_U1         1
                             uart_rx         1
                             uart_tx         1
-                              TOTAL      6394
+                              TOTAL      7544
 ----------------------------------------------------------------------
 Report for cell quad(DEBOUNCE_TICKS=100)_U1.v1
 Instance Path : quad_counter0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        30            2.4
+                           SB_CARRY        30            1.9
                              SB_DFF         8            1.2
-                            SB_DFFE        24           24.0
-                           SB_DFFSR         7           13.5
-                            SB_LUT4        38            0.9
+                            SB_DFFE        24           23.8
+                           SB_DFFSR         7           13.0
+                            SB_LUT4        38            0.8
 SUB MODULES
             grp_debouncer(2,100)_U0         1
                               TOTAL       108
@@ -45,46 +45,23 @@ Report for cell grp_debouncer(2,100)_U0.v1
 Instance Path : quad_counter0.debounce
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY         6            0.5
+                           SB_CARRY         6            0.4
                              SB_DFF         6            0.9
-                           SB_DFFSR         7           13.5
-                            SB_LUT4        11            0.3
+                           SB_DFFSR         7           13.0
+                            SB_LUT4        11            0.2
                               TOTAL        30
 ----------------------------------------------------------------------
 Report for cell neopixel.v1
 Instance Path : nx
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY       461           36.9
-                             SB_DFF        64            9.6
+                           SB_CARRY       461           29.5
+                             SB_DFF        64            9.3
                             SB_DFFE         3            3.0
-                          SB_DFFESR        33           50.8
+                          SB_DFFESR        33           51.6
                           SB_DFFESS         1          100.0
-                            SB_LUT4       782           18.8
-                              TOTAL      1344
-----------------------------------------------------------------------
-Report for cell quad(DEBOUNCE_TICKS=100).v1
-Instance Path : quad_counter1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY        30            2.4
-                             SB_DFF         8            1.2
-                            SB_DFFE        24           24.0
-                           SB_DFFSR         7           13.5
-                            SB_LUT4        38            0.9
-SUB MODULES
-               grp_debouncer(2,100)         1
-                              TOTAL       108
-----------------------------------------------------------------------
-Report for cell grp_debouncer(2,100).v1
-Instance Path : quad_counter1.debounce
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY         6            0.5
-                             SB_DFF         6            0.9
-                           SB_DFFSR         7           13.5
-                            SB_LUT4        11            0.3
-                              TOTAL        30
+                            SB_LUT4       781           15.7
+                              TOTAL      1343
 ----------------------------------------------------------------------
 Report for cell pll32MHz.v1
 Instance Path : pll32MHz_inst
@@ -93,60 +70,83 @@ Instance Path : pll32MHz_inst
                       SB_PLL40_CORE         1          100.0
                               TOTAL         1
 ----------------------------------------------------------------------
+Report for cell quad(DEBOUNCE_TICKS=100).v1
+Instance Path : quad_counter1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        30            1.9
+                             SB_DFF         8            1.2
+                            SB_DFFE        24           23.8
+                           SB_DFFSR         7           13.0
+                            SB_LUT4        38            0.8
+SUB MODULES
+               grp_debouncer(2,100)         1
+                              TOTAL       108
+----------------------------------------------------------------------
+Report for cell grp_debouncer(2,100).v1
+Instance Path : quad_counter1.debounce
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         6            0.4
+                             SB_DFF         6            0.9
+                           SB_DFFSR         7           13.0
+                            SB_LUT4        11            0.2
+                              TOTAL        30
+----------------------------------------------------------------------
 Report for cell motorControl.v1
 Instance Path : control
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY       601           48.0
-                             SB_DFF        48            7.2
-                            SB_LUT4      1504           36.2
+                           SB_CARRY       601           38.5
+                             SB_DFF        48            7.0
+                            SB_LUT4      1504           30.2
                               TOTAL      2153
-----------------------------------------------------------------------
-Report for cell pwm.v1
-Instance Path : PWM
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY        31            2.5
-                          SB_DFFESR         1            1.5
-                           SB_DFFSR        32           61.5
-                            SB_LUT4        42            1.0
-                              TOTAL       106
 ----------------------------------------------------------------------
 Report for cell coms.v1
 Instance Path : neopxl_color_23__I_0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        53            4.2
-                             SB_DFF       490           73.2
-                            SB_DFFE        49           49.0
-                          SB_DFFESR        31           47.7
-                           SB_DFFSR         6           11.5
+                           SB_CARRY        53            3.4
+                             SB_DFF       490           71.1
+                            SB_DFFE        50           49.5
+                          SB_DFFESR        30           46.9
+                           SB_DFFSR         6           11.1
                            SB_DFFSS        62          100.0
-                            SB_LUT4      1206           29.0
+                            SB_LUT4      1192           24.0
 SUB MODULES
                             uart_rx         1
                             uart_tx         1
-                              TOTAL      1899
+                              TOTAL      1885
 ----------------------------------------------------------------------
 Report for cell uart_tx.v1
 Instance Path : neopxl_color_23__I_0.tx
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY         8            0.6
-                             SB_DFF         2            0.3
-                            SB_DFFE        10           10.0
-                          SB_DFFESR        11           16.9
-                           SB_DFFSR         2            3.8
-                            SB_LUT4        32            0.8
-                              TOTAL        65
+                           SB_CARRY         8            0.5
+                             SB_DFF         3            0.4
+                            SB_DFFE         9            8.9
+                          SB_DFFESR        11           17.2
+                           SB_DFFSR         2            3.7
+                            SB_LUT4        34            0.7
+                              TOTAL        67
 ----------------------------------------------------------------------
 Report for cell uart_rx.v1
 Instance Path : neopxl_color_23__I_0.rx
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY         7            0.6
-                             SB_DFF        12            1.8
-                          SB_DFFESR        10           15.4
-                           SB_DFFSR         3            5.8
-                            SB_LUT4        34            0.8
-                              TOTAL        66
+                           SB_CARRY         7            0.4
+                             SB_DFF        12            1.7
+                          SB_DFFESR        10           15.6
+                           SB_DFFSR         3            5.6
+                            SB_LUT4        37            0.7
+                              TOTAL        69
+----------------------------------------------------------------------
+Report for cell pwm.v1
+Instance Path : PWM
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        31            2.0
+                          SB_DFFESR         1            1.6
+                           SB_DFFSR        32           59.3
+                            SB_LUT4        39            0.8
+                              TOTAL       103

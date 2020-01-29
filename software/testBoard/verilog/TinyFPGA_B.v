@@ -18,7 +18,7 @@ module TinyFPGA_B (
   output CS_CLK,
   output CS,
   input CS_MISO,
-  output SCL,
+  inout SCL,
   inout SDA,
   output INLC,
   output INHC,
@@ -78,14 +78,51 @@ assign USBPU = 0;
       // .pwm_out(pwm_out)
     // );
 
-    wire [14:0] current;
+    // wire [14:0] current;
+    //
+    // TLI4970 tli(
+    //     .clk(CLK),
+    //     .spi_miso(CS_MISO),
+    //     .spi_cs(CS),
+    //     .spi_clk(CS_CLK),
+    //     .current(current)
+    //   )/* synthesis syn_noprune = 1 */;
 
-    TLI4970 tli(
-        .clk(CLK),
-        .spi_miso(CS_MISO),
-        .spi_cs(CS),
-        .spi_clk(CS_CLK),
-        .current(current)
+    // assign SDA=blink_counter[10];
+
+    // reg [10:0] addr;
+    // wire [7:0] data;
+    // wire data_ready;
+
+    wire sda, sda_enable, scl, scl_enable;
+    // tristated PULLUP for i2c
+    SB_IO #(
+      .PIN_TYPE(6'b101001),
+      .PULLUP(1'b1)
+    ) sda_output(
+      .PACKAGE_PIN(SDA),
+      .D_OUT_0(sda),
+      .OUTPUT_ENABLE(sda_enable)
+    );
+
+    SB_IO #(
+      .PIN_TYPE(6'b101001),
+      .PULLUP(1'b1)
+    ) scl_output(
+      .PACKAGE_PIN(SCL),
+      .D_OUT_0(scl),
+      .OUTPUT_ENABLE(scl_enable)
+    );
+
+    EEPROM eeprom(
+      .clk(CLK),
+      .addr(addr),
+      .data(data),
+      .data_ready(data_ready),
+      .scl(scl),
+      .scl_enable(scl_enable),
+      .sda(sda),
+      .sda_enable(sda_enable)
       )/* synthesis syn_noprune = 1 */;
 
 endmodule

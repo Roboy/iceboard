@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jan 28 14:29:28 2020
+Wed Jan 29 12:26:09 2020
 
 
 Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
@@ -71,8 +71,11 @@ Mixed language design
 Verilog design file = verilog/TinyFPGA_B.v
 Verilog design file = verilog/pwm.v
 Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
 VHDL library = work
 VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+VHDL library = work
+VHDL design file = vhdl/i2c_master.vhd
 -sdc option: SDC file input is constraints/clk.sdc.
 -vh2008
 
@@ -96,71 +99,76 @@ WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTH
 Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
 Analyzing Verilog file verilog/pwm.v. VERI-1482
 Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+WARNING - synthesis: verilog/eeprom.v(12): identifier ena is used before its declaration. VERI-1875
 Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
 INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
 INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/i2c_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/i2c_master.vhd(37): analyzing entity i2c_master. VHDL-1012
+INFO - synthesis: vhdl/i2c_master.vhd(63): analyzing architecture logic. VHDL-1010
 INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/testBoard". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): TinyFPGA_B
 INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
 WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
-INFO - synthesis: verilog/tli4970.v(1): compiling module TLI4970. VERI-1018
-INFO - synthesis: verilog/tli4970.v(50): going to vhdl side to elaborate module spi_master. VERI-1231
-vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): executing spi_master(16,'U','X',2,16)(rtl)
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+INFO - synthesis: verilog/eeprom.v(49): going to vhdl side to elaborate module i2c_master. VERI-1231
+vhdl/i2c_master.vhd(37): executing i2c_master(16000000,400000)(logic)
 
-INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(289): Found User declared VHDL assert of type Failure: "Generic parameter 'N' (shift register size) needs to be 8 bits minimum". VHDL-1700
-INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(293): Found User declared VHDL assert of type Failure: "Generic parameter 'PREFETCH' (lookahead count) needs to be 1 minimum". VHDL-1700
-INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(297): Found User declared VHDL assert of type Failure: "Generic parameter 'PREFETCH' (lookahead count) out of range, needs to be N-5 maximum". VHDL-1700
-INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(301): Found User declared VHDL assert of type Failure: "Generic parameter 'SPI_2X_CLK_DIV' must not be zero". VHDL-1700
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(223): net spi_clk does not have a driver. VDB-1002
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(226): net fsm_ce does not have a driver. VDB-1002
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(228): net samp_ce does not have a driver. VDB-1002
-INFO - synthesis: verilog/tli4970.v(50): back to verilog to continue elaboration. VERI-1232
+INFO - synthesis: verilog/eeprom.v(49): back to verilog to continue elaboration. VERI-1232
+WARNING - synthesis: verilog/eeprom.v(31): Register reset_n_13 is stuck at One. VDB-5014
+WARNING - synthesis: verilog/TinyFPGA_B.v(119): actual bit length 1 differs from formal bit length 11 for port addr. VERI-1330
+WARNING - synthesis: verilog/TinyFPGA_B.v(120): actual bit length 1 differs from formal bit length 8 for port data. VERI-1330
+WARNING - synthesis: verilog/TinyFPGA_B.v(119): net addr does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
 Top-level module name = TinyFPGA_B.
-WARNING - synthesis: Initial value found on net state_next[4] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net state_next[3] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net state_next[2] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net state_next[1] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net state_next[0] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net wr_ack_next will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net ssel_ena_next will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net do_transfer_next will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net di_req_next will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net do_valid_next will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net di_req_o_next will be ignored due to unrecognized driver type
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(223): net spi_clk does not have a driver. VDB-1002
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(226): net fsm_ce does not have a driver. VDB-1002
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(228): net samp_ce does not have a driver. VDB-1002
-######## Converting I/O port SDA to input.
-WARNING - synthesis: verilog/TinyFPGA_B.v(18): net CS_CLK does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(119): net addr does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/eeprom.v(4): net n136 does not have a driver. VDB-1002
+WARNING - synthesis: verilog/eeprom.v(5): net n152 does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(97): net scl_enable does not have a driver. VDB-1002
 ######## Missing driver on net NEOPXL. Patching with GND.
 ######## Missing driver on net DE. Patching with GND.
 ######## Missing driver on net TX. Patching with GND.
-######## Missing driver on net SCL. Patching with GND.
+######## Missing driver on net CS_CLK. Patching with GND.
+######## Missing driver on net CS. Patching with GND.
 ######## Missing driver on net INLC. Patching with GND.
 ######## Missing driver on net INHC. Patching with GND.
 ######## Missing driver on net INLB. Patching with GND.
 ######## Missing driver on net INHB. Patching with GND.
 ######## Missing driver on net INLA. Patching with GND.
 ######## Missing driver on net INHA. Patching with GND.
-######## Missing driver on net CS_CLK. Patching with GND.
-######## Missing driver on net \tli/spi/spi_clk. Patching with GND.
-######## Missing driver on net \tli/spi/fsm_ce. Patching with GND.
-######## Missing driver on net \tli/spi/samp_ce. Patching with GND.
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(403): Register \tli/spi/rx_bit_reg_104 is stuck at Zero. VDB-5013
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(478): Register \tli/spi/ssel_ena_reg_119 is stuck at Zero. VDB-5013
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(599): Register \tli/spi/spi_clk_reg_125 is stuck at Zero. VDB-5013
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(430): Register \tli/spi/do_valid_A_105 is stuck at Zero. VDB-5013
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(451): Register \tli/spi/wren_116 is stuck at One. VDB-5014
+######## Missing driver on net addr. Patching with GND.
+######## Missing driver on net n136. Patching with GND.
+######## Missing driver on net n138. Patching with GND.
+######## Missing driver on net n140. Patching with GND.
+######## Missing driver on net n142. Patching with GND.
+######## Missing driver on net n144. Patching with GND.
+######## Missing driver on net n146. Patching with GND.
+######## Missing driver on net n148. Patching with GND.
+######## Missing driver on net n150. Patching with GND.
+######## Missing driver on net n152. Patching with GND.
+######## Missing driver on net scl_enable. Patching with GND.
+WARNING - synthesis: Bit 0 of Register \eeprom/number_of_bytes is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/number_of_bytes is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/number_of_bytes is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/number_of_bytes is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/number_of_bytes is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/number_of_bytes is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/number_of_bytes is stuck at One
+WARNING - synthesis: Bit 7 of Register \eeprom/number_of_bytes is stuck at One
 
 
 
-WARNING - synthesis: Bit 0 of Register \tli/current is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \tli/current is stuck at Zero
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(467): Register \tli/spi/state_reg_i1 is stuck at Zero. VDB-5013
-WARNING - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(484): Register \tli/spi/sck_ena_reg_124 is stuck at Zero. VDB-5013
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: vhdl/i2c_master.vhd(115): Register \eeprom/i2c/stretch_215 is stuck at One. VDB-5014
 Writing scf file : template_Implmnt/template.scf
 
 Writing scf file : template_Implmnt/template.scf
@@ -174,35 +182,33 @@ Writing scf file : template_Implmnt/template.scf
 Results of NGD DRC are available in TinyFPGA_B_drc.log.
 
 ################### Begin Area Report (TinyFPGA_B)######################
-Number of register bits => 82 of 7680 (1 % )
-SB_CARRY => 56
-SB_DFF => 49
-SB_DFFESR => 32
-SB_DFFSR => 1
+Number of register bits => 59 of 7680 (0 % )
+SB_CARRY => 369
+SB_DFF => 59
 SB_GB_IO => 1
 SB_IO => 15
-SB_LUT4 => 98
+SB_LUT4 => 856
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : CLK_N, loads : 82
+  Net : CLK_N, loads : 59
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : tli/n841, loads : 46
-  Net : tli/n804, loads : 32
-  Net : tli/spi/spi_2x_ce_gen_proc.clk_cnt_0, loads : 5
-  Net : blink_counter_24, loads : 4
-  Net : blink_counter_23, loads : 4
-  Net : blink_counter_22, loads : 4
-  Net : blink_counter_21, loads : 4
-  Net : tli/spi/spi_2x_ce_gen_proc.clk_cnt_1, loads : 4
-  Net : tli/delay_counter_15_N, loads : 3
-  Net : tli/delay_counter_14_N, loads : 3
+  Net : eeprom/delay_counter_31, loads : 35
+  Net : eeprom/n2, loads : 30
+  Net : eeprom/n3529_adj_336, loads : 24
+  Net : eeprom/n3430, loads : 23
+  Net : eeprom/n3331, loads : 22
+  Net : eeprom/n3232, loads : 21
+  Net : eeprom/n3133, loads : 20
+  Net : eeprom/n3034, loads : 19
+  Net : eeprom/n2935, loads : 18
+  Net : eeprom/n2836, loads : 17
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -211,18 +217,25 @@ Timing Report Summary
 Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk500 [get_nets scl_enable]            |            -|            -|     0  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|scl_enable [ get_nets        |             |             |
+scl_enable ]                            |            -|            -|     0  
+                                        |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33  
+CLK [ get_ports { CLK } ]               |   16.000 MHz|    3.065 MHz|   206 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraints not met.
 
 
-Peak Memory Usage: 199.766  MB
+Peak Memory Usage: 284.320  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.122  secs
+Elapsed CPU time for LSE flow : 12.443  secs
 --------------------------------------------------------------

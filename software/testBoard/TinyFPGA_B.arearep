@@ -1,39 +1,23 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_B.TECH
-Register bits:  82 of 7680 (1.068%)
+Register bits:  59 of 7680 (0.768%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        56          100.0
-                             SB_DFF        49          100.0
-                          SB_DFFESR        32          100.0
-                           SB_DFFSR         1          100.0
+                           SB_CARRY       369          100.0
+                             SB_DFF        59          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        15          100.0
-                            SB_LUT4        98          100.0
+                            SB_LUT4       856          100.0
 SUB MODULES
-                            TLI4970         1
-        spi_master(16,'U','X',2,16)         1
-                              TOTAL       254
+                             EEPROM         1
+                              TOTAL      1301
 ----------------------------------------------------------------------
-Report for cell TLI4970.v1
-Instance Path : tli
+Report for cell EEPROM.v1
+Instance Path : eeprom
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        31           55.4
-                             SB_DFF        23           46.9
-                          SB_DFFESR        32          100.0
-                           SB_DFFSR         1          100.0
-                            SB_LUT4        66           67.3
-SUB MODULES
-        spi_master(16,'U','X',2,16)         1
-                              TOTAL       154
-----------------------------------------------------------------------
-Report for cell spi_master(16,'U','X',2,16).v1
-Instance Path : tli.spi
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                             SB_DFF         9           18.4
-                           SB_DFFSR         1          100.0
-                            SB_LUT4         8            8.2
-                              TOTAL        18
+                           SB_CARRY       344           93.2
+                             SB_DFF        33           55.9
+                            SB_LUT4       827           96.6
+                              TOTAL      1204

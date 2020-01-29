@@ -37,7 +37,7 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
 );
 
 wire [7:0] ID;
-assign ID = 132;
+assign ID = 128;
 
 wire [23:0] neopxl_color;
 
@@ -121,6 +121,7 @@ neopixel nx(
   );
 
   wire signed [23:0] encoder0_position;
+  reg signed [23:0] encoder0_position_scaled;
   wire signed [23:0] encoder1_position;
   reg signed [23:0] displacement;
   wire signed [23:0] setpoint;
@@ -143,7 +144,7 @@ neopixel nx(
   	.rx_i(~RX),
     .ID(ID),
     .duty(duty),
-  	.encoder0_position(encoder0_position),
+  	.encoder0_position(encoder0_position_scaled),
   	.encoder1_position(encoder1_position),
     .displacement(displacement),
   	.setpoint(setpoint),
@@ -162,7 +163,7 @@ neopixel nx(
   wire signed [23:0] motor_state;
 
   assign motor_state =
-    (control_mode==0)?encoder0_position:
+    (control_mode==0)?encoder0_position_scaled:
     (control_mode==1)?encoder1_position:
     (control_mode==2)?displacement:
     32'd0;
@@ -198,7 +199,8 @@ neopixel nx(
   );
 
   always @(posedge clk32MHz) begin: DISPLACEMENT_CALCULATION
-    displacement <= (encoder1_position-encoder0_position);
+    encoder0_position_scaled <= encoder0_position*2/53;
+    displacement <= (encoder1_position-encoder0_position_scaled);
   end
 
   // wire di_req, wr_ack, do_valid;

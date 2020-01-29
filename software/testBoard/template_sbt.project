@@ -4,7 +4,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=template
 Vendor=SiliconBlue
 Synthesis=lse
-ProjectVFiles=verilog/TinyFPGA_B.v=work,verilog/pwm.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd,verilog/tli4970.v
+ProjectVFiles=verilog/TinyFPGA_B.v=work,verilog/pwm.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd=work,verilog/tli4970.v=work,vhdl/i2c_master.vhd,verilog/eeprom.v
 ProjectCFiles=constraints/clk.sdc
 CurImplementation=template_Implmnt
 Implementations=template_Implmnt

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Tue Jan 28 14:29:29 2020
+Wed Jan 29 12:26:12 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -18,271 +18,1325 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 62.500000 -waveform { 0.000000 31.250000 } -name CLK [ get_ports { CLK } ]
-            1907 items scored, 0 timing errors detected.
+Constraint: create_clock -period 62.500000 -name clk500 [get_nets scl_enable]
+            0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 10.825ns
+================================================================================
+Constraint:  create_clock -period 62.500 -name TinyFPGA_B|scl_enable [ get_nets scl_enable ]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 62.500000 -waveform { 0.000000 31.250000 } -name CLK [ get_ports { CLK } ]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 263.725ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \tli/delay_counter_183__i0  (from CLK +)
-   Destination:    SB_DFFESR  D              \tli/delay_counter_183__i31  (to CLK +)
+   Source:         SB_DFF     C              \eeprom/delay_counter_288__i0  (from CLK +)
+   Destination:    SB_DFF     D              \eeprom/ena_12  (to CLK +)
 
-   Delay:                  51.542ns  (26.0% logic, 74.0% route), 33 logic levels.
+   Delay:                 326.092ns  (25.8% logic, 74.2% route), 206 logic levels.
 
  Constraint Details:
 
-     51.542ns data_path \tli/delay_counter_183__i0 to \tli/delay_counter_183__i31 meets
+    326.092ns data_path \eeprom/delay_counter_288__i0 to \eeprom/ena_12 violates
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 10.825ns
+      0.133ns L_S requirement (totaling 62.367ns) by 263.725ns
 
- Path Details: \tli/delay_counter_183__i0 to \tli/delay_counter_183__i31
+ Path Details: \eeprom/delay_counter_288__i0 to \eeprom/ena_12
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \tli/delay_counter_183__i0 (from CLK)
-Route         3   e 1.339                                  \tli/delay_counter[0]_N
-LUT4        ---     0.408             I1 to CO             \tli/delay_counter_183_add_4_2
-Route         2   e 1.158                                  \tli/n1017
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_3
-Route         2   e 1.158                                  \tli/n1018
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_4
-Route         2   e 1.158                                  \tli/n1019
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_5
-Route         2   e 1.158                                  \tli/n1020
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_6
-Route         2   e 1.158                                  \tli/n1021
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_7
-Route         2   e 1.158                                  \tli/n1022
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_8
-Route         2   e 1.158                                  \tli/n1023
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_9
-Route         2   e 1.158                                  \tli/n1024
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_10
-Route         2   e 1.158                                  \tli/n1025
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_11
-Route         2   e 1.158                                  \tli/n1026
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_12
-Route         2   e 1.158                                  \tli/n1027
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_13
-Route         2   e 1.158                                  \tli/n1028
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_14
-Route         2   e 1.158                                  \tli/n1029
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_15
-Route         2   e 1.158                                  \tli/n1030
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_16
-Route         2   e 1.158                                  \tli/n1031
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_17
-Route         2   e 1.158                                  \tli/n1032
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_18
-Route         2   e 1.158                                  \tli/n1033
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_19
-Route         2   e 1.158                                  \tli/n1034
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_20
-Route         2   e 1.158                                  \tli/n1035
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_21
-Route         2   e 1.158                                  \tli/n1036
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_22
-Route         2   e 1.158                                  \tli/n1037
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_23
-Route         2   e 1.158                                  \tli/n1038
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_24
-Route         2   e 1.158                                  \tli/n1039
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_25
-Route         2   e 1.158                                  \tli/n1040
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_26
-Route         2   e 1.158                                  \tli/n1041
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_27
-Route         2   e 1.158                                  \tli/n1042
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_28
-Route         2   e 1.158                                  \tli/n1043
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_29
-Route         2   e 1.158                                  \tli/n1044
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_30
-Route         2   e 1.158                                  \tli/n1045
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_31
-Route         2   e 1.158                                  \tli/n1046
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_32
-Route         1   e 1.020                                  \tli/n1047
-LUT4        ---     0.408             I3 to O              \tli/delay_counter_183_add_4_33_lut
-Route         1   e 1.020                                  \tli/n134
+L_CO        ---     0.367              C to Q              \eeprom/delay_counter_288__i0 (from CLK)
+Route         5   e 1.441                                  \eeprom/delay_counter[0]
+LUT4        ---     0.408             I0 to O              \eeprom/rem_4_unary_minus_2_inv_0_i1_1_lut
+Route         2   e 1.158                                  \eeprom/n33
+LUT4        ---     0.408             I1 to CO             \eeprom/rem_4_unary_minus_2_add_3_2
+Route         2   e 1.158                                  \eeprom/n3786
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_3
+Route         2   e 1.158                                  \eeprom/n3787
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_4
+Route         2   e 1.158                                  \eeprom/n3788
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_5
+Route         2   e 1.158                                  \eeprom/n3789
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_6
+Route         2   e 1.158                                  \eeprom/n3790
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_7
+Route         2   e 1.158                                  \eeprom/n3791
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_8
+Route         2   e 1.158                                  \eeprom/n3792
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_9
+Route         2   e 1.158                                  \eeprom/n3793
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_10
+Route         2   e 1.158                                  \eeprom/n3794
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_11
+Route         2   e 1.158                                  \eeprom/n3795
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_12
+Route         2   e 1.158                                  \eeprom/n3796
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_13
+Route         2   e 1.158                                  \eeprom/n3797
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_14
+Route         2   e 1.158                                  \eeprom/n3798
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_15
+Route         2   e 1.158                                  \eeprom/n3799
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_16
+Route         2   e 1.158                                  \eeprom/n3800
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_17
+Route         2   e 1.158                                  \eeprom/n3801
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_18
+Route         2   e 1.158                                  \eeprom/n3802
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_19
+Route         2   e 1.158                                  \eeprom/n3803
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_20
+Route         2   e 1.158                                  \eeprom/n3804
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_21
+Route         2   e 1.158                                  \eeprom/n3805
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_22
+Route         2   e 1.158                                  \eeprom/n3806
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_23
+Route         2   e 1.158                                  \eeprom/n3807
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_24
+Route         2   e 1.158                                  \eeprom/n3808
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_25
+Route         2   e 1.158                                  \eeprom/n3809
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_26
+Route         2   e 1.158                                  \eeprom/n3810
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_27
+Route         2   e 1.158                                  \eeprom/n3811
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_28
+Route         2   e 1.158                                  \eeprom/n3812
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_29
+Route         2   e 1.158                                  \eeprom/n3813
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_30
+Route         2   e 1.158                                  \eeprom/n3814
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_31
+Route         2   e 1.158                                  \eeprom/n3815
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_32
+Route         1   e 1.020                                  \eeprom/n3816
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_unary_minus_2_add_3_33_lut
+Route         2   e 1.158                                  \eeprom/n2_adj_395
+LUT4        ---     0.408             I0 to O              \eeprom/i1_4_lut_adj_49
+Route         7   e 1.409                                  \eeprom/n4405
+LUT4        ---     0.408             I0 to O              \eeprom/rem_4_i1226_3_lut_4_lut
+Route         4   e 1.297                                  \eeprom/n1918
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1285_3
+Route         2   e 1.158                                  \eeprom/n3518
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_4
+Route         2   e 1.158                                  \eeprom/n3519
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_5
+Route         2   e 1.158                                  \eeprom/n3520
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_6
+Route         2   e 1.158                                  \eeprom/n3521
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_7
+Route         2   e 1.158                                  \eeprom/n3522
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1285_8_lut
+Route         1   e 1.020                                  \eeprom/n1980
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1288_3_lut
+Route         4   e 1.297                                  \eeprom/n2012
+LUT4        ---     0.408             I2 to O              \eeprom/i1_4_lut_adj_71
+Route        10   e 1.480                                  \eeprom/n2044
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1362_3_lut
+Route         4   e 1.297                                  \eeprom/n2118
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1419_3
+Route         2   e 1.158                                  \eeprom/n3533
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_4
+Route         2   e 1.158                                  \eeprom/n3534
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_5
+Route         2   e 1.158                                  \eeprom/n3535
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_6
+Route         2   e 1.158                                  \eeprom/n3536
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_7
+Route         2   e 1.158                                  \eeprom/n3537
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_8
+Route         2   e 1.158                                  \eeprom/n3538
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_9
+Route         2   e 1.158                                  \eeprom/n3539
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1419_10_lut
+Route         1   e 1.020                                  \eeprom/n2178
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1422_3_lut
+Route         4   e 1.297                                  \eeprom/n2210
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_25
+Route         1   e 1.020                                  \eeprom/n6
+LUT4        ---     0.408             I3 to O              \eeprom/i4_4_lut
+Route        12   e 1.516                                  \eeprom/n2242
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1498_3_lut
+Route         4   e 1.297                                  \eeprom/n2318
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1553_3
+Route         2   e 1.158                                  \eeprom/n3552
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_4
+Route         2   e 1.158                                  \eeprom/n3553
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_5
+Route         2   e 1.158                                  \eeprom/n3554
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_6
+Route         2   e 1.158                                  \eeprom/n3555
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_7
+Route         2   e 1.158                                  \eeprom/n3556
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_8
+Route         2   e 1.158                                  \eeprom/n3557
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_9
+Route         2   e 1.158                                  \eeprom/n3558
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_10
+Route         2   e 1.158                                  \eeprom/n3559
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_11
+Route         2   e 1.158                                  \eeprom/n3560
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1553_12_lut
+Route         1   e 1.020                                  \eeprom/n2376
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1556_3_lut
+Route         4   e 1.297                                  \eeprom/n2408
+LUT4        ---     0.408             I2 to O              \eeprom/i6_4_lut_adj_77
+Route        13   e 1.532                                  \eeprom/n2440
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1634_3_lut
+Route         4   e 1.297                                  \eeprom/n2518
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1687_3
+Route         2   e 1.158                                  \eeprom/n3575
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_4
+Route         2   e 1.158                                  \eeprom/n3576
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_5
+Route         2   e 1.158                                  \eeprom/n3577
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_6
+Route         2   e 1.158                                  \eeprom/n3578
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_7
+Route         2   e 1.158                                  \eeprom/n3579
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_8
+Route         2   e 1.158                                  \eeprom/n3580
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_9
+Route         2   e 1.158                                  \eeprom/n3581
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_10
+Route         2   e 1.158                                  \eeprom/n3582
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_11
+Route         2   e 1.158                                  \eeprom/n3583
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_12
+Route         2   e 1.158                                  \eeprom/n3584
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_13
+Route         2   e 1.158                                  \eeprom/n3585
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1687_14_lut
+Route         1   e 1.020                                  \eeprom/n2574
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1690_3_lut
+Route         4   e 1.297                                  \eeprom/n2606
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_85
+Route         1   e 1.020                                  \eeprom/n10_adj_475
+LUT4        ---     0.408             I3 to O              \eeprom/i7_4_lut_adj_87
+Route         1   e 1.020                                  \eeprom/n16
+LUT4        ---     0.408             I1 to O              \eeprom/i8_4_lut
+Route        15   e 1.561                                  \eeprom/n2638
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1770_3_lut
+Route         4   e 1.297                                  \eeprom/n2718
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1821_3
+Route         2   e 1.158                                  \eeprom/n3602
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_4
+Route         2   e 1.158                                  \eeprom/n3603
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_5
+Route         2   e 1.158                                  \eeprom/n3604
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_6
+Route         2   e 1.158                                  \eeprom/n3605
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_7
+Route         2   e 1.158                                  \eeprom/n3606
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_8
+Route         2   e 1.158                                  \eeprom/n3607
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_9
+Route         2   e 1.158                                  \eeprom/n3608
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_10
+Route         2   e 1.158                                  \eeprom/n3609
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_11
+Route         2   e 1.158                                  \eeprom/n3610
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_12
+Route         2   e 1.158                                  \eeprom/n3611
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_13
+Route         2   e 1.158                                  \eeprom/n3612
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_14
+Route         2   e 1.158                                  \eeprom/n3613
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_15
+Route         2   e 1.158                                  \eeprom/n3614
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1821_16_lut
+Route         1   e 1.020                                  \eeprom/n2772
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1824_3_lut
+Route         4   e 1.297                                  \eeprom/n2804
+LUT4        ---     0.408             I2 to O              \eeprom/i9_4_lut_adj_34
+Route         1   e 1.020                                  \eeprom/n20
+LUT4        ---     0.408             I1 to O              \eeprom/i10_4_lut
+Route        17   e 1.586                                  \eeprom/n2836
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1906_3_lut
+Route         4   e 1.297                                  \eeprom/n2918
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1955_3
+Route         2   e 1.158                                  \eeprom/n3633
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_4
+Route         2   e 1.158                                  \eeprom/n3634
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_5
+Route         2   e 1.158                                  \eeprom/n3635
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_6
+Route         2   e 1.158                                  \eeprom/n3636
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_7
+Route         2   e 1.158                                  \eeprom/n3637
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_8
+Route         2   e 1.158                                  \eeprom/n3638
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_9
+Route         2   e 1.158                                  \eeprom/n3639
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_10
+Route         2   e 1.158                                  \eeprom/n3640
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_11
+Route         2   e 1.158                                  \eeprom/n3641
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_12
+Route         2   e 1.158                                  \eeprom/n3642
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_13
+Route         2   e 1.158                                  \eeprom/n3643
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_14
+Route         2   e 1.158                                  \eeprom/n3644
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_15
+Route         2   e 1.158                                  \eeprom/n3645
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_16
+Route         2   e 1.158                                  \eeprom/n3646
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_17
+Route         2   e 1.158                                  \eeprom/n3647
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1955_18_lut
+Route         1   e 1.020                                  \eeprom/n2970
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1958_3_lut
+Route         4   e 1.297                                  \eeprom/n3002
+LUT4        ---     0.408             I1 to O              \eeprom/i7_3_lut
+Route         1   e 1.020                                  \eeprom/n20_adj_423
+LUT4        ---     0.408             I2 to O              \eeprom/i12_4_lut
+Route        19   e 1.608                                  \eeprom/n3034
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2042_3_lut
+Route         4   e 1.297                                  \eeprom/n3118
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2089_3
+Route         2   e 1.158                                  \eeprom/n3668
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_4
+Route         2   e 1.158                                  \eeprom/n3669
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_5
+Route         2   e 1.158                                  \eeprom/n3670
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_6
+Route         2   e 1.158                                  \eeprom/n3671
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_7
+Route         2   e 1.158                                  \eeprom/n3672
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_8
+Route         2   e 1.158                                  \eeprom/n3673
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_9
+Route         2   e 1.158                                  \eeprom/n3674
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_10
+Route         2   e 1.158                                  \eeprom/n3675
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_11
+Route         2   e 1.158                                  \eeprom/n3676
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_12
+Route         2   e 1.158                                  \eeprom/n3677
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_13
+Route         2   e 1.158                                  \eeprom/n3678
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_14
+Route         2   e 1.158                                  \eeprom/n3679
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_15
+Route         2   e 1.158                                  \eeprom/n3680
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_16
+Route         2   e 1.158                                  \eeprom/n3681
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_17
+Route         2   e 1.158                                  \eeprom/n3682
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_18
+Route         2   e 1.158                                  \eeprom/n3683
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_19
+Route         2   e 1.158                                  \eeprom/n3684
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2089_20_lut
+Route         1   e 1.020                                  \eeprom/n3168
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i2092_3_lut
+Route         4   e 1.297                                  \eeprom/n3200
+LUT4        ---     0.408             I0 to O              \eeprom/i9_4_lut_adj_93
+Route         1   e 1.020                                  \eeprom/n24_adj_481
+LUT4        ---     0.408             I2 to O              \eeprom/i14_4_lut
+Route        21   e 1.628                                  \eeprom/n3232
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2178_3_lut
+Route         4   e 1.297                                  \eeprom/n3318
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2223_3
+Route         2   e 1.158                                  \eeprom/n3707
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_4
+Route         2   e 1.158                                  \eeprom/n3708
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_5
+Route         2   e 1.158                                  \eeprom/n3709
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_6
+Route         2   e 1.158                                  \eeprom/n3710
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_7
+Route         2   e 1.158                                  \eeprom/n3711
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_8
+Route         2   e 1.158                                  \eeprom/n3712
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_9
+Route         2   e 1.158                                  \eeprom/n3713
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_10
+Route         2   e 1.158                                  \eeprom/n3714
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_11
+Route         2   e 1.158                                  \eeprom/n3715
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_12
+Route         2   e 1.158                                  \eeprom/n3716
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_13
+Route         2   e 1.158                                  \eeprom/n3717
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_14
+Route         2   e 1.158                                  \eeprom/n3718
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_15
+Route         2   e 1.158                                  \eeprom/n3719
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_16
+Route         2   e 1.158                                  \eeprom/n3720
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_17
+Route         2   e 1.158                                  \eeprom/n3721
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_18
+Route         2   e 1.158                                  \eeprom/n3722
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_19
+Route         2   e 1.158                                  \eeprom/n3723
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_20
+Route         2   e 1.158                                  \eeprom/n3724
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_21
+Route         2   e 1.158                                  \eeprom/n3725
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2223_22_lut
+Route         1   e 1.020                                  \eeprom/n3366
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i2226_3_lut
+Route         4   e 1.297                                  \eeprom/n3398
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_102
+Route         1   e 1.020                                  \eeprom/n18_adj_488
+LUT4        ---     0.408             I3 to O              \eeprom/i13_4_lut_adj_106
+Route         1   e 1.020                                  \eeprom/n30_adj_489
+LUT4        ---     0.408             I3 to O              \eeprom/i16_4_lut
+Route        23   e 1.647                                  \eeprom/n3430
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2314_3_lut
+Route         4   e 1.297                                  \eeprom/n3518_adj_376
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2357_3
+Route         2   e 1.158                                  \eeprom/n3750
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_4
+Route         2   e 1.158                                  \eeprom/n3751
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_5
+Route         2   e 1.158                                  \eeprom/n3752
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_6
+Route         2   e 1.158                                  \eeprom/n3753
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_7
+Route         2   e 1.158                                  \eeprom/n3754
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_8
+Route         2   e 1.158                                  \eeprom/n3755
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_9
+Route         2   e 1.158                                  \eeprom/n3756
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_10
+Route         2   e 1.158                                  \eeprom/n3757
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_11
+Route         2   e 1.158                                  \eeprom/n3758
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_12
+Route         2   e 1.158                                  \eeprom/n3759
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_13
+Route         2   e 1.158                                  \eeprom/n3760
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_14
+Route         2   e 1.158                                  \eeprom/n3761
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_15
+Route         2   e 1.158                                  \eeprom/n3762
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_16
+Route         2   e 1.158                                  \eeprom/n3763
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_17
+Route         2   e 1.158                                  \eeprom/n3764
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_18
+Route         2   e 1.158                                  \eeprom/n3765
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_19
+Route         2   e 1.158                                  \eeprom/n3766
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_20
+Route         2   e 1.158                                  \eeprom/n3767
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_21
+Route         2   e 1.158                                  \eeprom/n3768
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_22
+Route         2   e 1.158                                  \eeprom/n3769
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_23
+Route         2   e 1.158                                  \eeprom/n3770
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2357_24_lut
+Route         1   e 1.020                                  \eeprom/n3564_adj_337
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i2360_3_lut
+Route         1   e 1.020                                  \eeprom/n3596_adj_454
+LUT4        ---     0.408             I2 to O              \eeprom/i1_4_lut_adj_64
+Route         9   e 1.459                                  \eeprom/n3628_adj_437
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2450_rep_1_3_lut
+Route         3   e 1.239                                  \eeprom/n4766
+LUT4        ---     0.408             I1 to CO             \eeprom/rem_4_add_2473_9
+Route         2   e 1.158                                  \eeprom/n3779
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_10
+Route         2   e 1.158                                  \eeprom/n3780
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_11
+Route         2   e 1.158                                  \eeprom/n3781
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_12
+Route         2   e 1.158                                  \eeprom/n3782
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_13
+Route         2   e 1.158                                  \eeprom/n3783
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_14
+Route         2   e 1.158                                  \eeprom/n3784
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_15
+Route         1   e 1.020                                  \eeprom/n3785
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2473_16_lut
+Route         1   e 1.020                                  \eeprom/number_of_bytes_7__N_68[14]
+LUT4        ---     0.408             I1 to O              \eeprom/i4042_4_lut
+Route         1   e 1.020                                  \eeprom/number_of_bytes_7__N_67
                   --------
-                   51.542  (26.0% logic, 74.0% route), 33 logic levels.
+                  326.092  (25.8% logic, 74.2% route), 206 logic levels.
 
 
-Passed:  The following path meets requirements by 12.253ns
+Error:  The following path violates requirements by 263.725ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \tli/delay_counter_183__i0  (from CLK +)
-   Destination:    SB_DFFESR  D              \tli/delay_counter_183__i30  (to CLK +)
+   Source:         SB_DFF     C              \eeprom/delay_counter_288__i0  (from CLK +)
+   Destination:    SB_DFF     D              \eeprom/ena_12  (to CLK +)
 
-   Delay:                  50.114ns  (26.0% logic, 74.0% route), 32 logic levels.
+   Delay:                 326.092ns  (25.8% logic, 74.2% route), 206 logic levels.
 
  Constraint Details:
 
-     50.114ns data_path \tli/delay_counter_183__i0 to \tli/delay_counter_183__i30 meets
+    326.092ns data_path \eeprom/delay_counter_288__i0 to \eeprom/ena_12 violates
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 12.253ns
+      0.133ns L_S requirement (totaling 62.367ns) by 263.725ns
 
- Path Details: \tli/delay_counter_183__i0 to \tli/delay_counter_183__i30
+ Path Details: \eeprom/delay_counter_288__i0 to \eeprom/ena_12
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \tli/delay_counter_183__i0 (from CLK)
-Route         3   e 1.339                                  \tli/delay_counter[0]_N
-LUT4        ---     0.408             I1 to CO             \tli/delay_counter_183_add_4_2
-Route         2   e 1.158                                  \tli/n1017
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_3
-Route         2   e 1.158                                  \tli/n1018
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_4
-Route         2   e 1.158                                  \tli/n1019
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_5
-Route         2   e 1.158                                  \tli/n1020
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_6
-Route         2   e 1.158                                  \tli/n1021
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_7
-Route         2   e 1.158                                  \tli/n1022
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_8
-Route         2   e 1.158                                  \tli/n1023
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_9
-Route         2   e 1.158                                  \tli/n1024
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_10
-Route         2   e 1.158                                  \tli/n1025
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_11
-Route         2   e 1.158                                  \tli/n1026
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_12
-Route         2   e 1.158                                  \tli/n1027
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_13
-Route         2   e 1.158                                  \tli/n1028
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_14
-Route         2   e 1.158                                  \tli/n1029
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_15
-Route         2   e 1.158                                  \tli/n1030
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_16
-Route         2   e 1.158                                  \tli/n1031
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_17
-Route         2   e 1.158                                  \tli/n1032
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_18
-Route         2   e 1.158                                  \tli/n1033
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_19
-Route         2   e 1.158                                  \tli/n1034
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_20
-Route         2   e 1.158                                  \tli/n1035
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_21
-Route         2   e 1.158                                  \tli/n1036
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_22
-Route         2   e 1.158                                  \tli/n1037
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_23
-Route         2   e 1.158                                  \tli/n1038
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_24
-Route         2   e 1.158                                  \tli/n1039
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_25
-Route         2   e 1.158                                  \tli/n1040
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_26
-Route         2   e 1.158                                  \tli/n1041
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_27
-Route         2   e 1.158                                  \tli/n1042
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_28
-Route         2   e 1.158                                  \tli/n1043
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_29
-Route         2   e 1.158                                  \tli/n1044
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_30
-Route         2   e 1.158                                  \tli/n1045
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_31
-Route         2   e 1.158                                  \tli/n1046
-LUT4        ---     0.408             I3 to O              \tli/delay_counter_183_add_4_32_lut
-Route         1   e 1.020                                  \tli/n135
+L_CO        ---     0.367              C to Q              \eeprom/delay_counter_288__i0 (from CLK)
+Route         5   e 1.441                                  \eeprom/delay_counter[0]
+LUT4        ---     0.408             I0 to O              \eeprom/rem_4_unary_minus_2_inv_0_i1_1_lut
+Route         2   e 1.158                                  \eeprom/n33
+LUT4        ---     0.408             I1 to CO             \eeprom/rem_4_unary_minus_2_add_3_2
+Route         2   e 1.158                                  \eeprom/n3786
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_3
+Route         2   e 1.158                                  \eeprom/n3787
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_4
+Route         2   e 1.158                                  \eeprom/n3788
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_5
+Route         2   e 1.158                                  \eeprom/n3789
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_6
+Route         2   e 1.158                                  \eeprom/n3790
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_7
+Route         2   e 1.158                                  \eeprom/n3791
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_8
+Route         2   e 1.158                                  \eeprom/n3792
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_9
+Route         2   e 1.158                                  \eeprom/n3793
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_10
+Route         2   e 1.158                                  \eeprom/n3794
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_11
+Route         2   e 1.158                                  \eeprom/n3795
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_12
+Route         2   e 1.158                                  \eeprom/n3796
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_13
+Route         2   e 1.158                                  \eeprom/n3797
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_14
+Route         2   e 1.158                                  \eeprom/n3798
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_15
+Route         2   e 1.158                                  \eeprom/n3799
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_16
+Route         2   e 1.158                                  \eeprom/n3800
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_17
+Route         2   e 1.158                                  \eeprom/n3801
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_18
+Route         2   e 1.158                                  \eeprom/n3802
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_19
+Route         2   e 1.158                                  \eeprom/n3803
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_20
+Route         2   e 1.158                                  \eeprom/n3804
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_21
+Route         2   e 1.158                                  \eeprom/n3805
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_22
+Route         2   e 1.158                                  \eeprom/n3806
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_23
+Route         2   e 1.158                                  \eeprom/n3807
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_24
+Route         2   e 1.158                                  \eeprom/n3808
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_25
+Route         2   e 1.158                                  \eeprom/n3809
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_26
+Route         2   e 1.158                                  \eeprom/n3810
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_27
+Route         2   e 1.158                                  \eeprom/n3811
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_28
+Route         2   e 1.158                                  \eeprom/n3812
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_29
+Route         2   e 1.158                                  \eeprom/n3813
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_30
+Route         2   e 1.158                                  \eeprom/n3814
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_31
+Route         2   e 1.158                                  \eeprom/n3815
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_32
+Route         1   e 1.020                                  \eeprom/n3816
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_unary_minus_2_add_3_33_lut
+Route         2   e 1.158                                  \eeprom/n2_adj_395
+LUT4        ---     0.408             I0 to O              \eeprom/i1_4_lut_adj_49
+Route         7   e 1.409                                  \eeprom/n4405
+LUT4        ---     0.408             I0 to O              \eeprom/rem_4_i1226_3_lut_4_lut
+Route         4   e 1.297                                  \eeprom/n1918
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1285_3
+Route         2   e 1.158                                  \eeprom/n3518
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_4
+Route         2   e 1.158                                  \eeprom/n3519
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_5
+Route         2   e 1.158                                  \eeprom/n3520
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_6
+Route         2   e 1.158                                  \eeprom/n3521
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_7
+Route         2   e 1.158                                  \eeprom/n3522
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1285_8_lut
+Route         1   e 1.020                                  \eeprom/n1980
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1288_3_lut
+Route         4   e 1.297                                  \eeprom/n2012
+LUT4        ---     0.408             I2 to O              \eeprom/i1_4_lut_adj_71
+Route        10   e 1.480                                  \eeprom/n2044
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1362_3_lut
+Route         4   e 1.297                                  \eeprom/n2118
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1419_3
+Route         2   e 1.158                                  \eeprom/n3533
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_4
+Route         2   e 1.158                                  \eeprom/n3534
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_5
+Route         2   e 1.158                                  \eeprom/n3535
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_6
+Route         2   e 1.158                                  \eeprom/n3536
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_7
+Route         2   e 1.158                                  \eeprom/n3537
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_8
+Route         2   e 1.158                                  \eeprom/n3538
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_9
+Route         2   e 1.158                                  \eeprom/n3539
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1419_10_lut
+Route         1   e 1.020                                  \eeprom/n2178
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1422_3_lut
+Route         4   e 1.297                                  \eeprom/n2210
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_25
+Route         1   e 1.020                                  \eeprom/n6
+LUT4        ---     0.408             I3 to O              \eeprom/i4_4_lut
+Route        12   e 1.516                                  \eeprom/n2242
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1498_3_lut
+Route         4   e 1.297                                  \eeprom/n2318
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1553_3
+Route         2   e 1.158                                  \eeprom/n3552
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_4
+Route         2   e 1.158                                  \eeprom/n3553
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_5
+Route         2   e 1.158                                  \eeprom/n3554
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_6
+Route         2   e 1.158                                  \eeprom/n3555
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_7
+Route         2   e 1.158                                  \eeprom/n3556
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_8
+Route         2   e 1.158                                  \eeprom/n3557
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_9
+Route         2   e 1.158                                  \eeprom/n3558
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_10
+Route         2   e 1.158                                  \eeprom/n3559
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_11
+Route         2   e 1.158                                  \eeprom/n3560
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1553_12_lut
+Route         1   e 1.020                                  \eeprom/n2376
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1556_3_lut
+Route         4   e 1.297                                  \eeprom/n2408
+LUT4        ---     0.408             I2 to O              \eeprom/i6_4_lut_adj_77
+Route        13   e 1.532                                  \eeprom/n2440
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1634_3_lut
+Route         4   e 1.297                                  \eeprom/n2518
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1687_3
+Route         2   e 1.158                                  \eeprom/n3575
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_4
+Route         2   e 1.158                                  \eeprom/n3576
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_5
+Route         2   e 1.158                                  \eeprom/n3577
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_6
+Route         2   e 1.158                                  \eeprom/n3578
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_7
+Route         2   e 1.158                                  \eeprom/n3579
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_8
+Route         2   e 1.158                                  \eeprom/n3580
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_9
+Route         2   e 1.158                                  \eeprom/n3581
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_10
+Route         2   e 1.158                                  \eeprom/n3582
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_11
+Route         2   e 1.158                                  \eeprom/n3583
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_12
+Route         2   e 1.158                                  \eeprom/n3584
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_13
+Route         2   e 1.158                                  \eeprom/n3585
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1687_14_lut
+Route         1   e 1.020                                  \eeprom/n2574
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1690_3_lut
+Route         4   e 1.297                                  \eeprom/n2606
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_85
+Route         1   e 1.020                                  \eeprom/n10_adj_475
+LUT4        ---     0.408             I3 to O              \eeprom/i7_4_lut_adj_87
+Route         1   e 1.020                                  \eeprom/n16
+LUT4        ---     0.408             I1 to O              \eeprom/i8_4_lut
+Route        15   e 1.561                                  \eeprom/n2638
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1770_3_lut
+Route         4   e 1.297                                  \eeprom/n2718
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1821_3
+Route         2   e 1.158                                  \eeprom/n3602
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_4
+Route         2   e 1.158                                  \eeprom/n3603
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_5
+Route         2   e 1.158                                  \eeprom/n3604
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_6
+Route         2   e 1.158                                  \eeprom/n3605
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_7
+Route         2   e 1.158                                  \eeprom/n3606
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_8
+Route         2   e 1.158                                  \eeprom/n3607
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_9
+Route         2   e 1.158                                  \eeprom/n3608
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_10
+Route         2   e 1.158                                  \eeprom/n3609
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_11
+Route         2   e 1.158                                  \eeprom/n3610
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_12
+Route         2   e 1.158                                  \eeprom/n3611
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_13
+Route         2   e 1.158                                  \eeprom/n3612
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_14
+Route         2   e 1.158                                  \eeprom/n3613
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_15
+Route         2   e 1.158                                  \eeprom/n3614
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1821_16_lut
+Route         1   e 1.020                                  \eeprom/n2772
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1824_3_lut
+Route         4   e 1.297                                  \eeprom/n2804
+LUT4        ---     0.408             I2 to O              \eeprom/i9_4_lut_adj_34
+Route         1   e 1.020                                  \eeprom/n20
+LUT4        ---     0.408             I1 to O              \eeprom/i10_4_lut
+Route        17   e 1.586                                  \eeprom/n2836
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1906_3_lut
+Route         4   e 1.297                                  \eeprom/n2918
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1955_3
+Route         2   e 1.158                                  \eeprom/n3633
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_4
+Route         2   e 1.158                                  \eeprom/n3634
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_5
+Route         2   e 1.158                                  \eeprom/n3635
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_6
+Route         2   e 1.158                                  \eeprom/n3636
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_7
+Route         2   e 1.158                                  \eeprom/n3637
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_8
+Route         2   e 1.158                                  \eeprom/n3638
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_9
+Route         2   e 1.158                                  \eeprom/n3639
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_10
+Route         2   e 1.158                                  \eeprom/n3640
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_11
+Route         2   e 1.158                                  \eeprom/n3641
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_12
+Route         2   e 1.158                                  \eeprom/n3642
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_13
+Route         2   e 1.158                                  \eeprom/n3643
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_14
+Route         2   e 1.158                                  \eeprom/n3644
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_15
+Route         2   e 1.158                                  \eeprom/n3645
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_16
+Route         2   e 1.158                                  \eeprom/n3646
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_17
+Route         2   e 1.158                                  \eeprom/n3647
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1955_18_lut
+Route         1   e 1.020                                  \eeprom/n2970
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1958_3_lut
+Route         4   e 1.297                                  \eeprom/n3002
+LUT4        ---     0.408             I1 to O              \eeprom/i7_3_lut
+Route         1   e 1.020                                  \eeprom/n20_adj_423
+LUT4        ---     0.408             I2 to O              \eeprom/i12_4_lut
+Route        19   e 1.608                                  \eeprom/n3034
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2042_3_lut
+Route         4   e 1.297                                  \eeprom/n3118
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2089_3
+Route         2   e 1.158                                  \eeprom/n3668
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_4
+Route         2   e 1.158                                  \eeprom/n3669
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_5
+Route         2   e 1.158                                  \eeprom/n3670
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_6
+Route         2   e 1.158                                  \eeprom/n3671
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_7
+Route         2   e 1.158                                  \eeprom/n3672
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_8
+Route         2   e 1.158                                  \eeprom/n3673
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_9
+Route         2   e 1.158                                  \eeprom/n3674
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_10
+Route         2   e 1.158                                  \eeprom/n3675
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_11
+Route         2   e 1.158                                  \eeprom/n3676
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_12
+Route         2   e 1.158                                  \eeprom/n3677
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_13
+Route         2   e 1.158                                  \eeprom/n3678
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_14
+Route         2   e 1.158                                  \eeprom/n3679
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_15
+Route         2   e 1.158                                  \eeprom/n3680
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_16
+Route         2   e 1.158                                  \eeprom/n3681
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_17
+Route         2   e 1.158                                  \eeprom/n3682
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_18
+Route         2   e 1.158                                  \eeprom/n3683
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_19
+Route         2   e 1.158                                  \eeprom/n3684
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2089_20_lut
+Route         1   e 1.020                                  \eeprom/n3168
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i2092_3_lut
+Route         4   e 1.297                                  \eeprom/n3200
+LUT4        ---     0.408             I0 to O              \eeprom/i9_4_lut_adj_93
+Route         1   e 1.020                                  \eeprom/n24_adj_481
+LUT4        ---     0.408             I2 to O              \eeprom/i14_4_lut
+Route        21   e 1.628                                  \eeprom/n3232
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2178_3_lut
+Route         4   e 1.297                                  \eeprom/n3318
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2223_3
+Route         2   e 1.158                                  \eeprom/n3707
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_4
+Route         2   e 1.158                                  \eeprom/n3708
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_5
+Route         2   e 1.158                                  \eeprom/n3709
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_6
+Route         2   e 1.158                                  \eeprom/n3710
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_7
+Route         2   e 1.158                                  \eeprom/n3711
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_8
+Route         2   e 1.158                                  \eeprom/n3712
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_9
+Route         2   e 1.158                                  \eeprom/n3713
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_10
+Route         2   e 1.158                                  \eeprom/n3714
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_11
+Route         2   e 1.158                                  \eeprom/n3715
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_12
+Route         2   e 1.158                                  \eeprom/n3716
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_13
+Route         2   e 1.158                                  \eeprom/n3717
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_14
+Route         2   e 1.158                                  \eeprom/n3718
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_15
+Route         2   e 1.158                                  \eeprom/n3719
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_16
+Route         2   e 1.158                                  \eeprom/n3720
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_17
+Route         2   e 1.158                                  \eeprom/n3721
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_18
+Route         2   e 1.158                                  \eeprom/n3722
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_19
+Route         2   e 1.158                                  \eeprom/n3723
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_20
+Route         2   e 1.158                                  \eeprom/n3724
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_21
+Route         2   e 1.158                                  \eeprom/n3725
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2223_22_lut
+Route         1   e 1.020                                  \eeprom/n3366
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i2226_3_lut
+Route         4   e 1.297                                  \eeprom/n3398
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_102
+Route         1   e 1.020                                  \eeprom/n18_adj_488
+LUT4        ---     0.408             I3 to O              \eeprom/i13_4_lut_adj_106
+Route         1   e 1.020                                  \eeprom/n30_adj_489
+LUT4        ---     0.408             I3 to O              \eeprom/i16_4_lut
+Route        23   e 1.647                                  \eeprom/n3430
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2314_3_lut
+Route         4   e 1.297                                  \eeprom/n3518_adj_376
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2357_3
+Route         2   e 1.158                                  \eeprom/n3750
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_4
+Route         2   e 1.158                                  \eeprom/n3751
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_5
+Route         2   e 1.158                                  \eeprom/n3752
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_6
+Route         2   e 1.158                                  \eeprom/n3753
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_7
+Route         2   e 1.158                                  \eeprom/n3754
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_8
+Route         2   e 1.158                                  \eeprom/n3755
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_9
+Route         2   e 1.158                                  \eeprom/n3756
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_10
+Route         2   e 1.158                                  \eeprom/n3757
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_11
+Route         2   e 1.158                                  \eeprom/n3758
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_12
+Route         2   e 1.158                                  \eeprom/n3759
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_13
+Route         2   e 1.158                                  \eeprom/n3760
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_14
+Route         2   e 1.158                                  \eeprom/n3761
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_15
+Route         2   e 1.158                                  \eeprom/n3762
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_16
+Route         2   e 1.158                                  \eeprom/n3763
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_17
+Route         2   e 1.158                                  \eeprom/n3764
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_18
+Route         2   e 1.158                                  \eeprom/n3765
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_19
+Route         2   e 1.158                                  \eeprom/n3766
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_20
+Route         2   e 1.158                                  \eeprom/n3767
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_21
+Route         2   e 1.158                                  \eeprom/n3768
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_22
+Route         2   e 1.158                                  \eeprom/n3769
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_23
+Route         2   e 1.158                                  \eeprom/n3770
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_24
+Route         1   e 1.020                                  \eeprom/n3771
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2357_25_lut
+Route         1   e 1.020                                  \eeprom/n4765
+LUT4        ---     0.408             I1 to O              \eeprom/i1_4_lut_adj_64
+Route         9   e 1.459                                  \eeprom/n3628_adj_437
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2450_rep_1_3_lut
+Route         3   e 1.239                                  \eeprom/n4766
+LUT4        ---     0.408             I1 to CO             \eeprom/rem_4_add_2473_9
+Route         2   e 1.158                                  \eeprom/n3779
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_10
+Route         2   e 1.158                                  \eeprom/n3780
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_11
+Route         2   e 1.158                                  \eeprom/n3781
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_12
+Route         2   e 1.158                                  \eeprom/n3782
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_13
+Route         2   e 1.158                                  \eeprom/n3783
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_14
+Route         2   e 1.158                                  \eeprom/n3784
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_15
+Route         1   e 1.020                                  \eeprom/n3785
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2473_16_lut
+Route         1   e 1.020                                  \eeprom/number_of_bytes_7__N_68[14]
+LUT4        ---     0.408             I1 to O              \eeprom/i4042_4_lut
+Route         1   e 1.020                                  \eeprom/number_of_bytes_7__N_67
                   --------
-                   50.114  (26.0% logic, 74.0% route), 32 logic levels.
+                  326.092  (25.8% logic, 74.2% route), 206 logic levels.
 
 
-Passed:  The following path meets requirements by 12.391ns
+Error:  The following path violates requirements by 263.587ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFESR  C              \tli/delay_counter_183__i1  (from CLK +)
-   Destination:    SB_DFFESR  D              \tli/delay_counter_183__i31  (to CLK +)
+   Source:         SB_DFF     C              \eeprom/delay_counter_288__i0  (from CLK +)
+   Destination:    SB_DFF     D              \eeprom/ena_12  (to CLK +)
 
-   Delay:                  49.976ns  (26.0% logic, 74.0% route), 32 logic levels.
+   Delay:                 325.954ns  (25.8% logic, 74.2% route), 206 logic levels.
 
  Constraint Details:
 
-     49.976ns data_path \tli/delay_counter_183__i1 to \tli/delay_counter_183__i31 meets
+    325.954ns data_path \eeprom/delay_counter_288__i0 to \eeprom/ena_12 violates
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 12.391ns
+      0.133ns L_S requirement (totaling 62.367ns) by 263.587ns
 
- Path Details: \tli/delay_counter_183__i1 to \tli/delay_counter_183__i31
+ Path Details: \eeprom/delay_counter_288__i0 to \eeprom/ena_12
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \tli/delay_counter_183__i1 (from CLK)
-Route         3   e 1.339                                  \tli/delay_counter[1]_N
-LUT4        ---     0.408             I1 to CO             \tli/delay_counter_183_add_4_3
-Route         2   e 1.158                                  \tli/n1018
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_4
-Route         2   e 1.158                                  \tli/n1019
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_5
-Route         2   e 1.158                                  \tli/n1020
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_6
-Route         2   e 1.158                                  \tli/n1021
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_7
-Route         2   e 1.158                                  \tli/n1022
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_8
-Route         2   e 1.158                                  \tli/n1023
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_9
-Route         2   e 1.158                                  \tli/n1024
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_10
-Route         2   e 1.158                                  \tli/n1025
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_11
-Route         2   e 1.158                                  \tli/n1026
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_12
-Route         2   e 1.158                                  \tli/n1027
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_13
-Route         2   e 1.158                                  \tli/n1028
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_14
-Route         2   e 1.158                                  \tli/n1029
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_15
-Route         2   e 1.158                                  \tli/n1030
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_16
-Route         2   e 1.158                                  \tli/n1031
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_17
-Route         2   e 1.158                                  \tli/n1032
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_18
-Route         2   e 1.158                                  \tli/n1033
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_19
-Route         2   e 1.158                                  \tli/n1034
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_20
-Route         2   e 1.158                                  \tli/n1035
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_21
-Route         2   e 1.158                                  \tli/n1036
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_22
-Route         2   e 1.158                                  \tli/n1037
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_23
-Route         2   e 1.158                                  \tli/n1038
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_24
-Route         2   e 1.158                                  \tli/n1039
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_25
-Route         2   e 1.158                                  \tli/n1040
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_26
-Route         2   e 1.158                                  \tli/n1041
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_27
-Route         2   e 1.158                                  \tli/n1042
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_28
-Route         2   e 1.158                                  \tli/n1043
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_29
-Route         2   e 1.158                                  \tli/n1044
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_30
-Route         2   e 1.158                                  \tli/n1045
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_31
-Route         2   e 1.158                                  \tli/n1046
-LUT4        ---     0.408             CI to CO             \tli/delay_counter_183_add_4_32
-Route         1   e 1.020                                  \tli/n1047
-LUT4        ---     0.408             I3 to O              \tli/delay_counter_183_add_4_33_lut
-Route         1   e 1.020                                  \tli/n134
+L_CO        ---     0.367              C to Q              \eeprom/delay_counter_288__i0 (from CLK)
+Route         5   e 1.441                                  \eeprom/delay_counter[0]
+LUT4        ---     0.408             I0 to O              \eeprom/rem_4_unary_minus_2_inv_0_i1_1_lut
+Route         2   e 1.158                                  \eeprom/n33
+LUT4        ---     0.408             I1 to CO             \eeprom/rem_4_unary_minus_2_add_3_2
+Route         2   e 1.158                                  \eeprom/n3786
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_3
+Route         2   e 1.158                                  \eeprom/n3787
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_4
+Route         2   e 1.158                                  \eeprom/n3788
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_5
+Route         2   e 1.158                                  \eeprom/n3789
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_6
+Route         2   e 1.158                                  \eeprom/n3790
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_7
+Route         2   e 1.158                                  \eeprom/n3791
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_8
+Route         2   e 1.158                                  \eeprom/n3792
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_9
+Route         2   e 1.158                                  \eeprom/n3793
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_10
+Route         2   e 1.158                                  \eeprom/n3794
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_11
+Route         2   e 1.158                                  \eeprom/n3795
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_12
+Route         2   e 1.158                                  \eeprom/n3796
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_13
+Route         2   e 1.158                                  \eeprom/n3797
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_14
+Route         2   e 1.158                                  \eeprom/n3798
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_15
+Route         2   e 1.158                                  \eeprom/n3799
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_16
+Route         2   e 1.158                                  \eeprom/n3800
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_17
+Route         2   e 1.158                                  \eeprom/n3801
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_18
+Route         2   e 1.158                                  \eeprom/n3802
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_19
+Route         2   e 1.158                                  \eeprom/n3803
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_20
+Route         2   e 1.158                                  \eeprom/n3804
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_21
+Route         2   e 1.158                                  \eeprom/n3805
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_22
+Route         2   e 1.158                                  \eeprom/n3806
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_23
+Route         2   e 1.158                                  \eeprom/n3807
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_24
+Route         2   e 1.158                                  \eeprom/n3808
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_25
+Route         2   e 1.158                                  \eeprom/n3809
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_26
+Route         2   e 1.158                                  \eeprom/n3810
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_27
+Route         2   e 1.158                                  \eeprom/n3811
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_28
+Route         2   e 1.158                                  \eeprom/n3812
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_29
+Route         2   e 1.158                                  \eeprom/n3813
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_30
+Route         2   e 1.158                                  \eeprom/n3814
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_31
+Route         2   e 1.158                                  \eeprom/n3815
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_unary_minus_2_add_3_32
+Route         1   e 1.020                                  \eeprom/n3816
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_unary_minus_2_add_3_33_lut
+Route         2   e 1.158                                  \eeprom/n2_adj_395
+LUT4        ---     0.408             I0 to O              \eeprom/i1_4_lut_adj_49
+Route         7   e 1.409                                  \eeprom/n4405
+LUT4        ---     0.408             I0 to O              \eeprom/rem_4_i1226_3_lut_4_lut
+Route         4   e 1.297                                  \eeprom/n1918
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1285_3
+Route         2   e 1.158                                  \eeprom/n3518
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_4
+Route         2   e 1.158                                  \eeprom/n3519
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_5
+Route         2   e 1.158                                  \eeprom/n3520
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_6
+Route         2   e 1.158                                  \eeprom/n3521
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1285_7
+Route         2   e 1.158                                  \eeprom/n3522
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1285_8_lut
+Route         1   e 1.020                                  \eeprom/n1980
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1288_3_lut
+Route         4   e 1.297                                  \eeprom/n2012
+LUT4        ---     0.408             I2 to O              \eeprom/i1_4_lut_adj_71
+Route        10   e 1.480                                  \eeprom/n2044
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1362_3_lut
+Route         4   e 1.297                                  \eeprom/n2118
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1419_3
+Route         2   e 1.158                                  \eeprom/n3533
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_4
+Route         2   e 1.158                                  \eeprom/n3534
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_5
+Route         2   e 1.158                                  \eeprom/n3535
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_6
+Route         2   e 1.158                                  \eeprom/n3536
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_7
+Route         2   e 1.158                                  \eeprom/n3537
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_8
+Route         2   e 1.158                                  \eeprom/n3538
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1419_9
+Route         2   e 1.158                                  \eeprom/n3539
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1419_10_lut
+Route         1   e 1.020                                  \eeprom/n2178
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1422_3_lut
+Route         4   e 1.297                                  \eeprom/n2210
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_25
+Route         1   e 1.020                                  \eeprom/n6
+LUT4        ---     0.408             I3 to O              \eeprom/i4_4_lut
+Route        12   e 1.516                                  \eeprom/n2242
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1498_3_lut
+Route         4   e 1.297                                  \eeprom/n2318
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1553_3
+Route         2   e 1.158                                  \eeprom/n3552
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_4
+Route         2   e 1.158                                  \eeprom/n3553
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_5
+Route         2   e 1.158                                  \eeprom/n3554
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_6
+Route         2   e 1.158                                  \eeprom/n3555
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_7
+Route         2   e 1.158                                  \eeprom/n3556
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_8
+Route         2   e 1.158                                  \eeprom/n3557
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_9
+Route         2   e 1.158                                  \eeprom/n3558
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_10
+Route         2   e 1.158                                  \eeprom/n3559
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1553_11
+Route         2   e 1.158                                  \eeprom/n3560
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1553_12_lut
+Route         1   e 1.020                                  \eeprom/n2376
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1556_3_lut
+Route         4   e 1.297                                  \eeprom/n2408
+LUT4        ---     0.408             I2 to O              \eeprom/i6_4_lut_adj_77
+Route        13   e 1.532                                  \eeprom/n2440
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1634_3_lut
+Route         4   e 1.297                                  \eeprom/n2518
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1687_3
+Route         2   e 1.158                                  \eeprom/n3575
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_4
+Route         2   e 1.158                                  \eeprom/n3576
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_5
+Route         2   e 1.158                                  \eeprom/n3577
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_6
+Route         2   e 1.158                                  \eeprom/n3578
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_7
+Route         2   e 1.158                                  \eeprom/n3579
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_8
+Route         2   e 1.158                                  \eeprom/n3580
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_9
+Route         2   e 1.158                                  \eeprom/n3581
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_10
+Route         2   e 1.158                                  \eeprom/n3582
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_11
+Route         2   e 1.158                                  \eeprom/n3583
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_12
+Route         2   e 1.158                                  \eeprom/n3584
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1687_13
+Route         2   e 1.158                                  \eeprom/n3585
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1687_14_lut
+Route         1   e 1.020                                  \eeprom/n2574
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1690_3_lut
+Route         4   e 1.297                                  \eeprom/n2606
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_85
+Route         1   e 1.020                                  \eeprom/n10_adj_475
+LUT4        ---     0.408             I3 to O              \eeprom/i7_4_lut_adj_87
+Route         1   e 1.020                                  \eeprom/n16
+LUT4        ---     0.408             I1 to O              \eeprom/i8_4_lut
+Route        15   e 1.561                                  \eeprom/n2638
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1770_3_lut
+Route         4   e 1.297                                  \eeprom/n2718
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1821_3
+Route         2   e 1.158                                  \eeprom/n3602
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_4
+Route         2   e 1.158                                  \eeprom/n3603
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_5
+Route         2   e 1.158                                  \eeprom/n3604
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_6
+Route         2   e 1.158                                  \eeprom/n3605
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_7
+Route         2   e 1.158                                  \eeprom/n3606
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_8
+Route         2   e 1.158                                  \eeprom/n3607
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_9
+Route         2   e 1.158                                  \eeprom/n3608
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_10
+Route         2   e 1.158                                  \eeprom/n3609
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_11
+Route         2   e 1.158                                  \eeprom/n3610
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_12
+Route         2   e 1.158                                  \eeprom/n3611
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_13
+Route         2   e 1.158                                  \eeprom/n3612
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1821_14
+Route         2   e 1.158                                  \eeprom/n3613
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1821_15_lut
+Route         1   e 1.020                                  \eeprom/n2773
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1825_3_lut
+Route         4   e 1.297                                  \eeprom/n2805
+LUT4        ---     0.408             I0 to O              \eeprom/i7_4_lut
+Route         1   e 1.020                                  \eeprom/n18_adj_418
+LUT4        ---     0.408             I1 to O              \eeprom/i9_4_lut_adj_34
+Route         1   e 1.020                                  \eeprom/n20
+LUT4        ---     0.408             I1 to O              \eeprom/i10_4_lut
+Route        17   e 1.586                                  \eeprom/n2836
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i1906_3_lut
+Route         4   e 1.297                                  \eeprom/n2918
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_1955_3
+Route         2   e 1.158                                  \eeprom/n3633
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_4
+Route         2   e 1.158                                  \eeprom/n3634
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_5
+Route         2   e 1.158                                  \eeprom/n3635
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_6
+Route         2   e 1.158                                  \eeprom/n3636
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_7
+Route         2   e 1.158                                  \eeprom/n3637
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_8
+Route         2   e 1.158                                  \eeprom/n3638
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_9
+Route         2   e 1.158                                  \eeprom/n3639
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_10
+Route         2   e 1.158                                  \eeprom/n3640
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_11
+Route         2   e 1.158                                  \eeprom/n3641
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_12
+Route         2   e 1.158                                  \eeprom/n3642
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_13
+Route         2   e 1.158                                  \eeprom/n3643
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_14
+Route         2   e 1.158                                  \eeprom/n3644
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_15
+Route         2   e 1.158                                  \eeprom/n3645
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_16
+Route         2   e 1.158                                  \eeprom/n3646
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_1955_17
+Route         2   e 1.158                                  \eeprom/n3647
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_1955_18_lut
+Route         1   e 1.020                                  \eeprom/n2970
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i1958_3_lut
+Route         4   e 1.297                                  \eeprom/n3002
+LUT4        ---     0.408             I1 to O              \eeprom/i7_3_lut
+Route         1   e 1.020                                  \eeprom/n20_adj_423
+LUT4        ---     0.408             I2 to O              \eeprom/i12_4_lut
+Route        19   e 1.608                                  \eeprom/n3034
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2042_3_lut
+Route         4   e 1.297                                  \eeprom/n3118
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2089_3
+Route         2   e 1.158                                  \eeprom/n3668
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_4
+Route         2   e 1.158                                  \eeprom/n3669
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_5
+Route         2   e 1.158                                  \eeprom/n3670
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_6
+Route         2   e 1.158                                  \eeprom/n3671
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_7
+Route         2   e 1.158                                  \eeprom/n3672
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_8
+Route         2   e 1.158                                  \eeprom/n3673
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_9
+Route         2   e 1.158                                  \eeprom/n3674
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_10
+Route         2   e 1.158                                  \eeprom/n3675
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_11
+Route         2   e 1.158                                  \eeprom/n3676
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_12
+Route         2   e 1.158                                  \eeprom/n3677
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_13
+Route         2   e 1.158                                  \eeprom/n3678
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_14
+Route         2   e 1.158                                  \eeprom/n3679
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_15
+Route         2   e 1.158                                  \eeprom/n3680
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_16
+Route         2   e 1.158                                  \eeprom/n3681
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_17
+Route         2   e 1.158                                  \eeprom/n3682
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_18
+Route         2   e 1.158                                  \eeprom/n3683
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2089_19
+Route         2   e 1.158                                  \eeprom/n3684
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2089_20_lut
+Route         1   e 1.020                                  \eeprom/n3168
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i2092_3_lut
+Route         4   e 1.297                                  \eeprom/n3200
+LUT4        ---     0.408             I0 to O              \eeprom/i9_4_lut_adj_93
+Route         1   e 1.020                                  \eeprom/n24_adj_481
+LUT4        ---     0.408             I2 to O              \eeprom/i14_4_lut
+Route        21   e 1.628                                  \eeprom/n3232
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2178_3_lut
+Route         4   e 1.297                                  \eeprom/n3318
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2223_3
+Route         2   e 1.158                                  \eeprom/n3707
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_4
+Route         2   e 1.158                                  \eeprom/n3708
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_5
+Route         2   e 1.158                                  \eeprom/n3709
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_6
+Route         2   e 1.158                                  \eeprom/n3710
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_7
+Route         2   e 1.158                                  \eeprom/n3711
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_8
+Route         2   e 1.158                                  \eeprom/n3712
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_9
+Route         2   e 1.158                                  \eeprom/n3713
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_10
+Route         2   e 1.158                                  \eeprom/n3714
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_11
+Route         2   e 1.158                                  \eeprom/n3715
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_12
+Route         2   e 1.158                                  \eeprom/n3716
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_13
+Route         2   e 1.158                                  \eeprom/n3717
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_14
+Route         2   e 1.158                                  \eeprom/n3718
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_15
+Route         2   e 1.158                                  \eeprom/n3719
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_16
+Route         2   e 1.158                                  \eeprom/n3720
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_17
+Route         2   e 1.158                                  \eeprom/n3721
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_18
+Route         2   e 1.158                                  \eeprom/n3722
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_19
+Route         2   e 1.158                                  \eeprom/n3723
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_20
+Route         2   e 1.158                                  \eeprom/n3724
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2223_21
+Route         2   e 1.158                                  \eeprom/n3725
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2223_22_lut
+Route         1   e 1.020                                  \eeprom/n3366
+LUT4        ---     0.408             I1 to O              \eeprom/rem_4_i2226_3_lut
+Route         4   e 1.297                                  \eeprom/n3398
+LUT4        ---     0.408             I0 to O              \eeprom/i1_2_lut_adj_102
+Route         1   e 1.020                                  \eeprom/n18_adj_488
+LUT4        ---     0.408             I3 to O              \eeprom/i13_4_lut_adj_106
+Route         1   e 1.020                                  \eeprom/n30_adj_489
+LUT4        ---     0.408             I3 to O              \eeprom/i16_4_lut
+Route        23   e 1.647                                  \eeprom/n3430
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2314_3_lut
+Route         4   e 1.297                                  \eeprom/n3518_adj_376
+LUT4        ---     0.408             I0 to CO             \eeprom/rem_4_add_2357_3
+Route         2   e 1.158                                  \eeprom/n3750
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_4
+Route         2   e 1.158                                  \eeprom/n3751
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_5
+Route         2   e 1.158                                  \eeprom/n3752
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_6
+Route         2   e 1.158                                  \eeprom/n3753
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_7
+Route         2   e 1.158                                  \eeprom/n3754
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_8
+Route         2   e 1.158                                  \eeprom/n3755
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_9
+Route         2   e 1.158                                  \eeprom/n3756
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_10
+Route         2   e 1.158                                  \eeprom/n3757
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_11
+Route         2   e 1.158                                  \eeprom/n3758
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_12
+Route         2   e 1.158                                  \eeprom/n3759
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_13
+Route         2   e 1.158                                  \eeprom/n3760
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_14
+Route         2   e 1.158                                  \eeprom/n3761
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_15
+Route         2   e 1.158                                  \eeprom/n3762
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_16
+Route         2   e 1.158                                  \eeprom/n3763
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_17
+Route         2   e 1.158                                  \eeprom/n3764
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_18
+Route         2   e 1.158                                  \eeprom/n3765
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_19
+Route         2   e 1.158                                  \eeprom/n3766
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_20
+Route         2   e 1.158                                  \eeprom/n3767
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_21
+Route         2   e 1.158                                  \eeprom/n3768
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_22
+Route         2   e 1.158                                  \eeprom/n3769
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_23
+Route         2   e 1.158                                  \eeprom/n3770
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2357_24
+Route         1   e 1.020                                  \eeprom/n3771
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2357_25_lut
+Route         1   e 1.020                                  \eeprom/n4765
+LUT4        ---     0.408             I1 to O              \eeprom/i1_4_lut_adj_64
+Route         9   e 1.459                                  \eeprom/n3628_adj_437
+LUT4        ---     0.408             I2 to O              \eeprom/rem_4_i2450_rep_1_3_lut
+Route         3   e 1.239                                  \eeprom/n4766
+LUT4        ---     0.408             I1 to CO             \eeprom/rem_4_add_2473_9
+Route         2   e 1.158                                  \eeprom/n3779
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_10
+Route         2   e 1.158                                  \eeprom/n3780
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_11
+Route         2   e 1.158                                  \eeprom/n3781
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_12
+Route         2   e 1.158                                  \eeprom/n3782
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_13
+Route         2   e 1.158                                  \eeprom/n3783
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_14
+Route         2   e 1.158                                  \eeprom/n3784
+LUT4        ---     0.408             CI to CO             \eeprom/rem_4_add_2473_15
+Route         1   e 1.020                                  \eeprom/n3785
+LUT4        ---     0.408             I3 to O              \eeprom/rem_4_add_2473_16_lut
+Route         1   e 1.020                                  \eeprom/number_of_bytes_7__N_68[14]
+LUT4        ---     0.408             I1 to O              \eeprom/i4042_4_lut
+Route         1   e 1.020                                  \eeprom/number_of_bytes_7__N_67
                   --------
-                   49.976  (26.0% logic, 74.0% route), 32 logic levels.
+                  325.954  (25.8% logic, 74.2% route), 206 logic levels.
 
-Report: 51.675 ns is the maximum delay for this constraint.
+Warning: 326.225 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -291,24 +1345,525 @@ Timing Report Summary
 Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk500 [get_nets scl_enable]            |            -|            -|     0  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|scl_enable [ get_nets        |             |             |
+scl_enable ]                            |            -|            -|     0  
+                                        |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |    62.500 ns|    51.675 ns|    33  
+CLK [ get_ports { CLK } ]               |    62.500 ns|   326.225 ns|   206 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraints not met.
 
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\eeprom/delay_counter[0]                |       5|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2_adj_395                      |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n6                              |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n10_adj_475                     |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n16                             |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n18_adj_488                     |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n20                             |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n30_adj_489                     |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n33                             |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2044                           |      10|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2118                           |       4|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2242                           |      12|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2318                           |       4|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2440                           |      13|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2518                           |       4|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2638                           |      15|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2718                           |       4|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2836                           |      17|    4096|     99.00%
+                                        |        |        |
+\eeprom/n2918                           |       4|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3034                           |      19|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3118                           |       4|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3232                           |      21|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3318                           |       4|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3430                           |      23|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3518_adj_376                   |       4|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3533                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3534                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3535                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3536                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3537                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3538                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3539                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3552                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3553                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3554                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3555                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3556                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3557                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3558                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3559                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3575                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3576                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3577                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3578                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3579                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3580                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3581                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3582                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3583                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3584                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3585                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3602                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3603                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3604                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3605                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3606                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3607                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3608                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3609                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3610                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3611                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3612                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3613                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3628_adj_437                   |       9|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3633                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3634                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3635                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3636                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3637                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3638                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3639                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3640                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3641                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3642                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3643                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3644                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3645                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3646                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3668                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3669                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3670                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3671                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3672                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3673                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3674                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3675                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3676                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3677                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3678                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3679                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3680                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3681                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3682                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3683                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3684                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3707                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3708                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3709                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3710                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3711                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3712                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3713                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3714                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3715                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3716                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3717                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3718                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3719                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3720                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3721                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3722                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3723                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3724                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3725                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3750                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3751                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3752                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3753                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3754                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3755                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3756                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3757                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3758                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3759                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3760                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3761                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3762                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3763                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3764                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3765                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3766                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3767                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3768                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3769                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3770                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3779                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3780                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3781                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3782                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3783                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3784                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3785                           |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3786                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3787                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3788                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3789                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3790                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3791                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3792                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3793                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3794                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3795                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3796                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3797                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3798                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3799                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3800                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3801                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3802                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3803                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3804                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3805                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3806                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3807                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3808                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3809                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3810                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3811                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3812                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3813                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3814                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3815                           |       2|    4096|     99.00%
+                                        |        |        |
+\eeprom/n3816                           |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n4405                           |       7|    4096|     99.00%
+                                        |        |        |
+\eeprom/n4766                           |       3|    4096|     99.00%
+                                        |        |        |
+\eeprom/number_of_bytes_7__N_67         |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/number_of_bytes_7__N_68[14]     |       1|    4096|     99.00%
+                                        |        |        |
+\eeprom/n20_adj_423                     |       1|    2760|     67.38%
+                                        |        |        |
+\eeprom/n3560                           |       2|    2760|     67.38%
+                                        |        |        |
+\eeprom/n3614                           |       2|    2760|     67.38%
+                                        |        |        |
+\eeprom/n3647                           |       2|    2760|     67.38%
+                                        |        |        |
+\eeprom/n1945                           |       8|    2368|     57.81%
+                                        |        |        |
+\eeprom/n4415                           |       1|    2368|     57.81%
+                                        |        |        |
+\eeprom/n4419                           |       1|    2368|     57.81%
+                                        |        |        |
+\eeprom/n4437                           |       1|    2368|     57.81%
+                                        |        |        |
+\eeprom/n4441                           |       1|    2368|     57.81%
+                                        |        |        |
+\eeprom/n4733                           |       1|    2368|     57.81%
+                                        |        |        |
+\eeprom/n4734                           |       2|    2368|     57.81%
+                                        |        |        |
+\eeprom/n24_adj_481                     |       1|    2128|     51.95%
+                                        |        |        |
+\eeprom/n2178                           |       1|    2128|     51.95%
+                                        |        |        |
+\eeprom/n2210                           |       4|    2128|     51.95%
+                                        |        |        |
+\eeprom/n2574                           |       1|    2128|     51.95%
+                                        |        |        |
+\eeprom/n2606                           |       4|    2128|     51.95%
+                                        |        |        |
+\eeprom/n3168                           |       1|    2128|     51.95%
+                                        |        |        |
+\eeprom/n3200                           |       4|    2128|     51.95%
+                                        |        |        |
+\eeprom/n3366                           |       1|    2128|     51.95%
+                                        |        |        |
+\eeprom/n3398                           |       4|    2128|     51.95%
+                                        |        |        |
+\eeprom/n3564_adj_337                   |       1|    2048|     50.00%
+                                        |        |        |
+\eeprom/n3596_adj_454                   |       1|    2048|     50.00%
+                                        |        |        |
+\eeprom/n3771                           |       1|    2048|     50.00%
+                                        |        |        |
+\eeprom/n4765                           |       1|    2048|     50.00%
+                                        |        |        |
+\eeprom/n16_adj_479                     |       1|    1968|     48.05%
+                                        |        |        |
+\eeprom/n2209                           |       2|    1968|     48.05%
+                                        |        |        |
+\eeprom/n2605                           |       2|    1968|     48.05%
+                                        |        |        |
+\eeprom/n3199                           |       2|    1968|     48.05%
+                                        |        |        |
+\eeprom/n3397                           |       2|    1968|     48.05%
+                                        |        |        |
+\eeprom/n3540                           |       1|    1968|     48.05%
+                                        |        |        |
+\eeprom/n3586                           |       1|    1968|     48.05%
+                                        |        |        |
+\eeprom/n3685                           |       1|    1968|     48.05%
+                                        |        |        |
+\eeprom/n3726                           |       1|    1968|     48.05%
+                                        |        |        |
+\eeprom/n1918                           |       4|    1728|     42.19%
+                                        |        |        |
+\eeprom/n3518                           |       2|    1728|     42.19%
+                                        |        |        |
+\eeprom/n3519                           |       2|    1728|     42.19%
+                                        |        |        |
+\eeprom/n3520                           |       2|    1728|     42.19%
+                                        |        |        |
+\eeprom/n3521                           |       2|    1728|     42.19%
+                                        |        |        |
+\eeprom/n3522                           |       2|    1728|     42.19%
+                                        |        |        |
+\eeprom/n2376                           |       1|    1424|     34.77%
+                                        |        |        |
+\eeprom/n2408                           |       4|    1424|     34.77%
+                                        |        |        |
+\eeprom/n2772                           |       1|    1424|     34.77%
+                                        |        |        |
+\eeprom/n2804                           |       4|    1424|     34.77%
+                                        |        |        |
+\eeprom/n2970                           |       1|    1424|     34.77%
+                                        |        |        |
+\eeprom/n3002                           |       4|    1424|     34.77%
+                                        |        |        |
+\eeprom/n12_adj_472                     |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n18_adj_418                     |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n21_adj_422                     |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n24                             |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n2377                           |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n2407                           |       2|    1336|     32.62%
+                                        |        |        |
+\eeprom/n2409                           |       4|    1336|     32.62%
+                                        |        |        |
+\eeprom/n2773                           |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n2803                           |       2|    1336|     32.62%
+                                        |        |        |
+\eeprom/n2805                           |       4|    1336|     32.62%
+                                        |        |        |
+\eeprom/n2971                           |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n3001                           |       2|    1336|     32.62%
+                                        |        |        |
+\eeprom/n3003                           |       4|    1336|     32.62%
+                                        |        |        |
+\eeprom/n3561                           |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n3615                           |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n3648                           |       1|    1336|     32.62%
+                                        |        |        |
+\eeprom/n1980                           |       1|     864|     21.09%
+                                        |        |        |
+\eeprom/n2011                           |       2|     864|     21.09%
+                                        |        |        |
+\eeprom/n2012                           |       4|     864|     21.09%
+                                        |        |        |
+\eeprom/n3523                           |       1|     864|     21.09%
+                                        |        |        |
+\eeprom/n2017                           |       5|     848|     20.70%
+                                        |        |        |
+\eeprom/n2015                           |       4|     760|     18.55%
+                                        |        |        |
+\eeprom/n2016                           |       4|     760|     18.55%
+                                        |        |        |
+--------------------------------------------------------------------------------
 
 
 Timing summary:
 ---------------
 
-Timing errors: 0  Score: 0
+Timing errors: 4096  Score: 1076950040
 
-Constraints cover  3414 paths, 232 nets, and 549 connections (97.9% coverage)
+Constraints cover >4294967295 paths, 1281 nets, and 3031 connections (99.6% coverage)
 
 
-Peak memory: 209469440 bytes, TRCE: 679936 bytes, DLYMAN: 0 bytes
-CPU_TIME_REPORT: 0 secs 
+Peak memory: 298131456 bytes, TRCE: 72740864 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 4 secs 

@@ -35,6 +35,8 @@
 -ver "verilog/pwm.v"
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd" 
 -ver "verilog/tli4970.v"
+-lib work -vhd "vhdl/i2c_master.vhd" 
+-ver "verilog/eeprom.v"
 -p "/home/letrend/workspace/iceboard/software/testBoard"
 
 #set result format/file last
