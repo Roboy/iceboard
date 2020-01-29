@@ -26,7 +26,7 @@ module TinyFPGA_B (
   output INHB,
   output INLA,
   output INHA
-)/* synthesis syn_noprune = 1 */;
+);
   // drive USB pull-up resistor to '0' to disable USB
 assign USBPU = 0;
 
@@ -114,14 +114,24 @@ assign USBPU = 0;
       .OUTPUT_ENABLE(scl_enable)
     );
 
+    reg read;
+
+    integer delay_counter;
     always @ ( posedge CLK ) begin
-      addr <= 0;
+      read <= 0;
+      delay_counter <= delay_counter + 1;
+      if(delay_counter>16_000_000) begin
+        read <= 1;
+        addr <= 0;
+        delay_counter <= 0;
+      end
     end
 
     EEPROM eeprom(
       .clk(CLK),
       .addr(addr),
       .data(data),
+      .read(read),
       .data_ready(data_ready),
       .scl(scl),
       .scl_enable(scl_enable),

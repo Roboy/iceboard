@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jan 29 18:30:19 2020
+Wed Jan 29 19:18:12 2020
 
 
 Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
@@ -113,16 +113,16 @@ INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-101
 WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
 INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
 INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(46): expression size 32 truncated to fit in target size 16. VERI-1209
 INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(43): expression size 32 truncated to fit in target size 1. VERI-1209
 WARNING - synthesis: verilog/i2c_controller.v(44): expression size 32 truncated to fit in target size 1. VERI-1209
 WARNING - synthesis: verilog/i2c_controller.v(45): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: verilog/i2c_controller.v(46): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: verilog/i2c_controller.v(69): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: verilog/i2c_controller.v(118): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: verilog/i2c_controller.v(133): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: verilog/i2c_controller.v(149): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: verilog/eeprom.v(27): Register reset_13 is stuck at Zero. VDB-5013
-WARNING - synthesis: verilog/TinyFPGA_B.v(124): actual bit length 32 differs from formal bit length 8 for port data. VERI-1330
+WARNING - synthesis: verilog/i2c_controller.v(68): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(109): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(124): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(140): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(133): actual bit length 32 differs from formal bit length 8 for port data. VERI-1330
 WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
@@ -152,6 +152,7 @@ WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is 
 ######## Missing driver on net INHB. Patching with GND.
 ######## Missing driver on net INLA. Patching with GND.
 ######## Missing driver on net INHA. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(57): Register \eeprom/reset_41 is stuck at Zero. VDB-5013
 
 
 
@@ -172,7 +173,7 @@ WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
 WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
 WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
 WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
-WARNING - synthesis: verilog/i2c_controller.v(164): Register \eeprom/i2c/state_i0_i4 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/i2c_controller.v(155): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
 Writing scf file : template_Implmnt/template.scf
 
 Writing scf file : template_Implmnt/template.scf
@@ -186,41 +187,41 @@ Writing scf file : template_Implmnt/template.scf
 Results of NGD DRC are available in TinyFPGA_B_drc.log.
 
 ################### Begin Area Report (TinyFPGA_B)######################
-Number of register bits => 91 of 7680 (1 % )
-SB_CARRY => 380
-SB_DFF => 70
-SB_DFFE => 4
+Number of register bits => 111 of 7680 (1 % )
+SB_CARRY => 82
+SB_DFF => 48
+SB_DFFE => 13
 SB_DFFESR => 5
 SB_DFFESS => 4
 SB_DFFN => 1
 SB_DFFNE => 1
 SB_DFFNESS => 1
-SB_DFFSR => 5
+SB_DFFSR => 38
 SB_GB_IO => 1
 SB_IO => 15
-SB_LUT4 => 911
+SB_LUT4 => 200
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : CLK_N, loads : 67
+  Net : CLK_N, loads : 87
   Net : eeprom/i2c/i2c_clk, loads : 28
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : eeprom/eeprom_counter_31, loads : 36
-  Net : eeprom/n2, loads : 30
-  Net : eeprom/n3529, loads : 24
-  Net : eeprom/n3430, loads : 23
-  Net : eeprom/n3331, loads : 22
-  Net : eeprom/n3232, loads : 21
-  Net : eeprom/i2c/state_0, loads : 20
-  Net : eeprom/n3133, loads : 20
-  Net : eeprom/n2737, loads : 20
+  Net : addr_10__N_70, loads : 33
+  Net : eeprom/n642, loads : 31
+  Net : eeprom/state_0, loads : 23
+  Net : eeprom/i2c/state_0, loads : 22
+  Net : eeprom/i2c/state_1, loads : 20
   Net : eeprom/i2c/state_2, loads : 19
+  Net : eeprom/i2c/state_3, loads : 17
+  Net : eeprom/n1601, loads : 16
+  Net : eeprom/i2c/state_7_N_285_3, loads : 10
+  Net : eeprom/i2c/counter2_7__N_256, loads : 8
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -230,7 +231,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 62.500000 -name    |             |             |
-clk500 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   53.050 MHz|     6  
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   52.449 MHz|     6  
                                         |             |             |
  create_clock -period 62.500 -name      |             |             |
 TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
@@ -238,16 +239,16 @@ get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0
                                         |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |   16.000 MHz|    2.854 MHz|   221 *
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33  
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-1 constraints not met.
+All constraints were met.
 
 
-Peak Memory Usage: 288.023  MB
+Peak Memory Usage: 200.938  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 15.748  secs
+Elapsed CPU time for LSE flow : 1.320  secs
 --------------------------------------------------------------

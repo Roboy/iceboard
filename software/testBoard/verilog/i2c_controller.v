@@ -5,7 +5,6 @@ module i2c_controller(
 	input wire [7:0] data_in,
 	input wire enable,
 	input wire rw,
-  input wire read,
 
 	output reg [7:0] data_out,
 	output wire ready,
@@ -98,14 +97,6 @@ module i2c_controller(
 					end
 					else state <= IDLE;
 				end
-        //
-        // RESTART: begin
-        //   // delay_counter <= delay_counter + 1;
-        //   // if(delay_counter==3)begin
-        //   saved_addr <=  {addr, 1'b1};
-        //   state<= START;
-        //   // end
-        // end
 
 				START: begin
 					counter <= 7;

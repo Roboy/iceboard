@@ -2,28 +2,58 @@ module EEPROM(
     input clk,
     input [10:0] addr,
     output [7:0] data,
-    output data_ready,
+    input read,
+    output reg data_ready,
     inout sda,
     output sda_enable,
     inout scl,
     output scl_enable
   )/* synthesis syn_noprune = 1 */;
 
+localparam  IDLE = 0;
+localparam  DUMMY_WRITE = 1;
+localparam  READ = 2;
+
 reg enable;
 wire ready;
+reg ready_prev;
 reg reset;
 reg rw;
-integer eeprom_counter;
+reg [7:0] state;
+reg [15:0] delay_counter;
 
-assign data_ready = ready;
-always @ ( posedge clk ) begin
-  reset <= 0;
-  enable <= 0;
-  eeprom_counter <= eeprom_counter + 1;
-  if((eeprom_counter%16_000)==0) begin
-    enable <= 1;
-    rw <= !rw;
-  end
+always @ ( posedge clk ) begin: EEPROM_READOUT_FSM
+  enable <= 1'b0;
+  ready_prev <= ready;
+  case(state)
+    IDLE: begin
+      reset <= 0;
+      data_ready <= 1'b0;
+      if(read)begin
+        rw <= 1'b0; // write
+        enable <= 1'b1;
+        state <= DUMMY_WRITE;
+        delay_counter <= 2000;
+      end
+    end
+    DUMMY_WRITE: begin
+      if(ready)begin
+        if(delay_counter==0)begin
+          rw <= 1'b1; // read
+          enable <= 1'b1;
+          state <= READ;
+        end else begin
+          delay_counter <= delay_counter-1;
+        end
+      end
+    end
+    READ: begin
+      if(ready)begin
+        data_ready <= 1'b1;
+        state <= IDLE;
+      end
+    end
+  endcase
 end
 
 i2c_controller i2c(
@@ -32,7 +62,6 @@ i2c_controller i2c(
   .addr({4'b1010,addr[10:8]}),
   .data_in(addr[7:0]),
   .rw(rw),//'0' is write, '1' is read
-  .read(1'b1),
   .enable(enable),
   .data_out(data),
   .ready(ready),
