@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jan 29 19:18:12 2020
+Wed Jan 29 19:23:00 2020
 
 
 Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
@@ -187,40 +187,40 @@ Writing scf file : template_Implmnt/template.scf
 Results of NGD DRC are available in TinyFPGA_B_drc.log.
 
 ################### Begin Area Report (TinyFPGA_B)######################
-Number of register bits => 111 of 7680 (1 % )
+Number of register bits => 102 of 7680 (1 % )
 SB_CARRY => 82
-SB_DFF => 48
-SB_DFFE => 13
-SB_DFFESR => 5
-SB_DFFESS => 4
+SB_DFF => 31
+SB_DFFE => 2
+SB_DFFESR => 15
+SB_DFFESS => 13
 SB_DFFN => 1
 SB_DFFNE => 1
 SB_DFFNESS => 1
 SB_DFFSR => 38
 SB_GB_IO => 1
 SB_IO => 15
-SB_LUT4 => 200
+SB_LUT4 => 176
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : CLK_N, loads : 87
-  Net : eeprom/i2c/i2c_clk, loads : 28
+  Net : CLK_c, loads : 86
+  Net : eeprom/i2c/i2c_clk, loads : 20
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : addr_10__N_70, loads : 33
-  Net : eeprom/n642, loads : 31
-  Net : eeprom/state_0, loads : 23
-  Net : eeprom/i2c/state_0, loads : 22
-  Net : eeprom/i2c/state_1, loads : 20
-  Net : eeprom/i2c/state_2, loads : 19
-  Net : eeprom/i2c/state_3, loads : 17
-  Net : eeprom/n1601, loads : 16
-  Net : eeprom/i2c/state_7_N_285_3, loads : 10
+  Net : eeprom/n575, loads : 31
+  Net : eeprom/i2c/state_3, loads : 23
+  Net : eeprom/i2c/state_2, loads : 22
+  Net : eeprom/i2c/state_0, loads : 21
+  Net : eeprom/i2c/state_1, loads : 21
+  Net : eeprom/n1435, loads : 17
+  Net : eeprom/n1503, loads : 16
+  Net : eeprom/state_0, loads : 8
   Net : eeprom/i2c/counter2_7__N_256, loads : 8
 ################### End Clock Report ##################
 
@@ -231,7 +231,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 62.500000 -name    |             |             |
-clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   52.449 MHz|     6  
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
                                         |             |             |
  create_clock -period 62.500 -name      |             |             |
 TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
@@ -247,8 +247,8 @@ CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33
 All constraints were met.
 
 
-Peak Memory Usage: 200.938  MB
+Peak Memory Usage: 200.562  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.320  secs
+Elapsed CPU time for LSE flow : 1.325  secs
 --------------------------------------------------------------

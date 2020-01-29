@@ -137,6 +137,6 @@ assign USBPU = 0;
       .scl_enable(scl_enable),
       .sda(sda),
       .sda_enable(sda_enable)
-      )/* synthesis syn_noprune = 1 */;
+      );
 
 endmodule

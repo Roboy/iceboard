@@ -42,6 +42,8 @@
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd" 
 -ver "verilog/neopixel.v"
 -ver "verilog/pwm.v"
+-ver "verilog/eeprom.v"
+-ver "verilog/i2c_controller.v"
 -p "/home/letrend/workspace/iceboard/software/motorBoard_v0.1"
 
 #set result format/file last

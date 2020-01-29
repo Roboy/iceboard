@@ -8,7 +8,7 @@ module EEPROM(
     output sda_enable,
     inout scl,
     output scl_enable
-  )/* synthesis syn_noprune = 1 */;
+  );
 
 localparam  IDLE = 0;
 localparam  DUMMY_WRITE = 1;

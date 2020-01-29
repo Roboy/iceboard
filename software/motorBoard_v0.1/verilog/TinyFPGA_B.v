@@ -18,7 +18,7 @@ module TinyFPGA_B (
   output CS_CLK,
   output CS,
   input CS_MISO,
-  output SCL,
+  inout SCL,
   inout SDA,
   output INLC,
   output INHC,
@@ -36,8 +36,7 @@ pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
 .RESET(1'b1) // active low
 );
 
-wire [7:0] ID;
-assign ID = 128;
+reg [7:0] ID;
 
 wire [23:0] neopxl_color;
 
@@ -203,42 +202,55 @@ neopixel nx(
     displacement <= (encoder1_position-encoder0_position_scaled);
   end
 
-  // wire di_req, wr_ack, do_valid;
-  // reg wren;
-  // // wire [15:0] Word, cs_mosi;
-  // wire [15:0] data_out;
-  // integer delay_counter;
-  //
-  // always @(posedge clk32MHz) begin: TLI4970_READOUT_LOGIC
-	// 	wren <= 0;
-	// 	if(delay_counter>64_000)begin
-	// 		// if(CS)begin
-	// 		// 	if(data_out[15]==0)begin
-	// 		// 		current <= data_out[12:0];
-	// 		// 	end
-	// 			delay_counter <= 0;
-	// 			wren <= 1;
-	// 		// end
-	// 	end else begin
-	// 		delay_counter <= delay_counter+1;
-	// 	end
-  // end
-  //
-  // // SPI specs: 16bit, pol 0 phase 0, 1MHz
-  // spi_master #(16, 1'b0, 1'b1, 2, 16) spi(
-  // 	.sclk_i(clk32MHz),
-  // 	.pclk_i(clk32MHz),
-  // 	.rst_i(reset),
-  // 	.spi_miso_i(CS_MISO),
-  // 	// .di_i(Word),
-  // 	.wren_i(wren),
-  // 	.spi_ssel_o(CS),
-  // 	.spi_sck_o(CS_CLK),
-  // 	// .spi_mosi_o(cs_mosi),
-  // 	.di_req_o(di_req),
-  // 	.wr_ack_o(wr_ack),
-  // 	.do_valid_o(do_valid),
-  // 	.do_o(data_out)
-  // );
+  reg [10:0] addr;
+  wire [31:0] data;
+  wire data_ready;
+
+  wire sda, sda_enable, scl, scl_enable;
+  // tristated PULLUP for i2c
+  SB_IO #(
+    .PIN_TYPE(6'b101001),
+    .PULLUP(1'b1)
+  ) sda_output(
+    .PACKAGE_PIN(SDA),
+    .D_OUT_0(sda),
+    .OUTPUT_ENABLE(sda_enable)
+  );
+
+  SB_IO #(
+    .PIN_TYPE(6'b101001),
+    .PULLUP(1'b1)
+  ) scl_output(
+    .PACKAGE_PIN(SCL),
+    .D_OUT_0(scl),
+    .OUTPUT_ENABLE(scl_enable)
+  );
+
+  integer delay_counter = 0;
+  reg id_read = 1'b0;
+  reg read = 1'b0;
+
+  always @ ( posedge CLK ) begin
+    read <= 1'b0;
+    delay_counter <= delay_counter + 1;
+    if(delay_counter>16_000_000 && id_read==0) begin
+      read <= 1'b1;
+      addr <= 0;
+      id_read <= 1'b1;
+      // delay_counter <= 0;
+    end
+  end
+
+  EEPROM eeprom(
+    .clk(CLK),
+    .addr(addr),
+    .data(data),
+    .read(read),
+    .data_ready(data_ready),
+    .scl(scl),
+    .scl_enable(scl_enable),
+    .sda(sda),
+    .sda_enable(sda_enable)
+    );
 
 endmodule
