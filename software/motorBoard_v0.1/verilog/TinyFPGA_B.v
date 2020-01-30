@@ -232,12 +232,17 @@ neopixel nx(
 
   always @ ( posedge CLK ) begin
     read <= 1'b0;
-    delay_counter <= delay_counter + 1;
-    if(delay_counter>16_000_000 && id_read==0) begin
-      read <= 1'b1;
-      addr <= 0;
-      id_read <= 1'b1;
-      // delay_counter <= 0;
+    if(ID==0)begin
+      delay_counter <= delay_counter + 1;
+      if(delay_counter>16_000_000) begin
+        read <= 1'b1;
+        addr <= 0;
+        id_read <= 1'b1;
+        delay_counter <= 0;
+      end
+    end
+    if(data_ready)begin
+      ID <= data;
     end
   end
 

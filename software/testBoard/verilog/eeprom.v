@@ -25,10 +25,10 @@ reg [15:0] delay_counter;
 always @ ( posedge clk ) begin: EEPROM_READOUT_FSM
   enable <= 1'b0;
   ready_prev <= ready;
+  data_ready <= 1'b0;
   case(state)
     IDLE: begin
       reset <= 0;
-      data_ready <= 1'b0;
       if(read)begin
         rw <= 1'b0; // write
         enable <= 1'b1;

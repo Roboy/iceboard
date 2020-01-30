@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Wed Jan 29 23:28:20 2020
+Thu Jan 30 13:05:32 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -19,114 +19,110 @@ Report level:    verbose report, limited to 3 items per constraint
 
 ================================================================================
 Constraint: create_clock -period 62.500000 -name clk501 [get_nets \eeprom/i2c/i2c_clk]
-            492 items scored, 0 timing errors detected.
+            608 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 23.365ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         SB_DFFNESS C              \eeprom/i2c/write_enable_132  (from \eeprom/i2c/i2c_clk +)
-   Destination:    SB_DFFE    D              \eeprom/i2c/state_i0_i2  (to \eeprom/i2c/i2c_clk +)
-
-   Delay:                   7.752ns  (25.8% logic, 74.2% route), 5 logic levels.
-
- Constraint Details:
-
-      7.752ns data_path \eeprom/i2c/write_enable_132 to \eeprom/i2c/state_i0_i2 meets
-     31.250ns delay constraint less
-      0.133ns L_S requirement (totaling 31.117ns) by 23.365ns
-
- Path Details: \eeprom/i2c/write_enable_132 to \eeprom/i2c/state_i0_i2
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \eeprom/i2c/write_enable_132 (from \eeprom/i2c/i2c_clk)
-Route         4   e 1.397                                  sda_enable
-LUT4        ---     0.408             I1 to O              \eeprom/i2c/i1707_2_lut
-Route         2   e 1.158                                  state_7__N_3831[3]
-LUT4        ---     0.408             I2 to O              \eeprom/i2c/i2_3_lut_4_lut
-Route         2   e 1.158                                  \eeprom/i2c/n22072
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/i28167_3_lut_4_lut
-Route         1   e 1.020                                  n34058
-LUT4        ---     0.408             I0 to O              i13_4_lut
-Route         1   e 1.020                                  n5_adj_4808
-                  --------
-                    7.752  (25.8% logic, 74.2% route), 5 logic levels.
-
-
-Passed:  The following path meets requirements by 23.423ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         SB_DFFNE   C              \eeprom/i2c/sda_out_133  (from \eeprom/i2c/i2c_clk +)
-   Destination:    SB_DFFE    D              \eeprom/i2c/state_i0_i2  (to \eeprom/i2c/i2c_clk +)
-
-   Delay:                   7.694ns  (26.0% logic, 74.0% route), 5 logic levels.
-
- Constraint Details:
-
-      7.694ns data_path \eeprom/i2c/sda_out_133 to \eeprom/i2c/state_i0_i2 meets
-     31.250ns delay constraint less
-      0.133ns L_S requirement (totaling 31.117ns) by 23.423ns
-
- Path Details: \eeprom/i2c/sda_out_133 to \eeprom/i2c/state_i0_i2
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \eeprom/i2c/sda_out_133 (from \eeprom/i2c/i2c_clk)
-Route         3   e 1.339                                  \eeprom/i2c/sda_out
-LUT4        ---     0.408             I0 to O              \eeprom/i2c/i1707_2_lut
-Route         2   e 1.158                                  state_7__N_3831[3]
-LUT4        ---     0.408             I2 to O              \eeprom/i2c/i2_3_lut_4_lut
-Route         2   e 1.158                                  \eeprom/i2c/n22072
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/i28167_3_lut_4_lut
-Route         1   e 1.020                                  n34058
-LUT4        ---     0.408             I0 to O              i13_4_lut
-Route         1   e 1.020                                  n5_adj_4808
-                  --------
-                    7.694  (26.0% logic, 74.0% route), 5 logic levels.
-
-
-Passed:  The following path meets requirements by 48.351ns
+Passed:  The following path meets requirements by 48.270ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         SB_DFFESS  C              \eeprom/i2c/counter_i0  (from \eeprom/i2c/i2c_clk +)
    Destination:    SB_DFFESR  D              \eeprom/i2c/counter_i7  (to \eeprom/i2c/i2c_clk +)
 
-   Delay:                  14.016ns  (25.9% logic, 74.1% route), 9 logic levels.
+   Delay:                  14.097ns  (25.8% logic, 74.2% route), 9 logic levels.
 
  Constraint Details:
 
-     14.016ns data_path \eeprom/i2c/counter_i0 to \eeprom/i2c/counter_i7 meets
+     14.097ns data_path \eeprom/i2c/counter_i0 to \eeprom/i2c/counter_i7 meets
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 48.351ns
+      0.133ns L_S requirement (totaling 62.367ns) by 48.270ns
 
  Path Details: \eeprom/i2c/counter_i0 to \eeprom/i2c/counter_i7
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.367              C to Q              \eeprom/i2c/counter_i0 (from \eeprom/i2c/i2c_clk)
-Route         4   e 1.397                                  \eeprom/i2c/counter[0]
-LUT4        ---     0.408             I0 to CO             \eeprom/i2c/sub_89_add_2_2
-Route         2   e 1.158                                  \eeprom/i2c/n25802
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_89_add_2_3
-Route         2   e 1.158                                  \eeprom/i2c/n25803
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_89_add_2_4
-Route         2   e 1.158                                  \eeprom/i2c/n25804
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_89_add_2_5
-Route         2   e 1.158                                  \eeprom/i2c/n25805
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_89_add_2_6
-Route         2   e 1.158                                  \eeprom/i2c/n25806
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_89_add_2_7
-Route         2   e 1.158                                  \eeprom/i2c/n25807
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_89_add_2_8
-Route         1   e 1.020                                  \eeprom/i2c/n25808
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/sub_89_add_2_9_lut
-Route         1   e 1.020                                  \eeprom/i2c/n884
+Route         6   e 1.478                                  \eeprom/i2c/counter[0]
+LUT4        ---     0.408             I0 to CO             \eeprom/i2c/sub_95_add_2_2
+Route         2   e 1.158                                  \eeprom/i2c/n31098
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_95_add_2_3
+Route         2   e 1.158                                  \eeprom/i2c/n31099
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_95_add_2_4
+Route         2   e 1.158                                  \eeprom/i2c/n31100
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_95_add_2_5
+Route         2   e 1.158                                  \eeprom/i2c/n31101
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_95_add_2_6
+Route         2   e 1.158                                  \eeprom/i2c/n31102
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_95_add_2_7
+Route         2   e 1.158                                  \eeprom/i2c/n31103
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_95_add_2_8
+Route         1   e 1.020                                  \eeprom/i2c/n31104
+LUT4        ---     0.408             I3 to O              \eeprom/i2c/sub_95_add_2_9_lut
+Route         1   e 1.020                                  \eeprom/i2c/n989
                   --------
-                   14.016  (25.9% logic, 74.1% route), 9 logic levels.
+                   14.097  (25.8% logic, 74.2% route), 9 logic levels.
 
-Report: 7.885 ns is the maximum delay for this constraint.
+
+Passed:  The following path meets requirements by 24.590ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SB_DFFNESS C              \eeprom/i2c/write_enable_132  (from \eeprom/i2c/i2c_clk +)
+   Destination:    SB_DFFESS  D              \eeprom/i2c/state_i0_i3  (to \eeprom/i2c/i2c_clk +)
+
+   Delay:                   6.527ns  (24.4% logic, 75.6% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.527ns data_path \eeprom/i2c/write_enable_132 to \eeprom/i2c/state_i0_i3 meets
+     31.250ns delay constraint less
+      0.133ns L_S requirement (totaling 31.117ns) by 24.590ns
+
+ Path Details: \eeprom/i2c/write_enable_132 to \eeprom/i2c/state_i0_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367              C to Q              \eeprom/i2c/write_enable_132 (from \eeprom/i2c/i2c_clk)
+Route         4   e 1.397                                  sda_enable
+LUT4        ---     0.408             I1 to O              \eeprom/i2c/i1765_2_lut
+Route        11   e 1.499                                  state_7__N_3881[3]
+LUT4        ---     0.408             I2 to O              \eeprom/i2c/i29498_4_lut
+Route         1   e 1.020                                  \eeprom/i2c/n39290
+LUT4        ---     0.408             I2 to O              \eeprom/i2c/i1_4_lut
+Route         1   e 1.020                                  \eeprom/i2c/n35408
+                  --------
+                    6.527  (24.4% logic, 75.6% route), 4 logic levels.
+
+
+Passed:  The following path meets requirements by 24.648ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SB_DFFNE   C              \eeprom/i2c/sda_out_133  (from \eeprom/i2c/i2c_clk +)
+   Destination:    SB_DFFESS  D              \eeprom/i2c/state_i0_i3  (to \eeprom/i2c/i2c_clk +)
+
+   Delay:                   6.469ns  (24.6% logic, 75.4% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.469ns data_path \eeprom/i2c/sda_out_133 to \eeprom/i2c/state_i0_i3 meets
+     31.250ns delay constraint less
+      0.133ns L_S requirement (totaling 31.117ns) by 24.648ns
+
+ Path Details: \eeprom/i2c/sda_out_133 to \eeprom/i2c/state_i0_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367              C to Q              \eeprom/i2c/sda_out_133 (from \eeprom/i2c/i2c_clk)
+Route         3   e 1.339                                  \eeprom/i2c/sda_out
+LUT4        ---     0.408             I0 to O              \eeprom/i2c/i1765_2_lut
+Route        11   e 1.499                                  state_7__N_3881[3]
+LUT4        ---     0.408             I2 to O              \eeprom/i2c/i29498_4_lut
+Route         1   e 1.020                                  \eeprom/i2c/n39290
+LUT4        ---     0.408             I2 to O              \eeprom/i2c/i1_4_lut
+Route         1   e 1.020                                  \eeprom/i2c/n35408
+                  --------
+                    6.469  (24.6% logic, 75.4% route), 4 logic levels.
+
+Report: 14.230 ns is the maximum delay for this constraint.
 
 
 
@@ -144,108 +140,270 @@ Constraint:  create_clock -period 62.500 -name TinyFPGA_B|\eeprom/i2c/i2c_clk [ 
 
 ================================================================================
 Constraint: create_clock -period 62.500000 -waveform { 0.000000 31.250000 } -name CLK [ get_ports { CLK } ]
-            58 items scored, 0 timing errors detected.
+            3527 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 53.107ns
+Passed:  The following path meets requirements by 10.825ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              \eeprom/i2c/counter2_1469_1470__i1  (from CLK +)
-   Destination:    SB_DFFSR   D              \eeprom/i2c/counter2_1469_1470__i5  (to CLK +)
+   Source:         SB_DFFESR  C              delay_counter_1507__i0  (from CLK +)
+   Destination:    SB_DFFESR  D              delay_counter_1507__i31  (to CLK +)
 
-   Delay:                   9.260ns  (26.0% logic, 74.0% route), 6 logic levels.
+   Delay:                  51.542ns  (26.0% logic, 74.0% route), 33 logic levels.
 
  Constraint Details:
 
-      9.260ns data_path \eeprom/i2c/counter2_1469_1470__i1 to \eeprom/i2c/counter2_1469_1470__i5 meets
+     51.542ns data_path delay_counter_1507__i0 to delay_counter_1507__i31 meets
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 53.107ns
+      0.133ns L_S requirement (totaling 62.367ns) by 10.825ns
 
- Path Details: \eeprom/i2c/counter2_1469_1470__i1 to \eeprom/i2c/counter2_1469_1470__i5
+ Path Details: delay_counter_1507__i0 to delay_counter_1507__i31
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \eeprom/i2c/counter2_1469_1470__i1 (from CLK)
-Route         3   e 1.339                                  \eeprom/i2c/counter2[0]
-LUT4        ---     0.408             I1 to CO             \eeprom/i2c/counter2_1469_1470_add_4_2
-Route         2   e 1.158                                  \eeprom/i2c/n26335
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/counter2_1469_1470_add_4_3
-Route         2   e 1.158                                  \eeprom/i2c/n26336
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/counter2_1469_1470_add_4_4
-Route         2   e 1.158                                  \eeprom/i2c/n26337
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/counter2_1469_1470_add_4_5
-Route         1   e 1.020                                  \eeprom/i2c/n26338
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/counter2_1469_1470_add_4_6_lut
-Route         1   e 1.020                                  \eeprom/i2c/n26
+L_CO        ---     0.367              C to Q              delay_counter_1507__i0 (from CLK)
+Route         3   e 1.339                                  delay_counter[0]
+LUT4        ---     0.408             I1 to CO             delay_counter_1507_add_4_2
+Route         2   e 1.158                                  n31522
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_3
+Route         2   e 1.158                                  n31523
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_4
+Route         2   e 1.158                                  n31524
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_5
+Route         2   e 1.158                                  n31525
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_6
+Route         2   e 1.158                                  n31526
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_7
+Route         2   e 1.158                                  n31527
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_8
+Route         2   e 1.158                                  n31528
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_9
+Route         2   e 1.158                                  n31529
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_10
+Route         2   e 1.158                                  n31530
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_11
+Route         2   e 1.158                                  n31531
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_12
+Route         2   e 1.158                                  n31532
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_13
+Route         2   e 1.158                                  n31533
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_14
+Route         2   e 1.158                                  n31534
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_15
+Route         2   e 1.158                                  n31535
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_16
+Route         2   e 1.158                                  n31536
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_17
+Route         2   e 1.158                                  n31537
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_18
+Route         2   e 1.158                                  n31538
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_19
+Route         2   e 1.158                                  n31539
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_20
+Route         2   e 1.158                                  n31540
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_21
+Route         2   e 1.158                                  n31541
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_22
+Route         2   e 1.158                                  n31542
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_23
+Route         2   e 1.158                                  n31543
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_24
+Route         2   e 1.158                                  n31544
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_25
+Route         2   e 1.158                                  n31545
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_26
+Route         2   e 1.158                                  n31546
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_27
+Route         2   e 1.158                                  n31547
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_28
+Route         2   e 1.158                                  n31548
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_29
+Route         2   e 1.158                                  n31549
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_30
+Route         2   e 1.158                                  n31550
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_31
+Route         2   e 1.158                                  n31551
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_32
+Route         1   e 1.020                                  n31552
+LUT4        ---     0.408             I3 to O              delay_counter_1507_add_4_33_lut
+Route         1   e 1.020                                  n134
                   --------
-                    9.260  (26.0% logic, 74.0% route), 6 logic levels.
+                   51.542  (26.0% logic, 74.0% route), 33 logic levels.
 
 
-Passed:  The following path meets requirements by 54.535ns
+Passed:  The following path meets requirements by 12.253ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              \eeprom/i2c/counter2_1469_1470__i1  (from CLK +)
-   Destination:    SB_DFFSR   D              \eeprom/i2c/counter2_1469_1470__i4  (to CLK +)
+   Source:         SB_DFFESR  C              delay_counter_1507__i0  (from CLK +)
+   Destination:    SB_DFFESR  D              delay_counter_1507__i30  (to CLK +)
 
-   Delay:                   7.832ns  (25.5% logic, 74.5% route), 5 logic levels.
+   Delay:                  50.114ns  (26.0% logic, 74.0% route), 32 logic levels.
 
  Constraint Details:
 
-      7.832ns data_path \eeprom/i2c/counter2_1469_1470__i1 to \eeprom/i2c/counter2_1469_1470__i4 meets
+     50.114ns data_path delay_counter_1507__i0 to delay_counter_1507__i30 meets
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 54.535ns
+      0.133ns L_S requirement (totaling 62.367ns) by 12.253ns
 
- Path Details: \eeprom/i2c/counter2_1469_1470__i1 to \eeprom/i2c/counter2_1469_1470__i4
+ Path Details: delay_counter_1507__i0 to delay_counter_1507__i30
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \eeprom/i2c/counter2_1469_1470__i1 (from CLK)
-Route         3   e 1.339                                  \eeprom/i2c/counter2[0]
-LUT4        ---     0.408             I1 to CO             \eeprom/i2c/counter2_1469_1470_add_4_2
-Route         2   e 1.158                                  \eeprom/i2c/n26335
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/counter2_1469_1470_add_4_3
-Route         2   e 1.158                                  \eeprom/i2c/n26336
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/counter2_1469_1470_add_4_4
-Route         2   e 1.158                                  \eeprom/i2c/n26337
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/counter2_1469_1470_add_4_5_lut
-Route         1   e 1.020                                  \eeprom/i2c/n27
+L_CO        ---     0.367              C to Q              delay_counter_1507__i0 (from CLK)
+Route         3   e 1.339                                  delay_counter[0]
+LUT4        ---     0.408             I1 to CO             delay_counter_1507_add_4_2
+Route         2   e 1.158                                  n31522
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_3
+Route         2   e 1.158                                  n31523
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_4
+Route         2   e 1.158                                  n31524
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_5
+Route         2   e 1.158                                  n31525
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_6
+Route         2   e 1.158                                  n31526
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_7
+Route         2   e 1.158                                  n31527
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_8
+Route         2   e 1.158                                  n31528
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_9
+Route         2   e 1.158                                  n31529
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_10
+Route         2   e 1.158                                  n31530
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_11
+Route         2   e 1.158                                  n31531
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_12
+Route         2   e 1.158                                  n31532
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_13
+Route         2   e 1.158                                  n31533
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_14
+Route         2   e 1.158                                  n31534
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_15
+Route         2   e 1.158                                  n31535
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_16
+Route         2   e 1.158                                  n31536
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_17
+Route         2   e 1.158                                  n31537
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_18
+Route         2   e 1.158                                  n31538
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_19
+Route         2   e 1.158                                  n31539
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_20
+Route         2   e 1.158                                  n31540
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_21
+Route         2   e 1.158                                  n31541
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_22
+Route         2   e 1.158                                  n31542
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_23
+Route         2   e 1.158                                  n31543
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_24
+Route         2   e 1.158                                  n31544
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_25
+Route         2   e 1.158                                  n31545
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_26
+Route         2   e 1.158                                  n31546
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_27
+Route         2   e 1.158                                  n31547
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_28
+Route         2   e 1.158                                  n31548
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_29
+Route         2   e 1.158                                  n31549
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_30
+Route         2   e 1.158                                  n31550
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_31
+Route         2   e 1.158                                  n31551
+LUT4        ---     0.408             I3 to O              delay_counter_1507_add_4_32_lut
+Route         1   e 1.020                                  n135
                   --------
-                    7.832  (25.5% logic, 74.5% route), 5 logic levels.
+                   50.114  (26.0% logic, 74.0% route), 32 logic levels.
 
 
-Passed:  The following path meets requirements by 54.673ns
+Passed:  The following path meets requirements by 12.391ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              \eeprom/i2c/counter2_1469_1470__i2  (from CLK +)
-   Destination:    SB_DFFSR   D              \eeprom/i2c/counter2_1469_1470__i5  (to CLK +)
+   Source:         SB_DFFESR  C              delay_counter_1507__i1  (from CLK +)
+   Destination:    SB_DFFESR  D              delay_counter_1507__i31  (to CLK +)
 
-   Delay:                   7.694ns  (26.0% logic, 74.0% route), 5 logic levels.
+   Delay:                  49.976ns  (26.0% logic, 74.0% route), 32 logic levels.
 
  Constraint Details:
 
-      7.694ns data_path \eeprom/i2c/counter2_1469_1470__i2 to \eeprom/i2c/counter2_1469_1470__i5 meets
+     49.976ns data_path delay_counter_1507__i1 to delay_counter_1507__i31 meets
      62.500ns delay constraint less
-      0.133ns L_S requirement (totaling 62.367ns) by 54.673ns
+      0.133ns L_S requirement (totaling 62.367ns) by 12.391ns
 
- Path Details: \eeprom/i2c/counter2_1469_1470__i2 to \eeprom/i2c/counter2_1469_1470__i5
+ Path Details: delay_counter_1507__i1 to delay_counter_1507__i31
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \eeprom/i2c/counter2_1469_1470__i2 (from CLK)
-Route         3   e 1.339                                  \eeprom/i2c/counter2[1]
-LUT4        ---     0.408             I1 to CO             \eeprom/i2c/counter2_1469_1470_add_4_3
-Route         2   e 1.158                                  \eeprom/i2c/n26336
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/counter2_1469_1470_add_4_4
-Route         2   e 1.158                                  \eeprom/i2c/n26337
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/counter2_1469_1470_add_4_5
-Route         1   e 1.020                                  \eeprom/i2c/n26338
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/counter2_1469_1470_add_4_6_lut
-Route         1   e 1.020                                  \eeprom/i2c/n26
+L_CO        ---     0.367              C to Q              delay_counter_1507__i1 (from CLK)
+Route         3   e 1.339                                  delay_counter[1]
+LUT4        ---     0.408             I1 to CO             delay_counter_1507_add_4_3
+Route         2   e 1.158                                  n31523
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_4
+Route         2   e 1.158                                  n31524
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_5
+Route         2   e 1.158                                  n31525
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_6
+Route         2   e 1.158                                  n31526
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_7
+Route         2   e 1.158                                  n31527
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_8
+Route         2   e 1.158                                  n31528
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_9
+Route         2   e 1.158                                  n31529
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_10
+Route         2   e 1.158                                  n31530
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_11
+Route         2   e 1.158                                  n31531
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_12
+Route         2   e 1.158                                  n31532
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_13
+Route         2   e 1.158                                  n31533
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_14
+Route         2   e 1.158                                  n31534
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_15
+Route         2   e 1.158                                  n31535
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_16
+Route         2   e 1.158                                  n31536
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_17
+Route         2   e 1.158                                  n31537
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_18
+Route         2   e 1.158                                  n31538
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_19
+Route         2   e 1.158                                  n31539
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_20
+Route         2   e 1.158                                  n31540
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_21
+Route         2   e 1.158                                  n31541
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_22
+Route         2   e 1.158                                  n31542
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_23
+Route         2   e 1.158                                  n31543
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_24
+Route         2   e 1.158                                  n31544
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_25
+Route         2   e 1.158                                  n31545
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_26
+Route         2   e 1.158                                  n31546
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_27
+Route         2   e 1.158                                  n31547
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_28
+Route         2   e 1.158                                  n31548
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_29
+Route         2   e 1.158                                  n31549
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_30
+Route         2   e 1.158                                  n31550
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_31
+Route         2   e 1.158                                  n31551
+LUT4        ---     0.408             CI to CO             delay_counter_1507_add_4_32
+Route         1   e 1.020                                  n31552
+LUT4        ---     0.408             I3 to O              delay_counter_1507_add_4_33_lut
+Route         1   e 1.020                                  n134
                   --------
-                    7.694  (26.0% logic, 74.0% route), 5 logic levels.
+                   49.976  (26.0% logic, 74.0% route), 32 logic levels.
 
-Report: 9.393 ns is the maximum delay for this constraint.
+Report: 51.675 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -255,7 +413,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 62.500000 -name    |             |             |
-clk501 [get_nets \eeprom/i2c/i2c_clk]   |    62.500 ns|    15.770 ns|     5  
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |    62.500 ns|    14.230 ns|     9  
                                         |             |             |
 create_clock -period 62.500000 -name    |             |             |
 clk500 [get_nets clk32MHz]              |            -|            -|     0  
@@ -266,7 +424,7 @@ get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0
                                         |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |    62.500 ns|     9.393 ns|     6  
+CLK [ get_ports { CLK } ]               |    62.500 ns|    51.675 ns|    33  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -280,8 +438,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  1042 paths, 91 nets, and 270 connections (1.3% coverage)
+Constraints cover  5929 paths, 314 nets, and 907 connections (4.3% coverage)
 
 
-Peak memory: 265969664 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 266817536 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
