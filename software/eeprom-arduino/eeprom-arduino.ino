@@ -6,16 +6,30 @@
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
+  while(!Serial)
   Serial.println("hello");
   Wire.begin();
-  writeI2CByte(0, 128);
-  
 }
 
+int incomingByte = 0; // for incoming serial data
+
 void loop() {
-  // put your main code here, to run repeatedly:
-  Serial.println(readI2CByte(0));
-  delay(1000);
+  if (Serial.available() > 0) {
+    // read the incoming byte:
+    incomingByte = Serial.read();
+
+    // say what you got:
+    Serial.print("I received: ");
+    Serial.println(incomingByte, HEX);
+    // put your main code here, to run repeatedly:
+    if(incomingByte==0 || incomingByte == 255){
+      Serial.println("invalid bus id 0 or 255, choose another one");
+    }else{
+      writeI2CByte(0,incomingByte);
+      Serial.println(readI2CByte(0));
+      delay(1000); 
+    }
+  }
 }
 
 void writeI2CByte(byte data_addr, byte data){

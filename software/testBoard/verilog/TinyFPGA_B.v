@@ -91,17 +91,18 @@ assign USBPU = 0;
     // assign SDA=blink_counter[10];
 
     reg [10:0] addr;
-    wire [31:0] data;
+    wire [7:0] data;
     wire data_ready;
 
-    wire sda, sda_enable, scl, scl_enable;
+    wire sda_out, sda_in, sda_enable, scl, scl_enable;
     // tristated PULLUP for i2c
     SB_IO #(
       .PIN_TYPE(6'b101001),
       .PULLUP(1'b1)
     ) sda_output(
       .PACKAGE_PIN(SDA),
-      .D_OUT_0(sda),
+      .D_OUT_0(sda_out),
+      .D_IN_0(sda_in),
       .OUTPUT_ENABLE(sda_enable)
     );
 
@@ -114,17 +115,37 @@ assign USBPU = 0;
       .OUTPUT_ENABLE(scl_enable)
     );
 
-    reg read;
+    integer delay_counter = 0;
+    reg read = 1'b0;
 
-    integer delay_counter;
-    always @ ( posedge CLK ) begin
-      read <= 0;
-      delay_counter <= delay_counter + 1;
-      if(delay_counter>16_000_000) begin
-        read <= 1;
-        addr <= 0;
-        delay_counter <= 0;
-      end
+    localparam  IDLE = 0;
+    localparam  WAIT = 1;
+    localparam  DONE = 2;
+
+    always @ ( posedge CLK ) begin: ID_READOUT_FSM
+      reg [2:0] state;
+      read <= 1'b0;
+      case(state)
+        IDLE: begin
+          read <= 1'b1;
+          state <= WAIT;
+        end
+        WAIT: begin
+          if(data_ready)begin
+            // ID <= data;
+            state <= DONE;
+          end
+        end
+        DONE: begin
+          if(data==0)begin
+            delay_counter <= delay_counter + 1;
+            if(delay_counter>16_000_0) begin
+              delay_counter <= 0;
+              state <= IDLE;
+            end
+          end
+        end
+      endcase
     end
 
     EEPROM eeprom(
@@ -135,7 +156,8 @@ assign USBPU = 0;
       .data_ready(data_ready),
       .scl(scl),
       .scl_enable(scl_enable),
-      .sda(sda),
+      .sda_in(sda_in),
+      .sda_out(sda_out),
       .sda_enable(sda_enable)
       );
 

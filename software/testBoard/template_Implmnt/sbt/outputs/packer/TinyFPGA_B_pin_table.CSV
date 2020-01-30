@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:02:28
 
-* File Generated:     Jan 29 2020 19:23:34
+* File Generated:     Jan 30 2020 23:28:33
 
 * Purpose:            Detailed IO and package pin info
 
@@ -27,7 +27,7 @@ A5, VCCIO_0, not used, , , , , , topBank
 A6, PIO, INHA, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A7, PIO, INHB, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A8, PIO, INHC, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
-A9, PIO, SDA, Output, , SB_LVCMOS, Pull Up, Output Tristatable by Enable, rightBank
+A9, PIO, SDA, InOut, , SB_LVCMOS, Pull Up, Simple Input Output Tristatable by Enable, rightBank
 B1, PIO, not used, , , , , , leftBank
 B2, PIO, CLK, Input, , SB_LVCMOS, No Pull Up, Simple Input, leftBank
 B3, PIO, LED, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank

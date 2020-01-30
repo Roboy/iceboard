@@ -4,11 +4,12 @@ module EEPROM(
     output [7:0] data,
     input read,
     output reg data_ready,
-    inout sda,
+    output wire sda_out,
+    input wire sda_in,
     output sda_enable,
-    inout scl,
+    inout wire scl,
     output scl_enable
-  );
+  )/* synthesis syn_noprune = 1 */;
 
 localparam  IDLE = 0;
 localparam  DUMMY_WRITE = 1;
@@ -25,10 +26,10 @@ reg [15:0] delay_counter;
 always @ ( posedge clk ) begin: EEPROM_READOUT_FSM
   enable <= 1'b0;
   ready_prev <= ready;
-  data_ready <= 1'b0;
   case(state)
     IDLE: begin
       reset <= 0;
+      data_ready <= 1'b0;
       if(read)begin
         rw <= 1'b0; // write
         enable <= 1'b1;
@@ -65,7 +66,8 @@ i2c_controller i2c(
   .enable(enable),
   .data_out(data),
   .ready(ready),
-  .i2c_sda(sda),
+  .i2c_sda_out(sda_out),
+  .i2c_sda_in(sda_in),
   .i2c_scl(scl),
   .sda_enable(sda_enable),
   .scl_enable(scl_enable)

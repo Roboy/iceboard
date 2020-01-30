@@ -9,7 +9,8 @@ module i2c_controller(
 	output reg [7:0] data_out,
 	output wire ready,
 
-	inout i2c_sda,
+	output wire i2c_sda_out,
+	input wire i2c_sda_in,
 	inout wire i2c_scl,
   output sda_enable,
   output scl_enable
@@ -27,7 +28,7 @@ module i2c_controller(
   localparam DELAY = 9;
   localparam DELAY2 = 10;
 
-	localparam DIVIDE_BY = 64;
+	localparam DIVIDE_BY = 128;
 
 	reg [7:0] state;
 	reg [7:0] saved_addr;
@@ -40,9 +41,9 @@ module i2c_controller(
 	reg i2c_clk = 1;
   // wire i2c_clk;
 
-	assign ready = ((rst == 0) && (state == IDLE)) ? 1 : 0;
-	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;
-	assign i2c_sda = (write_enable == 1) ? sda_out : 'bz;
+	assign ready = ((rst == 0) && (state == IDLE)) ? 1'b1 : 1'b0;
+	assign i2c_scl = (i2c_scl_enable == 1'b0 ) ? 1'b1 : i2c_clk;
+	assign i2c_sda_out = (write_enable == 1'b1) ? sda_out : 'bz;
   assign sda_enable = write_enable;
   assign scl_enable = i2c_scl_enable;
 
@@ -58,14 +59,15 @@ module i2c_controller(
     if(enable)begin
       enable_slow <= 1;
     end
+		if(enable_slow && state!=IDLE)begin
+			enable_slow <= 0;
+		end
 		if (counter2 == (DIVIDE_BY/2) - 1) begin
 			i2c_clk <= !i2c_clk;
 			counter2 <= 0;
-      if(i2c_clk==1)begin  // on negative edge
-        enable_slow <= enable;
-      end
 		end
-		else counter2 <= counter2 + 1;
+		else counter2 <= counter2 + 8'd1;
+
 	end
 
 	always @(negedge i2c_clk, posedge rst) begin
@@ -94,8 +96,9 @@ module i2c_controller(
 						state <= START;
 						saved_addr <= {addr, rw};
 						saved_data <= data_in;
+					end else begin
+						state <= IDLE;
 					end
-					else state <= IDLE;
 				end
 
 				START: begin
@@ -106,22 +109,31 @@ module i2c_controller(
 				ADDRESS: begin
 					if (counter == 0) begin
 						state <= READ_ACK;
-					end else counter <= counter - 1;
+					end else begin
+						counter <= counter - 8'd1;
+					end
 				end
 
 				READ_ACK: begin
-					if (i2c_sda == 0) begin
+					if (i2c_sda_in == 0) begin
 						counter <= 7;
-						if(saved_addr[0] == 0) state <= WRITE_DATA;
-						else state <= READ_DATA;
-					end else state <= STOP;
+						if(saved_addr[0] == 0)begin
+							state <= WRITE_DATA;
+						end else begin
+							state <= READ_DATA;
+						end
+					end else begin
+						state <= STOP;
+					end
 				end
 
 				WRITE_DATA: begin
 					if(counter == 0) begin
 						state <= DELAY;
             delay_counter <= 0;
-					end else counter <= counter - 1;
+					end else begin
+						counter <= counter - 1;
+					end
 				end
 
         DELAY: begin
@@ -129,15 +141,20 @@ module i2c_controller(
         end
 
 				READ_ACK2: begin
-          if ((i2c_sda == 0) && (enable == 1)) begin
+          if ((i2c_sda_in == 0) && (enable == 1)) begin
             state <= IDLE;
-          end else state <= STOP;
+          end else begin
+						state <= STOP;
+					end
 				end
 
 				READ_DATA: begin
-					data_out[counter] <= i2c_sda;
-					if (counter == 0) state <= WRITE_ACK;
-					else counter <= counter - 1;
+					//data_out[counter] <= i2c_sda;
+					if (counter == 0) begin
+						state <= WRITE_ACK;
+					end else begin
+						counter <= counter - 8'd1;
+					end
 				end
 
 				WRITE_ACK: begin
@@ -186,6 +203,7 @@ module i2c_controller(
 				end
 
 				READ_DATA: begin
+					data_out[counter] <= i2c_sda_in;
 					write_enable <= 0;
 				end
 

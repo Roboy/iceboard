@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Wed Jan 29 19:23:01 2020
+Thu Jan 30 23:27:42 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -19,7 +19,7 @@ Report level:    verbose report, limited to 3 items per constraint
 
 ================================================================================
 Constraint: create_clock -period 62.500000 -name clk501 [get_nets \eeprom/i2c/i2c_clk]
-            508 items scored, 0 timing errors detected.
+            534 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -43,84 +43,84 @@ Passed:  The following path meets requirements by 48.270ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.367              C to Q              \eeprom/i2c/counter_i0 (from \eeprom/i2c/i2c_clk)
 Route         6   e 1.478                                  \eeprom/i2c/counter[0]
-LUT4        ---     0.408             I0 to CO             \eeprom/i2c/sub_34_add_2_2
-Route         2   e 1.158                                  \eeprom/i2c/n2509
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_34_add_2_3
-Route         2   e 1.158                                  \eeprom/i2c/n2510
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_34_add_2_4
-Route         2   e 1.158                                  \eeprom/i2c/n2511
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_34_add_2_5
-Route         2   e 1.158                                  \eeprom/i2c/n2512
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_34_add_2_6
-Route         2   e 1.158                                  \eeprom/i2c/n2513
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_34_add_2_7
-Route         2   e 1.158                                  \eeprom/i2c/n2514
-LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_34_add_2_8
-Route         1   e 1.020                                  \eeprom/i2c/n2515
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/sub_34_add_2_9_lut
-Route         1   e 1.020                                  \eeprom/i2c/n323
+LUT4        ---     0.408             I0 to CO             \eeprom/i2c/sub_39_add_2_2
+Route         2   e 1.158                                  \eeprom/i2c/n2664
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_3
+Route         2   e 1.158                                  \eeprom/i2c/n2665
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_4
+Route         2   e 1.158                                  \eeprom/i2c/n2666
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_5
+Route         2   e 1.158                                  \eeprom/i2c/n2667
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_6
+Route         2   e 1.158                                  \eeprom/i2c/n2668
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_7
+Route         2   e 1.158                                  \eeprom/i2c/n2669
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_8
+Route         1   e 1.020                                  \eeprom/i2c/n2670
+LUT4        ---     0.408             I3 to O              \eeprom/i2c/sub_39_add_2_9_lut
+Route         1   e 1.020                                  \eeprom/i2c/n120
                   --------
                    14.097  (25.8% logic, 74.2% route), 9 logic levels.
 
 
-Passed:  The following path meets requirements by 24.442ns
+Passed:  The following path meets requirements by 24.232ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         SB_DFFESS  C              \eeprom/i2c/state_i0_i2  (from \eeprom/i2c/i2c_clk +)
-   Destination:    SB_DFFNESS E              \eeprom/i2c/write_enable_132  (to \eeprom/i2c/i2c_clk -)
+   Destination:    SB_DFFN    D              \eeprom/i2c/data_out_i0_i7  (to \eeprom/i2c/i2c_clk -)
 
-   Delay:                   6.675ns  (23.8% logic, 76.2% route), 4 logic levels.
+   Delay:                   6.885ns  (23.1% logic, 76.9% route), 4 logic levels.
 
  Constraint Details:
 
-      6.675ns data_path \eeprom/i2c/state_i0_i2 to \eeprom/i2c/write_enable_132 meets
+      6.885ns data_path \eeprom/i2c/state_i0_i2 to \eeprom/i2c/data_out_i0_i7 meets
      31.250ns delay constraint less
-      0.133ns L_S requirement (totaling 31.117ns) by 24.442ns
+      0.133ns L_S requirement (totaling 31.117ns) by 24.232ns
 
- Path Details: \eeprom/i2c/state_i0_i2 to \eeprom/i2c/write_enable_132
+ Path Details: \eeprom/i2c/state_i0_i2 to \eeprom/i2c/data_out_i0_i7
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.367              C to Q              \eeprom/i2c/state_i0_i2 (from \eeprom/i2c/i2c_clk)
-Route        23   e 1.747                                  \eeprom/state[2]
-LUT4        ---     0.408             I1 to O              \eeprom/i2c/i57_3_lut_3_lut
-Route         4   e 1.297                                  \eeprom/i2c/n36
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/i1_2_lut_4_lut
-Route         1   e 1.020                                  \eeprom/i2c/n39
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/i1897_4_lut_4_lut
-Route         1   e 1.020                                  \eeprom/i2c/n952
+Route        22   e 1.738                                  \eeprom/i2c/state[2]
+LUT4        ---     0.408             I2 to O              \eeprom/i2c/state_7__I_0_143_i11_2_lut_3_lut_4_lut
+Route         3   e 1.239                                  \eeprom/i2c/n15
+LUT4        ---     0.408             I0 to O              \eeprom/i2c/i1_2_lut_adj_12
+Route         4   e 1.297                                  n1722
+LUT4        ---     0.408             I3 to O              i1064_4_lut
+Route         1   e 1.020                                  n1991
                   --------
-                    6.675  (23.8% logic, 76.2% route), 4 logic levels.
+                    6.885  (23.1% logic, 76.9% route), 4 logic levels.
 
 
-Passed:  The following path meets requirements by 24.442ns
+Passed:  The following path meets requirements by 24.232ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFE    C              \eeprom/i2c/state_i0_i0  (from \eeprom/i2c/i2c_clk +)
-   Destination:    SB_DFFNESS E              \eeprom/i2c/write_enable_132  (to \eeprom/i2c/i2c_clk -)
+   Source:         SB_DFFESS  C              \eeprom/i2c/state_i0_i2  (from \eeprom/i2c/i2c_clk +)
+   Destination:    SB_DFFN    D              \eeprom/i2c/data_out_i0_i0  (to \eeprom/i2c/i2c_clk -)
 
-   Delay:                   6.675ns  (23.8% logic, 76.2% route), 4 logic levels.
+   Delay:                   6.885ns  (23.1% logic, 76.9% route), 4 logic levels.
 
  Constraint Details:
 
-      6.675ns data_path \eeprom/i2c/state_i0_i0 to \eeprom/i2c/write_enable_132 meets
+      6.885ns data_path \eeprom/i2c/state_i0_i2 to \eeprom/i2c/data_out_i0_i0 meets
      31.250ns delay constraint less
-      0.133ns L_S requirement (totaling 31.117ns) by 24.442ns
+      0.133ns L_S requirement (totaling 31.117ns) by 24.232ns
 
- Path Details: \eeprom/i2c/state_i0_i0 to \eeprom/i2c/write_enable_132
+ Path Details: \eeprom/i2c/state_i0_i2 to \eeprom/i2c/data_out_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              \eeprom/i2c/state_i0_i0 (from \eeprom/i2c/i2c_clk)
-Route        23   e 1.747                                  state[0]_adj_386
-LUT4        ---     0.408             I2 to O              \eeprom/i2c/i57_3_lut_3_lut
-Route         4   e 1.297                                  \eeprom/i2c/n36
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/i1_2_lut_4_lut
-Route         1   e 1.020                                  \eeprom/i2c/n39
-LUT4        ---     0.408             I3 to O              \eeprom/i2c/i1897_4_lut_4_lut
-Route         1   e 1.020                                  \eeprom/i2c/n952
+L_CO        ---     0.367              C to Q              \eeprom/i2c/state_i0_i2 (from \eeprom/i2c/i2c_clk)
+Route        22   e 1.738                                  \eeprom/i2c/state[2]
+LUT4        ---     0.408             I2 to O              \eeprom/i2c/state_7__I_0_143_i11_2_lut_3_lut_4_lut
+Route         3   e 1.239                                  \eeprom/i2c/n15
+LUT4        ---     0.408             I1 to O              \eeprom/i2c/i1_2_lut_adj_11
+Route         4   e 1.297                                  n1717
+LUT4        ---     0.408             I3 to O              i1063_4_lut
+Route         1   e 1.020                                  n1990
                   --------
-                    6.675  (23.8% logic, 76.2% route), 4 logic levels.
+                    6.885  (23.1% logic, 76.9% route), 4 logic levels.
 
 Report: 14.230 ns is the maximum delay for this constraint.
 
@@ -134,7 +134,7 @@ Constraint:  create_clock -period 62.500 -name TinyFPGA_B|\eeprom/i2c/i2c_clk [ 
 
 ================================================================================
 Constraint: create_clock -period 62.500000 -waveform { 0.000000 31.250000 } -name CLK [ get_ports { CLK } ]
-            867 items scored, 0 timing errors detected.
+            773 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -142,86 +142,86 @@ Passed:  The following path meets requirements by 10.825ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              delay_counter_331__i0  (from CLK +)
-   Destination:    SB_DFFSR   D              delay_counter_331__i31  (to CLK +)
+   Source:         SB_DFFESR  C              delay_counter_i0  (from CLK +)
+   Destination:    SB_DFFESR  D              delay_counter_i31  (to CLK +)
 
    Delay:                  51.542ns  (26.0% logic, 74.0% route), 33 logic levels.
 
  Constraint Details:
 
-     51.542ns data_path delay_counter_331__i0 to delay_counter_331__i31 meets
+     51.542ns data_path delay_counter_i0 to delay_counter_i31 meets
      62.500ns delay constraint less
       0.133ns L_S requirement (totaling 62.367ns) by 10.825ns
 
- Path Details: delay_counter_331__i0 to delay_counter_331__i31
+ Path Details: delay_counter_i0 to delay_counter_i31
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              delay_counter_331__i0 (from CLK)
+L_CO        ---     0.367              C to Q              delay_counter_i0 (from CLK)
 Route         3   e 1.339                                  delay_counter[0]
-LUT4        ---     0.408             I1 to CO             delay_counter_331_add_4_2
-Route         2   e 1.158                                  n2478
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_3
-Route         2   e 1.158                                  n2479
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_4
-Route         2   e 1.158                                  n2480
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_5
-Route         2   e 1.158                                  n2481
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_6
-Route         2   e 1.158                                  n2482
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_7
-Route         2   e 1.158                                  n2483
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_8
-Route         2   e 1.158                                  n2484
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_9
-Route         2   e 1.158                                  n2485
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_10
-Route         2   e 1.158                                  n2486
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_11
-Route         2   e 1.158                                  n2487
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_12
-Route         2   e 1.158                                  n2488
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_13
-Route         2   e 1.158                                  n2489
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_14
-Route         2   e 1.158                                  n2490
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_15
-Route         2   e 1.158                                  n2491
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_16
-Route         2   e 1.158                                  n2492
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_17
-Route         2   e 1.158                                  n2493
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_18
-Route         2   e 1.158                                  n2494
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_19
-Route         2   e 1.158                                  n2495
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_20
-Route         2   e 1.158                                  n2496
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_21
-Route         2   e 1.158                                  n2497
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_22
-Route         2   e 1.158                                  n2498
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_23
-Route         2   e 1.158                                  n2499
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_24
-Route         2   e 1.158                                  n2500
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_25
-Route         2   e 1.158                                  n2501
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_26
-Route         2   e 1.158                                  n2502
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_27
-Route         2   e 1.158                                  n2503
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_28
-Route         2   e 1.158                                  n2504
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_29
-Route         2   e 1.158                                  n2505
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_30
-Route         2   e 1.158                                  n2506
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_31
-Route         2   e 1.158                                  n2507
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_32
-Route         1   e 1.020                                  n2508
-LUT4        ---     0.408             I3 to O              delay_counter_331_add_4_33_lut
-Route         1   e 1.020                                  n134
+LUT4        ---     0.408             I0 to CO             add_8_2
+Route         2   e 1.158                                  n2633
+LUT4        ---     0.408             CI to CO             add_8_3
+Route         2   e 1.158                                  n2634
+LUT4        ---     0.408             CI to CO             add_8_4
+Route         2   e 1.158                                  n2635
+LUT4        ---     0.408             CI to CO             add_8_5
+Route         2   e 1.158                                  n2636
+LUT4        ---     0.408             CI to CO             add_8_6
+Route         2   e 1.158                                  n2637
+LUT4        ---     0.408             CI to CO             add_8_7
+Route         2   e 1.158                                  n2638
+LUT4        ---     0.408             CI to CO             add_8_8
+Route         2   e 1.158                                  n2639
+LUT4        ---     0.408             CI to CO             add_8_9
+Route         2   e 1.158                                  n2640
+LUT4        ---     0.408             CI to CO             add_8_10
+Route         2   e 1.158                                  n2641
+LUT4        ---     0.408             CI to CO             add_8_11
+Route         2   e 1.158                                  n2642
+LUT4        ---     0.408             CI to CO             add_8_12
+Route         2   e 1.158                                  n2643
+LUT4        ---     0.408             CI to CO             add_8_13
+Route         2   e 1.158                                  n2644
+LUT4        ---     0.408             CI to CO             add_8_14
+Route         2   e 1.158                                  n2645
+LUT4        ---     0.408             CI to CO             add_8_15
+Route         2   e 1.158                                  n2646
+LUT4        ---     0.408             CI to CO             add_8_16
+Route         2   e 1.158                                  n2647
+LUT4        ---     0.408             CI to CO             add_8_17
+Route         2   e 1.158                                  n2648
+LUT4        ---     0.408             CI to CO             add_8_18
+Route         2   e 1.158                                  n2649
+LUT4        ---     0.408             CI to CO             add_8_19
+Route         2   e 1.158                                  n2650
+LUT4        ---     0.408             CI to CO             add_8_20
+Route         2   e 1.158                                  n2651
+LUT4        ---     0.408             CI to CO             add_8_21
+Route         2   e 1.158                                  n2652
+LUT4        ---     0.408             CI to CO             add_8_22
+Route         2   e 1.158                                  n2653
+LUT4        ---     0.408             CI to CO             add_8_23
+Route         2   e 1.158                                  n2654
+LUT4        ---     0.408             CI to CO             add_8_24
+Route         2   e 1.158                                  n2655
+LUT4        ---     0.408             CI to CO             add_8_25
+Route         2   e 1.158                                  n2656
+LUT4        ---     0.408             CI to CO             add_8_26
+Route         2   e 1.158                                  n2657
+LUT4        ---     0.408             CI to CO             add_8_27
+Route         2   e 1.158                                  n2658
+LUT4        ---     0.408             CI to CO             add_8_28
+Route         2   e 1.158                                  n2659
+LUT4        ---     0.408             CI to CO             add_8_29
+Route         2   e 1.158                                  n2660
+LUT4        ---     0.408             CI to CO             add_8_30
+Route         2   e 1.158                                  n2661
+LUT4        ---     0.408             CI to CO             add_8_31
+Route         2   e 1.158                                  n2662
+LUT4        ---     0.408             CI to CO             add_8_32
+Route         1   e 1.020                                  n2663
+LUT4        ---     0.408             I3 to O              add_8_33_lut
+Route         1   e 1.020                                  n72
                   --------
                    51.542  (26.0% logic, 74.0% route), 33 logic levels.
 
@@ -230,84 +230,84 @@ Passed:  The following path meets requirements by 12.253ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              delay_counter_331__i0  (from CLK +)
-   Destination:    SB_DFFSR   D              delay_counter_331__i30  (to CLK +)
+   Source:         SB_DFFESR  C              delay_counter_i0  (from CLK +)
+   Destination:    SB_DFFESR  D              delay_counter_i30  (to CLK +)
 
    Delay:                  50.114ns  (26.0% logic, 74.0% route), 32 logic levels.
 
  Constraint Details:
 
-     50.114ns data_path delay_counter_331__i0 to delay_counter_331__i30 meets
+     50.114ns data_path delay_counter_i0 to delay_counter_i30 meets
      62.500ns delay constraint less
       0.133ns L_S requirement (totaling 62.367ns) by 12.253ns
 
- Path Details: delay_counter_331__i0 to delay_counter_331__i30
+ Path Details: delay_counter_i0 to delay_counter_i30
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              delay_counter_331__i0 (from CLK)
+L_CO        ---     0.367              C to Q              delay_counter_i0 (from CLK)
 Route         3   e 1.339                                  delay_counter[0]
-LUT4        ---     0.408             I1 to CO             delay_counter_331_add_4_2
-Route         2   e 1.158                                  n2478
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_3
-Route         2   e 1.158                                  n2479
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_4
-Route         2   e 1.158                                  n2480
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_5
-Route         2   e 1.158                                  n2481
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_6
-Route         2   e 1.158                                  n2482
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_7
-Route         2   e 1.158                                  n2483
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_8
-Route         2   e 1.158                                  n2484
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_9
-Route         2   e 1.158                                  n2485
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_10
-Route         2   e 1.158                                  n2486
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_11
-Route         2   e 1.158                                  n2487
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_12
-Route         2   e 1.158                                  n2488
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_13
-Route         2   e 1.158                                  n2489
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_14
-Route         2   e 1.158                                  n2490
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_15
-Route         2   e 1.158                                  n2491
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_16
-Route         2   e 1.158                                  n2492
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_17
-Route         2   e 1.158                                  n2493
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_18
-Route         2   e 1.158                                  n2494
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_19
-Route         2   e 1.158                                  n2495
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_20
-Route         2   e 1.158                                  n2496
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_21
-Route         2   e 1.158                                  n2497
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_22
-Route         2   e 1.158                                  n2498
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_23
-Route         2   e 1.158                                  n2499
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_24
-Route         2   e 1.158                                  n2500
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_25
-Route         2   e 1.158                                  n2501
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_26
-Route         2   e 1.158                                  n2502
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_27
-Route         2   e 1.158                                  n2503
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_28
-Route         2   e 1.158                                  n2504
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_29
-Route         2   e 1.158                                  n2505
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_30
-Route         2   e 1.158                                  n2506
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_31
-Route         2   e 1.158                                  n2507
-LUT4        ---     0.408             I3 to O              delay_counter_331_add_4_32_lut
-Route         1   e 1.020                                  n135
+LUT4        ---     0.408             I0 to CO             add_8_2
+Route         2   e 1.158                                  n2633
+LUT4        ---     0.408             CI to CO             add_8_3
+Route         2   e 1.158                                  n2634
+LUT4        ---     0.408             CI to CO             add_8_4
+Route         2   e 1.158                                  n2635
+LUT4        ---     0.408             CI to CO             add_8_5
+Route         2   e 1.158                                  n2636
+LUT4        ---     0.408             CI to CO             add_8_6
+Route         2   e 1.158                                  n2637
+LUT4        ---     0.408             CI to CO             add_8_7
+Route         2   e 1.158                                  n2638
+LUT4        ---     0.408             CI to CO             add_8_8
+Route         2   e 1.158                                  n2639
+LUT4        ---     0.408             CI to CO             add_8_9
+Route         2   e 1.158                                  n2640
+LUT4        ---     0.408             CI to CO             add_8_10
+Route         2   e 1.158                                  n2641
+LUT4        ---     0.408             CI to CO             add_8_11
+Route         2   e 1.158                                  n2642
+LUT4        ---     0.408             CI to CO             add_8_12
+Route         2   e 1.158                                  n2643
+LUT4        ---     0.408             CI to CO             add_8_13
+Route         2   e 1.158                                  n2644
+LUT4        ---     0.408             CI to CO             add_8_14
+Route         2   e 1.158                                  n2645
+LUT4        ---     0.408             CI to CO             add_8_15
+Route         2   e 1.158                                  n2646
+LUT4        ---     0.408             CI to CO             add_8_16
+Route         2   e 1.158                                  n2647
+LUT4        ---     0.408             CI to CO             add_8_17
+Route         2   e 1.158                                  n2648
+LUT4        ---     0.408             CI to CO             add_8_18
+Route         2   e 1.158                                  n2649
+LUT4        ---     0.408             CI to CO             add_8_19
+Route         2   e 1.158                                  n2650
+LUT4        ---     0.408             CI to CO             add_8_20
+Route         2   e 1.158                                  n2651
+LUT4        ---     0.408             CI to CO             add_8_21
+Route         2   e 1.158                                  n2652
+LUT4        ---     0.408             CI to CO             add_8_22
+Route         2   e 1.158                                  n2653
+LUT4        ---     0.408             CI to CO             add_8_23
+Route         2   e 1.158                                  n2654
+LUT4        ---     0.408             CI to CO             add_8_24
+Route         2   e 1.158                                  n2655
+LUT4        ---     0.408             CI to CO             add_8_25
+Route         2   e 1.158                                  n2656
+LUT4        ---     0.408             CI to CO             add_8_26
+Route         2   e 1.158                                  n2657
+LUT4        ---     0.408             CI to CO             add_8_27
+Route         2   e 1.158                                  n2658
+LUT4        ---     0.408             CI to CO             add_8_28
+Route         2   e 1.158                                  n2659
+LUT4        ---     0.408             CI to CO             add_8_29
+Route         2   e 1.158                                  n2660
+LUT4        ---     0.408             CI to CO             add_8_30
+Route         2   e 1.158                                  n2661
+LUT4        ---     0.408             CI to CO             add_8_31
+Route         2   e 1.158                                  n2662
+LUT4        ---     0.408             I3 to O              add_8_32_lut
+Route         1   e 1.020                                  n73
                   --------
                    50.114  (26.0% logic, 74.0% route), 32 logic levels.
 
@@ -316,84 +316,84 @@ Passed:  The following path meets requirements by 12.391ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         SB_DFFSR   C              delay_counter_331__i1  (from CLK +)
-   Destination:    SB_DFFSR   D              delay_counter_331__i31  (to CLK +)
+   Source:         SB_DFFESR  C              delay_counter_i1  (from CLK +)
+   Destination:    SB_DFFESR  D              delay_counter_i31  (to CLK +)
 
    Delay:                  49.976ns  (26.0% logic, 74.0% route), 32 logic levels.
 
  Constraint Details:
 
-     49.976ns data_path delay_counter_331__i1 to delay_counter_331__i31 meets
+     49.976ns data_path delay_counter_i1 to delay_counter_i31 meets
      62.500ns delay constraint less
       0.133ns L_S requirement (totaling 62.367ns) by 12.391ns
 
- Path Details: delay_counter_331__i1 to delay_counter_331__i31
+ Path Details: delay_counter_i1 to delay_counter_i31
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367              C to Q              delay_counter_331__i1 (from CLK)
+L_CO        ---     0.367              C to Q              delay_counter_i1 (from CLK)
 Route         3   e 1.339                                  delay_counter[1]
-LUT4        ---     0.408             I1 to CO             delay_counter_331_add_4_3
-Route         2   e 1.158                                  n2479
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_4
-Route         2   e 1.158                                  n2480
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_5
-Route         2   e 1.158                                  n2481
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_6
-Route         2   e 1.158                                  n2482
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_7
-Route         2   e 1.158                                  n2483
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_8
-Route         2   e 1.158                                  n2484
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_9
-Route         2   e 1.158                                  n2485
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_10
-Route         2   e 1.158                                  n2486
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_11
-Route         2   e 1.158                                  n2487
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_12
-Route         2   e 1.158                                  n2488
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_13
-Route         2   e 1.158                                  n2489
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_14
-Route         2   e 1.158                                  n2490
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_15
-Route         2   e 1.158                                  n2491
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_16
-Route         2   e 1.158                                  n2492
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_17
-Route         2   e 1.158                                  n2493
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_18
-Route         2   e 1.158                                  n2494
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_19
-Route         2   e 1.158                                  n2495
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_20
-Route         2   e 1.158                                  n2496
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_21
-Route         2   e 1.158                                  n2497
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_22
-Route         2   e 1.158                                  n2498
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_23
-Route         2   e 1.158                                  n2499
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_24
-Route         2   e 1.158                                  n2500
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_25
-Route         2   e 1.158                                  n2501
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_26
-Route         2   e 1.158                                  n2502
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_27
-Route         2   e 1.158                                  n2503
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_28
-Route         2   e 1.158                                  n2504
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_29
-Route         2   e 1.158                                  n2505
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_30
-Route         2   e 1.158                                  n2506
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_31
-Route         2   e 1.158                                  n2507
-LUT4        ---     0.408             CI to CO             delay_counter_331_add_4_32
-Route         1   e 1.020                                  n2508
-LUT4        ---     0.408             I3 to O              delay_counter_331_add_4_33_lut
-Route         1   e 1.020                                  n134
+LUT4        ---     0.408             I0 to CO             add_8_3
+Route         2   e 1.158                                  n2634
+LUT4        ---     0.408             CI to CO             add_8_4
+Route         2   e 1.158                                  n2635
+LUT4        ---     0.408             CI to CO             add_8_5
+Route         2   e 1.158                                  n2636
+LUT4        ---     0.408             CI to CO             add_8_6
+Route         2   e 1.158                                  n2637
+LUT4        ---     0.408             CI to CO             add_8_7
+Route         2   e 1.158                                  n2638
+LUT4        ---     0.408             CI to CO             add_8_8
+Route         2   e 1.158                                  n2639
+LUT4        ---     0.408             CI to CO             add_8_9
+Route         2   e 1.158                                  n2640
+LUT4        ---     0.408             CI to CO             add_8_10
+Route         2   e 1.158                                  n2641
+LUT4        ---     0.408             CI to CO             add_8_11
+Route         2   e 1.158                                  n2642
+LUT4        ---     0.408             CI to CO             add_8_12
+Route         2   e 1.158                                  n2643
+LUT4        ---     0.408             CI to CO             add_8_13
+Route         2   e 1.158                                  n2644
+LUT4        ---     0.408             CI to CO             add_8_14
+Route         2   e 1.158                                  n2645
+LUT4        ---     0.408             CI to CO             add_8_15
+Route         2   e 1.158                                  n2646
+LUT4        ---     0.408             CI to CO             add_8_16
+Route         2   e 1.158                                  n2647
+LUT4        ---     0.408             CI to CO             add_8_17
+Route         2   e 1.158                                  n2648
+LUT4        ---     0.408             CI to CO             add_8_18
+Route         2   e 1.158                                  n2649
+LUT4        ---     0.408             CI to CO             add_8_19
+Route         2   e 1.158                                  n2650
+LUT4        ---     0.408             CI to CO             add_8_20
+Route         2   e 1.158                                  n2651
+LUT4        ---     0.408             CI to CO             add_8_21
+Route         2   e 1.158                                  n2652
+LUT4        ---     0.408             CI to CO             add_8_22
+Route         2   e 1.158                                  n2653
+LUT4        ---     0.408             CI to CO             add_8_23
+Route         2   e 1.158                                  n2654
+LUT4        ---     0.408             CI to CO             add_8_24
+Route         2   e 1.158                                  n2655
+LUT4        ---     0.408             CI to CO             add_8_25
+Route         2   e 1.158                                  n2656
+LUT4        ---     0.408             CI to CO             add_8_26
+Route         2   e 1.158                                  n2657
+LUT4        ---     0.408             CI to CO             add_8_27
+Route         2   e 1.158                                  n2658
+LUT4        ---     0.408             CI to CO             add_8_28
+Route         2   e 1.158                                  n2659
+LUT4        ---     0.408             CI to CO             add_8_29
+Route         2   e 1.158                                  n2660
+LUT4        ---     0.408             CI to CO             add_8_30
+Route         2   e 1.158                                  n2661
+LUT4        ---     0.408             CI to CO             add_8_31
+Route         2   e 1.158                                  n2662
+LUT4        ---     0.408             CI to CO             add_8_32
+Route         1   e 1.020                                  n2663
+LUT4        ---     0.408             I3 to O              add_8_33_lut
+Route         1   e 1.020                                  n72
                   --------
                    49.976  (26.0% logic, 74.0% route), 32 logic levels.
 
@@ -429,8 +429,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  5541 paths, 354 nets, and 933 connections (96.8% coverage)
+Constraints cover  5835 paths, 382 nets, and 1025 connections (94.4% coverage)
 
 
-Peak memory: 210305024 bytes, TRCE: 593920 bytes, DLYMAN: 0 bytes
+Peak memory: 210538496 bytes, TRCE: 258048 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
