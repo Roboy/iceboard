@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:14:10
 
-* File Generated:     Jan 30 2020 23:27:42
+* File Generated:     Jan 31 2020 00:07:58
 
 * Purpose:            
 
@@ -45,7 +45,7 @@ W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL3, as it i
 W2715: Warning for set_io Constraint: Ignoring pin assignment for RX, as it is not connected to any PAD
 
 Input Design Statistics
-    Number of LUTs      	:	196
+    Number of LUTs      	:	198
     Number of DFFs      	:	114
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	83
@@ -87,7 +87,7 @@ Phase 3
 Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
 
 Design Statistics after Packing
-    Number of LUTs      	:	198
+    Number of LUTs      	:	200
     Number of DFFs      	:	114
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	83
@@ -97,10 +97,10 @@ Device Utilization Summary after Packing
         LUT and DFF      	:	32
         LUT, DFF and CARRY	:	82
     Combinational LogicCells
-        Only LUT         	:	83
+        Only LUT         	:	85
         CARRY Only       	:	0
         LUT with CARRY   	:	1
-    LogicCells                  :	198/7680
+    LogicCells                  :	200/7680
     PLBs                        :	31/960
     BRAMs                       :	0/32
     IOs and GBIOs               :	16/63
@@ -113,13 +113,13 @@ Phase 4
 I2088: Phase 4, elapsed time : 0.2 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 0.3 (sec)
+I2088: Phase 5, elapsed time : 0.2 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 48.2 (sec)
+I2088: Phase 6, elapsed time : 42.5 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	198
+    Number of LUTs      	:	200
     Number of DFFs      	:	114
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	83
@@ -132,8 +132,8 @@ Final Design Statistics
     Number of PLLs      	:	0
 
 Device Utilization Summary
-    LogicCells                  :	198/7680
-    PLBs                        :	43/960
+    LogicCells                  :	200/7680
+    PLBs                        :	44/960
     BRAMs                       :	0/32
     IOs and GBIOs               :	16/63
     PLLs                        :	0/1
@@ -152,8 +152,8 @@ analysis after routing.
                      Clock Summary 
 =====================================================================
 Number of clocks: 2
-Clock: CLK | Frequency: 87.04 MHz | Target: 16.00 MHz
-Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 100.26 MHz | Target: 16.00 MHz
+Clock: CLK | Frequency: 86.69 MHz | Target: 16.00 MHz
+Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 86.36 MHz | Target: 16.00 MHz
 
 =====================================================================
                      End of Clock Summary
@@ -161,5 +161,5 @@ Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 100.26 MHz | Target: 16.00 MH
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 49.4 sec.
+I2076: Placer run-time: 43.7 sec.
 

@@ -150,6 +150,7 @@ module i2c_controller(
 
 				READ_DATA: begin
 					//data_out[counter] <= i2c_sda;
+					data_out[counter] <= i2c_sda_in;
 					if (counter == 0) begin
 						state <= WRITE_ACK;
 					end else begin
@@ -203,7 +204,6 @@ module i2c_controller(
 				end
 
 				READ_DATA: begin
-					data_out[counter] <= i2c_sda_in;
 					write_enable <= 0;
 				end
 

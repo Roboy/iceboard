@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Jan 30 23:27:40 2020
+Fri Jan 31 00:07:56 2020
 
 
 Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
@@ -169,7 +169,7 @@ WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
 WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
 WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
 WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
-WARNING - synthesis: verilog/i2c_controller.v(172): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/i2c_controller.v(173): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
 WARNING - synthesis: verilog/TinyFPGA_B.v(149): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
 Writing scf file : template_Implmnt/template.scf
 
@@ -186,17 +186,17 @@ Results of NGD DRC are available in TinyFPGA_B_drc.log.
 ################### Begin Area Report (TinyFPGA_B)######################
 Number of register bits => 114 of 7680 (1 % )
 SB_CARRY => 83
-SB_DFF => 35
+SB_DFF => 42
 SB_DFFE => 2
 SB_DFFESR => 47
-SB_DFFESS => 12
-SB_DFFN => 9
+SB_DFFESS => 13
+SB_DFFN => 1
 SB_DFFNE => 1
 SB_DFFNESS => 1
 SB_DFFSR => 7
 SB_GB_IO => 1
 SB_IO => 15
-SB_LUT4 => 196
+SB_LUT4 => 198
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
@@ -209,16 +209,16 @@ Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n1740, loads : 33
-  Net : n1895, loads : 32
-  Net : eeprom/i2c/n730, loads : 30
-  Net : eeprom/i2c/state_2, loads : 22
-  Net : eeprom/i2c/state_0_adj_374, loads : 19
-  Net : eeprom/i2c/state_3, loads : 19
-  Net : eeprom/i2c/state_1_adj_375, loads : 19
-  Net : eeprom/n1799, loads : 17
-  Net : eeprom/n1934, loads : 16
-  Net : state_7_N_289_3, loads : 13
+  Net : n1507, loads : 33
+  Net : n1891, loads : 32
+  Net : eeprom/n730, loads : 31
+  Net : eeprom/i2c/state_0, loads : 21
+  Net : eeprom/i2c/state_2, loads : 21
+  Net : eeprom/i2c/state_1, loads : 20
+  Net : eeprom/i2c/state_3, loads : 18
+  Net : eeprom/n1796, loads : 17
+  Net : eeprom/n1929, loads : 16
+  Net : state_7_N_286_3, loads : 12
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -228,7 +228,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 62.500000 -name    |             |             |
-clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
+clk500 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
                                         |             |             |
  create_clock -period 62.500 -name      |             |             |
 TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
@@ -244,8 +244,8 @@ CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33
 All constraints were met.
 
 
-Peak Memory Usage: 200.785  MB
+Peak Memory Usage: 200.625  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.305  secs
+Elapsed CPU time for LSE flow : 1.327  secs
 --------------------------------------------------------------

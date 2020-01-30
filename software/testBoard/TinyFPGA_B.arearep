@@ -5,36 +5,36 @@ I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        83          100.0
-                             SB_DFF        35          100.0
+                             SB_DFF        42          100.0
                             SB_DFFE         2          100.0
                           SB_DFFESR        47          100.0
-                          SB_DFFESS        12          100.0
-                            SB_DFFN         9          100.0
+                          SB_DFFESS        13          100.0
+                            SB_DFFN         1          100.0
                            SB_DFFNE         1          100.0
                          SB_DFFNESS         1          100.0
                            SB_DFFSR         7          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        15          100.0
-                            SB_LUT4       196          100.0
+                            SB_LUT4       198          100.0
 SUB MODULES
                              EEPROM         1
                      i2c_controller         1
-                              TOTAL       411
+                              TOTAL       413
 ----------------------------------------------------------------------
 Report for cell EEPROM.v1
 Instance Path : eeprom
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        27           32.5
-                             SB_DFF         6           17.1
+                             SB_DFF        13           31.0
                             SB_DFFE         2          100.0
                           SB_DFFESR        15           31.9
-                          SB_DFFESS        12          100.0
-                            SB_DFFN         9          100.0
+                          SB_DFFESS        13          100.0
+                            SB_DFFN         1          100.0
                            SB_DFFNE         1          100.0
                          SB_DFFNESS         1          100.0
                            SB_DFFSR         7          100.0
-                            SB_LUT4       100           51.0
+                            SB_LUT4       100           50.5
 SUB MODULES
                      i2c_controller         1
                               TOTAL       181
@@ -44,13 +44,13 @@ Instance Path : eeprom.i2c
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        12           14.5
-                             SB_DFF         2            5.7
-                            SB_DFFE         2          100.0
+                             SB_DFF        10           23.8
+                            SB_DFFE         1           50.0
                           SB_DFFESR         5           10.6
-                          SB_DFFESS         6           50.0
-                            SB_DFFN         9          100.0
+                          SB_DFFESS         7           53.8
+                            SB_DFFN         1          100.0
                            SB_DFFNE         1          100.0
                          SB_DFFNESS         1          100.0
                            SB_DFFSR         6           85.7
-                            SB_LUT4        74           37.8
-                              TOTAL       118
+                            SB_LUT4        69           34.8
+                              TOTAL       113
