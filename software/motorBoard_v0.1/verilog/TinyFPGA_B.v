@@ -239,8 +239,12 @@ neopixel nx(
     read <= 1'b0;
     case(state)
       IDLE: begin
-        read <= 1'b1;
-        state <= WAIT;
+        delay_counter <= delay_counter + 1;
+        if(delay_counter>16_000_00)begin // after 100ms we read the eeprom
+          delay_counter <= 0;
+          read <= 1'b1;
+          state <= WAIT;
+        end
       end
       WAIT: begin
         if(data_ready)begin
@@ -251,7 +255,7 @@ neopixel nx(
       DONE: begin
         if(ID==0)begin
           delay_counter <= delay_counter + 1;
-          if(delay_counter>16_000_000_0) begin // check every ten seconds
+          if(delay_counter>16_000_000) begin // check every second
             delay_counter <= 0;
             state <= IDLE;
           end
