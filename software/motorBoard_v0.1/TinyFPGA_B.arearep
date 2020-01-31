@@ -16,7 +16,7 @@ I/O cells:      0
                            SB_DFFSS        62          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        23          100.0
-                            SB_LUT4      5947          100.0
+                            SB_LUT4      5928          100.0
                       SB_PLL40_CORE         1          100.0
 SUB MODULES
                              EEPROM         1
@@ -30,7 +30,7 @@ SUB MODULES
     quadrature_decoder(1,500000)_U0         1
                             uart_rx         1
                             uart_tx         1
-                              TOTAL      8930
+                              TOTAL      8911
 ----------------------------------------------------------------------
 Report for cell neopixel(CLOCK_SPEED_HZ=16000000).v1
 Instance Path : nx
@@ -41,8 +41,8 @@ Instance Path : nx
                             SB_DFFE         3            2.5
                           SB_DFFESR        33           29.5
                           SB_DFFESS         1            7.7
-                            SB_LUT4      1041           17.5
-                              TOTAL      1603
+                            SB_LUT4      1009           17.0
+                              TOTAL      1571
 ----------------------------------------------------------------------
 Report for cell quadrature_decoder(1,500000)_U0.v1
 Instance Path : quad_counter0
@@ -90,11 +90,11 @@ Instance Path : neopxl_color_23__I_0
                           SB_DFFESR        31           27.7
                            SB_DFFSR         5           11.4
                            SB_DFFSS        62          100.0
-                            SB_LUT4      1235           20.8
+                            SB_LUT4      1248           21.1
 SUB MODULES
                             uart_rx         1
                             uart_tx         1
-                              TOTAL      1936
+                              TOTAL      1949
 ----------------------------------------------------------------------
 Report for cell uart_tx.v1
 Instance Path : neopxl_color_23__I_0.tx
@@ -105,8 +105,8 @@ Instance Path : neopxl_color_23__I_0.tx
                             SB_DFFE         9            7.6
                           SB_DFFESR        11            9.8
                            SB_DFFSR         2            4.5
-                            SB_LUT4        33            0.6
-                              TOTAL        66
+                            SB_LUT4        34            0.6
+                              TOTAL        67
 ----------------------------------------------------------------------
 Report for cell uart_rx.v1
 Instance Path : neopxl_color_23__I_0.rx

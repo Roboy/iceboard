@@ -147,7 +147,7 @@ neopixel #(16_000_000) nx(
     .ID(ID),
     .duty(duty),
   	.encoder0_position(encoder0_position_scaled),
-  	.encoder1_position(encoder1_position),
+  	.encoder1_position(encoder1_position_scaled),
     .displacement(displacement),
   	.setpoint(setpoint),
   	.control_mode(control_mode),
