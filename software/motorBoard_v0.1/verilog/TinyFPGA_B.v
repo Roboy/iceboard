@@ -40,8 +40,8 @@ reg [7:0] ID;
 
 wire [23:0] neopxl_color;
 
-neopixel nx(
- .clock(clk32MHz),
+neopixel #(16_000_000) nx(
+ .clock(CLK),
  .reset(1'b0),
  .color(neopxl_color),
  .send_to_neopixels(LED),
@@ -93,7 +93,7 @@ neopixel nx(
    .pwm_out(pwm_out)
  );
 
-  always @(posedge clk32MHz) begin: HALL_SENSORS
+  always @(posedge CLK) begin: HALL_SENSORS
     h1 <= hall1;
     h2 <= hall2;
     h3 <= hall3;
@@ -119,9 +119,12 @@ neopixel nx(
     .OUTPUT_ENABLE(tx_enable)
   );
 
-  wire signed [23:0] encoder0_position;
+  wire dir_encoder0;
+  wire dir_encoder1;
+  integer encoder0_position;
   reg signed [23:0] encoder0_position_scaled;
-  wire signed [23:0] encoder1_position;
+  integer encoder1_position;
+  reg signed [23:0] encoder1_position_scaled;
   reg signed [23:0] displacement;
   wire signed [23:0] setpoint;
   wire signed [23:0] Kp;
@@ -135,7 +138,7 @@ neopixel nx(
   wire driver_enable;
 
   coms c0(
-  	.CLK(clk32MHz),
+  	.CLK(CLK),
 	  .reset(1'b0),
   	.tx_o(tx_o),
 	  .tx_enable(tx_enable),
@@ -163,7 +166,7 @@ neopixel nx(
 
   assign motor_state =
     (control_mode==0)?encoder0_position_scaled:
-    (control_mode==1)?encoder1_position:
+    (control_mode==1)?encoder1_position_scaled:
     (control_mode==2)?displacement:
     32'd0;
 
@@ -181,25 +184,44 @@ neopixel nx(
     .deadband(deadband)
   );
 
-  // encoder0
-  quad #(100) quad_counter0 (
-    .clk(clk32MHz),
-    .quadA(ENCODER0_A),
-    .quadB(ENCODER0_B),
-    .count(encoder0_position)
-  );
+  quadrature_decoder #((16_000_000/10_000_000),500_000) quad_counter0(
+      .clk(CLK),
+      .a(ENCODER0_A),
+      .b(ENCODER0_B),
+      .set_origin_n(1'b1),
+      .direction(dir_encoder0),
+      .position(encoder0_position)
+    )/* synthesis syn_noprune = 1 */;
 
-  // encoder1
-  quad #(100) quad_counter1 (
-    .clk(clk32MHz),
-    .quadA(ENCODER1_A),
-    .quadB(ENCODER1_B),
-    .count(encoder1_position)
-  );
+  quadrature_decoder #((16_000_000/10_000_000),500_000) quad_counter1(
+      .clk(CLK),
+      .a(ENCODER1_A),
+      .b(ENCODER1_B),
+      .set_origin_n(1'b1),
+      .direction(dir_encoder1),
+      .position(encoder1_position)
+    )/* synthesis syn_noprune = 1 */;
 
-  always @(posedge clk32MHz) begin: DISPLACEMENT_CALCULATION
-    encoder0_position_scaled <= encoder0_position*2/53;
-    displacement <= (encoder1_position-encoder0_position_scaled);
+  // // encoder0
+  // quad #(100) quad_counter0 (
+  //   .clk(clk32MHz),
+  //   .quadA(ENCODER0_A),
+  //   .quadB(ENCODER0_B),
+  //   .count(encoder0_position)
+  // );
+  //
+  // // encoder1
+  // quad #(2650) quad_counter1 (
+  //   .clk(clk32MHz),
+  //   .quadA(ENCODER1_A),
+  //   .quadB(ENCODER1_B),
+  //   .count(encoder1_position)
+  // );
+
+  always @(posedge CLK) begin: DISPLACEMENT_CALCULATION
+    encoder0_position_scaled <= encoder0_position/53;
+    encoder1_position_scaled <= encoder1_position/8;
+    displacement <= (encoder1_position_scaled-encoder0_position_scaled);
   end
 
   reg [10:0] addr;
