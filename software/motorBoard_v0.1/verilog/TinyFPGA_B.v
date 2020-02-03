@@ -221,7 +221,7 @@ neopixel #(16_000_000) nx(
   always @(posedge CLK) begin: DISPLACEMENT_CALCULATION
     encoder0_position_scaled <= encoder0_position/53;
     encoder1_position_scaled <= encoder1_position/8;
-    displacement <= (encoder1_position_scaled-encoder0_position_scaled);
+    displacement <= (encoder0_position_scaled-encoder1_position_scaled);
   end
 
   reg [10:0] addr;

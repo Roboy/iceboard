@@ -5,7 +5,7 @@ I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY      1844          100.0
-                             SB_DFF       751          100.0
+                             SB_DFF       752          100.0
                             SB_DFFE       118          100.0
                           SB_DFFESR       112          100.0
                           SB_DFFESS        13          100.0
@@ -13,10 +13,10 @@ I/O cells:      0
                            SB_DFFNE         1          100.0
                          SB_DFFNESS         1          100.0
                            SB_DFFSR        44          100.0
-                           SB_DFFSS        62          100.0
+                           SB_DFFSS        61          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        23          100.0
-                            SB_LUT4      5928          100.0
+                            SB_LUT4      5965          100.0
                       SB_PLL40_CORE         1          100.0
 SUB MODULES
                              EEPROM         1
@@ -30,7 +30,7 @@ SUB MODULES
     quadrature_decoder(1,500000)_U0         1
                             uart_rx         1
                             uart_tx         1
-                              TOTAL      8911
+                              TOTAL      8948
 ----------------------------------------------------------------------
 Report for cell neopixel(CLOCK_SPEED_HZ=16000000).v1
 Instance Path : nx
@@ -41,11 +41,21 @@ Instance Path : nx
                             SB_DFFE         3            2.5
                           SB_DFFESR        33           29.5
                           SB_DFFESS         1            7.7
-                            SB_LUT4      1009           17.0
-                              TOTAL      1571
+                            SB_LUT4      1028           17.2
+                              TOTAL      1590
 ----------------------------------------------------------------------
 Report for cell quadrature_decoder(1,500000)_U0.v1
 Instance Path : quad_counter0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        31            1.7
+                             SB_DFF         8            1.1
+                            SB_DFFE        32           27.1
+                            SB_LUT4        38            0.6
+                              TOTAL       109
+----------------------------------------------------------------------
+Report for cell quadrature_decoder(1,500000).v1
+Instance Path : quad_counter1
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        31            1.7
@@ -67,34 +77,24 @@ Instance Path : control
                                cell     count   Res Usage(%)
                            SB_CARRY       601           32.6
                              SB_DFF        48            6.4
-                            SB_LUT4      1502           25.3
-                              TOTAL      2151
-----------------------------------------------------------------------
-Report for cell quadrature_decoder(1,500000).v1
-Instance Path : quad_counter1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY        31            1.7
-                             SB_DFF         8            1.1
-                            SB_DFFE        32           27.1
-                            SB_LUT4        38            0.6
-                              TOTAL       109
+                            SB_LUT4      1504           25.2
+                              TOTAL      2153
 ----------------------------------------------------------------------
 Report for cell coms.v1
 Instance Path : neopxl_color_23__I_0
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        53            2.9
-                             SB_DFF       499           66.4
+                             SB_DFF       500           66.5
                             SB_DFFE        49           41.5
                           SB_DFFESR        31           27.7
                            SB_DFFSR         5           11.4
-                           SB_DFFSS        62          100.0
-                            SB_LUT4      1248           21.1
+                           SB_DFFSS        61          100.0
+                            SB_LUT4      1274           21.4
 SUB MODULES
                             uart_rx         1
                             uart_tx         1
-                              TOTAL      1949
+                              TOTAL      1975
 ----------------------------------------------------------------------
 Report for cell uart_tx.v1
 Instance Path : neopxl_color_23__I_0.tx
@@ -105,8 +105,8 @@ Instance Path : neopxl_color_23__I_0.tx
                             SB_DFFE         9            7.6
                           SB_DFFESR        11            9.8
                            SB_DFFSR         2            4.5
-                            SB_LUT4        34            0.6
-                              TOTAL        67
+                            SB_LUT4        36            0.6
+                              TOTAL        69
 ----------------------------------------------------------------------
 Report for cell uart_rx.v1
 Instance Path : neopxl_color_23__I_0.rx
@@ -132,10 +132,10 @@ Instance Path : eeprom
                            SB_DFFNE         1          100.0
                          SB_DFFNESS         1          100.0
                            SB_DFFSR         7           15.9
-                            SB_LUT4        95            1.6
+                            SB_LUT4        94            1.6
 SUB MODULES
                      i2c_controller         1
-                              TOTAL       176
+                              TOTAL       175
 ----------------------------------------------------------------------
 Report for cell i2c_controller.v1
 Instance Path : eeprom.i2c
@@ -150,8 +150,8 @@ Instance Path : eeprom.i2c
                            SB_DFFNE         1          100.0
                          SB_DFFNESS         1          100.0
                            SB_DFFSR         6           13.6
-                            SB_LUT4        66            1.1
-                              TOTAL       110
+                            SB_LUT4        65            1.1
+                              TOTAL       109
 ----------------------------------------------------------------------
 Report for cell pwm.v1
 Instance Path : PWM
