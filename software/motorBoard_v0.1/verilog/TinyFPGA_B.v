@@ -76,15 +76,15 @@ neopixel #(16_000_000) nx(
 
  wire pwm_out;
  reg dir, enable, reset;
- reg h1, h2, h3;
- assign INLA = h1;
- assign INHB = h2;
- assign INLB = h3;
- assign INHA = pwm_out;
- assign INHC = dir;
- assign INLC = 1'b1;
+ reg GHA, GLA, GHB, GLB, GHC, GLC;
+ assign INHA = (GHA?pwm_out:0);
+ assign INLA = (GLA?1:0);
+ assign INHB = (GHB?pwm_out:0);
+ assign INLB = (GLB?1:0);
+ assign INHC = (GHC?pwm_out:0);
+ assign INLC = (GLC?1:0);
 
- reg [22:0] pwm_setpoint;
+ reg signed [23:0] pwm_setpoint;
  wire signed [23:0] duty;
  pwm PWM(
    .clk(clk32MHz),
@@ -93,20 +93,118 @@ neopixel #(16_000_000) nx(
    .pwm_out(pwm_out)
  );
 
-  always @(posedge CLK) begin: HALL_SENSORS
-    h1 <= hall1;
-    h2 <= hall2;
-    h3 <= hall3;
-    enable <= 1;
-    reset <= 0;
-    if(duty>=0)begin
-      pwm_setpoint <= duty;
-      dir <= 0;
-    end else begin
-      pwm_setpoint <= -duty;
-      dir <= 1;
-    end
-  end
+ wire h1, h2, h3;
+
+ grp_debouncer #(3,1000) debounce(
+   .clk_i(CLK),
+   .data_i({hall1,hall2,hall3}),
+   .data_o({h1,h2,h3})
+ );
+
+ always @(posedge CLK) begin: DIRECTION
+   enable <= 1;
+   reset <= 0;
+   if(duty>=0)begin
+     pwm_setpoint <= duty;
+     dir <= 1;
+   end else begin
+     pwm_setpoint <= -duty;
+     dir <= 0;
+   end
+ end
+
+ reg [7:0] commutation_state;
+ reg [7:0] commutation_state_prev;
+ localparam  A = 0;
+ localparam  B = 1;
+ localparam  C = 2;
+ localparam  D = 3;
+ localparam  E = 4;
+ localparam  F = 5;
+
+ reg dti;
+ reg [7:0] dti_counter;
+
+ always @(posedge CLK) begin: BLDC_COMMUTATION
+   commutation_state_prev <= commutation_state;
+
+   if(commutation_state!=commutation_state_prev)begin
+     dti <= 1;
+     dti_counter <= 1024;
+   end
+
+   if(h1 && ~h2 && h3)begin
+     commutation_state <= A;
+   end
+   if(h1 && ~h2 && ~h3)begin
+     commutation_state <= B;
+   end
+   if(h1 && h2 && ~h3)begin
+     commutation_state <= C;
+   end
+   if(~h1 && h2 && ~h3)begin
+     commutation_state <= D;
+   end
+   if(~h1 && h2 && h3)begin
+     commutation_state <= E;
+   end
+   if(~h1 && ~h2 && h3)begin
+     commutation_state <= F;
+   end
+
+   if(dti) begin
+     if(dti_counter==0)begin
+       dti <= 0;
+     end else begin
+       dti_counter <= dti_counter -1;
+       GHA <= 0; GLA <= 0; GHB <= 0; GLB <= 0; GHC <= 0; GLC <= 0;
+     end
+   end else begin
+    if(dir)begin
+      case(commutation_state)
+         A: begin
+           GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 0; GLC <= 0;
+         end
+         B: begin
+           GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 0; GHC <= 0; GLC <= 1;
+         end
+         C: begin
+           GHA <= 0; GLA <= 0; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 1;
+         end
+         D: begin
+           GHA <= 0; GLA <= 1; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 0;
+         end
+         E: begin
+           GHA <= 0; GLA <= 1; GHB <= 0; GLB <= 0; GHC <= 1; GLC <= 0;
+         end
+         F: begin
+           GHA <= 0; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 1; GLC <= 0;
+         end
+       endcase
+     end else begin
+      case(commutation_state)
+        A: begin
+          GHA <= 0; GLA <= 1; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 0;
+        end
+        B: begin
+          GHA <= 0; GLA <= 1; GHB <= 0; GLB <= 0; GHC <= 1; GLC <= 0;
+        end
+        C: begin
+          GHA <= 0; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 1; GLC <= 0;
+        end
+        D: begin
+          GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 0; GLC <= 0;
+        end
+        E: begin
+          GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 0; GHC <= 0; GLC <= 1;
+        end
+        F: begin
+          GHA <= 0; GLA <= 0; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 1;
+        end
+      endcase
+     end
+   end
+ end
 
   wire tx_o, tx_enable, rx_i;
   // tristated PULLUP for UART transmitters

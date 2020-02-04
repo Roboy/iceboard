@@ -31,134 +31,211 @@ module TinyFPGA_B (
 assign USBPU = 0;
 
 ////////
-    // make a simple blink circuit
-    ////////
+// make a simple blink circuit
+////////
 
-    // keep track of time and location in blink_pattern
-    reg [25:0] blink_counter;
+// keep track of time and location in blink_pattern
+reg [25:0] blink_counter;
 
-    // pattern that will be flashed over the LED over time
-    wire [31:0] blink_pattern = 32'b101010001110111011100010101;
+// pattern that will be flashed over the LED over time
+wire [31:0] blink_pattern = 32'b101010001110111011100010101;
 
-    // increment the blink_counter every clock
-    always @(posedge CLK) begin
-        blink_counter <= blink_counter + 1;
+// increment the blink_counter every clock
+always @(posedge CLK) begin
+    blink_counter <= blink_counter + 1;
+end
+
+// light up the LED according to the pattern
+assign LED = blink_pattern[blink_counter[25:21]];
+
+wire hall1, hall2, hall3;
+// PULLUP for hall sensors
+SB_IO #(
+  .PIN_TYPE(6'b 0000_01),
+  .PULLUP(1'b 1)
+) hall1_input(
+  .PACKAGE_PIN(HALL1),
+  .D_IN_0(hall1)
+);
+
+SB_IO #(
+  .PIN_TYPE(6'b 0000_01),
+  .PULLUP(1'b 1)
+) hall2_input(
+  .PACKAGE_PIN(HALL2),
+  .D_IN_0(hall2)
+);
+
+SB_IO #(
+  .PIN_TYPE(6'b 0000_01),
+  .PULLUP(1'b 1)
+) hall3_input(
+  .PACKAGE_PIN(HALL3),
+  .D_IN_0(hall3)
+);
+
+wire pwm_out;
+reg dir, enable, reset;
+reg GHA, GLA, GHB, GLB, GHC, GLC;
+assign INHA = (GHA?pwm_out:0);
+assign INLA = (GLA?1:0);
+assign INHB = (GHB?pwm_out:0);
+assign INLB = (GLB?1:0);
+assign INHC = (GHC?pwm_out:0);
+assign INLC = (GLC?1:0);
+
+reg signed [23:0] pwm_setpoint;
+reg signed [23:0] duty;
+pwm PWM(
+  .clk(CLK),
+  .reset(reset),
+  .duty(pwm_setpoint),
+  .pwm_out(pwm_out)
+);
+
+wire h1, h2, h3;
+
+grp_debouncer #(3,1000) debounce(
+  .clk_i(CLK),
+  .data_i({hall1,hall2,hall3}),
+  .data_o({h1,h2,h3})
+);
+
+always @(posedge CLK) begin: DIRECTION
+  enable <= 1;
+  reset <= 0;
+  if(duty>=0)begin
+    pwm_setpoint <= duty;
+    dir <= 1;
+  end else begin
+    pwm_setpoint <= -duty;
+    dir <= 0;
+  end
+end
+
+reg [7:0] commutation_state;
+reg [7:0] commutation_state_prev;
+localparam  A = 0;
+localparam  B = 1;
+localparam  C = 2;
+localparam  D = 3;
+localparam  E = 4;
+localparam  F = 5;
+
+reg dti;
+reg [7:0] dti_counter;
+
+integer sweep_counter;
+
+wire dir_encoder0;
+integer encoder0_position;
+reg direction;
+reg signed [23:0] encoder0_position_scaled;
+reg signed [23:0] encoder0_position_target;
+
+always @(posedge CLK) begin: BLDC_COMMUTATION
+  commutation_state_prev <= commutation_state;
+  encoder0_position_scaled <= encoder0_position/53;
+
+  if(commutation_state!=commutation_state_prev)begin
+    dti <= 1;
+    dti_counter <= 1024;
+  end
+
+  sweep_counter <= sweep_counter + 1;
+  if(sweep_counter==16_000_0)begin
+    sweep_counter <= 0;
+    if(encoder0_position_target>-4000)begin
+        encoder0_position_target <= encoder0_position_target - 1;
+    end else begin
+        encoder0_position_target <= 0;
     end
+  end
 
-    // light up the LED according to the pattern
-    assign LED = blink_pattern[blink_counter[25:21]];
-    //assign INHA = blink_counter[8];
-    //assign INLA = blink_counter[9];
-    //assign INHB = blink_counter[10];
-    //assign INLB = blink_counter[11];
-    //assign INHC = blink_counter[12];
-    //assign INLC = blink_counter[13];
+  duty <= (encoder0_position_target-encoder0_position_scaled);
 
-    //wire pwm_out;
-    //assign SDA = pwm_out;
-    //assign INLA = 1;
+  if(h1 && ~h2 && h3)begin
+    commutation_state <= A;
+  end
+  if(h1 && ~h2 && ~h3)begin
+    commutation_state <= B;
+  end
+  if(h1 && h2 && ~h3)begin
+    commutation_state <= C;
+  end
+  if(~h1 && h2 && ~h3)begin
+    commutation_state <= D;
+  end
+  if(~h1 && h2 && h3)begin
+    commutation_state <= E;
+  end
+  if(~h1 && ~h2 && h3)begin
+    commutation_state <= F;
+  end
 
-    //integer sweep_counter;
-   // reg [23:0] duty;
-
-   // always @(posedge CLK) begin: SWEEP
-     //   sweep_counter <= sweep_counter + 1;
-       // if((sweep_counter%16_000)==0)begin
-       //  duty <= duty + 1;
-       // end
-       // if(duty>1000)begin
-       //     duty <= 0;
-       // end
-//    end
-
-  //  pwm PWM(
-    //   .clk(CLK),
-      // .reset(1'b0),
-      // .duty(duty),
-      // .pwm_out(pwm_out)
-    // );
-
-    // wire [14:0] current;
-    //
-    // TLI4970 tli(
-    //     .clk(CLK),
-    //     .spi_miso(CS_MISO),
-    //     .spi_cs(CS),
-    //     .spi_clk(CS_CLK),
-    //     .current(current)
-    //   )/* synthesis syn_noprune = 1 */;
-
-    // assign SDA=blink_counter[10];
-
-    reg [10:0] addr;
-    wire [7:0] data;
-    wire data_ready;
-
-    wire sda_out, sda_in, sda_enable, scl, scl_enable;
-    // tristated PULLUP for i2c
-    SB_IO #(
-      .PIN_TYPE(6'b101001),
-      .PULLUP(1'b1)
-    ) sda_output(
-      .PACKAGE_PIN(SDA),
-      .D_OUT_0(sda_out),
-      .D_IN_0(sda_in),
-      .OUTPUT_ENABLE(sda_enable)
-    );
-
-    SB_IO #(
-      .PIN_TYPE(6'b101001),
-      .PULLUP(1'b1)
-    ) scl_output(
-      .PACKAGE_PIN(SCL),
-      .D_OUT_0(scl),
-      .OUTPUT_ENABLE(scl_enable)
-    );
-
-    integer delay_counter = 0;
-    reg read = 1'b0;
-
-    localparam  IDLE = 0;
-    localparam  WAIT = 1;
-    localparam  DONE = 2;
-
-    always @ ( posedge CLK ) begin: ID_READOUT_FSM
-      reg [2:0] state;
-      read <= 1'b0;
-      case(state)
-        IDLE: begin
-          read <= 1'b1;
-          state <= WAIT;
+  if(dti) begin
+    if(dti_counter==0)begin
+      dti <= 0;
+    end else begin
+      dti_counter <= dti_counter -1;
+      GHA <= 0; GLA <= 0; GHB <= 0; GLB <= 0; GHC <= 0; GLC <= 0;
+    end
+  end else begin
+   if(dir)begin
+     case(commutation_state)
+        A: begin
+          GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 0; GLC <= 0;
         end
-        WAIT: begin
-          if(data_ready)begin
-            // ID <= data;
-            state <= DONE;
-          end
+        B: begin
+          GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 0; GHC <= 0; GLC <= 1;
         end
-        DONE: begin
-          if(data==0)begin
-            delay_counter <= delay_counter + 1;
-            if(delay_counter>16_000_0) begin
-              delay_counter <= 0;
-              state <= IDLE;
-            end
-          end
+        C: begin
+          GHA <= 0; GLA <= 0; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 1;
+        end
+        D: begin
+          GHA <= 0; GLA <= 1; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 0;
+        end
+        E: begin
+          GHA <= 0; GLA <= 1; GHB <= 0; GLB <= 0; GHC <= 1; GLC <= 0;
+        end
+        F: begin
+          GHA <= 0; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 1; GLC <= 0;
         end
       endcase
+    end else begin
+     case(commutation_state)
+       A: begin
+         GHA <= 0; GLA <= 1; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 0;
+       end
+       B: begin
+         GHA <= 0; GLA <= 1; GHB <= 0; GLB <= 0; GHC <= 1; GLC <= 0;
+       end
+       C: begin
+         GHA <= 0; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 1; GLC <= 0;
+       end
+       D: begin
+         GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 0; GLC <= 0;
+       end
+       E: begin
+         GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 0; GHC <= 0; GLC <= 1;
+       end
+       F: begin
+         GHA <= 0; GLA <= 0; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 1;
+       end
+     endcase
     end
+  end
+end
 
-    EEPROM eeprom(
-      .clk(CLK),
-      .addr(addr),
-      .data(data),
-      .read(read),
-      .data_ready(data_ready),
-      .scl(scl),
-      .scl_enable(scl_enable),
-      .sda_in(sda_in),
-      .sda_out(sda_out),
-      .sda_enable(sda_enable)
-      );
+
+
+quadrature_decoder #((16_000_000/10_000_000),500_000) quad_counter0(
+    .clk(CLK),
+    .a(ENCODER0_A),
+    .b(ENCODER0_B),
+    .set_origin_n(1'b1),
+    .direction(dir_encoder0),
+    .position(encoder0_position)
+  )/* synthesis syn_noprune = 1 */;
 
 endmodule

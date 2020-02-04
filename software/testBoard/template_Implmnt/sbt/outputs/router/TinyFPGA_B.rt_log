@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:09:20
 
-* File Generated:     Jan 31 2020 00:08:43
+* File Generated:     Feb 4 2020 19:51:56
 
 * Purpose:            Router runtime info
 
@@ -18,13 +18,26 @@ Executing : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrout
 I1203: Reading Design TinyFPGA_B
 I1202: Reading Architecture of device iCE40LP8K
 I1209: Started routing
-I1223: Total Nets : 304 
-I1212: Iteration  1 :    52 unrouted : 0 seconds
-I1212: Iteration  2 :     4 unrouted : 0 seconds
-I1212: Iteration  3 :     0 unrouted : 0 seconds
+I1223: Total Nets : 2562 
+I1212: Iteration  1 :  1042 unrouted : 3 seconds
+I1212: Iteration  2 :   694 unrouted : 2 seconds
+I1212: Iteration  3 :   563 unrouted : 2 seconds
+I1212: Iteration  4 :   452 unrouted : 1 seconds
+I1212: Iteration  5 :   317 unrouted : 1 seconds
+I1212: Iteration  6 :   219 unrouted : 1 seconds
+I1212: Iteration  7 :   124 unrouted : 0 seconds
+I1212: Iteration  8 :    86 unrouted : 1 seconds
+I1212: Iteration  9 :    44 unrouted : 0 seconds
+I1212: Iteration 10 :    28 unrouted : 0 seconds
+I1212: Iteration 11 :    20 unrouted : 0 seconds
+I1212: Iteration 12 :    14 unrouted : 1 seconds
+I1212: Iteration 13 :    15 unrouted : 0 seconds
+I1212: Iteration 14 :     8 unrouted : 0 seconds
+I1212: Iteration 15 :     2 unrouted : 0 seconds
+I1212: Iteration 16 :     0 unrouted : 0 seconds
 I1215: Routing is successful
 I1206: Completed routing
 I1204: Writing Design TinyFPGA_B
 I1210: Writing routes
 I1218: Exiting the router
-I1224: Router run-time : 10 seconds
+I1224: Router run-time : 26 seconds

@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Jan 31 00:07:56 2020
+Tue Feb  4 19:47:50 2020
 
 
 Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
@@ -76,6 +76,10 @@ Verilog design file = verilog/i2c_controller.v
 Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
 VHDL library = work
 VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd
+VHDL library = work
+VHDL design file = vhdl/quadrature_decoder.vhd
 -sdc option: SDC file input is constraints/clk.sdc.
 -vh2008
 
@@ -106,71 +110,77 @@ WARNING - synthesis: verilog/TinyFPGA_B_pll_1MHz.v(27): literal value truncated 
 Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
 INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
 INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(128): analyzing entity grp_debouncer. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(140): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/quadrature_decoder.vhd. VHDL-1481
+INFO - synthesis: vhdl/quadrature_decoder.vhd(26): analyzing entity quadrature_decoder. VHDL-1012
+INFO - synthesis: vhdl/quadrature_decoder.vhd(39): analyzing architecture logic. VHDL-1010
 INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/testBoard". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): TinyFPGA_B
 INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
 WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
-INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
-INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
-WARNING - synthesis: verilog/eeprom.v(47): expression size 32 truncated to fit in target size 16. VERI-1209
-INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
-WARNING - synthesis: verilog/i2c_controller.v(46): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: verilog/i2c_controller.v(135): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
-WARNING - synthesis: verilog/TinyFPGA_B.v(107): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
-WARNING - synthesis: verilog/TinyFPGA_B.v(116): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b01,PULLUP=1'b1). VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(80): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(81): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(82): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(83): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(84): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(85): expression size 32 truncated to fit in target size 1. VERI-1209
+INFO - synthesis: verilog/pwm.v(1): compiling module pwm. VERI-1018
+INFO - synthesis: verilog/TinyFPGA_B.v(102): going to vhdl side to elaborate module grp_debouncer. VERI-1231
+vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(128): executing grp_debouncer(3,1000)(rtl)
+
+INFO - synthesis: verilog/TinyFPGA_B.v(102): back to verilog to continue elaboration. VERI-1232
+WARNING - synthesis: verilog/TinyFPGA_B.v(138): expression size 32 truncated to fit in target size 24. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(142): expression size 11 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(149): expression size 25 truncated to fit in target size 24. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(180): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: verilog/TinyFPGA_B.v(239): going to vhdl side to elaborate module quadrature_decoder. VERI-1231
+vhdl/quadrature_decoder.vhd(26): executing quadrature_decoder(1,500000)(logic)
+
+INFO - synthesis: verilog/TinyFPGA_B.v(239): back to verilog to continue elaboration. VERI-1232
+WARNING - synthesis: verilog/TinyFPGA_B.v(114): Register reset_149 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(59): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(67): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(75): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
 Top-level module name = TinyFPGA_B.
-WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
-WARNING - synthesis: verilog/TinyFPGA_B.v(107): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
-WARNING - synthesis: verilog/TinyFPGA_B.v(116): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: Initial value found on net dat_strb will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net strb_next will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net dat_diff will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net cnt_next[0] will be ignored due to unrecognized driver type
+WARNING - synthesis: verilog/TinyFPGA_B.v(59): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(67): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(75): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+######## Converting I/O port SCL to input.
+######## Converting I/O port SDA to input.
 ######## Missing driver on net NEOPXL. Patching with GND.
 ######## Missing driver on net DE. Patching with GND.
 ######## Missing driver on net TX. Patching with GND.
 ######## Missing driver on net CS_CLK. Patching with GND.
 ######## Missing driver on net CS. Patching with GND.
-######## Missing driver on net INLC. Patching with GND.
-######## Missing driver on net INHC. Patching with GND.
-######## Missing driver on net INLB. Patching with GND.
-######## Missing driver on net INHB. Patching with GND.
-######## Missing driver on net INLA. Patching with GND.
-######## Missing driver on net INHA. Patching with GND.
-######## Missing driver on net addr[10]. Patching with GND.
-######## Missing driver on net addr[9]. Patching with GND.
-######## Missing driver on net addr[8]. Patching with GND.
-######## Missing driver on net addr[7]. Patching with GND.
-######## Missing driver on net addr[6]. Patching with GND.
-######## Missing driver on net addr[5]. Patching with GND.
-######## Missing driver on net addr[4]. Patching with GND.
-######## Missing driver on net addr[3]. Patching with GND.
-######## Missing driver on net addr[2]. Patching with GND.
-######## Missing driver on net addr[1]. Patching with GND.
-######## Missing driver on net addr[0]. Patching with GND.
-WARNING - synthesis: verilog/eeprom.v(58): Register \eeprom/reset_41 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 1 of Register \quad_counter0/set_origin_n_new is stuck at One
+WARNING - synthesis: Bit 0 of Register \quad_counter0/set_origin_n_new is stuck at One
+WARNING - synthesis: vhdl/quadrature_decoder.vhd(89): Register \quad_counter0/set_origin_n_int_55 is stuck at One. VDB-5014
 
 
 
-WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
-WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
-WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
-WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
-WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
-WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
-WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
-WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
-WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
-WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
-WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
-WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
-WARNING - synthesis: verilog/i2c_controller.v(173): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
-WARNING - synthesis: verilog/TinyFPGA_B.v(149): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: Skipping pad insertion on HALL1 due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on HALL2 due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on HALL3 due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/TinyFPGA_B.v(228): Register commutation_state_i7 is stuck at Zero. VDB-5013
 Writing scf file : template_Implmnt/template.scf
 
 Writing scf file : template_Implmnt/template.scf
@@ -184,41 +194,37 @@ Writing scf file : template_Implmnt/template.scf
 Results of NGD DRC are available in TinyFPGA_B_drc.log.
 
 ################### Begin Area Report (TinyFPGA_B)######################
-Number of register bits => 114 of 7680 (1 % )
-SB_CARRY => 83
-SB_DFF => 42
-SB_DFFE => 2
-SB_DFFESR => 47
-SB_DFFESS => 13
-SB_DFFN => 1
-SB_DFFNE => 1
-SB_DFFNESS => 1
-SB_DFFSR => 7
+Number of register bits => 254 of 7680 (3 % )
+SB_CARRY => 699
+SB_DFF => 127
+SB_DFFE => 34
+SB_DFFESR => 30
+SB_DFFESS => 1
+SB_DFFSR => 62
 SB_GB_IO => 1
-SB_IO => 15
-SB_LUT4 => 198
+SB_IO => 18
+SB_LUT4 => 1659
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
-  Net : CLK_c, loads : 90
-  Net : eeprom/i2c/i2c_clk, loads : 26
+Number of Clocks: 1
+  Net : CLK_N, loads : 254
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n1507, loads : 33
-  Net : n1891, loads : 32
-  Net : eeprom/n730, loads : 31
-  Net : eeprom/i2c/state_0, loads : 21
-  Net : eeprom/i2c/state_2, loads : 21
-  Net : eeprom/i2c/state_1, loads : 20
-  Net : eeprom/i2c/state_3, loads : 18
-  Net : eeprom/n1796, loads : 17
-  Net : eeprom/n1929, loads : 16
-  Net : state_7_N_286_3, loads : 12
+  Net : quad_counter0/direction_N_530, loads : 61
+  Net : n2_adj_626, loads : 48
+  Net : n4856, loads : 43
+  Net : quad_counter0/encoder0_position_31, loads : 40
+  Net : quad_counter0/direction_N_531, loads : 32
+  Net : n3138, loads : 32
+  Net : n3237, loads : 32
+  Net : PWM/pwm_counter_31__N_401, loads : 32
+  Net : n3039, loads : 31
+  Net : n2841, loads : 30
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -227,25 +233,18 @@ Timing Report Summary
 Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
-create_clock -period 62.500000 -name    |             |             |
-clk500 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
-                                        |             |             |
- create_clock -period 62.500 -name      |             |             |
-TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
-get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
-                                        |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33  
+CLK [ get_ports { CLK } ]               |   16.000 MHz|    1.952 MHz|   323 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraints not met.
 
 
-Peak Memory Usage: 200.625  MB
+Peak Memory Usage: 335.473  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.327  secs
+Elapsed CPU time for LSE flow : 31.292  secs
 --------------------------------------------------------------

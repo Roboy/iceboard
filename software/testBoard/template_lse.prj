@@ -38,6 +38,8 @@
 -ver "verilog/eeprom.v"
 -ver "verilog/i2c_controller.v"
 -ver "verilog/TinyFPGA_B_pll_1MHz.v"
+-lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd" 
+-lib work -vhd "vhdl/quadrature_decoder.vhd" 
 -p "/home/letrend/workspace/iceboard/software/testBoard"
 
 #set result format/file last

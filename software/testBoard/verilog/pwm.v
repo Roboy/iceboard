@@ -5,7 +5,7 @@ module pwm(
   output reg pwm_out
 );
 
-localparam CLK_FREQ   = 32_000_000;
+localparam CLK_FREQ   = 16_000_000;
 localparam PWM_FREQ   = 20_000;
 
 integer pwm_counter;
