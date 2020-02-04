@@ -52,10 +52,10 @@
     </pins>
 
     <!--
-        Instances in netlist: 180
+        Instances in netlist: 189
     -->
 
-    <instance  name = "quad_counter0/a_prev_I_21"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "quad_counter0/a_prev_I_22"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "c"  direction = "in"  />
@@ -65,9 +65,9 @@
 
         <nets>
         <nitem  name = "quad_counter0/a_prev"  />
-        <nitem  name = "quad_counter0/a_prev_N_537"  />
-        <nitem  name = "quad_counter0/a_prev_N_536"  />
-        <nitem  name = "quad_counter0/a_prev_N_535"  />
+        <nitem  name = "quad_counter0/a_prev_N_543"  />
+        <nitem  name = "quad_counter0/a_prev_N_542"  />
+        <nitem  name = "quad_counter0/a_prev_N_541"  />
         </nets>
     </instance>
 
@@ -83,11 +83,11 @@
         <nitem  name = "quad_counter0/a_new[1]"  />
         <nitem  name = "quad_counter0/a_prev"  />
         <nitem  name = "quad_counter0/debounce_cnt"  />
-        <nitem  name = "quad_counter0/a_prev_N_536"  />
+        <nitem  name = "quad_counter0/a_prev_N_542"  />
         </nets>
     </instance>
 
-    <instance  name = "blink_counter_25__I_0_168"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "blink_counter_25__I_0_178"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[31]"  direction = "in"  />
@@ -240,7 +240,7 @@
         </nets>
     </instance>
 
-    <instance  name = "quad_counter0/debounce_cnt_I_24"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "quad_counter0/debounce_cnt_I_25"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "c"  direction = "in"  />
@@ -250,9 +250,9 @@
 
         <nets>
         <nitem  name = "quad_counter0/gnd"  />
-        <nitem  name = "quad_counter0/a_prev_N_537"  />
-        <nitem  name = "quad_counter0/debounce_cnt_N_543"  />
-        <nitem  name = "quad_counter0/debounce_cnt_N_542"  />
+        <nitem  name = "quad_counter0/a_prev_N_543"  />
+        <nitem  name = "quad_counter0/debounce_cnt_N_549"  />
+        <nitem  name = "quad_counter0/debounce_cnt_N_548"  />
         </nets>
     </instance>
 
@@ -424,7 +424,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GLA_I_0_180"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GLA_I_0_190"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[31]"  direction = "in"  />
         <pitem  name = "d0[30]"  direction = "in"  />
@@ -502,7 +502,7 @@
         </nets>
     </instance>
 
-    <instance  name = "pwm_out_I_0_170"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "pwm_out_I_0_180"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[31]"  direction = "in"  />
         <pitem  name = "d0[30]"  direction = "in"  />
@@ -580,7 +580,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GLB_I_0_185"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GLB_I_0_195"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[31]"  direction = "in"  />
         <pitem  name = "d0[30]"  direction = "in"  />
@@ -658,7 +658,7 @@
         </nets>
     </instance>
 
-    <instance  name = "pwm_out_I_0_169"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "pwm_out_I_0_179"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[31]"  direction = "in"  />
         <pitem  name = "d0[30]"  direction = "in"  />
@@ -736,7 +736,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GLC_I_0_190"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GLC_I_0_200"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[31]"  direction = "in"  />
         <pitem  name = "d0[30]"  direction = "in"  />
@@ -1185,7 +1185,7 @@
         <nitem  name = "quad_counter0/gnd"  />
         <nitem  name = "quad_counter0/pwr"  />
         <nitem  name = "quad_counter0/debounce_cnt"  />
-        <nitem  name = "quad_counter0/debounce_cnt_N_544[0]"  />
+        <nitem  name = "quad_counter0/debounce_cnt_N_550[0]"  />
         </nets>
     </instance>
 
@@ -1344,7 +1344,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dir_151"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "dir_160"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -1937,7 +1937,7 @@
         </nets>
     </instance>
 
-    <instance  name = "LessThan_25"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "encoder0_position_target_23__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[31]"  direction = "in"  />
@@ -2034,7 +2034,7 @@
         <nitem  name = "encoder0_position_target[2]"  />
         <nitem  name = "encoder0_position_target[1]"  />
         <nitem  name = "encoder0_position_target[0]"  />
-        <nitem  name = "n428"  />
+        <nitem  name = "direction_N_342"  />
         </nets>
     </instance>
 
@@ -2248,7 +2248,30 @@
         </pins>
 
         <nets>
-        <nitem  name = "gnd"  />
+        <nitem  name = "encoder0_position_target[23]"  />
+        <nitem  name = "encoder0_position_target[22]"  />
+        <nitem  name = "encoder0_position_target[21]"  />
+        <nitem  name = "encoder0_position_target[20]"  />
+        <nitem  name = "encoder0_position_target[19]"  />
+        <nitem  name = "encoder0_position_target[18]"  />
+        <nitem  name = "encoder0_position_target[17]"  />
+        <nitem  name = "encoder0_position_target[16]"  />
+        <nitem  name = "encoder0_position_target[15]"  />
+        <nitem  name = "encoder0_position_target[14]"  />
+        <nitem  name = "encoder0_position_target[13]"  />
+        <nitem  name = "encoder0_position_target[12]"  />
+        <nitem  name = "encoder0_position_target[11]"  />
+        <nitem  name = "encoder0_position_target[10]"  />
+        <nitem  name = "encoder0_position_target[9]"  />
+        <nitem  name = "encoder0_position_target[8]"  />
+        <nitem  name = "encoder0_position_target[7]"  />
+        <nitem  name = "encoder0_position_target[6]"  />
+        <nitem  name = "encoder0_position_target[5]"  />
+        <nitem  name = "encoder0_position_target[4]"  />
+        <nitem  name = "encoder0_position_target[3]"  />
+        <nitem  name = "encoder0_position_target[2]"  />
+        <nitem  name = "encoder0_position_target[1]"  />
+        <nitem  name = "encoder0_position_target[0]"  />
         <nitem  name = "n431"  />
         <nitem  name = "n432"  />
         <nitem  name = "n433"  />
@@ -2273,7 +2296,595 @@
         <nitem  name = "n452"  />
         <nitem  name = "n453"  />
         <nitem  name = "n454"  />
-        <nitem  name = "n428"  />
+        <nitem  name = "direction_N_342"  />
+        <nitem  name = "n456"  />
+        <nitem  name = "n457"  />
+        <nitem  name = "n458"  />
+        <nitem  name = "n459"  />
+        <nitem  name = "n460"  />
+        <nitem  name = "n461"  />
+        <nitem  name = "n462"  />
+        <nitem  name = "n463"  />
+        <nitem  name = "n464"  />
+        <nitem  name = "n465"  />
+        <nitem  name = "n466"  />
+        <nitem  name = "n467"  />
+        <nitem  name = "n468"  />
+        <nitem  name = "n469"  />
+        <nitem  name = "n470"  />
+        <nitem  name = "n471"  />
+        <nitem  name = "n472"  />
+        <nitem  name = "n473"  />
+        <nitem  name = "n474"  />
+        <nitem  name = "n475"  />
+        <nitem  name = "n476"  />
+        <nitem  name = "n477"  />
+        <nitem  name = "n478"  />
+        <nitem  name = "n479"  />
+        </nets>
+    </instance>
+
+    <instance  name = "direction_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "direction"  />
+        <nitem  name = "direction_N_342"  />
+        <nitem  name = "direction_N_341"  />
+        </nets>
+    </instance>
+
+    <instance  name = "encoder0_position_target_23__I_0_206"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "encoder0_position_target[23]"  />
+        <nitem  name = "encoder0_position_target[22]"  />
+        <nitem  name = "encoder0_position_target[21]"  />
+        <nitem  name = "encoder0_position_target[20]"  />
+        <nitem  name = "encoder0_position_target[19]"  />
+        <nitem  name = "encoder0_position_target[18]"  />
+        <nitem  name = "encoder0_position_target[17]"  />
+        <nitem  name = "encoder0_position_target[16]"  />
+        <nitem  name = "encoder0_position_target[15]"  />
+        <nitem  name = "encoder0_position_target[14]"  />
+        <nitem  name = "encoder0_position_target[13]"  />
+        <nitem  name = "encoder0_position_target[12]"  />
+        <nitem  name = "encoder0_position_target[11]"  />
+        <nitem  name = "encoder0_position_target[10]"  />
+        <nitem  name = "encoder0_position_target[9]"  />
+        <nitem  name = "encoder0_position_target[8]"  />
+        <nitem  name = "encoder0_position_target[7]"  />
+        <nitem  name = "encoder0_position_target[6]"  />
+        <nitem  name = "encoder0_position_target[5]"  />
+        <nitem  name = "encoder0_position_target[4]"  />
+        <nitem  name = "encoder0_position_target[3]"  />
+        <nitem  name = "encoder0_position_target[2]"  />
+        <nitem  name = "encoder0_position_target[1]"  />
+        <nitem  name = "encoder0_position_target[0]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "direction_N_340"  />
+        </nets>
+    </instance>
+
+    <instance  name = "add_30"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "encoder0_position_target[23]"  />
+        <nitem  name = "encoder0_position_target[22]"  />
+        <nitem  name = "encoder0_position_target[21]"  />
+        <nitem  name = "encoder0_position_target[20]"  />
+        <nitem  name = "encoder0_position_target[19]"  />
+        <nitem  name = "encoder0_position_target[18]"  />
+        <nitem  name = "encoder0_position_target[17]"  />
+        <nitem  name = "encoder0_position_target[16]"  />
+        <nitem  name = "encoder0_position_target[15]"  />
+        <nitem  name = "encoder0_position_target[14]"  />
+        <nitem  name = "encoder0_position_target[13]"  />
+        <nitem  name = "encoder0_position_target[12]"  />
+        <nitem  name = "encoder0_position_target[11]"  />
+        <nitem  name = "encoder0_position_target[10]"  />
+        <nitem  name = "encoder0_position_target[9]"  />
+        <nitem  name = "encoder0_position_target[8]"  />
+        <nitem  name = "encoder0_position_target[7]"  />
+        <nitem  name = "encoder0_position_target[6]"  />
+        <nitem  name = "encoder0_position_target[5]"  />
+        <nitem  name = "encoder0_position_target[4]"  />
+        <nitem  name = "encoder0_position_target[3]"  />
+        <nitem  name = "encoder0_position_target[2]"  />
+        <nitem  name = "encoder0_position_target[1]"  />
+        <nitem  name = "encoder0_position_target[0]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "n492"  />
+        <nitem  name = "n493"  />
+        <nitem  name = "n494"  />
+        <nitem  name = "n495"  />
+        <nitem  name = "n496"  />
+        <nitem  name = "n497"  />
+        <nitem  name = "n498"  />
+        <nitem  name = "n499"  />
+        <nitem  name = "n500"  />
+        <nitem  name = "n501"  />
+        <nitem  name = "n502"  />
+        <nitem  name = "n503"  />
+        <nitem  name = "n504"  />
+        <nitem  name = "n505"  />
+        <nitem  name = "n506"  />
+        <nitem  name = "n507"  />
+        <nitem  name = "n508"  />
+        <nitem  name = "n509"  />
+        <nitem  name = "n510"  />
+        <nitem  name = "n511"  />
+        <nitem  name = "n512"  />
+        <nitem  name = "n513"  />
+        <nitem  name = "n514"  />
+        <nitem  name = "n515"  />
+        </nets>
+    </instance>
+
+    <instance  name = "mux_31"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "encoder0_position_target[23]"  />
+        <nitem  name = "encoder0_position_target[22]"  />
+        <nitem  name = "encoder0_position_target[21]"  />
+        <nitem  name = "encoder0_position_target[20]"  />
+        <nitem  name = "encoder0_position_target[19]"  />
+        <nitem  name = "encoder0_position_target[18]"  />
+        <nitem  name = "encoder0_position_target[17]"  />
+        <nitem  name = "encoder0_position_target[16]"  />
+        <nitem  name = "encoder0_position_target[15]"  />
+        <nitem  name = "encoder0_position_target[14]"  />
+        <nitem  name = "encoder0_position_target[13]"  />
+        <nitem  name = "encoder0_position_target[12]"  />
+        <nitem  name = "encoder0_position_target[11]"  />
+        <nitem  name = "encoder0_position_target[10]"  />
+        <nitem  name = "encoder0_position_target[9]"  />
+        <nitem  name = "encoder0_position_target[8]"  />
+        <nitem  name = "encoder0_position_target[7]"  />
+        <nitem  name = "encoder0_position_target[6]"  />
+        <nitem  name = "encoder0_position_target[5]"  />
+        <nitem  name = "encoder0_position_target[4]"  />
+        <nitem  name = "encoder0_position_target[3]"  />
+        <nitem  name = "encoder0_position_target[2]"  />
+        <nitem  name = "encoder0_position_target[1]"  />
+        <nitem  name = "encoder0_position_target[0]"  />
+        <nitem  name = "n492"  />
+        <nitem  name = "n493"  />
+        <nitem  name = "n494"  />
+        <nitem  name = "n495"  />
+        <nitem  name = "n496"  />
+        <nitem  name = "n497"  />
+        <nitem  name = "n498"  />
+        <nitem  name = "n499"  />
+        <nitem  name = "n500"  />
+        <nitem  name = "n501"  />
+        <nitem  name = "n502"  />
+        <nitem  name = "n503"  />
+        <nitem  name = "n504"  />
+        <nitem  name = "n505"  />
+        <nitem  name = "n506"  />
+        <nitem  name = "n507"  />
+        <nitem  name = "n508"  />
+        <nitem  name = "n509"  />
+        <nitem  name = "n510"  />
+        <nitem  name = "n511"  />
+        <nitem  name = "n512"  />
+        <nitem  name = "n513"  />
+        <nitem  name = "n514"  />
+        <nitem  name = "n515"  />
+        <nitem  name = "direction_N_340"  />
+        <nitem  name = "n517"  />
+        <nitem  name = "n518"  />
+        <nitem  name = "n519"  />
+        <nitem  name = "n520"  />
+        <nitem  name = "n521"  />
+        <nitem  name = "n522"  />
+        <nitem  name = "n523"  />
+        <nitem  name = "n524"  />
+        <nitem  name = "n525"  />
+        <nitem  name = "n526"  />
+        <nitem  name = "n527"  />
+        <nitem  name = "n528"  />
+        <nitem  name = "n529"  />
+        <nitem  name = "n530"  />
+        <nitem  name = "n531"  />
+        <nitem  name = "n532"  />
+        <nitem  name = "n533"  />
+        <nitem  name = "n534"  />
+        <nitem  name = "n535"  />
+        <nitem  name = "n536"  />
+        <nitem  name = "n537"  />
+        <nitem  name = "n538"  />
+        <nitem  name = "n539"  />
+        <nitem  name = "n540"  />
+        </nets>
+    </instance>
+
+    <instance  name = "direction_I_0_205"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwr"  />
+        <nitem  name = "direction"  />
+        <nitem  name = "direction_N_340"  />
+        <nitem  name = "direction_N_339"  />
+        </nets>
+    </instance>
+
+    <instance  name = "mux_33"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n517"  />
+        <nitem  name = "n518"  />
+        <nitem  name = "n519"  />
+        <nitem  name = "n520"  />
+        <nitem  name = "n521"  />
+        <nitem  name = "n522"  />
+        <nitem  name = "n523"  />
+        <nitem  name = "n524"  />
+        <nitem  name = "n525"  />
+        <nitem  name = "n526"  />
+        <nitem  name = "n527"  />
+        <nitem  name = "n528"  />
+        <nitem  name = "n529"  />
+        <nitem  name = "n530"  />
+        <nitem  name = "n531"  />
+        <nitem  name = "n532"  />
+        <nitem  name = "n533"  />
+        <nitem  name = "n534"  />
+        <nitem  name = "n535"  />
+        <nitem  name = "n536"  />
+        <nitem  name = "n537"  />
+        <nitem  name = "n538"  />
+        <nitem  name = "n539"  />
+        <nitem  name = "n540"  />
+        <nitem  name = "n456"  />
+        <nitem  name = "n457"  />
+        <nitem  name = "n458"  />
+        <nitem  name = "n459"  />
+        <nitem  name = "n460"  />
+        <nitem  name = "n461"  />
+        <nitem  name = "n462"  />
+        <nitem  name = "n463"  />
+        <nitem  name = "n464"  />
+        <nitem  name = "n465"  />
+        <nitem  name = "n466"  />
+        <nitem  name = "n467"  />
+        <nitem  name = "n468"  />
+        <nitem  name = "n469"  />
+        <nitem  name = "n470"  />
+        <nitem  name = "n471"  />
+        <nitem  name = "n472"  />
+        <nitem  name = "n473"  />
+        <nitem  name = "n474"  />
+        <nitem  name = "n475"  />
+        <nitem  name = "n476"  />
+        <nitem  name = "n477"  />
+        <nitem  name = "n478"  />
+        <nitem  name = "n479"  />
+        <nitem  name = "direction"  />
         <nitem  name = "encoder0_position_target_23__N_229[23]"  />
         <nitem  name = "encoder0_position_target_23__N_229[22]"  />
         <nitem  name = "encoder0_position_target_23__N_229[21]"  />
@@ -2301,7 +2912,23 @@
         </nets>
     </instance>
 
-    <instance  name = "sweep_counter_31__I_0_166"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "direction_I_20"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "direction_N_339"  />
+        <nitem  name = "direction_N_341"  />
+        <nitem  name = "direction"  />
+        <nitem  name = "direction_N_338"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sweep_counter_31__I_0_176"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[31]"  direction = "in"  />
         <pitem  name = "d0[30]"  direction = "in"  />
@@ -2472,7 +3099,7 @@
         </nets>
     </instance>
 
-    <instance  name = "encoder0_position_target_23__I_0_167"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "encoder0_position_target_23__I_0_177"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[23]"  direction = "in"  />
         <pitem  name = "d0[22]"  direction = "in"  />
@@ -2626,7 +3253,23 @@
         </nets>
     </instance>
 
-    <instance  name = "encoder0_position_target_23__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "direction_I_0_203"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "direction"  />
+        <nitem  name = "direction_N_338"  />
+        <nitem  name = "sweep_counter_31__N_228"  />
+        <nitem  name = "direction_N_337"  />
+        </nets>
+    </instance>
+
+    <instance  name = "encoder0_position_target_23__I_0_204"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[23]"  direction = "in"  />
         <pitem  name = "a[22]"  direction = "in"  />
@@ -2790,7 +3433,7 @@
         </nets>
     </instance>
 
-    <instance  name = "i33"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i41"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2800,11 +3443,11 @@
         <nets>
         <nitem  name = "h1"  />
         <nitem  name = "h2_N_266"  />
-        <nitem  name = "n564"  />
+        <nitem  name = "n653"  />
         </nets>
     </instance>
 
-    <instance  name = "i34"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i42"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2812,13 +3455,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "n564"  />
+        <nitem  name = "n653"  />
         <nitem  name = "h3"  />
-        <nitem  name = "n565"  />
+        <nitem  name = "n654"  />
         </nets>
     </instance>
 
-    <instance  name = "mux_34"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "mux_42"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -2857,19 +3500,19 @@
         <nitem  name = "commutation_state[1]"  />
         <nitem  name = "commutation_state[0]"  />
         <nitem  name = "gnd"  />
-        <nitem  name = "n565"  />
-        <nitem  name = "n567"  />
-        <nitem  name = "n568"  />
-        <nitem  name = "n569"  />
-        <nitem  name = "n570"  />
-        <nitem  name = "n571"  />
-        <nitem  name = "n572"  />
-        <nitem  name = "n573"  />
-        <nitem  name = "n574"  />
+        <nitem  name = "n654"  />
+        <nitem  name = "n656"  />
+        <nitem  name = "n657"  />
+        <nitem  name = "n658"  />
+        <nitem  name = "n659"  />
+        <nitem  name = "n660"  />
+        <nitem  name = "n661"  />
+        <nitem  name = "n662"  />
+        <nitem  name = "n663"  />
         </nets>
     </instance>
 
-    <instance  name = "quad_counter0/a_prev_I_22"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "quad_counter0/a_prev_I_23"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2877,9 +3520,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "quad_counter0/a_prev_N_538"  />
-        <nitem  name = "quad_counter0/a_prev_N_539"  />
-        <nitem  name = "quad_counter0/a_prev_N_537"  />
+        <nitem  name = "quad_counter0/a_prev_N_544"  />
+        <nitem  name = "quad_counter0/a_prev_N_545"  />
+        <nitem  name = "quad_counter0/a_prev_N_543"  />
         </nets>
     </instance>
 
@@ -2893,11 +3536,11 @@
         <nets>
         <nitem  name = "quad_counter0/b_new[1]"  />
         <nitem  name = "quad_counter0/b_new[0]"  />
-        <nitem  name = "quad_counter0/a_prev_N_539"  />
+        <nitem  name = "quad_counter0/a_prev_N_545"  />
         </nets>
     </instance>
 
-    <instance  name = "i38"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i46"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
@@ -2905,11 +3548,11 @@
 
         <nets>
         <nitem  name = "h3"  />
-        <nitem  name = "n577"  />
+        <nitem  name = "n666"  />
         </nets>
     </instance>
 
-    <instance  name = "i39"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i47"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2917,13 +3560,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "n564"  />
-        <nitem  name = "n577"  />
-        <nitem  name = "n578"  />
+        <nitem  name = "n653"  />
+        <nitem  name = "n666"  />
+        <nitem  name = "n667"  />
         </nets>
     </instance>
 
-    <instance  name = "mux_39"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "mux_47"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -2953,29 +3596,29 @@
         </pins>
 
         <nets>
-        <nitem  name = "n567"  />
-        <nitem  name = "n568"  />
-        <nitem  name = "n569"  />
-        <nitem  name = "n570"  />
-        <nitem  name = "n571"  />
-        <nitem  name = "n572"  />
-        <nitem  name = "n573"  />
-        <nitem  name = "n574"  />
+        <nitem  name = "n656"  />
+        <nitem  name = "n657"  />
+        <nitem  name = "n658"  />
+        <nitem  name = "n659"  />
+        <nitem  name = "n660"  />
+        <nitem  name = "n661"  />
+        <nitem  name = "n662"  />
+        <nitem  name = "n663"  />
         <nitem  name = "gnd"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "n578"  />
-        <nitem  name = "n580"  />
-        <nitem  name = "n581"  />
-        <nitem  name = "n582"  />
-        <nitem  name = "n583"  />
-        <nitem  name = "n584"  />
-        <nitem  name = "n585"  />
-        <nitem  name = "n586"  />
-        <nitem  name = "n587"  />
+        <nitem  name = "n667"  />
+        <nitem  name = "n669"  />
+        <nitem  name = "n670"  />
+        <nitem  name = "n671"  />
+        <nitem  name = "n672"  />
+        <nitem  name = "n673"  />
+        <nitem  name = "n674"  />
+        <nitem  name = "n675"  />
+        <nitem  name = "n676"  />
         </nets>
     </instance>
 
-    <instance  name = "i41"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i49"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2985,7 +3628,7 @@
         <nets>
         <nitem  name = "h1"  />
         <nitem  name = "h2"  />
-        <nitem  name = "n588"  />
+        <nitem  name = "n677"  />
         </nets>
     </instance>
 
@@ -2999,11 +3642,11 @@
         <nets>
         <nitem  name = "quad_counter0/a_new[1]"  />
         <nitem  name = "quad_counter0/a_new[0]"  />
-        <nitem  name = "quad_counter0/a_prev_N_538"  />
+        <nitem  name = "quad_counter0/a_prev_N_544"  />
         </nets>
     </instance>
 
-    <instance  name = "i43"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i51"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -3011,13 +3654,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "n588"  />
-        <nitem  name = "n577"  />
-        <nitem  name = "n590"  />
+        <nitem  name = "n677"  />
+        <nitem  name = "n666"  />
+        <nitem  name = "n679"  />
         </nets>
     </instance>
 
-    <instance  name = "mux_43"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "mux_51"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -3047,25 +3690,25 @@
         </pins>
 
         <nets>
-        <nitem  name = "n580"  />
-        <nitem  name = "n581"  />
-        <nitem  name = "n582"  />
-        <nitem  name = "n583"  />
-        <nitem  name = "n584"  />
-        <nitem  name = "n585"  />
-        <nitem  name = "n586"  />
-        <nitem  name = "n587"  />
+        <nitem  name = "n669"  />
+        <nitem  name = "n670"  />
+        <nitem  name = "n671"  />
+        <nitem  name = "n672"  />
+        <nitem  name = "n673"  />
+        <nitem  name = "n674"  />
+        <nitem  name = "n675"  />
+        <nitem  name = "n676"  />
         <nitem  name = "gnd"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "n590"  />
-        <nitem  name = "n592"  />
-        <nitem  name = "n593"  />
-        <nitem  name = "n594"  />
-        <nitem  name = "n595"  />
-        <nitem  name = "n596"  />
-        <nitem  name = "n597"  />
-        <nitem  name = "n598"  />
-        <nitem  name = "n599"  />
+        <nitem  name = "n679"  />
+        <nitem  name = "n681"  />
+        <nitem  name = "n682"  />
+        <nitem  name = "n683"  />
+        <nitem  name = "n684"  />
+        <nitem  name = "n685"  />
+        <nitem  name = "n686"  />
+        <nitem  name = "n687"  />
+        <nitem  name = "n688"  />
         </nets>
     </instance>
 
@@ -3081,7 +3724,7 @@
         </nets>
     </instance>
 
-    <instance  name = "i46"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i54"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -3091,11 +3734,11 @@
         <nets>
         <nitem  name = "h1_N_264"  />
         <nitem  name = "h2"  />
-        <nitem  name = "n601"  />
+        <nitem  name = "n690"  />
         </nets>
     </instance>
 
-    <instance  name = "i48"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i56"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -3103,13 +3746,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "n601"  />
-        <nitem  name = "n577"  />
-        <nitem  name = "n603"  />
+        <nitem  name = "n690"  />
+        <nitem  name = "n666"  />
+        <nitem  name = "n692"  />
         </nets>
     </instance>
 
-    <instance  name = "mux_48"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "mux_56"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -3139,25 +3782,25 @@
         </pins>
 
         <nets>
-        <nitem  name = "n592"  />
-        <nitem  name = "n593"  />
-        <nitem  name = "n594"  />
-        <nitem  name = "n595"  />
-        <nitem  name = "n596"  />
-        <nitem  name = "n597"  />
-        <nitem  name = "n598"  />
-        <nitem  name = "n599"  />
+        <nitem  name = "n681"  />
+        <nitem  name = "n682"  />
+        <nitem  name = "n683"  />
+        <nitem  name = "n684"  />
+        <nitem  name = "n685"  />
+        <nitem  name = "n686"  />
+        <nitem  name = "n687"  />
+        <nitem  name = "n688"  />
         <nitem  name = "gnd"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "n603"  />
-        <nitem  name = "n605"  />
-        <nitem  name = "n606"  />
-        <nitem  name = "n607"  />
-        <nitem  name = "n608"  />
-        <nitem  name = "n609"  />
-        <nitem  name = "n610"  />
-        <nitem  name = "n611"  />
-        <nitem  name = "n612"  />
+        <nitem  name = "n692"  />
+        <nitem  name = "n694"  />
+        <nitem  name = "n695"  />
+        <nitem  name = "n696"  />
+        <nitem  name = "n697"  />
+        <nitem  name = "n698"  />
+        <nitem  name = "n699"  />
+        <nitem  name = "n700"  />
+        <nitem  name = "n701"  />
         </nets>
     </instance>
 
@@ -3242,11 +3885,11 @@
         <nets>
         <nitem  name = "debounce/dat_strb"  />
         <nitem  name = "debounce/strb_next"  />
-        <nitem  name = "debounce/strb_next_N_419"  />
+        <nitem  name = "debounce/strb_next_N_425"  />
         </nets>
     </instance>
 
-    <instance  name = "i52"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "i60"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -3254,13 +3897,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "n601"  />
+        <nitem  name = "n690"  />
         <nitem  name = "h3"  />
-        <nitem  name = "n615"  />
+        <nitem  name = "n704"  />
         </nets>
     </instance>
 
-    <instance  name = "mux_52"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "mux_60"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -3290,17 +3933,17 @@
         </pins>
 
         <nets>
-        <nitem  name = "n605"  />
-        <nitem  name = "n606"  />
-        <nitem  name = "n607"  />
-        <nitem  name = "n608"  />
-        <nitem  name = "n609"  />
-        <nitem  name = "n610"  />
-        <nitem  name = "n611"  />
-        <nitem  name = "n612"  />
+        <nitem  name = "n694"  />
+        <nitem  name = "n695"  />
+        <nitem  name = "n696"  />
+        <nitem  name = "n697"  />
+        <nitem  name = "n698"  />
+        <nitem  name = "n699"  />
+        <nitem  name = "n700"  />
+        <nitem  name = "n701"  />
         <nitem  name = "gnd"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "n615"  />
+        <nitem  name = "n704"  />
         <nitem  name = "commutation_state_7__N_253[7]"  />
         <nitem  name = "commutation_state_7__N_253[6]"  />
         <nitem  name = "commutation_state_7__N_253[5]"  />
@@ -3330,7 +3973,7 @@
         <nitem  name = "debounce/reg_B[2]"  />
         <nitem  name = "debounce/reg_B[1]"  />
         <nitem  name = "debounce/reg_B[0]"  />
-        <nitem  name = "debounce/strb_next_N_419"  />
+        <nitem  name = "debounce/strb_next_N_425"  />
         </nets>
     </instance>
 
@@ -3384,7 +4027,7 @@
         </nets>
     </instance>
 
-    <instance  name = "commutation_state_7__I_0_171"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "commutation_state_7__I_0_181"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -3519,7 +4162,7 @@
         </nets>
     </instance>
 
-    <instance  name = "sub_59"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "sub_67"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3560,14 +4203,14 @@
         <nitem  name = "dti_counter[1]"  />
         <nitem  name = "dti_counter[0]"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "n641"  />
-        <nitem  name = "n642"  />
-        <nitem  name = "n643"  />
-        <nitem  name = "n644"  />
-        <nitem  name = "n645"  />
-        <nitem  name = "n646"  />
-        <nitem  name = "n647"  />
-        <nitem  name = "n648"  />
+        <nitem  name = "n730"  />
+        <nitem  name = "n731"  />
+        <nitem  name = "n732"  />
+        <nitem  name = "n733"  />
+        <nitem  name = "n734"  />
+        <nitem  name = "n735"  />
+        <nitem  name = "n736"  />
+        <nitem  name = "n737"  />
         </nets>
     </instance>
 
@@ -3587,7 +4230,7 @@
         </nets>
     </instance>
 
-    <instance  name = "mux_61"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "mux_69"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -3617,14 +4260,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "n641"  />
-        <nitem  name = "n642"  />
-        <nitem  name = "n643"  />
-        <nitem  name = "n644"  />
-        <nitem  name = "n645"  />
-        <nitem  name = "n646"  />
-        <nitem  name = "n647"  />
-        <nitem  name = "n648"  />
+        <nitem  name = "n730"  />
+        <nitem  name = "n731"  />
+        <nitem  name = "n732"  />
+        <nitem  name = "n733"  />
+        <nitem  name = "n734"  />
+        <nitem  name = "n735"  />
+        <nitem  name = "n736"  />
+        <nitem  name = "n737"  />
         <nitem  name = "dti_counter_7__N_267[7]"  />
         <nitem  name = "dti_counter_7__N_267[6]"  />
         <nitem  name = "dti_counter_7__N_267[5]"  />
@@ -3763,9 +4406,9 @@
         <nitem  name = "debounce/reg_B[1]"  />
         <nitem  name = "debounce/reg_B[0]"  />
         <nitem  name = "debounce/dat_strb"  />
-        <nitem  name = "debounce/data_o_2__N_404[2]"  />
-        <nitem  name = "debounce/data_o_2__N_404[1]"  />
-        <nitem  name = "debounce/data_o_2__N_404[0]"  />
+        <nitem  name = "debounce/data_o_2__N_410[2]"  />
+        <nitem  name = "debounce/data_o_2__N_410[1]"  />
+        <nitem  name = "debounce/data_o_2__N_410[0]"  />
         </nets>
     </instance>
 
@@ -3792,9 +4435,9 @@
         <nitem  name = "h1"  />
         <nitem  name = "h2"  />
         <nitem  name = "h3"  />
-        <nitem  name = "debounce/data_o_2__N_404[2]"  />
-        <nitem  name = "debounce/data_o_2__N_404[1]"  />
-        <nitem  name = "debounce/data_o_2__N_404[0]"  />
+        <nitem  name = "debounce/data_o_2__N_410[2]"  />
+        <nitem  name = "debounce/data_o_2__N_410[1]"  />
+        <nitem  name = "debounce/data_o_2__N_410[0]"  />
         </nets>
     </instance>
 
@@ -3935,18 +4578,18 @@
         <nitem  name = "debounce/cnt_next[2]"  />
         <nitem  name = "debounce/cnt_next[1]"  />
         <nitem  name = "debounce/cnt_next[0]"  />
-        <nitem  name = "debounce/cnt_next_9__N_418"  />
-        <nitem  name = "debounce/cnt_next_9__N_407"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[9]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[8]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[7]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[6]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[5]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[4]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[3]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[2]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[1]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[0]"  />
+        <nitem  name = "debounce/cnt_next_9__N_424"  />
+        <nitem  name = "debounce/cnt_next_9__N_413"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[9]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[8]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[7]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[6]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[5]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[4]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[3]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[2]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[1]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[0]"  />
         </nets>
     </instance>
 
@@ -3999,21 +4642,21 @@
         <nitem  name = "debounce/cnt_reg[2]"  />
         <nitem  name = "debounce/cnt_reg[1]"  />
         <nitem  name = "debounce/cnt_reg[0]"  />
-        <nitem  name = "debounce/cnt_next_9__N_407"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[9]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[8]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[7]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[6]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[5]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[4]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[3]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[2]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[1]"  />
-        <nitem  name = "debounce/cnt_next_9__N_408[0]"  />
+        <nitem  name = "debounce/cnt_next_9__N_413"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[9]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[8]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[7]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[6]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[5]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[4]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[3]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[2]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[1]"  />
+        <nitem  name = "debounce/cnt_next_9__N_414[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "GHA_N_287_I_0_181"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHA_N_287_I_0_191"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -4027,7 +4670,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHA_N_289_I_0_183"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHA_N_289_I_0_193"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -4236,38 +4879,38 @@
         <nitem  name = "PWM/pwm_counter[2]"  />
         <nitem  name = "PWM/pwm_counter[1]"  />
         <nitem  name = "PWM/pwm_counter[0]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[31]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[30]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[29]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[28]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[27]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[26]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[25]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[24]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[23]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[22]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[21]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[20]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[19]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[18]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[17]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[16]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[15]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[14]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[13]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[12]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[11]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[10]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[9]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[8]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[7]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[6]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[5]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[4]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[3]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[2]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[1]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[0]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[31]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[30]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[29]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[28]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[27]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[26]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[25]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[24]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[23]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[22]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[21]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[20]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[19]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[18]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[17]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[16]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[15]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[14]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[13]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[12]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[11]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[10]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[9]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[8]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[7]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[6]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[5]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[4]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[3]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[2]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[1]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[0]"  />
         </nets>
     </instance>
 
@@ -4293,7 +4936,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHA_N_287_I_0_186"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHA_N_287_I_0_196"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -4475,7 +5118,7 @@
         <nitem  name = "PWM/pwm_counter[2]"  />
         <nitem  name = "PWM/pwm_counter[1]"  />
         <nitem  name = "PWM/pwm_counter[0]"  />
-        <nitem  name = "PWM/pwm_out_N_403"  />
+        <nitem  name = "PWM/pwm_out_N_409"  />
         </nets>
     </instance>
 
@@ -4582,71 +5225,71 @@
 
         <nets>
         <nitem  name = "PWM/gnd"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[31]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[30]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[29]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[28]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[27]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[26]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[25]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[24]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[23]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[22]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[21]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[20]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[19]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[18]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[17]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[16]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[15]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[14]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[13]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[12]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[11]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[10]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[9]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[8]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[7]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[6]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[5]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[4]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[3]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[2]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[1]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[0]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_401"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[31]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[30]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[29]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[28]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[27]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[26]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[25]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[24]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[23]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[22]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[21]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[20]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[19]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[18]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[17]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[16]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[15]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[14]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[13]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[12]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[11]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[10]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[9]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[8]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[7]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[6]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[5]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[4]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[3]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[2]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[1]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_337[0]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[31]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[30]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[29]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[28]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[27]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[26]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[25]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[24]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[23]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[22]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[21]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[20]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[19]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[18]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[17]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[16]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[15]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[14]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[13]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[12]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[11]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[10]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[9]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[8]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[7]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[6]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[5]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[4]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[3]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[2]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[1]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[0]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_407"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[31]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[30]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[29]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[28]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[27]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[26]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[25]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[24]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[23]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[22]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[21]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[20]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[19]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[18]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[17]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[16]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[15]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[14]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[13]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[12]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[11]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[10]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[9]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[8]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[7]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[6]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[5]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[4]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[3]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[2]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[1]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_343[0]"  />
         </nets>
     </instance>
 
@@ -4748,7 +5391,7 @@
         </nets>
     </instance>
 
-    <instance  name = "commutation_state_7__I_0_172"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "commutation_state_7__I_0_182"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -4783,7 +5426,7 @@
         </nets>
     </instance>
 
-    <instance  name = "commutation_state_7__I_0_173"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "commutation_state_7__I_0_183"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -4819,7 +5462,7 @@
         </nets>
     </instance>
 
-    <instance  name = "commutation_state_7__I_0_174"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "commutation_state_7__I_0_184"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -4855,7 +5498,7 @@
         </nets>
     </instance>
 
-    <instance  name = "commutation_state_7__I_0_176"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "commutation_state_7__I_0_186"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -4891,7 +5534,7 @@
         </nets>
     </instance>
 
-    <instance  name = "commutation_state_7__I_0_192"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "commutation_state_7__I_0_202"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -4927,7 +5570,7 @@
         </nets>
     </instance>
 
-    <instance  name = "commutation_state_7__I_0_175"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "commutation_state_7__I_0_185"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -4963,7 +5606,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHA_N_287_I_0_177"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHA_N_287_I_0_187"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[5]"  direction = "in"  />
         <pitem  name = "a[4]"  direction = "in"  />
@@ -5049,7 +5692,7 @@
         <nets>
         <nitem  name = "debounce/dat_strb"  />
         <nitem  name = "debounce/dat_diff"  />
-        <nitem  name = "debounce/cnt_next_9__N_418"  />
+        <nitem  name = "debounce/cnt_next_9__N_424"  />
         </nets>
     </instance>
 
@@ -5104,7 +5747,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHA_N_287_I_0_182"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHA_N_287_I_0_192"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -5118,7 +5761,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHA_N_288_I_0_187"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHA_N_288_I_0_197"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -5169,8 +5812,8 @@
         <nets>
         <nitem  name = "gnd"  />
         <nitem  name = "pwm_out"  />
-        <nitem  name = "PWM/pwm_out_N_403"  />
-        <nitem  name = "PWM/pwm_out_N_402"  />
+        <nitem  name = "PWM/pwm_out_N_409"  />
+        <nitem  name = "PWM/pwm_out_N_408"  />
         </nets>
     </instance>
 
@@ -5187,7 +5830,7 @@
         <nitem  name = "PWM/gnd"  />
         <nitem  name = "CLK"  />
         <nitem  name = "pwm_out"  />
-        <nitem  name = "PWM/pwm_out_N_402"  />
+        <nitem  name = "PWM/pwm_out_N_408"  />
         </nets>
     </instance>
 
@@ -5213,7 +5856,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHA_N_287_I_0_188"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHA_N_287_I_0_198"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -5372,7 +6015,7 @@
         <nitem  name = "PWM/pwm_counter[2]"  />
         <nitem  name = "PWM/pwm_counter[1]"  />
         <nitem  name = "PWM/pwm_counter[0]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_401"  />
+        <nitem  name = "PWM/pwm_counter_31__N_407"  />
         </nets>
     </instance>
 
@@ -5512,38 +6155,38 @@
         <nitem  name = "PWM/pwm_counter[2]"  />
         <nitem  name = "PWM/pwm_counter[1]"  />
         <nitem  name = "PWM/pwm_counter[0]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[31]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[30]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[29]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[28]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[27]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[26]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[25]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[24]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[23]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[22]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[21]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[20]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[19]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[18]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[17]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[16]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[15]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[14]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[13]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[12]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[11]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[10]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[9]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[8]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[7]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[6]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[5]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[4]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[3]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[2]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[1]"  />
-        <nitem  name = "PWM/pwm_counter_31__N_369[0]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[31]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[30]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[29]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[28]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[27]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[26]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[25]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[24]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[23]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[22]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[21]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[20]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[19]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[18]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[17]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[16]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[15]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[14]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[13]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[12]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[11]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[10]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[9]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[8]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[7]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[6]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[5]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[4]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[3]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[2]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[1]"  />
+        <nitem  name = "PWM/pwm_counter_31__N_375[0]"  />
         </nets>
     </instance>
 
@@ -5665,7 +6308,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dti_I_0_191"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dti_I_0_201"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -5681,7 +6324,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dti_counter_7__I_0_179"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dti_counter_7__I_0_189"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -5739,7 +6382,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHA_I_0_178"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHA_I_0_188"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -5771,7 +6414,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHB_I_0_184"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHB_I_0_194"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -5803,7 +6446,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHC_I_0_189"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "GHC_I_0_199"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -5990,7 +6633,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dti_154"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "dti_163"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -6424,6 +7067,23 @@
         </nets>
     </instance>
 
+    <instance  name = "direction_167"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "direction_N_337"  />
+        <nitem  name = "CLK"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "direction"  />
+        </nets>
+    </instance>
+
     <instance  name = "duty"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d[23]"  direction = "in"  />
@@ -6638,7 +7298,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHA_160"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "GHA_170"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -6655,7 +7315,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GLA_161"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "GLA_171"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -6672,7 +7332,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHB_162"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "GHB_172"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -6689,7 +7349,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GLB_163"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "GLB_173"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -6706,7 +7366,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GHC_164"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "GHC_174"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -6723,7 +7383,7 @@
         </nets>
     </instance>
 
-    <instance  name = "GLC_165"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "GLC_175"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -6752,7 +7412,7 @@
         <nitem  name = "quad_counter0/b_new[1]"  />
         <nitem  name = "quad_counter0/b_prev"  />
         <nitem  name = "quad_counter0/debounce_cnt"  />
-        <nitem  name = "quad_counter0/b_prev_N_541"  />
+        <nitem  name = "quad_counter0/b_prev_N_547"  />
         </nets>
     </instance>
 
@@ -6923,7 +7583,7 @@
         </nets>
     </instance>
 
-    <instance  name = "quad_counter0/b_prev_I_23"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "quad_counter0/b_prev_I_24"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "c"  direction = "in"  />
@@ -6933,9 +7593,9 @@
 
         <nets>
         <nitem  name = "quad_counter0/b_prev"  />
-        <nitem  name = "quad_counter0/a_prev_N_537"  />
-        <nitem  name = "quad_counter0/b_prev_N_541"  />
-        <nitem  name = "quad_counter0/b_prev_N_540"  />
+        <nitem  name = "quad_counter0/a_prev_N_543"  />
+        <nitem  name = "quad_counter0/b_prev_N_547"  />
+        <nitem  name = "quad_counter0/b_prev_N_546"  />
         </nets>
     </instance>
 
@@ -6949,7 +7609,7 @@
         <nets>
         <nitem  name = "quad_counter0/set_origin_n_new[1]"  />
         <nitem  name = "quad_counter0/set_origin_n_new[0]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_490"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_496"  />
         </nets>
     </instance>
 
@@ -7018,7 +7678,7 @@
         <nitem  name = "quad_counter0/set_origin_cnt[2]"  />
         <nitem  name = "quad_counter0/set_origin_cnt[1]"  />
         <nitem  name = "quad_counter0/set_origin_cnt[0]"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_527"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_533"  />
         </nets>
     </instance>
 
@@ -7210,7 +7870,7 @@
         <nitem  name = "quad_counter0/set_origin_cnt[2]"  />
         <nitem  name = "quad_counter0/set_origin_cnt[1]"  />
         <nitem  name = "quad_counter0/set_origin_cnt[0]"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_527"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_533"  />
         <nitem  name = "quad_counter0/n18"  />
         <nitem  name = "quad_counter0/n19"  />
         <nitem  name = "quad_counter0/n20"  />
@@ -7230,25 +7890,25 @@
         <nitem  name = "quad_counter0/n34"  />
         <nitem  name = "quad_counter0/n35"  />
         <nitem  name = "quad_counter0/n36"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[18]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[17]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[16]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[15]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[14]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[13]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[12]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[11]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[10]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[9]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[8]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[7]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[6]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[5]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[4]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[3]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[2]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[1]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[0]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[18]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[17]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[16]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[15]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[14]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[13]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[12]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[11]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[10]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[9]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[8]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[7]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[6]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[5]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[4]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[3]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[2]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[1]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[0]"  />
         </nets>
     </instance>
 
@@ -7316,45 +7976,45 @@
 
         <nets>
         <nitem  name = "quad_counter0/gnd"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_490"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[18]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[17]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[16]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[15]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[14]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[13]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[12]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[11]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[10]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[9]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[8]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[7]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[6]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[5]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[4]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[3]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[2]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[1]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_471[0]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[18]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[17]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[16]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[15]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[14]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[13]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[12]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[11]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[10]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[9]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[8]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[7]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[6]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[5]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[4]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[3]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[2]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[1]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[0]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_496"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[18]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[17]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[16]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[15]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[14]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[13]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[12]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[11]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[10]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[9]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[8]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[7]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[6]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[5]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[4]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[3]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[2]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[1]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_477[0]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[18]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[17]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[16]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[15]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[14]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[13]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[12]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[11]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[10]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[9]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[8]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[7]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[6]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[5]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[4]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[3]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[2]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[1]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[0]"  />
         </nets>
     </instance>
 
@@ -7369,8 +8029,8 @@
         <nets>
         <nitem  name = "quad_counter0/set_origin_n_new[1]"  />
         <nitem  name = "quad_counter0/set_origin_n_int"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_527"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_526"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_533"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_532"  />
         </nets>
     </instance>
 
@@ -7384,9 +8044,9 @@
 
         <nets>
         <nitem  name = "quad_counter0/set_origin_n_int"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_490"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_526"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_525"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_496"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_532"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_531"  />
         </nets>
     </instance>
 
@@ -7398,7 +8058,7 @@
 
         <nets>
         <nitem  name = "quad_counter0/set_origin_n_int"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_524"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_530"  />
         </nets>
     </instance>
 
@@ -7412,7 +8072,7 @@
         <nets>
         <nitem  name = "quad_counter0/a_new[1]"  />
         <nitem  name = "quad_counter0/a_prev"  />
-        <nitem  name = "quad_counter0/direction_N_533"  />
+        <nitem  name = "quad_counter0/direction_N_539"  />
         </nets>
     </instance>
 
@@ -7426,11 +8086,11 @@
         <nets>
         <nitem  name = "quad_counter0/b_new[1]"  />
         <nitem  name = "quad_counter0/b_prev"  />
-        <nitem  name = "quad_counter0/direction_N_534"  />
+        <nitem  name = "quad_counter0/direction_N_540"  />
         </nets>
     </instance>
 
-    <instance  name = "quad_counter0/direction_I_20"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "quad_counter0/direction_I_21"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -7438,9 +8098,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "quad_counter0/direction_N_533"  />
-        <nitem  name = "quad_counter0/direction_N_534"  />
-        <nitem  name = "quad_counter0/direction_N_532"  />
+        <nitem  name = "quad_counter0/direction_N_539"  />
+        <nitem  name = "quad_counter0/direction_N_540"  />
+        <nitem  name = "quad_counter0/direction_N_538"  />
         </nets>
     </instance>
 
@@ -7453,8 +8113,8 @@
 
         <nets>
         <nitem  name = "quad_counter0/debounce_cnt"  />
-        <nitem  name = "quad_counter0/direction_N_532"  />
-        <nitem  name = "quad_counter0/direction_N_531"  />
+        <nitem  name = "quad_counter0/direction_N_538"  />
+        <nitem  name = "quad_counter0/direction_N_537"  />
         </nets>
     </instance>
 
@@ -7468,7 +8128,7 @@
         <nets>
         <nitem  name = "quad_counter0/a_new[1]"  />
         <nitem  name = "quad_counter0/b_prev"  />
-        <nitem  name = "quad_counter0/direction_N_530"  />
+        <nitem  name = "quad_counter0/direction_N_536"  />
         </nets>
     </instance>
 
@@ -7643,7 +8303,7 @@
         </nets>
     </instance>
 
-    <instance  name = "quad_counter0/debounce_cnt_I_25"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "quad_counter0/debounce_cnt_I_26"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -7652,8 +8312,8 @@
 
         <nets>
         <nitem  name = "quad_counter0/debounce_cnt"  />
-        <nitem  name = "quad_counter0/debounce_cnt_N_544[0]"  />
-        <nitem  name = "quad_counter0/debounce_cnt_N_543"  />
+        <nitem  name = "quad_counter0/debounce_cnt_N_550[0]"  />
+        <nitem  name = "quad_counter0/debounce_cnt_N_549"  />
         </nets>
     </instance>
 
@@ -7930,7 +8590,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "quad_counter0/direction_N_530"  />
+        <nitem  name = "quad_counter0/direction_N_536"  />
         <nitem  name = "quad_counter0/n89"  />
         <nitem  name = "quad_counter0/n90"  />
         <nitem  name = "quad_counter0/n91"  />
@@ -8164,7 +8824,7 @@
         <nitem  name = "encoder0_position[2]"  />
         <nitem  name = "encoder0_position[1]"  />
         <nitem  name = "encoder0_position[0]"  />
-        <nitem  name = "quad_counter0/direction_N_531"  />
+        <nitem  name = "quad_counter0/direction_N_537"  />
         <nitem  name = "quad_counter0/n158"  />
         <nitem  name = "quad_counter0/n159"  />
         <nitem  name = "quad_counter0/n160"  />
@@ -8197,38 +8857,38 @@
         <nitem  name = "quad_counter0/n187"  />
         <nitem  name = "quad_counter0/n188"  />
         <nitem  name = "quad_counter0/n189"  />
-        <nitem  name = "quad_counter0/position_31__N_491[31]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[30]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[29]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[28]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[27]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[26]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[25]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[24]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[23]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[22]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[21]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[20]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[19]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[18]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[17]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[16]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[15]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[14]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[13]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[12]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[11]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[10]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[9]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[8]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[7]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[6]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[5]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[4]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[3]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[2]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[1]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[0]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[31]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[30]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[29]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[28]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[27]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[26]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[25]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[24]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[23]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[22]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[21]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[20]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[19]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[18]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[17]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[16]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[15]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[14]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[13]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[12]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[11]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[10]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[9]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[8]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[7]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[6]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[5]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[4]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[3]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[2]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[1]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[0]"  />
         </nets>
     </instance>
 
@@ -8335,71 +8995,71 @@
 
         <nets>
         <nitem  name = "quad_counter0/gnd"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_524"  />
-        <nitem  name = "quad_counter0/position_31__N_491[31]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[30]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[29]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[28]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[27]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[26]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[25]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[24]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[23]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[22]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[21]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[20]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[19]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[18]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[17]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[16]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[15]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[14]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[13]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[12]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[11]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[10]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[9]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[8]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[7]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[6]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[5]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[4]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[3]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[2]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[1]"  />
-        <nitem  name = "quad_counter0/position_31__N_491[0]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[31]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[30]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[29]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[28]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[27]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[26]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[25]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[24]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[23]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[22]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[21]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[20]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[19]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[18]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[17]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[16]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[15]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[14]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[13]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[12]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[11]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[10]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[9]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[8]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[7]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[6]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[5]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[4]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[3]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[2]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[1]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[0]"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_530"  />
+        <nitem  name = "quad_counter0/position_31__N_497[31]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[30]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[29]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[28]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[27]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[26]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[25]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[24]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[23]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[22]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[21]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[20]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[19]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[18]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[17]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[16]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[15]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[14]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[13]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[12]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[11]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[10]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[9]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[8]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[7]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[6]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[5]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[4]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[3]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[2]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[1]"  />
+        <nitem  name = "quad_counter0/position_31__N_497[0]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[31]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[30]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[29]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[28]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[27]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[26]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[25]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[24]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[23]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[22]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[21]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[20]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[19]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[18]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[17]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[16]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[15]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[14]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[13]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[12]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[11]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[10]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[9]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[8]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[7]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[6]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[5]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[4]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[3]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[2]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[1]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[0]"  />
         </nets>
     </instance>
 
@@ -8413,9 +9073,9 @@
 
         <nets>
         <nitem  name = "quad_counter0/direction"  />
-        <nitem  name = "quad_counter0/direction_N_531"  />
-        <nitem  name = "quad_counter0/direction_N_530"  />
-        <nitem  name = "quad_counter0/direction_N_529"  />
+        <nitem  name = "quad_counter0/direction_N_537"  />
+        <nitem  name = "quad_counter0/direction_N_536"  />
+        <nitem  name = "quad_counter0/direction_N_535"  />
         </nets>
     </instance>
 
@@ -8429,9 +9089,9 @@
 
         <nets>
         <nitem  name = "quad_counter0/direction"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_524"  />
-        <nitem  name = "quad_counter0/direction_N_529"  />
-        <nitem  name = "quad_counter0/direction_N_528"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_530"  />
+        <nitem  name = "quad_counter0/direction_N_535"  />
+        <nitem  name = "quad_counter0/direction_N_534"  />
         </nets>
     </instance>
 
@@ -8470,7 +9130,7 @@
         <nitem  name = "quad_counter0/gnd"  />
         <nitem  name = "CLK"  />
         <nitem  name = "quad_counter0/debounce_cnt"  />
-        <nitem  name = "quad_counter0/debounce_cnt_N_542"  />
+        <nitem  name = "quad_counter0/debounce_cnt_N_548"  />
         </nets>
     </instance>
 
@@ -8487,7 +9147,7 @@
         <nitem  name = "quad_counter0/gnd"  />
         <nitem  name = "CLK"  />
         <nitem  name = "quad_counter0/a_prev"  />
-        <nitem  name = "quad_counter0/a_prev_N_535"  />
+        <nitem  name = "quad_counter0/a_prev_N_541"  />
         </nets>
     </instance>
 
@@ -8504,7 +9164,7 @@
         <nitem  name = "quad_counter0/gnd"  />
         <nitem  name = "CLK"  />
         <nitem  name = "quad_counter0/b_prev"  />
-        <nitem  name = "quad_counter0/b_prev_N_540"  />
+        <nitem  name = "quad_counter0/b_prev_N_546"  />
         </nets>
     </instance>
 
@@ -8633,25 +9293,25 @@
         <nitem  name = "quad_counter0/set_origin_cnt[2]"  />
         <nitem  name = "quad_counter0/set_origin_cnt[1]"  />
         <nitem  name = "quad_counter0/set_origin_cnt[0]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[18]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[17]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[16]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[15]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[14]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[13]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[12]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[11]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[10]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[9]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[8]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[7]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[6]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[5]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[4]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[3]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[2]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[1]"  />
-        <nitem  name = "quad_counter0/set_origin_cnt_18__N_452[0]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[18]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[17]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[16]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[15]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[14]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[13]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[12]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[11]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[10]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[9]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[8]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[7]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[6]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[5]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[4]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[3]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[2]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[1]"  />
+        <nitem  name = "quad_counter0/set_origin_cnt_18__N_458[0]"  />
         </nets>
     </instance>
 
@@ -8668,7 +9328,7 @@
         <nitem  name = "quad_counter0/gnd"  />
         <nitem  name = "CLK"  />
         <nitem  name = "quad_counter0/set_origin_n_int"  />
-        <nitem  name = "quad_counter0/set_origin_n_int_N_525"  />
+        <nitem  name = "quad_counter0/set_origin_n_int_N_531"  />
         </nets>
     </instance>
 
@@ -8840,38 +9500,38 @@
         <nitem  name = "encoder0_position[2]"  />
         <nitem  name = "encoder0_position[1]"  />
         <nitem  name = "encoder0_position[0]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[31]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[30]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[29]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[28]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[27]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[26]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[25]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[24]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[23]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[22]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[21]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[20]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[19]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[18]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[17]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[16]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[15]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[14]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[13]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[12]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[11]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[10]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[9]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[8]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[7]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[6]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[5]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[4]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[3]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[2]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[1]"  />
-        <nitem  name = "quad_counter0/position_31__N_420[0]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[31]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[30]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[29]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[28]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[27]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[26]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[25]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[24]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[23]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[22]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[21]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[20]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[19]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[18]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[17]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[16]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[15]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[14]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[13]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[12]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[11]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[10]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[9]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[8]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[7]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[6]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[5]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[4]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[3]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[2]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[1]"  />
+        <nitem  name = "quad_counter0/position_31__N_426[0]"  />
         </nets>
     </instance>
 
@@ -8888,7 +9548,7 @@
         <nitem  name = "quad_counter0/gnd"  />
         <nitem  name = "CLK"  />
         <nitem  name = "quad_counter0/direction"  />
-        <nitem  name = "quad_counter0/direction_N_528"  />
+        <nitem  name = "quad_counter0/direction_N_534"  />
         </nets>
     </instance>
 
@@ -8918,12 +9578,12 @@
     <instance  name = "debounce"  />
     <instance  name = "quad_counter0"  />
     <!--
-        REG instances in netlist: 34
+        REG instances in netlist: 35
     -->
 
     <regs>
         <reg  name = "pwm_setpoint"  />
-        <reg  name = "dir_151"  />
+        <reg  name = "dir_160"  />
         <reg  name = "commutation_state_prev"  />
         <reg  name = "debounce/cnt_reg"  />
         <reg  name = "debounce/reg_out"  />
@@ -8933,18 +9593,19 @@
         <reg  name = "debounce/reg_A"  />
         <reg  name = "PWM/pwm_out_12"  />
         <reg  name = "encoder0_position_scaled"  />
-        <reg  name = "dti_154"  />
+        <reg  name = "dti_163"  />
         <reg  name = "dti_counter"  />
         <reg  name = "sweep_counter"  />
         <reg  name = "encoder0_position_target"  />
+        <reg  name = "direction_167"  />
         <reg  name = "duty"  />
         <reg  name = "commutation_state"  />
-        <reg  name = "GHA_160"  />
-        <reg  name = "GLA_161"  />
-        <reg  name = "GHB_162"  />
-        <reg  name = "GLB_163"  />
-        <reg  name = "GHC_164"  />
-        <reg  name = "GLC_165"  />
+        <reg  name = "GHA_170"  />
+        <reg  name = "GLA_171"  />
+        <reg  name = "GHB_172"  />
+        <reg  name = "GLB_173"  />
+        <reg  name = "GHC_174"  />
+        <reg  name = "GLC_175"  />
         <reg  name = "blink_counter"  />
         <reg  name = "quad_counter0/b_new"  />
         <reg  name = "quad_counter0/debounce_cnt_50"  />

@@ -20,7 +20,7 @@ set_io ENCODER0_A A1
 set_io ENCODER0_B D1
 set_io ENCODER1_A E1
 set_io ENCODER1_B G1
-set_io HALL3 B1
+set_io HALL3 B1 #wrong in kicad !!
 set_io HALL2 C1
 set_io HALL1 C2
 set_io FAULT_N A2

@@ -4,7 +4,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=template
 Vendor=SiliconBlue
 Synthesis=lse
-ProjectVFiles=verilog/TinyFPGA_B.v=work,verilog/pwm.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd=work,verilog/tli4970.v=work,verilog/eeprom.v=work,verilog/i2c_controller.v=work,verilog/TinyFPGA_B_pll_1MHz.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd,vhdl/quadrature_decoder.vhd
+ProjectVFiles=verilog/TinyFPGA_B.v=work,verilog/pwm.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd=work,verilog/tli4970.v=work,verilog/eeprom.v=work,verilog/i2c_controller.v=work,verilog/TinyFPGA_B_pll_1MHz.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd=work,vhdl/quadrature_decoder.vhd=work
 ProjectCFiles=constraints/clk.sdc
 CurImplementation=template_Implmnt
 Implementations=template_Implmnt

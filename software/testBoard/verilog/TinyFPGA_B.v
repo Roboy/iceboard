@@ -145,10 +145,18 @@ always @(posedge CLK) begin: BLDC_COMMUTATION
   sweep_counter <= sweep_counter + 1;
   if(sweep_counter==16_000_0)begin
     sweep_counter <= 0;
-    if(encoder0_position_target>-4000)begin
-        encoder0_position_target <= encoder0_position_target - 1;
+    if(direction)begin
+      if(encoder0_position_target>-2000)begin
+          encoder0_position_target <= encoder0_position_target - 1;
+      end else begin
+          direction <= 0;
+      end
     end else begin
-        encoder0_position_target <= 0;
+      if(encoder0_position_target<2000)begin
+          encoder0_position_target <= encoder0_position_target + 1;
+      end else begin
+          direction <= 1;
+      end
     end
   end
 
