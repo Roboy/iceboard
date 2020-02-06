@@ -105,7 +105,7 @@ neopixel #(16_000_000) nx(
    enable <= 1;
    reset <= 0;
    if(duty>=0)begin
-     pwm_setpoint <= duty;
+     pwm_setpoint <= 0; // TODO fix turning in this direction
      dir <= 1;
    end else begin
      pwm_setpoint <= -duty;
