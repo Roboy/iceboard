@@ -232,7 +232,7 @@ neopixel #(16_000_000) nx(
   wire signed [23:0] PWMLimit;
   wire signed [23:0] IntegralLimit;
   wire signed [23:0] deadband;
-  reg signed [12:0] current;
+  wire signed [12:0] current;
   wire driver_enable;
 
   coms c0(
@@ -396,5 +396,13 @@ neopixel #(16_000_000) nx(
     .sda_out(sda_out),
     .sda_enable(sda_enable)
     );
+
+  TLI4970 tli(
+    .clk(CLK),
+    .current(current),
+    .spi_miso(CS_MISO),
+    .spi_cs(CS),
+    .spi_clk(CS_CLK)
+  );
 
 endmodule

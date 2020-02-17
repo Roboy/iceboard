@@ -44,6 +44,7 @@
 -ver "verilog/eeprom.v"
 -ver "verilog/i2c_controller.v"
 -lib work -vhd "vhdl/quadrature_decoder.vhd" 
+-ver "verilog/tli4970.v"
 -p "/home/letrend/workspace/iceboard/software/motorBoard_v0.1"
 
 #set result format/file last
