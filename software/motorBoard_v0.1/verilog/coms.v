@@ -10,7 +10,7 @@ module coms(
 	input signed [23:0] encoder0_position,
 	input signed [23:0] encoder1_position,
 	input signed [23:0] displacement,
-	input signed [12:0] current,
+	input signed [15:0] current,
 	output reg signed [23:0] setpoint,
 	output reg [7:0] control_mode,
 	output reg signed [23:0] Kp,
@@ -20,6 +20,7 @@ module coms(
 	output reg [23:0] IntegralLimit,
 	output reg [23:0] deadband,
 	output reg [23:0] neopxl_color,
+	output reg signed [15:0] current_limit,
 	output reg LED
 );
 
@@ -31,7 +32,7 @@ localparam  STATUS_FRAME_LENGTH = 28;
 localparam 	SETPOINT_FRAME_MAGICNUMBER = 32'hD0D0D0D0;
 localparam  SETPOINT_FRAME_LENGTH = 13;
 localparam 	CONTROL_MODE_FRAME_MAGICNUMBER = 32'hBAADA555;
-localparam  CONTROL_MODE_FRAME_LENGTH = 26;
+localparam  CONTROL_MODE_FRAME_LENGTH = 28;
 localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 
 	////////////////////////////////////////////////////////////////////////////////
@@ -187,7 +188,7 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 						data_out_frame[18] <= displacement[23:16];
 						data_out_frame[19] <= displacement[15:8];
 						data_out_frame[20] <= displacement[7:0];
-						data_out_frame[21] <= current[12:8];
+						data_out_frame[21] <= current[15:8];
 						data_out_frame[22] <= current[7:0];
 						data_out_frame[23] <= neopxl_color[23:16];
 						data_out_frame[24] <= neopxl_color[15:8];
@@ -291,6 +292,8 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 							setpoint[23:16] <= data_in_frame[17];
 							setpoint[15:8] <= data_in_frame[18];
 							setpoint[7:0] <= data_in_frame[19];
+							current_limit[15:8] <= data_in_frame[20];
+							current_limit[7:0] <= data_in_frame[21];
 						  state <= IDLE;
 					end else begin
 						  state <= IDLE;

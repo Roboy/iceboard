@@ -1,6 +1,6 @@
 module TLI4970(
   input clk,
-  output reg [12:0] current,
+  output reg signed [15:0] current,
   input spi_miso,
   output spi_cs,
   output spi_clk
@@ -27,6 +27,8 @@ module TLI4970(
   reg [15:0] data;
   reg [15:0] delay_counter;
   reg [7:0] state;
+  wire signed [12:0] current_raw;
+  assign current_raw = data[12:0];
 
   localparam  IDLE = 0, SLAVE_SELECT = 1, CLOCK_DATA = 2, STOP = 3;
 
@@ -58,7 +60,7 @@ module TLI4970(
       end
       STOP: begin
         if(data[15]==0)begin
-          current <= data[12:0];
+          current <= current_raw-16'd4096;
         end
         state <= IDLE;
       end

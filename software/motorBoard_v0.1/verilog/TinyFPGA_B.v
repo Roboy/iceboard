@@ -105,10 +105,26 @@ neopixel #(16_000_000) nx(
    enable <= 1;
    reset <= 0;
    if(duty>=0)begin
-     pwm_setpoint <= duty;
+     if(current<current_limit)begin // if the current is below the current limit
+      pwm_setpoint <= duty;
+     end else begin
+      if(duty>current)begin
+        pwm_setpoint <= duty - current;
+      end else begin
+        pwm_setpoint <= current;
+      end
+     end
      dir <= 1;
    end else begin
-     pwm_setpoint <= -duty;
+     if(current<current_limit)begin // if the current is below the current limit
+       pwm_setpoint <= -duty;
+     end else begin
+       if(duty<-current)begin
+        pwm_setpoint <= -duty - current;
+       end else begin
+        pwm_setpoint <= current;
+       end
+     end
      dir <= 0;
    end
  end
@@ -232,7 +248,8 @@ neopixel #(16_000_000) nx(
   wire signed [23:0] PWMLimit;
   wire signed [23:0] IntegralLimit;
   wire signed [23:0] deadband;
-  wire signed [12:0] current;
+  wire signed [15:0] current;
+  wire signed [15:0] current_limit;
   wire driver_enable;
 
   coms c0(
@@ -243,7 +260,7 @@ neopixel #(16_000_000) nx(
     .driver_enable(DE),
   	.rx_i(~RX),
     .ID(ID),
-    .duty(duty),
+    .duty(pwm_setpoint),
   	.encoder0_position(encoder0_position_scaled),
   	.encoder1_position(encoder1_position_scaled),
     .displacement(displacement),
@@ -255,6 +272,7 @@ neopixel #(16_000_000) nx(
     .PWMLimit(PWMLimit),
     .IntegralLimit(IntegralLimit),
     .current(current),
+    .current_limit(current_limit),
     .deadband(deadband),
     .neopxl_color(neopxl_color),
     .LED(LED)
