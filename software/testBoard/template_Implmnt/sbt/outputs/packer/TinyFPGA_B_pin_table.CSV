@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:02:28
 
-* File Generated:     Feb 17 2020 11:47:21
+* File Generated:     Feb 17 2020 12:40:56
 
 * Purpose:            Detailed IO and package pin info
 
@@ -19,7 +19,7 @@ Package, CM81
 
 Pin Number, Pin Type Name, Signal Name, Direction, Global Buffer, IO Standard, Pull Up, IO Function, IO Bank, 
 ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, 
-A1, PIO, ENCODER0_A, Input, , SB_LVCMOS, No Pull Up, Simple Input, topBank
+A1, PIO, not used, , , , , , topBank
 A2, PIO, not used, , , , , , topBank
 A3, PIO, USBPU, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A4, PIO, not used, , , , , , topBank
@@ -28,7 +28,7 @@ A6, PIO, INHA, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A7, PIO, INHB, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A8, PIO, INHC, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 A9, PIO, not used, , , , , , rightBank
-B1, PIO, HALL3, InOut, , SB_LVCMOS, Pull Up, Input Registered No Output, leftBank
+B1, PIO, HALL3, Output, , SB_LVCMOS, Pull Up, No Output, leftBank
 B2, PIO, CLK, Input, , SB_LVCMOS, No Pull Up, Simple Input, leftBank
 B3, PIO, LED, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 B4, PIO, not used, , , , , , topBank
@@ -37,8 +37,8 @@ B6, PIO, INLA, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 B7, PIO, INLB, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 B8, PIO, INLC, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 B9, PIO, not used, , , , , , rightBank
-C1, PIO, HALL2, InOut, , SB_LVCMOS, Pull Up, Input Registered No Output, leftBank
-C2, PIO, HALL1, InOut, , SB_LVCMOS, Pull Up, Input Registered No Output, leftBank
+C1, PIO, HALL2, Output, , SB_LVCMOS, Pull Up, No Output, leftBank
+C2, PIO, HALL1, Output, , SB_LVCMOS, Pull Up, No Output, leftBank
 C3, PIO, not used, , , , , , leftBank
 C4, PIO_GBIN, not used, , , , , , topBank
 C5, PIO_GBIN, not used, , , , , , topBank
@@ -46,7 +46,7 @@ C6, VCCIO_1, not used, , , , , , rightBank
 C7, VPP_DIRECT, not used, , , , , , UnknownBank
 C8, VPP_PUMP, not used, , , , , , UnknownBank
 C9, PIO, not used, , , , , , rightBank
-D1, PIO, ENCODER0_B, Input, , SB_LVCMOS, No Pull Up, Simple Input, leftBank
+D1, PIO, not used, , , , , , leftBank
 D2, PIO, not used, , , , , , leftBank
 D3, PIO_GBIN, not used, , , , , , leftBank
 D4, VCC, not used, , , , , , UnknownBank
@@ -100,4 +100,4 @@ J6, AGND_BOT, not used, , , , , , UnknownBank
 J7, AVDD_BOT, not used, , , , , , UnknownBank
 J8, PIO, not used, , , , , , rightBank
 J9, PIO, not used, , , , , , rightBank
-Total Number of Used Pins, 19
+Total Number of Used Pins, 17

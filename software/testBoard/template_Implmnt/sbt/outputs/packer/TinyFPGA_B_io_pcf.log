@@ -11,8 +11,6 @@ OUTPUT INHA 	 location (23, 33, 0) 	 A6 	 SB_LVCMOS
 INPUT  HALL3 	 location (0, 28, 1) 	 B1 	 SB_LVCMOS
 INPUT  HALL2 	 location (0, 28, 0) 	 C1 	 SB_LVCMOS
 INPUT  HALL1 	 location (0, 30, 1) 	 C2 	 SB_LVCMOS
-INPUT  ENCODER0_B 	 location (0, 20, 1) 	 D1 	 SB_LVCMOS
-INPUT  ENCODER0_A 	 location (2, 33, 1) 	 A1 	 SB_LVCMOS
 OUTPUT DE 	 location (3, 0, 0) 	 H1 	 SB_LVCMOS
 OUTPUT CS_CLK 	 location (33, 2, 1) 	 G9 	 SB_LVCMOS
 OUTPUT CS 	 location (33, 17, 0) 	 D8 	 SB_LVCMOS

@@ -1,49 +1,35 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_B.TECH
-Register bits:  255 of 7680 (3.320%)
+Register bits:  58 of 7680 (0.755%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY       700          100.0
-                             SB_DFF       129          100.0
-                            SB_DFFE        57          100.0
-                          SB_DFFESR         6          100.0
-                          SB_DFFESS         1          100.0
-                           SB_DFFSR        62          100.0
+                           SB_CARRY        49          100.0
+                             SB_DFF        27          100.0
+                            SB_DFFN         2          100.0
+                           SB_DFFNE         4          100.0
+                         SB_DFFNESR         5          100.0
+                         SB_DFFNESS         1          100.0
+                          SB_DFFNSR        14          100.0
+                           SB_DFFSR         5          100.0
                            SB_GB_IO         1          100.0
-                              SB_IO        18          100.0
-                            SB_LUT4      1673          100.0
+                              SB_IO        16          100.0
+                            SB_LUT4        81          100.0
 SUB MODULES
-              grp_debouncer(3,1000)         1
-                                pwm         1
-       quadrature_decoder(1,500000)         1
-                              TOTAL      2650
+                            TLI4970         1
+                              TOTAL       206
 ----------------------------------------------------------------------
-Report for cell quadrature_decoder(1,500000).v1
-Instance Path : quad_counter0
+Report for cell TLI4970.v1
+Instance Path : tli
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        31            4.4
-                             SB_DFF         8            6.2
-                            SB_DFFE        32           56.1
-                            SB_LUT4        38            2.3
-                              TOTAL       109
-----------------------------------------------------------------------
-Report for cell grp_debouncer(3,1000).v1
-Instance Path : debounce
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY         9            1.3
-                             SB_DFF         9            7.0
-                           SB_DFFSR        10           16.1
-                            SB_LUT4        15            0.9
-                              TOTAL        43
-----------------------------------------------------------------------
-Report for cell pwm.v1
-Instance Path : PWM
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                           SB_CARRY        31            4.4
-                           SB_DFFSR        33           53.2
-                            SB_LUT4        39            2.3
-                              TOTAL       103
+                           SB_CARRY        24           49.0
+                             SB_DFF         1            3.7
+                            SB_DFFN         2          100.0
+                           SB_DFFNE         4          100.0
+                         SB_DFFNESR         5          100.0
+                         SB_DFFNESS         1          100.0
+                          SB_DFFNSR        14          100.0
+                           SB_DFFSR         5          100.0
+                            SB_LUT4        52           64.2
+                              TOTAL       108

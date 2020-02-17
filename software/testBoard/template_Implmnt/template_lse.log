@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Feb 17 11:44:24 2020
+Mon Feb 17 12:40:36 2020
 
 
 Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
@@ -121,67 +121,60 @@ Top module language type = Verilog.
 Top module name (Verilog, mixed language): TinyFPGA_B
 INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
 WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
+INFO - synthesis: verilog/tli4970.v(1): compiling module TLI4970. VERI-1018
+WARNING - synthesis: verilog/tli4970.v(14): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(23): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(38): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(53): expression size 32 truncated to fit in target size 8. VERI-1209
 INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b01,PULLUP=1'b1). VERI-1018
-WARNING - synthesis: verilog/TinyFPGA_B.v(80): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(81): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(82): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(83): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(84): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(85): expression size 32 truncated to fit in target size 1. VERI-1209
-INFO - synthesis: verilog/pwm.v(1): compiling module pwm. VERI-1018
-INFO - synthesis: verilog/TinyFPGA_B.v(102): going to vhdl side to elaborate module grp_debouncer. VERI-1231
-vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(128): executing grp_debouncer(3,1000)(rtl)
-
-INFO - synthesis: verilog/TinyFPGA_B.v(102): back to verilog to continue elaboration. VERI-1232
-WARNING - synthesis: verilog/TinyFPGA_B.v(138): expression size 32 truncated to fit in target size 24. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(142): expression size 11 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(150): expression size 25 truncated to fit in target size 24. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(156): expression size 32 truncated to fit in target size 24. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(188): expression size 32 truncated to fit in target size 8. VERI-1209
-INFO - synthesis: verilog/TinyFPGA_B.v(247): going to vhdl side to elaborate module quadrature_decoder. VERI-1231
-vhdl/quadrature_decoder.vhd(26): executing quadrature_decoder(1,500000)(logic)
-
-INFO - synthesis: verilog/TinyFPGA_B.v(247): back to verilog to continue elaboration. VERI-1232
-WARNING - synthesis: verilog/TinyFPGA_B.v(114): Register reset_158 is stuck at Zero. VDB-5013
-WARNING - synthesis: verilog/TinyFPGA_B.v(59): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
-WARNING - synthesis: verilog/TinyFPGA_B.v(67): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
-WARNING - synthesis: verilog/TinyFPGA_B.v(75): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(90): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(91): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(92): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(94): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(95): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(87): net pwm_out does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GHA does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GLA does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GHB does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GLB does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GHC does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GLC does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(69): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(77): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(85): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
 Top-level module name = TinyFPGA_B.
-WARNING - synthesis: Initial value found on net dat_strb will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net strb_next will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net dat_diff will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[9] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[8] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[7] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[6] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[5] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[4] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[3] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[2] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[1] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net cnt_next[0] will be ignored due to unrecognized driver type
-WARNING - synthesis: verilog/TinyFPGA_B.v(59): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
-WARNING - synthesis: verilog/TinyFPGA_B.v(67): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
-WARNING - synthesis: verilog/TinyFPGA_B.v(75): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(87): net pwm_out does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GHA does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GLA does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GHB does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GLB does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GHC does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(89): net GLC does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(69): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(77): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(85): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 ######## Converting I/O port SCL to input.
 ######## Converting I/O port SDA to input.
 ######## Missing driver on net NEOPXL. Patching with GND.
 ######## Missing driver on net DE. Patching with GND.
 ######## Missing driver on net TX. Patching with GND.
-######## Missing driver on net CS_CLK. Patching with GND.
-######## Missing driver on net CS. Patching with GND.
-WARNING - synthesis: Bit 1 of Register \quad_counter0/set_origin_n_new is stuck at One
-WARNING - synthesis: Bit 0 of Register \quad_counter0/set_origin_n_new is stuck at One
-WARNING - synthesis: vhdl/quadrature_decoder.vhd(89): Register \quad_counter0/set_origin_n_int_55 is stuck at One. VDB-5014
+######## Missing driver on net pwm_out. Patching with GND.
+######## Missing driver on net GHA. Patching with GND.
+######## Missing driver on net GLA. Patching with GND.
+######## Missing driver on net GHB. Patching with GND.
+######## Missing driver on net GLB. Patching with GND.
+######## Missing driver on net GHC. Patching with GND.
+######## Missing driver on net GLC. Patching with GND.
 
 
 
 WARNING - synthesis: Skipping pad insertion on HALL1 due to black_box_pad_pin attribute.
 WARNING - synthesis: Skipping pad insertion on HALL2 due to black_box_pad_pin attribute.
 WARNING - synthesis: Skipping pad insertion on HALL3 due to black_box_pad_pin attribute.
-WARNING - synthesis: verilog/TinyFPGA_B.v(236): Register commutation_state_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/tli4970.v(66): Register \tli/state_i7 is stuck at Zero. VDB-5013
 Writing scf file : template_Implmnt/template.scf
 
 Writing scf file : template_Implmnt/template.scf
@@ -195,37 +188,40 @@ Writing scf file : template_Implmnt/template.scf
 Results of NGD DRC are available in TinyFPGA_B_drc.log.
 
 ################### Begin Area Report (TinyFPGA_B)######################
-Number of register bits => 255 of 7680 (3 % )
-SB_CARRY => 700
-SB_DFF => 129
-SB_DFFE => 57
-SB_DFFESR => 6
-SB_DFFESS => 1
-SB_DFFSR => 62
+Number of register bits => 58 of 7680 (0 % )
+SB_CARRY => 49
+SB_DFF => 27
+SB_DFFN => 2
+SB_DFFNE => 4
+SB_DFFNESR => 5
+SB_DFFNESS => 1
+SB_DFFNSR => 14
+SB_DFFSR => 5
 SB_GB_IO => 1
-SB_IO => 18
-SB_LUT4 => 1673
+SB_IO => 16
+SB_LUT4 => 81
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 1
-  Net : CLK_N, loads : 255
+Number of Clocks: 2
+  Net : CLK_c, loads : 32
+  Net : tli/clk_slow, loads : 28
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : quad_counter0/direction_N_536, loads : 61
-  Net : direction, loads : 50
-  Net : n2_adj_620, loads : 48
-  Net : n5215, loads : 42
-  Net : quad_counter0/encoder0_position_31, loads : 40
-  Net : n3237, loads : 33
-  Net : quad_counter0/direction_N_537, loads : 32
-  Net : n3138, loads : 32
-  Net : PWM/pwm_counter_31__N_407, loads : 32
-  Net : n3039, loads : 31
+  Net : tli/delay_counter_15__N_124, loads : 16
+  Net : tli/state_0, loads : 13
+  Net : tli/state_1, loads : 11
+  Net : tli/n839, loads : 8
+  Net : tli/clk_slow_N_43, loads : 6
+  Net : tli/n15, loads : 5
+  Net : blink_counter_24, loads : 4
+  Net : blink_counter_23, loads : 4
+  Net : blink_counter_22, loads : 4
+  Net : blink_counter_21, loads : 4
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -234,18 +230,25 @@ Timing Report Summary
 Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk500 [get_nets \tli/clk_slow]         |   16.000 MHz|   42.577 MHz|    15  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\tli/clk_slow [ get_nets     |             |             |
+\tli/clk_slow ]                         |            -|            -|     0  
+                                        |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |   16.000 MHz|    1.951 MHz|   324 *
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   23.698 MHz|    27  
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-1 constraints not met.
+All constraints were met.
 
 
-Peak Memory Usage: 335.645  MB
+Peak Memory Usage: 201.930  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 28.321  secs
+Elapsed CPU time for LSE flow : 1.493  secs
 --------------------------------------------------------------
