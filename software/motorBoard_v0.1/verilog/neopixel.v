@@ -19,7 +19,7 @@ reg [31:0] bit_ctr;
 wire color_bit;
 reg start;
 
-assign color_bit = color[bit_ctr%24];
+assign color_bit = color[(24-bit_ctr)];
 
 always @(posedge clock, posedge reset) begin: neo_pixel_transmitter
 		parameter SIZE = 4;
