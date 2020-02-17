@@ -5422,6 +5422,7 @@
         <nitem  name = "commutation_state[1]"  />
         <nitem  name = "commutation_state[0]"  />
         <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
         <nitem  name = "GHA_N_287"  />
         </nets>
     </instance>
@@ -5601,7 +5602,6 @@
         <nitem  name = "commutation_state[1]"  />
         <nitem  name = "commutation_state[0]"  />
         <nitem  name = "gnd"  />
-        <nitem  name = "pwr"  />
         <nitem  name = "GHA_N_290"  />
         </nets>
     </instance>

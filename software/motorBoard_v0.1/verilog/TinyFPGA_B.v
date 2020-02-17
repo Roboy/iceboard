@@ -162,43 +162,43 @@ neopixel #(16_000_000) nx(
    end else begin
     if(dir)begin
       case(commutation_state)
-         A: begin
+         B: begin
            GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 0; GLC <= 0;
          end
-         B: begin
+         C: begin
            GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 0; GHC <= 0; GLC <= 1;
          end
-         C: begin
+         D: begin
            GHA <= 0; GLA <= 0; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 1;
          end
-         D: begin
+         E: begin
            GHA <= 0; GLA <= 1; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 0;
          end
-         E: begin
+         F: begin
            GHA <= 0; GLA <= 1; GHB <= 0; GLB <= 0; GHC <= 1; GLC <= 0;
          end
-         F: begin
+         A: begin
            GHA <= 0; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 1; GLC <= 0;
          end
        endcase
      end else begin
       case(commutation_state)
-        A: begin
+        B: begin
           GHA <= 0; GLA <= 1; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 0;
         end
-        B: begin
+        C: begin
           GHA <= 0; GLA <= 1; GHB <= 0; GLB <= 0; GHC <= 1; GLC <= 0;
         end
-        C: begin
+        D: begin
           GHA <= 0; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 1; GLC <= 0;
         end
-        D: begin
+        E: begin
           GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 1; GHC <= 0; GLC <= 0;
         end
-        E: begin
+        F: begin
           GHA <= 1; GLA <= 0; GHB <= 0; GLB <= 0; GHC <= 0; GLC <= 1;
         end
-        F: begin
+        A: begin
           GHA <= 0; GLA <= 0; GHB <= 1; GLB <= 0; GHC <= 0; GLC <= 1;
         end
       endcase

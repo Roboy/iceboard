@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:09:20
 
-* File Generated:     Feb 4 2020 22:09:44
+* File Generated:     Feb 17 2020 11:47:22
 
 * Purpose:            Router runtime info
 
@@ -18,24 +18,24 @@ Executing : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrout
 I1203: Reading Design TinyFPGA_B
 I1202: Reading Architecture of device iCE40LP8K
 I1209: Started routing
-I1223: Total Nets : 2573 
-I1212: Iteration  1 :  1003 unrouted : 3 seconds
-I1212: Iteration  2 :   656 unrouted : 3 seconds
-I1212: Iteration  3 :   560 unrouted : 1 seconds
-I1212: Iteration  4 :   410 unrouted : 1 seconds
-I1212: Iteration  5 :   279 unrouted : 1 seconds
-I1212: Iteration  6 :   191 unrouted : 0 seconds
-I1212: Iteration  7 :   134 unrouted : 1 seconds
-I1212: Iteration  8 :    81 unrouted : 0 seconds
-I1212: Iteration  9 :    61 unrouted : 0 seconds
-I1212: Iteration 10 :    40 unrouted : 1 seconds
-I1212: Iteration 11 :    28 unrouted : 0 seconds
-I1212: Iteration 12 :    18 unrouted : 0 seconds
-I1212: Iteration 13 :    14 unrouted : 1 seconds
-I1212: Iteration 14 :    14 unrouted : 0 seconds
-I1212: Iteration 15 :    14 unrouted : 0 seconds
-I1212: Iteration 16 :    14 unrouted : 0 seconds
-I1212: Iteration 17 :    12 unrouted : 1 seconds
+I1223: Total Nets : 2581 
+I1212: Iteration  1 :  1069 unrouted : 3 seconds
+I1212: Iteration  2 :   660 unrouted : 2 seconds
+I1212: Iteration  3 :   531 unrouted : 2 seconds
+I1212: Iteration  4 :   401 unrouted : 1 seconds
+I1212: Iteration  5 :   287 unrouted : 0 seconds
+I1212: Iteration  6 :   175 unrouted : 1 seconds
+I1212: Iteration  7 :   111 unrouted : 0 seconds
+I1212: Iteration  8 :    69 unrouted : 1 seconds
+I1212: Iteration  9 :    47 unrouted : 0 seconds
+I1212: Iteration 10 :    35 unrouted : 0 seconds
+I1212: Iteration 11 :    31 unrouted : 0 seconds
+I1212: Iteration 12 :    24 unrouted : 0 seconds
+I1212: Iteration 13 :    20 unrouted : 1 seconds
+I1212: Iteration 14 :    12 unrouted : 0 seconds
+I1212: Iteration 15 :     8 unrouted : 0 seconds
+I1212: Iteration 16 :     8 unrouted : 0 seconds
+I1212: Iteration 17 :     6 unrouted : 0 seconds
 I1212: Iteration 18 :     2 unrouted : 0 seconds
 I1212: Iteration 19 :     0 unrouted : 0 seconds
 I1215: Routing is successful
@@ -43,4 +43,4 @@ I1206: Completed routing
 I1204: Writing Design TinyFPGA_B
 I1210: Writing routes
 I1218: Exiting the router
-I1224: Router run-time : 26 seconds
+I1224: Router run-time : 24 seconds

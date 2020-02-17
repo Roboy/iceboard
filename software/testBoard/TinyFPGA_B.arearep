@@ -5,19 +5,19 @@ I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY       700          100.0
-                             SB_DFF       128          100.0
-                            SB_DFFE        58          100.0
+                             SB_DFF       129          100.0
+                            SB_DFFE        57          100.0
                           SB_DFFESR         6          100.0
                           SB_DFFESS         1          100.0
                            SB_DFFSR        62          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        18          100.0
-                            SB_LUT4      1674          100.0
+                            SB_LUT4      1673          100.0
 SUB MODULES
               grp_debouncer(3,1000)         1
                                 pwm         1
        quadrature_decoder(1,500000)         1
-                              TOTAL      2651
+                              TOTAL      2650
 ----------------------------------------------------------------------
 Report for cell quadrature_decoder(1,500000).v1
 Instance Path : quad_counter0
@@ -25,7 +25,7 @@ Instance Path : quad_counter0
                                cell     count   Res Usage(%)
                            SB_CARRY        31            4.4
                              SB_DFF         8            6.2
-                            SB_DFFE        32           55.2
+                            SB_DFFE        32           56.1
                             SB_LUT4        38            2.3
                               TOTAL       109
 ----------------------------------------------------------------------
