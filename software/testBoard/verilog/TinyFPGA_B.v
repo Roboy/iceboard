@@ -48,51 +48,53 @@ end
 // light up the LED according to the pattern
 assign LED = blink_pattern[blink_counter[25:21]];
 
-wire [12:0] current;
 
-TLI4970 tli(
-  .clk(CLK),
-  .current(current),
-  .spi_miso(CS_MISO),
-  .spi_cs(CS),
-  .spi_clk(CS_CLK)
-);
 
-wire hall1, hall2, hall3;
-// PULLUP for hall sensors
-SB_IO #(
-  .PIN_TYPE(6'b 0000_01),
-  .PULLUP(1'b 1)
-) hall1_input(
-  .PACKAGE_PIN(HALL1),
-  .D_IN_0(hall1)
-);
-
-SB_IO #(
-  .PIN_TYPE(6'b 0000_01),
-  .PULLUP(1'b 1)
-) hall2_input(
-  .PACKAGE_PIN(HALL2),
-  .D_IN_0(hall2)
-);
-
-SB_IO #(
-  .PIN_TYPE(6'b 0000_01),
-  .PULLUP(1'b 1)
-) hall3_input(
-  .PACKAGE_PIN(HALL3),
-  .D_IN_0(hall3)
-);
-
-wire pwm_out;
-reg dir, enable, reset;
-reg GHA, GLA, GHB, GLB, GHC, GLC;
-assign INHA = (GHA?pwm_out:0);
-assign INLA = (GLA?1:0);
-assign INHB = (GHB?pwm_out:0);
-assign INLB = (GLB?1:0);
-assign INHC = (GHC?pwm_out:0);
-assign INLC = (GLC?1:0);
+// wire [12:0] current;
+//
+// TLI4970 tli(
+//   .clk(CLK),
+//   .current(current),
+//   .spi_miso(CS_MISO),
+//   .spi_cs(CS),
+//   .spi_clk(CS_CLK)
+// );
+//
+// wire hall1, hall2, hall3;
+// // PULLUP for hall sensors
+// SB_IO #(
+//   .PIN_TYPE(6'b 0000_01),
+//   .PULLUP(1'b 1)
+// ) hall1_input(
+//   .PACKAGE_PIN(HALL1),
+//   .D_IN_0(hall1)
+// );
+//
+// SB_IO #(
+//   .PIN_TYPE(6'b 0000_01),
+//   .PULLUP(1'b 1)
+// ) hall2_input(
+//   .PACKAGE_PIN(HALL2),
+//   .D_IN_0(hall2)
+// );
+//
+// SB_IO #(
+//   .PIN_TYPE(6'b 0000_01),
+//   .PULLUP(1'b 1)
+// ) hall3_input(
+//   .PACKAGE_PIN(HALL3),
+//   .D_IN_0(hall3)
+// );
+//
+// wire pwm_out;
+// reg dir, enable, reset;
+// reg GHA, GLA, GHB, GLB, GHC, GLC;
+// assign INHA = (GHA?pwm_out:0);
+// assign INLA = (GLA?1:0);
+// assign INHB = (GHB?pwm_out:0);
+// assign INLB = (GLB?1:0);
+// assign INHC = (GHC?pwm_out:0);
+// assign INLC = (GLC?1:0);
 //
 // reg signed [23:0] pwm_setpoint;
 // reg signed [23:0] duty;

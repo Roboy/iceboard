@@ -1,0 +1,107 @@
+* ******************************************************************************
+
+* iCEcube Report
+
+* Version:            2017.08.27940
+
+* Build Date:         Sep 12 2017 08:02:28
+
+* File Generated:     Feb 24 2020 16:03:11
+
+* Purpose:            General info of design implementation
+
+* Copyright (C) 2006-2010 by Lattice Semiconductor Corp. All rights reserved.
+
+* ******************************************************************************
+
+Synthesis/Placement Summary:
+----------------------------
+    Status:  Successful
+    Runtime: 1 seconds
+
+Device Info:
+------------
+    Device Family: iCE40
+    Device:        iCE40LP8K
+    Package:       CM81
+
+Design statistics:
+------------------
+    FFs:                  241
+    LUTs:                 1344
+    RAMs:                 0
+    IOBs:                 26
+    GBs:                  1
+    PLLs:                 0
+    Warm Boots:           0
+
+Logic Resource Utilization:
+---------------------------
+    Total Logic Cells: 1350/7680
+        Combinational Logic Cells: 1109     out of   7680      14.4401%
+        Sequential Logic Cells:    241      out of   7680      3.13802%
+        Logic Tiles:               227      out of   960       23.6458%
+    Registers: 
+        Logic Registers:           241      out of   7680      3.13802%
+        IO Registers:              0        out of   1280      0
+    Block RAMs:                    0        out of   32        0%
+    Warm Boots:                    0        out of   1         0%
+    Pins:
+        Input Pins:                1        out of   63        1.5873%
+        Output Pins:               2        out of   63        3.1746%
+        InOut Pins:                23       out of   63        36.5079%
+    Global Buffers:                1        out of   8         12.5%
+    PLLs:                          0        out of   1         0%
+
+IO Bank Utilization:
+--------------------
+    Bank 3: 9        out of   18        50%
+    Bank 1: 5        out of   15        33.3333%
+    Bank 0: 10       out of   17        58.8235%
+    Bank 2: 2        out of   13        15.3846%
+
+Detailed I/O Info:
+------------------
+    Input Pins: 
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name 
+    ----------  ---------  -----------  -------  -------  -----------                                ----------- 
+    B2          Input      SB_LVCMOS    No       3        Simple Input                               CLK         
+
+    Output Pins: 
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name 
+    ----------  ---------  -----------  -------  -------  -----------                                ----------- 
+    B3          Output     SB_LVCMOS    No       0        Simple Output                              LED         
+    E2          Output     SB_LVCMOS    No       3        Simple Output                              NEOPXL      
+
+    Inoutput Pins: 
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function                                Signal Name 
+    ----------  ---------  -----------  -------  -------  -----------                                ----------- 
+    A1          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  ENCODER0_A  
+    A2          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  FAULT_N     
+    A3          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  USBPU       
+    A6          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  INHA        
+    A7          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  INHB        
+    A8          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  INHC        
+    A9          InOut      SB_LVCMOS    Yes      1        Simple Input Output Tristatable by Enable  SDA         
+    B1          InOut      SB_LVCMOS    Yes      3        Simple Input Output Tristatable by Enable  HALL3       
+    B6          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  INLA        
+    B7          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  INLB        
+    B8          InOut      SB_LVCMOS    Yes      0        Simple Input Output Tristatable by Enable  INLC        
+    C1          InOut      SB_LVCMOS    Yes      3        Simple Input Output Tristatable by Enable  HALL2       
+    C2          InOut      SB_LVCMOS    Yes      3        Simple Input Output Tristatable by Enable  HALL1       
+    C9          InOut      SB_LVCMOS    Yes      1        Simple Input Output Tristatable by Enable  SCL         
+    D1          InOut      SB_LVCMOS    Yes      3        Simple Input Output Tristatable by Enable  ENCODER0_B  
+    D8          InOut      SB_LVCMOS    Yes      1        Simple Input Output Tristatable by Enable  CS          
+    D9          InOut      SB_LVCMOS    Yes      1        Simple Input Output Tristatable by Enable  CS_MISO     
+    E1          InOut      SB_LVCMOS    Yes      3        Simple Input Output Tristatable by Enable  ENCODER1_A  
+    G1          InOut      SB_LVCMOS    Yes      3        Simple Input Output Tristatable by Enable  ENCODER1_B  
+    G9          InOut      SB_LVCMOS    Yes      1        Simple Input Output Tristatable by Enable  CS_CLK      
+    H1          InOut      SB_LVCMOS    Yes      2        Simple Input Output Tristatable by Enable  DE          
+    H2          InOut      SB_LVCMOS    Yes      3        Simple Input Output Tristatable by Enable  RX          
+    J1          InOut      SB_LVCMOS    Yes      2        Simple Input Output Tristatable by Enable  TX          
+
+Detailed Global Buffer Info:
+----------------------------
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name
+    -------------  -------  ---------  ------  -----------
+    3              3                   241     CLK_c  
