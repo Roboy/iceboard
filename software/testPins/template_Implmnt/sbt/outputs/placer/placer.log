@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:14:10
 
-* File Generated:     Feb 24 2020 16:01:50
+* File Generated:     Feb 24 2020 16:33:26
 
 * Purpose:            
 
@@ -35,8 +35,8 @@ I2053: Starting placement of the design
 =============================================================
 
 Input Design Statistics
-    Number of LUTs      	:	1335
-    Number of DFFs      	:	241
+    Number of LUTs      	:	1412
+    Number of DFFs      	:	219
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	531
     Number of RAMs      	:	0
@@ -77,40 +77,40 @@ Phase 3
 Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
 
 Design Statistics after Packing
-    Number of LUTs      	:	1344
-    Number of DFFs      	:	241
+    Number of LUTs      	:	1421
+    Number of DFFs      	:	219
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	536
 
 Device Utilization Summary after Packing
     Sequential LogicCells
-        LUT and DFF      	:	110
+        LUT and DFF      	:	88
         LUT, DFF and CARRY	:	131
     Combinational LogicCells
-        Only LUT         	:	704
+        Only LUT         	:	803
         CARRY Only       	:	6
         LUT with CARRY   	:	399
-    LogicCells                  :	1350/7680
-    PLBs                        :	182/960
+    LogicCells                  :	1427/7680
+    PLBs                        :	193/960
     BRAMs                       :	0/32
     IOs and GBIOs               :	26/63
     PLLs                        :	0/1
 
 
-I2088: Phase 3, elapsed time : 2.4 (sec)
+I2088: Phase 3, elapsed time : 2.6 (sec)
 
 Phase 4
 I2088: Phase 4, elapsed time : 0.3 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 6.8 (sec)
+I2088: Phase 5, elapsed time : 8.0 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 67.8 (sec)
+I2088: Phase 6, elapsed time : 89.6 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	1344
-    Number of DFFs      	:	241
+    Number of LUTs      	:	1421
+    Number of DFFs      	:	219
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	536
     Number of RAMs      	:	0
@@ -122,8 +122,8 @@ Final Design Statistics
     Number of PLLs      	:	0
 
 Device Utilization Summary
-    LogicCells                  :	1350/7680
-    PLBs                        :	227/960
+    LogicCells                  :	1427/7680
+    PLBs                        :	234/960
     BRAMs                       :	0/32
     IOs and GBIOs               :	26/63
     PLLs                        :	0/1
@@ -142,7 +142,7 @@ analysis after routing.
                      Clock Summary 
 =====================================================================
 Number of clocks: 1
-Clock: CLK | Frequency: 5.50 MHz | Target: 16.00 MHz
+Clock: CLK | Frequency: 5.46 MHz | Target: 16.00 MHz
 
 =====================================================================
                      End of Clock Summary
@@ -150,5 +150,5 @@ Clock: CLK | Frequency: 5.50 MHz | Target: 16.00 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 78.0 sec.
+I2076: Placer run-time: 101.3 sec.
 

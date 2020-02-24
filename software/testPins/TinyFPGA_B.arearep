@@ -1,30 +1,30 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_B.TECH
-Register bits:  241 of 7680 (3.138%)
+Register bits:  219 of 7680 (2.852%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY       531          100.0
-                             SB_DFF       148          100.0
-                            SB_DFFE        11          100.0
+                             SB_DFF       125          100.0
+                            SB_DFFE        12          100.0
                           SB_DFFESR        76          100.0
                           SB_DFFESS         1          100.0
                            SB_DFFSS         5          100.0
                            SB_GB_IO         1          100.0
                               SB_IO        25          100.0
-                            SB_LUT4      1335          100.0
+                            SB_LUT4      1412          100.0
 SUB MODULES
   neopixel(CLOCK_SPEED_HZ=16000000)         1
-                              TOTAL      2134
+                              TOTAL      2189
 ----------------------------------------------------------------------
 Report for cell neopixel(CLOCK_SPEED_HZ=16000000).v1
 Instance Path : nx
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY       461           86.8
-                             SB_DFF        64           43.2
-                            SB_DFFE         3           27.3
+                             SB_DFF        64           51.2
+                            SB_DFFE         3           25.0
                           SB_DFFESR        33           43.4
                           SB_DFFESS         1          100.0
-                            SB_LUT4      1035           77.5
-                              TOTAL      1597
+                            SB_LUT4      1072           75.9
+                              TOTAL      1634

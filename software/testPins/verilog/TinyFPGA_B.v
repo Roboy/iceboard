@@ -99,7 +99,7 @@ reg [22:0] pin_input;
 reg [22:0] pin_output;
 reg [22:0] pin_output_enable;
 reg [7:0] counter;
-integer delay_counter;
+integer delay_counter,i;
 
 assign pin_out = pin_output;
 assign pin_oe = pin_output_enable;
@@ -120,8 +120,10 @@ always @ ( posedge CLK ) begin: TEST_PINS_FSM
     end
     ENABLE_OUTPUT: begin
       counter <= 255;
-      pin_output[current_pin] = 0;
-      pin_output_enable[current_pin] <= 1;
+      for(i=0;i<23;i=i+1)begin
+        pin_output[i] = 0;
+        pin_output_enable[i] <= 1;
+      end
       state <= TOGGLE;
     end
     TOGGLE: begin
@@ -130,8 +132,16 @@ always @ ( posedge CLK ) begin: TEST_PINS_FSM
         if(pin_in[current_pin]!=pin_output[current_pin])begin
           state <= FAIL;
         end
+        for(i=0;i<23;i=i+1)begin
+          if(i!=current_pin)begin
+            if(pin_in[i]!=0)begin
+              state <= FAIL;
+            end
+          end
+        end
         counter <= counter -1;
       end else begin
+        pin_output[current_pin]<=0;
         current_pin <= current_pin+1;
         if(current_pin>23)begin
           state <= SUCCESS;

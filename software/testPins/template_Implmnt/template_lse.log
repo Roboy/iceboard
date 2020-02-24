@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Feb 24 16:01:28 2020
+Mon Feb 24 16:33:04 2020
 
 
 Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
@@ -116,8 +116,8 @@ WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to f
 INFO - synthesis: verilog/neopixel.v(1): compiling module neopixel(CLOCK_SPEED_HZ=16000000). VERI-1018
 WARNING - synthesis: verilog/neopixel.v(39): expression size 32 truncated to fit in target size 4. VERI-1209
 INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
-WARNING - synthesis: verilog/TinyFPGA_B.v(133): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: verilog/TinyFPGA_B.v(135): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(142): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(145): expression size 32 truncated to fit in target size 8. VERI-1209
 WARNING - synthesis: verilog/TinyFPGA_B.v(70): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 WARNING - synthesis: verilog/TinyFPGA_B.v(71): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 WARNING - synthesis: verilog/TinyFPGA_B.v(72): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
@@ -194,8 +194,8 @@ WARNING - synthesis: Skipping pad insertion on INLB due to black_box_pad_pin att
 WARNING - synthesis: Skipping pad insertion on INHB due to black_box_pad_pin attribute.
 WARNING - synthesis: Skipping pad insertion on INLA due to black_box_pad_pin attribute.
 WARNING - synthesis: Skipping pad insertion on INHA due to black_box_pad_pin attribute.
-WARNING - synthesis: verilog/TinyFPGA_B.v(157): Register state__i5 is stuck at Zero. VDB-5013
 WARNING - synthesis: verilog/neopixel.v(117): Register \nx/state_i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(167): Register state__i3 is stuck at Zero. VDB-5013
 Writing scf file : template_Implmnt/template.scf
 
 Writing scf file : template_Implmnt/template.scf
@@ -209,37 +209,37 @@ Writing scf file : template_Implmnt/template.scf
 Results of NGD DRC are available in TinyFPGA_B_drc.log.
 
 ################### Begin Area Report (TinyFPGA_B)######################
-Number of register bits => 241 of 7680 (3 % )
+Number of register bits => 219 of 7680 (2 % )
 SB_CARRY => 531
-SB_DFF => 148
-SB_DFFE => 11
+SB_DFF => 125
+SB_DFFE => 12
 SB_DFFESR => 76
 SB_DFFESS => 1
 SB_DFFSS => 5
 SB_GB_IO => 1
 SB_IO => 25
-SB_LUT4 => 1335
+SB_LUT4 => 1412
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : CLK_c, loads : 241
+  Net : CLK_c, loads : 219
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : state_0, loads : 73
-  Net : current_pin_2, loads : 55
-  Net : nx/n3017, loads : 50
-  Net : n7664, loads : 32
-  Net : n8025, loads : 32
-  Net : n11789, loads : 32
-  Net : nx/n7657, loads : 32
-  Net : nx/n7994, loads : 32
-  Net : nx/n11353, loads : 31
-  Net : state_1, loads : 28
+  Net : current_pin_0, loads : 45
+  Net : current_pin_1, loads : 38
+  Net : current_pin_7__N_155, loads : 35
+  Net : n7232, loads : 33
+  Net : n7442, loads : 32
+  Net : n7231, loads : 32
+  Net : nx/n7230, loads : 32
+  Net : nx/n7411, loads : 32
+  Net : nx/n2126, loads : 32
+  Net : nx/n11683, loads : 31
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -250,7 +250,7 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |   16.000 MHz|    2.249 MHz|   281 *
+CLK [ get_ports { CLK } ]               |   16.000 MHz|    2.455 MHz|   257 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -258,8 +258,8 @@ CLK [ get_ports { CLK } ]               |   16.000 MHz|    2.249 MHz|   281 *
 1 constraints not met.
 
 
-Peak Memory Usage: 316.344  MB
+Peak Memory Usage: 307.773  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 21.601  secs
+Elapsed CPU time for LSE flow : 20.183  secs
 --------------------------------------------------------------
