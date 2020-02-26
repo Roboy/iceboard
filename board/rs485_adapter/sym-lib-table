@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name rs485_adapter-rescue)(type Legacy)(uri ${KIPRJMOD}/rs485_adapter-rescue.lib)(options "")(descr ""))
+)
