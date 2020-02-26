@@ -25,13 +25,12 @@ USE ieee.std_logic_1164.all;
 
 ENTITY quadrature_decoder IS
 	GENERIC(
-		debounce_time					:	INTEGER := 50_000; 	--number of clock cycles required to register a new position = debounce_time + 2
-		set_origin_debounce_time	:	INTEGER := 500_000);	--number of clock cycles required to register a new set_origin_n value = set_origin_debounce_time + 2
+		debounce_time					:	INTEGER := 50_000 	--number of clock cycles required to register a new position = debounce_time + 2
+		);
 	PORT(
 		clk				:	IN			STD_LOGIC;										--system clock
 		a					:	IN			STD_LOGIC;										--quadrature encoded signal a
 		b					:	IN			STD_LOGIC;  									--quadrature encoded signal b
-		set_origin_n	:	IN			STD_LOGIC;  									--active-low synchronous clear of position counter
 		direction		:	OUT		STD_LOGIC;										--direction of last change, 1 = positive, 0 = negative
 		position			:	BUFFER	INTEGER := 0);	--current position relative to index or initial value
 END quadrature_decoder;
@@ -42,9 +41,6 @@ ARCHITECTURE logic OF quadrature_decoder IS
 	SIGNAL	a_prev				:	STD_LOGIC;												--last previous stable value of encoded signal a
 	SIGNAL	b_prev				:	STD_LOGIC;												--last previous stable value of encoded signal b
 	SIGNAL	debounce_cnt		:	INTEGER RANGE 0 TO debounce_time;				--timer to remove glitches and validate stable values of inputs
-	SIGNAL	set_origin_n_new	:	STD_LOGIC_VECTOR(1 DOWNTO 0);						--synchronizer/debounce registers for the set_origin_n input
-	SIGNAL	set_origin_n_int	:	STD_LOGIC;												--last debounced value of set_origin_n signal
-	SIGNAL	set_origin_cnt		:	INTEGER RANGE 0 TO set_origin_debounce_time;	--debounce counter for set_origin_n signal
 BEGIN
 
 	PROCESS(clk)
@@ -63,20 +59,7 @@ BEGIN
 				debounce_cnt <= debounce_cnt + 1;												--increment debounce counter
 			END IF;
 
-			--synchronize and debounce set_origin_n input
-			set_origin_n_new <= set_origin_n_new(0) & set_origin_n;					--shift in new values of set_origin_n
-			IF((set_origin_n_new(0) XOR set_origin_n_new(1)) = '1') THEN			--set_origin_n input is changing
-				set_origin_cnt <= 0;																	--clear debounce counter
-			ELSIF(set_origin_cnt = set_origin_debounce_time) THEN						--debounce time is met
-				set_origin_n_int <= set_origin_n_new(1);										--update value of set_origin_n_int
-			ELSE																						--debounce time is not yet met
-				set_origin_cnt <= set_origin_cnt + 1;											--increment debounce counter
-			END IF;
-
-			--determine direction and position
-			IF(set_origin_n_int = '0') THEN														--inital position is being set
-				position <= 0;																				--clear position counter
-			ELSIF(debounce_cnt = debounce_time													--debounce time for a and b is met
+			IF(debounce_cnt = debounce_time													--debounce time for a and b is met
 					AND ((a_prev XOR a_new(1)) OR (b_prev XOR b_new(1))) = '1') THEN	--AND the new value is different than the previous value
 				direction <= b_prev XOR a_new(1);													--update the direction
 				IF((b_prev XOR a_new(1)) = '1') THEN												--clockwise direction

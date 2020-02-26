@@ -30,10 +30,17 @@ module TinyFPGA_B (
   // drive USB pull-up resistor to '0' to disable USB
 assign USBPU = 0;
 
-wire clk32MHz;
+wire clk16MHz, clk32MHz;
 pll32MHz pll32MHz_inst(.REFERENCECLK(CLK),
-.PLLOUTGLOBAL(clk32MHz),
-.RESET(1'b1) // active low
+  // .PLLOUTGLOBAL(clk32MHz),
+  .PLLOUTCORE(clk32MHz),
+  .RESET(1'b1) // active low
+);
+
+SB_GB My_Global_Buffer_i (// required for a user’s internally generated FPGA signal that is
+                          //heavily loaded and requires global buffering. For example, a user’s logic-generated clock.
+  .USER_SIGNAL_TO_GLOBAL_BUFFER (CLK),
+  .GLOBAL_BUFFER_OUTPUT ( clk16MHz)
 );
 
 reg [7:0] ID;
@@ -41,7 +48,7 @@ reg [7:0] ID;
 wire [23:0] neopxl_color;
 
 neopixel #(16_000_000) nx(
- .clock(CLK),
+ .clock(clk16MHz),
  .reset(1'b0),
  .color(neopxl_color),
  .send_to_neopixels(LED),
@@ -93,15 +100,7 @@ neopixel #(16_000_000) nx(
    .pwm_out(pwm_out)
  );
 
- wire h1, h2, h3;
-
- grp_debouncer #(3,1000) debounce(
-   .clk_i(CLK),
-   .data_i({hall1,hall2,hall3}),
-   .data_o({h1,h2,h3})
- );
-
- always @(posedge CLK) begin: DIRECTION
+ always @(posedge clk16MHz) begin: DIRECTION
    enable <= 1;
    reset <= 0;
    if(duty>=0)begin
@@ -109,7 +108,7 @@ neopixel #(16_000_000) nx(
       pwm_setpoint <= duty;
      end else begin
       if(duty>current)begin
-        pwm_setpoint <= duty - current;
+        pwm_setpoint <= duty/8;
       end else begin
         pwm_setpoint <= current;
       end
@@ -120,7 +119,7 @@ neopixel #(16_000_000) nx(
        pwm_setpoint <= -duty;
      end else begin
        if(duty<-current)begin
-        pwm_setpoint <= -duty - current;
+        pwm_setpoint <= -duty/8;
        end else begin
         pwm_setpoint <= current;
        end
@@ -141,7 +140,7 @@ neopixel #(16_000_000) nx(
  reg dti;
  reg [7:0] dti_counter;
 
- always @(posedge CLK) begin: BLDC_COMMUTATION
+ always @(posedge clk16MHz) begin: BLDC_COMMUTATION
    commutation_state_prev <= commutation_state;
 
    if(commutation_state!=commutation_state_prev)begin
@@ -149,22 +148,22 @@ neopixel #(16_000_000) nx(
      dti_counter <= 1024;
    end
 
-   if(h1 && ~h2 && h3)begin
+   if(hall1 && ~hall2 && hall3)begin
      commutation_state <= A;
    end
-   if(h1 && ~h2 && ~h3)begin
+   if(hall1 && ~hall2 && ~hall3)begin
      commutation_state <= B;
    end
-   if(h1 && h2 && ~h3)begin
+   if(hall1 && hall2 && ~hall3)begin
      commutation_state <= C;
    end
-   if(~h1 && h2 && ~h3)begin
+   if(~hall1 && hall2 && ~hall3)begin
      commutation_state <= D;
    end
-   if(~h1 && h2 && h3)begin
+   if(~hall1 && hall2 && hall3)begin
      commutation_state <= E;
    end
-   if(~h1 && ~h2 && h3)begin
+   if(~hall1 && ~hall2 && hall3)begin
      commutation_state <= F;
    end
 
@@ -253,7 +252,7 @@ neopixel #(16_000_000) nx(
   wire driver_enable;
 
   coms c0(
-  	.CLK(CLK),
+  	.CLK(clk16MHz),
 	  .reset(1'b0),
   	.tx_o(tx_o),
 	  .tx_enable(tx_enable),
@@ -287,7 +286,7 @@ neopixel #(16_000_000) nx(
     32'd0;
 
   motorControl control(
-    .CLK(clk32MHz),
+    .CLK(clk16MHz),
     .reset(1'b0),
     .duty(duty),
     .setpoint(setpoint),
@@ -300,44 +299,38 @@ neopixel #(16_000_000) nx(
     .deadband(deadband)
   );
 
-  quadrature_decoder #((16_000_000/10_000_000),500_000) quad_counter0(
-      .clk(CLK),
+  quadrature_decoder #((16_000_000/10_000_000)) quad_counter0(
+      .clk(clk16MHz),
       .a(ENCODER0_A),
       .b(ENCODER0_B),
-      .set_origin_n(1'b1),
       .direction(dir_encoder0),
       .position(encoder0_position)
     )/* synthesis syn_noprune = 1 */;
 
-  quadrature_decoder #((16_000_000/10_000_000),500_000) quad_counter1(
-      .clk(CLK),
+  quadrature_decoder #((16_000_000/10_000_000)) quad_counter1(
+      .clk(clk16MHz),
       .a(ENCODER1_A),
       .b(ENCODER1_B),
-      .set_origin_n(1'b1),
       .direction(dir_encoder1),
       .position(encoder1_position)
     )/* synthesis syn_noprune = 1 */;
 
-  // // encoder0
-  // quad #(100) quad_counter0 (
-  //   .clk(clk32MHz),
-  //   .quadA(ENCODER0_A),
-  //   .quadB(ENCODER0_B),
-  //   .count(encoder0_position)
-  // );
-  //
-  // // encoder1
-  // quad #(2650) quad_counter1 (
-  //   .clk(clk32MHz),
-  //   .quadA(ENCODER1_A),
-  //   .quadB(ENCODER1_B),
-  //   .count(encoder1_position)
-  // );
+  reg encoder_aligned;
+  reg signed [23:0] encoder0_offset;
 
-  always @(posedge CLK) begin: DISPLACEMENT_CALCULATION
-    encoder0_position_scaled <= encoder0_position/53;
+  always @(posedge clk16MHz) begin: DISPLACEMENT_CALCULATION
+    encoder0_position_scaled <= (encoder0_position-encoder0_offset)/53;
     encoder1_position_scaled <= encoder1_position/8;
     displacement <= (encoder0_position_scaled-encoder1_position_scaled);
+    if(!encoder_aligned)begin
+      if(encoder1_position==1)begin
+        encoder0_offset <= encoder0_position+108544;
+        encoder_aligned <= 1;
+      end else if(encoder1_position==-1)begin
+        encoder0_offset <= encoder0_position-108544;
+        encoder_aligned <= 1;
+      end
+    end
   end
 
   reg [10:0] addr;
@@ -372,7 +365,7 @@ neopixel #(16_000_000) nx(
   localparam  WAIT = 1;
   localparam  DONE = 2;
 
-  always @ ( posedge CLK ) begin: ID_READOUT_FSM
+  always @ ( posedge clk16MHz ) begin: ID_READOUT_FSM
     reg [2:0] state;
     read <= 1'b0;
     case(state)
@@ -403,7 +396,7 @@ neopixel #(16_000_000) nx(
   end
 
   EEPROM eeprom(
-    .clk(CLK),
+    .clk(clk16MHz),
     .addr(addr),
     .data(data),
     .read(read),
@@ -416,7 +409,7 @@ neopixel #(16_000_000) nx(
     );
 
   TLI4970 tli(
-    .clk(CLK),
+    .clk(clk16MHz),
     .current(current),
     .spi_miso(CS_MISO),
     .spi_cs(CS),

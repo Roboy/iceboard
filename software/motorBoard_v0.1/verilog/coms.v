@@ -118,13 +118,13 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 		if(reset) begin
 			state <= IDLE;
 			i <= 0;
-			PWMLimit <= 8388607;
+			PWMLimit <= 500;
 			setpoint <= 0;
 			Kp <= 10;
 			Ki <= 0;
 			Kd <= 0;
 			deadband <= 0;
-			IntegralLimit <= 50_000_000;
+			IntegralLimit <= 50;
 		end else begin
 			tx_transmit <= 0;
 			rx_data_ready_prev <= rx_data_ready;
