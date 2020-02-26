@@ -15,8 +15,6 @@ module motorControl(
   localparam  CLOCK_FREQ = 16_000_000;
   localparam  CONTROL_FREQ = 1000;
 
-  // if we use the err_prev every clock tick, Kd is effectively useless
-  reg [6:0] Kd_delay_counter;
   reg signed [23:0] result;
   assign duty = result;
   reg control_update;
