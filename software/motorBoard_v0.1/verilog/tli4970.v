@@ -6,8 +6,8 @@ module TLI4970(
   output spi_clk
   )/* synthesis syn_noprune = 1*/;
   localparam  CLOCK_FREQ = 16_000_000;
-  localparam  CLOCK_DIVIDER = 16;
-  localparam  UPDATE_FREQ = 100;
+  localparam  CLOCK_DIVIDER = 4;
+  localparam  UPDATE_FREQ = 1000;
   reg clk_slow;
   reg [7:0] counter;
   always @ ( posedge clk ) begin: CLK_GENERATOR
