@@ -1,0 +1,330 @@
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testComs (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/uart_rx.v
+Verilog design file = verilog/uart_tx.v
+Verilog design file = verilog/coms.v
+Verilog design file = verilog/motorControl.v
+Verilog design file = verilog/neopixel.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/pll32MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd
+VHDL library = work
+VHDL design file = vhdl/quadrature_decoder.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+Analyzing Verilog file verilog/uart_rx.v. VERI-1482
+Analyzing Verilog file verilog/uart_tx.v. VERI-1482
+Analyzing Verilog file verilog/coms.v. VERI-1482
+Analyzing Verilog file verilog/motorControl.v. VERI-1482
+Analyzing Verilog file verilog/neopixel.v. VERI-1482
+Analyzing Verilog file verilog/pwm.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/pll32MHz.v. VERI-1482
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(128): analyzing entity grp_debouncer. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(140): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/quadrature_decoder.vhd. VHDL-1481
+INFO - synthesis: vhdl/quadrature_decoder.vhd(26): analyzing entity quadrature_decoder. VHDL-1012
+INFO - synthesis: vhdl/quadrature_decoder.vhd(38): analyzing architecture logic. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/testComs". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+INFO - synthesis: verilog/pll32MHz.v(1): compiling module pll32MHz. VERI-1018
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(699): compiling module SB_PLL40_CORE(FEEDBACK_PATH="PHASE_AND_DELAY",FDA_FEEDBACK=4'b0,FDA_RELATIVE=4'b0,PLLOUT_SELECT="SHIFTREG_0deg",DIVF=7'b01,DIVQ=3'b011,FILTER_RANGE=3'b01). VERI-1018
+WARNING - synthesis: verilog/pll32MHz.v(22): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(579): compiling module SB_GB. VERI-1018
+INFO - synthesis: verilog/neopixel.v(1): compiling module neopixel(CLOCK_SPEED_HZ=16000000). VERI-1018
+WARNING - synthesis: verilog/neopixel.v(39): expression size 32 truncated to fit in target size 4. VERI-1209
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/coms.v(1): compiling module coms. VERI-1018
+INFO - synthesis: verilog/uart_rx.v(14): compiling module uart_rx. VERI-1018
+WARNING - synthesis: verilog/uart_rx.v(81): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(92): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(103): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(121): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: verilog/uart_tx.v(14): compiling module uart_tx. VERI-1018
+WARNING - synthesis: verilog/uart_tx.v(71): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(89): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(99): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(119): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/coms.v(218): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(99): actual bit length 1 differs from formal bit length 24 for port duty. VERI-1330
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(60): expression size 32 truncated to fit in target size 16. VERI-1209
+INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(46): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(135): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(73): net encoder0_position_scaled[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(75): net encoder1_position_scaled[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(76): net displacement[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(85): net current[15] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(118): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(99): net pwm_setpoint does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(68): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(132): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(141): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: No object with type PORT found matching "clk32MHz".
+WARNING - synthesis: Ignoring Constraint: create_clock  -period 31.25 -name {clk32MHz} [get_ports {clk32MHz}].
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: No object with type PORT found matching "clk32MHz".
+WARNING - synthesis: Ignoring Constraint: create_clock  -period 31.25 -name {clk32MHz} [get_ports {clk32MHz}].
+WARNING - synthesis: verilog/TinyFPGA_B.v(38): Removing unused instance pll32MHz_inst. VDB-5034
+WARNING - synthesis: verilog/TinyFPGA_B.v(73): net encoder0_position_scaled[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(75): net encoder1_position_scaled[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(76): net displacement[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(85): net current[15] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(118): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(99): net pwm_setpoint does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(68): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(132): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(141): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(44): Removing unused instance My_Global_Buffer_i_46. VDB-5034
+######## Missing driver on net CS_CLK. Patching with GND.
+######## Missing driver on net CS. Patching with GND.
+######## Missing driver on net INLC. Patching with GND.
+######## Missing driver on net INHC. Patching with GND.
+######## Missing driver on net INLB. Patching with GND.
+######## Missing driver on net INHB. Patching with GND.
+######## Missing driver on net INLA. Patching with GND.
+######## Missing driver on net INHA. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[23]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[22]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[21]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[20]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[19]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[18]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[17]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[16]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[15]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[14]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[13]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[12]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[11]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[10]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[9]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[8]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[7]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[6]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[5]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[4]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[3]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[2]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[1]. Patching with GND.
+######## Missing driver on net encoder0_position_scaled[0]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[23]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[22]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[21]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[20]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[19]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[18]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[17]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[16]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[15]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[14]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[13]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[12]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[11]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[10]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[9]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[8]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[7]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[6]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[5]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[4]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[3]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[2]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[1]. Patching with GND.
+######## Missing driver on net encoder1_position_scaled[0]. Patching with GND.
+######## Missing driver on net displacement[23]. Patching with GND.
+######## Missing driver on net displacement[22]. Patching with GND.
+######## Missing driver on net displacement[21]. Patching with GND.
+######## Missing driver on net displacement[20]. Patching with GND.
+######## Missing driver on net displacement[19]. Patching with GND.
+######## Missing driver on net displacement[18]. Patching with GND.
+######## Missing driver on net displacement[17]. Patching with GND.
+######## Missing driver on net displacement[16]. Patching with GND.
+######## Missing driver on net displacement[15]. Patching with GND.
+######## Missing driver on net displacement[14]. Patching with GND.
+######## Missing driver on net displacement[13]. Patching with GND.
+######## Missing driver on net displacement[12]. Patching with GND.
+######## Missing driver on net displacement[11]. Patching with GND.
+######## Missing driver on net displacement[10]. Patching with GND.
+######## Missing driver on net displacement[9]. Patching with GND.
+######## Missing driver on net displacement[8]. Patching with GND.
+######## Missing driver on net displacement[7]. Patching with GND.
+######## Missing driver on net displacement[6]. Patching with GND.
+######## Missing driver on net displacement[5]. Patching with GND.
+######## Missing driver on net displacement[4]. Patching with GND.
+######## Missing driver on net displacement[3]. Patching with GND.
+######## Missing driver on net displacement[2]. Patching with GND.
+######## Missing driver on net displacement[1]. Patching with GND.
+######## Missing driver on net displacement[0]. Patching with GND.
+######## Missing driver on net current[15]. Patching with GND.
+######## Missing driver on net current[14]. Patching with GND.
+######## Missing driver on net current[13]. Patching with GND.
+######## Missing driver on net current[12]. Patching with GND.
+######## Missing driver on net current[11]. Patching with GND.
+######## Missing driver on net current[10]. Patching with GND.
+######## Missing driver on net current[9]. Patching with GND.
+######## Missing driver on net current[8]. Patching with GND.
+######## Missing driver on net current[7]. Patching with GND.
+######## Missing driver on net current[6]. Patching with GND.
+######## Missing driver on net current[5]. Patching with GND.
+######## Missing driver on net current[4]. Patching with GND.
+######## Missing driver on net current[3]. Patching with GND.
+######## Missing driver on net current[2]. Patching with GND.
+######## Missing driver on net current[1]. Patching with GND.
+######## Missing driver on net current[0]. Patching with GND.
+######## Missing driver on net addr[10]. Patching with GND.
+######## Missing driver on net addr[9]. Patching with GND.
+######## Missing driver on net addr[8]. Patching with GND.
+######## Missing driver on net addr[7]. Patching with GND.
+######## Missing driver on net addr[6]. Patching with GND.
+######## Missing driver on net addr[5]. Patching with GND.
+######## Missing driver on net addr[4]. Patching with GND.
+######## Missing driver on net addr[3]. Patching with GND.
+######## Missing driver on net addr[2]. Patching with GND.
+######## Missing driver on net addr[1]. Patching with GND.
+######## Missing driver on net addr[0]. Patching with GND.
+######## Missing driver on net pwm_setpoint. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(83): Register \eeprom/reset_60 is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register '\neopxl_color_23__I_0/FRAME_MATCHER.state' with one-hot encoding
+State machine has 9 reachable states with original encodings of:
+
+ 00000000000000000000000000000000 
+
+ 00000000000000000000000000000001 
+
+ 00000000000000000000000000000010 
+
+ 00000000000000000000000000000011 
+
+ 00000000000000000000000000000100 
+
+ 00000000000000000000000000000101 
+
+ 00000000000000000000000000000110 
+
+ 00000000000000000000000000000111 
+
+ 00000000000000000000000000001000 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00000000000000000000000000000000 -> 000000001
+
+ 00000000000000000000000000000001 -> 000000010
+
+ 00000000000000000000000000000010 -> 000000100
+
+ 00000000000000000000000000000011 -> 000001000
+
+ 00000000000000000000000000000100 -> 000010000
+
+ 00000000000000000000000000000101 -> 000100000
+
+ 00000000000000000000000000000110 -> 001000000
+
+ 00000000000000000000000000000111 -> 010000000
+
+ 00000000000000000000000000001000 -> 100000000
+
+
+
+
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is

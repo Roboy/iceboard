@@ -1,0 +1,2220 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Fri Mar  6 19:03:08 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     TinyFPGA_B
+Constraint file: TinyFPGA_B_temp_lse.sdc 
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 62.500000 -name clk501 [get_nets \eeprom/i2c/i2c_clk]
+            552 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 48.270ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SB_DFFESS  C              \eeprom/i2c/counter_i0  (from \eeprom/i2c/i2c_clk +)
+   Destination:    SB_DFFESR  D              \eeprom/i2c/counter_i7  (to \eeprom/i2c/i2c_clk +)
+
+   Delay:                  14.097ns  (25.8% logic, 74.2% route), 9 logic levels.
+
+ Constraint Details:
+
+     14.097ns data_path \eeprom/i2c/counter_i0 to \eeprom/i2c/counter_i7 meets
+     62.500ns delay constraint less
+      0.133ns L_S requirement (totaling 62.367ns) by 48.270ns
+
+ Path Details: \eeprom/i2c/counter_i0 to \eeprom/i2c/counter_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367              C to Q              \eeprom/i2c/counter_i0 (from \eeprom/i2c/i2c_clk)
+Route         6   e 1.478                                  \eeprom/i2c/counter[0]
+LUT4        ---     0.408             I0 to CO             \eeprom/i2c/sub_39_add_2_2
+Route         2   e 1.158                                  \eeprom/i2c/n26508
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_3
+Route         2   e 1.158                                  \eeprom/i2c/n26509
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_4
+Route         2   e 1.158                                  \eeprom/i2c/n26510
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_5
+Route         2   e 1.158                                  \eeprom/i2c/n26511
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_6
+Route         2   e 1.158                                  \eeprom/i2c/n26512
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_7
+Route         2   e 1.158                                  \eeprom/i2c/n26513
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_8
+Route         1   e 1.020                                  \eeprom/i2c/n26514
+LUT4        ---     0.408             I3 to O              \eeprom/i2c/sub_39_add_2_9_lut
+Route         1   e 1.020                                  \eeprom/i2c/n120
+                  --------
+                   14.097  (25.8% logic, 74.2% route), 9 logic levels.
+
+
+Passed:  The following path meets requirements by 49.698ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SB_DFFESS  C              \eeprom/i2c/counter_i0  (from \eeprom/i2c/i2c_clk +)
+   Destination:    SB_DFFESR  D              \eeprom/i2c/counter_i6  (to \eeprom/i2c/i2c_clk +)
+
+   Delay:                  12.669ns  (25.4% logic, 74.6% route), 8 logic levels.
+
+ Constraint Details:
+
+     12.669ns data_path \eeprom/i2c/counter_i0 to \eeprom/i2c/counter_i6 meets
+     62.500ns delay constraint less
+      0.133ns L_S requirement (totaling 62.367ns) by 49.698ns
+
+ Path Details: \eeprom/i2c/counter_i0 to \eeprom/i2c/counter_i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367              C to Q              \eeprom/i2c/counter_i0 (from \eeprom/i2c/i2c_clk)
+Route         6   e 1.478                                  \eeprom/i2c/counter[0]
+LUT4        ---     0.408             I0 to CO             \eeprom/i2c/sub_39_add_2_2
+Route         2   e 1.158                                  \eeprom/i2c/n26508
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_3
+Route         2   e 1.158                                  \eeprom/i2c/n26509
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_4
+Route         2   e 1.158                                  \eeprom/i2c/n26510
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_5
+Route         2   e 1.158                                  \eeprom/i2c/n26511
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_6
+Route         2   e 1.158                                  \eeprom/i2c/n26512
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_7
+Route         2   e 1.158                                  \eeprom/i2c/n26513
+LUT4        ---     0.408             I3 to O              \eeprom/i2c/sub_39_add_2_8_lut
+Route         1   e 1.020                                  \eeprom/i2c/n121
+                  --------
+                   12.669  (25.4% logic, 74.6% route), 8 logic levels.
+
+
+Passed:  The following path meets requirements by 49.805ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SB_DFFESS  C              \eeprom/i2c/counter_i1  (from \eeprom/i2c/i2c_clk +)
+   Destination:    SB_DFFESR  D              \eeprom/i2c/counter_i7  (to \eeprom/i2c/i2c_clk +)
+
+   Delay:                  12.562ns  (25.7% logic, 74.3% route), 8 logic levels.
+
+ Constraint Details:
+
+     12.562ns data_path \eeprom/i2c/counter_i1 to \eeprom/i2c/counter_i7 meets
+     62.500ns delay constraint less
+      0.133ns L_S requirement (totaling 62.367ns) by 49.805ns
+
+ Path Details: \eeprom/i2c/counter_i1 to \eeprom/i2c/counter_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367              C to Q              \eeprom/i2c/counter_i1 (from \eeprom/i2c/i2c_clk)
+Route         7   e 1.509                                  \eeprom/i2c/counter[1]
+LUT4        ---     0.408             I0 to CO             \eeprom/i2c/sub_39_add_2_3
+Route         2   e 1.158                                  \eeprom/i2c/n26509
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_4
+Route         2   e 1.158                                  \eeprom/i2c/n26510
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_5
+Route         2   e 1.158                                  \eeprom/i2c/n26511
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_6
+Route         2   e 1.158                                  \eeprom/i2c/n26512
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_7
+Route         2   e 1.158                                  \eeprom/i2c/n26513
+LUT4        ---     0.408             CI to CO             \eeprom/i2c/sub_39_add_2_8
+Route         1   e 1.020                                  \eeprom/i2c/n26514
+LUT4        ---     0.408             I3 to O              \eeprom/i2c/sub_39_add_2_9_lut
+Route         1   e 1.020                                  \eeprom/i2c/n120
+                  --------
+                   12.562  (25.7% logic, 74.3% route), 8 logic levels.
+
+Report: 14.230 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint:  create_clock -period 62.500 -name TinyFPGA_B|\eeprom/i2c/i2c_clk [ get_nets \eeprom/i2c/i2c_clk ]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 62.500000 -waveform { 0.000000 31.250000 } -name CLK [ get_ports { CLK } ]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 303.681ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SB_DFF     C              \eeprom/bytes[0]__i10  (from CLK +)
+   Destination:    SB_DFFE    D              \neopxl_color_23__I_0/rx/r_Bit_Index_i0  (to CLK +)
+
+   Delay:                 366.048ns  (26.1% logic, 73.9% route), 234 logic levels.
+
+ Constraint Details:
+
+    366.048ns data_path \eeprom/bytes[0]__i10 to \neopxl_color_23__I_0/rx/r_Bit_Index_i0 violates
+     62.500ns delay constraint less
+      0.133ns L_S requirement (totaling 62.367ns) by 303.681ns
+
+ Path Details: \eeprom/bytes[0]__i10 to \neopxl_color_23__I_0/rx/r_Bit_Index_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367              C to Q              \eeprom/bytes[0]__i10 (from CLK)
+Route        37   e 1.842                                  baudrate[1]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i18154_2_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n22280
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1034
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n33662
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1038
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n33680
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1042
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n32351
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_341_i48_3_lut
+Route         5   e 1.341                                  \neopxl_color_23__I_0/rx/n48_adj_4145
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32000_2_lut_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n36642
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33527_4_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38169
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_450_i46_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n46_adj_4168
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_450_i48_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4094
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32006_2_lut_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n36648
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32422_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n804
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33282_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37924
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33283_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37925
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33131_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n48
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33549_2_lut_3_lut_4_lut
+Route         7   e 1.409                                  \neopxl_color_23__I_0/rx/n299
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i642_4_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n961
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_662_i42_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4069
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33274_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37916
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33275_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37917
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33588_2_lut_4_lut
+Route         7   e 1.409                                  \neopxl_color_23__I_0/rx/n300
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i744_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1113
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_765_i43_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n43_adj_3974
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_765_i42_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4105
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33388_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38030
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33389_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38031
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33552_2_lut_4_lut
+Route         8   e 1.435                                  \neopxl_color_23__I_0/rx/n301
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i846_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1264
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_866_i41_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n41_adj_4109
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_866_i40_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n40_adj_4112
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33386_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38028
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33387_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38029
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33299_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37941
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32595_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4082
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33555_2_lut_3_lut_4_lut
+Route         9   e 1.459                                  \neopxl_color_23__I_0/rx/n302
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i945_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1411
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_965_i41_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n41_adj_4076
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33154_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37796
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33155_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37797
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32601_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37243
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33146_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37788
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33147_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4080
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33569_2_lut_3_lut_4_lut
+Route        10   e 1.480                                  \neopxl_color_23__I_0/rx/n303
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1043_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1556
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1062_i39_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n39_adj_4237
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33150_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37792
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33151_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37793
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32605_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37247
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33296_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37938
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33297_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37939
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33575_2_lut_4_lut
+Route        12   e 1.516                                  \neopxl_color_23__I_0/rx/n304
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1138_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1697
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1157_i39_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n39_adj_4232
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33144_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37786
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33145_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37787
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32610_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37252
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33292_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37934
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33293_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37935
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33597_2_lut_4_lut
+Route        12   e 1.516                                  \neopxl_color_23__I_0/rx/n305
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1233_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1837
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1250_i35_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n35_adj_4222
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33142_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37784
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33143_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37785
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32617_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37259
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33472_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38114
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33473_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38115
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33594_2_lut_4_lut
+Route        13   e 1.532                                  \neopxl_color_23__I_0/rx/n306
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1325_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1973
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1341_i33_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n33_adj_4215
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33138_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37780
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33139_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37781
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32619_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37261
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33474_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38116
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33475_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38117
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33442_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38084
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32625_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n48_adj_4128
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33606_2_lut_3_lut_4_lut
+Route        15   e 1.561                                  \neopxl_color_23__I_0/rx/n307
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1414_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2105
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1430_i33_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n33_adj_4204
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33128_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37770
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33129_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37771
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32627_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37269
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33486_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38128
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33487_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38129
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33471_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38113
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33603_2_lut_4_lut
+Route        15   e 1.561                                  \neopxl_color_23__I_0/rx/n308
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1499_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2232
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1517_i37_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n37_adj_4185
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1517_i34_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n34_adj_4195
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33425_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38067
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33426_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38068
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33381_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38023
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33307_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4196
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33266_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37908
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33267_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37909
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33615_2_lut_4_lut
+Route        16   e 1.574                                  \neopxl_color_23__I_0/rx/n309
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1585_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2359
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1602_i35_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n35_adj_4170
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1602_i32_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n32_adj_4181
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33427_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38069
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33428_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38070
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33379_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38021
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33309_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37951
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33429_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38071
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33430_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38072
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33377_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38019
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33311_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4115
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33623_2_lut_3_lut_4_lut
+Route        17   e 1.586                                  \neopxl_color_23__I_0/rx/n310
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1676_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2490
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1585_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26620
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26621
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26622
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26623
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26624
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26625
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26626
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26627
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26628
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26629
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26630
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26631
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1585_16_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5296
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i1745_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2598
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1766_i43_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n43_adj_4132
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i32633_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37275
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33280_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37922
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33439_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38081
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33440_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38082
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33654_2_lut_4_lut
+Route        19   e 1.608                                  \neopxl_color_23__I_0/rx/n312
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1838_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2729
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1587_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26653
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26654
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26655
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26656
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26657
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26658
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26659
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26660
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26661
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26662
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26663
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26664
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26665
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26666
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1587_18_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5348
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i1901_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2829
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1922_i43_2_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n43_adj_3972
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1922_i38_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38_adj_4119
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33370_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38012
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33468_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38110
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33490_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38132
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33491_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38133
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33669_2_lut_4_lut
+Route        21   e 1.628                                  \neopxl_color_23__I_0/rx/n314
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1992_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2956
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1589_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26690
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26691
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26692
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26693
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26694
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26695
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26696
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26697
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26698
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26699
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26700
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26701
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26702
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26703
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1589_18_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5402
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i2051_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n3050
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2070_i39_2_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n39_adj_4031
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2070_i34_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n34
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33354_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37996
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33458_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38100
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33492_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38134
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33493_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38135
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33254_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37896
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33255_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37897
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33678_2_lut_4_lut
+Route        23   e 1.647                                  \neopxl_color_23__I_0/rx/n316
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i2138_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n3171
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1591_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26732
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26733
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26734
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26735
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26736
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26737
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26738
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26739
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26740
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26741
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26742
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26743
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26744
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_18
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26745
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_19
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26746
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_20
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26747
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_21
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26748
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_22
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26749
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_23
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26750
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1591_24_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5451
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2210_i45_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n45_adj_4014
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2210_i24_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n24
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32978_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37620
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33324_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37966
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33326_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37968
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33612_4_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n32839
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_2
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26431
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_3
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26432
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26433
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26434
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26435
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26436
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26437
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26438
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26439
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26440
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26441
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26442
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26443
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26444
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26445
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26446
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_18
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26447
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_19
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26448
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_20
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26449
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_21
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26450
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_22
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26451
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_23
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26452
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_24
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26453
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_25
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n26454
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/sub_38_add_2_26_lut
+Route        22   e 1.638                                  o_Rx_DV_N_3358[24]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_979
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/r_SM_Main_2__N_3316[1]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33672_2_lut_3_lut_4_lut
+Route         3   e 1.239                                  n13622
+LUT4        ---     0.408             I2 to O              i11760_3_lut
+Route         1   e 1.020                                  n15952
+                  --------
+                  366.048  (26.1% logic, 73.9% route), 234 logic levels.
+
+
+Error:  The following path violates requirements by 303.681ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SB_DFF     C              \eeprom/bytes[0]__i10  (from CLK +)
+   Destination:    SB_DFFE    D              \neopxl_color_23__I_0/rx/r_Bit_Index_i0  (to CLK +)
+
+   Delay:                 366.048ns  (26.1% logic, 73.9% route), 234 logic levels.
+
+ Constraint Details:
+
+    366.048ns data_path \eeprom/bytes[0]__i10 to \neopxl_color_23__I_0/rx/r_Bit_Index_i0 violates
+     62.500ns delay constraint less
+      0.133ns L_S requirement (totaling 62.367ns) by 303.681ns
+
+ Path Details: \eeprom/bytes[0]__i10 to \neopxl_color_23__I_0/rx/r_Bit_Index_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367              C to Q              \eeprom/bytes[0]__i10 (from CLK)
+Route        37   e 1.842                                  baudrate[1]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i18154_2_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n22280
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1034
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n33662
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1038
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n33680
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1042
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n32351
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_341_i48_3_lut
+Route         5   e 1.341                                  \neopxl_color_23__I_0/rx/n48_adj_4145
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32000_2_lut_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n36642
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33527_4_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38169
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_450_i46_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n46_adj_4168
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_450_i48_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4094
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32006_2_lut_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n36648
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32422_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n804
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33282_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37924
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33283_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37925
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33131_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n48
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33549_2_lut_3_lut_4_lut
+Route         7   e 1.409                                  \neopxl_color_23__I_0/rx/n299
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i642_4_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n961
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_662_i42_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4069
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33274_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37916
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33275_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37917
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33588_2_lut_4_lut
+Route         7   e 1.409                                  \neopxl_color_23__I_0/rx/n300
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i744_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1113
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_765_i43_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n43_adj_3974
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_765_i42_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4105
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33388_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38030
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33389_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38031
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33552_2_lut_4_lut
+Route         8   e 1.435                                  \neopxl_color_23__I_0/rx/n301
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i846_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1264
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_866_i41_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n41_adj_4109
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_866_i40_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n40_adj_4112
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33386_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38028
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33387_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38029
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33299_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37941
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32595_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4082
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33555_2_lut_3_lut_4_lut
+Route         9   e 1.459                                  \neopxl_color_23__I_0/rx/n302
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i945_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1411
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_965_i41_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n41_adj_4076
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33154_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37796
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33155_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37797
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32601_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37243
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33146_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37788
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33147_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4080
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33569_2_lut_3_lut_4_lut
+Route        10   e 1.480                                  \neopxl_color_23__I_0/rx/n303
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1043_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1556
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1062_i39_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n39_adj_4237
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33150_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37792
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33151_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37793
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32605_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37247
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33296_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37938
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33297_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37939
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33575_2_lut_4_lut
+Route        12   e 1.516                                  \neopxl_color_23__I_0/rx/n304
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1138_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1697
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1157_i39_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n39_adj_4232
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33144_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37786
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33145_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37787
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32610_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37252
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33292_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37934
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33293_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37935
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33597_2_lut_4_lut
+Route        12   e 1.516                                  \neopxl_color_23__I_0/rx/n305
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1233_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1837
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1250_i35_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n35_adj_4222
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33142_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37784
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33143_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37785
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32617_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37259
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33472_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38114
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33473_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38115
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33594_2_lut_4_lut
+Route        13   e 1.532                                  \neopxl_color_23__I_0/rx/n306
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1325_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1973
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1341_i33_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n33_adj_4215
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33138_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37780
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33139_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37781
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32619_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37261
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33474_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38116
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33475_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38117
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33442_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38084
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32625_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n48_adj_4128
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33606_2_lut_3_lut_4_lut
+Route        15   e 1.561                                  \neopxl_color_23__I_0/rx/n307
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1414_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2105
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1430_i33_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n33_adj_4204
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33128_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37770
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33129_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37771
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32627_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37269
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33486_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38128
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33487_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38129
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33471_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38113
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33603_2_lut_4_lut
+Route        15   e 1.561                                  \neopxl_color_23__I_0/rx/n308
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1499_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2232
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1517_i37_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n37_adj_4185
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1517_i34_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n34_adj_4195
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33425_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38067
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33426_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38068
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33381_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38023
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33307_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4196
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33266_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37908
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33267_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37909
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33615_2_lut_4_lut
+Route        16   e 1.574                                  \neopxl_color_23__I_0/rx/n309
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1585_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2359
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1602_i35_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n35_adj_4170
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1602_i32_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n32_adj_4181
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33427_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38069
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33428_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38070
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33379_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38021
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33309_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37951
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33429_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38071
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33430_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38072
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33377_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38019
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33311_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4115
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33623_2_lut_3_lut_4_lut
+Route        17   e 1.586                                  \neopxl_color_23__I_0/rx/n310
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1676_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2490
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1585_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26620
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26621
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26622
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26623
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26624
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26625
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26626
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26627
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26628
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26629
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26630
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26631
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1585_16_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5296
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i1745_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2598
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1766_i43_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n43_adj_4132
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i32633_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37275
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33280_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37922
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33439_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38081
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33440_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38082
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33654_2_lut_4_lut
+Route        19   e 1.608                                  \neopxl_color_23__I_0/rx/n312
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1838_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2729
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1587_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26653
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26654
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26655
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26656
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26657
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26658
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26659
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26660
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26661
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26662
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26663
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26664
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26665
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26666
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1587_18_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5348
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i1901_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2829
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1922_i43_2_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n43_adj_3972
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1922_i38_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38_adj_4119
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33370_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38012
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33468_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38110
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33490_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38132
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33491_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38133
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33669_2_lut_4_lut
+Route        21   e 1.628                                  \neopxl_color_23__I_0/rx/n314
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1992_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2956
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1589_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26690
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26691
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26692
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26693
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26694
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26695
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26696
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26697
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26698
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26699
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26700
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26701
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26702
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26703
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1589_18_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5402
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i2051_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n3050
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2070_i39_2_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n39_adj_4031
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2070_i34_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n34
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33354_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37996
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33458_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38100
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33492_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38134
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33493_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38135
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33254_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37896
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33255_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37897
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33678_2_lut_4_lut
+Route        23   e 1.647                                  \neopxl_color_23__I_0/rx/n316
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i2138_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n3171
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1591_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26732
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26733
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26734
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26735
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26736
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26737
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26738
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26739
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26740
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26741
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26742
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26743
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26744
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_18
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26745
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_19
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26746
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_20
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26747
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_21
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26748
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_22
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26749
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_23
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26750
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1591_24_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5451
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2210_i45_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n45_adj_4014
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2210_i24_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n24
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32978_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37620
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33324_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37966
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33326_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37968
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33612_4_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n32839
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_2
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26431
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_3
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26432
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26433
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26434
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26435
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26436
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26437
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26438
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26439
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26440
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26441
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26442
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26443
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26444
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26445
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26446
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_18
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26447
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_19
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26448
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_20
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26449
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_21
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26450
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_22
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26451
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_23
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26452
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_24
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26453
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_25
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n26454
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/sub_38_add_2_26_lut
+Route        22   e 1.638                                  o_Rx_DV_N_3358[24]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_979
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/r_SM_Main_2__N_3316[1]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33643_4_lut_4_lut
+Route         3   e 1.239                                  n31793
+LUT4        ---     0.408             I0 to O              i11760_3_lut
+Route         1   e 1.020                                  n15952
+                  --------
+                  366.048  (26.1% logic, 73.9% route), 234 logic levels.
+
+
+Error:  The following path violates requirements by 303.681ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         SB_DFF     C              \eeprom/bytes[0]__i10  (from CLK +)
+   Destination:    SB_DFFE    D              \neopxl_color_23__I_0/tx/r_Bit_Index_i0  (to CLK +)
+
+   Delay:                 366.048ns  (26.1% logic, 73.9% route), 234 logic levels.
+
+ Constraint Details:
+
+    366.048ns data_path \eeprom/bytes[0]__i10 to \neopxl_color_23__I_0/tx/r_Bit_Index_i0 violates
+     62.500ns delay constraint less
+      0.133ns L_S requirement (totaling 62.367ns) by 303.681ns
+
+ Path Details: \eeprom/bytes[0]__i10 to \neopxl_color_23__I_0/tx/r_Bit_Index_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367              C to Q              \eeprom/bytes[0]__i10 (from CLK)
+Route        37   e 1.842                                  baudrate[1]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i18154_2_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n22280
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1034
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n33662
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1038
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n33680
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_1042
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n32351
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_341_i48_3_lut
+Route         5   e 1.341                                  \neopxl_color_23__I_0/rx/n48_adj_4145
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32000_2_lut_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n36642
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33527_4_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38169
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_450_i46_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n46_adj_4168
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_450_i48_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4094
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32006_2_lut_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n36648
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i32422_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n804
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33282_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37924
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33283_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37925
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33131_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n48
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33549_2_lut_3_lut_4_lut
+Route         7   e 1.409                                  \neopxl_color_23__I_0/rx/n299
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i642_4_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n961
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_662_i42_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4069
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33274_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37916
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33275_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37917
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33588_2_lut_4_lut
+Route         7   e 1.409                                  \neopxl_color_23__I_0/rx/n300
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i744_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1113
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_765_i43_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n43_adj_3974
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_765_i42_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4105
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33388_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38030
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33389_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38031
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33552_2_lut_4_lut
+Route         8   e 1.435                                  \neopxl_color_23__I_0/rx/n301
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i846_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1264
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_866_i41_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n41_adj_4109
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_866_i40_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n40_adj_4112
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33386_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38028
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33387_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38029
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33299_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37941
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32595_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4082
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33555_2_lut_3_lut_4_lut
+Route         9   e 1.459                                  \neopxl_color_23__I_0/rx/n302
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i945_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1411
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_965_i41_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n41_adj_4076
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33154_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37796
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33155_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37797
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32601_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37243
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33146_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37788
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33147_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4080
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33569_2_lut_3_lut_4_lut
+Route        10   e 1.480                                  \neopxl_color_23__I_0/rx/n303
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1043_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1556
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1062_i39_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n39_adj_4237
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33150_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37792
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33151_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37793
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32605_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37247
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33296_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37938
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33297_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37939
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33575_2_lut_4_lut
+Route        12   e 1.516                                  \neopxl_color_23__I_0/rx/n304
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1138_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1697
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1157_i39_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n39_adj_4232
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33144_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37786
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33145_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37787
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32610_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37252
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33292_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37934
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33293_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37935
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33597_2_lut_4_lut
+Route        12   e 1.516                                  \neopxl_color_23__I_0/rx/n305
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1233_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1837
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1250_i35_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n35_adj_4222
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33142_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37784
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33143_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37785
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32617_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37259
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33472_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38114
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33473_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38115
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33594_2_lut_4_lut
+Route        13   e 1.532                                  \neopxl_color_23__I_0/rx/n306
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1325_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n1973
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1341_i33_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n33_adj_4215
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33138_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37780
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33139_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37781
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32619_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37261
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33474_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38116
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33475_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38117
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33442_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38084
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32625_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n48_adj_4128
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33606_2_lut_3_lut_4_lut
+Route        15   e 1.561                                  \neopxl_color_23__I_0/rx/n307
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1414_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2105
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1430_i33_2_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n33_adj_4204
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i33128_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37770
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33129_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37771
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32627_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37269
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33486_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38128
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33487_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38129
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33471_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38113
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33603_2_lut_4_lut
+Route        15   e 1.561                                  \neopxl_color_23__I_0/rx/n308
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1499_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2232
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1517_i37_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n37_adj_4185
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1517_i34_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n34_adj_4195
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33425_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38067
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33426_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38068
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33381_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38023
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33307_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n42_adj_4196
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33266_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37908
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33267_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37909
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33615_2_lut_4_lut
+Route        16   e 1.574                                  \neopxl_color_23__I_0/rx/n309
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1585_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2359
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1602_i35_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n35_adj_4170
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1602_i32_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n32_adj_4181
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33427_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38069
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33428_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38070
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33379_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38021
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33309_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37951
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33429_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38071
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33430_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38072
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33377_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38019
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33311_3_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n48_adj_4115
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/i33623_2_lut_3_lut_4_lut
+Route        17   e 1.586                                  \neopxl_color_23__I_0/rx/n310
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1676_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2490
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1585_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26620
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26621
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26622
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26623
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26624
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26625
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26626
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26627
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26628
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26629
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26630
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1585_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26631
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1585_16_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5296
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i1745_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2598
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1766_i43_2_lut
+Route         3   e 1.239                                  \neopxl_color_23__I_0/rx/n43_adj_4132
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/i32633_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37275
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33280_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37922
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33439_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38081
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33440_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38082
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33654_2_lut_4_lut
+Route        19   e 1.608                                  \neopxl_color_23__I_0/rx/n312
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1838_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2729
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1587_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26653
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26654
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26655
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26656
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26657
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26658
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26659
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26660
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26661
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26662
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26663
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26664
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26665
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1587_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26666
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1587_18_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5348
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i1901_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2829
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1922_i43_2_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n43_adj_3972
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_1922_i38_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38_adj_4119
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33370_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38012
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33468_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38110
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33490_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38132
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33491_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n38133
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33669_2_lut_4_lut
+Route        21   e 1.628                                  \neopxl_color_23__I_0/rx/n314
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i1992_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n2956
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1589_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26690
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26691
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26692
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26693
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26694
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26695
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26696
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26697
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26698
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26699
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26700
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26701
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26702
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1589_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26703
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1589_18_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5402
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/div_37_i2051_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n3050
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2070_i39_2_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n39_adj_4031
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2070_i34_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n34
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33354_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37996
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33458_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38100
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33492_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38134
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33493_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n38135
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33254_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37896
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33255_3_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n37897
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i33678_2_lut_4_lut
+Route        23   e 1.647                                  \neopxl_color_23__I_0/rx/n316
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_i2138_3_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n3171
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/add_1591_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26732
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26733
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26734
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26735
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26736
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26737
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26738
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26739
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26740
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26741
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26742
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26743
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26744
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_18
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26745
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_19
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26746
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_20
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26747
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_21
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26748
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_22
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26749
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/add_1591_23
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26750
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/add_1591_24_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n5451
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2210_i45_4_lut
+Route         4   e 1.297                                  \neopxl_color_23__I_0/rx/n45_adj_4014
+LUT4        ---     0.408             I2 to O              \neopxl_color_23__I_0/rx/div_37_LessThan_2210_i24_3_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n24
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i32978_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37620
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33324_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37966
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33326_4_lut
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n37968
+LUT4        ---     0.408             I1 to O              \neopxl_color_23__I_0/rx/i33612_4_lut
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n32839
+LUT4        ---     0.408             I0 to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_2
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26431
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_3
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26432
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_4
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26433
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_5
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26434
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_6
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26435
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_7
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26436
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_8
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26437
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_9
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26438
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_10
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26439
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_11
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26440
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_12
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26441
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_13
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26442
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_14
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26443
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_15
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26444
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_16
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26445
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_17
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26446
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_18
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26447
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_19
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26448
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_20
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26449
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_21
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26450
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_22
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26451
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_23
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26452
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_24
+Route         2   e 1.158                                  \neopxl_color_23__I_0/rx/n26453
+LUT4        ---     0.408             CI to CO             \neopxl_color_23__I_0/rx/sub_38_add_2_25
+Route         1   e 1.020                                  \neopxl_color_23__I_0/rx/n26454
+LUT4        ---     0.408             I3 to O              \neopxl_color_23__I_0/rx/sub_38_add_2_26_lut
+Route        22   e 1.638                                  o_Rx_DV_N_3358[24]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/rx/i1_4_lut_adj_975
+Route         4   e 1.297                                  \neopxl_color_23__I_0/r_SM_Main_2__N_3406[1]
+LUT4        ---     0.408             I0 to O              \neopxl_color_23__I_0/tx/i33639_4_lut_4_lut
+Route         3   e 1.239                                  n31765
+LUT4        ---     0.408             I0 to O              i11756_3_lut
+Route         1   e 1.020                                  n15948
+                  --------
+                  366.048  (26.1% logic, 73.9% route), 234 logic levels.
+
+Warning: 366.181 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |    62.500 ns|    14.230 ns|     9  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |    62.500 ns|   366.181 ns|   234 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\neopxl_color_23__I_0/rx/n24            |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n32_adj_4181   |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n34            |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n34_adj_4195   |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38_adj_4119   |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n39_adj_4031   |       4|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n39_adj_4237   |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n40_adj_4112   |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n41_adj_4076   |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n42_adj_4069   |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n42_adj_4105   |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n42_adj_4196   |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n43_adj_3972   |       4|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n46_adj_4168   |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n48            |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n48_adj_4080   |       3|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n48_adj_4082   |       3|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n48_adj_4094   |       3|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n48_adj_4115   |       3|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n48_adj_4128   |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n48_adj_4145   |       5|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n299           |       7|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n300           |       7|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n301           |       8|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n302           |       9|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n303           |      10|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n307           |      15|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n308           |      15|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n309           |      16|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1411          |       4|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1556          |       4|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2829          |       4|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n3050          |       4|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n5348          |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n5402          |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n22280         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26431         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26432         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26433         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26434         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26435         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26436         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26437         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26438         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26439         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26440         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26441         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26442         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26443         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26444         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26445         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26446         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26447         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26448         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26449         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26450         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26451         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26452         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26453         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26454         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26620         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26621         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26622         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26623         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26624         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26625         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26626         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26627         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26628         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26629         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26653         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26654         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26655         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26656         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26657         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26658         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26659         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26660         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26661         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26662         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26663         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26664         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26665         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26666         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26690         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26691         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26692         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26693         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26694         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26695         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26696         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26697         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26698         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26699         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26700         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26701         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26702         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26703         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26732         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26733         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26734         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26735         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26736         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26737         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26738         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26739         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26740         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26741         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26742         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26743         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26744         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26745         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26746         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26747         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26748         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26749         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n32351         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n32839         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n33662         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n33680         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n36642         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37243         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37247         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37269         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37275         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37620         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37770         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37771         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37788         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37792         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37793         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37796         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37797         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37896         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37897         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37908         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37909         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37916         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37917         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37922         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37924         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37925         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37938         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37939         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37941         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37951         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37966         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37968         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37996         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38012         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38019         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38021         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38023         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38028         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38029         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38030         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38031         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38067         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38068         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38069         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38070         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38071         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38072         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38081         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38082         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38084         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38100         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38110         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38113         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38116         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38117         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38128         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38129         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38132         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38133         |       2|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38134         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38135         |       1|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38169         |       2|    4096|     99.00%
+                                        |        |        |
+o_Rx_DV_N_3358[24]                      |      22|    4096|     99.00%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n310           |      17|    4084|     99.71%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n316           |      23|    4084|     99.71%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2490          |       4|    4084|     99.71%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n3171          |       4|    4084|     99.71%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n314           |      21|    4074|     99.46%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2956          |       4|    4074|     99.46%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n312           |      19|    4072|     99.41%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2729          |       4|    4072|     99.41%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n304           |      12|    3813|     93.09%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37252         |       1|    3813|     93.09%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37786         |       1|    3813|     93.09%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37787         |       1|    3813|     93.09%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37934         |       1|    3813|     93.09%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37935         |       2|    3813|     93.09%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26630         |       2|    3805|     92.90%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n33_adj_4215   |       2|    3562|     86.96%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n306           |      13|    3562|     86.96%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1973          |       4|    3562|     86.96%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37261         |       1|    3562|     86.96%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37780         |       1|    3562|     86.96%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37781         |       1|    3562|     86.96%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38114         |       1|    3562|     86.96%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38115         |       2|    3562|     86.96%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n961           |       3|    3484|     85.06%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n35_adj_4222   |       2|    3279|     80.05%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n305           |      12|    3279|     80.05%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1837          |       4|    3279|     80.05%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37259         |       1|    3279|     80.05%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37784         |       1|    3279|     80.05%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37785         |       1|    3279|     80.05%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n35_adj_4170   |       3|    3016|     73.63%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37_adj_4185   |       3|    3016|     73.63%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n45_adj_4014   |       4|    3016|     73.63%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2232          |       4|    3016|     73.63%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2359          |       4|    3016|     73.63%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n5451          |       1|    3016|     73.63%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26750         |       2|    3016|     73.63%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n33_adj_4204   |       2|    2968|     72.46%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2105          |       4|    2968|     72.46%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n43_adj_4132   |       3|    2773|     67.70%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2598          |       4|    2773|     67.70%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n5296          |       1|    2773|     67.70%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26631         |       2|    2773|     67.70%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n39_adj_4232   |       2|    2733|     66.72%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1697          |       4|    2733|     66.72%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n41_adj_4109   |       2|    2716|     66.31%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n43_adj_3974   |       2|    2716|     66.31%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1113          |       4|    2716|     66.31%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1264          |       4|    2716|     66.31%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n804           |       4|    2550|     62.26%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n36648         |       1|    2550|     62.26%
+                                        |        |        |
+baudrate[1]                             |      37|    2228|     54.39%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/r_SM_Main_2__N_|        |        |
+3316[1]                                 |       4|    2121|     51.78%
+                                        |        |        |
+n15952                                  |       1|    1962|     47.90%
+                                        |        |        |
+\neopxl_color_23__I_0/r_SM_Main_2__N_340|        |        |
+6[1]                                    |       4|    1960|     47.85%
+                                        |        |        |
+n15948                                  |       1|    1960|     47.85%
+                                        |        |        |
+baudrate[0]                             |      32|    1868|     45.61%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n42_adj_3977   |       1|    1546|     37.74%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n805           |       3|    1546|     37.74%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38_adj_4002   |       1|    1380|     33.69%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n40_adj_4065   |       1|    1380|     33.69%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1114          |       5|    1380|     33.69%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1265          |       5|    1380|     33.69%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n37769         |       1|    1323|     32.30%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26_adj_4207   |       1|    1128|     27.54%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n16            |       1|    1080|     26.37%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n24_adj_4102   |       1|    1080|     26.37%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26_adj_4097   |       1|    1080|     26.37%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n32_adj_4233   |       1|    1080|     26.37%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n43_adj_4015   |       4|    1080|     26.37%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2233          |       6|    1080|     26.37%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2360          |       6|    1080|     26.37%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n5452          |       1|    1080|     26.37%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2109          |       4|    1076|     26.27%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n41_adj_4133   |       3|    1032|     25.20%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n2599          |       4|    1032|     25.20%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n5297          |       1|    1032|     25.20%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1701          |       4|    1028|     25.10%
+                                        |        |        |
+n13622                                  |       3|     981|     23.95%
+                                        |        |        |
+n31765                                  |       3|     981|     23.95%
+                                        |        |        |
+n31793                                  |       3|     981|     23.95%
+                                        |        |        |
+n13618                                  |       3|     979|     23.90%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n31873         |       1|     612|     14.94%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38_adj_4217   |       1|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n41_adj_4211   |       3|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n48_adj_4234   |       1|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1841          |       4|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n1969          |       4|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n5167          |       1|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26555         |       2|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26556         |       2|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26557         |       2|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26558         |       2|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26559         |       2|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26560         |       2|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n26561         |       2|     534|     13.04%
+                                        |        |        |
+\neopxl_color_23__I_0/rx/n38032         |       1|     534|     13.04%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 1242056088
+
+Constraints cover >4294967295 paths, 4388 nets, and 13299 connections (99.4% coverage)
+
+
+Peak memory: 333463552 bytes, TRCE: 68620288 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 7 secs 

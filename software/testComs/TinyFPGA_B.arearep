@@ -1,0 +1,118 @@
+----------------------------------------------------------------------
+Report for cell TinyFPGA_B.TECH
+Register bits:  741 of 7680 (9.648%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY       496          100.0
+                             SB_DFF       326          100.0
+                            SB_DFFE        85          100.0
+                           SB_DFFER        24          100.0
+                          SB_DFFESR       133          100.0
+                          SB_DFFESS       118          100.0
+                            SB_DFFN         1          100.0
+                           SB_DFFNE         1          100.0
+                         SB_DFFNESS         1          100.0
+                            SB_DFFR        40          100.0
+                            SB_DFFS         1          100.0
+                           SB_DFFSR        11          100.0
+                           SB_GB_IO         1          100.0
+                              SB_IO        16          100.0
+                            SB_LUT4      3160          100.0
+SUB MODULES
+                             EEPROM         1
+                               coms         1
+                     i2c_controller         1
+  neopixel(CLOCK_SPEED_HZ=16000000)         1
+                            uart_rx         1
+                            uart_tx         1
+                              TOTAL      4420
+----------------------------------------------------------------------
+Report for cell EEPROM.v1
+Instance Path : eeprom
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        58           11.7
+                             SB_DFF        55           16.9
+                            SB_DFFE         3            3.5
+                          SB_DFFESR        47           35.3
+                          SB_DFFESS        12           10.2
+                            SB_DFFN         1          100.0
+                           SB_DFFNE         1          100.0
+                         SB_DFFNESS         1          100.0
+                           SB_DFFSR         7           63.6
+                            SB_LUT4       188            5.9
+SUB MODULES
+                     i2c_controller         1
+                              TOTAL       374
+----------------------------------------------------------------------
+Report for cell i2c_controller.v1
+Instance Path : eeprom.i2c
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        12            2.4
+                             SB_DFF        10            3.1
+                            SB_DFFE         2            2.4
+                          SB_DFFESR         5            3.8
+                          SB_DFFESS         6            5.1
+                            SB_DFFN         1          100.0
+                           SB_DFFNE         1          100.0
+                         SB_DFFNESS         1          100.0
+                           SB_DFFSR         6           54.5
+                            SB_LUT4        67            2.1
+                              TOTAL       111
+----------------------------------------------------------------------
+Report for cell coms.v1
+Instance Path : neopxl_color_23__I_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY       314           63.3
+                             SB_DFF       205           62.9
+                            SB_DFFE        77           90.6
+                           SB_DFFER        24          100.0
+                          SB_DFFESR        21           15.8
+                          SB_DFFESS       105           89.0
+                            SB_DFFR        40          100.0
+                            SB_DFFS         1          100.0
+                           SB_DFFSR         4           36.4
+                            SB_LUT4      2439           77.2
+SUB MODULES
+                            uart_rx         1
+                            uart_tx         1
+                              TOTAL      3232
+----------------------------------------------------------------------
+Report for cell uart_tx.v1
+Instance Path : neopxl_color_23__I_0.tx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY         8            1.6
+                             SB_DFF         2            0.6
+                            SB_DFFE        10           11.8
+                          SB_DFFESR        11            8.3
+                           SB_DFFSR         2           18.2
+                            SB_LUT4        29            0.9
+                              TOTAL        62
+----------------------------------------------------------------------
+Report for cell uart_rx.v1
+Instance Path : neopxl_color_23__I_0.rx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY       268           54.0
+                             SB_DFF        11            3.4
+                            SB_DFFE         2            2.4
+                          SB_DFFESR        10            7.5
+                           SB_DFFSR         2           18.2
+                            SB_LUT4      1326           42.0
+                              TOTAL      1619
+----------------------------------------------------------------------
+Report for cell neopixel(CLOCK_SPEED_HZ=16000000).v1
+Instance Path : nx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        93           18.8
+                             SB_DFF        64           19.6
+                            SB_DFFE         3            3.5
+                          SB_DFFESR        33           24.8
+                          SB_DFFESS         1            0.8
+                            SB_LUT4       190            6.0
+                              TOTAL       384

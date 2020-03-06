@@ -1,0 +1,21 @@
+[
+  {
+    "port": "/dev/ttyACM0", 
+    "boardmeta": {
+      "hver": "1.0.0", 
+      "name": "TinyFPGA BX", 
+      "fpga": "ice40lp8k-cm81", 
+      "uuid": "c47268cd-32d9-402f-8900-e5d10262dad2"
+    }, 
+    "bootmeta": {
+      "bver": "1.0.1", 
+      "bootloader": "TinyFPGA USB Bootloader", 
+      "update": "https://tinyfpga.com/update/tinyfpga-bx", 
+      "addrmap": {
+        "userimage": "0x28000-0x50000", 
+        "bootloader": "0x000a0-0x28000", 
+        "userdata": "0x50000-0x100000"
+      }
+    }
+  }
+]
