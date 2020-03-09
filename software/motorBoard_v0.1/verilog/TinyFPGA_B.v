@@ -43,7 +43,8 @@ SB_GB My_Global_Buffer_i (// required for a user’s internally generated FPGA s
   .GLOBAL_BUFFER_OUTPUT ( clk16MHz)
 );
 
-reg [7:0] ID;
+wire [7:0] ID;
+reg reset;
 
 wire [23:0] neopxl_color;
 
@@ -82,7 +83,7 @@ neopixel #(16_000_000) nx(
  );
 
  wire pwm_out;
- reg dir, enable, reset;
+ reg dir, enable;
  reg GHA, GLA, GHB, GLB, GHC, GLC;
  assign INHA = (GHA?pwm_out:0);
  assign INLA = (GLA?1:0);
@@ -102,7 +103,6 @@ neopixel #(16_000_000) nx(
 
  always @(posedge clk16MHz) begin: DIRECTION
    enable <= 1;
-   reset <= 0;
    if(duty>=0)begin
      if(current<current_limit)begin // if the current is below the current limit
       pwm_setpoint <= duty;
@@ -250,21 +250,23 @@ neopixel #(16_000_000) nx(
   wire signed [15:0] current;
   wire signed [15:0] current_limit;
   wire driver_enable;
+  wire [31:0] baudrate;
 
-  coms c0(
-  	.CLK(clk16MHz),
-	  .reset(1'b0),
-  	.tx_o(tx_o),
-	  .tx_enable(tx_enable),
+  coms #(16_000_000) c0(
+    .CLK(clk16MHz),
+    .baudrate(baudrate),
+    .reset(reset),
+    .tx_o(tx_o),
+    .tx_enable(tx_enable),
     .driver_enable(DE),
-  	.rx_i(~RX),
+    .rx_i(~RX),
     .ID(ID),
     .duty(pwm_setpoint),
-  	.encoder0_position(encoder0_position_scaled),
-  	.encoder1_position(encoder1_position_scaled),
+    .encoder0_position(encoder0_position_scaled),
+    .encoder1_position(encoder1_position_scaled),
     .displacement(displacement),
-  	.setpoint(setpoint),
-  	.control_mode(control_mode),
+    .setpoint(setpoint),
+    .control_mode(control_mode),
     .Kp(Kp),
     .Ki(Ki),
     .Kd(Kd),
@@ -287,7 +289,7 @@ neopixel #(16_000_000) nx(
 
   motorControl control(
     .CLK(clk16MHz),
-    .reset(1'b0),
+    .reset(reset),
     .duty(duty),
     .setpoint(setpoint),
     .state(motor_state),
@@ -370,6 +372,7 @@ neopixel #(16_000_000) nx(
     read <= 1'b0;
     case(state)
       IDLE: begin
+        reset <= 1'b1;
         delay_counter <= delay_counter + 1;
         if(delay_counter>16_000_00)begin // after 100ms we read the eeprom
           delay_counter <= 0;
@@ -379,17 +382,18 @@ neopixel #(16_000_000) nx(
       end
       WAIT: begin
         if(data_ready)begin
-          ID <= data;
           state <= DONE;
         end
       end
       DONE: begin
-        if(ID==0)begin
+        if(ID==0 || baudrate==0)begin
           delay_counter <= delay_counter + 1;
           if(delay_counter>16_000_000) begin // check every second
             delay_counter <= 0;
             state <= IDLE;
           end
+        end else begin
+          reset <= 1'b0;
         end
       end
     endcase
@@ -398,7 +402,8 @@ neopixel #(16_000_000) nx(
   EEPROM eeprom(
     .clk(clk16MHz),
     .addr(addr),
-    .data(data),
+    .id(ID),
+    .baudrate(baudrate),
     .read(read),
     .data_ready(data_ready),
     .scl(scl),

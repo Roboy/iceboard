@@ -1,7 +1,8 @@
 module EEPROM(
     input clk,
     input [10:0] addr,
-    output [7:0] data,
+    output [7:0] id,
+    output [31:0] baudrate,
     input read,
     output reg data_ready,
     output wire sda_out,
@@ -14,14 +15,22 @@ module EEPROM(
 localparam  IDLE = 0;
 localparam  DUMMY_WRITE = 1;
 localparam  READ = 2;
+localparam  WAIT_FOR_READ = 3;
+localparam  CHECK_DONE = 4;
 
 reg enable;
 wire ready;
+wire [7:0] data;
 reg ready_prev;
 reg reset;
 reg rw;
 reg [7:0] state;
 reg [15:0] delay_counter;
+reg [7:0] bytes[4:0];
+reg [2:0] byte_counter;
+
+assign id = bytes[0];
+assign baudrate = {bytes[4],bytes[3],bytes[2],bytes[1]};
 
 always @ ( posedge clk ) begin: EEPROM_READOUT_FSM
   enable <= 1'b0;
@@ -31,25 +40,39 @@ always @ ( posedge clk ) begin: EEPROM_READOUT_FSM
       reset <= 0;
       data_ready <= 1'b0;
       if(read)begin
-        rw <= 1'b0; // write
-        enable <= 1'b1;
         state <= DUMMY_WRITE;
-        delay_counter <= 2000;
+        byte_counter <= 0;
       end
     end
     DUMMY_WRITE: begin
+      rw <= 1'b0; // write
+      enable <= 1'b1;
+      delay_counter <= 2000;
+      state <= READ;
+    end
+    READ: begin
       if(ready)begin
         if(delay_counter==0)begin
           rw <= 1'b1; // read
           enable <= 1'b1;
-          state <= READ;
+          state <= WAIT_FOR_READ;
         end else begin
           delay_counter <= delay_counter-1;
         end
       end
     end
-    READ: begin
-      if(ready)begin
+    WAIT_FOR_READ: begin
+      if(ready && !ready_prev)begin
+        bytes[byte_counter] <= data;
+        state <= CHECK_DONE;
+        byte_counter <= byte_counter+1;
+      end
+    end
+    CHECK_DONE: begin
+      if(byte_counter<5)begin
+        state <= READ;
+        delay_counter <= 2000;
+      end else begin
         data_ready <= 1'b1;
         state <= IDLE;
       end

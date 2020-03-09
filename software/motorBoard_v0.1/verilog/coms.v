@@ -1,10 +1,12 @@
-module coms(
+module coms #(parameter CLK_FREQ_HZ = 16_000_000)
+(
 	input CLK,
 	input reset,
 	output tx_o,
 	output tx_enable,
 	output reg driver_enable,
 	input rx_i,
+	input [31:0] baudrate,
 	input [7:0] ID,
 	input signed [23:0] duty,
 	input signed [23:0] encoder0_position,
@@ -91,7 +93,7 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 	wire rx_data_ready;
 	wire [7:0] rx_data ;
 
-	uart_rx rx(CLK,rx_i,rx_data_ready,rx_data);
+	uart_rx #(CLK_FREQ_HZ) rx(CLK,baudrate,rx_i,rx_data_ready,rx_data);
 
 	reg [7:0] data_in[MAGIC_NUMBER_LENGTH-1:0];
 	reg [7:0] data_in_frame[MAX_FRAME_LENGTH-1:0];
@@ -105,7 +107,7 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 	wire tx_done ;
 	wire [7:0] tx_data ;
 	assign tx_data = data_out_frame[byte_transmit_counter] ;
-	uart_tx tx(CLK,tx_transmit,tx_data,tx_active,tx_o,tx_enable,tx_done);
+	uart_tx #(CLK_FREQ_HZ) tx(CLK,baudrate,tx_transmit,tx_data,tx_active,tx_o,tx_enable,tx_done);
 
 	always @(posedge CLK, posedge reset) begin: FRAME_MATCHER
 		localparam IDLE = 4'h0, RECEIVE_STATUS_REQUEST = 4'h1, CHECK_CRC_STATUS_REQUEST = 4'h2, RECEIVE_CONTROL_MODE = 4'h3,

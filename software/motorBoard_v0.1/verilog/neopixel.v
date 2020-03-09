@@ -6,16 +6,15 @@ module neopixel #(parameter CLOCK_SPEED_HZ = 32_000_000)(
     output reg one_wire
   );
 
-reg [31:0] timer;
+reg [10:0] timer;
 
 always @ ( posedge clock ) begin
   timer <= timer + 1;
 end
 
 
-reg unsigned [3:0] state;
-wire unsigned [3:0] next_state;
-reg [31:0] bit_ctr;
+reg [1:0] state;
+reg [4:0] bit_ctr;
 wire color_bit;
 reg start;
 
@@ -25,8 +24,8 @@ always @(posedge clock, posedge reset) begin: neo_pixel_transmitter
 		parameter SIZE = 4;
 		parameter SEND_0  = 0, SEND_1 = 1,LATCH = 2, IDLE = 3;
 		reg done;
-		reg [31:0] t0;
-		reg [31:0] t1;
+		reg [10:0] t0;
+		reg [10:0] t1;
 		if(reset==1) begin
 			start <= 1;
 			done <= 0;

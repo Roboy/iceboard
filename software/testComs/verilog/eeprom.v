@@ -27,7 +27,7 @@ reg rw;
 reg [7:0] state;
 reg [15:0] delay_counter;
 reg [7:0] bytes[4:0];
-integer byte_counter;
+reg [2:0] byte_counter;
 
 assign id = bytes[0];
 assign baudrate = {bytes[4],bytes[3],bytes[2],bytes[1]};
@@ -73,8 +73,6 @@ always @ ( posedge clk ) begin: EEPROM_READOUT_FSM
         state <= READ;
         delay_counter <= 2000;
       end else begin
-        // id <= bytes[0];
-        // baudrate <= {bytes[4],bytes[3],bytes[2],bytes[1]};
         data_ready <= 1'b1;
         state <= IDLE;
       end
