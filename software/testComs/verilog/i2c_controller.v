@@ -179,6 +179,9 @@ module i2c_controller(
 			sda_out <= 1;
 		end else begin
 			case(state)
+				IDLE: begin
+					write_enable <= 0;
+				end
 
 				START: begin
 					write_enable <= 1;

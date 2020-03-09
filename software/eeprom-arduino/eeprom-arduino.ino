@@ -34,7 +34,7 @@ void loop() {
       Serial.println("invalid bus id, choose between 1-254");
     }else{
       integer_union baudrate, baudrate_readback;
-      baudrate.value = 1000000;
+      baudrate.value = 2000000;
       Serial.print("writing bus_id: ");
       Serial.println(value);
       Serial.print("baudrate: ");
@@ -54,6 +54,7 @@ void loop() {
       Serial.print("raw data read: ");
       for(int i=1;i<5;i++){
         baudrate_readback.data[i-1] = readI2CByte(i);
+        delay(10);
         Serial.print(baudrate_readback.data[i-1], HEX);
         Serial.print("\t");
       }

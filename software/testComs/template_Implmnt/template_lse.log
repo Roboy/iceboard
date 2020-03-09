@@ -1,3 +1,13 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Mar  9 10:14:29 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
 Synthesis options:
 The -a option is SBTiCE40.
 The -t option is CM81.
@@ -327,4 +337,101 @@ original encoding -> new encoding (one-hot encoding)
 WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
 WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
 WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
-WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on TX due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/i2c_controller.v(173): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(180): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/neopixel.v(117): Register \nx/state_i3 is stuck at Zero. VDB-5013
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 741 of 7680 (9 % )
+SB_CARRY => 496
+SB_DFF => 277
+SB_DFFE => 133
+SB_DFFER => 24
+SB_DFFESR => 133
+SB_DFFESS => 118
+SB_DFFN => 1
+SB_DFFNESS => 2
+SB_DFFR => 40
+SB_DFFS => 1
+SB_DFFSR => 12
+SB_GB_IO => 1
+SB_IO => 16
+SB_LUT4 => 3183
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : clk16MHz, loads : 717
+  Net : eeprom/i2c/i2c_clk, loads : 26
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : reset, loads : 242
+  Net : neopxl_color_23__I_0/FRAME_MATCHER.i_31__N_2379, loads : 181
+  Net : neopxl_color_23__I_0/FRAME_MATCHER.state_3, loads : 127
+  Net : neopxl_color_23__I_0/n1449, loads : 99
+  Net : neopxl_color_23__I_0/FRAME_MATCHER.state_31_N_2482_3, loads : 81
+  Net : neopxl_color_23__I_0/n14116, loads : 61
+  Net : eeprom/baudrate_4, loads : 58
+  Net : eeprom/baudrate_2, loads : 52
+  Net : eeprom/baudrate_8, loads : 50
+  Net : eeprom/baudrate_3, loads : 50
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|    2.730 MHz|   234 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 318.027  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 29.508  secs
+--------------------------------------------------------------

@@ -80768,7 +80768,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_151"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_153"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -80865,7 +80865,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/i2c_clk_I_0_149"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/i2c_clk_I_0_151"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
@@ -80895,7 +80895,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/enable_slow_I_0_157"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/enable_slow_I_0_159"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "c"  direction = "in"  />
@@ -81008,7 +81008,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/enable_slow_I_0_156"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/enable_slow_I_0_158"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -81159,7 +81159,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/counter2_7__I_0_134"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/counter2_7__I_0_135"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
@@ -81210,7 +81210,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/i2c_clk_121"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "eeprom/i2c/i2c_clk_122"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -81286,7 +81286,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/i2c_scl_enable_123"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "eeprom/i2c/i2c_scl_enable_124"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "q"  direction = "out"  />
@@ -81304,7 +81304,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_152"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_154"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -81402,7 +81402,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_158"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_160"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -81572,7 +81572,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/rst_I_0_146"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/rst_I_0_147"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -82857,7 +82857,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_136"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_137"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -82892,7 +82892,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_137"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_138"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -82928,7 +82928,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_138"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_139"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -82964,7 +82964,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_139"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_140"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -83000,7 +83000,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_140"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_141"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -83036,7 +83036,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_141"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_142"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -83072,7 +83072,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_142"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_143"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -83108,7 +83108,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_143"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_144"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -83144,7 +83144,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_144"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_145"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -83180,7 +83180,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_145"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_146"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -83216,7 +83216,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_147"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_148"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -83252,7 +83252,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__N_3812_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__N_3812_I_0_149"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[10]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -83284,7 +83284,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__I_0_135"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__I_0_136"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "data[87]"  direction = "in"  />
         <pitem  name = "data[86]"  direction = "in"  />
@@ -84554,7 +84554,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/i2c_clk_I_0_150"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/i2c_clk_I_0_152"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -84638,7 +84638,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/counter_2__I_0_155"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/counter_2__I_0_157"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "data[7]"  direction = "in"  />
         <pitem  name = "data[6]"  direction = "in"  />
@@ -84702,8 +84702,9 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__N_3813_I_0_153"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__N_3812_I_0_155"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
         <pitem  name = "a[5]"  direction = "in"  />
         <pitem  name = "a[4]"  direction = "in"  />
@@ -84715,6 +84716,7 @@
         </pins>
 
         <nets>
+        <nitem  name = "eeprom/i2c/state_7__N_3812"  />
         <nitem  name = "eeprom/i2c/state_7__N_3813"  />
         <nitem  name = "eeprom/i2c/state_7__N_3814"  />
         <nitem  name = "eeprom/i2c/state_7__N_3815"  />
@@ -84722,11 +84724,27 @@
         <nitem  name = "eeprom/i2c/state_7__N_3819"  />
         <nitem  name = "eeprom/i2c/state_7__N_3820"  />
         <nitem  name = "eeprom/i2c/state_7__N_3822"  />
-        <nitem  name = "eeprom/i2c/sda_enable_N_3909"  />
+        <nitem  name = "eeprom/i2c/sda_enable_N_3910"  />
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/state_7__N_3813_I_0_148"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "eeprom/i2c/state_7__N_3812_I_0_150"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "eeprom/i2c/state_7__N_3812"  />
+        <nitem  name = "eeprom/i2c/state_7__N_3815"  />
+        <nitem  name = "eeprom/i2c/state_7__N_3819"  />
+        <nitem  name = "eeprom/i2c/sda_enable_N_3907"  />
+        </nets>
+    </instance>
+
+    <instance  name = "eeprom/i2c/state_7__N_3813_I_0_156"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -84740,7 +84758,7 @@
         <nitem  name = "eeprom/i2c/state_7__N_3816"  />
         <nitem  name = "eeprom/i2c/state_7__N_3820"  />
         <nitem  name = "eeprom/i2c/state_7__N_3822"  />
-        <nitem  name = "eeprom/i2c/sda_enable_N_3907"  />
+        <nitem  name = "eeprom/i2c/sda_enable_N_3908"  />
         </nets>
     </instance>
 
@@ -84753,30 +84771,16 @@
 
         <nets>
         <nitem  name = "eeprom/i2c/state_7__N_3814"  />
-        <nitem  name = "eeprom/i2c/sda_enable_N_3909"  />
-        <nitem  name = "eeprom/i2c/sda_enable_N_3908"  />
-        </nets>
-    </instance>
-
-    <instance  name = "eeprom/i2c/state_7__N_3815_I_0_154"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "eeprom/i2c/state_7__N_3815"  />
-        <nitem  name = "eeprom/i2c/state_7__N_3819"  />
         <nitem  name = "eeprom/i2c/sda_enable_N_3910"  />
+        <nitem  name = "eeprom/i2c/sda_enable_N_3909"  />
         </nets>
     </instance>
 
     <instance  name = "eeprom/i2c/sda_enable_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "data[0]"  direction = "in"  />
         <pitem  name = "data[2]"  direction = "in"  />
         <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[0]"  direction = "in"  />
         <pitem  name = "sel[2]"  direction = "in"  />
         <pitem  name = "sel[1]"  direction = "in"  />
         <pitem  name = "sel[0]"  direction = "in"  />
@@ -84789,8 +84793,26 @@
         <nitem  name = "sda_enable"  />
         <nitem  name = "eeprom/i2c/sda_enable_N_3907"  />
         <nitem  name = "eeprom/i2c/sda_enable_N_3908"  />
-        <nitem  name = "eeprom/i2c/sda_enable_N_3910"  />
+        <nitem  name = "eeprom/i2c/sda_enable_N_3909"  />
         <nitem  name = "eeprom/i2c/sda_enable_N_3906"  />
+        </nets>
+    </instance>
+
+    <instance  name = "eeprom/i2c/state_7__N_3812_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "eeprom/i2c/state_7__N_3812"  />
+        <nitem  name = "eeprom/i2c/state_7__N_3815"  />
+        <nitem  name = "eeprom/i2c/state_7__N_3819"  />
+        <nitem  name = "eeprom/i2c/sda_enable_N_3910"  />
+        <nitem  name = "eeprom/i2c/sda_out_N_3920"  />
         </nets>
     </instance>
 
@@ -84804,38 +84826,22 @@
         <nets>
         <nitem  name = "eeprom/i2c/state_7__N_3813"  />
         <nitem  name = "eeprom/i2c/state_7__N_3820"  />
-        <nitem  name = "eeprom/i2c/sda_out_N_3920"  />
-        </nets>
-    </instance>
-
-    <instance  name = "eeprom/i2c/state_7__N_3815_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "eeprom/i2c/state_7__N_3815"  />
-        <nitem  name = "eeprom/i2c/state_7__N_3819"  />
-        <nitem  name = "eeprom/i2c/sda_enable_N_3909"  />
         <nitem  name = "eeprom/i2c/sda_out_N_3921"  />
         </nets>
     </instance>
 
     <instance  name = "eeprom/i2c/sda_out_I_918"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "data[4]"  direction = "in"  />
+        <pitem  name = "data[3]"  direction = "in"  />
         <pitem  name = "data[0]"  direction = "in"  />
-        <pitem  name = "data[2]"  direction = "in"  />
-        <pitem  name = "sel[3]"  direction = "in"  />
+        <pitem  name = "data[4]"  direction = "in"  />
+        <pitem  name = "sel[2]"  direction = "in"  />
         <pitem  name = "sel[1]"  direction = "in"  />
         <pitem  name = "sel[0]"  direction = "in"  />
-        <pitem  name = "data[3]"  direction = "in"  />
+        <pitem  name = "data[2]"  direction = "in"  />
         <pitem  name = "data[1]"  direction = "in"  />
         <pitem  name = "sel[4]"  direction = "in"  />
-        <pitem  name = "sel[2]"  direction = "in"  />
+        <pitem  name = "sel[3]"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
@@ -84854,7 +84860,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/sda_out_132"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "eeprom/i2c/sda_out_133"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "r"  direction = "in"  />
         <pitem  name = "q"  direction = "out"  />
@@ -84872,7 +84878,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/enable_slow_120"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "eeprom/i2c/enable_slow_121"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -84889,7 +84895,7 @@
         </nets>
     </instance>
 
-    <instance  name = "eeprom/i2c/write_enable_131"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "eeprom/i2c/write_enable_132"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "r"  direction = "in"  />
         <pitem  name = "q"  direction = "out"  />
@@ -84973,17 +84979,17 @@
         <reg  name = "neopxl_color_23__I_0/tx/r_Bit_Index"  />
         <reg  name = "neopxl_color_23__I_0/tx/r_Tx_Data"  />
         <reg  name = "neopxl_color_23__I_0/tx/r_SM_Main"  />
-        <reg  name = "eeprom/i2c/i2c_clk_121"  />
+        <reg  name = "eeprom/i2c/i2c_clk_122"  />
         <reg  name = "eeprom/i2c/counter2"  />
-        <reg  name = "eeprom/i2c/i2c_scl_enable_123"  />
+        <reg  name = "eeprom/i2c/i2c_scl_enable_124"  />
         <reg  name = "eeprom/i2c/state"  />
         <reg  name = "eeprom/i2c/saved_addr"  />
         <reg  name = "eeprom/i2c/saved_data"  />
         <reg  name = "eeprom/i2c/counter"  />
         <reg  name = "eeprom/i2c/data_out"  />
-        <reg  name = "eeprom/i2c/sda_out_132"  />
-        <reg  name = "eeprom/i2c/enable_slow_120"  />
-        <reg  name = "eeprom/i2c/write_enable_131"  />
+        <reg  name = "eeprom/i2c/sda_out_133"  />
+        <reg  name = "eeprom/i2c/enable_slow_121"  />
+        <reg  name = "eeprom/i2c/write_enable_132"  />
     </regs>
 
     <!--
