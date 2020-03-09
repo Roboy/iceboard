@@ -1,0 +1,13 @@
+Id,Designator,Package,Quantity,Designation,Supplier and ref
+1,"C1,C2,C4",C_0402_1005Metric,3,0.1uF,
+6,J1,USB_Micro-B_Molex_47346-0001,1,USB_OTG,
+7,J2,Laird_Technologies_BMI-S-201-F_13.66x12.70mm,1,RF_Shield_Two_Pieces,
+8,J4,TE-Connectivity_Micro-Match_connector_02x03_Pitch_1.27mm,1,diff_uart,
+10,R4,R_0402_1005Metric,1,10k,
+11,"R5,R6",R_0402_1005Metric,2,1k,
+12,U1,ltc2855,1,LTC2855CDEPBF,
+13,U2,SSOP-28_5.3x10.2mm_P0.65mm,1,FT232RL,
+14,C3,C_0402_1005Metric,1,10nF,
+15,L1,R_0402_1005Metric,1,Ferrite_Bead_Small,
+16,J3,TE-Connectivity_Micro-Match_connector_02x02_Pitch_1.27mm,1,uart,
+17,"D1,D2",LED_0402_1005Metric,2,LED,

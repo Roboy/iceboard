@@ -1,0 +1,8 @@
+Id,Designator,Package,Quantity,Designation,Supplier and ref
+1,J1,Laird_Technologies_BMI-S-201-F_13.66x12.70mm,1,RF_Shield_Two_Pieces,
+2,"C1,C2",C_0402_1005Metric,2,0.1uF,
+3,"J2,J3",TE-Connectivity_Micro-Match_connector_02x03_Pitch_1.27mm,2,"uart,diff_uart",
+5,R1,R_0402_1005Metric,1,10k,
+6,U1,ltc2855,1,LTC2855CDEPBF,
+7,"R2,R3",R_0402_1005Metric,2,1k,
+13,"D1,D2",LED_0402_1005Metric,2,LED,
