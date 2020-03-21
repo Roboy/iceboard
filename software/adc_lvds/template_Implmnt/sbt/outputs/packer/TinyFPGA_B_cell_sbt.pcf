@@ -1,0 +1,44 @@
+ble_pack blink_counter_14__i0_LC_3_23_0 { blink_counter_14_add_4_2_lut, blink_counter_14__i0, blink_counter_14_add_4_2 }
+ble_pack blink_counter_14__i1_LC_3_23_1 { blink_counter_14_add_4_3_lut, blink_counter_14__i1, blink_counter_14_add_4_3 }
+ble_pack blink_counter_14__i2_LC_3_23_2 { blink_counter_14_add_4_4_lut, blink_counter_14__i2, blink_counter_14_add_4_4 }
+ble_pack blink_counter_14__i3_LC_3_23_3 { blink_counter_14_add_4_5_lut, blink_counter_14__i3, blink_counter_14_add_4_5 }
+ble_pack blink_counter_14__i4_LC_3_23_4 { blink_counter_14_add_4_6_lut, blink_counter_14__i4, blink_counter_14_add_4_6 }
+ble_pack blink_counter_14__i5_LC_3_23_5 { blink_counter_14_add_4_7_lut, blink_counter_14__i5, blink_counter_14_add_4_7 }
+ble_pack blink_counter_14__i6_LC_3_23_6 { blink_counter_14_add_4_8_lut, blink_counter_14__i6, blink_counter_14_add_4_8 }
+ble_pack blink_counter_14__i7_LC_3_23_7 { blink_counter_14_add_4_9_lut, blink_counter_14__i7, blink_counter_14_add_4_9 }
+clb_pack LT_3_23 { blink_counter_14__i0_LC_3_23_0, blink_counter_14__i1_LC_3_23_1, blink_counter_14__i2_LC_3_23_2, blink_counter_14__i3_LC_3_23_3, blink_counter_14__i4_LC_3_23_4, blink_counter_14__i5_LC_3_23_5, blink_counter_14__i6_LC_3_23_6, blink_counter_14__i7_LC_3_23_7 }
+set_location LT_3_23 3 23
+ble_pack blink_counter_14__i8_LC_3_24_0 { blink_counter_14_add_4_10_lut, blink_counter_14__i8, blink_counter_14_add_4_10 }
+ble_pack blink_counter_14__i9_LC_3_24_1 { blink_counter_14_add_4_11_lut, blink_counter_14__i9, blink_counter_14_add_4_11 }
+ble_pack blink_counter_14__i10_LC_3_24_2 { blink_counter_14_add_4_12_lut, blink_counter_14__i10, blink_counter_14_add_4_12 }
+ble_pack blink_counter_14__i11_LC_3_24_3 { blink_counter_14_add_4_13_lut, blink_counter_14__i11, blink_counter_14_add_4_13 }
+ble_pack blink_counter_14__i12_LC_3_24_4 { blink_counter_14_add_4_14_lut, blink_counter_14__i12, blink_counter_14_add_4_14 }
+ble_pack blink_counter_14__i13_LC_3_24_5 { blink_counter_14_add_4_15_lut, blink_counter_14__i13, blink_counter_14_add_4_15 }
+ble_pack blink_counter_14__i14_LC_3_24_6 { blink_counter_14_add_4_16_lut, blink_counter_14__i14, blink_counter_14_add_4_16 }
+ble_pack blink_counter_14__i15_LC_3_24_7 { blink_counter_14_add_4_17_lut, blink_counter_14__i15, blink_counter_14_add_4_17 }
+clb_pack LT_3_24 { blink_counter_14__i8_LC_3_24_0, blink_counter_14__i9_LC_3_24_1, blink_counter_14__i10_LC_3_24_2, blink_counter_14__i11_LC_3_24_3, blink_counter_14__i12_LC_3_24_4, blink_counter_14__i13_LC_3_24_5, blink_counter_14__i14_LC_3_24_6, blink_counter_14__i15_LC_3_24_7 }
+set_location LT_3_24 3 24
+ble_pack blink_counter_14__i16_LC_3_25_0 { blink_counter_14_add_4_18_lut, blink_counter_14__i16, blink_counter_14_add_4_18 }
+ble_pack blink_counter_14__i17_LC_3_25_1 { blink_counter_14_add_4_19_lut, blink_counter_14__i17, blink_counter_14_add_4_19 }
+ble_pack blink_counter_14__i18_LC_3_25_2 { blink_counter_14_add_4_20_lut, blink_counter_14__i18, blink_counter_14_add_4_20 }
+ble_pack blink_counter_14__i19_LC_3_25_3 { blink_counter_14_add_4_21_lut, blink_counter_14__i19, blink_counter_14_add_4_21 }
+ble_pack blink_counter_14__i20_LC_3_25_4 { blink_counter_14_add_4_22_lut, blink_counter_14__i20, blink_counter_14_add_4_22 }
+ble_pack blink_counter_14__i21_LC_3_25_5 { blink_counter_14_add_4_23_lut, blink_counter_14__i21, blink_counter_14_add_4_23 }
+ble_pack blink_counter_14__i22_LC_3_25_6 { blink_counter_14_add_4_24_lut, blink_counter_14__i22, blink_counter_14_add_4_24 }
+ble_pack blink_counter_14__i23_LC_3_25_7 { blink_counter_14_add_4_25_lut, blink_counter_14__i23, blink_counter_14_add_4_25 }
+clb_pack LT_3_25 { blink_counter_14__i16_LC_3_25_0, blink_counter_14__i17_LC_3_25_1, blink_counter_14__i18_LC_3_25_2, blink_counter_14__i19_LC_3_25_3, blink_counter_14__i20_LC_3_25_4, blink_counter_14__i21_LC_3_25_5, blink_counter_14__i22_LC_3_25_6, blink_counter_14__i23_LC_3_25_7 }
+set_location LT_3_25 3 25
+ble_pack blink_counter_14__i24_LC_3_26_0 { blink_counter_14_add_4_26_lut, blink_counter_14__i24, blink_counter_14_add_4_26 }
+ble_pack blink_counter_14__i25_LC_3_26_1 { blink_counter_14_add_4_27_lut, blink_counter_14__i25 }
+clb_pack LT_3_26 { blink_counter_14__i24_LC_3_26_0, blink_counter_14__i25_LC_3_26_1 }
+set_location LT_3_26 3 26
+ble_pack i54_4_lut_LC_4_25_0 { i54_4_lut }
+ble_pack i55_4_lut_LC_4_25_1 { i55_4_lut }
+ble_pack i56_3_lut_LC_4_25_2 { i56_3_lut }
+clb_pack LT_4_25 { i54_4_lut_LC_4_25_0, i55_4_lut_LC_4_25_1, i56_3_lut_LC_4_25_2 }
+set_location LT_4_25 4 25
+set_location CLK_pad_gb 0 17
+set_io PIN_18 A9
+set_io PIN_13 H2
+set_io LED B3
+set_io CLK B2

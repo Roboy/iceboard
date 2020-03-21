@@ -1,0 +1,3098 @@
+23:05
+/home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jan 30 23:05:43 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testBoard (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+ERROR - synthesis: verilog/TinyFPGA_B.v(134): ID is not declared. VERI-1128
+Synthesis failed.
+Synthesis batch mode runtime 0 seconds/home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jan 30 23:05:59 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testBoard (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+ERROR - synthesis: verilog/TinyFPGA_B.v(139): ID is not declared. VERI-1128
+Synthesis failed.
+Synthesis batch mode runtime 0 seconds/home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jan 30 23:06:17 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testBoard (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+Analyzing Verilog file verilog/pwm.v. VERI-1482
+Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/TinyFPGA_B_pll_1MHz.v. VERI-1482
+WARNING - synthesis: verilog/TinyFPGA_B_pll_1MHz.v(27): literal value truncated to fit in 3 bits. VERI-1208
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/testBoard". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(46): expression size 32 truncated to fit in target size 16. VERI-1209
+INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(45): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(125): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+######## Missing driver on net NEOPXL. Patching with GND.
+######## Missing driver on net DE. Patching with GND.
+######## Missing driver on net TX. Patching with GND.
+######## Missing driver on net CS_CLK. Patching with GND.
+######## Missing driver on net CS. Patching with GND.
+######## Missing driver on net INLC. Patching with GND.
+######## Missing driver on net INHC. Patching with GND.
+######## Missing driver on net INLB. Patching with GND.
+######## Missing driver on net INHB. Patching with GND.
+######## Missing driver on net INLA. Patching with GND.
+######## Missing driver on net INHA. Patching with GND.
+######## Missing driver on net addr[10]. Patching with GND.
+######## Missing driver on net addr[9]. Patching with GND.
+######## Missing driver on net addr[8]. Patching with GND.
+######## Missing driver on net addr[7]. Patching with GND.
+######## Missing driver on net addr[6]. Patching with GND.
+######## Missing driver on net addr[5]. Patching with GND.
+######## Missing driver on net addr[4]. Patching with GND.
+######## Missing driver on net addr[3]. Patching with GND.
+######## Missing driver on net addr[2]. Patching with GND.
+######## Missing driver on net addr[1]. Patching with GND.
+######## Missing driver on net addr[0]. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(57): Register \eeprom/reset_41 is stuck at Zero. VDB-5013
+
+
+
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/i2c_controller.v(156): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(148): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/i2c_controller.v(156): Register \eeprom/i2c/data_out_i0_i7 is stuck at One. VDB-5014
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 73 of 7680 (0 % )
+SB_CARRY => 51
+SB_DFF => 34
+SB_DFFE => 2
+SB_DFFESR => 15
+SB_DFFESS => 13
+SB_DFFN => 1
+SB_DFFNE => 1
+SB_DFFNESS => 1
+SB_DFFSR => 6
+SB_GB_IO => 1
+SB_IO => 15
+SB_LUT4 => 128
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : CLK_c, loads : 57
+  Net : eeprom/i2c/i2c_clk, loads : 18
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : eeprom/n728, loads : 31
+  Net : eeprom/i2c/state_2, loads : 21
+  Net : eeprom/i2c/state_0, loads : 18
+  Net : eeprom/i2c/state_3, loads : 18
+  Net : eeprom/i2c/state_1, loads : 18
+  Net : eeprom/n1826, loads : 17
+  Net : eeprom/n1934, loads : 16
+  Net : eeprom/state_0, loads : 9
+  Net : eeprom/i2c/n1059, loads : 8
+  Net : eeprom/i2c/n1809, loads : 8
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.457 MHz|     9  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   23.698 MHz|    27  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 201.449  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.156  secs
+--------------------------------------------------------------
+Current Implementation template_Implmnt its sbt path: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt
+Synthesis succeed.
+Synthesis succeeded.
+Synthesis runtime 1 seconds
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/edifparser" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf " "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist" "-pCM81" "-y/home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf " "-s/home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc " -c --devicename iCE40LP8K
+starting edif parserrunning edif parserLattice Semiconductor Corporation  Edif Parser
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:01:35
+
+Parsing edif file: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf...
+Parsing constraint file: /home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf...
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+sdc_reader OK /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc
+Warning: Found double defined(create_clock) at CLK. Using latest one and ignore previous one
+	Ignored create_clock  -period 62.50  -waveform {0.00 31.25}  -name {CLK} [get_ports {CLK}]
+Stored edif netlist at /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B...
+Warning: The terminal connectivity sda_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity USBPU_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity TX_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity NEOPXL_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity LED_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity DE_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal eeprom.state__i0:E is driven by default driver : VCC, Disconnecting it.
+
+write Timing Constraint to /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+
+EDIF Parser succeeded
+Top module is: TinyFPGA_B
+
+EDF Parser run-time: 1 (sec)
+edif parser succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --package CM81 --deviceMarketName iCE40LP8K --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --effort_level std --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc"
+starting placerrunning placerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --package CM81 --deviceMarketName iCE40LP8K --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --effort_level std --out-sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc
+Lattice Semiconductor Corporation  Placer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:22:02
+
+W2715: Warning for set_io Constraint: Ignoring pin assignment for CS_MISO, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for FAULT_N, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL1, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL2, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL3, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for RX, as it is not connected to any PAD
+I2004: Option and Settings Summary
+=============================================================
+Device file          - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+Package              - CM81
+Design database      - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B
+SDC file             - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+Output directory     - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer
+Timing library       - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib
+Effort level         - std
+
+I2050: Starting reading inputs for placer
+=============================================================
+I2100: Reading design library: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B/BFPGA_DESIGN_ep
+I2065: Reading device file : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+I2051: Reading of inputs for placer completed successfully
+
+I2053: Starting placement of the design
+=============================================================
+
+Input Design Statistics
+    Number of LUTs      	:	128
+    Number of DFFs      	:	73
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	51
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	15
+    Number of GBIOs     	:	1
+    Number of GBs       	:	0
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+
+Phase 1
+I2077: Start design legalization
+
+Design Legalization Statistics
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	0
+    Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	1
+    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	0
+    Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
+    Total LUTs inserted                                            	:	1
+    Total CARRYs inserted                                          	:	0
+
+
+I2078: Design legalization is completed successfully
+I2088: Phase 1, elapsed time : 0.0 (sec)
+
+W2216: SB_GB_IO 'CLK_pad' is assigned to a non-GB pin 'B2'. Replacing it with SB_IO 'CLK_pad' and SB_GB 'CLK_pad_gb'
+
+Phase 2
+I2088: Phase 2, elapsed time : 0.0 (sec)
+
+Phase 3
+Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
+
+Design Statistics after Packing
+    Number of LUTs      	:	130
+    Number of DFFs      	:	73
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	51
+
+Device Utilization Summary after Packing
+    Sequential LogicCells
+        LUT and DFF      	:	22
+        LUT, DFF and CARRY	:	51
+    Combinational LogicCells
+        Only LUT         	:	57
+        CARRY Only       	:	0
+        LUT with CARRY   	:	0
+    LogicCells                  :	130/7680
+    PLBs                        :	21/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+I2088: Phase 3, elapsed time : 0.3 (sec)
+
+Phase 4
+I2088: Phase 4, elapsed time : 0.2 (sec)
+
+Phase 5
+I2088: Phase 5, elapsed time : 0.2 (sec)
+
+Phase 6
+I2088: Phase 6, elapsed time : 42.2 (sec)
+
+Final Design Statistics
+    Number of LUTs      	:	130
+    Number of DFFs      	:	73
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	51
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	16
+    Number of GBIOs     	:	0
+    Number of GBs       	:	1
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+Device Utilization Summary
+    LogicCells                  :	130/7680
+    PLBs                        :	31/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+
+#####################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+=====================================================================
+
+#####################################################################
+                     Clock Summary 
+=====================================================================
+Number of clocks: 2
+Clock: CLK | Frequency: 105.24 MHz | Target: 16.00 MHz
+Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 98.40 MHz | Target: 16.00 MHz
+
+=====================================================================
+                     End of Clock Summary
+#####################################################################
+
+I2054: Placement of design completed successfully
+
+I2076: Placer run-time: 43.1 sec.
+
+placer succeed.
+starting IPExporterrunning IPExporterIPExporter succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --DRC_only  --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 309
+used logic cells: 130
+Design Rule Checking Succeeded
+
+DRC Checker run-time: 0 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 309
+used logic cells: 130
+Translating sdc file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc...
+Translated sdc file is /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc
+Packer succeeded
+
+Packer run-time: 1 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router" --sdf_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --pin_permutation
+starting routerrunning routerSJRouter....
+Executing : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router --sdf_file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --pin_permutation 
+Lattice Semiconductor Corporation  Router
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:09:33
+
+I1203: Reading Design TinyFPGA_B
+Read design time: 0
+I1202: Reading Architecture of device iCE40LP8K
+Read device time: 9
+I1209: Started routing
+I1223: Total Nets : 194 
+I1212: Iteration  1 :    37 unrouted : 0 seconds
+I1212: Iteration  2 :     5 unrouted : 0 seconds
+I1212: Iteration  3 :     0 unrouted : 0 seconds
+I1215: Routing is successful
+Routing time: 1
+I1206: Completed routing
+I1204: Writing Design TinyFPGA_B
+Lib Closed
+I1210: Writing routes
+I1218: Exiting the router
+I1224: Router run-time : 10 seconds
+ total           325112K
+router succeed.
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/netlister" --verilog "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v" --vhdl "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd" --lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --view rt --device "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --splitio  --in-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc"
+starting netlistrunning netlistLattice Semiconductor Corporation  Verilog & VHDL Netlister
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:25:37
+
+Generating Verilog & VHDL netlist files ...
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd
+Netlister succeeded.
+
+Netlister run-time: 2 (sec)
+netlist succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc" --sdf-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --report-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --timing-summary
+starting timerrunning timerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc --sdf-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --report-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --timing-summary
+Lattice Semiconductor Corporation  Timer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:08:07
+
+Warning-1034: Found non-unate timing arc, from pin "PADIN" to pin "DIN0" of instance "CLK_pad_preio", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "DOUT0" to pin "PADOUT" of instance "scl_output_preio", in the clock network. Converting the timing arc to positive-unate
+Timer run-time: 1 seconds
+timer succeed.
+timer succeeded.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/bitmap" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --design "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --device_name iCE40LP8K --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/bitmap" --low_power on --init_ram on --init_ram_bank 1111 --frequency low --warm_boot on
+starting bitmaprunning bitmapLattice Semiconductor Corporation  Bit Stream Generator
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:24:49
+
+Bit Stream File Size: 1080760 (1M 31K 440 Bits)
+Bit Stream Generator succeeded
+
+Bitmap run-time: 1 (sec)
+bitmap succeed.
+/home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jan 30 23:09:42 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testBoard (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+Analyzing Verilog file verilog/pwm.v. VERI-1482
+Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/TinyFPGA_B_pll_1MHz.v. VERI-1482
+WARNING - synthesis: verilog/TinyFPGA_B_pll_1MHz.v(27): literal value truncated to fit in 3 bits. VERI-1208
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/testBoard". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(46): expression size 32 truncated to fit in target size 16. VERI-1209
+INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(45): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(125): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+######## Missing driver on net NEOPXL. Patching with GND.
+######## Missing driver on net DE. Patching with GND.
+######## Missing driver on net TX. Patching with GND.
+######## Missing driver on net CS_CLK. Patching with GND.
+######## Missing driver on net CS. Patching with GND.
+######## Missing driver on net INLC. Patching with GND.
+######## Missing driver on net INHC. Patching with GND.
+######## Missing driver on net INLB. Patching with GND.
+######## Missing driver on net INHB. Patching with GND.
+######## Missing driver on net INLA. Patching with GND.
+######## Missing driver on net INHA. Patching with GND.
+######## Missing driver on net addr[10]. Patching with GND.
+######## Missing driver on net addr[9]. Patching with GND.
+######## Missing driver on net addr[8]. Patching with GND.
+######## Missing driver on net addr[7]. Patching with GND.
+######## Missing driver on net addr[6]. Patching with GND.
+######## Missing driver on net addr[5]. Patching with GND.
+######## Missing driver on net addr[4]. Patching with GND.
+######## Missing driver on net addr[3]. Patching with GND.
+######## Missing driver on net addr[2]. Patching with GND.
+######## Missing driver on net addr[1]. Patching with GND.
+######## Missing driver on net addr[0]. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(57): Register \eeprom/reset_41 is stuck at Zero. VDB-5013
+
+
+
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/i2c_controller.v(156): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(148): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 113 of 7680 (1 % )
+SB_CARRY => 82
+SB_DFF => 43
+SB_DFFE => 2
+SB_DFFESR => 47
+SB_DFFESS => 12
+SB_DFFN => 1
+SB_DFFNE => 1
+SB_DFFNESS => 1
+SB_DFFSR => 6
+SB_GB_IO => 1
+SB_IO => 15
+SB_LUT4 => 195
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : CLK_c, loads : 89
+  Net : eeprom/i2c/i2c_clk, loads : 26
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n1732, loads : 33
+  Net : n1885, loads : 32
+  Net : eeprom/i2c/n728, loads : 30
+  Net : eeprom/i2c/state_2, loads : 22
+  Net : eeprom/i2c/state_0_adj_375, loads : 19
+  Net : eeprom/i2c/state_3, loads : 19
+  Net : eeprom/i2c/state_1_adj_374, loads : 19
+  Net : eeprom/n1771, loads : 17
+  Net : eeprom/n1924, loads : 16
+  Net : eeprom/state_0_adj_386, loads : 9
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 200.664  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.378  secs
+--------------------------------------------------------------
+Current Implementation template_Implmnt its sbt path: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt
+Synthesis succeed.
+Synthesis succeeded.
+Synthesis runtime 1 seconds
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/edifparser" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf " "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist" "-pCM81" "-y/home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf " "-s/home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc " -c --devicename iCE40LP8K
+starting edif parserrunning edif parserLattice Semiconductor Corporation  Edif Parser
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:01:35
+
+Parsing edif file: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf...
+Parsing constraint file: /home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf...
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+sdc_reader OK /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc
+Warning: Found double defined(create_clock) at CLK. Using latest one and ignore previous one
+	Ignored create_clock  -period 62.50  -waveform {0.00 31.25}  -name {CLK} [get_ports {CLK}]
+Stored edif netlist at /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B...
+Warning: The terminal connectivity sda_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity USBPU_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity TX_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity NEOPXL_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity LED_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity DE_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal eeprom.i2c.state_i0_i0:E is driven by default driver : VCC, Disconnecting it.
+
+write Timing Constraint to /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+
+EDIF Parser succeeded
+Top module is: TinyFPGA_B
+
+EDF Parser run-time: 0 (sec)
+edif parser succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --package CM81 --deviceMarketName iCE40LP8K --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --effort_level std --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc"
+starting placerrunning placerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --package CM81 --deviceMarketName iCE40LP8K --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --effort_level std --out-sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc
+Lattice Semiconductor Corporation  Placer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:22:02
+
+W2715: Warning for set_io Constraint: Ignoring pin assignment for CS_MISO, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for FAULT_N, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL1, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL2, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL3, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for RX, as it is not connected to any PAD
+I2004: Option and Settings Summary
+=============================================================
+Device file          - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+Package              - CM81
+Design database      - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B
+SDC file             - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+Output directory     - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer
+Timing library       - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib
+Effort level         - std
+
+I2050: Starting reading inputs for placer
+=============================================================
+I2100: Reading design library: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B/BFPGA_DESIGN_ep
+I2065: Reading device file : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+I2051: Reading of inputs for placer completed successfully
+
+I2053: Starting placement of the design
+=============================================================
+
+Input Design Statistics
+    Number of LUTs      	:	195
+    Number of DFFs      	:	113
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	82
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	15
+    Number of GBIOs     	:	1
+    Number of GBs       	:	0
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+
+Phase 1
+I2077: Start design legalization
+
+Design Legalization Statistics
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	0
+    Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	1
+    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	0
+    Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
+    Total LUTs inserted                                            	:	1
+    Total CARRYs inserted                                          	:	0
+
+
+I2078: Design legalization is completed successfully
+I2088: Phase 1, elapsed time : 0.0 (sec)
+
+W2216: SB_GB_IO 'CLK_pad' is assigned to a non-GB pin 'B2'. Replacing it with SB_IO 'CLK_pad' and SB_GB 'CLK_pad_gb'
+
+Phase 2
+I2088: Phase 2, elapsed time : 0.0 (sec)
+
+Phase 3
+Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
+
+Design Statistics after Packing
+    Number of LUTs      	:	197
+    Number of DFFs      	:	113
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	82
+
+Device Utilization Summary after Packing
+    Sequential LogicCells
+        LUT and DFF      	:	31
+        LUT, DFF and CARRY	:	82
+    Combinational LogicCells
+        Only LUT         	:	84
+        CARRY Only       	:	0
+        LUT with CARRY   	:	0
+    LogicCells                  :	197/7680
+    PLBs                        :	30/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+I2088: Phase 3, elapsed time : 0.4 (sec)
+
+Phase 4
+I2088: Phase 4, elapsed time : 0.2 (sec)
+
+Phase 5
+I2088: Phase 5, elapsed time : 0.2 (sec)
+
+Phase 6
+I2088: Phase 6, elapsed time : 41.2 (sec)
+
+Final Design Statistics
+    Number of LUTs      	:	197
+    Number of DFFs      	:	113
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	82
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	16
+    Number of GBIOs     	:	0
+    Number of GBs       	:	1
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+Device Utilization Summary
+    LogicCells                  :	197/7680
+    PLBs                        :	40/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+
+#####################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+=====================================================================
+
+#####################################################################
+                     Clock Summary 
+=====================================================================
+Number of clocks: 2
+Clock: CLK | Frequency: 85.10 MHz | Target: 16.00 MHz
+Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 84.55 MHz | Target: 16.00 MHz
+
+=====================================================================
+                     End of Clock Summary
+#####################################################################
+
+I2054: Placement of design completed successfully
+
+I2076: Placer run-time: 42.4 sec.
+
+placer succeed.
+starting IPExporterrunning IPExporterIPExporter succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --DRC_only  --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 387
+used logic cells: 197
+Design Rule Checking Succeeded
+
+DRC Checker run-time: 0 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 387
+used logic cells: 197
+Translating sdc file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc...
+Translated sdc file is /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc
+Packer succeeded
+
+Packer run-time: 1 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router" --sdf_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --pin_permutation
+starting routerrunning routerSJRouter....
+Executing : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router --sdf_file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --pin_permutation 
+Lattice Semiconductor Corporation  Router
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:09:33
+
+I1203: Reading Design TinyFPGA_B
+Read design time: 0
+I1202: Reading Architecture of device iCE40LP8K
+Read device time: 9
+I1209: Started routing
+I1223: Total Nets : 303 
+I1212: Iteration  1 :    42 unrouted : 0 seconds
+I1212: Iteration  2 :     2 unrouted : 0 seconds
+I1212: Iteration  3 :     0 unrouted : 0 seconds
+I1215: Routing is successful
+Routing time: 1
+I1206: Completed routing
+I1204: Writing Design TinyFPGA_B
+Lib Closed
+I1210: Writing routes
+I1218: Exiting the router
+I1224: Router run-time : 11 seconds
+ total           326248K
+router succeed.
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/netlister" --verilog "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v" --vhdl "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd" --lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --view rt --device "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --splitio  --in-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc"
+starting netlistrunning netlistLattice Semiconductor Corporation  Verilog & VHDL Netlister
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:25:37
+
+Generating Verilog & VHDL netlist files ...
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd
+Netlister succeeded.
+
+Netlister run-time: 1 (sec)
+netlist succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc" --sdf-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --report-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --timing-summary
+starting timerrunning timerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc --sdf-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --report-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --timing-summary
+Lattice Semiconductor Corporation  Timer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:08:07
+
+Warning-1034: Found non-unate timing arc, from pin "PADIN" to pin "DIN0" of instance "CLK_pad_preio", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "DOUT0" to pin "PADOUT" of instance "scl_output_preio", in the clock network. Converting the timing arc to positive-unate
+Timer run-time: 2 seconds
+timer succeed.
+timer succeeded.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/bitmap" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --design "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --device_name iCE40LP8K --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/bitmap" --low_power on --init_ram on --init_ram_bank 1111 --frequency low --warm_boot on
+starting bitmaprunning bitmapLattice Semiconductor Corporation  Bit Stream Generator
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:24:49
+
+Bit Stream File Size: 1080760 (1M 31K 440 Bits)
+Bit Stream Generator succeeded
+
+Bitmap run-time: 2 (sec)
+bitmap succeed.
+/home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jan 30 23:11:55 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testBoard (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+Analyzing Verilog file verilog/pwm.v. VERI-1482
+Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/TinyFPGA_B_pll_1MHz.v. VERI-1482
+WARNING - synthesis: verilog/TinyFPGA_B_pll_1MHz.v(27): literal value truncated to fit in 3 bits. VERI-1208
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/testBoard". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(46): expression size 32 truncated to fit in target size 16. VERI-1209
+INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(45): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(125): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+######## Missing driver on net NEOPXL. Patching with GND.
+######## Missing driver on net DE. Patching with GND.
+######## Missing driver on net TX. Patching with GND.
+######## Missing driver on net CS_CLK. Patching with GND.
+######## Missing driver on net CS. Patching with GND.
+######## Missing driver on net INLC. Patching with GND.
+######## Missing driver on net INHC. Patching with GND.
+######## Missing driver on net INLB. Patching with GND.
+######## Missing driver on net INHB. Patching with GND.
+######## Missing driver on net INLA. Patching with GND.
+######## Missing driver on net INHA. Patching with GND.
+######## Missing driver on net addr[10]. Patching with GND.
+######## Missing driver on net addr[9]. Patching with GND.
+######## Missing driver on net addr[8]. Patching with GND.
+######## Missing driver on net addr[7]. Patching with GND.
+######## Missing driver on net addr[6]. Patching with GND.
+######## Missing driver on net addr[5]. Patching with GND.
+######## Missing driver on net addr[4]. Patching with GND.
+######## Missing driver on net addr[3]. Patching with GND.
+######## Missing driver on net addr[2]. Patching with GND.
+######## Missing driver on net addr[1]. Patching with GND.
+######## Missing driver on net addr[0]. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(57): Register \eeprom/reset_41 is stuck at Zero. VDB-5013
+
+
+
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/i2c_controller.v(156): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(148): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 113 of 7680 (1 % )
+SB_CARRY => 82
+SB_DFF => 35
+SB_DFFE => 2
+SB_DFFESR => 47
+SB_DFFESS => 12
+SB_DFFN => 9
+SB_DFFNE => 1
+SB_DFFNESS => 1
+SB_DFFSR => 6
+SB_GB_IO => 1
+SB_IO => 15
+SB_LUT4 => 196
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : CLK_c, loads : 89
+  Net : eeprom/i2c/i2c_clk, loads : 26
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n1737, loads : 33
+  Net : n1892, loads : 32
+  Net : eeprom/i2c/n728, loads : 30
+  Net : eeprom/i2c/state_2, loads : 22
+  Net : eeprom/i2c/state_0, loads : 19
+  Net : eeprom/i2c/state_3, loads : 19
+  Net : eeprom/i2c/state_1, loads : 19
+  Net : eeprom/n1796, loads : 17
+  Net : eeprom/n1931, loads : 16
+  Net : eeprom/i2c/state_7_N_289_3, loads : 11
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 200.914  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.303  secs
+--------------------------------------------------------------
+Current Implementation template_Implmnt its sbt path: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt
+Synthesis succeed.
+Synthesis succeeded.
+Synthesis runtime 1 seconds
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/edifparser" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf " "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist" "-pCM81" "-y/home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf " "-s/home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc " -c --devicename iCE40LP8K
+starting edif parserrunning edif parserLattice Semiconductor Corporation  Edif Parser
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:01:35
+
+Parsing edif file: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf...
+Parsing constraint file: /home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf...
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+sdc_reader OK /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc
+Warning: Found double defined(create_clock) at CLK. Using latest one and ignore previous one
+	Ignored create_clock  -period 62.50  -waveform {0.00 31.25}  -name {CLK} [get_ports {CLK}]
+Stored edif netlist at /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B...
+Warning: The terminal connectivity sda_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity USBPU_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity TX_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity NEOPXL_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity LED_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity DE_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal eeprom.i2c.state_i0_i0:E is driven by default driver : VCC, Disconnecting it.
+
+write Timing Constraint to /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+
+EDIF Parser succeeded
+Top module is: TinyFPGA_B
+
+EDF Parser run-time: 1 (sec)
+edif parser succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --package CM81 --deviceMarketName iCE40LP8K --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --effort_level std --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc"
+starting placerrunning placerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --package CM81 --deviceMarketName iCE40LP8K --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --effort_level std --out-sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc
+Lattice Semiconductor Corporation  Placer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:22:02
+
+W2715: Warning for set_io Constraint: Ignoring pin assignment for CS_MISO, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for FAULT_N, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL1, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL2, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL3, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for RX, as it is not connected to any PAD
+I2004: Option and Settings Summary
+=============================================================
+Device file          - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+Package              - CM81
+Design database      - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B
+SDC file             - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+Output directory     - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer
+Timing library       - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib
+Effort level         - std
+
+I2050: Starting reading inputs for placer
+=============================================================
+I2100: Reading design library: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B/BFPGA_DESIGN_ep
+I2065: Reading device file : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+I2051: Reading of inputs for placer completed successfully
+
+I2053: Starting placement of the design
+=============================================================
+
+Input Design Statistics
+    Number of LUTs      	:	196
+    Number of DFFs      	:	113
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	82
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	15
+    Number of GBIOs     	:	1
+    Number of GBs       	:	0
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+
+Phase 1
+I2077: Start design legalization
+
+Design Legalization Statistics
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	0
+    Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	1
+    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	0
+    Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
+    Total LUTs inserted                                            	:	1
+    Total CARRYs inserted                                          	:	0
+
+
+I2078: Design legalization is completed successfully
+I2088: Phase 1, elapsed time : 0.0 (sec)
+
+W2216: SB_GB_IO 'CLK_pad' is assigned to a non-GB pin 'B2'. Replacing it with SB_IO 'CLK_pad' and SB_GB 'CLK_pad_gb'
+
+Phase 2
+I2088: Phase 2, elapsed time : 0.0 (sec)
+
+Phase 3
+Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
+
+Design Statistics after Packing
+    Number of LUTs      	:	198
+    Number of DFFs      	:	113
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	82
+
+Device Utilization Summary after Packing
+    Sequential LogicCells
+        LUT and DFF      	:	32
+        LUT, DFF and CARRY	:	81
+    Combinational LogicCells
+        Only LUT         	:	84
+        CARRY Only       	:	0
+        LUT with CARRY   	:	1
+    LogicCells                  :	198/7680
+    PLBs                        :	30/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+I2088: Phase 3, elapsed time : 0.3 (sec)
+
+Phase 4
+I2088: Phase 4, elapsed time : 0.2 (sec)
+
+Phase 5
+I2088: Phase 5, elapsed time : 0.2 (sec)
+
+Phase 6
+I2088: Phase 6, elapsed time : 40.9 (sec)
+
+Final Design Statistics
+    Number of LUTs      	:	198
+    Number of DFFs      	:	113
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	82
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	16
+    Number of GBIOs     	:	0
+    Number of GBs       	:	1
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+Device Utilization Summary
+    LogicCells                  :	198/7680
+    PLBs                        :	47/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+
+#####################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+=====================================================================
+
+#####################################################################
+                     Clock Summary 
+=====================================================================
+Number of clocks: 2
+Clock: CLK | Frequency: 83.43 MHz | Target: 16.00 MHz
+Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 82.13 MHz | Target: 16.00 MHz
+
+=====================================================================
+                     End of Clock Summary
+#####################################################################
+
+I2054: Placement of design completed successfully
+
+I2076: Placer run-time: 42.0 sec.
+
+placer succeed.
+starting IPExporterrunning IPExporterIPExporter succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --DRC_only  --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 440
+used logic cells: 198
+Design Rule Checking Succeeded
+
+DRC Checker run-time: 0 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 440
+used logic cells: 198
+Translating sdc file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc...
+Translated sdc file is /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc
+Packer succeeded
+
+Packer run-time: 1 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router" --sdf_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --pin_permutation
+starting routerrunning routerSJRouter....
+Executing : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router --sdf_file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --pin_permutation 
+Lattice Semiconductor Corporation  Router
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:09:33
+
+I1203: Reading Design TinyFPGA_B
+Read design time: 0
+I1202: Reading Architecture of device iCE40LP8K
+Read device time: 9
+I1209: Started routing
+I1223: Total Nets : 297 
+I1212: Iteration  1 :    41 unrouted : 0 seconds
+I1212: Iteration  2 :     0 unrouted : 0 seconds
+I1215: Routing is successful
+Routing time: 1
+I1206: Completed routing
+I1204: Writing Design TinyFPGA_B
+Lib Closed
+I1210: Writing routes
+I1218: Exiting the router
+I1224: Router run-time : 11 seconds
+ total           326264K
+router succeed.
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/netlister" --verilog "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v" --vhdl "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd" --lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --view rt --device "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --splitio  --in-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc"
+starting netlistrunning netlistLattice Semiconductor Corporation  Verilog & VHDL Netlister
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:25:37
+
+Generating Verilog & VHDL netlist files ...
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd
+Netlister succeeded.
+
+Netlister run-time: 2 (sec)
+netlist succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc" --sdf-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --report-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --timing-summary
+starting timerrunning timerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc --sdf-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --report-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --timing-summary
+Lattice Semiconductor Corporation  Timer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:08:07
+
+Warning-1034: Found non-unate timing arc, from pin "PADIN" to pin "DIN0" of instance "CLK_pad_preio", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "DOUT0" to pin "PADOUT" of instance "scl_output_preio", in the clock network. Converting the timing arc to positive-unate
+Timer run-time: 1 seconds
+timer succeed.
+timer succeeded.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/bitmap" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --design "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --device_name iCE40LP8K --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/bitmap" --low_power on --init_ram on --init_ram_bank 1111 --frequency low --warm_boot on
+starting bitmaprunning bitmapLattice Semiconductor Corporation  Bit Stream Generator
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:24:49
+
+Bit Stream File Size: 1080760 (1M 31K 440 Bits)
+Bit Stream Generator succeeded
+
+Bitmap run-time: 2 (sec)
+bitmap succeed.
+/home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jan 30 23:18:10 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testBoard (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+Analyzing Verilog file verilog/pwm.v. VERI-1482
+Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/TinyFPGA_B_pll_1MHz.v. VERI-1482
+WARNING - synthesis: verilog/TinyFPGA_B_pll_1MHz.v(27): literal value truncated to fit in 3 bits. VERI-1208
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/testBoard". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(46): expression size 32 truncated to fit in target size 16. VERI-1209
+INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(45): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(134): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(115): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+######## Missing driver on net NEOPXL. Patching with GND.
+######## Missing driver on net DE. Patching with GND.
+######## Missing driver on net TX. Patching with GND.
+######## Missing driver on net CS_CLK. Patching with GND.
+######## Missing driver on net CS. Patching with GND.
+######## Missing driver on net INLC. Patching with GND.
+######## Missing driver on net INHC. Patching with GND.
+######## Missing driver on net INLB. Patching with GND.
+######## Missing driver on net INHB. Patching with GND.
+######## Missing driver on net INLA. Patching with GND.
+######## Missing driver on net INHA. Patching with GND.
+######## Missing driver on net addr[10]. Patching with GND.
+######## Missing driver on net addr[9]. Patching with GND.
+######## Missing driver on net addr[8]. Patching with GND.
+######## Missing driver on net addr[7]. Patching with GND.
+######## Missing driver on net addr[6]. Patching with GND.
+######## Missing driver on net addr[5]. Patching with GND.
+######## Missing driver on net addr[4]. Patching with GND.
+######## Missing driver on net addr[3]. Patching with GND.
+######## Missing driver on net addr[2]. Patching with GND.
+######## Missing driver on net addr[1]. Patching with GND.
+######## Missing driver on net addr[0]. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(57): Register \eeprom/reset_41 is stuck at Zero. VDB-5013
+
+
+
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/i2c_controller.v(171): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(148): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 114 of 7680 (1 % )
+SB_CARRY => 83
+SB_DFF => 35
+SB_DFFE => 2
+SB_DFFESR => 47
+SB_DFFESS => 12
+SB_DFFN => 9
+SB_DFFNE => 1
+SB_DFFNESS => 1
+SB_DFFSR => 7
+SB_GB_IO => 1
+SB_IO => 15
+SB_LUT4 => 196
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : CLK_c, loads : 90
+  Net : eeprom/i2c/i2c_clk, loads : 26
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n1738, loads : 33
+  Net : n1893, loads : 32
+  Net : eeprom/i2c/n728, loads : 30
+  Net : eeprom/i2c/state_2, loads : 22
+  Net : eeprom/i2c/state_0_adj_374, loads : 19
+  Net : eeprom/i2c/state_3, loads : 19
+  Net : eeprom/i2c/state_1_adj_375, loads : 19
+  Net : eeprom/n1797, loads : 17
+  Net : eeprom/n1932, loads : 16
+  Net : eeprom/i2c/state_7_N_289_3, loads : 11
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 200.785  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.300  secs
+--------------------------------------------------------------
+Current Implementation template_Implmnt its sbt path: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt
+Synthesis succeed.
+Synthesis succeeded.
+Synthesis runtime 1 seconds
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/edifparser" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf " "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist" "-pCM81" "-y/home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf " "-s/home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc " -c --devicename iCE40LP8K
+starting edif parserrunning edif parserLattice Semiconductor Corporation  Edif Parser
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:01:35
+
+Parsing edif file: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf...
+Parsing constraint file: /home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf...
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+sdc_reader OK /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc
+Warning: Found double defined(create_clock) at CLK. Using latest one and ignore previous one
+	Ignored create_clock  -period 62.50  -waveform {0.00 31.25}  -name {CLK} [get_ports {CLK}]
+Stored edif netlist at /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B...
+Warning: The terminal connectivity sda_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity USBPU_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity TX_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity NEOPXL_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity LED_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity DE_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal eeprom.i2c.state_i0_i0:E is driven by default driver : VCC, Disconnecting it.
+
+write Timing Constraint to /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+
+EDIF Parser succeeded
+Top module is: TinyFPGA_B
+
+EDF Parser run-time: 0 (sec)
+edif parser succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --package CM81 --deviceMarketName iCE40LP8K --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --effort_level std --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc"
+starting placerrunning placerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --package CM81 --deviceMarketName iCE40LP8K --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --effort_level std --out-sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc
+Lattice Semiconductor Corporation  Placer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:22:02
+
+W2715: Warning for set_io Constraint: Ignoring pin assignment for CS_MISO, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for FAULT_N, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL1, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL2, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL3, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for RX, as it is not connected to any PAD
+I2004: Option and Settings Summary
+=============================================================
+Device file          - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+Package              - CM81
+Design database      - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B
+SDC file             - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+Output directory     - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer
+Timing library       - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib
+Effort level         - std
+
+I2050: Starting reading inputs for placer
+=============================================================
+I2100: Reading design library: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B/BFPGA_DESIGN_ep
+I2065: Reading device file : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+I2051: Reading of inputs for placer completed successfully
+
+I2053: Starting placement of the design
+=============================================================
+
+Input Design Statistics
+    Number of LUTs      	:	196
+    Number of DFFs      	:	114
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	83
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	15
+    Number of GBIOs     	:	1
+    Number of GBs       	:	0
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+
+Phase 1
+I2077: Start design legalization
+
+Design Legalization Statistics
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	0
+    Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	1
+    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	0
+    Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
+    Total LUTs inserted                                            	:	1
+    Total CARRYs inserted                                          	:	0
+
+
+I2078: Design legalization is completed successfully
+I2088: Phase 1, elapsed time : 0.0 (sec)
+
+W2216: SB_GB_IO 'CLK_pad' is assigned to a non-GB pin 'B2'. Replacing it with SB_IO 'CLK_pad' and SB_GB 'CLK_pad_gb'
+
+Phase 2
+I2088: Phase 2, elapsed time : 0.0 (sec)
+
+Phase 3
+Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
+
+Design Statistics after Packing
+    Number of LUTs      	:	198
+    Number of DFFs      	:	114
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	83
+
+Device Utilization Summary after Packing
+    Sequential LogicCells
+        LUT and DFF      	:	32
+        LUT, DFF and CARRY	:	82
+    Combinational LogicCells
+        Only LUT         	:	83
+        CARRY Only       	:	0
+        LUT with CARRY   	:	1
+    LogicCells                  :	198/7680
+    PLBs                        :	30/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+I2088: Phase 3, elapsed time : 0.3 (sec)
+
+Phase 4
+I2088: Phase 4, elapsed time : 0.2 (sec)
+
+Phase 5
+I2088: Phase 5, elapsed time : 0.2 (sec)
+
+Phase 6
+I2088: Phase 6, elapsed time : 43.4 (sec)
+
+Final Design Statistics
+    Number of LUTs      	:	198
+    Number of DFFs      	:	114
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	83
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	16
+    Number of GBIOs     	:	0
+    Number of GBs       	:	1
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+Device Utilization Summary
+    LogicCells                  :	198/7680
+    PLBs                        :	47/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+
+#####################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+=====================================================================
+
+#####################################################################
+                     Clock Summary 
+=====================================================================
+Number of clocks: 2
+Clock: CLK | Frequency: 79.81 MHz | Target: 16.00 MHz
+Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 89.37 MHz | Target: 16.00 MHz
+
+=====================================================================
+                     End of Clock Summary
+#####################################################################
+
+I2054: Placement of design completed successfully
+
+I2076: Placer run-time: 44.4 sec.
+
+placer succeed.
+starting IPExporterrunning IPExporterIPExporter succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --DRC_only  --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 391
+used logic cells: 198
+Design Rule Checking Succeeded
+
+DRC Checker run-time: 0 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 391
+used logic cells: 198
+Translating sdc file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc...
+Translated sdc file is /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc
+Packer succeeded
+
+Packer run-time: 1 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router" --sdf_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --pin_permutation
+starting routerrunning routerSJRouter....
+Executing : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router --sdf_file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --pin_permutation 
+Lattice Semiconductor Corporation  Router
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:09:33
+
+I1203: Reading Design TinyFPGA_B
+Read design time: 0
+I1202: Reading Architecture of device iCE40LP8K
+Read device time: 9
+I1209: Started routing
+I1223: Total Nets : 302 
+I1212: Iteration  1 :    47 unrouted : 0 seconds
+I1212: Iteration  2 :     2 unrouted : 1 seconds
+I1212: Iteration  3 :     2 unrouted : 0 seconds
+I1212: Iteration  4 :     0 unrouted : 0 seconds
+I1215: Routing is successful
+Routing time: 2
+I1206: Completed routing
+I1204: Writing Design TinyFPGA_B
+Lib Closed
+I1210: Writing routes
+I1218: Exiting the router
+I1224: Router run-time : 11 seconds
+ total           326260K
+router succeed.
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/netlister" --verilog "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v" --vhdl "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd" --lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --view rt --device "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --splitio  --in-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc"
+starting netlistrunning netlistLattice Semiconductor Corporation  Verilog & VHDL Netlister
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:25:37
+
+Generating Verilog & VHDL netlist files ...
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd
+Netlister succeeded.
+
+Netlister run-time: 2 (sec)
+netlist succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc" --sdf-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --report-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --timing-summary
+starting timerrunning timerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc --sdf-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --report-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --timing-summary
+Lattice Semiconductor Corporation  Timer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:08:07
+
+Warning-1034: Found non-unate timing arc, from pin "PADIN" to pin "DIN0" of instance "CLK_pad_preio", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "DOUT0" to pin "PADOUT" of instance "scl_output_preio", in the clock network. Converting the timing arc to positive-unate
+Timer run-time: 1 seconds
+timer succeed.
+timer succeeded.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/bitmap" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --design "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --device_name iCE40LP8K --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/bitmap" --low_power on --init_ram on --init_ram_bank 1111 --frequency low --warm_boot on
+starting bitmaprunning bitmapLattice Semiconductor Corporation  Bit Stream Generator
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:24:49
+
+Bit Stream File Size: 1080760 (1M 31K 440 Bits)
+Bit Stream Generator succeeded
+
+Bitmap run-time: 2 (sec)
+bitmap succeed.
+/home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jan 30 23:27:28 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testBoard (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+ERROR - synthesis: verilog/TinyFPGA_B.v(106): syntax error near .. VERI-1137
+Synthesis failed.
+Synthesis batch mode runtime 0 seconds/home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jan 30 23:27:40 2020
+
+
+Command Line:  /home/letrend/lscc/iCEcube2.2017.08/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/testBoard (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/TinyFPGA_B_pll_1MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+Analyzing Verilog file verilog/pwm.v. VERI-1482
+Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/TinyFPGA_B_pll_1MHz.v. VERI-1482
+WARNING - synthesis: verilog/TinyFPGA_B_pll_1MHz.v(27): literal value truncated to fit in 3 bits. VERI-1208
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/testBoard". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(45): expression size 32 truncated to fit in target size 26. VERI-1209
+INFO - synthesis: /home/letrend/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(47): expression size 32 truncated to fit in target size 16. VERI-1209
+INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(46): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(135): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(107): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(116): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/letrend/lscc/iCEcube2.2017.08/LSE/or5g00/data/orc5glib.ngl'...
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: verilog/TinyFPGA_B.v(93): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(107): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(116): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+######## Missing driver on net NEOPXL. Patching with GND.
+######## Missing driver on net DE. Patching with GND.
+######## Missing driver on net TX. Patching with GND.
+######## Missing driver on net CS_CLK. Patching with GND.
+######## Missing driver on net CS. Patching with GND.
+######## Missing driver on net INLC. Patching with GND.
+######## Missing driver on net INHC. Patching with GND.
+######## Missing driver on net INLB. Patching with GND.
+######## Missing driver on net INHB. Patching with GND.
+######## Missing driver on net INLA. Patching with GND.
+######## Missing driver on net INHA. Patching with GND.
+######## Missing driver on net addr[10]. Patching with GND.
+######## Missing driver on net addr[9]. Patching with GND.
+######## Missing driver on net addr[8]. Patching with GND.
+######## Missing driver on net addr[7]. Patching with GND.
+######## Missing driver on net addr[6]. Patching with GND.
+######## Missing driver on net addr[5]. Patching with GND.
+######## Missing driver on net addr[4]. Patching with GND.
+######## Missing driver on net addr[3]. Patching with GND.
+######## Missing driver on net addr[2]. Patching with GND.
+######## Missing driver on net addr[1]. Patching with GND.
+######## Missing driver on net addr[0]. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(58): Register \eeprom/reset_41 is stuck at Zero. VDB-5013
+
+
+
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/i2c_controller.v(172): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(149): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 114 of 7680 (1 % )
+SB_CARRY => 83
+SB_DFF => 35
+SB_DFFE => 2
+SB_DFFESR => 47
+SB_DFFESS => 12
+SB_DFFN => 9
+SB_DFFNE => 1
+SB_DFFNESS => 1
+SB_DFFSR => 7
+SB_GB_IO => 1
+SB_IO => 15
+SB_LUT4 => 196
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : CLK_c, loads : 90
+  Net : eeprom/i2c/i2c_clk, loads : 26
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n1740, loads : 33
+  Net : n1895, loads : 32
+  Net : eeprom/i2c/n730, loads : 30
+  Net : eeprom/i2c/state_2, loads : 22
+  Net : eeprom/i2c/state_0_adj_374, loads : 19
+  Net : eeprom/i2c/state_3, loads : 19
+  Net : eeprom/i2c/state_1_adj_375, loads : 19
+  Net : eeprom/n1799, loads : 17
+  Net : eeprom/n1934, loads : 16
+  Net : state_7_N_289_3, loads : 13
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 200.785  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.305  secs
+--------------------------------------------------------------
+Current Implementation template_Implmnt its sbt path: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt
+Synthesis succeed.
+Synthesis succeeded.
+Synthesis runtime 1 seconds
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/edifparser" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf " "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist" "-pCM81" "-y/home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf " "-s/home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc " -c --devicename iCE40LP8K
+starting edif parserrunning edif parserLattice Semiconductor Corporation  Edif Parser
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:01:35
+
+Parsing edif file: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.edf...
+Parsing constraint file: /home/letrend/workspace/iceboard/software/testBoard/constraints/pins.pcf...
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+sdc_reader OK /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/template.scf
+start to read sdc/scf file /home/letrend/workspace/iceboard/software/testBoard/constraints/clk.sdc
+Warning: Found double defined(create_clock) at CLK. Using latest one and ignore previous one
+	Ignored create_clock  -period 62.50  -waveform {0.00 31.25}  -name {CLK} [get_ports {CLK}]
+Stored edif netlist at /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B...
+Warning: The terminal connectivity sda_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity USBPU_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity TX_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity NEOPXL_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity LED_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity DE_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal eeprom.i2c.state_i0_i0:E is driven by default driver : VCC, Disconnecting it.
+
+write Timing Constraint to /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+
+EDIF Parser succeeded
+Top module is: TinyFPGA_B
+
+EDF Parser run-time: 0 (sec)
+edif parser succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --package CM81 --deviceMarketName iCE40LP8K --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --effort_level std --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc"
+starting placerrunning placerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtplacer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --package CM81 --deviceMarketName iCE40LP8K --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --effort_level std --out-sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc
+Lattice Semiconductor Corporation  Placer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:22:02
+
+W2715: Warning for set_io Constraint: Ignoring pin assignment for CS_MISO, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER0_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_A, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for ENCODER1_B, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for FAULT_N, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL1, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL2, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for HALL3, as it is not connected to any PAD
+W2715: Warning for set_io Constraint: Ignoring pin assignment for RX, as it is not connected to any PAD
+I2004: Option and Settings Summary
+=============================================================
+Device file          - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+Package              - CM81
+Design database      - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B
+SDC file             - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/Temp/sbt_temp.sdc
+Output directory     - /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer
+Timing library       - /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib
+Effort level         - std
+
+I2050: Starting reading inputs for placer
+=============================================================
+I2100: Reading design library: /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B/BFPGA_DESIGN_ep
+I2065: Reading device file : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev
+I2051: Reading of inputs for placer completed successfully
+
+I2053: Starting placement of the design
+=============================================================
+
+Input Design Statistics
+    Number of LUTs      	:	196
+    Number of DFFs      	:	114
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	83
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	15
+    Number of GBIOs     	:	1
+    Number of GBs       	:	0
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+
+Phase 1
+I2077: Start design legalization
+
+Design Legalization Statistics
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	0
+    Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	1
+    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	0
+    Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
+    Total LUTs inserted                                            	:	1
+    Total CARRYs inserted                                          	:	0
+
+
+I2078: Design legalization is completed successfully
+I2088: Phase 1, elapsed time : 0.0 (sec)
+
+W2216: SB_GB_IO 'CLK_pad' is assigned to a non-GB pin 'B2'. Replacing it with SB_IO 'CLK_pad' and SB_GB 'CLK_pad_gb'
+
+Phase 2
+I2088: Phase 2, elapsed time : 0.0 (sec)
+
+Phase 3
+Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
+
+Design Statistics after Packing
+    Number of LUTs      	:	198
+    Number of DFFs      	:	114
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	83
+
+Device Utilization Summary after Packing
+    Sequential LogicCells
+        LUT and DFF      	:	32
+        LUT, DFF and CARRY	:	82
+    Combinational LogicCells
+        Only LUT         	:	83
+        CARRY Only       	:	0
+        LUT with CARRY   	:	1
+    LogicCells                  :	198/7680
+    PLBs                        :	31/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+I2088: Phase 3, elapsed time : 0.4 (sec)
+
+Phase 4
+I2088: Phase 4, elapsed time : 0.2 (sec)
+
+Phase 5
+I2088: Phase 5, elapsed time : 0.3 (sec)
+
+Phase 6
+I2088: Phase 6, elapsed time : 48.2 (sec)
+
+Final Design Statistics
+    Number of LUTs      	:	198
+    Number of DFFs      	:	114
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	83
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	16
+    Number of GBIOs     	:	0
+    Number of GBs       	:	1
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	0
+
+Device Utilization Summary
+    LogicCells                  :	198/7680
+    PLBs                        :	43/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	16/63
+    PLLs                        :	0/1
+
+
+
+#####################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+=====================================================================
+
+#####################################################################
+                     Clock Summary 
+=====================================================================
+Number of clocks: 2
+Clock: CLK | Frequency: 87.04 MHz | Target: 16.00 MHz
+Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 100.26 MHz | Target: 16.00 MHz
+
+=====================================================================
+                     End of Clock Summary
+#####################################################################
+
+I2054: Placement of design completed successfully
+
+I2076: Placer run-time: 49.4 sec.
+
+placer succeed.
+starting IPExporterrunning IPExporterIPExporter succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --DRC_only  --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 414
+used logic cells: 198
+Design Rule Checking Succeeded
+
+DRC Checker run-time: 0 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/packer" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer" --translator "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerrunning packerLattice Semiconductor Corporation  Packer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:02:57
+
+Begin Packing...
+initializing finish
+Total HPWL cost is 414
+used logic cells: 198
+Translating sdc file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc...
+Translated sdc file is /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc
+Packer succeeded
+
+Packer run-time: 1 (sec)
+packer succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router" --sdf_file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --pin_permutation
+starting routerrunning routerSJRouter....
+Executing : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbrouter /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc --outdir /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/router --sdf_file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --pin_permutation 
+Lattice Semiconductor Corporation  Router
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:09:33
+
+I1203: Reading Design TinyFPGA_B
+Read design time: 0
+I1202: Reading Architecture of device iCE40LP8K
+Read device time: 10
+I1209: Started routing
+I1223: Total Nets : 300 
+I1212: Iteration  1 :    50 unrouted : 1 seconds
+I1212: Iteration  2 :    10 unrouted : 0 seconds
+I1212: Iteration  3 :     2 unrouted : 0 seconds
+I1212: Iteration  4 :     0 unrouted : 0 seconds
+I1215: Routing is successful
+Routing time: 1
+I1206: Completed routing
+I1204: Writing Design TinyFPGA_B
+Lib Closed
+I1210: Writing routes
+I1218: Exiting the router
+I1224: Router run-time : 11 seconds
+ total           326260K
+router succeed.
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/netlister" --verilog "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v" --vhdl "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd" --lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --view rt --device "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --splitio  --in-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --out-sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc"
+starting netlistrunning netlistLattice Semiconductor Corporation  Verilog & VHDL Netlister
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:25:37
+
+Generating Verilog & VHDL netlist files ...
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v
+Writing /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd
+Netlister succeeded.
+
+Netlister run-time: 2 (sec)
+netlist succeed.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer" --des-lib "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --lib-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib" --sdc-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc" --sdf-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --report-file "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt" --device-file "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --timing-summary
+starting timerrunning timerExecuting : /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/sbtimer --des-lib /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --lib-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ice40LP8K.lib --sdc-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc --sdf-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --report-file /home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt --device-file /home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev --timing-summary
+Lattice Semiconductor Corporation  Timer
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:08:07
+
+Warning-1034: Found non-unate timing arc, from pin "PADIN" to pin "DIN0" of instance "CLK_pad_preio", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "DOUT0" to pin "PADOUT" of instance "scl_output_preio", in the clock network. Converting the timing arc to positive-unate
+Timer run-time: 2 seconds
+timer succeed.
+timer succeeded.
+
+
+"/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/bin/linux/opt/bitmap" "/home/letrend/lscc/iCEcube2.2017.08/sbt_backend/devices/ICE40P08.dev" --design "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --device_name iCE40LP8K --package CM81 --outdir "/home/letrend/workspace/iceboard/software/testBoard/template_Implmnt/sbt/outputs/bitmap" --low_power on --init_ram on --init_ram_bank 1111 --frequency low --warm_boot on
+starting bitmaprunning bitmapLattice Semiconductor Corporation  Bit Stream Generator
+Release:        2017.08.27940
+Build Date:     Sep 12 2017 08:24:49
+
+Bit Stream File Size: 1080760 (1M 31K 440 Bits)
+Bit Stream Generator succeeded
+
+Bitmap run-time: 1 (sec)
+bitmap succeed.
+23:31

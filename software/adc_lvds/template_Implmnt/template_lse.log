@@ -1,0 +1,213 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Mar 21 16:00:07 2020
+
+
+Command Line:  /media/external/iCEcube2/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/letrend/workspace/iceboard/software/adc_lvds (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/neopixel.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/neopixel.v. VERI-1482
+WARNING - synthesis: verilog/neopixel.v(16): keyword 'unsigned' is not allowed here in this mode of verilog. VERI-1411
+WARNING - synthesis: verilog/neopixel.v(17): keyword 'unsigned' is not allowed here in this mode of verilog. VERI-1411
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(128): analyzing entity grp_debouncer. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(140): analyzing architecture rtl. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/letrend/workspace/iceboard/software/adc_lvds". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(47): expression size 32 truncated to fit in target size 26. VERI-1209
+INFO - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b01,IO_STANDARD="SB_LVDS_INPUT"). VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(63): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/media/external/iCEcube2/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/media/external/iCEcube2/LSE/or5g00/data/orc5glib.ngl'...
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: verilog/TinyFPGA_B.v(63): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+######## Converting I/O port USBPU to input.
+######## Converting I/O port PIN_1 to input.
+######## Converting I/O port PIN_2 to input.
+######## Converting I/O port PIN_3 to input.
+######## Converting I/O port PIN_4 to input.
+######## Converting I/O port PIN_5 to input.
+######## Converting I/O port PIN_6 to input.
+######## Converting I/O port PIN_7 to input.
+######## Converting I/O port PIN_8 to input.
+######## Converting I/O port PIN_9 to input.
+######## Converting I/O port PIN_10 to input.
+######## Converting I/O port PIN_11 to input.
+######## Converting I/O port PIN_12 to input.
+######## Converting I/O port PIN_14 to input.
+######## Converting I/O port PIN_15 to input.
+######## Converting I/O port PIN_16 to input.
+######## Converting I/O port PIN_17 to input.
+######## Converting I/O port PIN_18 to output.
+######## Converting I/O port PIN_19 to input.
+######## Converting I/O port PIN_20 to input.
+######## Converting I/O port PIN_21 to input.
+######## Converting I/O port PIN_22 to input.
+######## Converting I/O port PIN_23 to input.
+######## Converting I/O port PIN_24 to input.
+######## Converting I/O port SPI_IO2 to input.
+
+
+
+WARNING - synthesis: Skipping pad insertion on PIN_13 due to black_box_pad_pin attribute.
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 27 of 7680 (0 % )
+SB_CARRY => 25
+SB_DFF => 27
+SB_GB_IO => 1
+SB_IO => 3
+SB_LUT4 => 29
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : CLK_c, loads : 28
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : blink_counter_24, loads : 4
+  Net : blink_counter_23, loads : 4
+  Net : blink_counter_22, loads : 4
+  Net : blink_counter_21, loads : 4
+  Net : blink_counter_25, loads : 2
+  Net : n193, loads : 2
+  Net : n192, loads : 2
+  Net : n191, loads : 2
+  Net : n183, loads : 2
+  Net : n195, loads : 2
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   23.698 MHz|    27  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 198.215  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.675  secs
+--------------------------------------------------------------

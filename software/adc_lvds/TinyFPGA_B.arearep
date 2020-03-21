@@ -1,0 +1,12 @@
+----------------------------------------------------------------------
+Report for cell TinyFPGA_B.TECH
+Register bits:  27 of 7680 (0.352%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        25          100.0
+                             SB_DFF        27          100.0
+                           SB_GB_IO         1          100.0
+                              SB_IO         3          100.0
+                            SB_LUT4        29          100.0
+                              TOTAL        85
