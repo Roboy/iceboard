@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:02:28
 
-* File Generated:     Mar 21 2020 16:00:10
+* File Generated:     Mar 24 2020 18:54:28
 
 * Purpose:            Detailed IO and package pin info
 
@@ -19,7 +19,7 @@ Package, CM81
 
 Pin Number, Pin Type Name, Signal Name, Direction, Global Buffer, IO Standard, Pull Up, IO Function, IO Bank, 
 ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, 
-A1, PIO, not used, , , , , , topBank
+A1, PIO, PIN_2, Output, , SB_LVCMOS, No Pull Up, Output Registered, topBank
 A2, PIO, not used, , , , , , topBank
 A3, PIO, not used, , , , , , topBank
 A4, PIO, not used, , , , , , topBank
@@ -100,4 +100,4 @@ J6, AGND_BOT, not used, , , , , , UnknownBank
 J7, AVDD_BOT, not used, , , , , , UnknownBank
 J8, PIO, not used, , , , , , rightBank
 J9, PIO, not used, , , , , , rightBank
-Total Number of Used Pins, 4
+Total Number of Used Pins, 5

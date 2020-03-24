@@ -1,0 +1,6 @@
+17:08
+QFileSystemWatcher: failed to add paths: /home/letrend/workspace/iceboard/software/adc_lvds
+QObject::connect: Cannot queue arguments of type 'QTextCharFormat'
+(Make sure 'QTextCharFormat' is registered using qRegisterMetaType().)
+QObject::connect: Cannot queue arguments of type 'QTextCursor'
+(Make sure 'QTextCursor' is registered using qRegisterMetaType().)

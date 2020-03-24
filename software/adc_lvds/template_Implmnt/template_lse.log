@@ -3,7 +3,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Mar 21 16:00:07 2020
+Tue Mar 24 18:54:09 2020
 
 
 Command Line:  /media/external/iCEcube2/LSE/bin/lin64/synthesis -f template_lse.prj 
@@ -72,6 +72,9 @@ Verilog design file = verilog/TinyFPGA_B.v
 Verilog design file = verilog/eeprom.v
 Verilog design file = verilog/i2c_controller.v
 Verilog design file = verilog/neopixel.v
+Verilog design file = verilog/cic.v
+Verilog design file = verilog/uart_tx.v
+Verilog design file = verilog/pll96MHz.v
 VHDL library = work
 VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
 VHDL library = work
@@ -102,6 +105,9 @@ Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
 Analyzing Verilog file verilog/neopixel.v. VERI-1482
 WARNING - synthesis: verilog/neopixel.v(16): keyword 'unsigned' is not allowed here in this mode of verilog. VERI-1411
 WARNING - synthesis: verilog/neopixel.v(17): keyword 'unsigned' is not allowed here in this mode of verilog. VERI-1411
+Analyzing Verilog file verilog/cic.v. VERI-1482
+Analyzing Verilog file verilog/uart_tx.v. VERI-1482
+Analyzing Verilog file verilog/pll96MHz.v. VERI-1482
 Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
 INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
 INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
@@ -114,6 +120,8 @@ Top module name (Verilog, mixed language): TinyFPGA_B
 INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
 WARNING - synthesis: verilog/TinyFPGA_B.v(47): expression size 32 truncated to fit in target size 26. VERI-1209
 INFO - synthesis: /media/external/iCEcube2/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b01,IO_STANDARD="SB_LVDS_INPUT"). VERI-1018
+INFO - synthesis: verilog/uart_tx.v(14): compiling module uart_tx. VERI-1018
+WARNING - synthesis: verilog/uart_tx.v(99): expression size 32 truncated to fit in target size 3. VERI-1209
 WARNING - synthesis: verilog/TinyFPGA_B.v(63): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 Loading NGL library '/media/external/iCEcube2/LSE/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/media/external/iCEcube2/LSE/or5g00/data/orc5glib.ngl'...
@@ -121,7 +129,7 @@ Top-level module name = TinyFPGA_B.
 WARNING - synthesis: verilog/TinyFPGA_B.v(63): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
 ######## Converting I/O port USBPU to input.
 ######## Converting I/O port PIN_1 to input.
-######## Converting I/O port PIN_2 to input.
+######## Converting I/O port PIN_2 to output.
 ######## Converting I/O port PIN_3 to input.
 ######## Converting I/O port PIN_4 to input.
 ######## Converting I/O port PIN_5 to input.
@@ -161,33 +169,37 @@ Writing scf file : template_Implmnt/template.scf
 Results of NGD DRC are available in TinyFPGA_B_drc.log.
 
 ################### Begin Area Report (TinyFPGA_B)######################
-Number of register bits => 27 of 7680 (0 % )
-SB_CARRY => 25
-SB_DFF => 27
+Number of register bits => 156 of 7680 (2 % )
+SB_CARRY => 125
+SB_DFF => 47
+SB_DFFE => 1
+SB_DFFESR => 34
+SB_DFFSR => 74
 SB_GB_IO => 1
-SB_IO => 3
-SB_LUT4 => 29
+SB_IO => 4
+SB_LUT4 => 198
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 1
-  Net : CLK_c, loads : 28
+Number of Clocks: 2
+  Net : CLK_c, loads : 107
+  Net : clk_slow, loads : 50
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : blink_counter_24, loads : 4
-  Net : blink_counter_23, loads : 4
-  Net : blink_counter_22, loads : 4
-  Net : blink_counter_21, loads : 4
-  Net : blink_counter_25, loads : 2
-  Net : n193, loads : 2
-  Net : n192, loads : 2
-  Net : n191, loads : 2
-  Net : n183, loads : 2
-  Net : n195, loads : 2
+  Net : counter_31__N_172, loads : 49
+  Net : clk_divider_31__N_139, loads : 33
+  Net : uart/n1, loads : 33
+  Net : uart/n1796, loads : 32
+  Net : uart/r_SM_Main_1, loads : 8
+  Net : uart/n1757, loads : 7
+  Net : uart/r_Bit_Index_1, loads : 7
+  Net : uart/r_SM_Main_2, loads : 6
+  Net : uart/r_SM_Main_0, loads : 6
+  Net : uart/r_Bit_Index_0, loads : 5
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -196,9 +208,16 @@ Timing Report Summary
 Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets clk_slow]              |   16.000 MHz|   19.382 MHz|    33  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|clk_slow [ get_nets clk_slow |             |             |
+]                                       |            -|            -|     0  
+                                        |             |             |
 create_clock -period 62.500000          |             |             |
 -waveform { 0.000000 31.250000 } -name  |             |             |
-CLK [ get_ports { CLK } ]               |   16.000 MHz|   23.698 MHz|    27  
+CLK [ get_ports { CLK } ]               |   16.000 MHz|   19.352 MHz|    33  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -206,8 +225,8 @@ CLK [ get_ports { CLK } ]               |   16.000 MHz|   23.698 MHz|    27
 All constraints were met.
 
 
-Peak Memory Usage: 198.215  MB
+Peak Memory Usage: 215.688  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.675  secs
+Elapsed CPU time for LSE flow : 1.156  secs
 --------------------------------------------------------------

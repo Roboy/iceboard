@@ -37,6 +37,9 @@
 -ver "verilog/i2c_controller.v"
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd" 
 -ver "verilog/neopixel.v"
+-ver "verilog/cic.v"
+-ver "verilog/uart_tx.v"
+-ver "verilog/pll96MHz.v"
 -p "/home/letrend/workspace/iceboard/software/adc_lvds"
 
 #set result format/file last

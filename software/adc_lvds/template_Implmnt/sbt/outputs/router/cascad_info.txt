@@ -1,2 +1,15 @@
 [VIC]
-n208_cascade_=ltout:in1
+counter_31__N_172_cascade_=ltout:in2
+n2002_cascade_=ltout:in0
+n2308_cascade_=ltout:in2
+n2395_cascade_=ltout:in1
+n38_cascade_=ltout:in3
+n42_adj_360_cascade_=ltout:in2
+n44_cascade_=ltout:in2
+r_SM_Main_2_N_233_1_cascade_=ltout:in1
+uart.n2006_cascade_=ltout:in0
+uart.n2422_cascade_=ltout:in0
+uart.n2428_cascade_=ltout:in0
+uart.n37_cascade_=ltout:in0
+uart.n42_cascade_=ltout:in1
+uart.n45_cascade_=ltout:in1

@@ -1,12 +1,29 @@
 ----------------------------------------------------------------------
 Report for cell TinyFPGA_B.TECH
-Register bits:  27 of 7680 (0.352%)
+Register bits:  156 of 7680 (2.031%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                           SB_CARRY        25          100.0
-                             SB_DFF        27          100.0
+                           SB_CARRY       125          100.0
+                             SB_DFF        47          100.0
+                            SB_DFFE         1          100.0
+                          SB_DFFESR        34          100.0
+                           SB_DFFSR        74          100.0
                            SB_GB_IO         1          100.0
-                              SB_IO         3          100.0
-                            SB_LUT4        29          100.0
-                              TOTAL        85
+                              SB_IO         4          100.0
+                            SB_LUT4       198          100.0
+SUB MODULES
+                            uart_tx         1
+                              TOTAL       485
+----------------------------------------------------------------------
+Report for cell uart_tx.v1
+Instance Path : uart
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                           SB_CARRY        31           24.8
+                             SB_DFF        10           21.3
+                            SB_DFFE         1          100.0
+                          SB_DFFESR        34          100.0
+                           SB_DFFSR         2            2.7
+                            SB_LUT4        60           30.3
+                              TOTAL       138

@@ -11,9 +11,10 @@
 // Example: 10 MHz Clock, 115200 baud UART
 // (10000000)/(115200) = 87
 
-module uart_tx
+module uart_tx #(parameter CLK_FREQ_HZ = 16_000_000)
   (
    input       i_Clock,
+   input [31:0] baudrate,
    input       i_Tx_DV,
    input [7:0] i_Tx_Byte,
    output      o_Tx_Active,
@@ -21,7 +22,7 @@ module uart_tx
    output      o_Tx_Enable,
    output      o_Tx_Done
    );
-  localparam CLKS_PER_BIT   = 64; // 139 at 16MHz this is 115200 baudrate, 64 at 16MHz is 250000 
+  // localparam CLKS_PER_BIT   = 16; // 139 at 16MHz this is 115200 baudrate, 64 at 16MHz is 250000, 32 at 16MHz is 500_000, 16 at 16 MHz is 1_000_000
   localparam s_IDLE         = 3'b000;
   localparam s_TX_START_BIT = 3'b001;
   localparam s_TX_DATA_BITS = 3'b010;
@@ -29,7 +30,7 @@ module uart_tx
   localparam s_CLEANUP      = 3'b100;
 
   reg [2:0]    r_SM_Main     = 0;
-  reg [8:0]    r_Clock_Count = 0;
+  reg [31:0]   r_Clock_Count = 0;
   reg [2:0]    r_Bit_Index   = 0;
   reg [7:0]    r_Tx_Data     = 0;
   reg          r_Tx_Done     = 0;
@@ -65,7 +66,7 @@ module uart_tx
             o_Tx_Serial <= 1'b0;
 
             // Wait CLKS_PER_BIT-1 clock cycles for start bit to finish
-            if (r_Clock_Count < CLKS_PER_BIT-1)
+            if (r_Clock_Count < (CLK_FREQ_HZ/baudrate)-1)
               begin
                 r_Clock_Count <= r_Clock_Count + 1;
                 r_SM_Main     <= s_TX_START_BIT;
@@ -83,7 +84,7 @@ module uart_tx
           begin
             o_Tx_Serial <= r_Tx_Data[r_Bit_Index];
 
-            if (r_Clock_Count < CLKS_PER_BIT-1)
+            if (r_Clock_Count < (CLK_FREQ_HZ/baudrate)-1)
               begin
                 r_Clock_Count <= r_Clock_Count + 1;
                 r_SM_Main     <= s_TX_DATA_BITS;
@@ -113,7 +114,7 @@ module uart_tx
             o_Tx_Serial <= 1;
 
             // Wait CLKS_PER_BIT-1 clock cycles for Stop bit to finish
-            if (r_Clock_Count < CLKS_PER_BIT-1)
+            if (r_Clock_Count < (CLK_FREQ_HZ/baudrate)-1)
               begin
                 r_Clock_Count <= r_Clock_Count + 1;
                 r_SM_Main     <= s_TX_STOP_BIT;

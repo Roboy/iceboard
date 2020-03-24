@@ -1,3 +1,4 @@
+OUTPUT PIN_2 	 location (2, 33, 1) 	 A1 	 SB_LVCMOS
 OUTPUT PIN_18 	 location (33, 4, 1) 	 A9 	 SB_LVCMOS
 INOUT PIN_13 	 location (0, 3, 0) 	 H2 	 SB_LVDS_INPUT
 OUTPUT LED 	 location (5, 33, 1) 	 B3 	 SB_LVCMOS

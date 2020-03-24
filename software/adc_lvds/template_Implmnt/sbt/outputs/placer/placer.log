@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:14:10
 
-* File Generated:     Mar 21 2020 16:00:08
+* File Generated:     Mar 24 2020 18:54:10
 
 * Purpose:            
 
@@ -42,7 +42,6 @@ W2715: Warning for set_io Constraint: Ignoring pin assignment for PIN_15, as it 
 W2715: Warning for set_io Constraint: Ignoring pin assignment for PIN_16, as it is not connected to any PAD
 W2715: Warning for set_io Constraint: Ignoring pin assignment for PIN_17, as it is not connected to any PAD
 W2715: Warning for set_io Constraint: Ignoring pin assignment for PIN_19, as it is not connected to any PAD
-W2715: Warning for set_io Constraint: Ignoring pin assignment for PIN_2, as it is not connected to any PAD
 W2715: Warning for set_io Constraint: Ignoring pin assignment for PIN_20, as it is not connected to any PAD
 W2715: Warning for set_io Constraint: Ignoring pin assignment for PIN_21, as it is not connected to any PAD
 W2715: Warning for set_io Constraint: Ignoring pin assignment for PIN_22, as it is not connected to any PAD
@@ -59,13 +58,13 @@ W2715: Warning for set_io Constraint: Ignoring pin assignment for SPI_IO2, as it
 W2715: Warning for set_io Constraint: Ignoring pin assignment for USBPU, as it is not connected to any PAD
 
 Input Design Statistics
-    Number of LUTs      	:	29
-    Number of DFFs      	:	27
+    Number of LUTs      	:	198
+    Number of DFFs      	:	156
     Number of DFFs packed to IO	:	0
-    Number of Carrys    	:	25
+    Number of Carrys    	:	125
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	3
+    Number of IOs       	:	4
     Number of GBIOs     	:	1
     Number of GBs       	:	0
     Number of WarmBoot  	:	0
@@ -79,14 +78,14 @@ W2216: SB_GB_IO 'CLK_pad' is assigned to a non-GB pin 'B2'. Replacing it with SB
 Design Legalization Statistics
     Number of feedthru LUTs inserted to legalize input of DFFs     	:	0
     Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
-    Number of LUTs replicated for LUTs driving multiple DFFs       	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	2
     Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
     Number of feedthru LUTs inserted to legalize global signals    	:	0
     Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
-    Total LUTs inserted                                            	:	0
+    Total LUTs inserted                                            	:	2
     Total CARRYs inserted                                          	:	0
 
 
@@ -101,23 +100,23 @@ Phase 3
 Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
 
 Design Statistics after Packing
-    Number of LUTs      	:	29
-    Number of DFFs      	:	26
-    Number of DFFs packed to IO	:	1
-    Number of Carrys    	:	25
+    Number of LUTs      	:	200
+    Number of DFFs      	:	154
+    Number of DFFs packed to IO	:	2
+    Number of Carrys    	:	125
 
 Device Utilization Summary after Packing
     Sequential LogicCells
-        LUT and DFF      	:	1
-        LUT, DFF and CARRY	:	25
+        LUT and DFF      	:	29
+        LUT, DFF and CARRY	:	125
     Combinational LogicCells
-        Only LUT         	:	3
+        Only LUT         	:	46
         CARRY Only       	:	0
         LUT with CARRY   	:	0
-    LogicCells                  :	29/7680
-    PLBs                        :	5/960
+    LogicCells                  :	200/7680
+    PLBs                        :	29/960
     BRAMs                       :	0/32
-    IOs and GBIOs               :	4/63
+    IOs and GBIOs               :	5/63
     PLLs                        :	0/1
 
 
@@ -127,29 +126,29 @@ Phase 4
 I2088: Phase 4, elapsed time : 0.1 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 0.0 (sec)
+I2088: Phase 5, elapsed time : 0.1 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 0.6 (sec)
+I2088: Phase 6, elapsed time : 16.6 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	29
-    Number of DFFs      	:	26
-    Number of DFFs packed to IO	:	1
-    Number of Carrys    	:	25
+    Number of LUTs      	:	200
+    Number of DFFs      	:	154
+    Number of DFFs packed to IO	:	2
+    Number of Carrys    	:	125
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	4
+    Number of IOs       	:	5
     Number of GBIOs     	:	0
     Number of GBs       	:	1
     Number of WarmBoot  	:	0
     Number of PLLs      	:	0
 
 Device Utilization Summary
-    LogicCells                  :	29/7680
-    PLBs                        :	5/960
+    LogicCells                  :	200/7680
+    PLBs                        :	33/960
     BRAMs                       :	0/32
-    IOs and GBIOs               :	4/63
+    IOs and GBIOs               :	5/63
     PLLs                        :	0/1
 
 
@@ -165,8 +164,9 @@ analysis after routing.
 #####################################################################
                      Clock Summary 
 =====================================================================
-Number of clocks: 1
-Clock: CLK | Frequency: 124.83 MHz | Target: 16.00 MHz
+Number of clocks: 2
+Clock: CLK | Frequency: 109.47 MHz | Target: 16.00 MHz
+Clock: TinyFPGA_B|clk_slow | Frequency: 119.34 MHz | Target: 16.00 MHz
 
 =====================================================================
                      End of Clock Summary
@@ -174,5 +174,5 @@ Clock: CLK | Frequency: 124.83 MHz | Target: 16.00 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 1.2 sec.
+I2076: Placer run-time: 17.4 sec.
 

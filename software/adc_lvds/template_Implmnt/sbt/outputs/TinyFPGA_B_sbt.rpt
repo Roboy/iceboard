@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 12 2017 08:02:28
 
-* File Generated:     Mar 21 2020 16:00:10
+* File Generated:     Mar 24 2020 18:54:29
 
 * Purpose:            General info of design implementation
 
@@ -27,28 +27,28 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  26
-    LUTs:                 29
+    FFs:                  154
+    LUTs:                 200
     RAMs:                 0
-    IOBs:                 4
+    IOBs:                 5
     GBs:                  1
     PLLs:                 0
     Warm Boots:           0
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 29/7680
-        Combinational Logic Cells: 3        out of   7680      0.0390625%
-        Sequential Logic Cells:    26       out of   7680      0.338542%
-        Logic Tiles:               5        out of   960       0.520833%
+    Total Logic Cells: 200/7680
+        Combinational Logic Cells: 46       out of   7680      0.598958%
+        Sequential Logic Cells:    154      out of   7680      2.00521%
+        Logic Tiles:               33       out of   960       3.4375%
     Registers: 
-        Logic Registers:           26       out of   7680      0.338542%
-        IO Registers:              1        out of   1280      0.078125
+        Logic Registers:           154      out of   7680      2.00521%
+        IO Registers:              2        out of   1280      0.15625
     Block RAMs:                    0        out of   32        0%
     Warm Boots:                    0        out of   1         0%
     Pins:
         Input Pins:                1        out of   63        1.5873%
-        Output Pins:               2        out of   63        3.1746%
+        Output Pins:               3        out of   63        4.7619%
         InOut Pins:                2        out of   63        3.1746%
     Global Buffers:                1        out of   8         12.5%
     PLLs:                          0        out of   1         0%
@@ -57,7 +57,7 @@ IO Bank Utilization:
 --------------------
     Bank 3: 2        out of   18        11.1111%
     Bank 1: 1        out of   15        6.66667%
-    Bank 0: 1        out of   17        5.88235%
+    Bank 0: 2        out of   17        11.7647%
     Bank 2: 0        out of   13        0%
 
 Detailed I/O Info:
@@ -70,6 +70,7 @@ Detailed I/O Info:
     Output Pins: 
     Pin Number  Direction  IO Standard    Pull Up  IO Bank  IO Function             Signal Name
     ----------  ---------  -----------    -------  -------  -----------             -----------
+    A1          Output     SB_LVCMOS      No       0        Output Registered       PIN_2   
     A9          Output     SB_LVCMOS      No       1        Output Registered       PIN_18  
     B3          Output     SB_LVCMOS      No       0        Simple Output           LED     
 
@@ -83,7 +84,7 @@ Detailed Global Buffer Info:
 ----------------------------
     Buffer Number  IO Bank  Driven By  Fanout  Signal Name
     -------------  -------  ---------  ------  -----------
-    3              3                   27      CLK_c  
+    3              3                   106     CLK_c  
 
 
 Router Summary:
@@ -93,9 +94,9 @@ Router Summary:
 
 Routing Resource Utilization:
 -----------------------------
-              Local line of tile      188 out of 146184      0.128605%
-                          Span 4       10 out of  29696      0.0336746%
-                         Span 12        3 out of   5632      0.053267%
+              Local line of tile     1296 out of 146184      0.886554%
+                          Span 4      102 out of  29696      0.343481%
+                         Span 12       19 out of   5632      0.337358%
                   Global network        1 out of      8      12.5%
-      Vertical Inter-LUT Connect        1 out of   6720      0.014881%
+      Vertical Inter-LUT Connect       14 out of   6720      0.208333%
 
