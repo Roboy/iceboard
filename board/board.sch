@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:board-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,11 +13,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 3125 6200 2    50   ~ 0
+Text Label 3125 6000 2    50   ~ 0
 HALL1
 Text Label 3125 6100 2    50   ~ 0
 HALL2
-Text Label 3125 6000 2    50   ~ 0
+Text Label 3125 6200 2    50   ~ 0
 HALL3
 $Comp
 L Connector:Conn_01x05_Female J?
@@ -910,7 +909,7 @@ U 1 1 5DEF9434
 P 7600 5750
 F 0 "SW1" H 7600 6117 50  0000 C CNN
 F 1 "SW_DIP_x02" H 7600 6026 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_DIP_SPSTx02_Slide_Copal_CHS-02A_W5.08mm_P1.27mm_JPin" H 7600 5750 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_DIP_SPSTx02_Slide_Copal_CHS-02B_W7.62mm_P1.27mm" H 7600 5750 50  0001 C CNN
 F 3 "" H 7600 5750 50  0001 C CNN
 	1    7600 5750
 	1    0    0    -1  
@@ -986,19 +985,6 @@ F 3 "~" H 3775 5175 50  0001 C CNN
 	1    3775 5175
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0166
-U 1 1 5DF21D73
-P 3775 5325
-AR Path="/5DF21D73" Ref="#PWR0166"  Part="1" 
-AR Path="/5D056FB0/5DF21D73" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0166" H 3775 5075 50  0001 C CNN
-F 1 "GND" V 3780 5197 50  0000 R CNN
-F 2 "" H 3775 5325 50  0001 C CNN
-F 3 "" H 3775 5325 50  0001 C CNN
-	1    3775 5325
-	1    0    0    -1  
-$EndComp
 Text Label 2975 4825 2    50   ~ 0
 Encoder0_A
 Text Label 2975 4625 2    50   ~ 0
@@ -1019,4 +1005,17 @@ Text Label 3075 2225 2    50   ~ 0
 nFault
 Text Label 4825 4100 2    50   ~ 0
 nFault
+$Comp
+L power:+3.3V #PWR0166
+U 1 1 5E87865E
+P 3775 5325
+AR Path="/5E87865E" Ref="#PWR0166"  Part="1" 
+AR Path="/5D056FB0/5E87865E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0166" H 3775 5175 50  0001 C CNN
+F 1 "+3.3V" V 3790 5453 50  0000 L CNN
+F 2 "" H 3775 5325 50  0001 C CNN
+F 3 "" H 3775 5325 50  0001 C CNN
+	1    3775 5325
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
