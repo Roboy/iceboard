@@ -1055,11 +1055,11 @@ Text HLabel 13300 6250 0    50   Input ~ 0
 Encoder0_B
 Text HLabel 10800 7700 0    50   Input ~ 0
 Encoder0_A
-Text HLabel 13300 6050 0    50   Input ~ 0
+Text HLabel 13300 5750 0    50   Input ~ 0
 HALL3
 Text HLabel 13300 5950 0    50   Input ~ 0
 HALL2
-Text HLabel 13300 5750 0    50   Input ~ 0
+Text HLabel 13300 6050 0    50   Input ~ 0
 HALL1
 Text HLabel 13300 6650 0    50   Output ~ 0
 NEOPXL

@@ -20,19 +20,6 @@ HALL2
 Text Label 3125 6200 2    50   ~ 0
 HALL3
 $Comp
-L Connector:Conn_01x05_Female J?
-U 1 1 5D481FEB
-P 5300 5675
-AR Path="/5D056FB0/5D481FEB" Ref="J?"  Part="1" 
-AR Path="/5D481FEB" Ref="J5"  Part="1" 
-F 0 "J5" H 5328 5701 50  0000 L CNN
-F 1 "UART" H 5328 5610 50  0000 L CNN
-F 2 "custom_lib:TE-Connectivity_Micro-Match_connector_02x03_Pitch_1.27mm" H 5300 5675 50  0001 C CNN
-F 3 "~" H 5300 5675 50  0001 C CNN
-	1    5300 5675
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x08_Male J2
 U 1 1 5D6DCD64
 P 3475 6400
@@ -1018,4 +1005,17 @@ F 3 "" H 3775 5325 50  0001 C CNN
 	1    3775 5325
 	-1   0    0    1   
 $EndComp
+$Comp
+L Connector:Conn_01x06_Female J?
+U 1 1 5E9A0F34
+P 5300 5675
+F 0 "J?" H 5328 5651 50  0000 L CNN
+F 1 "UART" H 5328 5560 50  0000 L CNN
+F 2 "" H 5300 5675 50  0001 C CNN
+F 3 "~" H 5300 5675 50  0001 C CNN
+	1    5300 5675
+	1    0    0    -1  
+$EndComp
+Text GLabel 5100 5975 0    50   Input ~ 0
+SHIELD
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=Do 16 Apr 2020 13:31:52 CEST
+update=Do 16 Apr 2020 17:55:12 CEST
 version=1
 last_client=kicad
 [general]
@@ -44,8 +44,8 @@ ViaDiameter1=0.4
 ViaDrill1=0.2
 ViaDiameter2=0.254
 ViaDrill2=0.127
-ViaDiameter3=0.29
-ViaDrill3=0.2
+ViaDiameter3=0.31
+ViaDrill3=0.15
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
@@ -242,7 +242,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.127
+Clearance=0.09
 TrackWidth=0.1524
 ViaDiameter=0.4
 ViaDrill=0.2
@@ -252,6 +252,17 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
+Name=5V
+Clearance=0.15
+TrackWidth=0.3
+ViaDiameter=0.4
+ViaDrill=0.2
+uViaDiameter=0.3
+uViaDrill=0.15
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/2]
 Name=GATE
 Clearance=0.1524
 TrackWidth=0.1778
@@ -262,10 +273,10 @@ uViaDrill=0.15
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[pcbnew/Netclasses/2]
+[pcbnew/Netclasses/3]
 Name=POWER
-Clearance=0.3048
-TrackWidth=1
+Clearance=0.15
+TrackWidth=0.3
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3
