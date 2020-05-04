@@ -444,4 +444,12 @@ Text HLabel 8325 3600 0    50   Input ~ 0
 l_Tx
 Text HLabel 8325 3500 0    50   Input ~ 0
 h_Tx
+Text HLabel 7800 2950 0    50   Input ~ 0
+l_Rx
+Text HLabel 7800 3050 0    50   Input ~ 0
+h_Rx
+Text HLabel 7800 3150 0    50   Input ~ 0
+l_Tx
+Text HLabel 7800 3250 0    50   Input ~ 0
+h_Tx
 $EndSCHEMATC
