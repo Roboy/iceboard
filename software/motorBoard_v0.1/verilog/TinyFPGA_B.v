@@ -318,12 +318,9 @@ neopixel #(16_000_000) nx(
     )/* synthesis syn_noprune = 1 */;
 
   always @(posedge clk16MHz) begin: DISPLACEMENT_CALCULATION
-    //encoder0_position_scaled <= (encoder0_position-encoder0_offset)/53;
-    //encoder1_position_scaled <= encoder1_position/8;
-	encoder0_position_scaled <= encoder0_position;
-    encoder1_position_scaled <= encoder1_position;
+    encoder0_position_scaled <= encoder0_position*8;
+    encoder1_position_scaled <= encoder1_position*53;
     displacement <= (encoder0_position_scaled-encoder1_position_scaled);
-    
   end
 
   reg [10:0] addr;
