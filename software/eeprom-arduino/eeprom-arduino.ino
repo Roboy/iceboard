@@ -34,7 +34,7 @@ void loop() {
       Serial.println("invalid bus id, choose between 1-254");
     }else{
       integer_union baudrate, baudrate_readback;
-      baudrate.value = 2000000;
+      baudrate.value = 460800;
       Serial.print("writing bus_id: ");
       Serial.println(value);
       Serial.print("baudrate: ");

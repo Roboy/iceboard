@@ -108,7 +108,7 @@ neopixel #(16_000_000) nx(
       pwm_setpoint <= duty;
      end else begin
       if(duty>current)begin
-        pwm_setpoint <= duty/8;
+        pwm_setpoint <= (duty>>>3);
       end else begin
         pwm_setpoint <= current;
       end
@@ -119,7 +119,7 @@ neopixel #(16_000_000) nx(
        pwm_setpoint <= -duty;
      end else begin
        if(duty<-current)begin
-        pwm_setpoint <= -duty/8;
+        pwm_setpoint <= -(duty>>>3);
        end else begin
         pwm_setpoint <= current;
        end
@@ -318,8 +318,8 @@ neopixel #(16_000_000) nx(
     )/* synthesis syn_noprune = 1 */;
 
   always @(posedge clk16MHz) begin: DISPLACEMENT_CALCULATION
-    encoder0_position_scaled <= encoder0_position*8;
-    encoder1_position_scaled <= encoder1_position*53;
+    encoder0_position_scaled <= (encoder0_position<<<1)/53;
+    encoder1_position_scaled <= (encoder1_position>>>2);
     displacement <= (encoder0_position_scaled-encoder1_position_scaled);
   end
 
