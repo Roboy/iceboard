@@ -301,7 +301,7 @@ neopixel #(16_000_000) nx(
     .deadband(deadband)
   );
 
-  quadrature_decoder #((16_000_000/10_000_000)) quad_counter0(
+  quadrature_decoder #(0) quad_counter0(
       .clk(clk16MHz),
       .a(ENCODER0_A),
       .b(ENCODER0_B),
@@ -309,7 +309,7 @@ neopixel #(16_000_000) nx(
       .position(encoder0_position)
     )/* synthesis syn_noprune = 1 */;
 
-  quadrature_decoder #((16_000_000/10_000_000)) quad_counter1(
+  quadrature_decoder #(0) quad_counter1(
       .clk(clk16MHz),
       .a(ENCODER1_A),
       .b(ENCODER1_B),
