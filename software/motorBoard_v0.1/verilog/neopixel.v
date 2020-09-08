@@ -7,9 +7,12 @@ module neopixel #(parameter CLOCK_SPEED_HZ = 32_000_000)(
   );
 
 reg [10:0] timer;
+reg [10:0] t0;
+reg [10:0] t1;
 
 always @ ( posedge clock ) begin
   timer <= timer + 1;
+  t1 <= (timer - t0);
 end
 
 
@@ -21,11 +24,8 @@ reg start;
 assign color_bit = color[(24-bit_ctr)];
 
 always @(posedge clock, posedge reset) begin: neo_pixel_transmitter
-		parameter SIZE = 4;
 		parameter SEND_0  = 0, SEND_1 = 1,LATCH = 2, IDLE = 3;
 		reg done;
-		reg [10:0] t0;
-		reg [10:0] t1;
 		if(reset==1) begin
 			start <= 1;
 			done <= 0;
@@ -49,23 +49,22 @@ always @(posedge clock, posedge reset) begin: neo_pixel_transmitter
 									start <= 0;
 									done <= 0;
 								end else begin
-									t1 = timer - t0;
 									if( done == 0 ) begin
-										if( t1 < CLOCK_SPEED_HZ/1111111 ) begin // 0.9 us approx 1111111 Hz
-											one_wire <= 1;
-										end else begin
+										if( t1 == (CLOCK_SPEED_HZ/1111111) ) begin // 0.9 us approx 1111111 Hz
 											done <= 1;
 											t0 <= timer;
+										end else begin
+    										one_wire <= 1;
 										end
 									end else begin
-										if( t1 < CLOCK_SPEED_HZ/3333333 ) begin // 0.3 us approx 3333333 Hz
-											one_wire <= 0;
-										end else begin
+										if( t1 == (CLOCK_SPEED_HZ/3333333) ) begin // 0.3 us approx 3333333 Hz
 											done <= 0;
 											start <= 1;
 											t0 <= timer;
 											state <= IDLE;
 											bit_ctr <= bit_ctr+1;
+										end else begin
+    										one_wire <= 0;
 										end
 									end
 								end
@@ -76,36 +75,34 @@ always @(posedge clock, posedge reset) begin: neo_pixel_transmitter
 									start <= 0;
 									done <= 0;
 								end else begin
-									t1 = timer - t0;
 									if( done == 0 ) begin
-										if( t1 < CLOCK_SPEED_HZ/3333333 ) begin // 0.3 us approx 3333333 Hz
-											one_wire <= 1;
-										end else begin
+										if( t1 == (CLOCK_SPEED_HZ/3333333) ) begin // 0.3 us approx 3333333 Hz
 											done <= 1;
 											t0 <= timer;
+										end else begin
+										    one_wire <= 1;
 										end
 									end else begin
-										if( t1 < CLOCK_SPEED_HZ/1111111 ) begin // 0.9 us approx 1111111 Hz
-											one_wire <= 0;
-										end else begin
+										if( t1 == (CLOCK_SPEED_HZ/1111111) ) begin // 0.9 us approx 1111111 Hz
 											done <= 0;
 											start <= 1;
 											t0 <= timer;
 											state <= IDLE;
 											bit_ctr <= bit_ctr+1;
+										end else begin
+										    one_wire <= 0;
 										end
 									end
 								end
 							end
 				LATCH : begin
-								t1 = timer - t0;
 								if( done == 0 ) begin
-									if( t1 < CLOCK_SPEED_HZ/12500 ) begin // 80 us approx 12500 Hz
-										one_wire <= 0;
-									end else begin
+									if( t1 == (CLOCK_SPEED_HZ/12500) ) begin // 80 us approx 12500 Hz
 										done <= 0;
 										start <= 1;
 										state <= IDLE;
+									end else begin
+									    one_wire <= 0;
 									end
 								end
 							end
