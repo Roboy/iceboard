@@ -9,7 +9,8 @@ module motorControl(
     input signed [23:0] Kd,
     input signed [23:0] PWMLimit,
     input signed [23:0] IntegralLimit,
-    input signed [23:0] deadband
+    input signed [23:0] deadband,
+    input [7:0] control_mode
   );
 
   localparam  CLOCK_FREQ = 16_000_000;
@@ -39,26 +40,30 @@ module motorControl(
       result = 0;
       integral = 0;
     end else begin
-      if(control_update)begin
-        err = (setpoint-state);
-        err = err>>>4;
-        integral = integral+err;
-        if(integral>IntegralLimit) begin
-          integral = IntegralLimit;
-        end else if(integral<-IntegralLimit) begin
-          integral = -IntegralLimit;
-        end
-        result = Kp*err + Ki*integral;
-        if((result>deadband) || (result < -deadband))begin
-          if(result>PWMLimit)begin
-            result = PWMLimit;
-          end else if(result<-PWMLimit)begin
-            result = -PWMLimit;
-          end
+        if(control_mode==3) begin
+            result = setpoint;
         end else begin
-          result = 0;
+          if(control_update)begin
+            err = (setpoint-state);
+            err = err>>>4;
+            integral = integral+err;
+            if(integral>IntegralLimit) begin
+              integral = IntegralLimit;
+            end else if(integral<-IntegralLimit) begin
+              integral = -IntegralLimit;
+            end
+            result = Kp*err + Ki*integral;
+            if((result>deadband) || (result < -deadband))begin
+              if(result>PWMLimit)begin
+                result = PWMLimit;
+              end else if(result<-PWMLimit)begin
+                result = -PWMLimit;
+              end
+            end else begin
+              result = 0;
+            end
+          end
         end
-      end
     end
   end
 

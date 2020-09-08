@@ -298,7 +298,8 @@ neopixel #(16_000_000) nx(
     .Kd(Kd),
     .PWMLimit(PWMLimit),
     .IntegralLimit(IntegralLimit),
-    .deadband(deadband)
+    .deadband(deadband),
+    .control_mode(control_mode)
   );
 
   quadrature_decoder #(0) quad_counter0(
