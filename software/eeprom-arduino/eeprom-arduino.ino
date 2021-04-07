@@ -11,8 +11,9 @@ union integer_union{
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
-  while(!Serial)
-  Serial.println("welcome to the iceboard eeprom programmer");
+  while(!Serial){}
+  Serial.println("Welcome to the iceboard eeprom programmer!");
+  Serial.print("Please enter an ID number to program it: ");
   Wire.begin();
 }
 
@@ -70,7 +71,7 @@ void loop() {
         Serial.println(baudrate_readback.value);
       }else{
         Serial.print("bus_id: ");
-        Serial.println(value);
+        Serial.println(id);
         Serial.print("baudrate: ");
         Serial.println(baudrate_readback.value);
         Serial.println("succesfully written");
