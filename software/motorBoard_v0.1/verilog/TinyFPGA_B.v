@@ -27,7 +27,15 @@ module TinyFPGA_B (
   output INLA,
   output INHA
 );
-  // drive USB pull-up resistor to '0' to disable USB
+
+////// Common parameters //////
+
+localparam GEAR_RATIO = 53;
+
+//////
+
+
+// drive USB pull-up resistor to '0' to disable USB
 assign USBPU = 0;
 
 wire clk16MHz, clk32MHz;
@@ -319,8 +327,8 @@ neopixel #(16_000_000) nx(
     )/* synthesis syn_noprune = 1 */;
 
   always @(posedge clk16MHz) begin: DISPLACEMENT_CALCULATION
-    encoder0_position_scaled <= (encoder0_position<<<1)/53;
-    encoder1_position_scaled <= (encoder1_position>>>2);
+    encoder0_position_scaled <= encoder0_position<<<2;
+    encoder1_position_scaled <= encoder1_position*GEAR_RATIO;
     displacement <= (encoder0_position_scaled-encoder1_position_scaled);
   end
 
