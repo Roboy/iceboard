@@ -1,5 +1,5 @@
 #-- Lattice, Inc.
-#-- Project file /home/luis/Roboy/electronics/iceboard/software/motorBoard_v0.1/template_lse.prj
+#-- Project file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_lse.prj
 
 #device
 -a SBTiCE40
@@ -45,10 +45,10 @@
 -lib work -vhd "vhdl/quadrature_decoder.vhd" 
 -ver "verilog/tli4970.v"
 -ver "verilog/pll32MHz.v"
--p "/home/luis/Roboy/electronics/iceboard/software/motorBoard_v0.1"
+-p "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1"
 
 #set result format/file last
 -output_edif template_Implmnt/template.edf
 
 #set log file
--logfile "template_Implmnt/template_lse.log"
+-logfile "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template_lse.log"

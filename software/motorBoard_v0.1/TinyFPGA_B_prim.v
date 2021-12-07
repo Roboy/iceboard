@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Diamond Version 0.0.0
-// Netlist written on Mon Dec  6 23:18:50 2021
+// Netlist written on Tue Dec  7 13:46:38 2021
 //
 // Verilog Description of module TinyFPGA_B
 //
@@ -363,21 +363,21 @@ module TinyFPGA_B (CLK, LED, USBPU, ENCODER0_A, ENCODER0_B, ENCODER1_A,
     VCC i2 (.Y(VCC_net));
     SB_IO hall2_input (.PACKAGE_PIN(HALL2), .LATCH_INPUT_VALUE(GND_net), 
           .INPUT_CLK(GND_net), .OUTPUT_CLK(GND_net), .OUTPUT_ENABLE(GND_net), 
-          .D_OUT_1(GND_net), .D_OUT_0(GND_net), .D_IN_0(hall2)) /* synthesis syn_instantiated=1 */ ;   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_OUT_1(GND_net), .D_OUT_0(GND_net), .D_IN_0(hall2)) /* synthesis syn_instantiated=1 */ ;   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam hall2_input.PIN_TYPE = 6'b000001;
     defparam hall2_input.PULLUP = 1'b1;
     defparam hall2_input.NEG_TRIGGER = 1'b0;
     defparam hall2_input.IO_STANDARD = "SB_LVCMOS";
     SB_IO hall3_input (.PACKAGE_PIN(HALL3), .LATCH_INPUT_VALUE(GND_net), 
           .INPUT_CLK(GND_net), .OUTPUT_CLK(GND_net), .OUTPUT_ENABLE(GND_net), 
-          .D_OUT_1(GND_net), .D_OUT_0(GND_net), .D_IN_0(hall3)) /* synthesis syn_instantiated=1 */ ;   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_OUT_1(GND_net), .D_OUT_0(GND_net), .D_IN_0(hall3)) /* synthesis syn_instantiated=1 */ ;   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam hall3_input.PIN_TYPE = 6'b000001;
     defparam hall3_input.PULLUP = 1'b1;
     defparam hall3_input.NEG_TRIGGER = 1'b0;
     defparam hall3_input.IO_STANDARD = "SB_LVCMOS";
     SB_IO tx_output (.PACKAGE_PIN(TX), .LATCH_INPUT_VALUE(GND_net), .INPUT_CLK(GND_net), 
           .OUTPUT_CLK(GND_net), .OUTPUT_ENABLE(tx_enable), .D_OUT_1(GND_net), 
-          .D_OUT_0(tx_o)) /* synthesis syn_instantiated=1 */ ;   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_OUT_0(tx_o)) /* synthesis syn_instantiated=1 */ ;   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam tx_output.PIN_TYPE = 6'b101001;
     defparam tx_output.PULLUP = 1'b1;
     defparam tx_output.NEG_TRIGGER = 1'b0;
@@ -392,7 +392,7 @@ module TinyFPGA_B (CLK, LED, USBPU, ENCODER0_A, ENCODER0_B, ENCODER1_A,
            .D(encoder1_position[2]));   // verilog/TinyFPGA_B.v(321[10] 325[6])
     SB_IO sda_output (.PACKAGE_PIN(SDA), .LATCH_INPUT_VALUE(GND_net), .INPUT_CLK(GND_net), 
           .OUTPUT_CLK(GND_net), .OUTPUT_ENABLE(sda_enable), .D_OUT_1(GND_net), 
-          .D_OUT_0(sda_out), .D_IN_0(state_7__N_4126[3])) /* synthesis syn_instantiated=1 */ ;   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_OUT_0(sda_out), .D_IN_0(state_7__N_4126[3])) /* synthesis syn_instantiated=1 */ ;   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam sda_output.PIN_TYPE = 6'b101001;
     defparam sda_output.PULLUP = 1'b1;
     defparam sda_output.NEG_TRIGGER = 1'b0;
@@ -400,7 +400,7 @@ module TinyFPGA_B (CLK, LED, USBPU, ENCODER0_A, ENCODER0_B, ENCODER1_A,
     SB_DFF displacement_i0 (.Q(displacement[0]), .C(clk16MHz), .D(displacement_23__N_67[0]));   // verilog/TinyFPGA_B.v(321[10] 325[6])
     SB_IO scl_output (.PACKAGE_PIN(SCL), .LATCH_INPUT_VALUE(GND_net), .INPUT_CLK(GND_net), 
           .OUTPUT_CLK(GND_net), .OUTPUT_ENABLE(scl_enable), .D_OUT_1(GND_net), 
-          .D_OUT_0(scl)) /* synthesis syn_instantiated=1 */ ;   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_OUT_0(scl)) /* synthesis syn_instantiated=1 */ ;   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam scl_output.PIN_TYPE = 6'b101001;
     defparam scl_output.PULLUP = 1'b1;
     defparam scl_output.NEG_TRIGGER = 1'b0;
@@ -410,7 +410,7 @@ module TinyFPGA_B (CLK, LED, USBPU, ENCODER0_A, ENCODER0_B, ENCODER1_A,
     defparam i48542_3_lut.LUT_INIT = 16'hcaca;
     SB_IO hall1_input (.PACKAGE_PIN(HALL1), .LATCH_INPUT_VALUE(GND_net), 
           .INPUT_CLK(GND_net), .OUTPUT_CLK(GND_net), .OUTPUT_ENABLE(GND_net), 
-          .D_OUT_1(GND_net), .D_OUT_0(GND_net), .D_IN_0(hall1)) /* synthesis syn_instantiated=1 */ ;   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_OUT_1(GND_net), .D_OUT_0(GND_net), .D_IN_0(hall1)) /* synthesis syn_instantiated=1 */ ;   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam hall1_input.PIN_TYPE = 6'b000001;
     defparam hall1_input.PULLUP = 1'b1;
     defparam hall1_input.NEG_TRIGGER = 1'b0;
@@ -601,7 +601,7 @@ module TinyFPGA_B (CLK, LED, USBPU, ENCODER0_A, ENCODER0_B, ENCODER1_A,
     SB_LUT4 i13996_3_lut (.I0(\PID_CONTROLLER.integral [8]), .I1(n351), 
             .I2(n27465), .I3(GND_net), .O(n29857));   // verilog/motorControl.v(42[14] 73[8])
     defparam i13996_3_lut.LUT_INIT = 16'hcaca;
-    SB_IO LED_pad (.PACKAGE_PIN(LED), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(LED_c));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO LED_pad (.PACKAGE_PIN(LED), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(LED_c));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam LED_pad.PIN_TYPE = 6'b011001;
     defparam LED_pad.PULLUP = 1'b0;
     defparam LED_pad.NEG_TRIGGER = 1'b0;
@@ -982,7 +982,7 @@ module TinyFPGA_B (CLK, LED, USBPU, ENCODER0_A, ENCODER0_B, ENCODER1_A,
     SB_LUT4 n72233_bdd_4_lut (.I0(n72233), .I1(duty[3]), .I2(n4934), .I3(n9938), 
             .O(pwm_setpoint_23__N_3[3]));
     defparam n72233_bdd_4_lut.LUT_INIT = 16'haad8;
-    SB_IO CS_MISO_pad (.PACKAGE_PIN(CS_MISO), .OUTPUT_ENABLE(VCC_net), .D_IN_0(CS_MISO_c));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO CS_MISO_pad (.PACKAGE_PIN(CS_MISO), .OUTPUT_ENABLE(VCC_net), .D_IN_0(CS_MISO_c));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam CS_MISO_pad.PIN_TYPE = 6'b000001;
     defparam CS_MISO_pad.PULLUP = 1'b0;
     defparam CS_MISO_pad.NEG_TRIGGER = 1'b0;
@@ -1194,86 +1194,86 @@ module TinyFPGA_B (CLK, LED, USBPU, ENCODER0_A, ENCODER0_B, ENCODER1_A,
     SB_LUT4 byte_transmit_counter_3__bdd_4_lut_55051 (.I0(byte_transmit_counter[3]), 
             .I1(n70707), .I2(n68433), .I3(byte_transmit_counter[4]), .O(n72203));
     defparam byte_transmit_counter_3__bdd_4_lut_55051.LUT_INIT = 16'he4aa;
-    SB_IO RX_pad (.PACKAGE_PIN(RX), .OUTPUT_ENABLE(VCC_net), .D_IN_0(RX_c));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO RX_pad (.PACKAGE_PIN(RX), .OUTPUT_ENABLE(VCC_net), .D_IN_0(RX_c));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam RX_pad.PIN_TYPE = 6'b000001;
     defparam RX_pad.PULLUP = 1'b0;
     defparam RX_pad.NEG_TRIGGER = 1'b0;
     defparam RX_pad.IO_STANDARD = "SB_LVCMOS";
     SB_IO ENCODER1_B_pad (.PACKAGE_PIN(ENCODER1_B), .OUTPUT_ENABLE(VCC_net), 
-          .D_IN_0(ENCODER1_B_N));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_IN_0(ENCODER1_B_N));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam ENCODER1_B_pad.PIN_TYPE = 6'b000001;
     defparam ENCODER1_B_pad.PULLUP = 1'b0;
     defparam ENCODER1_B_pad.NEG_TRIGGER = 1'b0;
     defparam ENCODER1_B_pad.IO_STANDARD = "SB_LVCMOS";
     SB_IO ENCODER1_A_pad (.PACKAGE_PIN(ENCODER1_A), .OUTPUT_ENABLE(VCC_net), 
-          .D_IN_0(ENCODER1_A_N));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_IN_0(ENCODER1_A_N));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam ENCODER1_A_pad.PIN_TYPE = 6'b000001;
     defparam ENCODER1_A_pad.PULLUP = 1'b0;
     defparam ENCODER1_A_pad.NEG_TRIGGER = 1'b0;
     defparam ENCODER1_A_pad.IO_STANDARD = "SB_LVCMOS";
     SB_IO ENCODER0_B_pad (.PACKAGE_PIN(ENCODER0_B), .OUTPUT_ENABLE(VCC_net), 
-          .D_IN_0(ENCODER0_B_N));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_IN_0(ENCODER0_B_N));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam ENCODER0_B_pad.PIN_TYPE = 6'b000001;
     defparam ENCODER0_B_pad.PULLUP = 1'b0;
     defparam ENCODER0_B_pad.NEG_TRIGGER = 1'b0;
     defparam ENCODER0_B_pad.IO_STANDARD = "SB_LVCMOS";
     SB_IO ENCODER0_A_pad (.PACKAGE_PIN(ENCODER0_A), .OUTPUT_ENABLE(VCC_net), 
-          .D_IN_0(ENCODER0_A_N));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+          .D_IN_0(ENCODER0_A_N));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam ENCODER0_A_pad.PIN_TYPE = 6'b000001;
     defparam ENCODER0_A_pad.PULLUP = 1'b0;
     defparam ENCODER0_A_pad.NEG_TRIGGER = 1'b0;
     defparam ENCODER0_A_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO INHA_pad (.PACKAGE_PIN(INHA), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INHA_c_0));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO INHA_pad (.PACKAGE_PIN(INHA), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INHA_c_0));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam INHA_pad.PIN_TYPE = 6'b011001;
     defparam INHA_pad.PULLUP = 1'b0;
     defparam INHA_pad.NEG_TRIGGER = 1'b0;
     defparam INHA_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO USBPU_pad (.PACKAGE_PIN(USBPU), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(GND_net));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO USBPU_pad (.PACKAGE_PIN(USBPU), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(GND_net));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam USBPU_pad.PIN_TYPE = 6'b011001;
     defparam USBPU_pad.PULLUP = 1'b0;
     defparam USBPU_pad.NEG_TRIGGER = 1'b0;
     defparam USBPU_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO INLA_pad (.PACKAGE_PIN(INLA), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INLA_c_0));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO INLA_pad (.PACKAGE_PIN(INLA), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INLA_c_0));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam INLA_pad.PIN_TYPE = 6'b011001;
     defparam INLA_pad.PULLUP = 1'b0;
     defparam INLA_pad.NEG_TRIGGER = 1'b0;
     defparam INLA_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO INHB_pad (.PACKAGE_PIN(INHB), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INHB_c_0));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO INHB_pad (.PACKAGE_PIN(INHB), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INHB_c_0));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam INHB_pad.PIN_TYPE = 6'b011001;
     defparam INHB_pad.PULLUP = 1'b0;
     defparam INHB_pad.NEG_TRIGGER = 1'b0;
     defparam INHB_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO INLB_pad (.PACKAGE_PIN(INLB), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INLB_c_0));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO INLB_pad (.PACKAGE_PIN(INLB), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INLB_c_0));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam INLB_pad.PIN_TYPE = 6'b011001;
     defparam INLB_pad.PULLUP = 1'b0;
     defparam INLB_pad.NEG_TRIGGER = 1'b0;
     defparam INLB_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO INHC_pad (.PACKAGE_PIN(INHC), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INHC_c_0));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO INHC_pad (.PACKAGE_PIN(INHC), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INHC_c_0));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam INHC_pad.PIN_TYPE = 6'b011001;
     defparam INHC_pad.PULLUP = 1'b0;
     defparam INHC_pad.NEG_TRIGGER = 1'b0;
     defparam INHC_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO INLC_pad (.PACKAGE_PIN(INLC), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INLC_c_0));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO INLC_pad (.PACKAGE_PIN(INLC), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(INLC_c_0));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam INLC_pad.PIN_TYPE = 6'b011001;
     defparam INLC_pad.PULLUP = 1'b0;
     defparam INLC_pad.NEG_TRIGGER = 1'b0;
     defparam INLC_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO CS_pad (.PACKAGE_PIN(CS), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(CS_c));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO CS_pad (.PACKAGE_PIN(CS), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(CS_c));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam CS_pad.PIN_TYPE = 6'b011001;
     defparam CS_pad.PULLUP = 1'b0;
     defparam CS_pad.NEG_TRIGGER = 1'b0;
     defparam CS_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO CS_CLK_pad (.PACKAGE_PIN(CS_CLK), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(CS_CLK_c));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO CS_CLK_pad (.PACKAGE_PIN(CS_CLK), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(CS_CLK_c));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam CS_CLK_pad.PIN_TYPE = 6'b011001;
     defparam CS_CLK_pad.PULLUP = 1'b0;
     defparam CS_CLK_pad.NEG_TRIGGER = 1'b0;
     defparam CS_CLK_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO DE_pad (.PACKAGE_PIN(DE), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(DE_c));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO DE_pad (.PACKAGE_PIN(DE), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(DE_c));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam DE_pad.PIN_TYPE = 6'b011001;
     defparam DE_pad.PULLUP = 1'b0;
     defparam DE_pad.NEG_TRIGGER = 1'b0;
     defparam DE_pad.IO_STANDARD = "SB_LVCMOS";
-    SB_IO NEOPXL_pad (.PACKAGE_PIN(NEOPXL), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(NEOPXL_c));   // /home/luis/lscc/iCEcube2.2017.08/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
+    SB_IO NEOPXL_pad (.PACKAGE_PIN(NEOPXL), .OUTPUT_ENABLE(VCC_net), .D_OUT_0(NEOPXL_c));   // /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502[8:13])
     defparam NEOPXL_pad.PIN_TYPE = 6'b011001;
     defparam NEOPXL_pad.PULLUP = 1'b0;
     defparam NEOPXL_pad.NEG_TRIGGER = 1'b0;
