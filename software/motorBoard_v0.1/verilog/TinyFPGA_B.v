@@ -262,8 +262,8 @@ neopixel #(16_000_000) nx(
     .rx_i(~RX),
     .ID(ID),
     .duty(pwm_setpoint),
-    .encoder0_position(encoder0_position_scaled),
-    .encoder1_position(encoder1_position_scaled),
+    .encoder0_position(encoder0_position),
+    .encoder1_position(encoder1_position),
     .displacement(displacement),
     .setpoint(setpoint),
     .control_mode(control_mode),
@@ -319,8 +319,8 @@ neopixel #(16_000_000) nx(
     )/* synthesis syn_noprune = 1 */;
 
   always @(posedge clk16MHz) begin: DISPLACEMENT_CALCULATION
-    encoder0_position_scaled <= (encoder0_position<<<1);
-    encoder1_position_scaled <= (encoder1_position>>>2)*53;
+    encoder0_position_scaled <= (encoder0_position<<<1)/53;
+    encoder1_position_scaled <= (encoder1_position>>>2);
     displacement <= (encoder0_position_scaled-encoder1_position_scaled);
   end
 
