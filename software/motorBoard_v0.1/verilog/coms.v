@@ -21,9 +21,7 @@ module coms #(parameter CLK_FREQ_HZ = 16_000_000)
 	output reg [23:0] PWMLimit,
 	output reg [23:0] IntegralLimit,
 	output reg [23:0] deadband,
-	output reg [23:0] neopxl_color,
-	output reg signed [15:0] current_limit,
-	output reg LED
+	output reg signed [15:0] current_limit
 );
 
 localparam  MAGIC_NUMBER_LENGTH = 4;
@@ -148,7 +146,6 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 			case(state)
 				IDLE: begin
 					i <= 0;
-					LED <= 0;
 					driver_enable <= 0;
 				end
 				RECEIVE_STATUS_REQUEST: begin
@@ -192,11 +189,7 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 						data_out_frame[20] <= displacement[7:0];
 						data_out_frame[21] <= current[15:8];
 						data_out_frame[22] <= current[7:0];
-						data_out_frame[23] <= neopxl_color[23:16];
-						data_out_frame[24] <= neopxl_color[15:8];
-						data_out_frame[25] <= neopxl_color[7:0];
 						state <= GENERATE_STATUS_CRC;
-						LED <= 1;
 					end else begin
 						state <= IDLE;
 					end
@@ -242,14 +235,10 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 						// data_out_frame[0] <= ID;
 						// byte_transmit_counter <= 0;
 						// tx_transmit <= 1;
-						LED <= 1;
 						state <= IDLE;
 						setpoint[23:16] <= data_in_frame[1];
 						setpoint[15:8] <= data_in_frame[2];
 						setpoint[7:0] <= data_in_frame[3];
-						neopxl_color[23:16] <= data_in_frame[4];
-						neopxl_color[15:8] <= data_in_frame[5];
-						neopxl_color[7:0] <= data_in_frame[6];
 					end else begin
 						state <= IDLE;
 					end
@@ -274,7 +263,6 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 							// data_out_frame[0] <= ID;
 							// byte_transmit_counter <= 0;
 							// tx_transmit <= 1;
-							LED <= 1;
 							control_mode <= data_in_frame[1];
 							Kp[15:8] <= data_in_frame[2];
 							Kp[7:0] <= data_in_frame[3];

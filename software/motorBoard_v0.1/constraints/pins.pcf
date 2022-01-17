@@ -14,7 +14,6 @@
 
 ###IOSet List 24
 set_io CLK B2
-set_io LED B3
 set_io USBPU A3
 set_io ENCODER0_A A1
 set_io ENCODER0_B D1
@@ -24,7 +23,6 @@ set_io HALL3 B1 #wrong in kicad !!
 set_io HALL2 C1
 set_io HALL1 C2
 set_io FAULT_N A2
-set_io NEOPXL E2
 set_io DE H1
 set_io TX J1
 set_io RX H2

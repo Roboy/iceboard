@@ -38,7 +38,6 @@
 -ver "verilog/motorControl.v"
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd" 
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd" 
--ver "verilog/neopixel.v"
 -ver "verilog/pwm.v"
 -ver "verilog/eeprom.v"
 -ver "verilog/i2c_controller.v"
