@@ -6804,3 +6804,1551 @@ Bitmap run-time: 5 (sec)
 bitmap succeed.
 Initializing timer and loading data ...
 Timer loaded summary data. Total time 1569(sec)
+/home/administrator/lscc/iCEcube2.2020.12/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jan 17 19:46:05 2022
+
+
+Command Line:  /home/administrator/lscc/iCEcube2.2020.12/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1 (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/uart_rx.v
+Verilog design file = verilog/uart_tx.v
+Verilog design file = verilog/coms.v
+Verilog design file = verilog/motorControl.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/pll32MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd
+VHDL library = work
+VHDL design file = vhdl/quadrature_decoder.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+running SynthesisAnalyzing Verilog file /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+Analyzing Verilog file verilog/uart_rx.v. VERI-1482
+Analyzing Verilog file verilog/uart_tx.v. VERI-1482
+Analyzing Verilog file verilog/coms.v. VERI-1482
+Analyzing Verilog file verilog/motorControl.v. VERI-1482
+Analyzing Verilog file verilog/pwm.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/pll32MHz.v. VERI-1482
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(128): analyzing entity grp_debouncer. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(140): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/quadrature_decoder.vhd. VHDL-1481
+INFO - synthesis: vhdl/quadrature_decoder.vhd(26): analyzing entity quadrature_decoder. VHDL-1012
+INFO - synthesis: vhdl/quadrature_decoder.vhd(38): analyzing architecture logic. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+INFO - synthesis: verilog/pll32MHz.v(1): compiling module pll32MHz. VERI-1018
+INFO - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(699): compiling module SB_PLL40_CORE(FEEDBACK_PATH="PHASE_AND_DELAY",FDA_FEEDBACK=4'b0,FDA_RELATIVE=4'b0,PLLOUT_SELECT="SHIFTREG_0deg",DIVF=7'b01,DIVQ=3'b011,FILTER_RANGE=3'b01). VERI-1018
+WARNING - synthesis: verilog/pll32MHz.v(22): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+INFO - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(579): compiling module SB_GB. VERI-1018
+INFO - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b01,PULLUP=1'b1). VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(76): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(77): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(78): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(79): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(80): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(81): expression size 32 truncated to fit in target size 1. VERI-1209
+INFO - synthesis: verilog/pwm.v(1): compiling module pwm. VERI-1018
+WARNING - synthesis: verilog/pwm.v(17): expression size 32 truncated to fit in target size 24. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(136): expression size 11 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(162): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/coms.v(1): compiling module coms. VERI-1018
+INFO - synthesis: verilog/uart_rx.v(14): compiling module uart_rx. VERI-1018
+WARNING - synthesis: verilog/uart_rx.v(81): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(92): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(103): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(121): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: verilog/uart_tx.v(14): compiling module uart_tx. VERI-1018
+WARNING - synthesis: verilog/uart_tx.v(71): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(89): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(99): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(119): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/coms.v(214): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(253): actual bit length 32 differs from formal bit length 24 for port encoder0_position. VERI-1330
+WARNING - synthesis: verilog/TinyFPGA_B.v(254): actual bit length 32 differs from formal bit length 24 for port encoder1_position. VERI-1330
+WARNING - synthesis: verilog/TinyFPGA_B.v(274): expression size 32 truncated to fit in target size 24. VERI-1209
+INFO - synthesis: verilog/motorControl.v(1): compiling module motorControl. VERI-1018
+INFO - synthesis: verilog/TinyFPGA_B.v(297): going to vhdl side to elaborate module quadrature_decoder. VERI-1231
+vhdl/quadrature_decoder.vhd(26): executing quadrature_decoder(0)(logic)
+
+INFO - synthesis: verilog/TinyFPGA_B.v(297): back to verilog to continue elaboration. VERI-1232
+INFO - synthesis: verilog/TinyFPGA_B.v(305): going to vhdl side to elaborate module quadrature_decoder. VERI-1231
+vhdl/quadrature_decoder.vhd(26): executing quadrature_decoder(0)(logic)
+
+WARNING - synthesis: vhdl/quadrature_decoder.vhd(36): replacing existing netlist quadrature_decoder(0)(logic). VHDL-1205
+INFO - synthesis: verilog/TinyFPGA_B.v(305): back to verilog to continue elaboration. VERI-1232
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(60): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: verilog/eeprom.v(68): expression size 32 truncated to fit in target size 3. VERI-1209
+INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(46): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(135): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: verilog/tli4970.v(1): compiling module TLI4970. VERI-1018
+WARNING - synthesis: verilog/tli4970.v(14): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(23): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(40): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(55): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(74): net dir does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(83): net pwm_setpoint[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(229): net displacement[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(313): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(55): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(63): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(71): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(221): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(327): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(336): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/home/administrator/lscc/iCEcube2.2020.12/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/administrator/lscc/iCEcube2.2020.12/LSE/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: No object with type PORT found matching "clk32MHz".
+WARNING - synthesis: Ignoring Constraint: create_clock  -period 31.25 -name {clk32MHz} [get_ports {clk32MHz}].
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: verilog/TinyFPGA_B.v(289): Removing unused instance control. VDB-5034
+WARNING - synthesis: No object with type PORT found matching "clk32MHz".
+WARNING - synthesis: Ignoring Constraint: create_clock  -period 31.25 -name {clk32MHz} [get_ports {clk32MHz}].
+WARNING - synthesis: verilog/TinyFPGA_B.v(74): net dir does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(83): net pwm_setpoint[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(229): net displacement[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(313): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(55): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(63): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(71): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(221): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(327): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(336): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(42): Removing unused instance My_Global_Buffer_i_222. VDB-5034
+WARNING - synthesis: verilog/pll32MHz.v(22): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+######## Missing driver on net dir. Patching with GND.
+######## Missing driver on net pwm_setpoint[23]. Patching with GND.
+######## Missing driver on net pwm_setpoint[22]. Patching with GND.
+######## Missing driver on net pwm_setpoint[21]. Patching with GND.
+######## Missing driver on net pwm_setpoint[20]. Patching with GND.
+######## Missing driver on net pwm_setpoint[19]. Patching with GND.
+######## Missing driver on net pwm_setpoint[18]. Patching with GND.
+######## Missing driver on net pwm_setpoint[17]. Patching with GND.
+######## Missing driver on net pwm_setpoint[16]. Patching with GND.
+######## Missing driver on net pwm_setpoint[15]. Patching with GND.
+######## Missing driver on net pwm_setpoint[14]. Patching with GND.
+######## Missing driver on net pwm_setpoint[13]. Patching with GND.
+######## Missing driver on net pwm_setpoint[12]. Patching with GND.
+######## Missing driver on net pwm_setpoint[11]. Patching with GND.
+######## Missing driver on net pwm_setpoint[10]. Patching with GND.
+######## Missing driver on net pwm_setpoint[9]. Patching with GND.
+######## Missing driver on net pwm_setpoint[8]. Patching with GND.
+######## Missing driver on net pwm_setpoint[7]. Patching with GND.
+######## Missing driver on net pwm_setpoint[6]. Patching with GND.
+######## Missing driver on net pwm_setpoint[5]. Patching with GND.
+######## Missing driver on net pwm_setpoint[4]. Patching with GND.
+######## Missing driver on net pwm_setpoint[3]. Patching with GND.
+######## Missing driver on net pwm_setpoint[2]. Patching with GND.
+######## Missing driver on net pwm_setpoint[1]. Patching with GND.
+######## Missing driver on net pwm_setpoint[0]. Patching with GND.
+######## Missing driver on net displacement[23]. Patching with GND.
+######## Missing driver on net displacement[22]. Patching with GND.
+######## Missing driver on net displacement[21]. Patching with GND.
+######## Missing driver on net displacement[20]. Patching with GND.
+######## Missing driver on net displacement[19]. Patching with GND.
+######## Missing driver on net displacement[18]. Patching with GND.
+######## Missing driver on net displacement[17]. Patching with GND.
+######## Missing driver on net displacement[16]. Patching with GND.
+######## Missing driver on net displacement[15]. Patching with GND.
+######## Missing driver on net displacement[14]. Patching with GND.
+######## Missing driver on net displacement[13]. Patching with GND.
+######## Missing driver on net displacement[12]. Patching with GND.
+######## Missing driver on net displacement[11]. Patching with GND.
+######## Missing driver on net displacement[10]. Patching with GND.
+######## Missing driver on net displacement[9]. Patching with GND.
+######## Missing driver on net displacement[8]. Patching with GND.
+######## Missing driver on net displacement[7]. Patching with GND.
+######## Missing driver on net displacement[6]. Patching with GND.
+######## Missing driver on net displacement[5]. Patching with GND.
+######## Missing driver on net displacement[4]. Patching with GND.
+######## Missing driver on net displacement[3]. Patching with GND.
+######## Missing driver on net displacement[2]. Patching with GND.
+######## Missing driver on net displacement[1]. Patching with GND.
+######## Missing driver on net displacement[0]. Patching with GND.
+######## Missing driver on net addr[10]. Patching with GND.
+######## Missing driver on net addr[9]. Patching with GND.
+######## Missing driver on net addr[8]. Patching with GND.
+######## Missing driver on net addr[7]. Patching with GND.
+######## Missing driver on net addr[6]. Patching with GND.
+######## Missing driver on net addr[5]. Patching with GND.
+######## Missing driver on net addr[4]. Patching with GND.
+######## Missing driver on net addr[3]. Patching with GND.
+######## Missing driver on net addr[2]. Patching with GND.
+######## Missing driver on net addr[1]. Patching with GND.
+######## Missing driver on net addr[0]. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(81): Register \eeprom/reset_60 is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register '\setpoint_23__I_0/FRAME_MATCHER.state' with one-hot encoding
+State machine has 9 reachable states with original encodings of:
+
+ 00000000000000000000000000000000 
+
+ 00000000000000000000000000000001 
+
+ 00000000000000000000000000000010 
+
+ 00000000000000000000000000000011 
+
+ 00000000000000000000000000000100 
+
+ 00000000000000000000000000000101 
+
+ 00000000000000000000000000000110 
+
+ 00000000000000000000000000000111 
+
+ 00000000000000000000000000001000 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00000000000000000000000000000000 -> 000000001
+
+ 00000000000000000000000000000001 -> 000000010
+
+ 00000000000000000000000000000010 -> 000000100
+
+ 00000000000000000000000000000011 -> 000001000
+
+ 00000000000000000000000000000100 -> 000010000
+
+ 00000000000000000000000000000101 -> 000100000
+
+ 00000000000000000000000000000110 -> 001000000
+
+ 00000000000000000000000000000111 -> 010000000
+
+ 00000000000000000000000000001000 -> 100000000
+
+
+
+
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: vhdl/quadrature_decoder.vhd(72): Register \quad_counter0/debounce_cnt_39 is stuck at Zero. VDB-5013
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on TX due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on HALL1 due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on HALL2 due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on HALL3 due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/i2c_controller.v(173): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(210): Register commutation_state_i4 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/tli4970.v(68): Register \tli/state_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(375): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 805 of 7680 (10 % )
+SB_CARRY => 484
+SB_DFF => 287
+SB_DFFE => 130
+SB_DFFER => 24
+SB_DFFESR => 74
+SB_DFFESS => 157
+SB_DFFN => 29
+SB_DFFNE => 5
+SB_DFFNESR => 5
+SB_DFFNESS => 3
+SB_DFFNSR => 12
+SB_DFFR => 64
+SB_DFFS => 1
+SB_DFFSR => 14
+SB_GB_IO => 1
+SB_IO => 22
+SB_LUT4 => 3245
+SB_PLL40_CORE => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : clk16MHz, loads : 706
+  Net : tli/clk_slow, loads : 53
+  Net : pll32MHz_inst/clk32MHz, loads : 26
+  Net : eeprom/i2c/i2c_clk, loads : 26
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : reset, loads : 304
+  Net : setpoint_23__I_0/FRAME_MATCHER.i_31__N_2247, loads : 254
+  Net : setpoint_23__I_0/FRAME_MATCHER.state_3, loads : 160
+  Net : setpoint_23__I_0/n2200, loads : 145
+  Net : setpoint_23__I_0/FRAME_MATCHER.state_31_N_2350_3, loads : 120
+  Net : setpoint_23__I_0/byte_transmit_counter_0, loads : 70
+  Net : quad_counter0/direction_N_3540, loads : 61
+  Net : setpoint_23__I_0/n40378, loads : 61
+  Net : quad_counter1/direction_N_3540, loads : 61
+  Net : eeprom/baudrate_4, loads : 59
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk503 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk502 [get_nets \tli/clk_slow]         |   16.000 MHz|   49.128 MHz|    13  
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets clk32MHz]              |            -|            -|     0  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\tli/clk_slow [ get_nets     |             |             |
+\tli/clk_slow ]                         |            -|            -|     0  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|    2.674 MHz|   238 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 312.566  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 33.500  secs
+--------------------------------------------------------------
+Current Implementation template_Implmnt its sbt path: /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt
+Synthesis succeed.
+Synthesis succeeded.
+Synthesis runtime 33 seconds
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/edifparser" "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.edf " "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist" "-pCM81" "-y/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/pins.pcf " "-s/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/clk.sdc " -c --devicename iCE40LP8K
+starting edif parserLattice Semiconductor Corporation  Edif Parser
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:23:29
+
+running edif parserParsing edif file: /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.edf...
+Parsing constraint file: /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/pins.pcf...
+start to read sdc/scf file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf
+Warning: wrong format for 	li/clk_slow
+	Ignored create_clock -name TinyFPGA_B|\tli/clk_slow -period 62.500 -waveform {0.000,31.250} port_pin_list get_net 	li/clk_slow 
+start to read sdc/scf file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/clk.sdc
+/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+Warning: Found double defined(create_clock) at CLK. Using latest one and ignore previous one
+	Ignored create_clock  -period 62.50  -waveform {0.00 31.25}  -name {CLK} [get_ports {CLK}]
+Stored edif netlist at /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B...
+Warning: The terminal connectivity tx_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity tx_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity tx_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity hall3_input:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall3_input:INPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall3_input:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall3_input:OUTPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall2_input:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall2_input:INPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall2_input:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall2_input:OUTPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall1_input:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall1_input:INPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall1_input:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall1_input:OUTPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity USBPU_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity RX_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity INLC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity ENCODER1_B_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity ENCODER1_A_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity ENCODER0_B_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity ENCODER0_A_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity DE_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_MISO_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity CS_CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal ID_READOUT_FSM.state__i0:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal GHB_166:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal GHC_168:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal commutation_state_i1:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal GHA_164:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i12:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i15:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i102:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i189:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i1:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i95:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i103:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i116:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i115:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i110:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i11:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i100:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i9:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i192:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i101:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i183:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i114:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i97:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i107:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i108:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i99:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i96:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i112:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i104:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i20:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i16:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i113:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i109:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i18:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i187:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i14:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i19:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i111:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i117:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i185:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i106:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i21:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i188:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i182:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i13:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i191:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i17:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i190:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i186:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i105:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i10:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i98:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i184:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal eeprom.i2c.state_i0_i0:E is driven by default driver : VCC, Disconnecting it.
+Warning: Unable to find port "clk32MHz" in the design.Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/clk.sdc)
+    create_clock  -period 31.250000 -name {clk32MHz} [get_ports {clk32MHz}]
+Warning: Unable to find Clock(TinyFPGA_B|\tli/clk_slow).Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf)
+set_false_path  -from [get_clocks {CLK}]  -to [get_clocks {TinyFPGA_B|\tli/clk_slow}]
+Warning: Unable to find Clock(TinyFPGA_B|\tli/clk_slow).Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf)
+set_false_path  -from [get_clocks {TinyFPGA_B|\eeprom/i2c/i2c_clk}]  -to [get_clocks {TinyFPGA_B|\tli/clk_slow}]
+Warning: Unable to find Clock(TinyFPGA_B|\tli/clk_slow).Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf)
+set_false_path  -from [get_clocks {TinyFPGA_B|\tli/clk_slow}]  -to [get_clocks {CLK}]
+Warning: Unable to find Clock(TinyFPGA_B|\tli/clk_slow).Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf)
+set_false_path  -from [get_clocks {TinyFPGA_B|\tli/clk_slow}]  -to [get_clocks {TinyFPGA_B|\eeprom/i2c/i2c_clk}]
+
+write Timing Constraint to /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/Temp/sbt_temp.sdc
+
+EDIF Parser succeeded
+Top module is: TinyFPGA_B
+
+EDF Parser run-time: 2 (sec)
+edif parser succeed.
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/sbtplacer" --des-lib "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --outdir "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer" --device-file "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" --package CM81 --deviceMarketName iCE40LP8K --sdc-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/Temp/sbt_temp.sdc" --lib-file "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib" --effort_level std --out-sdc-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc"
+starting placerExecuting : /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/sbtplacer --des-lib /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --outdir /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer --device-file /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev --package CM81 --deviceMarketName iCE40LP8K --sdc-file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/Temp/sbt_temp.sdc --lib-file /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib --effort_level std --out-sdc-file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc
+Lattice Semiconductor Corporation  Placer
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:43:13
+
+/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+running placerW2715: Warning for set_io Constraint: Ignoring pin assignment for FAULT_N, as it is not connected to any PAD
+I2004: Option and Settings Summary
+=============================================================
+Device file          - /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev
+Package              - CM81
+Design database      - /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B
+SDC file             - /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/Temp/sbt_temp.sdc
+Output directory     - /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer
+Timing library       - /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib
+Effort level         - std
+
+I2050: Starting reading inputs for placer
+=============================================================
+I2100: Reading design library: /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B/BFPGA_DESIGN_ep
+I2065: Reading device file : /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev
+I2051: Reading of inputs for placer completed successfully
+
+I2053: Starting placement of the design
+=============================================================
+
+Input Design Statistics
+    Number of LUTs      	:	3245
+    Number of DFFs      	:	805
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	484
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	22
+    Number of GBIOs     	:	1
+    Number of GBs       	:	0
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	1
+
+
+Phase 1
+I2077: Start design legalization
+W2216: SB_GB_IO 'CLK_pad' is assigned to a non-GB pin 'B2'. Replacing it with SB_IO 'CLK_pad' and SB_GB 'CLK_pad_gb'
+
+Design Legalization Statistics
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	12
+    Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	3
+    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	1
+    Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
+    Total LUTs inserted                                            	:	16
+    Total CARRYs inserted                                          	:	0
+
+
+I2078: Design legalization is completed successfully
+I2088: Phase 1, elapsed time : 0.1 (sec)
+
+
+Phase 2
+I2088: Phase 2, elapsed time : 0.1 (sec)
+
+Phase 3
+Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_clk16MHz_THRU_LUT4_0_LC_3260", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
+Info-1404: Inferred PLL generated clock at pll32MHz_inst.pll32MHz_inst/PLLOUTCORE
+Info-1404: Inferred PLL generated clock at pll32MHz_inst.pll32MHz_inst/PLLOUTGLOBAL
+
+Design Statistics after Packing
+    Number of LUTs      	:	3262
+    Number of DFFs      	:	805
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	522
+
+Device Utilization Summary after Packing
+    Sequential LogicCells
+        LUT and DFF      	:	595
+        LUT, DFF and CARRY	:	210
+    Combinational LogicCells
+        Only LUT         	:	2184
+        CARRY Only       	:	39
+        LUT with CARRY   	:	273
+    LogicCells                  :	3301/7680
+    PLBs                        :	501/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	23/63
+    PLLs                        :	1/1
+
+
+I2088: Phase 3, elapsed time : 11.9 (sec)
+
+Phase 4
+I2088: Phase 4, elapsed time : 0.2 (sec)
+
+Phase 5
+I2088: Phase 5, elapsed time : 25.8 (sec)
+
+Phase 6
+/home/administrator/lscc/iCEcube2.2020.12/LSE/bin/lin64/synthesis -f "template_lse.prj"
+starting Synthesisrunning SynthesisCopyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jan 17 19:49:39 2022
+
+
+Command Line:  /home/administrator/lscc/iCEcube2.2020.12/LSE/bin/lin64/synthesis -f template_lse.prj 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is SBTiCE40.
+The -t option is CM81.
+The -d option is iCE40LP8K.
+                                                          
+
+##########################################################
+
+### Lattice Family : SBTiCE40
+
+### Device  : iCE40LP8K
+
+### Package : CM81
+
+### Number of Logic Cells: 7680
+
+### Number of RAM4k Blocks: 32
+
+### Number of DSP Blocks: 0
+
+### Number of PLLs: 2
+
+### Number of IO Pins: 178
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = TinyFPGA_B.
+Target frequency = 16.000000 MHz.
+Maximum fanout = 10000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = template_Implmnt/template.edf.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1 (searchpath added)
+Mixed language design
+Verilog design file = verilog/TinyFPGA_B.v
+Verilog design file = verilog/uart_rx.v
+Verilog design file = verilog/uart_tx.v
+Verilog design file = verilog/coms.v
+Verilog design file = verilog/motorControl.v
+Verilog design file = verilog/pwm.v
+Verilog design file = verilog/eeprom.v
+Verilog design file = verilog/i2c_controller.v
+Verilog design file = verilog/tli4970.v
+Verilog design file = verilog/pll32MHz.v
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+VHDL library = work
+VHDL design file = vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd
+VHDL library = work
+VHDL design file = vhdl/quadrature_decoder.vhd
+-sdc option: SDC file input is constraints/clk.sdc.
+-vh2008
+
+Technology check ok...
+
+Analyzing Verilog file /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v. VERI-1482
+Compile design.
+Compile Design Begin
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(79): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(88): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(98): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(108): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(118): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(170): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(179): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(189): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(199): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(209): assignment to input EVERI-1214
+WARNING - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(3725): empty port in module declaration. VERI-1294
+Analyzing Verilog file verilog/TinyFPGA_B.v. VERI-1482
+WARNING - synthesis: verilog/TinyFPGA_B.v(95): identifier current is used before its declaration. VERI-1875
+WARNING - synthesis: verilog/TinyFPGA_B.v(95): identifier current_limit is used before its declaration. VERI-1875
+WARNING - synthesis: verilog/TinyFPGA_B.v(98): identifier current is used before its declaration. VERI-1875
+WARNING - synthesis: verilog/TinyFPGA_B.v(101): identifier current is used before its declaration. VERI-1875
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): identifier current is used before its declaration. VERI-1875
+WARNING - synthesis: verilog/TinyFPGA_B.v(106): identifier current_limit is used before its declaration. VERI-1875
+WARNING - synthesis: verilog/TinyFPGA_B.v(109): identifier current is used before its declaration. VERI-1875
+WARNING - synthesis: verilog/TinyFPGA_B.v(112): identifier current is used before its declaration. VERI-1875
+Analyzing Verilog file verilog/uart_rx.v. VERI-1482
+Analyzing Verilog file verilog/uart_tx.v. VERI-1482
+Analyzing Verilog file verilog/coms.v. VERI-1482
+Analyzing Verilog file verilog/motorControl.v. VERI-1482
+Analyzing Verilog file verilog/pwm.v. VERI-1482
+Analyzing Verilog file verilog/eeprom.v. VERI-1482
+Analyzing Verilog file verilog/i2c_controller.v. VERI-1482
+Analyzing Verilog file verilog/tli4970.v. VERI-1482
+Analyzing Verilog file verilog/pll32MHz.v. VERI-1482
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(173): analyzing entity spi_master. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd(215): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd. VHDL-1481
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(128): analyzing entity grp_debouncer. VHDL-1012
+INFO - synthesis: vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd(140): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file vhdl/quadrature_decoder.vhd. VHDL-1481
+INFO - synthesis: vhdl/quadrature_decoder.vhd(26): analyzing entity quadrature_decoder. VHDL-1012
+INFO - synthesis: vhdl/quadrature_decoder.vhd(38): analyzing architecture logic. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): TinyFPGA_B
+INFO - synthesis: verilog/TinyFPGA_B.v(2): compiling module TinyFPGA_B. VERI-1018
+INFO - synthesis: verilog/pll32MHz.v(1): compiling module pll32MHz. VERI-1018
+INFO - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(699): compiling module SB_PLL40_CORE(FEEDBACK_PATH="PHASE_AND_DELAY",FDA_FEEDBACK=4'b0,FDA_RELATIVE=4'b0,PLLOUT_SELECT="SHIFTREG_0deg",DIVF=7'b01,DIVQ=3'b011,FILTER_RANGE=3'b01). VERI-1018
+WARNING - synthesis: verilog/pll32MHz.v(22): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+INFO - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(579): compiling module SB_GB. VERI-1018
+INFO - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b01,PULLUP=1'b1). VERI-1018
+WARNING - synthesis: verilog/TinyFPGA_B.v(76): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(77): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(78): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(79): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(80): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(81): expression size 32 truncated to fit in target size 1. VERI-1209
+INFO - synthesis: verilog/pwm.v(1): compiling module pwm. VERI-1018
+WARNING - synthesis: verilog/pwm.v(17): expression size 32 truncated to fit in target size 24. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(136): expression size 11 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(162): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: /home/administrator/lscc/iCEcube2.2020.12/LSE/userware/unix/SYNTHESIS_HEADERS/sb_ice40.v(502): compiling module SB_IO(PIN_TYPE=6'b101001,PULLUP=1'b1). VERI-1018
+INFO - synthesis: verilog/coms.v(1): compiling module coms. VERI-1018
+INFO - synthesis: verilog/uart_rx.v(14): compiling module uart_rx. VERI-1018
+WARNING - synthesis: verilog/uart_rx.v(81): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(92): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(103): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: verilog/uart_rx.v(121): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: verilog/uart_tx.v(14): compiling module uart_tx. VERI-1018
+WARNING - synthesis: verilog/uart_tx.v(71): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(89): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(99): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: verilog/uart_tx.v(119): expression size 32 truncated to fit in target size 9. VERI-1209
+WARNING - synthesis: verilog/coms.v(214): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(253): actual bit length 32 differs from formal bit length 24 for port encoder0_position. VERI-1330
+WARNING - synthesis: verilog/TinyFPGA_B.v(254): actual bit length 32 differs from formal bit length 24 for port encoder1_position. VERI-1330
+WARNING - synthesis: verilog/TinyFPGA_B.v(274): expression size 32 truncated to fit in target size 24. VERI-1209
+INFO - synthesis: verilog/motorControl.v(1): compiling module motorControl. VERI-1018
+INFO - synthesis: verilog/TinyFPGA_B.v(297): going to vhdl side to elaborate module quadrature_decoder. VERI-1231
+vhdl/quadrature_decoder.vhd(26): executing quadrature_decoder(0)(logic)
+
+INFO - synthesis: verilog/TinyFPGA_B.v(297): back to verilog to continue elaboration. VERI-1232
+INFO - synthesis: verilog/TinyFPGA_B.v(305): going to vhdl side to elaborate module quadrature_decoder. VERI-1231
+vhdl/quadrature_decoder.vhd(26): executing quadrature_decoder(0)(logic)
+
+WARNING - synthesis: vhdl/quadrature_decoder.vhd(36): replacing existing netlist quadrature_decoder(0)(logic). VHDL-1205
+INFO - synthesis: verilog/TinyFPGA_B.v(305): back to verilog to continue elaboration. VERI-1232
+INFO - synthesis: verilog/eeprom.v(1): compiling module EEPROM. VERI-1018
+WARNING - synthesis: verilog/eeprom.v(60): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: verilog/eeprom.v(68): expression size 32 truncated to fit in target size 3. VERI-1209
+INFO - synthesis: verilog/i2c_controller.v(1): compiling module i2c_controller. VERI-1018
+WARNING - synthesis: verilog/i2c_controller.v(46): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/i2c_controller.v(135): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: verilog/tli4970.v(1): compiling module TLI4970. VERI-1018
+WARNING - synthesis: verilog/tli4970.v(14): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(23): expression size 32 truncated to fit in target size 1. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(40): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: verilog/tli4970.v(55): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: verilog/TinyFPGA_B.v(229): net displacement[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(313): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(55): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(63): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(71): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(221): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(327): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(336): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+Loading NGL library '/home/administrator/lscc/iCEcube2.2020.12/LSE/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/administrator/lscc/iCEcube2.2020.12/LSE/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: No object with type PORT found matching "clk32MHz".
+WARNING - synthesis: Ignoring Constraint: create_clock  -period 31.25 -name {clk32MHz} [get_ports {clk32MHz}].
+Top-level module name = TinyFPGA_B.
+WARNING - synthesis: No object with type PORT found matching "clk32MHz".
+WARNING - synthesis: Ignoring Constraint: create_clock  -period 31.25 -name {clk32MHz} [get_ports {clk32MHz}].
+WARNING - synthesis: verilog/TinyFPGA_B.v(229): net displacement[23] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(313): net addr[10] does not have a driver. VDB-1002
+WARNING - synthesis: verilog/TinyFPGA_B.v(55): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(63): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(71): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(221): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(327): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(336): input port LATCH_INPUT_VALUE is not connected on this instance. VDB-1013
+WARNING - synthesis: verilog/TinyFPGA_B.v(42): Removing unused instance My_Global_Buffer_i_241. VDB-5034
+WARNING - synthesis: verilog/pll32MHz.v(22): input port EXTFEEDBACK is not connected on this instance. VDB-1013
+######## Missing driver on net displacement[23]. Patching with GND.
+######## Missing driver on net displacement[22]. Patching with GND.
+######## Missing driver on net displacement[21]. Patching with GND.
+######## Missing driver on net displacement[20]. Patching with GND.
+######## Missing driver on net displacement[19]. Patching with GND.
+######## Missing driver on net displacement[18]. Patching with GND.
+######## Missing driver on net displacement[17]. Patching with GND.
+######## Missing driver on net displacement[16]. Patching with GND.
+######## Missing driver on net displacement[15]. Patching with GND.
+######## Missing driver on net displacement[14]. Patching with GND.
+######## Missing driver on net displacement[13]. Patching with GND.
+######## Missing driver on net displacement[12]. Patching with GND.
+######## Missing driver on net displacement[11]. Patching with GND.
+######## Missing driver on net displacement[10]. Patching with GND.
+######## Missing driver on net displacement[9]. Patching with GND.
+######## Missing driver on net displacement[8]. Patching with GND.
+######## Missing driver on net displacement[7]. Patching with GND.
+######## Missing driver on net displacement[6]. Patching with GND.
+######## Missing driver on net displacement[5]. Patching with GND.
+######## Missing driver on net displacement[4]. Patching with GND.
+######## Missing driver on net displacement[3]. Patching with GND.
+######## Missing driver on net displacement[2]. Patching with GND.
+######## Missing driver on net displacement[1]. Patching with GND.
+######## Missing driver on net displacement[0]. Patching with GND.
+######## Missing driver on net addr[10]. Patching with GND.
+######## Missing driver on net addr[9]. Patching with GND.
+######## Missing driver on net addr[8]. Patching with GND.
+######## Missing driver on net addr[7]. Patching with GND.
+######## Missing driver on net addr[6]. Patching with GND.
+######## Missing driver on net addr[5]. Patching with GND.
+######## Missing driver on net addr[4]. Patching with GND.
+######## Missing driver on net addr[3]. Patching with GND.
+######## Missing driver on net addr[2]. Patching with GND.
+######## Missing driver on net addr[1]. Patching with GND.
+######## Missing driver on net addr[0]. Patching with GND.
+WARNING - synthesis: verilog/eeprom.v(81): Register \eeprom/reset_60 is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register '\setpoint_23__I_0/FRAME_MATCHER.state' with one-hot encoding
+State machine has 9 reachable states with original encodings of:
+
+ 00000000000000000000000000000000 
+
+ 00000000000000000000000000000001 
+
+ 00000000000000000000000000000010 
+
+ 00000000000000000000000000000011 
+
+ 00000000000000000000000000000100 
+
+ 00000000000000000000000000000101 
+
+ 00000000000000000000000000000110 
+
+ 00000000000000000000000000000111 
+
+ 00000000000000000000000000001000 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00000000000000000000000000000000 -> 000000001
+
+ 00000000000000000000000000000001 -> 000000010
+
+ 00000000000000000000000000000010 -> 000000100
+
+ 00000000000000000000000000000011 -> 000001000
+
+ 00000000000000000000000000000100 -> 000010000
+
+ 00000000000000000000000000000101 -> 000100000
+
+ 00000000000000000000000000000110 -> 001000000
+
+ 00000000000000000000000000000111 -> 010000000
+
+ 00000000000000000000000000001000 -> 100000000
+
+
+
+
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_addr is stuck at One
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_addr is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \eeprom/i2c/saved_data is stuck at Zero
+WARNING - synthesis: vhdl/quadrature_decoder.vhd(72): Register \quad_counter1/debounce_cnt_39 is stuck at Zero. VDB-5013
+WARNING - synthesis: Skipping pad insertion on SCL due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on SDA due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on TX due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on HALL1 due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on HALL2 due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on HALL3 due to black_box_pad_pin attribute.
+WARNING - synthesis: verilog/i2c_controller.v(173): Register \eeprom/i2c/state_i0_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/coms.v(296): Register \setpoint_23__I_0/Ki_i23 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/tli4970.v(68): Register \tli/state_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(210): Register commutation_state_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: verilog/TinyFPGA_B.v(375): Register ID_READOUT_FSM.state__i2 is stuck at Zero. VDB-5013
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Writing scf file : template_Implmnt/template.scf
+
+Results of NGD DRC are available in TinyFPGA_B_drc.log.
+
+################### Begin Area Report (TinyFPGA_B)######################
+Number of register bits => 1037 of 7680 (13 % )
+SB_CARRY => 1157
+SB_DFF => 278
+SB_DFFE => 170
+SB_DFFER => 48
+SB_DFFESR => 85
+SB_DFFESS => 181
+SB_DFFN => 29
+SB_DFFNE => 5
+SB_DFFNESR => 5
+SB_DFFNESS => 3
+SB_DFFNSR => 12
+SB_DFFR => 181
+SB_DFFS => 12
+SB_DFFSR => 28
+SB_GB_IO => 1
+SB_IO => 22
+SB_LUT4 => 5623
+SB_PLL40_CORE => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : clk16MHz, loads : 938
+  Net : tli/clk_slow, loads : 53
+  Net : pll32MHz_inst/clk32MHz, loads : 26
+  Net : eeprom/i2c/i2c_clk, loads : 26
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : reset, loads : 471
+  Net : setpoint_23__I_0/FRAME_MATCHER.i_31__N_2320, loads : 302
+  Net : setpoint_23__I_0/FRAME_MATCHER.state_3, loads : 184
+  Net : n2568, loads : 169
+  Net : setpoint_23__I_0/FRAME_MATCHER.state_31_N_2423_3, loads : 144
+  Net : setpoint_23__I_0/Kp_23__N_1583, loads : 131
+  Net : setpoint_23__I_0/n29100, loads : 130
+  Net : setpoint_23__I_0/byte_transmit_counter_0, loads : 72
+  Net : quad_counter0/direction_N_3613, loads : 61
+  Net : setpoint_23__I_0/n63273, loads : 61
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk503 [get_nets \tli/clk_slow]         |   16.000 MHz|   49.128 MHz|    13  
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk502 [get_nets \eeprom/i2c/i2c_clk]   |   16.000 MHz|   70.274 MHz|     9  
+                                        |             |             |
+create_clock -period 62.500000 -name    |             |             |
+clk501 [get_nets clk32MHz]              |            -|            -|     0  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\eeprom/i2c/i2c_clk [        |             |             |
+get_nets \eeprom/i2c/i2c_clk ]          |            -|            -|     0  
+                                        |             |             |
+ create_clock -period 62.500 -name      |             |             |
+TinyFPGA_B|\tli/clk_slow [ get_nets     |             |             |
+\tli/clk_slow ]                         |            -|            -|     0  
+                                        |             |             |
+create_clock -period 62.500000          |             |             |
+-waveform { 0.000000 31.250000 } -name  |             |             |
+CLK [ get_ports { CLK } ]               |   16.000 MHz|    2.687 MHz|   237 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 330.254  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 42.211  secs
+--------------------------------------------------------------
+Current Implementation template_Implmnt its sbt path: /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt
+Synthesis succeed.
+Synthesis succeeded.
+Synthesis runtime 42 seconds
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/edifparser" "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.edf " "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist" "-pCM81" "-y/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/pins.pcf " "-s/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/clk.sdc " -c --devicename iCE40LP8K
+starting edif parserLattice Semiconductor Corporation  Edif Parser
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:23:29
+
+running edif parserParsing edif file: /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.edf...
+Parsing constraint file: /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/pins.pcf...
+start to read sdc/scf file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf
+Warning: wrong format for 	li/clk_slow
+	Ignored create_clock -name TinyFPGA_B|\tli/clk_slow -period 62.500 -waveform {0.000,31.250} port_pin_list get_net 	li/clk_slow 
+start to read sdc/scf file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/clk.sdc
+/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+Warning: Found double defined(create_clock) at CLK. Using latest one and ignore previous one
+	Ignored create_clock  -period 62.50  -waveform {0.00 31.25}  -name {CLK} [get_ports {CLK}]
+Stored edif netlist at /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B...
+Warning: The terminal connectivity tx_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity tx_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity tx_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity sda_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:INPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity scl_output:OUTPUTCLK is removed because the PIN_TYPE is configured as 101001
+Warning: The terminal connectivity hall3_input:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall3_input:INPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall3_input:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall3_input:OUTPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall2_input:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall2_input:INPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall2_input:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall2_input:OUTPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall1_input:LATCHINPUTVALUE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall1_input:INPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall1_input:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity hall1_input:OUTPUTCLK is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity USBPU_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity RX_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity INLC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INLA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHC_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHB_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity INHA_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity ENCODER1_B_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity ENCODER1_A_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity ENCODER0_B_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity ENCODER0_A_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity DE_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CS_MISO_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal connectivity CS_CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 011001
+Warning: The terminal connectivity CLK_pad:OUTPUTENABLE is removed because the PIN_TYPE is configured as 000001
+Warning: The terminal ID_READOUT_FSM.state__i0:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal commutation_state_i1:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i54:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i46:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i180:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i62:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i63:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i79:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i171:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i74:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i80:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i60:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i58:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i76:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i83:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i126:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i82:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i68:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i59:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i61:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i57:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i65:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i192:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i186:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i116:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i110:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i81:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i47:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i72:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i71:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i67:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i70:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i56:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i120:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i175:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i48:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i113:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i78:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i85:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i73:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i173:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i128:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i64:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i178:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i49:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i177:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i123:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i119:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i191:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i69:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i182:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i172:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i170:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i130:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i179:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i52:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i187:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i77:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i125:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i188:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i66:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i189:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i190:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i185:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i181:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i176:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i122:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i115:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i75:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i114:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i121:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i131:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i84:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i111:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i112:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i183:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i51:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i118:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i117:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i129:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i174:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i184:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i127:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i53:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i124:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i55:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i86:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.data_in_frame_0___i1:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.rx.r_Bit_Index_i0:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.rx.r_Rx_DV_58:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal setpoint_23__I_0.tx.r_Bit_Index_i0:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal eeprom.state_i0:E is driven by default driver : VCC, Disconnecting it.
+Warning: The terminal eeprom.i2c.state_i0_i0:E is driven by default driver : VCC, Disconnecting it.
+Warning: Unable to find port "clk32MHz" in the design.Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/constraints/clk.sdc)
+    create_clock  -period 31.250000 -name {clk32MHz} [get_ports {clk32MHz}]
+Warning: Unable to find Clock(TinyFPGA_B|\tli/clk_slow).Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf)
+set_false_path  -from [get_clocks {CLK}]  -to [get_clocks {TinyFPGA_B|\tli/clk_slow}]
+Warning: Unable to find Clock(TinyFPGA_B|\tli/clk_slow).Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf)
+set_false_path  -from [get_clocks {TinyFPGA_B|\eeprom/i2c/i2c_clk}]  -to [get_clocks {TinyFPGA_B|\tli/clk_slow}]
+Warning: Unable to find Clock(TinyFPGA_B|\tli/clk_slow).Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf)
+set_false_path  -from [get_clocks {TinyFPGA_B|\tli/clk_slow}]  -to [get_clocks {CLK}]
+Warning: Unable to find Clock(TinyFPGA_B|\tli/clk_slow).Following line is ignored:(in the file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/template.scf)
+set_false_path  -from [get_clocks {TinyFPGA_B|\tli/clk_slow}]  -to [get_clocks {TinyFPGA_B|\eeprom/i2c/i2c_clk}]
+
+write Timing Constraint to /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/Temp/sbt_temp.sdc
+
+EDIF Parser succeeded
+Top module is: TinyFPGA_B
+
+EDF Parser run-time: 3 (sec)
+edif parser succeed.
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/sbtplacer" --des-lib "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --outdir "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer" --device-file "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" --package CM81 --deviceMarketName iCE40LP8K --sdc-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/Temp/sbt_temp.sdc" --lib-file "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib" --effort_level std --out-sdc-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc"
+starting placerrunning placerExecuting : /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/sbtplacer --des-lib /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --outdir /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer --device-file /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev --package CM81 --deviceMarketName iCE40LP8K --sdc-file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/Temp/sbt_temp.sdc --lib-file /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib --effort_level std --out-sdc-file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc
+Lattice Semiconductor Corporation  Placer
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:43:13
+
+/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+W2715: Warning for set_io Constraint: Ignoring pin assignment for FAULT_N, as it is not connected to any PAD
+I2004: Option and Settings Summary
+=============================================================
+Device file          - /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev
+Package              - CM81
+Design database      - /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B
+SDC file             - /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/Temp/sbt_temp.sdc
+Output directory     - /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer
+Timing library       - /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib
+Effort level         - std
+
+I2050: Starting reading inputs for placer
+=============================================================
+I2100: Reading design library: /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B/BFPGA_DESIGN_ep
+I2065: Reading device file : /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev
+I2051: Reading of inputs for placer completed successfully
+
+I2053: Starting placement of the design
+=============================================================
+
+Input Design Statistics
+    Number of LUTs      	:	5623
+    Number of DFFs      	:	1037
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	1157
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	22
+    Number of GBIOs     	:	1
+    Number of GBs       	:	0
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	1
+
+
+Phase 1
+I2077: Start design legalization
+W2216: SB_GB_IO 'CLK_pad' is assigned to a non-GB pin 'B2'. Replacing it with SB_IO 'CLK_pad' and SB_GB 'CLK_pad_gb'
+
+Design Legalization Statistics
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	12
+    Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
+    Number of LUTs replicated for LUTs driving multiple DFFs       	:	5
+    Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
+    Number of feedthru LUTs inserted to legalize global signals    	:	1
+    Number of feedthru CARRYs inserted to legalize input of CARRYs 	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
+    Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
+    Total LUTs inserted                                            	:	18
+    Total CARRYs inserted                                          	:	0
+
+
+I2078: Design legalization is completed successfully
+I2088: Phase 1, elapsed time : 0.3 (sec)
+
+
+Phase 2
+I2088: Phase 2, elapsed time : 0.1 (sec)
+
+Phase 3
+Warning-1034: Found non-unate timing arc, from pin "in3" to pin "lcout" of instance "GB_BUFFER_clk16MHz_THRU_LUT4_0_LC_5640", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "PACKAGEPIN" to pin "DIN0" of instance "CLK_pad", in the clock network. Converting the timing arc to positive-unate
+Info-1404: Inferred PLL generated clock at pll32MHz_inst.pll32MHz_inst/PLLOUTCORE
+Info-1404: Inferred PLL generated clock at pll32MHz_inst.pll32MHz_inst/PLLOUTGLOBAL
+
+Design Statistics after Packing
+    Number of LUTs      	:	5642
+    Number of DFFs      	:	1037
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	1178
+
+Device Utilization Summary after Packing
+    Sequential LogicCells
+        LUT and DFF      	:	814
+        LUT, DFF and CARRY	:	223
+    Combinational LogicCells
+        Only LUT         	:	3676
+        CARRY Only       	:	26
+        LUT with CARRY   	:	929
+    LogicCells                  :	5668/7680
+    PLBs                        :	796/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	23/63
+    PLLs                        :	1/1
+
+
+I2088: Phase 3, elapsed time : 23.1 (sec)
+
+Phase 4
+I2088: Phase 4, elapsed time : 0.3 (sec)
+
+Phase 5
+I2088: Phase 5, elapsed time : 50.2 (sec)
+
+Phase 6
+I2088: Phase 6, elapsed time : 363.7 (sec)
+
+Final Design Statistics
+    Number of LUTs      	:	5642
+    Number of DFFs      	:	1037
+    Number of DFFs packed to IO	:	0
+    Number of Carrys    	:	1178
+    Number of RAMs      	:	0
+    Number of ROMs      	:	0
+    Number of IOs       	:	23
+    Number of GBIOs     	:	0
+    Number of GBs       	:	1
+    Number of WarmBoot  	:	0
+    Number of PLLs      	:	1
+
+Device Utilization Summary
+    LogicCells                  :	5668/7680
+    PLBs                        :	846/960
+    BRAMs                       :	0/32
+    IOs and GBIOs               :	23/63
+    PLLs                        :	1/1
+
+
+
+#####################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+=====================================================================
+
+#####################################################################
+                     Clock Summary 
+=====================================================================
+Number of clocks: 4
+Clock: CLK | Frequency: 3.27 MHz | Target: 16.00 MHz
+Clock: TinyFPGA_B|\eeprom/i2c/i2c_clk | Frequency: 81.32 MHz | Target: 16.00 MHz
+Clock: pll32MHz_inst.pll32MHz_inst/PLLOUTCORE | Frequency: 58.21 MHz | Target: 32.00 MHz
+Clock: pll32MHz_inst.pll32MHz_inst/PLLOUTGLOBAL | Frequency: N/A | Target: 32.00 MHz
+
+=====================================================================
+                     End of Clock Summary
+#####################################################################
+
+I2054: Placement of design completed successfully
+
+I2076: Placer run-time: 439.6 sec.
+
+placer succeed.
+starting IPExporter/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+running IPExporterIPExporter succeed.
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/packer" "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/packer" --DRC_only  --translator "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerLattice Semiconductor Corporation  Packer
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:24:46
+
+Begin Packing...
+running packer/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+initializing finish
+Total HPWL cost is 28218
+used logic cells: 5668
+Design Rule Checking Succeeded
+
+DRC Checker run-time: 2 (sec)
+packer succeed.
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/packer" "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --package CM81 --outdir "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/packer" --translator "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/sdc_translator.tcl" --src_sdc_file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc" --dst_sdc_file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --devicename iCE40LP8K
+starting packerLattice Semiconductor Corporation  Packer
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:24:46
+
+Begin Packing...
+running packer/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+initializing finish
+Total HPWL cost is 28218
+used logic cells: 5668
+Translating sdc file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/placer/TinyFPGA_B_pl.sdc...
+Translated sdc file is /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc
+Packer succeeded
+
+Packer run-time: 6 (sec)
+packer succeed.
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/sbrouter" "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib" "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --outdir "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/router" --sdf_file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --pin_permutation
+starting routerrunning routerSJRouter....
+Executing : /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/sbrouter /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc --outdir /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/router --sdf_file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --pin_permutation 
+Lattice Semiconductor Corporation  Router
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:31:26
+
+I1203: Reading Design TinyFPGA_B
+/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+Read design time: 1
+I1202: Reading Architecture of device iCE40LP8K
+Info-1404: Inferred PLL generated clock at pll32MHz_inst.pll32MHz_inst/PLLOUTCORE
+Info-1404: Inferred PLL generated clock at pll32MHz_inst.pll32MHz_inst/PLLOUTGLOBAL
+Read device time: 28
+I1209: Started routing
+I1223: Total Nets : 7218 
+I1212: Iteration  1 :  2301 unrouted : 19 seconds
+I1212: Iteration  2 :   975 unrouted : 11 seconds
+I1212: Iteration  3 :   533 unrouted : 5 seconds
+I1212: Iteration  4 :   323 unrouted : 2 seconds
+I1212: Iteration  5 :   196 unrouted : 1 seconds
+I1212: Iteration  6 :   108 unrouted : 0 seconds
+I1212: Iteration  7 :    59 unrouted : 1 seconds
+I1212: Iteration  8 :    36 unrouted : 0 seconds
+I1212: Iteration  9 :    26 unrouted : 0 seconds
+I1212: Iteration 10 :    24 unrouted : 0 seconds
+I1212: Iteration 11 :    22 unrouted : 0 seconds
+I1212: Iteration 12 :    22 unrouted : 0 seconds
+I1212: Iteration 13 :    20 unrouted : 0 seconds
+I1212: Iteration 14 :    20 unrouted : 1 seconds
+I1212: Iteration 15 :    20 unrouted : 0 seconds
+I1212: Iteration 16 :    20 unrouted : 0 seconds
+I1212: Iteration 17 :    18 unrouted : 0 seconds
+I1212: Iteration 18 :    14 unrouted : 0 seconds
+I1212: Iteration 19 :    14 unrouted : 1 seconds
+I1212: Iteration 20 :     2 unrouted : 0 seconds
+I1212: Iteration 21 :     0 unrouted : 0 seconds
+I1215: Routing is successful
+Routing time: 42
+I1206: Completed routing
+I1204: Writing Design TinyFPGA_B
+Lib Closed
+I1210: Writing routes
+I1218: Exiting the router
+I1224: Router run-time : 76 seconds
+ total           401108K
+router succeed.
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/netlister" --verilog "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v" --vhdl "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd" --lib "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --view rt --device "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" --splitio  --in-sdc-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/packer/TinyFPGA_B_pk.sdc" --out-sdc-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc"
+starting netlistLattice Semiconductor Corporation  Verilog & VHDL Netlister
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:46:40
+
+/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+running netlistGenerating Verilog & VHDL netlist files ...
+Writing /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.v
+Writing /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.vhd
+Netlister succeeded.
+
+Netlister run-time: 44 (sec)
+netlist succeed.
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/sbtimer" --des-lib "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --lib-file "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib" --sdc-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc" --sdf-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf" --report-file "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt" --device-file "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" --timing-summary
+starting timerExecuting : /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/sbtimer --des-lib /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B --lib-file /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ice40LP8K.lib --sdc-file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/netlister/TinyFPGA_B_sbt.sdc --sdf-file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/simulation_netlist/TinyFPGA_B_sbt.sdf --report-file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/timer/TinyFPGA_B_timing.rpt --device-file /home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev --timing-summary
+Lattice Semiconductor Corporation  Timer
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:29:54
+
+running timer/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+Warning-1034: Found non-unate timing arc, from pin "PADIN" to pin "DIN0" of instance "CLK_pad_preio", in the clock network. Converting the timing arc to positive-unate
+Warning-1034: Found non-unate timing arc, from pin "DOUT0" to pin "PADOUT" of instance "scl_output_preio", in the clock network. Converting the timing arc to positive-unate
+Info-1404: Inferred PLL generated clock at pll32MHz_inst.pll32MHz_inst/PLLOUTGLOBAL
+Info-1404: Inferred PLL generated clock at pll32MHz_inst.pll32MHz_inst/PLLOUTCORE
+Timer run-time: 39 seconds
+timer succeed.
+timer succeeded.
+
+
+"/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/bitmap" "/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/devices/ICE40P08.dev" --design "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/netlist/oadb-TinyFPGA_B" --device_name iCE40LP8K --package CM81 --outdir "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_Implmnt/sbt/outputs/bitmap" --low_power on --init_ram on --init_ram_bank 1111 --frequency low --warm_boot on
+starting bitmapLattice Semiconductor Corporation  Bit Stream Generator
+Release:        2020.12.27943
+Build Date:     Dec 10 2020 17:45:52
+
+/home/administrator/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/oaFSLockD: error while loading shared libraries: libelf.so.1: cannot open shared object file: No such file or directory
+running bitmapBit Stream File Size: 1080760 (1M 31K 440 Bits)
+Bit Stream Generator succeeded
+
+Bitmap run-time: 9 (sec)
+bitmap succeed.
+Initializing timer and loading data ...
+Timer loaded summary data. Total time 2744(sec)

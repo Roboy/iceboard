@@ -189,6 +189,9 @@ localparam  MAX_FRAME_LENGTH = STATUS_FRAME_LENGTH;
 						data_out_frame[20] <= displacement[7:0];
 						data_out_frame[21] <= current[15:8];
 						data_out_frame[22] <= current[7:0];
+						data_out_frame[23] <= 0;
+						data_out_frame[24] <= 0;
+						data_out_frame[25] <= 0;
 						state <= GENERATE_STATUS_CRC;
 					end else begin
 						state <= IDLE;

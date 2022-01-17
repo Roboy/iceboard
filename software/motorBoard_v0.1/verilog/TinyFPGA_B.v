@@ -89,32 +89,32 @@ reg reset;
    .pwm_out(pwm_out)
  );
 
-//  always @(posedge clk16MHz) begin: DIRECTION
-//    enable <= 1;
-//    if(duty>=0)begin
-//      if(current<current_limit)begin // if the current is below the current limit
-//       pwm_setpoint <= duty;
-//      end else begin
-//       if(duty>current)begin
-//         pwm_setpoint <= (duty>>>3);
-//       end else begin
-//         pwm_setpoint <= current;
-//       end
-//      end
-//      dir <= 1;
-//    end else begin
-//      if(current<current_limit)begin // if the current is below the current limit
-//        pwm_setpoint <= -duty;
-//      end else begin
-//        if(duty<-current)begin
-//         pwm_setpoint <= -(duty>>>3);
-//        end else begin
-//         pwm_setpoint <= current;
-//        end
-//      end
-//      dir <= 0;
-//    end
-//  end
+ always @(posedge clk16MHz) begin: DIRECTION
+   enable <= 1;
+   if(duty>=0)begin
+     if(current<current_limit)begin // if the current is below the current limit
+      pwm_setpoint <= duty;
+     end else begin
+      if(duty>current)begin
+        pwm_setpoint <= (duty>>>3);
+      end else begin
+        pwm_setpoint <= current;
+      end
+     end
+     dir <= 1;
+   end else begin
+     if(current<current_limit)begin // if the current is below the current limit
+       pwm_setpoint <= -duty;
+     end else begin
+       if(duty<-current)begin
+        pwm_setpoint <= -(duty>>>3);
+       end else begin
+        pwm_setpoint <= current;
+       end
+     end
+     dir <= 0;
+   end
+ end
 
  reg [7:0] commutation_state;
  reg [7:0] commutation_state_prev;
@@ -268,8 +268,8 @@ reg reset;
   wire signed [23:0] motor_state;
 
   assign motor_state =
-    (control_mode==0)?encoder0_position_scaled:
-    (control_mode==1)?encoder1_position_scaled:
+    (control_mode==0)?encoder0_position:
+    (control_mode==1)?encoder1_position:
     (control_mode==2)?displacement:
     32'd0;
 
