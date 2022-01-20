@@ -1,6 +1,7 @@
 // look in pins.pcf for all the pin names on the TinyFPGA BX board
 module TinyFPGA_B (
   input CLK,    // 16MHz clock
+  output LED,   // User/boot LED next to power LED
   output USBPU,  // USB pull-up resistor
   input ENCODER0_A,
   input ENCODER0_B,
@@ -10,6 +11,7 @@ module TinyFPGA_B (
   input HALL2,
   input HALL3,
   input FAULT_N,
+  output NEOPXL,
   output DE,
   output TX,
   input RX,
@@ -43,6 +45,16 @@ SB_GB My_Global_Buffer_i (// required for a user’s internally generated FPGA s
 
 wire [7:0] ID;
 reg reset;
+
+wire [23:0] neopxl_color;
+
+neopixel #(16_000_000) nx(
+ .clock(clk16MHz),
+ .reset(1'b0),
+ .color(neopxl_color),
+ .send_to_neopixels(LED),
+ .one_wire(NEOPXL)
+);
 
  wire hall1, hall2, hall3;
  // PULLUP for hall sensors
@@ -250,8 +262,8 @@ reg reset;
     .rx_i(~RX),
     .ID(ID),
     .duty(pwm_setpoint),
-    .encoder0_position(encoder0_position),
-    .encoder1_position(encoder1_position),
+    .encoder0_position(encoder0_position_scaled),
+    .encoder1_position(encoder0_position_scaled),
     .displacement(displacement),
     .setpoint(setpoint),
     .control_mode(control_mode),
@@ -262,14 +274,16 @@ reg reset;
     .IntegralLimit(IntegralLimit),
     .current(current),
     .current_limit(current_limit),
-    .deadband(deadband)
+    .deadband(deadband),
+    .neopxl_color(neopxl_color),
+    .LED(LED)
   );
 
   wire signed [23:0] motor_state;
 
   assign motor_state =
-    (control_mode==0)?encoder0_position:
-    (control_mode==1)?encoder1_position:
+    (control_mode==0)?encoder0_position_scaled:
+    (control_mode==1)?encoder0_position_scaled:
     (control_mode==2)?displacement:
     32'd0;
 
@@ -304,11 +318,12 @@ reg reset;
       .position(encoder1_position)
     )/* synthesis syn_noprune = 1 */;
 
-  // always @(posedge clk16MHz) begin: DISPLACEMENT_CALCULATION
-  //   encoder0_position_scaled <= (encoder0_position<<<1)/53;
-  //   encoder1_position_scaled <= (encoder1_position>>>2);
-  //   displacement <= (encoder0_position_scaled-encoder1_position_scaled);
-  // end
+  always @(posedge clk16MHz) begin: DISPLACEMENT_CALCULATION
+    encoder0_position_scaled <= (encoder0_position<<1);
+    encoder1_position_scaled <= ((encoder1_position*3375)>>8);
+
+    displacement <= encoder0_position_scaled - encoder1_position_scaled;
+  end
 
   reg [10:0] addr;
   wire [7:0] data;

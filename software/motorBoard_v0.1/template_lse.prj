@@ -44,6 +44,7 @@
 -lib work -vhd "vhdl/quadrature_decoder.vhd" 
 -ver "verilog/tli4970.v"
 -ver "verilog/pll32MHz.v"
+-ver "verilog/neopixel.v"
 -p "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1"
 
 #set result format/file last
