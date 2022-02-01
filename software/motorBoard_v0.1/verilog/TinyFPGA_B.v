@@ -263,7 +263,7 @@ neopixel #(16_000_000) nx(
     .ID(ID),
     .duty(pwm_setpoint),
     .encoder0_position(encoder0_position_scaled),
-    .encoder1_position(encoder0_position_scaled),
+    .encoder1_position(encoder1_position_scaled),
     .displacement(displacement),
     .setpoint(setpoint),
     .control_mode(control_mode),
@@ -283,7 +283,7 @@ neopixel #(16_000_000) nx(
 
   assign motor_state =
     (control_mode==0)?encoder0_position_scaled:
-    (control_mode==1)?encoder0_position_scaled:
+    (control_mode==1)?encoder1_position_scaled:
     (control_mode==2)?displacement:
     32'd0;
 
