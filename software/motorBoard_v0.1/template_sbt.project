@@ -1,10 +1,10 @@
 [Project]
 ProjectVersion=2.0
-Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Build Date: Sep 12 2017 08:41:24
+Version=Lattice Semiconductor Corporation iCEcube - Release: 2020.12.27943 - Build Date: Dec 10 2020 18:03:29
 ProjectName=template
 Vendor=SiliconBlue
 Synthesis=lse
-ProjectVFiles=verilog/TinyFPGA_B.v=work,verilog/uart_rx.v=work,verilog/uart_tx.v=work,verilog/coms.v=work,verilog/motorControl.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd=work,verilog/neopixel.v=work,verilog/pwm.v=work,verilog/eeprom.v=work,verilog/i2c_controller.v=work,vhdl/quadrature_decoder.vhd=work,verilog/tli4970.v=work,verilog/pll32MHz.v=work
+ProjectVFiles=verilog/TinyFPGA_B.v=work,verilog/uart_rx.v=work,verilog/uart_tx.v=work,verilog/coms.v=work,verilog/motorControl.v=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd=work,vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd=work,verilog/pwm.v=work,verilog/eeprom.v=work,verilog/i2c_controller.v=work,vhdl/quadrature_decoder.vhd=work,verilog/tli4970.v=work,verilog/pll32MHz.v=work,verilog/neopixel.v=work
 ProjectCFiles=constraints/clk.sdc
 CurImplementation=template_Implmnt
 Implementations=template_Implmnt
@@ -84,5 +84,5 @@ BitmapSetSecurity=no
 BitmapSetNoUsedIONoPullup=no
 FloorPlannerShowFanInNets=yes
 FloorPlannerShowFanOutNets=yes
-HookTo3rdPartyTextEditor=yes
+HookTo3rdPartyTextEditor=no
 

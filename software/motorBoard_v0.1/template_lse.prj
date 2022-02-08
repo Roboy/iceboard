@@ -1,5 +1,5 @@
 #-- Lattice, Inc.
-#-- Project file /home/letrend/workspace/iceboard/software/motorBoard_v0.1/template_lse.prj
+#-- Project file /home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1/template_lse.prj
 
 #device
 -a SBTiCE40
@@ -38,14 +38,14 @@
 -ver "verilog/motorControl.v"
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd" 
 -lib work -vhd "vhdl/spi_master_slave/trunk/rtl/spi_master_slave/grp_debouncer.vhd" 
--ver "verilog/neopixel.v"
 -ver "verilog/pwm.v"
 -ver "verilog/eeprom.v"
 -ver "verilog/i2c_controller.v"
 -lib work -vhd "vhdl/quadrature_decoder.vhd" 
 -ver "verilog/tli4970.v"
 -ver "verilog/pll32MHz.v"
--p "/home/letrend/workspace/iceboard/software/motorBoard_v0.1"
+-ver "verilog/neopixel.v"
+-p "/home/administrator/Documents/Roboy_FPGA/iceboard/software/motorBoard_v0.1"
 
 #set result format/file last
 -output_edif template_Implmnt/template.edf
