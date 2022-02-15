@@ -25,7 +25,7 @@ USE ieee.std_logic_1164.all;
 
 ENTITY quadrature_decoder IS
 	GENERIC(
-		debounce_time					:	INTEGER := 16 	--number of clock cycles required to register a new position = debounce_time + 2
+		debounce_time					:	INTEGER := 50_000 	--number of clock cycles required to register a new position = debounce_time + 2
 		);
 	PORT(
 		clk				:	IN			STD_LOGIC;										--system clock
