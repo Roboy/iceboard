@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Diamond Version 0.0.0
-// Netlist written on Tue Feb  1 10:54:27 2022
+// Netlist written on Wed Feb 16 15:38:34 2022
 //
 // Verilog Description of module TinyFPGA_B
 //
