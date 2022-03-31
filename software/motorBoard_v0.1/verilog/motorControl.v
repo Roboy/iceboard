@@ -51,7 +51,7 @@ module motorControl(
             end
         end else begin
           err = (setpoint-state);
-          err = err>>>4;
+          err = err>>>10;
           integral = integral+err;
           if(integral>IntegralLimit) begin
             integral = IntegralLimit;
